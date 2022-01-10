@@ -1,0 +1,85 @@
+//quest 02
+//v map02-----------------------------------------------------------------
+//- leader zada hraci quest
+script 112 (void) {
+    GiveActorInventory (0, "quest02given", 1);
+    displayQuest ("[ ANCIENT ARTIFACT ]", 1);
+}
+//v map06-----------------------------------------------------------------
+//- hrac se vyda do divociny, pujde na horu
+script "archeologistCampMarker" (void) {
+    if ( CheckInventory("quest02given") == 1 ) {
+        Thing_Deactivate (87);
+    }
+}
+//- tam najde prazdny tabor archeologu
+//-  pred chramem najde jednoh z archeologu
+//- ten hraci rekne o utoku kaciru
+script 113 (void) {
+    GiveActorInventory (0, "quest02_goinside", 1);
+    displayQuest ("[ ANCIENT ARTIFACT : Go inside the ancient temple and find out what happened ]", 2);
+}
+//- hrac jde dovnitr
+//v map07-----------------------------------------------------------------
+//- prestrelky s rebely, na konci bludiste najde mrtvyho vedce, datadisk a poznamku s napisem 'MILLPORT'
+script "deadRebels01" (void)
+{
+	Print(l:"Looks like the rebels have sacrificed themselves.");
+}
+
+script "deadRebels02" (void)
+{
+	Print(l:"The bag is empty. So the artifact is gone. Maybe the note will tell me more.");
+}
+script "deadRebels03" (void)
+{
+	Print(l:"Sacrificed scientist. He had suffered much.");
+}
+script "deadRebels04" (void)
+{
+	Print(l:"Millport. So I have to visit Millport.");
+	GiveInventory("quest02_artifact_stolen", 1);
+}
+script "deadRebels05" (void)
+{
+	Print(l:"This datapad contains viable information.");
+}
+script "deadRebels06" (void)
+{
+	Print(l:"You hear a voice shouting: \c[cyan]'Stop him from entering the inner sanctum!'");
+}
+script "deadRebels07" (void)
+{
+	Print(l:"You hear a voice: \c[cyan]'He did it. Brothers, this is the end.'");
+}
+//v map02-----------------------------------------------------------------
+//- vrati se k leaderovi ten mu
+//quest 03
+//- zada treti quest, aby vyrazil do millportu
+//main quest 03
+script 107 (void) {
+	TakeActorInventory(0, "hereticDatapad1", 1);
+}
+//zadání třetí questu
+Script 108 (void) { 
+    //caseInformationDisk quest03_given
+    displayQuest ("[ MISSION: MILLPORT ]", 1);
+	GiveActorInventory(0, "coin", 1000);
+	GiveActorInventory(0, "quest03_given", 1);
+	GiveActorInventory(0, "caseInformationDisk", 1);
+	GiveActorInventory(0, "upgradeToken", 1);
+	GiveActorInventory(0, "upgradeToken", 1);
+	GiveActorInventory(0, "RangerArmor2_item", 1);
+	GiveActorInventory(0, "EnergyPack_item", 2);
+	GiveActorInventory(0, "EnergyKit_item", 5);
+	GiveActorInventory(0, "BoxOfBullets_item", 1);
+	GiveActorInventory(0, "Hyposprej", 5);
+	GiveActorInventory(0, "Kombopack", 3);
+	GiveActorInventory(0, "DeployableShieldItem", 2);
+	GiveActorInventory(0, "Swarmers_item", 5);
+}
+//- hrac jde k transportni sluzbe a necha se odvezt do millportu
+//v map06-----------------------------------------------------------------
+script 114 (void) {
+
+}

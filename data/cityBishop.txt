@@ -1,0 +1,117 @@
+
+//------------------------------------------------------------------------------------------------------------
+//questy SilentHills Bishop
+//------------------------------------------------------------------------------------------------------------
+//prohledej byt kacíře
+//------------------------------------------------------------------------------------------------------------
+//- biskup hráče požádá o získání usvědčujícího důkazu na kacíře. Biskup neví, kde kacíř bydlí, takže to hráč musí nejdřív zjistit. Ví se pouze, že kacíř bydlí někde na západním břehu, v rezidenční čtvrti
+//->>zadání questu
+script 1201 (void) {
+    GiveActorInventory (0, "twn_bishopQ01_skrysRebelu_given", 1);
+    displayQuest ("[ Heretical cache in Silent Hills ]", 1);
+}
+//- hráč se musí vyptat místních, od jednoho žebráka (convID 42) získá info ze bydliště kacíře najde ve skladišti dole v rohu
+//->>give token, aktivace placeMarkeru
+script 1202 (void) {
+    GiveActorInventory (0, "twn_bishopQ01_skrysRebelu_skladiste", 1);
+    Thing_Deactivate (94); //skladiste marker
+    displayQuest ("[ Search the old storage ]", 2);
+}
+//ve skladišti najde počítač s informacemi kde je skrýš kacířů
+script 1204 (void) {
+    Thing_Activate (94); //vypne skladiste marker
+    GiveActorInventory (0, "twn_bishopQ01_skrysRebelu_skrys",1);
+    displayQuest ("[ Search the heretic hideout ]", 2);
+    Thing_Deactivate (93); //byt kaciru marker
+}
+//- na místě najde skrýš otevíranou spínačem pod stolem, kde najde kacířskou relikvii, relikvii má přinést biskupovi; také na místě najde datadisk s informacemi o základně rebelů, kam biskup hráče následně pošle
+script "Q_openHiddenCache" (void) {
+    Thing_Activate (93); //vypne byt kaciru marker
+    Ceiling_MoveToValue (92, 16, 8, true);
+    displayQuest ("[ You've found the heretic hideout. Search it and report back to the Bishop. ]", 2);
+    Thing_Deactivate (95); //bishop marker
+}
+//hrac najde hereticalRelic
+//hrac najde infoDisk
+//->hrac se vrati k soudci, kde dostane odmenu + zadani dalsiho questu - jenom jako moznost v dialogu, ale bude zadan az po splneni tohoto questu
+script 1203 (void) {
+    Thing_Activate (95); //vypne bishop marker
+    GiveActorInventory (0, "twn_bishopQ01_skrysRebelu_finished", 1);
+    TakeActorInventory (0, "hereticalRelic", 1);
+    TakeActorInventory (0, "infoDisk", 1);
+    GiveActorInventory (0, "coin", 250);
+    GiveActorInventory (0, "upgradeToken", 1);
+    displayQuest ("[ Heretical cache in Silent Hills ]", 3);
+}
+//------------------------------------------------------------------------------------------------------------
+
+
+
+//najdi základnu kaciru v divocine a pobij je
+//------------------------------------------------------------------------------------------------------------
+//- biskup hraci zada quest
+//- hrac dostane vybusninu, aby se mohl dostat do zakladny rebelu
+//+polozit quest indicator
+//+zapnout quest marker do automapy
+//+dat hraci quest token
+script 1301 (void) {
+    GiveActorInventory (0, "twn_bishopQ02_killRebels_given", 1);
+    displayQuest ("[ Heretic base in Eastern Territory ]", 1);
+    
+};
+//pri prichodu do map06:
+script "bishopQ_base_prepare" (void) {
+    //mapspot ID 77
+    SpawnSpot ("ProximityInteractionIcon", 77, 1201);
+}
+//hrac prijde ke zdi a "polozi" bombu
+//->odebere od hrace inv item bomby
+//->polozi na zem aktualni bombu
+//->delay 35*10
+//->sundat dolu zed
+script "m06_blowWall" (void) {
+    if ( CheckInventory ("q_explosiveDevice_01") ) {
+        SpawnSpot ("q_bomb_01", 77);
+        TakeActorInventory (0, "q_explosiveDevice_01", 1);
+        Print (l:"Move Away. Explosion in 5");
+        Delay(35);
+        Print (l:"4");
+        Delay(35);
+        Print (l:"3");
+        Delay(35);
+        Print (l:"2");
+        Delay(35);
+        Print (l:"1");
+    } else {
+        Print (l:"You need Explosive Device to blow the wall!");
+    }
+}
+//------------------------------------------------------------------------------------------------------------
+//script v map06
+/*
+script "m06_lowerWall" (void) {
+    //SpawnSpot ("dummy_explosion", 77); //explosion effect
+    //lower wall by explosion
+    SetLineTexture(78, SIDE_FRONT, TEXTURE_BOTTOM, "CONCRT01");
+    Floor_MoveToValue(70, 320, 216, false);//70 f216
+    Floor_MoveToValue(71, 320, 192, false);//71 f192
+    Floor_MoveToValue(72, 320, 184, false);//72 f184
+    Floor_MoveToValue(73, 320, 160, false);//73 f160
+    Floor_MoveToValue(74, 320, 144, false);//74 f144
+    Floor_MoveToValue(75, 320, 128, false);//75 f128
+    Floor_MoveToValue(76, 320, 112, false);//76 f112
+}
+*/
+//------------------------------------------------------------------------------------------------------------
+//- hrac pobije vsechny kacire - neni nutne, je nutna jenom lebka
+//- hrac sebere lebku jejich velitele a prinese ji biskupovi jako dukaz
+//- hrac dostane od biskupa odmenu
+script 1302 (void) {
+    TakeActorInventory (0, "hereticLeaderSkull", 1);
+    GiveActorInventory (0, "twn_bishopQ02_killRebels_finished", 1);
+    GiveActorInventory (0, "upgradeToken", 1);
+    GiveActorInventory (0, "blueChalice", 1);
+    GiveActorInventory (0, "coin", 500);
+    displayQuest ("[ Heretic base in Eastern Territory ]", 3);
+}
+//------------------------------------------------------------------------------------------------------------

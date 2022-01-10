@@ -1,0 +1,92 @@
+//==================================================================================================================
+//sef tezby v dolech id 10 map01
+//==================================================================================================================
+Conversation {
+    ID = 10;
+    Page {
+        pageName = "SH_minesForeman_opener";
+        Name = "Foreman";
+        Dialog = "\c[white]Hello, Binder. You wanted something?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "SH_minesForeman_whoareyou";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "SH_minesForeman_whatareyoudoing";
+        }
+        Choice {
+            Text = "TekGuild Master sends me to get some ore from you.";
+            Nextpage = "SH_minesForeman_hereforore";
+            Require {
+                item = "twn_tekGuildMasterQ1_oreDelivery_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ1_oreDelivery_pickOre";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "I'm here to fix the broken machine.";
+            Nextpage = "SH_minesForeman_brokenmachine";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_needFilter";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_minesForeman_whoareyou";
+        Name = "Foreman";
+        Dialog = "\c[white]I'm Worrick, foreman in the mines.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_minesForeman_opener";
+        }
+    }
+    Page {
+        pageName = "SH_minesForeman_whatareyoudoing";
+        Name = "Foreman";
+        Dialog = "\c[white]I am the Foreman here in the mines. My job is to supervise other workers, as I'm the most skilled here.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_minesForeman_opener";
+        }
+    }
+    Page {
+        pageName = "SH_minesForeman_hereforore";
+        Name = "Foreman";
+        Dialog = "\c[white]What, again? Yeah, I've got the ore. It's in the mine. No, I don't have time to collect the ore for him. If you want it, you're free to pick it up. Go on.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Well, OK then.";
+            Nextpage = "SH_minesForeman_opener";
+            CloseDialog = true;
+            YesMessage = "I'm sorry, but I'm pretty busy here.";
+            Special = 80;
+            arg0 = 1402;
+        }
+    }
+    Page {
+        pageName = "SH_minesForeman_brokenmachine";
+        Name = "Foreman";
+        Dialog = "\c[white]You are? That's good. It's the one in the lower parts of the mines. And watch for spiders.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "SH_minesForeman_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1502;
+        }
+    }
+}
+//==================================================================================================================

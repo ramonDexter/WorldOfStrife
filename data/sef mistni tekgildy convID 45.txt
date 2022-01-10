@@ -1,0 +1,318 @@
+//==================================================================================================================
+//sef mistni tekgildy convID 45
+//==================================================================================================================
+Conversation {
+    ID = 45;
+    Page {
+        pageName = "SH_tekGuildChief_opener";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Yes? Did you wanted something? I'm little bit busy here.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "SH_tekGuildChief_whoareyou";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "SH_tekGuildChief_whatareyoudoinghere";
+        }
+        Choice {
+            Text = "Could you tell me about the TekGuild?";
+            Nextpage = "SH_tekGuildChief_aboutteklguild";            
+        }
+        Choice {
+            Text = "Do you need any help?";
+            Nextpage = "SH_tekGuildChief_needhelp";
+            Exclude {
+                item = "twn_tekGuildMasterQ1_oreDelivery_given";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Do you need any more help?";
+            Nextpage = "SH_tekGuildChief_dontneedhelp";
+            Require {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "You said you have more work for me.";
+            Nextpage = "SH_tekGuildChief_Q2_opener";
+            Require {
+                item = "twn_tekGuildMasterQ1_oreDelivery_finished";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_given";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "You said you have more work for me.";
+            Nextpage = "SH_tekGuildChief_Q3_opener";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_given";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_whoareyou";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]I am Norwick, chief of the local TekGuild branch office. So you could say I'm the executive here. So that means I'm pretty busy.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildChief_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_whatareyoudoinghere";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]I'm the executive here. I'm in charge of the local TekGuild office. And that means I got a work to do here.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildChief_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_aboutteklguild";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]The TekGuild is responsible for education of all technical staff. Also, we design basically any technology you might encounter.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildChief_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_dontneedhelp";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Well, you've helped us a lot, but no, I don't have anything here for you now. Thank you, again.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildChief_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_needhelp";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]As you ask, yes. In fact, I might need some help here.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "What do you need help with?";
+            Nextpage = "SH_tekGuildChief_needhelpwith";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildChief_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_needhelpwith";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Well, right now I'm looking for somebody to deliver me a shipment of Degnin Ore from the Mines. Say, would you do that for me? Esay task, just go the mines, take the ore from mines foreman and return to me. What do you say?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "Don't think for too long!";
+        }
+        Choice {
+            Text = "Okay, I'll do it.";
+            Nextpage = "SH_tekGuildChief_illbringore";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1401;
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_illbringore";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]You're back. Do you have the Ore I sent you for?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Actually not been there yet.";
+            Nextpage = "SH_tekGuildChief_illbringore";
+            CloseDialog = true;
+            YesMessage = "Hey, I need the Ore! That's why I sent you there!";
+            Exclude {
+                item = "twn_tekGuildMasterQ1_oreDelivery_orePicked";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Yes, I've got it right here. Pretty heavy stuff.";
+            Nextpage = "SH_tekGuildChief_orePicked";
+            Require {
+                item = "twn_tekGuildMasterQ1_oreDelivery_orePicked";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_orePicked";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Yes, it is. Also, it is one of the most valuable ores, because we obtain raw metals from it. Anyways, give it to me, so I can give you your reward. Also, I'll have more work for you, if you're interested.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Here it is. And thank you.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "No, I thank you.";
+            Special = 80;
+            arg0 = 1403;
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q2_opener";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Yes, yes. The foreman just called me, saying one of the mining machines has broken down. None of the miners has skills required to repair it, so I need someone more skilled to take a look at it. Say, would you go again to the mines and try to fix the broken mining machine? Reward included, of courese. This time higher than last time. What do you say?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "Don't think for too long!";
+        }
+        Choice {
+            Text = "Okay, I'll do it. At least I'll try.";
+            Nextpage = "SH_tekGuildChief_Q2_howsitgoing";
+            CloseDialog = true;
+            YesMessage = "Good, thank you.";
+            Special = 80;
+            arg0 = 1501;
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q2_howsitgoing";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]So, were you successful? Is the machine repaired?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Not yet.";
+            Nextpage = "SH_tekGuildChief_Q2_howsitgoing";
+            CloseDialog = true;
+            YesMessage = "Could little hurry a little bit more?";
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Yes, I have fixed it. It was brokne air filter.";
+            Nextpage = "SH_tekGuildChief_Q2_machinefixed";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q2_machinefixed";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]Was it taht simple? An air filter? I see we have to educate the miners a little bit. They are completely capable of replacing spare parts. Anyways, here is your reward. You've deserved it. And, I have more work for you, if you're interested.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Thank you, master.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "No, I thank you.";
+            Special = 80;
+            arg0 = 1506;
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q3_opener";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]This time it's more serious. Two days ago, our windtrap powerplant on the coast has cut off communcation. Also, our technicians have reported drop in power supply. So something has happened there. I need you to go there and find out what happened. Then report back to me. I cannot send any of my staff, since most of the are occupied anywhere else, so I'm asking you. Say, will you go there?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "Don't think for too long. It's serious now!";
+        }
+        Choice {
+            Text = "Sound like some action. I'll do it. Anything else? How should I get there?";
+            Nextpage = "SH_tekGuildChief_Q3_details";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q3_details";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]You can use our portal, that connects our base with the coastla outpost. Then, I've marked the coastal windtrap powerplant on your map. Go there and find out what heppened there.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "I'm on it.";
+            Nextpage = "SH_tekGuildChief_Q3_progress";
+            CloseDialog = true;
+            YesMessage = "Be careful.";
+            Special = 80;
+            arg0 = 1601;
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q3_progress";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]So, what happened there?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Actually not been there yet.";
+            Nextpage = "SH_tekGuildChief_Q3_progress";
+            CloseDialog = true;
+            YesMessage = "Please, don't waste any time.";
+            Exclude {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Some heretics have blown up the transformer and slayed the powerplant staff.";
+            Nextpage = "SH_tekGuildChief_Q3_finished";
+            Require {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildChief_Q3_finished";
+        Name = "Norwick, chief of TekGuild";
+        Dialog = "\c[white]What? Heretics killed our powerplant staff? Horrible, just horrible. Well, I must say you've proven yourself. We have do repair the powerplant, but that's our task. I must say I am grateful that you helped us. I must say that Binder Order is quite helpful. Here is your reward.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_TGCHF";
+        Choice {
+            Text = "Thank you, master.";
+            Nextpage = "SH_tekGuildChief_opener";
+            CloseDialog = true;
+            YesMessage = "No, the TekGuild thank You for your services. May Father watch your steps!";
+            Special = 80;
+            arg0 = 1602;
+        }
+    }
+}
+//==================================================================================================================

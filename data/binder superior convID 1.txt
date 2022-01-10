@@ -1,0 +1,99 @@
+//==================================================================================================================
+//binder superior convID 1
+//==================================================================================================================
+Conversation {
+    ID = 1;
+    Page {
+        pageName = "MP_binderLeader_quest2finish";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Welcome, Tobias. I've been waiting for you. Your superior from Silent Hills has repoted that you've proven yourself well. But as it seems, more delicate work awaits you here. Say, are you ready for more work?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "Reporting for duty, sir!";
+            Nextpage = "MP_binderLeader_reportingforduty";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_reportingforduty";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Good, good. I've been reported that your are skilled warrior, as well as good negotitor. Both skills will be required here. Our position here is little bit brittle. Your main task here will be to gain trust of the local Governor. Visit him in his Villa and offer him your services. Also, you'll have a flat here, it's next to the weapons keeper. Welcome to the Millport.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "Thank you, superior.";
+            Nextpage = "MP_binderLeader_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8102;
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_opener";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Yes, did you wanted something?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "Could you tell me about the Binder Order?";
+            Nextpage = "MP_binderLeader_aboutbinders";
+        }
+        Choice {
+            Text = "Could you tell me about the base?";
+            Nextpage = "MP_binderLeader_aboutbase";
+        }
+        Choice {
+            Text = "Could you tell me about Millport?";
+            Nextpage = "MP_binderLeader_aboutmillport";
+        }
+        Choice {
+            Text = "What in the area around town?";
+            Nextpage = "MP_binderLeader_aroundtown";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_aboutbinders";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Our sacred Order is devoted to procteting the Order, as well as procetion its fathful followers. We are using our tools to fulfill this mission and to gain eternal tranquility.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderLeader_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_aboutbase";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Our base has been built three years ago. It's a strong bastion of our Order, and our main base here on the Island. We have all kind of services here. A fully equipped hospital, techsmith, library and a shooting range down in the lower floor.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderLeader_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_aboutmillport";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Millport is small peaceful trading community. We came here three years ago to restore peace here, as the heretic influence was tsrong here. And still is, we have many problems here. We're also glad you're here, as you've proven yourself worthy in the Silent Hills.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderLeader_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_aroundtown";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]You'll find the plantations if you'll head to the west. The city is supplied from the Plantations, and sells, its produce. To the east is small village of Ravensrock. Strange community of non believers. We're trying to gain our influence there. To the horst is the rocky wildernesss with the Order Correctional Facility.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_BNDR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderLeader_opener";
+        }
+    }
+}
+//==================================================================================================================

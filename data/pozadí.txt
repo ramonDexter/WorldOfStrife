@@ -1,0 +1,20 @@
+1. fáze:
+- hráč je pasován na bindera, dostane úkol najít ukradený Artefakt
+- hráč začne hledat Artefakt, ale zjistí že byl ukraden
+- velitel binderů hráče pošle do druhého města, kam měl být Artefakt převezen
+
+2. fáze:
+- hráč dorazí do města Millport, kam byl artefakt převezen 
+- situace ve městě je napjatá
+- bindeři způsobili smrt pracovníků v továrně, takže jsou jejich vztahy s místními na bodu mrazu - místní s nimim nechtějí spolupracovat
+- nejdříve je třeba získat důvěru místních >> hráč musí splnit jakékoli tři questy pro místní 
+- po splnění tří questů pro místní jsou bindeři kontaktováni Baronem
+- Baron je místní boss, který ovládá obchod v celém městě
+- Baron žádá bindery o spolupráci s věcmi, které nedokáže vyřešit sám - vymyslet tři questy
+- v průběhu třetího questu hráč zjistí, že Baron je ve skutečnosti velitelem místních kacířů, který nechal ukrást Artefakt
+- po splnění třetího questu hráč získá informace o Artefaktu - je uložen v úkrytu v západní části ostrova
+- hráč najde Artefakt (je to zařízení, pomocí kterého chtějí kacíři probudit Staršího Boha)
+- Artefakt byl zkopírován, takže se vlastně nic nemění a nebezpečí stále trvá
+
+3. fáze:
+- 

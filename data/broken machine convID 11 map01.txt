@@ -1,0 +1,74 @@
+//==================================================================================================================
+//broken machine convID 11 map01
+//==================================================================================================================
+Conversation {
+    ID = 11;
+    Page {
+        link = "SHmines_brokenMachine_fixedOpener";
+        ifitem {
+            item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
+            amount = 1;
+        }
+        pageName = "SHmines_brokenMachine_opener";
+        Name = "Mining Machinery";
+        Dialog = "\c[white]Some kind of mining machinery, used to process the mined ore. It's not working.";
+        Goodbye = "\c[red]EXIT";
+        Choice {
+            Text = "Check the machine.";
+            Nextpage = "SHmines_brokenMachine_checkmachine";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_needFilter";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Use the air filter to repair the machine.";
+            Nextpage = "SHmines_brokenMachine_repairmachine";
+            Require {
+                item = "mineMachineFilter";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SHmines_brokenMachine_checkmachine";
+        Name = "Mining Machinery";
+        Dialog = "\c[white]The machine is not working. First thing that catches your eyes is thick layer of dust covering all of the machine's openings. Further investigation reveals that the air filter is completely filled with the dust. Also, looks like it has burned recently. It needs to be replaced. You should speak to TechSmith, maybe he could build a new filter.";
+        Goodbye = "\c[red]EXIT";
+        Choice {
+            Text = "Looks like I should speak to town TechSmith.";
+            Nextpage = "SHmines_brokenMachine_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1503;
+        }
+    }
+    Page {
+        pageName = "SHmines_brokenMachine_repairmachine";
+        Name = "Mining Machinery";
+        Dialog = "\c[white]You quickly replace the old burned-out filter with a new one. As you replace the filter, the machine starts to hum silently.";
+        Goodbye = "\c[red]EXIT";
+        Choice {
+            Text = "Looks like the replace worked.";
+            Nextpage = "SHmines_brokenMachine_fixedOpener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1504;
+        }
+    }
+    Page {
+        pageName = "SHmines_brokenMachine_fixedOpener";
+        Name = "Mining Machinery";
+        Dialog = "\c[white]Some kind of mining machinery, used to process the mined ore. It's working properly.";
+        Goodbye = "\c[red]EXIT";
+    }
+}
+//==================================================================================================================

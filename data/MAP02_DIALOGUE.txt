@@ -1,0 +1,2011 @@
+namespace = "ZDoom";
+//quest journal in external file
+include = "JRNL00";
+//surgical unit
+include = "SURG00"; //ID = 701;
+
+
+
+//Inquisitor blacksmith
+Conversation
+{
+	ID = 1;
+	Page
+	{
+		Name = "$M01_FORGEMASTER"; //Forgemaster
+		Dialog = "$M01_FORGEMASTER_P01"; //Hello, what may I get you?
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P01_CH01"; //One EnergyPod
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_FORGEMASTER_P01_YES"; //Here it is!
+			NoMessage = "$M01_FORGEMASTER_P01_NO"; //Not enough gold!
+			GiveItem = "EnergyPod_item";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P01_CH02"; //One EnergyKit
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_FORGEMASTER_P01_YES";
+			NoMessage = "$M01_FORGEMASTER_P01_NO";
+			GiveItem = "EnergyKit_item";
+			Cost
+			{
+				item = "coin";
+				amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P01_CH03"; //One EnergyPack
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_FORGEMASTER_P01_YES";
+			NoMessage = "$M01_FORGEMASTER_P01_NO";
+			GiveItem = "EnergyPack_item";
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P01_CH04";
+			NextPage = 2;
+			Require
+			{
+				item = "binderBadge";
+				amount = 1;
+			}
+		}
+
+	}
+	Page//2
+	{
+		Name = "$M01_FORGEMASTER";
+		Dialog = "$M01_FORGEMASTER_P02"; //\c[white]Of course. I can upgrade your staff, if you want.\nJust give me your staff, I'll install the upgrade right here and now.\nAlso, I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade.
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P02_CH01"; //Ok, here is the staff.
+			NextPage = 2;
+			CloseDialog = true;
+			YesMessage = "$M01_FORGEMASTER_P02_YES1"; //Here you go. One small clip and we're done.
+			NoMessage = "$M01_FORGEMASTER_P02_NO1"; //You don't have the staff!
+			GiveItem = "StaffBlasterUpgr";
+			Cost
+			{
+				item = "staffBlaster";
+				amount = 1;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_FORGEMASTER_P02_CH02"; //Cybernetic implant? I like it.
+			NextPage = 2;
+			YesMessage = "$M01_FORGEMASTER_P02_YES2"; //Just hold still and we're right done!
+			NoMessage = "$M01_FORGEMASTER_P02_NO2"; //You don't have the upgrade token!
+			Giveitem = "AccuracyBonus";
+			Cost
+			{
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+	}
+
+}
+//Inquisitor Surgeon
+Conversation
+{
+	ID = 2;
+
+	Page//1
+	{
+		link = 2;
+		IfItem
+		{
+			item = "binderBadge";
+			amount = 1;
+		}
+		Name = "$M01_INQSURGEON";
+		Dialog = "$M01_INQSURGEON_P01"; //Hello, how can I help you?
+		Panel = "M_DCTR";
+	}
+	Page//2
+	{
+		Name = "$M01_INQSURGEON"; //Surgeon
+		Dialog = "$M01_INQSURGEON_P02"; //Hello Inquisitor, how may I be of service?
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P02_CH01"; //What can you offer me?
+			NextPage = 3;
+		}
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P02_CH02"; //I have some questions.
+			NextPage = 4;
+		}
+	}
+	Page//3
+	{
+		Name = "$M01_INQSURGEON";
+		Dialog = "$M01_INQSURGEON_P03"; //I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff.
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P03_CH01"; //\c[yellow]<< BACK ]
+			NextPage = 2;
+		}
+		Choice
+		{
+			Require
+			{
+				item = "upgradeToken";
+				amount = 1;
+			}
+			Text = "$M01_INQSURGEON_P03_CH02"; //Buy the cybernetic implant.
+			NextPage = 3;
+			CloseDialog = true;
+			YesMessage = "$M01_INQSURGEON_P03_CH02_YES"; //Here you go. Just stand still and everything will be okay.
+			NoMessage = "$M01_INQSURGEON_P03_CH02_NO"; //You don't have the upgrade token!
+			GiveItem = "UpgradeStamina";
+			Cost
+			{
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P03_CH03"; //One zscmedpatch
+			NextPage = 3;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_INQSURGEON_YES";
+			NoMessage = "$M01_INQSURGEON_NO";
+			GiveItem = "zscmedpatch";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P03_CH04"; //One Medical Kit
+			NextPage = 3;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_INQSURGEON_YES";
+			NoMessage = "$M01_INQSURGEON_NO";
+			GiveItem = "zscMedicalKit";
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P03_CH05"; //One Surgery Kit
+			NextPage = 3;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "$M01_INQSURGEON_YES";
+			NoMessage = "$M01_INQSURGEON_NO";
+			GiveItem = "zscSurgeryKit";
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+
+	}
+	Page//4
+	{
+		Name = "$M01_INQSURGEON";
+		Dialog = "$M01_INQSURGEON_P04"; //Well, I can take a little break for a small talk. What are you interested in?
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P03_CH01";
+			NextPage = 2;
+		}
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P04_CH02"; //Tell me about yourself.
+			NextPage = 5;
+		}
+		Choice
+		{
+			Text = "$M01_INQSURGEON_P04_CH03"; //What can you tell me about the city?
+			NextPage = 6;
+		}
+
+	}
+	Page//5
+	{
+		Name = "$M01_INQSURGEON";
+		Dialog = "$M01_INQSURGEON_P05"; //My name is Gregor. I'm the Inquisition surgeon, as you know. I've come here when the local base was grounded, fifteen years ago. it were hars times, but I was young. How, when I'm older, I want to settle down, marry and have a family. Maybe.
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "\c[yellow]<< BACK ]";
+			NextPage = 4;
+		}
+
+	}
+	Page//6
+	{
+		Name = "$M01_INQSURGEON";
+		Dialog = "$M01_INQSURGEON_P06"; //Well, Silent Hills is a sleepy hollow. Not, really, it's a small trading community on a big river. Two pubs, lots of shops, bathouse and a port with a market.
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "\c[yellow]<< BACK ]";
+			NextPage = 4;
+		}
+
+	}
+
+}
+
+
+
+//energy weapons ammo vendor
+Conversation
+{
+	ID = 3;
+	Page
+	{
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]Hello, how may I serve you?";
+		Panel = "M_FALSP2";
+		Choice
+		{
+			Text = "One EnergyPod";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyPod_item";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "One EnergyKit";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyKit_item";
+			Cost
+			{
+				item = "coin";
+				amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "One EnergyPack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyPack_item";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "One Battery Cell";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "energyCell";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+	}
+}
+//town chemist
+Conversation
+{
+	ID = 4;
+	Page
+	{
+		Name = "Chemist";
+		Dialog = "\c[white]Welcome, what can I get you?";
+		PANEL = "M_QUINCY";
+		Choice
+		{
+			Text = "One Hypomed";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "Hyposprej";
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "One Combopack";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "Kombopack";
+			Cost
+			{
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "One Instaheal";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "InstaLek";
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "One zscmedpatch";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscmedpatch";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "One Medical Kit";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedicalKit";
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "One Surgery Kit";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscSurgeryKit";
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+	}
+}
+//town weaponsmith
+Conversation
+{
+	ID = 5;
+	Page
+	{
+		Name = "Weaponsmith";
+		Dialog = "\c[white]Hello, what can I offer you?";
+		Choice
+		{
+			Text = "Crossbow";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscStrifeCrossbow";
+			Cost
+			{
+				Item = "coin";
+				Amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "Electric bolt satchel";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "ElectricBolts_item";
+			Cost
+			{
+				Item = "coin";
+				Amount = 5;
+			}
+		}
+		Choice
+		{
+			Text = "Poisonous bolt satchel";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "PoisonBolts_item";
+			Cost
+			{
+				Item = "coin";
+				Amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "Assault Gun";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscAssaultGun";
+			Cost
+			{
+				Item = "coin";
+				Amount = 250;
+			}
+		}
+		Choice
+		{
+			Text = "Bullet Clip";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "ClipOfBullets";
+			Cost
+			{
+				Item = "coin";
+				Amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "Box of Bullets";
+			NextPage = 1;
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "BoxOfBullets_item";
+			Cost
+			{
+				Item = "coin";
+				Amount = 50;
+			}
+		}
+	}
+}
+
+//binder leader
+//=========================================================================
+//-------------------------------------------------------------------------
+//=========================================================================
+Conversation
+{
+	ID = 6;
+	Page//1
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Hello, acolyte Theo, I have a task for you. A group of rebels has established their base in the city's vicinity. I order you to clear the heretic's lair and return peace to the land. If you'll succeed, you will be promoted a full ranking Binder.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "As you order, supreme.";
+			NextPage = 2;
+			GiveItem = "quest01given";
+			Special = 80;
+			arg0 = 160;
+		}
+	}
+	Page//2
+	{
+		link = 4;
+		IfItem
+		{
+			item = "leaderskull";
+			amount = 1;
+		}
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Do you have any questions?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Where is this lair of heretics located?";
+			NextPage = 3;
+		}
+	}
+	Page//3
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]The rebel base was found in the old chapel, not far from the city's borders. Exit the city via the main base and head north, it's not far away.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Thank you, supreme.";
+			NextPage = 2;
+			Closedialog = true;
+		}
+
+	}
+	Page//4
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]You have returned. Are those heretics dead?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Yes, I have purged them.";
+			NextPage = 5;
+			Special = 80;
+			Arg0 = 105;
+		}
+
+	}
+	Page//5
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Good. Now I can promote you.\nNow, the promotion ceremony will be held.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Yes, supreme.";
+			NextPage = 6;
+			Closedialog = true;
+			Special = 80;
+			arg0 = 104;
+		}
+	}
+	//normal conversation
+	Page//6
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Hello Binder, how may I be of service? If you have some questions, we can talk.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Tell me about the Inquisition.";
+			NextPage = 7;
+		}
+		Choice
+		{
+			Text = "Tell me about yourself.";
+			NextPage = 8;
+		}
+		Choice
+		{
+			Require
+			{
+				item = "BinderBadge";
+				amount = 1;
+			}
+			Exclude
+			{
+				item = "quest02given";
+				amount = 1;
+			}
+			Text = "I am here for the information.";
+			NextPage = 9;
+		}
+
+	}
+	Page//7
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]The Inquisition is the sacred force of the Order. We are sworn to protect the Order and wipe out the heresy that could thrat peace in our lands.\nYou are Binder now. That means you are allowed to execute the law. Your authority is always superior, and you answer only to the Binder Supremes.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "\c[yellow]<< BACK";
+			NextPage = 6;
+		}
+
+
+	}
+	Page//8
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]I am Binder Supreme. Tiberius Petrovich Tusk is my personal name. I am 59 years old, and I serve the Binder Order all my life. I dont have any family, all my life is devoted to the duty, but I have brother. He lives in Tarnhill. That's city far from here, on the western coast.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "\c[yellow]<< BACK";
+			NextPage = 6;
+		}
+
+	}
+	Page//9
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]As I said, the scientist have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands. You should head there as soon as possible. Get the artifact and return it back here. We will secure and study it.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Ok, I will head out ASAP!";
+			NextPage = 10;
+			GiveItem = "quest02given";
+			CloseDialog = true;
+		}
+
+
+	}
+	Page//10
+	{
+		link = 11;
+		IfItem
+		{
+			item = "quest02_artifact_stolen";
+			amount = 1;
+		}
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]You are back. Do you have the artifact?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Not yet.";
+			NextPage = 10;
+			CloseDialog = true;
+			YesMessage = "Get the artifact and return it back here.";
+			NoMessage = "Get the artifact and return it back here.";
+		}
+
+	}
+	Page//11
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]You are back. Do you have the artifact?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "No. The rebels have killed the chief scientist and stole the artifact.";
+			NextPage = 12;
+			GiveItem = "quest02_finished";
+			Special = 80;
+			Arg0 = 106;
+		}
+
+	}
+	Page//12
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]That's bad. Very bad. Our superiors will be very dissapointed.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "But I have one good news. I know where the've taken it.";
+			NextPage = 13;
+		}
+
+	}
+	Page//13
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Really, yes? Where they've taken them?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "All information is on this holodisk.";
+			NextPage = 14;
+			Special = 80;
+			Arg0 = 107;
+		}
+
+	}
+	Page//14
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Yes, hmm. So they've taken it to their base, which is somewhere in the southern lands.\nYou should then head to the southern lands. You no need to hurry. Here are some things to resupply. Finish all the deeds you have and then take use the town teleporter and head to the Southern Territorry. The VTOL will take you to the city of Millport. You can find it outside city's eastern gate. Report to local Binder superior, he will take care of you there. Here, give him this disk. It contains all the information about our case. Good luck, Tobias.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Yes, supreme. Thank you.";
+			NextPage = 15;
+			CloseDialog = true;
+			Special = 80;
+			Arg0 = 108;
+		}
+
+	}
+	Page//15
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "\c[white]Go now. You have serious case to do.";
+
+	}
+
+}
+//leader during ceremony
+Conversation
+{
+	ID = 66;
+	Page//1
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "You have finished all the trials. Do you pledge yourself to the Binder Order?";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "I pledge myself to the Binder Order.";
+			NextPage = 2;
+		}
+
+	}
+	Page//2
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "You are now promoted Binder!\nFrom now on, your duty will be to purge the heresy from our sacred lands.\nHere is your Badge of the Binder. It will give you the right to execute justice on your own.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "I'm honored.";
+			NextPage = 3;
+			GiveItem = "binderBadge";
+		}
+
+	}
+	Page//3
+	{
+		Name = "Tiberius, Binder Superior";
+		Dialog = "Now, you will head to the Eastern Highlands. There you will retrieve ancient artifact that's been discovered lately by the scientists. Find me in my office, I'll tell you more there.";
+		Panel = "M_LEDR";
+		Choice
+		{
+			Text = "Yes, supreme.";
+			NextPage = 4;
+			Closedialog = true;
+		}
+
+	}
+
+}
+
+//=========================================================================
+//-------------------------------------------------------------------------
+//=========================================================================
+//barman - rumors regarding quests
+Conversation
+{
+	ID = 7;
+	Page//1
+	{
+		Name = "Barkeeper";
+		Dialog = "Welcome to The Spilled Goblet, would you like some drink? Or do you want some talks?";
+		Choice
+		{
+			Text = "What can you offer me?";
+			NextPage = 2;
+		}
+		Choice
+		{
+			Text = "I have some questions.";
+			NextPage = 3;
+		}
+	}
+	Page//2 - drinks
+	{
+		Name = "Barkeeper";
+		Dialog = "I can give you bottle of beer, vine or water. What would you like?";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = 1;
+		}
+		Choice
+		{
+			Text = "Give me bottle of vine";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "vineBottle_item";
+			YesMessage = "Here's the vine.";
+			NoMessage = "Not enough gold!";
+			Cost
+			{
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice
+		{
+			Text = "Give me bottle of beer";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "beerBottle_item";
+			YesMessage = "Here's the beer.";
+			NoMessage = "Not enough gold!";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "Give me bottle of water";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "waterBottle_item";
+			YesMessage = "Here's the water.";
+			NoMessage = "Not enough gold!";
+			Cost
+			{
+				item = "coin";
+				amount = 5;
+			}
+		}
+	}
+	Page//3
+	{
+		Name = "Barkeeper";
+		Dialog = "What do you want to know? I know little bit of everything. And also, because I'm a barkeeper, I know everybody here in town.";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = 1;
+		}
+	}
+
+}
+
+//grocery vendor
+Conversation
+{
+	ID = 8;
+	Page
+	{
+		Name = "Vendor";
+		Dialog = "Hello, how may I serve you?";
+		Choice
+		{
+			Text = "Buy hamburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 1;
+			DisplayCost = true;
+			GiveItem = "hamburger_item";
+			Cost
+			{
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice
+		{
+			Text = "Buy cheeseburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 1;
+			DisplayCost = true;
+			GiveItem = "cheeseburger_item";
+			Cost
+			{
+				item = "coin";
+				amount = 20;
+			}
+		}
+		Choice
+		{
+			Text = "Buy bigburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 1;
+			DisplayCost = true;
+			GiveItem = "bigburger_item";
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "Buy water bottle";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 1;
+			DisplayCost = true;
+			GiveItem = "waterBottle_item";
+			Cost
+			{
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice
+		{
+			Text = "Buy bottle of beer";
+			NextPage = 1;
+			DisplayCost = true;
+			GiveItem = "beerBottle_item";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+	}
+}
+
+//techsmith
+
+Conversation
+{
+	ID = 9;
+	Page//1
+	{
+		Name = "Techsmith";
+		Dialog = "Hello, I sell all kinds of tech gizmos. Also, I can upgrade your stuff.";
+		Choice
+		{
+			Text = "Buy";
+			NextPage = 2;
+		}
+		Choice
+		{
+			Text = "Upgrade";
+			NextPage = 3;
+		}
+	}
+	Page//2
+	{
+		Name = "Techsmith";
+		Dialog = "What would you like?";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = 1;
+		}
+		Choice
+		{
+			Text = "Buy Night-Eye Device";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "NightEyeDevice";
+			Cost
+			{
+				item = "coin";
+				amount = 500;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Portable shield";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "ShieldModule";
+			Cost
+			{
+				item = "coin";
+				amount = 1500;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Swarmers";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "Swarmers_item";
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+
+		}
+		Choice
+		{
+			Text = "Buy SpringMine";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = 2;
+			DisplayCost = true;
+			GiveItem = "SpringMine_item";
+			Cost
+			{
+				item = "coin";
+				amount = 150;
+			}
+
+		}
+
+	}
+	Page//3
+	{
+		Name = "Techsmith";
+		Dialog = "I can upgrade you gizmos. Just bring me the blueprints.";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = 1;
+		}
+	}
+}
+
+//bath gatekeeper
+Conversation
+{
+	ID = 10;
+	Page
+	{
+		Name = "Gatekeeper";
+		Dialog = "Hello, Do you want to enter the baths? Entrance costs 10 coins.";
+		Choice
+		{
+			Text = "Yes, I want to shower myself.";
+			NextPage = 1;
+			GiveItem = "BHbathKey";
+			YesMessage = "I bid you welcome.";
+			NoMessage = "Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+	}
+}
+
+
+
+//explosive weapons vendor
+Conversation
+{
+	ID = 11;
+	Page
+	{
+		Name = "Explosive Guns Vendor";
+		Dialog = "Hello, what can I get you?";
+		Choice
+		{
+			Text = "Buy Grenade Launcher";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "StrifeGrenadeLauncher";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 750;
+			}
+		}
+		Choice
+		{
+			Text = "Buy HE grenades";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "HEGrenadeRounds";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Phosphorous grenades";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "PhosphorusGrenadeRounds";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Mini-missile Launcher";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "StrifeGrenadeLauncher";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 650;
+			}
+		}
+		Choice
+		{
+			Text = "Buy pack of Mini-missiles";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "MiniMissiles";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 35;
+			}
+		}
+		Choice
+		{
+			Text = "Buy crate of Mini-missiles";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "CrateOfMissiles";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 65;
+			}
+		}
+	}
+}
+
+
+//energy weapons vendor
+Conversation
+{
+	ID = 12;
+	Page
+	{
+		Name = "Energy Weapons Vendor";
+		Dialog = "Welcome, how may I serve you?";
+		Choice
+		{
+			Text = "Buy Mauler";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "Mauler";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 1750;
+			}
+		}
+		Choice
+		{
+			Text = "Buy EnergyPod";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyPod_item";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Energykit Pack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyKit_item";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 75;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Energy Pack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "EnergyPack_item";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Flamethrower";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "FlameThrower";
+			NextPage = 1;
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 1450;
+			}
+		}
+	}
+}
+
+//governor id 13
+Conversation
+{
+	ID = 13;
+	Page//1
+	{
+		Name = "Governor";
+		Dialog = "Hello Binder, what do you need? The gate's closed for a reason. The powerplant's been damaged, the poachers stole the power coupling, so I cannot open the gate. But I know you are a man of cunning, so I'm asking for your help.";
+		Panel = "M_PEAS1";
+		Choice
+		{
+			Text = "What exactly you need from me?";
+            Nextpage = 2;
+			Special = 80;
+			arg0 = 99;
+		}
+	}
+    Page//2
+    {
+		Name = "Governor";
+		Dialog = "Well, I need you to go to the waste treatment plant. My infomrants told me that the poachers are hiding there, somewhere. You have to search the place. And while you're in, clean the places from the spiders.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Ok, I'll help you.";
+            Nextpage = 3;
+			special = 80;
+			arg0 = 100;
+            Closedialog = true;
+        }
+    }
+    Page//3
+    {
+        link = 4;
+        IfItem
+        {
+            item = "twn_quest01_cacheFound";
+            amount = 1;
+        }
+		Name = "Governor";
+		Dialog = "Hello Binder, I see that you are back. Have you found the poachers?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "No, not yet.";
+            Nextpage = 3;
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page//4
+    {
+        Name = "Governor";
+		Dialog = "Hello Binder, I see that you are back. Have you found the poachers?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "I've found their hideout, but the poachers were gone.";
+            Nextpage = 5;
+        }
+    }
+    Page//5
+    {
+        Name = "Governor";
+		Dialog = "Yes, I know. As my informants told me, they fled just before you entered the waste treatment plant. Al least you got rid of the spiders gang. Good job. Here's something for the hard work and the key to the mines.\nYou should head to the mines now. The poachers are hiding somwhere there. Find them and deal with them and bring back the power coupling, so we can fix the powerplant.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Ok, I'll head to the mines.";
+            Nextpage = 6;
+            Closedialog = true;
+            YesMessage = "Here's something for the work.";
+            Special = 80;
+            arg0 = 101;
+        }
+    }
+    Page//6
+    {
+        link = 7;
+        IfItem
+        {
+            item = "powerPlant_powerCoupling";
+            amount = 1;
+        }
+        Name = "Governor";
+		Dialog = "Have you found the power coupling?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "No, not yet.";
+            Nextpage = 6;
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page//7
+    {
+        Name = "Governor";
+		Dialog = "Have you found the power coupling?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Yes, here it is.";
+            Nextpage = 8;
+            Giveitem = "twn_quest02_finished";
+        }
+    }
+    Page//8
+    {
+        Name = "Governor";
+		Dialog = "Oh, don't give it to me. I'm not the one who will fix the powerplant. Just head there, the technicians will tell you what to do. Also, here's some gold to cover your expenses. And the powerplant key.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Well, ok...";
+            Nextpage = 9;
+            Closedialog = true;
+            Special = 80;
+            arg0 = 102;
+            /*
+
+             */
+        }
+    }
+    Page//9
+    {
+        link = 10;
+        IfItem
+        {
+            item = "twn_quest03_powerPlantFixed";
+            amount = 1;
+        }
+        Name = "Governor";
+		Dialog = "Hello, I see you are back. But the gate's controls are not working yet. Have you fixed the powerplant?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "No, not yet.";
+            Nextpage = 9;
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page//10
+    {
+        Name = "Governor";
+		Dialog = "Hello, I see you are back and the gate's controls are online now. Good job. Here some extra cash for the good work. Also, I'm opening the town's gates, if you need to leave. Or, if you want, we can speak.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Thank you.";
+            Nextpage = 11;
+            Special = 80;
+            arg0 = 103;
+            Closedialog = true;
+            YesMessage = "You're welcome!";
+            /*
+
+             */
+        }
+    }
+    Page//11
+    {
+        Name = "Governor";
+		Dialog = "Hello, what do you need?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "Can I have a question?";
+            Nextpage = 12;
+        }
+    }
+    Page//12
+    {
+        Name = "Governor";
+		Dialog = "Hello, what do you need?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 11;
+        }
+        Choice
+        {
+            Text = "Tell me about the city.";
+            Nextpage = 13;
+        }
+        Choice
+        {
+            Text = "Are there any heretics in the city?";
+            Nextpage = 14;
+        }
+        Choice
+        {
+            Text = "Tell me about yourself.";
+            Nextpage = 15;
+        }
+    }
+    Page//13
+    {
+        Name = "Governor";
+		Dialog = "Our city's called Silent Hills, as you already know. It was founded after the comet hit the earth. The Order came here and helped the locals to rebuilt their homes, so the locals started following this new faith. The Order is just, but righteous overseer. We have minimal criminality and none of us starves.\nOur city has many shops, hospital and even a city bath, built on old roman plan.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 12;
+        }
+
+    }
+    Page//14
+    {
+        Name = "Governor";
+		Dialog = "I don't know about any. The Inquisition is doing good job, so we can sleep peacefully.";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 12;
+        }
+
+    }
+    Page//15
+    {
+        Name = "Governor";
+		Dialog = "My name's Mervin Hart. I've been proposed to this function two years ago, when the last governor retired. Before that, I was in charge of town powerplant. I'm an engineer, not a politician, and this work is pretty rough for me. You know,working withmachines is easier than working with people. The amchines do exactly what you tell them to do. But people?";
+		Panel = "M_PEAS1";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 12;
+        }
+
+    }
+}
+
+//personal computer in house
+Conversation
+{
+	ID = 14;
+
+	Page//1
+    {
+		//makes the message temporary
+		link = 2;
+		IfItem
+		{
+			item = "removeMainMessage";
+			amount = 1;
+		}
+		//-------------------
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[white]The superior has a task for you.\n\nYou should visit him at the command center.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "[ Close message ]";
+            Nextpage = 2;
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 159;
+        }
+    }
+    Page//2
+    {
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[white]- Personal notes\n- Information";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "[ Personal notes ]";
+            Nextpage = 3;
+        }
+        Choice
+        {
+            Text = "[ Information ]";
+            Nextpage = 7;
+        }
+		Choice
+		{
+			Text = "\c[yellow]<<GOTO TESTSITE>>";
+			NextPage = 2;
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 666;
+		}
+    }
+    Page//3
+    {
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[white]Personal notes";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 2;
+        }
+        Choice
+        {
+            Text = "[ Note #1 ]";
+            Nextpage = 4;
+        }
+        Choice
+        {
+            Text = "[ Note #2 ]";
+            Nextpage = 5;
+        }
+        Choice
+        {
+            Text = "[ Note #3 ]";
+            Nextpage = 6;
+        }
+    }
+    Page//4
+    {
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[yellow]NOTE #1\n\c[green]==-----------==\n\c[white]The trainig's hard, but I'm making progress. Maybe some day I'll be promoted full ranking Binder.\nI hope so. I don't want do dissappoint my parents, and all the ancestors.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 3;
+        }
+    }
+    Page//5
+    {
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[yellow]NOTE #2\n\c[green]==-----------==\n\c[white]That bastard Jax stole my shoes. I'll beat shit out of him.\n\nOr maybe not. Maybe I should take his badge and hide it somewhere. That would bring him into trouble. Yeah, that's what he deserves.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 3;
+        }
+    }
+    Page//6
+    {
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[yellow]NOTE #3\n\c[green]==-----------==\n\c[white]All my hard work has reached it's succesfull end. I'll be promoted full ranking Binder, but only after I'll finish my last task as an Cadet.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 3;
+        }
+    }
+	Page//7
+	{
+        Name = "[ Personal Computer ]";
+        Dialog = "\c[yellow][ GAME INFO ]\n\c[green]==-----------==\n\c[white]- rpg system \n- weapons\n- items\n- backstory";
+		Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice
+        {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = 2;
+        }
+		Choice
+		{
+			Text = "RPG system";
+			NextPage = 8;
+		}
+		Choice
+		{
+			Text = "Weapons";
+			NextPage = 9;
+		}
+		Choice
+		{
+			Text = "Items";
+			NextPage = 10;
+		}
+		Choice
+		{
+			Text = "Backstory";
+			NextPage = 11;
+		}
+
+	}
+	Page//8
+	{
+        Name = "[ Personal Computer ]";
+        Dialog = "INFO_RPG_SYSTEM";
+		Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			Nextpage = 7;
+		}
+
+	}
+	Page//9
+	{
+        Name = "[ Personal Computer ]";
+        Dialog = "$M01_PC_WEAPONS";
+		Panel = "M_WPNS";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			Nextpage = 7;
+		}
+
+	}
+	Page//10
+	{
+        Name = "[ Personal Computer ]";
+        Dialog = "INFO_ITEMS";
+		Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			Nextpage = 7;
+		}
+
+	}
+	Page//11
+	{
+        Name = "[ Personal Computer ]";
+        Dialog = "INFO_BACKSTORY";
+		Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			Nextpage = 7;
+		}
+
+	}
+}
+
+Conversation
+{
+	ID = 15;
+	Page//1
+	{
+		Name = "Specialities Vendor";
+		Dialog = "Hello, what can I get you?";
+		Choice
+		{
+			Text = "Buy Environmental Suit";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "EnvironmentalSuit";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 65;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Targeter";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "Targeter";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 45;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Shadow Armor";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "ShadowArmor";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 145;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Scanner";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "Scanner";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 75;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Deployable shield";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "DeployableShieldItem";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Flame turret";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "FlameTurret";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 120;
+			}
+		}
+	}
+}
+
+Conversation
+{
+	ID = 16;
+	Page
+	{
+		Name = "Grenades vendor";
+		Dialog = "Welcome, how may I serve you?";
+		Choice
+		{
+			Text = "Buy HE grenade";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "grenadeExplosive";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Phosphorous grenade";
+			NextPage = 1;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "grenadeFire";
+			DisplayCost = true;
+			Cost
+			{
+				Item = "coin";
+				Amount = 15;
+			}
+		}
+	}
+}
+
+//armor vendor
+Conversation
+{
+	ID = 17;
+	Page
+	{
+		Name = "Armor vendor";
+		Dialog = "Hello, what can I get for you?";
+		Choice
+		{
+			Text = "Buy Leather Armor";
+			NextPage = 1;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "LeatherArmor";
+			Cost
+			{
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Metal Armor";
+			NextPage = 1;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "MetalArmor";
+			Cost
+			{
+				item = "coin";
+				amount = 125;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Cybernetic Armor";
+			NextPage = 1;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "RangerArmor1_item";
+			Cost
+			{
+				item = "coin";
+				amount = 175;
+			}
+		}
+	}
+}
+
+Conversation
+{
+	ID = 18;
+	Page//1
+	{
+		link = 3;
+		IfItem
+		{
+			item = "twn_quest03_finished";
+			amount = 1;
+		}
+		Name = "Gate Guard";
+		Dialog = "If you need to pass the gate, talk to the governor.";
+		Choice
+		{
+			Text = "Where can I find him?";
+			NextPage = 2;
+			Special = 80;
+			arg0 = 98;
+		}
+	}
+	Page
+	{
+		Name = "Gate Guard";
+		Dialog = "He's living in Town Hall, next to the bridge over the river. Here, I marked it on your map.";
+
+	}
+	Page
+	{
+		Name = "Gate Guard";
+		Dialog = "I don't have time to chit-chat.";
+	}
+
+}
+
+
+Conversation
+{
+	ID = 19;
+
+	Page//1
+	{
+		Name = "Combat Tutor";
+		Dialog = "Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens.";
+		Choice
+		{
+			Require
+			{
+				item = "upgradeToken";
+				amount = 1;
+			}
+			Text = "Install me the accuracy bonus.";
+			NextPage = 1;
+			CloseDialog = true;
+			GiveItem = "AccuracyBonus";
+			YesMessage = "Here you go. Just hold still.";
+			NoMessage = "You don't have the upgrade token!";
+			Cost
+			{
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+
+	}
+}
+
+//librarian in governor's house
+Conversation
+{
+	ID = 20;
+
+	Page//1
+	{
+		Name = "Librarian";
+		Dialog = "What? .. Umm, Do you need something? ... Sorry, I'm busy to talk. Maybe later.";
+	}
+}
+
+
+//commoner random conversation
+Conversation
+{
+	ID = 21;
+
+	Page//1
+	{
+		Name = "$N_COMMONER";
+		Dialog = "RANDOM_SILENTHILLS_COMMONER";
+	}
+}

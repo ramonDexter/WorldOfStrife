@@ -1,0 +1,26 @@
+script 1801 (void) {
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze player
+    Fadeto (0, 0, 0, 1.0, 1); //fade in in 1 sec
+    Delay (15); //wait 1 sec
+    //upgrade players stamina
+    GiveActorInventory (0, "upgradeStamina", 10);
+    Fadeto (0, 0, 0, 0.0, 1);
+    Delay (20);
+    SetPlayerProperty (0, 0, PROP_TOTALLYFROZEN); //unfreeze player
+}
+
+script 1802 (void) {
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze player
+    Fadeto (0, 0, 0, 1.0, 1); //fade in in 1 sec
+    Delay (17); //wait 1 sec
+    //upgrade players stamina
+    int counter = 0;
+	do {
+		counter++;
+		GiveInventory("upgradeAccuracy", 1);
+		Delay (1);
+	} while ( counter < 10 );
+    Fadeto (0, 0, 0, 0.0, 1);
+    Delay (17);
+    SetPlayerProperty (0, 0, PROP_TOTALLYFROZEN); //unfreeze player
+}

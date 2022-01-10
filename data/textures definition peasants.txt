@@ -1,0 +1,1602 @@
+
+Sprite "PS01A1", 26, 55
+{
+	Patch "BODIES", 0, -8
+	Patch "HEADS", -3, -73
+}
+
+Sprite "PS01B1", 27, 56
+{
+	Patch "BODIES", 0, -77
+	Patch "HEADS", -2, -73
+}
+
+Sprite "PS01C1", 26, 55
+{
+	Patch "BODIES", -1, -140
+	Patch "HEADS", -2, -73
+}
+
+Sprite "PS01D1", 25, 56
+{
+	Patch "BODIES", -1, -200
+	Patch "HEADS", -3, -73
+}
+
+Sprite "PS01E1", 30, 56
+{
+	Patch "HEADS", 2, -73
+	Patch "BODIES", -1, -262
+}
+
+Sprite "PS01F1", 20, 54
+{
+	Patch "HEADS", -6, -73
+	Patch "BODIES", -3, -332
+}
+
+Sprite "PS01A2", 25, 55
+{
+	Patch "BODIES", -36, -8
+	Patch "HEADS", -60, -72
+}
+
+Sprite "PS01B2", 26, 55
+{
+	Patch "BODIES", -40, -77
+	Patch "HEADS", -62, -72
+}
+
+Sprite "PS01C2", 24, 55
+{
+	Patch "BODIES", -34, -140
+	Patch "HEADS", -60, -72
+}
+
+Sprite "PS01D2", 31, 55
+{
+	Patch "BODIES", -35, -200
+	Patch "HEADS", -57, -72
+}
+
+Sprite "PS01E2", 29, 55
+{
+	Patch "HEADS", -55, -72
+	Patch "BODIES", -44, -262
+}
+
+Sprite "PS01F2", 32, 53
+{
+	Patch "HEADS", -56, -72
+	Patch "BODIES", -30, -332
+}
+
+Sprite "PS01A3", 20, 55
+{
+	Patch "BODIES", -77, -8
+	Patch "HEADS", -120, -73
+}
+
+Sprite "PS01B3", 32, 54
+{
+	Patch "BODIES", -75, -77
+	Patch "HEADS", -115, -73
+}
+
+Sprite "PS01C3", 21, 55
+{
+	Patch "BODIES", -63, -139
+	Patch "HEADS", -120, -72
+}
+
+Sprite "PS01D3", 30, 54
+{
+	Patch "BODIES", -72, -200
+	Patch "HEADS", -116, -73
+}
+
+Sprite "PS01E3", 33, 54
+{
+	Patch "HEADS", -109, -73
+	Patch "BODIES", -78, -262
+}
+
+Sprite "PS01F3", 44, 52
+{
+	Patch "HEADS", -108, -73
+	Patch "BODIES", -65, -332
+}
+
+Sprite "PS01A4", 27, 54
+{
+	Patch "BODIES", -114, -8
+	Patch "HEADS", -165, -72
+}
+
+Sprite "PS01B4", 31, 55
+{
+	Patch "BODIES", -112, -77
+	Patch "HEADS", -160, -72
+}
+
+Sprite "PS01C4", 22, 54
+{
+	Patch "BODIES", -88, -140
+	Patch "HEADS", -166, -72
+}
+
+Sprite "PS01D4", 31, 53
+{
+	Patch "BODIES", -110, -200
+	Patch "HEADS", -165, -72
+}
+
+Sprite "PS01E4", 33, 53
+{
+	Patch "HEADS", -160, -72
+	Patch "BODIES", -118, -262
+}
+
+Sprite "PS01F4", 40, 51
+{
+	Patch "HEADS", -164, -72
+	Patch "BODIES", -113, -332
+}
+
+Sprite "PS01A5", 25, 55
+{
+	Patch "BODIES", -154, -8
+	Patch "HEADS", -211, -71
+}
+
+Sprite "PS01B5", 28, 55
+{
+	Patch "BODIES", -151, -77
+	Patch "HEADS", -210, -71
+}
+
+Sprite "PS01C5", 26, 55
+{
+	Patch "BODIES", -116, -140
+	Patch "HEADS", -210, -71
+}
+
+Sprite "PS01D5", 24, 55
+{
+	Patch "BODIES", -148, -200
+	Patch "HEADS", -211, -71
+}
+
+Sprite "PS01E5", 29, 56
+{
+	Patch "HEADS", -211, -71
+	Patch "BODIES", -164, -262
+}
+
+Sprite "PS01F5", 24, 54
+{
+	Patch "HEADS", -210, -71
+	Patch "BODIES", -156, -332
+}
+
+Sprite "PS01A6", 24, 55
+{
+	Patch "BODIES", -184, -8
+	Patch "HEADS", -210, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01B6", 31, 54
+{
+	Patch "BODIES", -184, -77
+	Patch "HEADS", -204, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01C6", 26, 56
+{
+	Patch "BODIES", -146, -140
+	Patch "HEADS", -205, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01D6", 29, 54
+{
+	Patch "BODIES", -180, -200
+	Patch "HEADS", -206, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01E6", 25, 56
+{
+	Patch "HEADS", -210, -69
+	{
+		FlipX
+	}
+	Patch "BODIES", -204, -259
+}
+
+Sprite "PS01F6", 31, 52
+{
+	Patch "HEADS", -206, -72
+	{
+		FlipX
+	}
+	Patch "BODIES", -188, -332
+}
+
+Sprite "PS01A7", 25, 55
+{
+	Patch "BODIES", -215, -8
+	Patch "HEADS", -256, -73
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01B7", 32, 55
+{
+	Patch "BODIES", -220, -77
+	Patch "HEADS", -253, -73
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01C7", 22, 56
+{
+	Patch "BODIES", -182, -140
+	Patch "HEADS", -256, -73
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01D7", 32, 54
+{
+	Patch "BODIES", -218, -200
+	Patch "HEADS", -253, -73
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01E7", 36, 54
+{
+	Patch "HEADS", -255, -73
+	{
+		FlipX
+	}
+	Patch "BODIES", -242, -262
+}
+
+Sprite "PS01F7", 38, 52
+{
+	Patch "HEADS", -248, -73
+	{
+		FlipX
+	}
+	Patch "BODIES", -225, -332
+}
+
+Sprite "PS01A8", 26, 55
+{
+	Patch "BODIES", -243, -8
+	Patch "HEADS", -310, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01B8", 27, 55
+{
+	Patch "BODIES", -258, -77
+	Patch "HEADS", -313, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01C8", 19, 55
+{
+	Patch "BODIES", -210, -140
+	Patch "HEADS", -316, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01D8", 29, 55
+{
+	Patch "BODIES", -254, -200
+	Patch "HEADS", -309, -72
+	{
+		FlipX
+	}
+}
+
+Sprite "PS01E8", 32, 55
+{
+	Patch "HEADS", -314, -72
+	{
+		FlipX
+	}
+	Patch "BODIES", -286, -262
+}
+
+Sprite "PS01F8", 35, 53
+{
+	Patch "HEADS", -304, -72
+	{
+		FlipX
+	}
+	Patch "BODIES", -267, -332
+}
+
+Sprite "PS02A1", 26, 55
+{
+	Patch "BODIES", 0, -8
+	Patch "HEADS", -1, -137
+}
+
+Sprite "PS02B1", 27, 55
+{
+	Patch "BODIES", 0, -77
+	Patch "HEADS", 0, -137
+}
+
+Sprite "PS02C1", 26, 55
+{
+	Patch "BODIES", -1, -140
+	Patch "HEADS", 0, -137
+}
+
+Sprite "PS02D1", 25, 56
+{
+	Patch "BODIES", -1, -200
+	Patch "HEADS", -1, -137
+}
+
+Sprite "PS02E1", 30, 56
+{
+	Patch "HEADS", 4, -137
+	Patch "BODIES", -1, -262
+}
+
+Sprite "PS02F1", 20, 54
+{
+	Patch "HEADS", -4, -137
+	Patch "BODIES", -3, -332
+}
+
+Sprite "PS02A2", 25, 55
+{
+	Patch "HEADS", -58, -137
+	Patch "BODIES", -36, -8
+}
+
+Sprite "PS02B2", 26, 55
+{
+	Patch "HEADS", -60, -137
+	Patch "BODIES", -40, -77
+}
+
+Sprite "PS02C2", 24, 55
+{
+	Patch "HEADS", -58, -137
+	Patch "BODIES", -34, -140
+}
+
+Sprite "PS02D2", 31, 55
+{
+	Patch "HEADS", -55, -137
+	Patch "BODIES", -35, -200
+}
+
+Sprite "PS02E2", 29, 55
+{
+	Patch "HEADS", -53, -137
+	Patch "BODIES", -44, -262
+}
+
+Sprite "PS02F2", 32, 53
+{
+	Patch "HEADS", -54, -137
+	Patch "BODIES", -30, -332
+}
+
+Sprite "PS02A3", 20, 54
+{
+	Patch "BODIES", -77, -9
+	Patch "HEADS", -118, -138
+}
+
+Sprite "PS02B3", 32, 54
+{
+	Patch "BODIES", -75, -77
+	Patch "HEADS", -113, -138
+}
+
+Sprite "PS02C3", 21, 54
+{
+	Patch "BODIES", -63, -140
+	Patch "HEADS", -118, -138
+}
+
+Sprite "PS02D3", 30, 54
+{
+	Patch "BODIES", -72, -200
+	Patch "HEADS", -114, -138
+}
+
+Sprite "PS02E3", 33, 54
+{
+	Patch "HEADS", -107, -138
+	Patch "BODIES", -78, -262
+}
+
+Sprite "PS02F3", 44, 52
+{
+	Patch "HEADS", -106, -138
+	Patch "BODIES", -65, -332
+}
+
+Sprite "PS02A4", 27, 54
+{
+	Patch "BODIES", -114, -8
+	Patch "HEADS", -163, -137
+}
+
+Sprite "PS02B4", 31, 55
+{
+	Patch "BODIES", -112, -77
+	Patch "HEADS", -158, -137
+}
+
+Sprite "PS02C4", 22, 54
+{
+	Patch "BODIES", -88, -140
+	Patch "HEADS", -164, -137
+}
+
+Sprite "PS02D4", 31, 53
+{
+	Patch "BODIES", -110, -200
+	Patch "HEADS", -163, -137
+}
+
+Sprite "PS02E4", 31, 53
+{
+	Patch "HEADS", -160, -137
+	Patch "BODIES", -120, -262
+}
+
+Sprite "PS02F4", 40, 51
+{
+	Patch "HEADS", -162, -137
+	Patch "BODIES", -113, -332
+}
+
+Sprite "PS02A5", 25, 55
+{
+	Patch "BODIES", -154, -8
+	Patch "HEADS", -209, -136
+}
+
+Sprite "PS02B5", 28, 55
+{
+	Patch "BODIES", -151, -77
+	Patch "HEADS", -208, -136
+}
+
+Sprite "PS02C5", 26, 55
+{
+	Patch "BODIES", -116, -140
+	Patch "HEADS", -208, -136
+}
+
+Sprite "PS02D5", 24, 55
+{
+	Patch "BODIES", -148, -200
+	Patch "HEADS", -209, -136
+}
+
+Sprite "PS02E5", 29, 56
+{
+	Patch "HEADS", -209, -136
+	Patch "BODIES", -164, -262
+}
+
+Sprite "PS02F5", 24, 54
+{
+	Patch "HEADS", -208, -136
+	Patch "BODIES", -156, -332
+}
+
+Sprite "PS02A6", 24, 55
+{
+	Patch "BODIES", -184, -8
+	Patch "HEADS", -263, -135
+}
+
+Sprite "PS02B6", 31, 54
+{
+	Patch "BODIES", -184, -77
+	Patch "HEADS", -257, -135
+}
+
+Sprite "PS02C6", 26, 56
+{
+	Patch "BODIES", -146, -140
+	Patch "HEADS", -258, -135
+}
+
+Sprite "PS02D6", 29, 55
+{
+	Patch "BODIES", -180, -200
+	Patch "HEADS", -260, -135
+}
+
+Sprite "PS02E6", 25, 54
+{
+	Patch "HEADS", -263, -135
+	Patch "BODIES", -204, -261
+}
+
+Sprite "PS02F6", 31, 52
+{
+	Patch "HEADS", -259, -135
+	Patch "BODIES", -188, -332
+}
+
+Sprite "PS02A7", 25, 55
+{
+	Patch "BODIES", -215, -8
+	Patch "HEADS", -309, -136
+}
+
+Sprite "PS02B7", 32, 55
+{
+	Patch "BODIES", -220, -77
+	Patch "HEADS", -306, -136
+}
+
+Sprite "PS02C7", 22, 56
+{
+	Patch "BODIES", -182, -140
+	Patch "HEADS", -309, -136
+}
+
+Sprite "PS02D7", 32, 54
+{
+	Patch "BODIES", -218, -200
+	Patch "HEADS", -306, -136
+}
+
+Sprite "PS02E7", 36, 54
+{
+	Patch "HEADS", -308, -136
+	Patch "BODIES", -242, -262
+}
+
+Sprite "PS02F7", 38, 52
+{
+	Patch "HEADS", -301, -136
+	Patch "BODIES", -225, -332
+}
+
+Sprite "PS02A8", 26, 55
+{
+	Patch "HEADS", -364, -135
+	Patch "BODIES", -243, -8
+}
+
+Sprite "PS02B8", 27, 55
+{
+	Patch "HEADS", -367, -135
+	Patch "BODIES", -258, -77
+}
+
+Sprite "PS02C8", 19, 55
+{
+	Patch "HEADS", -370, -135
+	Patch "BODIES", -210, -140
+}
+
+Sprite "PS02D8", 29, 55
+{
+	Patch "HEADS", -363, -135
+	Patch "BODIES", -254, -200
+}
+
+Sprite "PS02E8", 32, 55
+{
+	Patch "HEADS", -367, -135
+	Patch "BODIES", -286, -262
+}
+
+Sprite "PS02F8", 35, 53
+{
+	Patch "HEADS", -357, -135
+	Patch "BODIES", -267, -332
+}
+
+Sprite "PS03A1", 26, 55
+{
+	Patch "BODIES", 0, -8
+	Patch "HEADS", 1, -201
+}
+
+Sprite "PS03B1", 27, 55
+{
+	Patch "BODIES", 0, -77
+	Patch "HEADS", 2, -201
+}
+
+Sprite "PS03C1", 26, 55
+{
+	Patch "BODIES", -1, -140
+	Patch "HEADS", 2, -201
+}
+
+Sprite "PS03D1", 25, 56
+{
+	Patch "BODIES", -1, -200
+	Patch "HEADS", 1, -201
+}
+
+Sprite "PS03E1", 30, 56
+{
+	Patch "HEADS", 6, -201
+	Patch "BODIES", -1, -262
+}
+
+Sprite "PS03F1", 20, 56
+{
+	Patch "HEADS", -2, -199
+	Patch "BODIES", -3, -330
+}
+
+Sprite "PS03A2", 25, 55
+{
+	Patch "HEADS", -56, -201
+	Patch "BODIES", -36, -8
+}
+
+Sprite "PS03B2", 26, 55
+{
+	Patch "HEADS", -58, -201
+	Patch "BODIES", -40, -77
+}
+
+Sprite "PS03C2", 24, 55
+{
+	Patch "HEADS", -56, -201
+	Patch "BODIES", -34, -140
+}
+
+Sprite "PS03D2", 31, 55
+{
+	Patch "HEADS", -53, -201
+	Patch "BODIES", -35, -200
+}
+
+Sprite "PS03E2", 29, 55
+{
+	Patch "HEADS", -51, -201
+	Patch "BODIES", -44, -262
+}
+
+Sprite "PS03F2", 32, 53
+{
+	Patch "HEADS", -52, -201
+	Patch "BODIES", -30, -332
+}
+
+Sprite "PS03A3", 20, 55
+{
+	Patch "BODIES", -77, -8
+	Patch "HEADS", -116, -202
+}
+
+Sprite "PS03B3", 32, 55
+{
+	Patch "BODIES", -75, -77
+	Patch "HEADS", -111, -202
+}
+
+Sprite "PS03C3", 21, 54
+{
+	Patch "BODIES", -63, -140
+	Patch "HEADS", -116, -202
+}
+
+Sprite "PS03D3", 30, 54
+{
+	Patch "BODIES", -72, -200
+	Patch "HEADS", -112, -202
+}
+
+Sprite "PS03E3", 33, 54
+{
+	Patch "HEADS", -105, -202
+	Patch "BODIES", -78, -262
+}
+
+Sprite "PS03F3", 44, 52
+{
+	Patch "HEADS", -104, -202
+	Patch "BODIES", -65, -332
+}
+
+Sprite "PS03A4", 27, 54
+{
+	Patch "BODIES", -114, -8
+	Patch "HEADS", -161, -201
+}
+
+Sprite "PS03B4", 31, 55
+{
+	Patch "BODIES", -112, -77
+	Patch "HEADS", -156, -201
+}
+
+Sprite "PS03C4", 22, 54
+{
+	Patch "BODIES", -88, -140
+	Patch "HEADS", -162, -201
+}
+
+Sprite "PS03D4", 31, 53
+{
+	Patch "BODIES", -110, -200
+	Patch "HEADS", -161, -201
+}
+
+Sprite "PS03E4", 33, 53
+{
+	Patch "HEADS", -156, -201
+	Patch "BODIES", -118, -262
+}
+
+Sprite "PS03F4", 40, 51
+{
+	Patch "HEADS", -160, -201
+	Patch "BODIES", -113, -332
+}
+
+Sprite "PS03A5", 25, 55
+{
+	Patch "BODIES", -154, -8
+	Patch "HEADS", -207, -200
+}
+
+Sprite "PS03B5", 28, 55
+{
+	Patch "BODIES", -151, -77
+	Patch "HEADS", -206, -200
+}
+
+Sprite "PS03C5", 26, 55
+{
+	Patch "BODIES", -116, -140
+	Patch "HEADS", -206, -200
+}
+
+Sprite "PS03D5", 24, 55
+{
+	Patch "BODIES", -148, -200
+	Patch "HEADS", -207, -200
+}
+
+Sprite "PS03E5", 29, 56
+{
+	Patch "HEADS", -207, -200
+	Patch "BODIES", -164, -262
+}
+
+Sprite "PS03F5", 24, 54
+{
+	Patch "HEADS", -206, -200
+	Patch "BODIES", -156, -332
+}
+
+Sprite "PS03A6", 24, 55
+{
+	Patch "BODIES", -184, -8
+	Patch "HEADS", -261, -199
+}
+
+Sprite "PS03B6", 31, 54
+{
+	Patch "BODIES", -184, -77
+	Patch "HEADS", -255, -199
+}
+
+Sprite "PS03C6", 26, 56
+{
+	Patch "BODIES", -146, -140
+	Patch "HEADS", -256, -199
+}
+
+Sprite "PS03D6", 29, 55
+{
+	Patch "BODIES", -180, -200
+	Patch "HEADS", -257, -199
+}
+
+Sprite "PS03E6", 29, 53
+{
+	Patch "HEADS", -261, -199
+	Patch "BODIES", -204, -262
+}
+
+Sprite "PS03F6", 31, 52
+{
+	Patch "HEADS", -257, -199
+	Patch "BODIES", -188, -332
+}
+
+Sprite "PS03A7", 25, 55
+{
+	Patch "BODIES", -215, -8
+	Patch "HEADS", -307, -200
+}
+
+Sprite "PS03B7", 32, 55
+{
+	Patch "BODIES", -220, -77
+	Patch "HEADS", -304, -200
+}
+
+Sprite "PS03C7", 22, 56
+{
+	Patch "BODIES", -182, -140
+	Patch "HEADS", -307, -200
+}
+
+Sprite "PS03D7", 32, 54
+{
+	Patch "BODIES", -218, -200
+	Patch "HEADS", -304, -200
+}
+
+Sprite "PS03E7", 36, 54
+{
+	Patch "HEADS", -306, -200
+	Patch "BODIES", -242, -262
+}
+
+Sprite "PS03F7", 38, 52
+{
+	Patch "HEADS", -299, -200
+	Patch "BODIES", -225, -332
+}
+
+Sprite "PS03A8", 26, 55
+{
+	Patch "HEADS", -362, -199
+	Patch "BODIES", -243, -8
+}
+
+Sprite "PS03B8", 27, 55
+{
+	Patch "HEADS", -364, -199
+	Patch "BODIES", -258, -77
+}
+
+Sprite "PS03C8", 19, 55
+{
+	Patch "HEADS", -367, -199
+	Patch "BODIES", -210, -140
+}
+
+Sprite "PS03D8", 29, 55
+{
+	Patch "HEADS", -360, -199
+	Patch "BODIES", -254, -200
+}
+
+Sprite "PS03E8", 32, 55
+{
+	Patch "HEADS", -365, -199
+	Patch "BODIES", -286, -262
+}
+
+Sprite "PS03F8", 35, 53
+{
+	Patch "HEADS", -355, -199
+	Patch "BODIES", -267, -332
+}
+
+Sprite "PS04A1", 26, 55
+{
+	Patch "BODIES", 0, -8
+	Patch "HEADS", -4, -268
+}
+
+Sprite "PS04B1", 27, 55
+{
+	Patch "BODIES", 0, -77
+	Patch "HEADS", -3, -268
+}
+
+Sprite "PS04C1", 26, 55
+{
+	Patch "BODIES", -1, -140
+	Patch "HEADS", -3, -268
+}
+
+Sprite "PS04D1", 25, 56
+{
+	Patch "BODIES", -1, -200
+	Patch "HEADS", -4, -268
+}
+
+Sprite "PS04E1", 30, 56
+{
+	Patch "HEADS", 1, -268
+	Patch "BODIES", -1, -262
+}
+
+Sprite "PS04F1", 20, 54
+{
+	Patch "HEADS", -7, -268
+	Patch "BODIES", -3, -332
+}
+
+Sprite "PS04A2", 25, 55
+{
+	Patch "BODIES", -36, -8
+	Patch "HEADS", -61, -268
+}
+
+Sprite "PS04B2", 26, 55
+{
+	Patch "BODIES", -40, -77
+	Patch "HEADS", -63, -268
+}
+
+Sprite "PS04C2", 24, 55
+{
+	Patch "BODIES", -34, -140
+	Patch "HEADS", -61, -268
+}
+
+Sprite "PS04D2", 31, 55
+{
+	Patch "BODIES", -35, -200
+	Patch "HEADS", -58, -268
+}
+
+Sprite "PS04E2", 29, 55
+{
+	Patch "HEADS", -56, -268
+	Patch "BODIES", -44, -262
+}
+
+Sprite "PS04F2", 32, 53
+{
+	Patch "HEADS", -57, -268
+	Patch "BODIES", -30, -332
+}
+
+Sprite "PS04A3", 20, 55
+{
+	Patch "BODIES", -77, -8
+	Patch "HEADS", -121, -268
+}
+
+Sprite "PS04B3", 32, 54
+{
+	Patch "BODIES", -75, -77
+	Patch "HEADS", -116, -268
+}
+
+Sprite "PS04C3", 21, 54
+{
+	Patch "BODIES", -63, -140
+	Patch "HEADS", -121, -268
+}
+
+Sprite "PS04D3", 30, 54
+{
+	Patch "BODIES", -72, -200
+	Patch "HEADS", -117, -268
+}
+
+Sprite "PS04E3", 33, 54
+{
+	Patch "HEADS", -110, -268
+	Patch "BODIES", -78, -262
+}
+
+Sprite "PS04F3", 44, 52
+{
+	Patch "HEADS", -109, -268
+	Patch "BODIES", -65, -332
+}
+
+Sprite "PS04A4", 27, 54
+{
+	Patch "BODIES", -114, -8
+	Patch "HEADS", -166, -268
+}
+
+Sprite "PS04B4", 31, 55
+{
+	Patch "BODIES", -112, -77
+	Patch "HEADS", -161, -268
+}
+
+Sprite "PS04C4", 22, 54
+{
+	Patch "BODIES", -88, -140
+	Patch "HEADS", -167, -268
+}
+
+Sprite "PS04D4", 31, 53
+{
+	Patch "BODIES", -110, -200
+	Patch "HEADS", -166, -268
+}
+
+Sprite "PS04E4", 31, 53
+{
+	Patch "HEADS", -163, -268
+	Patch "BODIES", -120, -262
+}
+
+Sprite "PS04F4", 40, 51
+{
+	Patch "HEADS", -165, -268
+	Patch "BODIES", -113, -332
+}
+
+Sprite "PS04A5", 25, 55
+{
+	Patch "BODIES", -154, -8
+	Patch "HEADS", -212, -267
+}
+
+Sprite "PS04B5", 28, 55
+{
+	Patch "BODIES", -151, -77
+	Patch "HEADS", -211, -267
+}
+
+Sprite "PS04C5", 26, 55
+{
+	Patch "BODIES", -116, -140
+	Patch "HEADS", -211, -267
+}
+
+Sprite "PS04D5", 24, 55
+{
+	Patch "BODIES", -148, -200
+	Patch "HEADS", -212, -267
+}
+
+Sprite "PS04E5", 29, 56
+{
+	Patch "HEADS", -212, -267
+	Patch "BODIES", -164, -262
+}
+
+Sprite "PS04F5", 24, 54
+{
+	Patch "HEADS", -211, -267
+	Patch "BODIES", -156, -332
+}
+
+Sprite "PS04A6", 24, 55
+{
+	Patch "BODIES", -184, -8
+	Patch "HEADS", -209, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04B6", 31, 54
+{
+	Patch "BODIES", -184, -77
+	Patch "HEADS", -203, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04C6", 26, 56
+{
+	Patch "BODIES", -146, -140
+	Patch "HEADS", -204, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04D6", 29, 55
+{
+	Patch "BODIES", -180, -200
+	Patch "HEADS", -205, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04E6", 29, 53
+{
+	Patch "HEADS", -209, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -204, -262
+}
+
+Sprite "PS04F6", 31, 52
+{
+	Patch "HEADS", -205, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -188, -332
+}
+
+Sprite "PS04A7", 25, 55
+{
+	Patch "BODIES", -215, -8
+	Patch "HEADS", -255, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04B7", 32, 55
+{
+	Patch "BODIES", -220, -77
+	Patch "HEADS", -252, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04C7", 22, 56
+{
+	Patch "BODIES", -182, -140
+	Patch "HEADS", -255, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04D7", 32, 54
+{
+	Patch "BODIES", -218, -200
+	Patch "HEADS", -252, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04E7", 36, 54
+{
+	Patch "HEADS", -254, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -242, -262
+}
+
+Sprite "PS04F7", 38, 52
+{
+	Patch "HEADS", -247, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -225, -332
+}
+
+Sprite "PS04A8", 26, 55
+{
+	Patch "BODIES", -243, -8
+	Patch "HEADS", -309, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04B8", 27, 55
+{
+	Patch "BODIES", -258, -77
+	Patch "HEADS", -312, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04C8", 19, 55
+{
+	Patch "BODIES", -210, -140
+	Patch "HEADS", -315, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04D8", 29, 55
+{
+	Patch "BODIES", -254, -200
+	Patch "HEADS", -308, -268
+	{
+		FlipX
+	}
+}
+
+Sprite "PS04E8", 32, 55
+{
+	Patch "HEADS", -313, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -286, -262
+}
+
+Sprite "PS04F8", 35, 53
+{
+	Patch "HEADS", -303, -268
+	{
+		FlipX
+	}
+	Patch "BODIES", -267, -332
+}
+
+Sprite "PS05A1", 26, 55
+{
+	Patch "BODIES", 0, -8
+	Patch "HEADS", -4, -336
+}
+
+Sprite "PS05B1", 27, 55
+{
+	Patch "BODIES", 0, -77
+	Patch "HEADS", -3, -336
+}
+
+Sprite "PS05C1", 26, 55
+{
+	Patch "BODIES", -1, -140
+	Patch "HEADS", -3, -336
+}
+
+Sprite "PS05D1", 25, 56
+{
+	Patch "BODIES", -1, -200
+	Patch "HEADS", -4, -336
+}
+
+Sprite "PS05E1", 30, 56
+{
+	Patch "HEADS", 1, -336
+	Patch "BODIES", -1, -262
+}
+
+Sprite "PS05F1", 20, 54
+{
+	Patch "HEADS", -7, -336
+	Patch "BODIES", -3, -332
+}
+
+Sprite "PS05A2", 25, 55
+{
+	Patch "BODIES", -36, -8
+	Patch "HEADS", -61, -336
+}
+
+Sprite "PS05B2", 26, 55
+{
+	Patch "BODIES", -40, -77
+	Patch "HEADS", -63, -336
+}
+
+Sprite "PS05C2", 24, 55
+{
+	Patch "BODIES", -34, -140
+	Patch "HEADS", -61, -336
+}
+
+Sprite "PS05D2", 31, 55
+{
+	Patch "BODIES", -35, -200
+	Patch "HEADS", -58, -336
+}
+
+Sprite "PS05E2", 29, 55
+{
+	Patch "HEADS", -56, -336
+	Patch "BODIES", -44, -262
+}
+
+Sprite "PS05F2", 32, 53
+{
+	Patch "HEADS", -57, -336
+	Patch "BODIES", -30, -332
+}
+
+Sprite "PS05A3", 20, 55
+{
+	Patch "BODIES", -77, -8
+	Patch "HEADS", -121, -337
+}
+
+Sprite "PS05B3", 32, 54
+{
+	Patch "BODIES", -75, -77
+	Patch "HEADS", -116, -337
+}
+
+Sprite "PS05C3", 21, 54
+{
+	Patch "BODIES", -63, -140
+	Patch "HEADS", -121, -337
+}
+
+Sprite "PS05D3", 30, 54
+{
+	Patch "BODIES", -72, -200
+	Patch "HEADS", -117, -337
+}
+
+Sprite "PS05E3", 33, 54
+{
+	Patch "HEADS", -110, -337
+	Patch "BODIES", -78, -262
+}
+
+Sprite "PS05F3", 44, 52
+{
+	Patch "HEADS", -109, -337
+	Patch "BODIES", -65, -332
+}
+
+Sprite "PS05A4", 27, 54
+{
+	Patch "BODIES", -114, -8
+	Patch "HEADS", -166, -336
+}
+
+Sprite "PS05B4", 31, 55
+{
+	Patch "BODIES", -112, -77
+	Patch "HEADS", -161, -336
+}
+
+Sprite "PS05C4", 22, 55
+{
+	Patch "BODIES", -88, -139
+	Patch "HEADS", -167, -335
+}
+
+Sprite "PS05D4", 31, 53
+{
+	Patch "BODIES", -110, -200
+	Patch "HEADS", -166, -336
+}
+
+Sprite "PS05E4", 33, 53
+{
+	Patch "HEADS", -161, -336
+	Patch "BODIES", -118, -262
+}
+
+Sprite "PS05F4", 40, 51
+{
+	Patch "HEADS", -165, -336
+	Patch "BODIES", -113, -332
+}
+
+Sprite "PS05A5", 25, 55
+{
+	Patch "BODIES", -154, -8
+	Patch "HEADS", -212, -335
+}
+
+Sprite "PS05B5", 28, 55
+{
+	Patch "BODIES", -151, -77
+	Patch "HEADS", -211, -335
+}
+
+Sprite "PS05C5", 26, 55
+{
+	Patch "BODIES", -116, -140
+	Patch "HEADS", -211, -335
+}
+
+Sprite "PS05D5", 24, 55
+{
+	Patch "BODIES", -148, -200
+	Patch "HEADS", -212, -335
+}
+
+Sprite "PS05E5", 29, 56
+{
+	Patch "HEADS", -212, -335
+	Patch "BODIES", -164, -262
+}
+
+Sprite "PS05F5", 24, 54
+{
+	Patch "HEADS", -211, -335
+	Patch "BODIES", -156, -332
+}
+
+Sprite "PS05A6", 24, 55
+{
+	Patch "BODIES", -184, -8
+	Patch "HEADS", -209, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05B6", 31, 54
+{
+	Patch "BODIES", -184, -77
+	Patch "HEADS", -203, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05C6", 26, 56
+{
+	Patch "BODIES", -146, -140
+	Patch "HEADS", -204, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05D6", 29, 55
+{
+	Patch "BODIES", -180, -200
+	Patch "HEADS", -205, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05E6", 25, 53
+{
+	Patch "HEADS", -209, -336
+	{
+		FlipX
+	}
+	Patch "BODIES", -204, -262
+}
+
+Sprite "PS05F6", 31, 52
+{
+	Patch "HEADS", -205, -336
+	{
+		FlipX
+	}
+	Patch "BODIES", -188, -332
+}
+
+Sprite "PS05A7", 25, 55
+{
+	Patch "BODIES", -215, -8
+	Patch "HEADS", -255, -337
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05B7", 32, 55
+{
+	Patch "BODIES", -220, -77
+	Patch "HEADS", -252, -337
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05C7", 22, 56
+{
+	Patch "BODIES", -182, -140
+	Patch "HEADS", -255, -337
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05D7", 32, 54
+{
+	Patch "BODIES", -218, -200
+	Patch "HEADS", -252, -337
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05E7", 36, 54
+{
+	Patch "HEADS", -254, -337
+	{
+		FlipX
+	}
+	Patch "BODIES", -242, -262
+}
+
+Sprite "PS05F7", 38, 52
+{
+	Patch "HEADS", -247, -337
+	{
+		FlipX
+	}
+	Patch "BODIES", -225, -332
+}
+
+Sprite "PS05A8", 26, 55
+{
+	Patch "BODIES", -243, -8
+	Patch "HEADS", -309, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05B8", 27, 55
+{
+	Patch "BODIES", -258, -77
+	Patch "HEADS", -312, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05C8", 19, 55
+{
+	Patch "BODIES", -210, -140
+	Patch "HEADS", -315, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05D8", 29, 55
+{
+	Patch "BODIES", -254, -200
+	Patch "HEADS", -308, -336
+	{
+		FlipX
+	}
+}
+
+Sprite "PS05E8", 32, 55
+{
+	Patch "HEADS", -313, -336
+	{
+		FlipX
+	}
+	Patch "BODIES", -286, -262
+}
+
+Sprite "PS05F8", 35, 53
+{
+	Patch "HEADS", -303, -336
+	{
+		FlipX
+	}
+	Patch "BODIES", -267, -332
+}

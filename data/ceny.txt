@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+//  ITEMS  /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Ceny:  /////////////////////////////////////////////////////////////////////
+//  Weapons:  //////////////////////////////////////
+//storm pistol                      150
+//crossbow                          200
+//staffBlaster lvl2 upgrade         450    
+//assault gun                       250
+//mini-missile launcher             650
+//flamethower                       850
+//grenade launcher                  750
+//mauler                            1050
+//
+//  Ammunition:  ///////////////////////////////////
+//electricbolts_item                24
+//poisonbolts_item                  50
+//PoisonBoltBundle_item             7
+//ElectricBoltBundle_item           14
+//boxofbullets_item                 50
+//energypod_item                    25
+//energykit_item                    75
+//energypack_item                   100
+//BulletCartridge_item              25
+//MiniMissileBundle_item            45
+//MiniMissiles                      35
+//CrateOfMissiles                   65
+//HEGrenadeBox_item                 45
+//PhosphorusGrenadeBox_item         65
+//
+//
+//
+//
+//
+//
+//  Items:  /////////////////////////////////////////
+//nightEyeDevice                    100
+//grenadeExplosive                  15
+//grenadeFire                       22
+//Flare                             5
+//FlareBox                          50
+//FlameTurret                       
+//DeployableShieldItem              150
+//jetPack_item
+//Swarmers_item                     100
+//SpringMine_item                   100
+//portable_map                      200
+//armorShard                        15
+//regenModule_Item                  250
+//Hyposprej                         25       
+//Kombopack                         50
+//InstaLek                          100
+//zscMedPatch                       10
+//zscMedicalKit                     25
+//zscSurgeryKit                     100
+//RangerArmor1_item                 120
+//RangerArmor2_item                 240
+//zscEnvironmentalSuit              100
+//zscShadowArmor                    100
+//zscTargeter                       100
+//rebreather_item                   150    
+//BlasterTurret_item                250
+//shoulderGun                       350
+//shldrGunMag                       64
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

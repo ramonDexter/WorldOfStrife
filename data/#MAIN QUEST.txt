@@ -1,0 +1,161 @@
+/*
+//main quest
+class quest01given : tokenBase {}
+class rebelsDead : tokenBase {}
+class quest01finished : tokenBase {}
+class inquisitorPromoted : tokenBase {}
+//find artifact
+class quest02given : tokenBase {}
+class quest02_goinside : tokenBase {}
+class quest02_artifact_stolen : tokenBase {}
+class quest02_finished : tokenBase {}
+//go to millport
+class quest03_given : tokenBase {}
+class quest03_finished : tokenBase {}
+*/
+//quest 02
+//v map02-----------------------------------------------------------------
+//- leader zada hraci quest
+script 112 (void) {
+    GiveActorInventory (0, "quest02given", 1);
+    displayQuest ("[ ANCIENT ARTIFACT ]", 1);
+}
+//v map06-----------------------------------------------------------------
+//- hrac se vyda do divociny, pujde na horu
+script "archeologistCampMarker" (void) {
+    if ( CheckInventory("quest02given") == 1 && !CheckInventory ("quest02_artifact_stolen") == 1 ) {
+        Thing_Deactivate (87);
+    }
+}
+//- tam najde prazdny tabor archeologu
+script "archSite01" (void)
+{
+	Print(l:"This is the base of the archaeologists.");
+}
+
+script "archSite02" (void)
+{
+	Print(l:"Nobody's here. Strange.");
+}
+//-  pred chramem najde jednoh z archeologu
+//- ten hraci rekne o utoku kaciru
+script 113 (void) {
+    GiveActorInventory (0, "quest02_goinside", 1);
+    displayQuest ("[ ANCIENT ARTIFACT : Go inside the ancient temple and find out what happened ]", 2);
+}
+//- hrac jde dovnitr
+//v map07-----------------------------------------------------------------
+//- prestrelky s rebely, na konci bludiste najde mrtvyho vedce, datadisk a poznamku s napisem 'MILLPORT'
+script "deadRebels01" (void)
+{
+	Print(l:"Looks like the rebels have sacrificed themselves.");
+}
+
+script "deadRebels02" (void)
+{
+	Print(l:"The bag is empty. So the artifact is gone. Maybe the note will tell me more.");
+}
+script "deadRebels03" (void)
+{
+	Print(l:"Sacrificed scientist. He had suffered much.");
+}
+script "deadRebels04" (void)
+{
+	Print(l:"Millport. So I have to visit Millport.");
+	GiveInventory("quest02_artifact_stolen", 1);
+}
+script "deadRebels05" (void)
+{
+	Print(l:"This datapad contains viable information.");
+}
+script "deadRebels06" (void)
+{
+	Print(l:"You hear a voice shouting: \c[cyan]'Stop him from entering the inner sanctum!'");
+}
+script "deadRebels07" (void)
+{
+	Print(l:"You hear a voice: \c[cyan]'He did it. Brothers, this is the end.'");
+}
+//v map02-----------------------------------------------------------------
+//- vrati se k leaderovi ten mu
+//quest 03
+//- zada treti quest, aby vyrazil do millportu
+//main quest 03
+script 107 (void) {
+	TakeActorInventory(0, "hereticDatapad1", 1);
+}
+//zadání třetí questu
+Script 108 (void) { 
+    //caseInformationDisk quest03_given millPortTransportTicket
+    displayQuest ("[ MISSION: MILLPORT ]", 1);
+	GiveActorInventory(0, "coin", 1000);
+	GiveActorInventory(0, "quest03_given", 1);
+	GiveActorInventory(0, "millPortTransportTicket", 1);
+	GiveActorInventory(0, "caseInformationDisk", 1);
+	GiveActorInventory(0, "upgradeToken", 1);
+	GiveActorInventory(0, "upgradeToken", 1);
+	GiveActorInventory(0, "RangerArmor2_item", 1);
+	GiveActorInventory(0, "EnergyPack_item", 2);
+	GiveActorInventory(0, "EnergyKit_item", 5);
+	GiveActorInventory(0, "BoxOfBullets_item", 1);
+	GiveActorInventory(0, "Hyposprej", 5);
+	GiveActorInventory(0, "Kombopack", 3);
+	GiveActorInventory(0, "DeployableShieldItem", 2);
+	GiveActorInventory(0, "Swarmers_item", 5);
+}
+//- hrac jde k transportni sluzbe a necha se odvezt do millportu
+//v map06-----------------------------------------------------------------
+script 114 (void) {
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze player
+    Fadeto(0, 0, 0, 1.0, 1); //fade in in 1 sec
+    Delay (35); //wait 1 sec
+    SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN); //unfreeze player
+    ChangeLevel ("MAP08", 608); //teleport player
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//  V MAP08  ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//- hrac prijede do millportu, na heliportu ho odchyti akolyta
+script 8101 (void) {
+    Thing_Deactivate (45);
+    Print (l:"[ Visit the Binder Superior in his office. ]");
+}
+//- posle hrace za velitelem binderu v millportu
+//- velitel binderu zada hraci prvni hlavni ukol 
+script 8102 (void) {
+    Thing_Activate (45);
+    GiveActorInventory (0, "quest03_finished", 1);
+    GiveActorInventory (0, "quest04_millport_given", 1);
+    displayQuest ("[ MILLPORT BLUES ]", 1);
+    TeleportOther (60, 59, 0); //presunout vitaciho bindera do kancelare
+	SetActorAngle(60, 1.0); //...a otocit ho celem ke stolu
+}
+//- je treba ziskat duveru mistnich obyvatel, protoze The Order tady neni prijiman zrovna pratelsky
+
+////////////////////////////////////////////////////////////////////////////////
+//  MAIN QUEST  ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//- artefakt nechal ukrast baron, ktery je mistnim velitelem rebelu - kaciru
+//- nejdrive musi hrac ziskat duveru mistnich
+//- duveru mistnich hrac ziska tak ze splni jakekoli tri questy pro mistni >> udelat 9 questu pro mistni, neco jako dones, prines, predej zpravu a tak
+//- do splneni kazdeho questu pro mistni dat predani tokenu a kontrolu na tri tokeny >> pokud je hrac ma, zobrazit hraci zpravu aby se ohlasil u velitele
+//- velitele kontaktoval baron, ktery zada bindery o spolupraci >> BARON QUEST 1
+//- hrac musi nejdrive ziskat jeho duveru >> tri questy, stejne jako v prvnim meste
+//-BARON QUEST 1
+//- jdi do východní mapy a přines odtamtud zprávy od správce 
+//-BARON QUEST 2
+//- v prubehu druheho questu pro barona hrac zjisti ze neco nehraje; baron neni tim kym se zda byt
+//-BARON QUEST 3
+//- v prubehu tretiho questu pro barona hrac zjisti ze baron byl tim, kdo stal za ukradenim artefaktu ze Silent Hills
+//- po splneni tri ukolu hrac ziska pristup do baronova pocitace, kde najde pozadovane informace o artefaktu
+//- artefakt se ukryva ve skladisti ve vychodni casti ostrova
+//- hrac najde artefakt a dalsi informace >>
+//- kaciri si ale stihli artefakt zkopirovat, s jeho pomoci chtěji probudit starsiho boha, ktery je pohrbeny v srdci vulkanu ve stredu ostrova
+//- hrac musi najit hlavni zakladnu kaciru na vrcholu zdejsiho vulkanu
+//- kaciri v zakladne pripravuji probuzeni starsiho boha, s jehoz pomoci chteji svrhnout vladu Radu
+//- 
+//- na miste bitka s rebely, kterym se mezitim podarilo starsiho boha probudit >> neco jako entita z original strifu
+
+////////////////////////////////////////////////////////////////////////////////

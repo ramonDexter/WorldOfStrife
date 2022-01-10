@@ -1,0 +1,5 @@
+namespace = "ZDoom";
+//quest journal in external file
+include = "JRNL00";
+//surgical unit
+include = "SURG00"; //ID = 701;

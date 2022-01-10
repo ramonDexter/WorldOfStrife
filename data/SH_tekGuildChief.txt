@@ -1,0 +1,233 @@
+//------------------------------------------------------------------------------------------------------------
+//SH_tekGuildChief questy
+//------------------------------------------------------------------------------------------------------------
+//1
+//------------------------------------------------------------------------------------------------------------
+//Ore delivery
+//[X] dialog u sefa tekgildy
+//[X] dialog u dulniho mistra
+//[X] entry v journalu
+//
+//- sef tekgildy posle hrace do dolu
+//script:
+//>> quest start: "Ore delivery"
+//>> hrac dostane token twn_tekGuildMasterQ1_oreDelivery_given
+//>> quest marker mines
+script 1401 (void) {
+    GiveActorInventory (0, "twn_tekGuildMasterQ1_oreDelivery_given", 1);
+    Thing_Deactivate (47);
+    displayQuest ("[ TekGuild: Ore delivery - Go to the Mines and deliver the Degnin Ore. ]", 1);
+}
+//
+//- pri vstupu do dolu
+//script:
+//>> vypnout quest marker mines
+script "turnOffMinesMarker" (void) { 
+    if ( CheckInventory("twn_tekGuildMasterQ2_brokenMachinery_given") ) {
+        Thing_Activate (47);
+    }   
+    if ( CheckInventory("twn_tekGuildMasterQ1_oreDelivery_given") ) {
+        Thing_Activate (47);
+    }
+}
+//
+//-------------------V MAPE DOLY---------------------------------------------------------------------------------
+//- tam najde sefa tezby, ktery hrace posle hloubeji do dolu; nechce se mu totiz rudu porad sbirat
+//script:
+//>> hrac dostane token twn_tekGuildMasterQ1_oreDelivery_pickOre
+//>> ACS_NamedExecuteAlways("pickedOreCheck", 0);
+script 1402 (void) {
+    GiveActorInventory (0, "twn_tekGuildMasterQ1_oreDelivery_pickOre", 1);
+    displayQuest ("[ TekGuild: Ore delivery - Search for the Degnin Ore ]", 2);
+    ACS_NamedExecuteAlways("pickedOreCheck", 0);
+}
+//
+//- hrac vyrazi sbirat rudu
+//script:
+//>>hra dostane token pri sebrani vsech kusu rudy >>
+//>>kontrolu udelat jako while smycku, spusti se pri zadani sbirani rudy
+//
+//
+script "pickedOreCheck" (void) {
+    bool stopScript = false;
+    while ( !stopScript ) {
+        if ( CheckInventory("wosDegninOre") == 7 ) {
+            //quest progress: "You've collected the requested amount of Degnin Ore. Return to the TekGuild Master."
+            displayQuest ("[ TekGuild: Ore delivery - You've collected the requested amount of Degnin Ore. Return to the TekGuild Master. ]", 2);
+            //give token twn_tekGuildMasterQ1_oreDelivery_orePicked
+            GiveActorInventory (0, "twn_tekGuildMasterQ1_oreDelivery_orePicked", 1);
+            stopScript = true;
+        }
+        Delay (1);
+    }
+}
+//-------------------V MAPE DOLY---------------------------------------------------------------------------------
+//- a prinese ji sefovi tekgildy
+//script:
+//>> quest finished: "Ore delivery"
+//>> odmena: 250 coins
+//>> dostane token twn_tekGuildMasterQ1_oreDelivery_finished
+script 1403 (void) {
+    TakeActorInventory (0, "wosDegninOre", 7);
+    displayQuest ("[ TekGuild: Ore delivery ]", 3);
+    GiveActorInventory (0, "twn_tekGuildMasterQ1_oreDelivery_finished", 1);
+    GiveActorInventory (0, "coin", 250);
+}
+//
+//------------------------------------------------------------------------------------------------------------
+//2
+//------------------------------------------------------------------------------------------------------------
+//Broken machinery
+//[X] dialog u sefa tekgildy
+//[X] dialog u dulniho mistra
+//[X] dialog na stroji - jakoze menu
+//[X] dialog u techmisthe
+//[X] entry v journalu
+//
+//- sef tekgildy hrace posle do dolu
+//script:
+//>> quest start: "Broken machinery"
+//>> hrac dostane token twn_tekGuildMasterQ2_brokenMachinery_given
+//>> quest marker mines
+script 1501 (void) {
+    GiveActorInventory (0, "twn_tekGuildMasterQ2_brokenMachinery_given", 1);
+    displayQuest ("[ TekGuild: Broken machinery - Go to the Mines and repair the broken machinery ]", 1);
+    Thing_Deactivate (47);
+}
+//
+//- hrac prijde do dolu
+//script:
+//>> pri prichodu vypnout quest marker mines script turnOffMinesMarker
+//
+//------------------------V mape doly-------------------------------------------------------
+//- v dolech hrac promluvi se sefem tezby, ktery ho posle k jednomu ze stroju
+//script:
+//>> quest marker brokenMachine
+script 1502 (void) {
+    Thing_Deactivate (5);
+    displayQuest ("[ TekGuild: Broken machinery - Check the broken machine ]", 2);
+}
+//>> 
+//
+//- hrac stroj prozkouma (script pri aktivaci) >> zada se mu pro co ma zajit k techmisthovi
+//*dialog na stroji:
+//>> dlg pokud nema hrac zadany quest >> zadna moznost
+//>> dlg pokud ma hrac zadany quest >> moznost(exclude token twn_tekGuildMasterQ2_brokenMachinery_needFilter) na dalsi dalsi page "The mine machine has broken main filter. It needs to be replaced. Go check with the town Techsmith." >> hrac dostane token
+//script:
+//>> quest progress: "You need new filter for the mine machinery. Go talk to the TechSmith."
+//>> hrac dostane token twn_tekGuildMasterQ2_brokenMachinery_needFilter
+script 1503 (void) {
+    Thing_Activate (5);
+    GiveActorInventory (0, "twn_tekGuildMasterQ2_brokenMachinery_needFilter", 1);
+    displayQuest ("[ TekGuild: Broken machinery - The machine needs new air filter. Go talk to the TechSmith. ]", 2);
+}
+//>> dlg pokud ma hrac soucastky >> moznost(require item mineMachineFilter; exclude token twn_tekGuildMasterQ2_brokenMachinery_repaired) opravit stroj >> 
+//script:
+//>> odebere hraci soucastky mineMachineFilter
+//>> hrac dostane token twn_tekGuildMasterQ2_brokenMachinery_repaired
+//>> quest progress: "You've repaired the mine machinery. Report your success to the TekGuild Master."
+script 1504 (void) {
+    TakeActorInventory (0, "mineMachineFilter", 1);
+    displayQuest ("[ TekGuild: Broken machinery - You've repaired the mine machinery. Report your success to the TekGuild Master. ]", 2);
+    GiveActorInventory (0, "twn_tekGuildMasterQ2_brokenMachinery_repaired", 1);
+}
+//------------------------V mape doly-------------------------------------------------------
+//
+//- hrac prijde k techmisthovi, pozada ho o vyrobu soucastky
+//>> dialog kontrola na token 
+//- techmisth soucastku vyrobi a preda ji hraci
+//script:
+//>> quest progress: "TechSmith gave you new filter. Return to the mines and repair the machine."
+//>> hrac dostane token(soucastky) >> kontrola na soucastky
+script 1505 (void) {
+    displayQuest ("[ TekGuild: Broken machinery - TechSmith gave you a new air filter. You can fix the mine machine now. ]", 2);
+    GiveActorInventory (0, "mineMachineFilter", 1);
+    GiveActorInventory (0, "twn_tekGuildMasterQ2_brokenMachinery_newfilter", 1);
+}
+//
+//- hrac se vrati do dolu a s pomoci soucastky opravi stroj
+//*dialog na stroji:
+//
+//- hrac se vrati k sefovi tekgildy
+//script:
+//>> dostane token twn_tekGuildMasterQ2_brokenMachinery_finished
+script 1506 (void) {
+    displayQuest ("[ TekGuild: Broken machinery ]", 3);
+    GiveActorInventory (0, "twn_tekGuildMasterQ2_brokenMachinery_finished", 1);
+    GiveActorInventory (0, "coin", 350);
+    GiveActorInventory (0, "upgradeToken", 1);
+}
+//
+//------------------------------------------------------------------------------------------------------------
+//3
+//------------------------------------------------------------------------------------------------------------
+//Elektrarna na pobrezi se odmlcela
+//Powerplant Trouble
+//[X] dialog u sefa tekgildy
+//[X] entry v journalu
+//
+//- sef tekgildy posle hrace teleportem na pobrezi - portal na zakladne
+//script:
+//>>zada se quest quest start: "Trouble in TekGuild Powerplant"
+//>>odemkne dvere k telepotu/portalu tag 186, sctor tag 188
+//>>hrac dostane token twn_tekGuildMasterQ3_powerplantTrouble_given
+//>>questmarker u portalu tag 185
+script 1601 (void) {
+    displayQuest ("[ TekGuild: Powerplant Trouble ]", 1);
+    GiveActorInventory (0, "twn_tekGuildMasterQ3_powerplantTrouble_given", 1);
+    Thing_Deactivate (185);
+    SetLineSpecial (186, Door_Animated, 188, 4, 105, 0);
+}
+//
+//- po pruchodu portalem
+//script:
+//>> vypnout questmarker u portalu
+//>> zapnout questmarker u prvnich windtraps 187
+script "tekGuildMasterQ3switchMarkers" (void) {
+    Thing_Activate (185);
+    Thing_Deactivate (187);
+}
+//
+//- hrac dojde na misto, trigger na linedefu u prvnich elektraren
+//script:
+//>> vypnout questmarker u prvnich windtraps
+//>> print: "These Windtraps look fine. Check the second part of the costal powerplant."
+script "tekGuildMasterQ31stwindTraps" (void) {
+    Thing_Activate (187);
+    Print (l:"These Windtraps look fine. Check the second part of the costal powerplant.");
+}
+//
+//- prvni sada vetrolapu (Windtraps) je v poradku
+//- u druhe sady narazi na kacire
+//script:
+//>>
+//>> quest progress, "The heretics have destroyed the power transformer and breached wall of the facility. Go in and investigate!"
+//>> hrac dostane token twn_tekGuildMasterQ3_powerplantTrouble_blownTransformer
+script "tekGuildMasterQ3blownTransformer" (void) {
+    GiveActorInventory (0, "twn_tekGuildMasterQ3_powerplantTrouble_blownTransformer", 1);
+    displayQuest ("[ TekGuild: Powerplant Trouble - The heretics have destroyed the power transformer and breached wall of the facility. Go in and investigate! ]", 2);
+}
+//
+//- uvnitr polejzacka, boj s rebely/kaciri
+//- na konci spinac otevirajici dvere ven ze zakladny, klice ma sef kaciru 
+//- bitka se sefem kaciru, po jeho zabiti trigger script
+//script:
+//>> quest progress: "You've killed leader of the heretics. Report your success to the TekGuild Master now."
+//>> hrac dostane token twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled
+//>> na thing leadera dat ACS_ExecuteAlways();
+script "tekGuildMasterQ3hereticLeaderKilled" (void) {
+    GiveActorInventory (0, "twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled", 1);
+    displayQuest ("[ TekGuild: Powerplant Trouble - You've killed leader of the heretics. Report your success to the TekGuild Master now. ]", 1);
+}
+//
+//- hrac se vrati k sefovi tekgildy, dostane odmenu
+//>> quest finished: "Trouble in TekGuild Powerplant"
+//>> hrac dostane token twn_tekGuildMasterQ3_powerplantTrouble_finished
+script 1602 (void) {
+    displayQuest ("[ TekGuild: Powerplant Trouble ]", 3);
+    GiveActorInventory (0, "twn_tekGuildMasterQ3_powerplantTrouble_finished", 1);
+    GiveActorInventory (0, "coin", 750);
+    GiveActorInventory (0, "upgradeToken", 1);
+}
+
+//------------------------------------------------------------------------------------------------------------

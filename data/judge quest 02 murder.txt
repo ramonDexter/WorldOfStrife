@@ -1,0 +1,107 @@
+// hrac dostane zadany quest
+script 1101 (int phase) {
+    switch (phase) {
+        case 1:
+            GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_given", 1); //quest start _given
+            questIndicator ("[ Murder in the city bath ]", 2001, 1);
+            Delay (35*3);
+            erasequestIndicator (2001);
+            Delay (35);
+            TeleportOther (71, 70, 0); //// na mapspot 70 se teleportuje thing 71
+            TeleportOther (72, 73, 0); //na spot 73 thing 72
+            TeleportOther (75, 74, 0); //na spot 74 thing 75
+            Thing_Deactivate (77); //quest marker do lazni
+
+        break;
+
+
+        case 2:
+            TeleportOther (72, 76, 0); //72 teleport na spot 76 // prenes svedka k nemu do bytu
+            Thing_Remove (71);
+            Thing_Remove (75);
+        break;
+    } 
+}
+// skript 1 phase 1 > do lazni se teleportuji veci
+// hrac si promluvi se straznym, nic konkretniho nezjisti
+// hrac si promluvi se svedkem, nic konkretniho nezjisti, ale nasmeruje ho na vratneho
+script 1108 (void) {
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_speakwithgatekeeper", 1);
+}
+// hrac si promluvi s vratnym, ten ho nasmeruje do prevlekaren, aby prohledal skrinky
+script 1102 (void) {
+    Thing_Activate (77); // vypne quest marker do lazni
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_prohledejPrevlekarnu", 1);
+    Thing_Deactivate (78); //quest marker skrinka v prevlekarne
+}
+// v jedne ze skrinek hrac najde detonator
+script 1103 (void) {
+    Thing_Activate (78); // vypne quest marker skrinka v prevlekarne
+    GiveActorInventory (0, "cityBathMurder_Detonator", 1);
+    questIndicator ("[ You've found hard evidence. Return to the judge! ]", 2001, 2);
+    Delay (35*3);
+    erasequestIndicator (2001);
+    Thing_Deactivate (69); //quest marker soudce
+}
+// pri odchodu z lazni skript 1 phase 2 na odstraneni veci a presunuti svedka
+// zpet k soudci, ten nasmeruje hrace k techsmithovi 
+script 1104 (void) {
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_techsmith", 1);
+    questIndicator ("[ Speak with the techsmith! ]", 2001, 2);
+    Delay (35*3);
+    erasequestIndicator (2001);
+    Thing_Deactivate (79); //quest marker techsmith
+}
+// techsmith urci jednoho z bohatych obchodniku
+script 1105 (void) {
+    Thing_Activate (79); //vypne quest marker techsmith
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_obchodnik", 1);
+    questIndicator ("[ Speak with the wealthy merchant! ]", 2001, 2);
+    Delay (35*3);
+    erasequestIndicator (2001);
+    Thing_Deactivate (84); //quest marker obchodnik
+}
+// obchodnik se pri predlozeni dukazu nebrani
+// skript na teleport straznych na misto
+// na spot 80 thing 82
+// na spot 81 thing 83
+script 1106 (void) {
+    Thing_Activate (84); //vypne quest marker obchodnik
+    Thing_Deactivate (69); //quest marker soudce
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_usvedcen", 1);
+    TeleportOther (82, 80, 1); //na spot 80 thing 82
+    TeleportOther (83, 81, 1); //na spot 81 thing 83
+    questIndicator ("[ You've convicted the trader of murder. Return to the judge now! ]", 2001, 2);
+    Delay (35*3);
+    erasequestIndicator (2001);
+}
+// po navratu u soudce quest finish 
+script 1107 (void) {
+    Thing_Activate (69); //vypne quest marker soudce
+    TakeActorInventory (0, "cityBathMurder_Detonator", 1);
+    GiveActorInventory (0, "twn_judgeQ01_vrazdaVlaznich_finished", 1);
+    GiveActorInventory (0, "coin", 1000);
+    Thing_Remove (85);
+    Thing_Remove (82);
+    Thing_Remove (83);
+    questIndicator ("[ Murder in the city bath ]", 2001, 3);
+    Delay (35*3);
+    erasequestIndicator (2001);
+}
+
+
+
+
+skript:
+phase 1:
+// na mapspot 70 se teleportuje thing 71
+// na spot 73 thing 72
+// na spot 74 thing 75
+phase 2:
+// odstranit thing 71
+// 72 teleport na spot 76
+// odstranit thing 75
+
+skript orhledani skrinky:
+// hrac najde nuz
+

@@ -1,0 +1,4 @@
+//transfer FWATERx na sWATERx
+1. přepnout na režim RGB (je indexovaný)
+2. obarvit: 3ecfcf
+3. jas&kontrast: 84/110

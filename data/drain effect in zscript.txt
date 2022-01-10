@@ -1,0 +1,39 @@
+class PowerPortableShield : PowerTorch 
+{
+	
+	int shield_tics; 
+
+    override void attachtoowner(actor user)
+    {
+        shield_tics = 0;
+        super.attachtoowner(user);
+    }
+
+    override void doeffect()
+    {
+        if(owner.countinv("EnergyCell") == 0) 
+        {
+			//A_Print("\c[red]ENERGY CELLS DEPLETED!", 0, "smallfont");
+			return;
+		}
+		
+        owner.giveInventory("shield_inv_spawner", 1);
+        shield_tics++;
+
+        if(shield_tics == 35)
+        {
+			//A_Print("\c[yellow]It works!", 0, "smallfont");
+            owner.takeinventory("EnergyCell", 1);
+            shield_tics = 0;
+        }
+
+    }
+	
+	
+	Default
+	{
+		powerup.Duration 0x7FFFFFFD;
+		powerup.color "none", 0.0;
+		Inventory.Icon "I_SHLD";
+	}
+}

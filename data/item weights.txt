@@ -1,0 +1,51 @@
+// item s
+//max=1500; //Set the default, 1500 == 15 kilograms, 100 == 1 kilogram
+// weapons
+//wosPickup
+storm pistol        50 //1.15
+crossbow            85 //1.05
+blasterstaff        100 //1.5
+assault gun         150 //2.25
+missile launcher    220 //3.5
+flamer              270 //4.5
+grenade launcher    350 //4.0
+mauler              320 //3.9
+laser pistol        75 //1.05
+// items
+hyposprej           5
+kombopack           10
+instaheal           15
+nighteyemodule      25
+flare               5
+flarebox            50
+flameturret         250
+deployableshield    250
+bl.turret           250 
+jetpack             150
+swarmers            50
+automap             25
+armorshard          15
+regenmodule         50
+Leather             125
+Metal               250
+BinderBasic         135
+BinderAdvanced      165
+Kinetic             180
+const elBoltsQwWeight = 24;
+const posBoltsQwWeight = 12;
+const elBoltsBndlWeight = 10;
+const posBoltsBndlWeight = 5;
+const energyPodWeight = 5;
+const energyKitWeight = 10;
+const energyPackWeight = 20;
+const bulletCartridgeWeight = 5;
+const miniMissileBndlWeight = 25;
+const heGRboxWeight = 25;
+const fireGRboxWeight = 25;
+const ammoSatchelWeight = 50;
+env.suit            75
+shadow armor        85
+targeter            25
+rebreather          25 
+shouldergun         25
+int.drone           10

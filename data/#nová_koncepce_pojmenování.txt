@@ -1,0 +1,7 @@
+nová koncepce pojmenování:
+
+wosF_xxx ... funkce
+wosI_xxx ... items
+wosW_xxx ... weapons
+wosD_xxx ... decorations
+wosN_xxx ... NPC

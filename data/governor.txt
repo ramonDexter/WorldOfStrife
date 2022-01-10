@@ -1,0 +1,15 @@
+//governor id 13
+Conversation
+{
+	ID = 13;
+	Page//1
+	{
+		Name = "";
+		Dialog = "";
+		Panel = "";
+		Choice
+		{
+			
+		}
+	}
+}

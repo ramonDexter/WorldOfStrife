@@ -1,0 +1,1086 @@
+namespace = "ZDoom";
+
+//quest journal in external file
+include = "JRNL00";
+//surgical unit in external file
+include = "SURG00"; //ID = 701;
+
+
+// binder leader id 1
+Conversation
+{
+    ID = 1;
+    Page//1
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]Hello binder, welcome to our headqurters. Have you had good journey?";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "Yes, the journey was good. But I don't bring good news.";
+            NextPage = 2;
+        }
+    }
+    Page//2
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]Yes, I have received message from your superior. Lose of the artifact is bad news. And I have even worse news. The heretics have used the artifact to take control of the Programmer. That means the order forced in this region are under the heretic congtrol. We are the last and only hope to restore Peace and order in this lands. But that will require lot of work.";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "I understand. What is needed from me?";
+            Nextpage = 3;
+        }
+    }
+    Page//3
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]My subordinates can handle most of our ordinary work. I have some special work for you. The first is to gain some trust from the local people. Go into the town, introduce yourself to the important people there and help them with their problems. That would be the best way to gain their trust.";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "What happened here? The order has lost the people's trust?";
+            Nextpage = 4;
+        }
+    }
+    Page//4
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]As I have said, the heretics have gained control of the Programmer and started using Order forces to terrorize the locals. So the Order has lost the people's trust. And we need to get it back.";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "Then I'll help the locals.";
+            NextPage = 5;
+            CloseDialog = true;
+        }
+    }
+    //normal dialogue >> startpoint for questions or quests
+    Page//5
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "Do you have any questions? I'm quite busy, but we can talk for a while.";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "Tell me about the Binder Order";
+            NextPage = 6;
+        }
+        Choice
+        {
+            Text = "Tell me about Millport";
+            Nextpage = 7;
+        }
+        /*
+        Choice
+        {
+            Text = "<reserved for quest purposes>";
+            Nextpage = 8;
+        }
+        Choice
+        {
+            Text = "<reserved for quest purposes>";
+            Nextpage = 9;
+        }
+        Choice
+        {
+            Text = "<quest choices>";
+            Nextpage = 10;
+        }
+        */
+    }
+    Page//6
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]The Binder Order was established together with the formation with the Order itself. The Binders tsrated to work as peacekeepers and watchers. Our sacred goal is to keep peaece amongst the people, and to pursuse the impure, or anyone who could threaten the Order.\nOur headquarters are here, in Millport.";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = 5;
+        }
+    }
+    Page//7
+    {
+        Name = "Richter, Binder supreme general";
+        Dialog = "\c[white]";
+        Panel = "M_BNDR";
+        Choice
+        {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = 5;
+        }
+    }
+}
+// binder medic id 2 - sells meds, stamina upgrades
+// binder weapons vendor id 3
+// binder weapons trainer id 4
+// binder doorkeeper id 5
+// binder welcoming officer - will welcome player upon arrival id 6
+
+
+
+
+
+
+
+
+
+//energy ammo vendor id 10
+Conversation
+{
+	ID = 10;
+
+	Page//1
+	{
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]Hello Binder. Welcome to my shop. I sell energy weapons ammo. EnergyPods, EnergyKits and EnergyPacks. Also, I sell energyCells to power powerups.";
+		Panel = "M_ENVND";
+		Choice
+		{
+			Text = "Buy EnergyPod";
+			NextPage = 1;
+			GiveItem = "energypod_item";
+			YesMessage = "Here is one EnergyPod!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "Buy EnergyKit";
+			NextPage = 1;
+			GiveItem = "energykit_item";
+			YesMessage = "Here is one EnergyKit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "Buy EnergyPack";
+			NextPage = 1;
+			GiveItem = "energypack_item";
+			YesMessage = "Here is one EnergyPack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "I have some questions.";
+			NextPage = 2;
+		}
+
+	}
+	Page//2
+	{
+		Name = "Energy Ammo Vendor";
+		Dialog = "What do you wanted to ask? I'm not involved in any heresy.";
+		Panel = "M_ENVND";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 1;
+		}
+		Choice
+		{
+			Text = "Tell me about yourself.";
+			NextPage = 3;
+		}
+		Choice
+		{
+			Text = "Tell me about the city.";
+			NextPage = 4;
+		}
+	}
+	Page//3
+	{
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]My name's Quincy. I'm techsmith, my specialization is ammo crafting. I craft energy weapons ammo. I spend most of the time in mys workshop, it's my main source of income. And when I want to rest, I read a book or go to the riverside fishing.";
+		Panel = "M_ENVND";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 2;
+		}
+
+	}
+	Page//4
+	{
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]Millport's peaceful town. I like this place. I came here twenty years ago, when I was just a journeyman. The Binder presence in town keeps any criminal scum away. I like the local pub. Good choice of drinks.";
+		Panel = "M_ENVND";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 2;
+		}
+
+	}
+}
+
+//weapons vendors - jony & tony
+//jony - light weapons id 11
+Conversation
+{
+	ID = 11;
+	Page//1
+	{
+		Name = "Jony, weapons vendor";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistol, Crossbow and Assault Gun. You hsould visit my twin brother Tony, he sells heavy weapons.";
+		Panel = "M_JONY";
+		Choice
+		{
+			Text = "\c[yellow]Buy Storm Pistol";
+			NextPage = 1;
+			GiveItem = "StormPistol";
+			YesMessage = "Here is one Storm Pistol!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Clip of Bullets";
+			NextPage = 1;
+			GiveItem = "ClipOfBullets";
+			YesMessage = "Here is one Clip of Bullets!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Crossbow";
+			NextPage = 1;
+			GiveItem = "zscStrifeCrossbow";
+			YesMessage = "Here is one Crossbow!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 250;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Electric Bolts";
+			NextPage = 1;
+			GiveItem = "ElectricBolts_item";
+			YesMessage = "Here is one Crossbow!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 20;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Assault Gun";
+			NextPage = 1;
+			GiveItem = "zscAssaultGun";
+			YesMessage = "Here is one Assault Gun!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 350;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Box of Bullets";
+			NextPage = 1;
+			GiveItem = "BoxOfBullets_item";
+			YesMessage = "Here is one Box of Bullets!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 80;
+			}
+		}
+
+	}
+}
+//tony - heavy weapons id 12
+Conversation
+{
+	ID = 12;
+	Page//1
+	{
+		Name = "Tony, weapons vendor";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on heavy weapons. I sell Flamethrower, Mini-Missile Launcher and Mauler. You hsould visit my twin brother Jony, he sells light weapons.";
+		Panel = "M_TONY";
+		Choice
+		{
+			Text = "\c[yellow]Buy Flamethrower";
+			NextPage = 1;
+			GiveItem = "zscFlameThrower";
+			YesMessage = "Here is one Flamethrower!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 450;
+			}
+		}
+		Choice
+		{
+			Text = "Buy EnergyPod";
+			NextPage = 1;
+			GiveItem = "EnergyPod_item";
+			YesMessage = "Here is one EnergyPod!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 20;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Mini-Missile Launcher";
+			NextPage = 1;
+			GiveItem = "zscMiniMissileLauncher";
+			YesMessage = "Here is one Mini-Missile Launcher!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 550;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Mini-Missile Pack";
+			NextPage = 1;
+			GiveItem = "MiniMissileBundle_item";
+			YesMessage = "Here is one Mini-Missile Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Mauler";
+			NextPage = 1;
+			GiveItem = "zscMauler";
+			YesMessage = "Here is one Mauler!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 650;
+			}
+		}
+		Choice
+		{
+			Text = "Buy EnergyPack";
+			NextPage = 1;
+			GiveItem = "energypack_item";
+			YesMessage = "Here is one EnergyPack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 80;
+			}
+		}
+
+	}
+}
+
+//strife items vendor id 13
+Conversation
+{
+	ID = 13;
+
+	Page//1
+	{
+		Name = "Derwin, techsmith";
+		Dialog = "\c[white]Hello, welcome to my humble shop.\nI sell support items - Environmental suit, Scanner, Portable Map, Targeter and Shadow Armor. What will be your choice?";
+		Panel = "M_DRWN";
+		Choice
+		{
+			Text = "\c[yellow]Buy Environmental Suit";
+			NextPage = 1;
+			GiveItem = "zscEnvironmentalSuit";
+			YesMessage = "Here is one Environmental Suit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Scanner";
+			NextPage = 1;
+			GiveItem = "Scanner";
+			YesMessage = "Here is one Scanner!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 180;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Portable Map";
+			NextPage = 1;
+			GiveItem = "portable_map";
+			YesMessage = "Here is one Portable Map!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 250;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Targeter";
+			NextPage = 1;
+			GiveItem = "zscTargeter";
+			YesMessage = "Here is one Targeter!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Shadow Armor";
+			NextPage = 1;
+			GiveItem = "zscShadowArmor";
+			YesMessage = "Here is one Shadow Armor!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 350;
+			}
+		}
+	}
+}
+//my items vendor id 14
+Conversation
+{
+	ID = 14;
+	Page//1
+	{
+		Name = "Gregory, techsmith ";
+		Dialog = "\c[white]Hello Binder, welcome to my shop.\nI sell special items. I have the Personal and Deployable Shields, Flight Harness, Flame Turret, Flares and Swarmer grenade.";
+		Panel = "M_GREG";
+		Choice
+		{
+			Text = "\c[yellow]Buy Deployable Shield";
+			NextPage = 1;
+			GiveItem = "DeployableShieldItem";
+			YesMessage = "Here is one Deployable Shield!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 120;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Personal Shield";
+			NextPage = 1;
+			GiveItem = "ShieldModule";
+			YesMessage = "Here is one Personal Shield!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 280;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Flight Harness";
+			NextPage = 1;
+			GiveItem = "jetPack_item";
+			YesMessage = "Here is one Flight Harness!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 160;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Flame Turret";
+			NextPage = 1;
+			GiveItem = "FlameTurret";
+			YesMessage = "Here is one Flame Turret!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Box of Flares";
+			NextPage = 1;
+			GiveItem = "FlareBox";
+			YesMessage = "Here is one Flame Turret!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Swarmer Grenade";
+			NextPage = 1;
+			GiveItem = "Swarmers_item";
+			YesMessage = "Here is one Swarmer Grenade!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 130;
+			}
+		}
+
+	}
+}
+//explosives vendor id 15
+Conversation
+{
+	ID = 15;
+	Page//1
+	{
+		Name = "Gadwin, explosives vendor";
+		Dialog = "\c[white]Hello my good fellow. Would you like to blow something up? I have everything you would need when you want to blow something up - Rockets, Grenades and Hand Grenades.";
+		Panel = "M_GDWN";
+		Choice
+		{
+			Text = "\c[yellow]Buy Pack of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "MiniMissiles";
+			YesMessage = "Here is one Pack of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 40;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Bundle of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "MiniMissileBundle_item";
+			YesMessage = "Here is one Bundle of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Crate of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "CrateOfMissiles";
+			YesMessage = "Here is one Crate of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy HE Grenades Pack";
+			NextPage = 1;
+			GiveItem = "HEGrenadeRounds";
+			YesMessage = "Here is one HE Grenades Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 60;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Phosphorous Grenades Pack";
+			NextPage = 1;
+			GiveItem = "PhosphorusGrenadeRounds";
+			YesMessage = "Here is one Phosphorous Grenades Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 60;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy HE Hand Grenade";
+			NextPage = 1;
+			GiveItem = "grenadeExplosive";
+			YesMessage = "Here is one HE Hand Grenade!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Phosphorous Hand Grenade";
+			NextPage = 1;
+			GiveItem = "grenadeFire";
+			YesMessage = "Here is one Phosphorous Hand Grenade!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+	}
+}
+//medical vendor id 16
+Conversation
+{
+	ID = 16;
+	Page//1
+	{
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]Hello binder, are you in need of medical services? If so, please use on of the autoDocs behind you. If you need some medical supplies, you can buy what I got in stock. And for the last, I can install you cybernetic implants that will raise your health.";
+		Panel = "M_DCTR";
+		Choice
+		{
+			Text = "\c[yellow]Buy Hypospray";
+			NextPage = 1;
+			GiveItem = "Hyposprej";
+			YesMessage = "Here is one Hypospray!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Combopack";
+			NextPage = 1;
+			GiveItem = "Kombopack";
+			YesMessage = "Here is one Combopack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Instaheal";
+			NextPage = 1;
+			GiveItem = "InstaLek";
+			YesMessage = "Here is one Instaheal!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy MedPatch";
+			NextPage = 1;
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one MedPatch!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Medical Kit";
+			NextPage = 1;
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Medical Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Surgery Kit";
+			NextPage = 1;
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Surgery Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+
+	}
+}
+//armor vendor id 17
+Conversation
+{
+	ID = 17;
+	Page//1
+	{
+		Name = "Loxley, armor vendor";
+		Dialog = "\c[white]Hello binder, are you ooking for some protection? I got the leather and metal armor, as well as the superior cybernetic armor. Also, I got Armor Bits to repair your damaged armor.";
+		Panel = "M_LXLY";
+		Choice
+		{
+			Text = "\c[yellow]Buy Leather Armor";
+			NextPage = 1;
+			GiveItem = "LeatherArmor";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Metal Armor";
+			NextPage = 1;
+			GiveItem = "MetalArmor";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 200;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Cyber Armor";
+			NextPage = 1;
+			GiveItem = "RangerArmor1_item";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Heavy Cyber Armor";
+			NextPage = 1;
+			GiveItem = "RangerArmor2_item";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 250;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Armor Bit";
+			NextPage = 1;
+			GiveItem = "armorShard";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 25;
+			}
+		}
+
+	}
+}
+//barkeeper johnson id 18
+Conversation
+{
+	ID = 18;
+	Page//1
+	{
+		Name = "Johnson, Barkeeper";
+		Dialog = "\c[white]Hello, what may I serve you? I got good cold beer, some red wine and...water. So, what would you like to drink?Or do you want something to eat? I'm sorry, but I got only food rations. The cook has run away. Or do you want to talk? I could get some rest talking, if you want.";
+		Panel = "M_JHNSN";
+		Choice
+		{
+			Text = "\c[yellow]Buy bottle of Beer";
+			NextPage = 1;
+			GiveItem = "beerBottle_item";
+			YesMessage = "Here is one cold beer!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy bottle of Wine";
+			NextPage = 1;
+			GiveItem = "vineBottle_item";
+			YesMessage = "Here is one cold beer!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy bottle of Water";
+			NextPage = 1;
+			GiveItem = "waterBottle_item";
+			YesMessage = "Here is one cold beer!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 3;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Food Rations";
+			NextPage = 1;
+			GiveItem = "foodRation_II_item";
+			YesMessage = "Here is one Food Ration box!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice
+		{
+			Text = "I have some questions.";
+			NextPage = 2;
+		}
+
+	}
+	Page//2
+	{
+		Name = "Johnson, Barkeeper";
+		Dialog = "\c[white]Well, what do you want to know?";
+		Panel = "M_JHNSN";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 1;
+		}
+		Choice
+		{
+			Text = "What can you tell me about your guests.";
+			NextPage = 3;
+		}
+		Choice
+		{
+			Text = "Is your pub successfull?";
+			NextPage = 4;
+		}
+		Choice
+		{
+			Text = "Is there something interesting in the city?";
+			NextPage = 5;
+		}
+
+	}
+	Page//3
+	{
+		Name = "Johnson, Barkeeper";
+		Dialog = "\c[white]The locals are peaceful peple. Hard working, and hard drinking. But no problems, they are just nice. But I heard something about some uprising in Northern Prison. You should check it out.";
+		Panel = "M_JHNSN";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 2;
+		}
+
+	}
+	Page//4
+	{
+		Name = "Johnson, Barkeeper";
+		Dialog = "\c[white]Some days I dont stop. And some days the pub is empty. But I can make living here, so I can say my pub is successfull.";
+		Panel = "M_JHNSN";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 2;
+		}
+	}
+	Page//5
+	{
+		Name = "Johnson, Barkeeper";
+		Dialog = "\c[white]Well, there is the airport and city Port with the Slums. Dangerous place, but I like it. ";
+		Panel = "M_JHNSN";
+		Choice
+		{
+			Text = "\c[yellow][<< BACK ]";
+			NextPage = 2;
+		}
+	}
+
+}
+//tekguild master engineer
+Conversation
+{
+    ID = 19;
+    Page//1
+    {
+        Name = "Tekguild master Engineer";
+        Dialog = "";
+        Panel = "";
+        choice
+        {
+            Text = "";
+            Nextpage = 2;
+        }
+
+    }
+}
+
+//your bed id 703
+Conversation
+{
+	Id = 703;
+	Page//1
+	{
+		Name = "[ YOUR BED ]";
+		Dialog = "\c[white]Your bed. Looks comfortable.";
+		Goodbye = "\c[red][ LEAVE ]";
+		Choice
+		{
+			Text = "[ Sleep in the bed ]";
+			NextPage = 1;
+			CloseDialog = true;
+			Special = 80;
+			Arg0 = 703;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

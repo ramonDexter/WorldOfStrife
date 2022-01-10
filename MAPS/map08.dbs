@@ -1,0 +1,124 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_StrifeUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP08
+	{
+		defaultceiltexture = "F_SKY001";
+		overridefloorheight = false;
+		customfloorheight = 0;
+		uselongtexturenames = false;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\DOOM\\WoS\\WoS-Base";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+			
+			resource1
+			{
+				type = 2;
+				location = "D:\\DOOM\\WoS\\WoS-modelPackPC.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+			
+			resource2
+			{
+				type = 2;
+				location = "D:\\DOOM\\WoS\\WoS-textures.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		overrideceiltexture = false;
+		viewpositionx = -4530.073f;
+		defaulttoptexture = "BRKGRY17";
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				rotationfloor = 1;
+				user_managed_3d_floor = 3;
+				xpanningfloor = 1;
+				ypanningceiling = 1;
+				ypanningfloor = 1;
+				xpanningceiling = 1;
+				yscalefloor = 1;
+				xscalefloor = 1;
+				yscaleceiling = 1;
+				xscaleceiling = 1;
+				rotationceiling = 1;
+			}
+			
+			sidedef
+			{
+				offsetx_top = 1;
+				scalex_top = 1;
+				scalex_mid = 1;
+				scalex_bottom = 1;
+				scaley_mid = 1;
+				scaley_bottom = 1;
+				offsety_top = 1;
+				scaley_top = 1;
+				offsety_bottom = 1;
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsetx_bottom = 1;
+			}
+			
+			linedef
+			{
+				alpha = 1;
+				arg0str = 2;
+			}
+			
+			thing
+			{
+				arg0str = 2;
+				conversation = 0;
+			}
+		}
+		overrideceilheight = false;
+		viewpositiony = -1656.446f;
+		overridebrightness = false;
+		overridefloortexture = false;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 8;
+			background = "";
+			backoffsety = 0;
+		}
+		overridetoptexture = false;
+		overridebottomtexture = false;
+		defaultbottomtexture = "BRKGRY17";
+		defaultfloortexture = "BGRAS2";
+		defaultwalltexture = "BRKGRY17";
+		customceilheight = 128;
+		overridemiddletexture = false;
+		custombrightness = 196;
+		viewscale = 0.4975001f;
+	}
+}

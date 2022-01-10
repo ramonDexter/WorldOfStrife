@@ -1,0 +1,9 @@
+object MiniSentinel
+{
+    frame MNDRD { light SNTNLDTH1 }
+    frame MNDRE { light SNTNLDTH2 }
+	frame MNDRF { light SNTNLDTH2 }
+    frame MNDRG { light SNTNLDTH2 }
+	frame MNDRH { light SNTNLDTH1 }
+    frame MNDRI { light SNTNLDTH1 }
+}

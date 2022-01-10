@@ -1,0 +1,27 @@
+//Paladin
+//=======================================================//
+LaserCannon/Fire	"sounds/paladin/DSLASERF.ogg"
+$limit LaserCannon/Fire	0
+
+LaserCannon/End		"sounds/paladin/DSLSREND.ogg"
+$limit LaserCannon/End	0
+
+DSROBDI1	"sounds/paladin/DSROBDI1.ogg"
+DSROBDI2	"sounds/paladin/DSROBDI2.ogg"
+DSROBDI3	"sounds/paladin/DSROBDI3.ogg"
+DSROBDI4	"sounds/paladin/DSROBDI4.ogg"
+
+$random Robot/Death	{ DSROBDI1 DSROBDI2 DSROBDI3 DSROBDI4 }
+
+DSROBPN1	"sounds/paladin/DSROBPN1.ogg"
+DSROBPN2	"sounds/paladin/DSROBPN2.ogg"
+DSROBPN3	"sounds/paladin/DSROBPN3.ogg"
+DSROBPN4	"sounds/paladin/DSROBPN4.ogg"
+
+$random Robot/Pain	{ DSROBPN1 DSROBPN2 DSROBPN3 DSROBPN4 }
+
+Robot/Step	"sounds/paladin/DSROBSTP.ogg"
+$limit Robot/Step 0
+
+Robot/Fall	"sounds/paladin/DSROBFAL.ogg"
+//=======================================================//

@@ -1,0 +1,11 @@
+//Rebels
+//--------------------------------------
+REBDIE1 	"sounds/rebels/REBDIE1.ogg"
+REBDIE2 	"sounds/rebels/REBDIE2.ogg"
+$random 	NewRebelDeath { REBDIE1 REBDIE2 }
+REBPAIN1 	"sounds/rebels/REBPAIN1.ogg"
+REBPAIN2 	"sounds/rebels/REBPAIN2.ogg"
+REBPAIN3 	"sounds/rebels/REBPAIN3.ogg"
+
+$random NewRebelPain { REBPAIN1 REBPAIN2 REBPAIN3 }
+//--------------------------------------

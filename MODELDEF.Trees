@@ -1,0 +1,680 @@
+// ascension trees /////////////////////////////////////////////////////////////
+//=================================================//
+//-------------------------TREES----------------------------------//
+//=================================================//
+
+
+
+Model Palm01
+{ 
+   path models
+   Model 0 "palm1.md3" 
+   Skin 0 "palm1a.png"
+   Scale 20.0 20.0 20.0
+   FrameIndex DUMM A 0 0
+}
+
+Model Palm02aLarge
+{ 
+   path models
+   Model 0 "palm1.md3" 
+   Skin 0 "palm3a.png"
+   Scale 20.0 20.0 20.0
+   FrameIndex DUMM A 0 0
+}
+
+Model Palm02aMedium
+{ 
+   path models
+   Model 0 "palm1.md3" 
+   Skin 0 "palm3a.png"
+   Scale 20.0 20.0 20.0
+   FrameIndex DUMM A 0 0
+}
+
+Model Palm02b
+{ 
+   path models
+   Model 0 "palm1.md3" 
+   Skin 0 "palm3a.png"
+   Scale 20.0 20.0 20.0
+   FrameIndex DUMM A 0 0
+}
+
+
+Model Palm04
+{ 
+   Path models
+   Model 0 "palm3.md3" 
+   Skin 0 "palm3b.png"
+   Scale 0.5 0.5 0.5
+   FrameIndex DUMM A 0 0
+}
+
+
+
+//-----------------------ZOD Trees Models------------------------//
+Model Tree20
+{
+Scale 2.0 2.0 2.0
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "ZOD_TREE2.png"
+frameindex DUMM A 0 0 //1
+}
+
+
+//========================================================//
+//--------------models by GRAU(ConradRDW)-----------------//
+//========================================================//
+Model Tree14Leaves
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree1.md2"
+Skin 0 "ctree2_1.png"
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree15
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree1.md2"
+Skin 0 "ctree1.png"
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree05Large
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree3.md2"
+Skin 0 "ctree3_1.png"
+zoffset -4.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree05Medium
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree3.md2"
+Skin 0 "ctree3_1.png"
+zoffset -4.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree10Large
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree3.md2"
+Skin 0 "ctree3.png"
+zoffset -4.0
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree10Medium
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree3.md2"
+Skin 0 "ctree3.png"
+zoffset -4.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree10Small
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree3.md2"
+Skin 0 "ctree3.png"
+zoffset -4.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree07b
+{
+Scale 0.9 0.9 0.9
+path "models/Tree"
+Model 0 "tree07c.md2"
+Skin 0 "tree07b.png"
+zoffset -3.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree07c
+{
+Scale 0.9 0.9 0.9
+path "models/Tree"
+Model 0 "tree07c.md2"
+Skin 0 "tree07c.png"
+zoffset -3.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree11
+{
+Scale 0.7 0.7 0.7
+path "models/Tree"
+Model 0 "ntree3.md2"
+Skin 0 "ntree3b.png"
+zoffset -2.0
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree07
+{
+Scale 0.6 0.6 0.6
+path "models/Tree"
+Model 0 "ntree3.md2"
+Skin 0 "ntree3a.png"
+zoffset -1.0
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree12
+{
+Scale 0.8 0.8 0.8
+path "models/Tree"
+Model 0 "ntree1.md2"
+Skin 0 "ntree1b.png"
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree14Green
+{
+Scale 1.0 1.0 1.0
+path "models/Tree"
+Model 0 "ctree1.md2"
+Skin 0 "ctree2.png"
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree21
+{
+Scale 0.45 0.45 0.4
+path "models/Tree"
+Model 0 "ctree1.md2"
+Skin 0 "ctree1_1.png"
+Frame DUMM A 0 "stay00"
+}
+
+Model Tree22
+{
+Scale 0.35 0.35 0.4
+path "models/Tree"
+Model 0 "ctree1.md2"
+Skin 0 "ctree1_1.png"
+Frame DUMM A 0 "stay00"
+}
+
+
+Model Tree13
+{
+Path "models/Tree"
+   Model 0 "ntree2.md2" 
+   Skin 0 "ntree2.png"
+   Scale 1.2 1.2 1.2
+   Frame DUMM A 0 "stay00"
+}
+
+
+
+Model Tree06Large
+{
+Path "models/Tree"
+   Model 0 "ntree2.md2" 
+   Skin 0 "ntree2b.png"
+   Scale 1.2 1.2 1.2
+   Frame DUMM A 0 "stay00"
+}
+
+Model Tree06Medium
+{
+Path "models/Tree"
+   Model 0 "ntree2.md2" 
+   Skin 0 "ntree2b.png"
+   Scale 1.2 1.2 1.2
+   Frame DUMM A 0 "stay00"
+}
+
+
+//===================================================//
+//----------------models by Guest--------------------//
+//===================================================//
+Model Tree24
+{
+Path "models/Tree"
+Model 0 "tree1_1.md3" 
+Skin 0 "tree1.jpg"
+Model 1 "tree1_2.md3" 
+Path "models/"
+Skin 1 "firelog_m.jpg"
+Scale 1.25 1.25 1.75
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+
+//model by Sitters
+//low-res version, modified by Guest
+Model Tree04
+{
+Path "models/Tree"
+model 0 "blad_red.md3"
+model 1 "stam1.md3"
+skin 1 "spar.png"
+skin 0 "tr04a0.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+frameindex DUMM A 0 0
+frameindex DUMM A 1 0
+}
+
+//model by Sitters
+//low-res version, modified by Guest
+Model Tree04b
+{
+Path "models/Tree"
+model 0 "blad_red.md3"
+model 1 "stam1.md3"
+skin 1 "spar.png"
+skin 0 "tr04b0.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+frameindex DUMM A 0 0
+frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Tree18
+{
+Path "models/Tree"
+model 0 "tree10.md3"
+skin 0 "tree10.png"
+USEACTORPITCH
+Scale 1.0 1.0 1.0
+frameindex DUMM A 0 0
+}
+
+//model by Guest
+Model Tree18
+{
+Path "models/Tree"
+model 0 "tree10.md3"
+model 1 "tree10_more.md3"
+skin 0 "tree10.png"
+skin 1 "tree10.png"
+USEACTORPITCH
+Scale 1.0 1.0 1.0
+frameindex DUMM A 0 0
+frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Tree19
+{
+Path "models/Tree"
+Model 0 "tree03_1.md3" 
+Skin 0 "tree0222.jpg"
+Model 1 "tree03_2.md3" 
+Skin 1 "dryleaf22.png"
+Scale 1.0 1.0 1.0
+USEACTORPITCH
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+
+
+
+//----------------------------Other Tree models by Conrad(GRAU)----------------------------------//
+Model Tree01
+{
+Path "models/Tree"
+   Model 0 "furtree.md2" 
+   Skin 0 "furtree3b.png"
+   Scale 1.0 1.0 1.0
+   Frame DUMM A 0 "stay00"
+}
+
+
+/*Model MiniTree03
+{
+Path "models/Tree"
+   Model 0 "ntree2.md2" 
+   Skin 0 "ntree2.png"
+   Scale 1.2 1.2 1.2
+   Frame DUMM A 0 "stay00"
+}*/
+/*Model MiniTree05
+{
+Path "models/Tree"
+Model 0 "tree03_1.md3" 
+Skin 0 "tree0222.jpg"
+Model 1 "tree03_2.md3" 
+Skin 1 "dryleaf22.png"
+Scale 1.0 1.0 1.0
+USEACTORPITCH
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}*/
+
+//------------------------------Bushes---------------------------------------//
+//from Blood Hi-Res pack
+/*Model Plant08a
+{
+Path "models/Tree"
+   Model 0 "bush.md3"
+   Skin 0 "bush_d_green.png"
+   Scale 2.75 2.75 2.75
+   FrameIndex DUMM A 0 0
+}
+
+Model Plant08b
+{
+Path "models/Tree"
+   Model 0 "bush.md3"
+   Skin 0 "bush_d_green.png"
+   Scale 1.25 1.25 1.25
+   FrameIndex DUMM A 0 0
+}*/
+/*Model MiniTree02
+{
+Scale 0.9 0.9 0.9
+path "models/Tree"
+Model 0 "tree07c.md2"
+Skin 0 "tree07b.png"
+zoffset -1.0
+USEACTORPITCH
+Frame DUMM A 0 "stay00"
+}*/
+/*Model MiniTree01
+{
+Path "models/Tree"
+   Model 0 "furtree.md2" 
+   Skin 0 "furtree3b.png"
+   Scale 1.0 1.0 1.0
+   Frame DUMM A 0 "stay00"
+}*/
+//model by Guest
+/*Model Larch
+{
+Path "models/"
+Model 0 "larch_1.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2.md3"
+Path "patches/"
+skin 1  "avine08.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch1
+{
+Path "models/"
+Model 0 "larch_1_1.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_1.md3"
+Path "patches/"
+skin 1  "avine08.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch2
+{
+Path "models/"
+Model 0 "larch_1_2.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_2.md3"
+Path "patches/"
+skin 1  "avine08.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch3
+{
+Path "models/"
+Model 0 "larch_1_3.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_3.md3"
+Path "patches/"
+skin 1  "avine08.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch4
+{
+Path "models/"
+Model 0 "larch_1_4.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_4.md3"
+Path "patches/"
+skin 1  "avine08.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch_dry
+{
+Path "models/"
+Model 0 "larch_1.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2.md3"
+Path "patches/"
+skin 1 "avine05.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch1_dry
+{
+Path "models/"
+Model 0 "larch_1_1.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_1.md3"
+Path "patches/"
+skin 1 "avine05.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch2_dry
+{
+Path "models/"
+Model 0 "larch_1_2.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_2.md3"
+Path "patches/"
+skin 1 "avine05.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch3_dry
+{
+Path "models/"
+Model 0 "larch_1_3.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_3.md3"
+Path "patches/"
+skin 1 "avine05.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}
+
+//model by Guest
+Model Larch4_dry
+{
+Path "models/"
+Model 0 "larch_1_4.md3"
+Skin 0 "tree1.jpg"
+Model 1 "larch_2_4.md3"
+Path "patches/"
+skin 1 "avine05.png"
+USEACTORPITCH
+Scale 1.25 1.25 1.25
+
+Frameindex DUMM A 0 0
+Frameindex DUMM A 1 0
+}*/
+
+/*Model Palm05
+{ 
+   Path models
+   Model 0 "palm2.md3" 
+   Skin 0 "palm2a.png"
+   Scale 1.0 1.0 1.0
+   FrameIndex DUMM A 0 0
+}*/
+
+/*Model Palm08
+{ 
+   Path models
+   Model 0 "palm2.md3" 
+   Skin 0 "palm2b.png"
+   Scale 1.0 1.0 1.0
+   FrameIndex DUMM A 0 0
+}*/
+/*Model Palm07
+{ 
+   Path models
+   Model 0 "palm3.md3" 
+   Skin 0 "palm3c.png"
+   Scale 0.5 0.5 0.5
+   FrameIndex DUMM A 0 0
+}*/
+
+/*Model Cactus02
+{ 
+   Path models
+   Model 0 "cactus.md2" 
+   Skin 0 "cactus.png"
+   Scale 1.0 1.0 1.0   
+   Frame DUMM A 0 "frame01"
+}*/
+
+/*Model Plant23
+{ 
+   Path models
+   Model 0 "plant1.md2" 
+   Skin 0 "plant1.png"
+   Scale 1.0 1.0 1.0
+   Frame DUMM A 0 "frame01"
+}*/
+
+/*Model Tree27Large
+{
+Scale 2.5 2.5 2.5
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "TR27A0.png"
+frameindex DUMM A 0 0 //1
+}
+
+Model Tree27Medium
+{
+Scale 2.5 2.5 2.5
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "TR27A0.png"
+frameindex DUMM A 0 0 //1
+}
+
+Model Tree28Large
+{
+Scale 2.5 2.5 2.5
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "TR28A0.png"
+frameindex DUMM A 0 0 //1
+}
+
+Model Tree28Medium
+{
+Scale 2.5 2.5 2.5
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "TR28A0.png"
+frameindex DUMM A 0 0 //1
+}
+
+Model Tree28Small
+{
+Scale 2.5 2.5 2.5
+zoffset -4.0
+path "models/Tree"
+Model 0 "ZOD_TREE1.md3"
+Skin 0 "ZOD_TREE1.png"
+Model 1 "ZOD_TREE1_2.md3"
+Skin 1 "TR28A0.png"
+frameindex DUMM A 0 0 //1
+}*/

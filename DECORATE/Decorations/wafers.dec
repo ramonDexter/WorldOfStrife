@@ -1,0 +1,58 @@
+actor wafer_base {
+	//$Category "Decorations/wafers"
+	+FLATSPRITE
+	-SOLID
+	+USESPECIAL	
+	height 0
+	radius 8
+	scale 0.5
+}
+
+actor wafer01 : wafer_base 28001 {
+	//$Title "wafer 01"	
+	States {
+		Spawn:
+			WF01 A -1
+			Stop
+	}
+}
+actor wafer02 : wafer_base 28002 {
+	//$Title "wafer 02"	
+	States {
+		Spawn:
+			WF02 A -1
+			Stop
+	}	
+}
+actor wafer03 : wafer_base 28003 {
+	//$Title "wafer 03"	
+	States {
+		Spawn:
+			WF03 A -1
+			Stop
+	}	
+}
+actor wafer04 : wafer_base 28004 {
+	//$Title "wafer 04"	
+	States {
+		Spawn:
+			WF04 A -1
+			Stop
+	}	
+}
+actor wafer05 : wafer_base 28005 {
+	//$Title "wafer 05"	
+	States {
+		Spawn:
+			WF05 A -1
+			Stop
+	}	
+}
+actor wafer06 : wafer_base 28006 {
+	//$Title "wafer 06 - millport"	
+	States {
+		Spawn:
+			WF06 A -1
+			Stop
+	}
+}

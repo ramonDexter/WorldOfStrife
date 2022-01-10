@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////////////////
+///////////////////  World of Strife MAPINFO file  /////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  GAMEINFO  //////////////////////////////////////////////////////////////////
+GameInfo {
+	StatusBarClass = "wosStatusBar"
+	PlayerClasses = "binderPlayer"
+	ForceKillScripts = true
+	MapArrow = "marrow", "ddtmarr"
+	//  statusbar
+	//statusbarclass = "wosStatusBar"
+	//  event handlers
+	AddEventHandlers = "wosEventHandler"
+	AddEventHandlers = "SwayHandler"
+	AddEventHandlers = "TiltPlusPlusHandler"
+	AddEventHandlers = "SpriteShadowHandler"
+	AddEventHandlers = "UseToPickup"
+	AddEventHandlers = "m8f_hn_EventHandler"
+                   , "m8f_hn_FootstepHandler"
+                   , "m8f_hn_UseMarkerEventHandler"
+                   , "m8f_hn_AutoSwitchEventHandler"
+                   , "m8f_hn_MapTunerEventHandler"
+                   , "m8f_hn_BacktrackEventHandler"
+	AddEventHandlers = "DropletsEventHandler"
+	AddEventHandlers = "LowDetailHandler"
+	//AddEventHandlers = "NashMoveHandler"
+	
+	
+	quitsound = "silence" // Sound effects handled by message box code
+	//messageboxclass = "ROTTMessageBox" 
+		
+	//DefaultConversationMenuClass = "SampleConversationMenu"
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+

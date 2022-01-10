@@ -1,0 +1,1015 @@
+//CMP_3_1
+//---------------------------------------
+Brightmap texture CMP_3_1
+{
+	map BMCMP3
+	FullBright
+}
+Brightmap texture CMP_3_2
+{
+	map BMCMP3
+	FullBright
+}
+Brightmap texture CMP_3_3
+{
+	map BMCMP3
+	FullBright
+}
+//---------------------------------------
+
+//CMP_6_1
+//---------------------------------------
+Brightmap texture CMP_6_1
+{
+	map BMCMP61
+	FluuBright
+}
+Brightmap texture CMP_6_2
+{
+	map BMCMP62
+	FluuBright
+}
+Brightmap texture CMP_6_3
+{
+	map BMCMP63
+	FluuBright
+}
+//---------------------------------------
+
+//CMP_7_1
+//---------------------------------------
+Brightmap texture CMP_7_1
+{
+	map BMCMP71
+	FullBright
+}
+Brightmap texture CMP_7_2
+{
+	map BMCMP72
+	FullBright
+}
+Brightmap texture CMP_7_3
+{
+	map BMCMP73
+	FullBright
+}
+//---------------------------------------
+
+//CMP_8_1
+//---------------------------------------
+Brightmap texture CMP_8_1
+{
+	map BMCMP8_1
+	FullBright
+}
+Brightmap texture CMP_8_2
+{
+	map BMCMP8_2
+	FullBright
+}
+Brightmap texture CMP_8_3
+{
+	map BMCMP8_3
+	FullBright
+}
+Brightmap texture CMP_8_4
+{
+	map BMCMP8_4
+	FullBright
+}
+//---------------------------------------
+
+//CMP_9_1
+//---------------------------------------
+Brightmap texture CMP_9_1
+{
+	map BMCMP91
+	Fullbright
+}
+Brightmap texture CMP_9_2
+{
+	map BMCMP92
+	Fullbright
+}
+Brightmap texture CMP_9_3
+{
+	map BMCMP93
+	Fullbright
+}
+Brightmap texture CMP_9_4
+{
+	map BMCMP94
+	Fullbright
+}
+//---------------------------------------
+
+//CMP_10_1
+//---------------------------------------
+Brightmap texture CMP_10_1
+{
+	map BMCMP101
+	FullBright
+}
+Brightmap texture CMP_10_2
+{
+	map BMCMP102
+	FullBright
+}
+Brightmap texture CMP_10_3
+{
+	map BMCMP103
+	FullBright
+}
+Brightmap texture CMP_10_4
+{
+	map BMCMP104
+	FullBright
+}
+//---------------------------------------
+
+//CMP_11_1
+//---------------------------------------
+Brightmap texture CMP_11_1
+{
+	map BMCMP111
+	FullBright
+}
+Brightmap texture CMP_11_2
+{
+	map BMCMP112
+	FullBright
+}
+Brightmap texture CMP_11_3
+{
+	map BMCMP113
+	FullBright
+}
+//---------------------------------------
+
+//CMP_12_1
+//---------------------------------------
+Brightmap texture CMP_12_1
+{
+	map BMCMP12
+	FullBright
+}
+Brightmap texture CMP_12_2
+{
+	map BMCMP12
+	FullBright
+}
+Brightmap texture CMP_12_3
+{
+	map BMCMP12
+	FullBright
+}
+Brightmap texture CMP_12_4
+{
+	map BMCMP12
+	FullBright
+}
+//---------------------------------------
+
+//CMP_13_1
+//---------------------------------------
+Brightmap texture CMP_13_1
+{
+	map BMCMP131
+	FullBright
+}
+Brightmap texture CMP_13_2
+{
+	map BMCMP132
+	FullBright
+}
+Brightmap texture CMP_13_3
+{
+	map BMCMP133
+	FullBright
+}
+Brightmap texture CMP_13_4
+{
+	map BMCMP134
+	FullBright
+}
+//---------------------------------------
+
+//CMP_14_1
+//---------------------------------------
+Brightmap texture CMP_14_1
+{
+	map BMCMP141
+	FullBright
+}
+Brightmap texture CMP_14_2
+{
+	map BMCMP142
+	FullBright
+}
+Brightmap texture CMP_14_3
+{
+	map BMCMP143
+	FullBright
+}
+Brightmap texture CMP_14_4
+{
+	map BMCMP144
+	FullBright
+}
+//---------------------------------------
+
+//CMP_5_1
+//---------------------------------------
+Brightmap texture CMP_5_1
+{
+	map BCMP5_1
+	FullBright
+}
+Brightmap texture CMP_5_2
+{
+	map BCMP5_2
+	FullBright
+}
+Brightmap texture CMP_5_3
+{
+	map BCMP5_3
+	FullBright
+}
+//---------------------------------------
+
+//MEDTEX
+//---------------------------------------
+Brightmap texture BMEDTX01
+{
+	map BMEDT01
+	FullBright
+}
+Brightmap texture BMEDTX02
+{
+	map BMEDT02
+	FullBright
+}
+Brightmap texture BMEDTX03
+{
+	map BMEDT03
+	FullBright
+}
+Brightmap texture BMEDTX04
+{
+	map BMEDT04
+	FullBright
+}
+Brightmap texture BMEDTX05
+{
+	map BMEDT05
+	FullBright
+}
+//---------------------------------------
+
+//ANCP
+//---------------------------------------
+Brightmap texture ANCP1_1
+{
+	map BANCP11
+	FullBright
+}
+Brightmap texture ANCP1_2
+{
+	map BANCP12
+	FullBright
+}
+Brightmap texture ANCP1_3
+{
+	map BANCP13
+	FullBright
+}
+Brightmap texture ANCP2_1
+{
+	map BANCP21
+	FullBright
+}
+Brightmap texture ANCP2_2
+{
+	map BANCP22
+	FullBright
+}
+Brightmap texture ANCP2_3
+{
+	map BANCP23
+	FullBright
+}
+Brightmap texture ANCP5_1
+{
+	map BANCP5
+	FullBright
+}
+Brightmap texture ANCP5_2
+{
+	map BANCP5
+	FullBright
+}
+Brightmap texture ANCP5_3
+{
+	map BANCP5
+	FullBright
+}
+Brightmap texture ANCP6_1
+{
+	map BANCP6
+	FullBright
+}
+Brightmap texture ANCP6_2
+{
+	map BANCP6
+	FullBright
+}
+Brightmap texture ANCP6_3
+{
+	map BANCP6
+	FullBright
+}
+//---------------------------------------
+
+//DNTEX
+//---------------------------------------
+Brightmap texture DNCOMP03
+{
+	map BDNCMP03
+	FullBright
+}
+Brightmap texture DNCOMP04
+{
+	map BDNCMP04
+	FullBright
+}
+Brightmap texture DNCOMP13
+{
+	map BDNCMP13
+	FullBright
+}
+Brightmap texture DNCOMP17
+{
+	map BDNCMP17
+	fullbright
+}
+Brightmap texture DNSCRN09
+{
+	map BDNSCR09
+	fullbright
+}
+Brightmap texture DNSCRN10
+{
+	map BDNSCR10
+	fullbright
+}
+Brightmap texture DNSCRN11
+{
+	map BDNSCR11
+	fullbright
+}
+Brightmap texture DNSCRN12
+{
+	map BDNSCR12
+	fullbright
+}
+Brightmap texture DNSCRN14
+{
+	map BDNSCR14
+	fullbright
+}
+Brightmap texture DNSCRN15
+{
+	map BDNSCR15
+	fullbright
+}
+Brightmap texture DNSCRN16
+{
+	map BDNSCR16
+	fullbright
+}
+Brightmap texture DNSCRN26
+{
+	map BDNSCR26
+	fullbright
+}
+Brightmap texture DNSCRN44
+{
+	map BDNSCR44
+	fullbright
+}
+Brightmap texture DNSCRN45
+{
+	map BDNSCR45
+	fullbright
+}
+Brightmap texture DNSCRN46
+{
+	map BDNSCR46
+}
+//---------------------------------------
+
+Brightmap texture WALTEK09
+{
+	map BWALTEKX
+	fullbright
+}
+Brightmap texture WALTEK10
+{
+	map BWALTEKX
+	fullbright
+}
+Brightmap texture WALTEK15
+{
+	map BWALTEKX
+	fullbright
+}
+
+Brightmap texture P_5COMP1
+{
+	map B_5COMP1
+	fullbright
+}
+Brightmap texture P_5COMP2
+{
+	map B_5COMP1
+	fullbright
+}
+
+//Last Rites textures
+//---------------------------------------
+Brightmap texture TKTEX24
+{
+	map LRBM24
+	fullbright
+}
+Brightmap texture TKTEX25
+{
+	map LRBM25
+	fullbright
+}
+Brightmap texture TKTEX26
+{
+	map LRBM26
+	fullbright
+}
+Brightmap texture TKTEX132
+{
+	map LRBM132
+	fullbright
+}
+Brightmap texture TKTEX133
+{
+	map LRBM133
+	fullbright
+}
+Brightmap texture TKTEX134
+{
+	map LRBM134
+	fullbright
+}
+Brightmap texture TKTEX135
+{
+	map LRBM135
+	fullbright
+}
+Brightmap texture TKTEX182
+{
+	map LRBM182
+	fullbright
+}
+Brightmap texture TKTEX183
+{
+	map LRBM18
+	fullbright
+}
+Brightmap texture TKTEX184
+{
+	map LRBM18
+	fullbright
+}
+Brightmap texture TKTEX185
+{
+	map LRBM182
+	fullbright
+}
+Brightmap texture TKTEX186
+{
+	map LRBM186
+	fullbright
+}
+Brightmap texture TKTEX187
+{
+	map LRBM18
+	fullbright
+}
+Brightmap texture TKTEX190
+{
+	map LRBM190
+	fullbright
+}
+Brightmap texture TKTEX196
+{
+	map LRBM196
+	fullbright
+}
+Brightmap texture TKTEX206
+{
+	map LRBM206
+	fullbright
+}
+Brightmap texture TKTEX210
+{
+	map LRBM210
+	fullbright
+}
+Brightmap texture TKTEX211
+{
+	map LRBM210
+	fullbright
+}
+Brightmap texture TKTEX212
+{
+	map LRBM212
+	fullbright
+}
+Brightmap texture TKTEX213
+{
+	map LRBM213
+	fullbright
+}
+Brightmap texture TKTEX214
+{
+	map LRBM214
+	fullbright
+}
+Brightmap texture TKTEX215
+{
+	map LRBM215
+	fullbright
+}
+Brightmap texture TKTEX216
+{
+	map LRBM216
+}
+Brightmap texture TKTEX217
+{
+	map LRBM216
+}
+Brightmap texture TKTEX218
+{
+	map LRBM218
+}
+//---------------------------------------
+
+Brightmap texture SURGUNT1
+{
+	map BSURG
+	fullbright
+}
+Brightmap texture SURGUNT2
+{
+	map BSURG
+	fullbright
+}
+//diabolusEx -------------------------------------------------------------------
+brightmap texture DESKC {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC00 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC01 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC02 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC03 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC04 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC05 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC06 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC07 {
+	map BMDESKC
+	fullbright
+}
+brightmap texture DESKC08 {
+	map BMDESKC
+	fullbright
+}
+
+brightmap texture SRVRA {
+	map BMSRVRA
+	fullbright
+}
+brightmap texture SRVRA00 {
+	map SRVRAB0
+	fullbright
+}
+brightmap texture SRVRA01 {
+	map SRVRAB1
+	fullbright
+}
+brightmap texture SRVRA02 {
+	map SRVRAB2
+	fullbright
+}
+brightmap texture SRVRA03 {
+	map SRVRAB3
+	fullbright
+}
+brightmap texture SRVRA04 {
+	map SRVRAB4
+	fullbright
+}
+brightmap texture SRVRA05 {
+	map SRVRAB5
+	fullbright
+}
+//diabolusEx -------------------------------------------------------------------
+
+
+//Ranger brightmaps
+//Ranger&Player
+//-----------------------------------
+Brightmap sprite RNGPA1
+{
+	map BRNGPA1
+	fullbright
+}
+Brightmap sprite RNGPA2
+{
+	map BRNGPA2
+	fullbright
+}
+Brightmap sprite RNGPA3
+{
+	map BRNGPA3
+	fullbright
+}
+Brightmap sprite RNGPA7
+{
+	map BRNGPA7
+	fullbright
+}
+Brightmap sprite RNGPA8
+{
+	map BRNGPA8
+	fullbright
+}
+
+Brightmap sprite RNGPB1
+{
+	map BRNGPB1
+	fullbright
+}
+Brightmap sprite RNGPB2
+{
+	map BRNGPB2
+	fullbright
+}
+Brightmap sprite RNGPB3
+{
+	map BRNGPB3
+	fullbright
+}
+Brightmap sprite RNGPB7
+{
+	map BRNGPB7
+	fullbright
+}
+Brightmap sprite RNGPB8
+{
+	map BRNGPB8
+	fullbright
+}
+
+Brightmap sprite RNGPC1
+{
+	map BRNGPC1
+	fullbright
+}
+Brightmap sprite RNGPC2
+{
+	map BRNGPC2
+	fullbright
+}
+Brightmap sprite RNGPC3
+{
+	map BRNGPC3
+	fullbright
+}
+Brightmap sprite RNGPC7
+{
+	map BRNGPC7
+	fullbright
+}
+Brightmap sprite RNGPC8
+{
+	map BRNGPC8
+	fullbright
+}
+
+Brightmap sprite RNGPD1
+{
+	map BRNGPD1
+	fullbright
+}
+Brightmap sprite RNGPD2
+{
+	map BRNGPD2
+	fullbright
+}
+Brightmap sprite RNGPD3
+{
+	map BRNGPD3
+	fullbright
+}
+Brightmap sprite RNGPD7
+{
+	map BRNGPD7
+	fullbright
+}
+Brightmap sprite RNGPD8
+{
+	map BRNGPD8
+	fullbright
+}
+
+Brightmap sprite RNGPE1
+{
+	map BRNGPE1
+	fullbright
+}
+Brightmap sprite RNGPE2
+{
+	map BRNGPE2
+	fullbright
+}
+Brightmap sprite RNGPE3
+{
+	map BRNGPE3
+	fullbright
+}
+Brightmap sprite RNGPE7
+{
+	map BRNGPE7
+	fullbright
+}
+Brightmap sprite RNGPE8
+{
+	map BRNGPE8
+	fullbright
+}
+
+Brightmap sprite RNGPF1
+{
+	map BRNGPF1
+	fullbright
+}
+Brightmap sprite RNGPF2
+{
+	map BRNGPF2
+	fullbright
+}
+Brightmap sprite RNGPF3
+{
+	map BRNGPF3
+	fullbright
+}
+Brightmap sprite RNGPF4
+{
+	map BRNGPF4
+	fullbright
+}
+Brightmap sprite RNGPF5
+{
+	map BRNGPF5
+	fullbright
+}
+Brightmap sprite RNGPF6
+{
+	map BRNGPF7
+	fullbright
+}
+Brightmap sprite RNGPF8
+{
+	map BRNGPF8
+	fullbright
+}
+//-----------------------------------
+
+
+//ranger player
+//-----------------------------------
+Brightmap sprite PLAYA1
+{
+	map BRNGPA1
+	fullbright
+}
+Brightmap sprite PLAYA2
+{
+	map BRNGPA2
+	fullbright
+}
+Brightmap sprite PLAYA3
+{
+	map BRNGPA3
+	fullbright
+}
+Brightmap sprite PLAYA7
+{
+	map BRNGPA7
+	fullbright
+}
+Brightmap sprite PLAYA8
+{
+	map BRNGPA8
+	fullbright
+}
+
+Brightmap sprite PLAYB1
+{
+	map BRNGPB1
+	fullbright
+}
+Brightmap sprite PLAYB2
+{
+	map BRNGPB2
+	fullbright
+}
+Brightmap sprite PLAYB3
+{
+	map BRNGPB3
+	fullbright
+}
+Brightmap sprite PLAYB7
+{
+	map BRNGPB7
+	fullbright
+}
+Brightmap sprite PLAYB8
+{
+	map BRNGPB8
+	fullbright
+}
+
+Brightmap sprite PLAYC1
+{
+	map BRNGPC1
+	fullbright
+}
+Brightmap sprite PLAYC2
+{
+	map BRNGPC2
+	fullbright
+}
+Brightmap sprite PLAYC3
+{
+	map BRNGPC3
+	fullbright
+}
+Brightmap sprite PLAYC7
+{
+	map BRNGPC7
+	fullbright
+}
+Brightmap sprite PLAYC8
+{
+	map BRNGPC8
+	fullbright
+}
+
+Brightmap sprite PLAYD1
+{
+	map BRNGPD1
+	fullbright
+}
+Brightmap sprite PLAYD2
+{
+	map BRNGPD2
+	fullbright
+}
+Brightmap sprite PLAYD3
+{
+	map BRNGPD3
+	fullbright
+}
+Brightmap sprite PLAYD7
+{
+	map BRNGPD7
+	fullbright
+}
+Brightmap sprite PLAYD8
+{
+	map BRNGPD8
+	fullbright
+}
+
+Brightmap sprite PLAYE1
+{
+	map BRNGPE1
+	fullbright
+}
+Brightmap sprite PLAYE2
+{
+	map BRNGPE2
+	fullbright
+}
+Brightmap sprite PLAYE3
+{
+	map BRNGPE3
+	fullbright
+}
+Brightmap sprite PLAYE7
+{
+	map BRNGPE7
+	fullbright
+}
+Brightmap sprite PLAYE8
+{
+	map BRNGPE8
+	fullbright
+}
+
+Brightmap sprite PLAYF1
+{
+	map BRNGPF1
+	fullbright
+}
+Brightmap sprite PLAYF2
+{
+	map BRNGPF2
+	fullbright
+}
+Brightmap sprite PLAYF3
+{
+	map BRNGPF3
+	fullbright
+}
+Brightmap sprite PLAYF4
+{
+	map BRNGPF4
+	fullbright
+}
+Brightmap sprite PLAYF5
+{
+	map BRNGPF5
+	fullbright
+}
+Brightmap sprite PLAYF6
+{
+	map BRNGPF7
+	fullbright
+}
+Brightmap sprite PLAYF8
+{
+	map BRNGPF8
+	fullbright
+}
+//-----------------------------------
+
+
+//ranger standing
+//-----------------------------------
+Brightmap sprite RNGSA1
+{
+	map BRNGSA1
+	fullbright
+}
+Brightmap sprite RNGSA2
+{
+	map BRNGSA2
+	fullbright
+}
+Brightmap sprite RNGSA3
+{
+	map BRNGSA3
+	fullbright
+}
+Brightmap sprite RNGSA7
+{
+	map BRNGSA7
+	fullbright
+}
+Brightmap sprite RNGSA8
+{
+	map BRNGSA8
+	fullbright
+}
+//-----------------------------------

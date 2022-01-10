@@ -1,0 +1,106 @@
+Lock 52 Strife
+{
+	//$Title "SH WasteTreatment Key"
+	
+	Any { BHWasteKey SkeletonKey }
+	Message "You need the waste treatment key!"
+	Mapcolor 150 150 150
+}
+
+Lock 53 Strife
+{
+	//$Title "SH Waste Catacomb Key"
+	
+ 	Any { BHWasteCatacombKey SkeletonKey }
+	Message "You need the Catacomb key!"
+	Mapcolor 150 150 150
+}
+
+Lock 54 Strife
+{
+	//$Title "SH Mines Key"
+	
+	Any { BHminesKey SkeletonKey }
+	Message "You need the Mines key!"
+	Mapcolor 150 150 150
+}
+
+Lock 55 Strife
+{
+	//$Title "SH Powerplant Key"
+	
+	Any { BHpowerPlantKey SkeletonKey }
+	Message "You need the Powerplant key!"
+	Mapcolor 150 150 150
+}
+
+Lock 56 Strife
+{
+	//$Title "SH pwplnt security card"
+	
+	Any { BHpowerPlantKey2 SkeletonKey }
+	Message "You need the Powerplant Security card!"
+	Mapcolor 150 150 150
+}
+
+Lock 57 Strife
+{
+	//$Title "SH pwplnt reactor key"
+	
+	Any { BHpowerPlantReactorKey SkeletonKey }
+	Message "You need the Powerplant Reactor key!"
+	Mapcolor 150 150 150
+}
+
+Lock 58 Strife
+{
+	//$Title "Impossible"
+	
+	BHimpossibleKey
+	Message "Impossible!"
+	Mapcolor 150 150 150	
+}
+
+Lock 59 Strife
+{
+	//$Title "SH Bath Key"
+	BHbathKey
+	Message "You need the Bathouse key!"
+	Mapcolor 150 150 150
+}
+
+Lock 60 Strife
+{
+	//$Title "SH Factory ID card"
+	Any { BHfactoryKey SkeletonKey }
+	Message "You need the Factory ID card!"
+	Mapcolor 150 150 150
+}
+
+Lock 61 Strife {
+	//$Title "SH tekguild pp key"
+	Any { SHtgPowerplantKey SkeletonKey }
+	Message "You need the TekGuild Powerplant ID card!"
+	Mapcolor 150 150 150
+}
+
+/*Lock 62 Strife {
+	//$Title "M10AcolBase 1.Key"
+	Any { m10k_acolyteBase_firstKey SkeletonKey }
+	Message "You need the Order Base Barracks Key!"
+	Mapcolor 150 150 150
+}
+
+Lock 63 Strife {
+	//$Title "M10AcolBase 2.Key"
+	Any { m10k_acolyteBase_secondKey SkeletonKey }
+	Message "You need the Order Base Command Key!"
+	Mapcolor 150 150 150
+}*/
+
+Lock 64 Strife {
+	//$Title "m08 baron's treasury key"
+	Any { m08k_BP_pokladnice SkeletonKey }
+	Message "Locked!"
+	Mapcolor 150 150 150
+}

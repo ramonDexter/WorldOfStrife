@@ -1,0 +1,81 @@
+SHLDV = "SHLDV0" {
+	Scale = 0.65
+}
+ZMZKV = "ZMZKV0" {
+	Scale = 0.45
+}
+RNGHV = "RNGHV0" {
+	Scale = 0.6
+}
+STIMA = "STIMA0" {
+	Scale = 0.4
+}
+MEDIA = "MEDIA0" {
+	Scale = 0.4
+}
+HDCRV = "HDCRV0" {
+	Scale = 0.8
+}
+PLRYV = "PLRYV0" {
+	Scale = 0.5
+}
+RACKV = "RACKV0" {
+	Scale = 1.0
+}
+GLTNV = "GLTNV0" {
+	Scale = 0.85
+}
+
+//---------------------
+CHKNV = "CHKNV0" {
+	Scale = 0.3
+}
+CHKNW = "CHKNW0" {
+	Scale = 0.3
+}
+LATHV = "LATHV0" {
+	Scale = 0.7
+}
+GRNDV = "GRNDV0" {
+	Scale = 0.6
+}
+PLDRV = "PLDRV0" {
+	Scale = 0.7
+}
+MCRSV = "MCRSV0" {
+	Scale = 0.15
+}
+/*
+QTBCV0 = "QTBCV"
+{
+	Scale = 0.5
+}
+QTDBV0 = "QTDBV" {
+	scale = 0.5
+}
+QTDVV0 = "QTDVV" {
+	scale = 0.5
+}
+*/
+EVAPV0 = "EVAPV0" {
+	scale = 0.65
+}
+RGA1V0 = "RGA1V0" {
+	scale = 0.9
+}
+RGA2V0 = "RGA2V0" {
+	Scale = 0.9
+}
+SHDDV0 = "SHDDV0" {
+	scale = 0.5
+}
+//  gas grenade  //
+GASGB0 = "GASGB0" {
+	scale = 0.5
+}
+GASGC0 = "GASGC0" {
+	scale = 0.5
+}
+GGS3A0 = "GGS3A0" {
+	scale = 0.5
+}

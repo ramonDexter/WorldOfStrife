@@ -1,0 +1,17 @@
+$random sounds/chicken/sight { chickCluck1 chickCluck2 chickCluck3 chickCluck4 chickCluck5 chickCluck6 }
+chickCluck1		"sounds/chicken/cluck1.ogg"
+chickCluck2		"sounds/chicken/cluck2.ogg"
+chickCluck3		"sounds/chicken/cluck3.ogg"
+chickCluck4		"sounds/chicken/cluck4.ogg"
+chickCluck5		"sounds/chicken/cluck5.ogg"
+chickCluck6		"sounds/chicken/cluck6.ogg"
+
+ChickenHurt/Hurt "sounds/chicken/cluck7.ogg"
+ChickenDeath/Death "sounds/chicken/cluck8.ogg"
+
+// inquisitor chicken //////////////////////////////////////////////////////////
+chicken/active "sounds/chicken/DSCHIACT.wav"
+chicken/pain "sounds/chicken/DSCHIPAI.wav"
+chicken/death "sounds/chicken/DSCHIDTH.wav"
+chicken/attack "sounds/chicken/DSCHIATK.wav"
+////////////////////////////////////////////////////////////////////////////////

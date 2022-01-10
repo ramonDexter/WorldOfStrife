@@ -1,0 +1,100 @@
+#library "wosdbg"
+#include "zcommon.acs"
+
+// binder pack regular /////////////////////////////////////////////////////////
+script 4201 (void) {
+	GiveInventory("binder_helmet", 1);
+	//weapons
+	GiveInventory("shoulderGun", 1);
+	GiveInventory("shldrGunMag", 32);
+	GiveInventory("StaffBlaster", 1);
+	GiveInventory("laserpistol", 1);
+	//armor
+	GiveInventory("wosKineticArmor", 1);
+	//ammo
+	GiveInventory("EnergyPod", 400);
+	GiveInventory("wosenergykit", 10);
+	GiveInventory("shoulderGunCharger", 1);
+	//grenades
+	GiveInventory("wosGrenadeE", 15);
+	GiveInventory("wosGrenadeF", 15);
+	GiveInventory("wosGrenadeG", 15);
+	GiveInventory("wosArmorShard", 10);
+	//medical
+	GiveInventory("wosHyposprej", 30);
+	GiveInventory("wosKombopack", 10);
+	GiveInventory("wosInstaLek", 5);
+	//BlasterTurret_item
+	GiveInventory("wosInterceptordrone", 5);	
+	//DeployableShieldItem
+	GiveInventory("wosDeployableShield", 1);
+	//Swarmers_item
+	GiveInventory("wosSwarmers", 5);
+	// goldCoin x2500
+	GiveInventory("goldCoin", 2500);
+	//	
+}
+// accuracy upgrades ///////////////////////////////////////////////////////////
+//count is x10
+script 4202 (int count) {
+	int counter = 0;
+	do {
+		counter++;
+		GiveInventory("upgradeAccuracy", 1);
+		Delay (1);
+	} while ( counter < count );
+}
+// stamina/health upgrades /////////////////////////////////////////////////////
+//count is x1
+script 4203 (int count) {
+	int finalcount = count * 10;
+	GiveInventory("upgradeStamina", finalcount);
+}
+// give ammo items /////////////////////////////////////////////////////////////
+//puke 4204 32
+script 4204 (int itemAmount) {
+	GiveInventory("energykit_item", itemAmount);
+	GiveInventory("shldrGunMag", itemAmount);
+	GiveInventory("ElectricBolts_item", itemAmount);
+	GiveInventory("PoisonBolts_item", itemAmount);
+	GiveInventory("BoxOfBullets_item", itemAmount);
+	GiveInventory("MiniMissileBundle_item", itemAmount);
+	GiveInventory("HEGrenadeBox_item", itemAmount);
+	GiveInventory("PhosphorusGrenadeBox_item", itemAmount);
+	GiveInventory("wosGrenadeE", itemAmount);
+	GiveInventory("wosGrenadeF", itemAmount);
+	GiveInventory("wosGrenadeG", itemAmount);
+	//GiveInventory("", itemAmount);
+}
+// give shouldergun ////////////////////////////////////////////////////////////
+script 4205 (void) {
+	GiveInventory("shoulderGun", 1);
+	GiveInventory("shldrGunMag", 32);
+	GiveInventory("shoulderGunCgarger", 1);	
+}
+// binder pack light ///////////////////////////////////////////////////////////
+script 4206 (void) {
+	GiveInventory("binder_helmet", 1);
+	// weapons
+	GiveInventory("shoulderGun", 1);
+	GiveInventory("shldrGunMag", 32);
+	GiveInventory("StaffBlaster", 1);
+	// armor
+	GiveInventory("wosKineticArmor", 1);
+	// ammo
+	GiveInventory("EnergyPod", 400);
+	GiveInventory("wosenergykit", 10);
+	GiveInventory("shoulderGunCharger", 1);
+	// medical
+	GiveInventory("wosHyposprej", 20);
+	GiveInventory("wosKombopack", 5);
+	GiveInventory("wosInstaLek", 2);
+	// grenades
+	GiveInventory("wosGrenadeE", 5);
+	GiveInventory("wosGrenadeF", 5);
+	GiveInventory("wosInstaLek", 5);
+	// gold
+	GiveInventory("goldCoin", 2500);
+	//
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,62 @@
+//Strife Veteran Edition decals
+//==----------------------------------------------------------------------------
+decal SVEbulletScorch1
+{
+	pic SVD1A0
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy	
+}
+decal SVEbulletScorch2
+{
+	pic SVD1B0
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy	
+}
+decal SVEbulletScorch3
+{
+	pic SVD1C0
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy	
+}
+decal SVEbulletScorch4
+{
+	pic SVD1D0
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy	
+}
+decal SVEbulletScorch5
+{
+	pic SVD1E0	
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy
+}
+decal SVEbulletScorch6
+{
+	pic SVD1F0
+	translucent 0.8
+	Animator GoAway
+	randomflipx
+	randomflipy	
+}
+
+decalGroup SVEbulletScorch
+{
+	SVEbulletScorch1 1
+	SVEbulletScorch2 1
+	SVEbulletScorch3 1
+	SVEbulletScorch4 1
+	SVEbulletScorch5 1
+	SVEbulletScorch6 1
+}
+
+//==----------------------------------------------------------------------------

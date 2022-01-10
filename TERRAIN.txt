@@ -1,0 +1,291 @@
+splash dustSplash
+{
+	smallclass groundDustSplash
+	smallclip		12
+	
+	baseclass groundDustSplashBase
+	chunkclass groundDustSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+}
+
+terrain Dust
+{
+	splash dustSplash
+}
+
+splash StrifeWaterSpl
+{
+	smallclass		StrifeWaterSplash
+	smallclip		12
+	smallsound		world/drip
+
+	baseclass		StrifeWaterSplashBase
+	chunkclass		StrifeWaterSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/watersplash
+}
+
+terrain strifewater
+{
+	splash StrifeWaterSpl
+	footclip 10
+	liquid
+}
+
+splash Water
+{
+	smallclass		WaterSplash
+	smallclip		12
+	smallsound		world/drip
+
+	baseclass		WaterSplashBase
+	chunkclass		WaterSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	2
+	sound			world/watersplash
+}
+
+terrain water
+{
+	splash water
+	footclip 10
+	liquid
+}
+
+splash Blood
+{
+	smallclass		BloodSplash
+	smallclip		12
+	smallsound		world/sludgegloop
+
+	baseclass		BloodSplashBase
+	chunkclass		BloodSplash
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	1
+	sound			world/sludgegloop
+}
+
+splash Nuke
+{
+	smallclass		LavaSmoke
+	smallclip		12
+	smallsound		world/lavasizzle
+
+	baseclass		SlimeSplash
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+}
+
+splash Lava
+{
+	smallclass		LavaSmoke
+	smallclip		12
+	smallsound		world/lavasizzle
+
+	baseclass		LavaSplash
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/lavasizzle
+}
+
+splash Slime
+{
+	smallclass		SludgeChunk
+	smallclip		12
+	smallsound		world/sludgegloop
+
+	baseclass		SludgeSplash
+	chunkclass		SludgeChunk
+	chunkxvelshift	8
+	chunkyvelshift	8
+	chunkzvelshift	8
+	chunkbasezvel	1
+	sound			world/sludgegloop
+}
+
+splash Hot
+{
+	smallclass		LavaSmoke
+	smallclip		12
+	smallsound		world/hotsiz
+
+	baseclass		SlimeChunk
+	chunkclass		LavaSmoke
+	chunkxvelshift	-1
+	chunkyvelshift	-1
+	chunkzvelshift	7
+	chunkbasezvel	1
+	sound			world/hotsiz
+}
+
+terrain Lava
+{
+	splash			Lava
+	footclip		10
+	liquid
+}
+
+terrain Blood
+{
+	splash			Blood
+	footclip		10
+	liquid
+}
+
+terrain Nuke
+{
+	splash			Nuke
+	footclip		10
+	liquid
+}
+
+terrain Slime
+{
+	splash			Slime
+	footclip		10
+	liquid
+}
+
+terrain Hot
+{
+	splash			Hot
+	footclip		0
+	liquid
+}
+
+ifdoom
+floor BLOOD1 Blood
+floor BLOOD2 Blood
+floor BLOOD3 Blood
+floor SLIME01 Slime
+floor SLIME02 Slime
+floor SLIME03 Slime
+floor SLIME04 Slime
+floor SLIME05 Slime
+floor SLIME06 Slime
+floor SLIME07 Slime
+floor SLIME08 Slime
+floor X_009 Slime
+floor X_010 Slime
+floor X_011 Slime
+floor NUKAGE1 Nuke
+floor NUKAGE2 Nuke
+floor NUKAGE3 Nuke
+floor FWATER1 Water
+floor FWATER2 Water
+floor FWATER3 Water
+floor FWATER4 Water
+floor X_005 Water
+floor X_006 Water
+floor X_007 Water
+floor X_008 Water
+floor FLTWAWA1 Water
+floor FLTWAWA2 Water
+floor FLTWAWA3 Water
+floor F_WATR01 Water
+floor F_WATR02 Water
+floor F_WATR03 Water
+floor LAVA1 Lava
+floor LAVA2 Lava
+floor LAVA3 Lava
+floor LAVA4 Lava
+floor LAVA00 Lava
+floor LAVA01 Lava
+floor LAVA02 Lava
+floor LAVA03 Lava
+floor x_001 Lava
+floor x_002 Lava
+floor x_003 Lava
+floor x_004 Lava
+floor sclavac1 Lava
+floor sclavac2 Lava
+floor sclavac3 Lava
+floor flathuh1 Lava
+floor flathuh2 Lava
+floor flathuh3 Lava
+floor flathuh4 Lava
+floor RROCK05 Hot
+floor RROCK06 Hot
+floor RROCK07 Hot
+floor RROCK08 Hot
+floor SLIME09 Hot
+floor SLIME10 Hot
+floor SLIME11 Hot
+floor SLIME12 Hot
+endif
+
+ifstrife
+floor X_009 Slime
+floor X_010 Slime
+floor X_011 Slime
+floor x_001 Lava
+floor x_002 Lava
+floor x_003 Lava
+floor x_004 Lava
+floor X_005 Water
+floor X_006 Water
+floor X_007 Water
+floor X_008 Water
+floor F_PWATR1 Slime
+floor F_PWATR2 Slime
+floor F_PWATR3 Slime
+floor F_NUKK1 Nuke
+floor F_NUKK2 Nuke
+floor F_NUKK3 Nuke
+floor F_NUKK4 Nuke
+floor F_NUKA1 Nuke
+floor F_NUKA2 Nuke
+floor F_NUKA3 Nuke
+floor F_NUKA4 Nuke
+floor GOOP1_1 Nuke
+floor GOOP1_3 Nuke
+floor GOOP1_2 Nuke
+floor GOOP1_4 Nuke
+floor GOOP2_1 Nuke
+floor GOOP2_3 Nuke
+floor GOOP2_2 Nuke
+floor GOOP2_4 Nuke
+floor F_WATR01 StrifeWater
+floor F_WATR02 StrifeWater
+floor F_WATR03 StrifeWater
+floor F_HWATR1 StrifeWater
+floor F_HWATR2 StrifeWater
+floor F_HWATR3 StrifeWater
+floor F_VWATR1 StrifeWater
+floor F_VWATR2 StrifeWater
+floor F_VWATR3 StrifeWater
+floor SHSND1 Dust
+floor SWATER1 StrifeWater
+floor SWATER2 StrifeWater
+floor SWATER3 StrifeWater
+floor SWATER4 StrifeWater
+floor SWATER5 StrifeWater
+floor SWATER6 StrifeWater
+floor SWATER7 StrifeWater
+floor SWATER8 StrifeWater
+floor SWATER9 StrifeWater
+floor SWATERA StrifeWater
+floor SWATERB StrifeWater
+floor SWATERC StrifeWater
+floor SWATERD StrifeWater
+floor SWATERE StrifeWater
+floor SWATERF StrifeWater
+floor SWATERG StrifeWater
+endif

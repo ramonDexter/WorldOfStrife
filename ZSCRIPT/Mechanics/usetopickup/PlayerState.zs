@@ -1,0 +1,325 @@
+class U2P_PlayerState : Thinker {
+	const HighlightFOV = 25.;
+	const PushCooldownTics = 15;
+	
+	U2P_ItemHighlight FocusedItem;
+	PlayerInfo Player;
+	int PlayerNum;
+	uint8 SelectPhase;
+	transient U2P_PlayerSettings Settings;
+	transient private uint8 PushCooldown, PickupDelay;
+	transient private ThinkerIterator Highlights;
+	transient protected UseToPickup U2P;
+	
+	U2P_PlayerState Init(PlayerInfo player, int playerNum) {
+		// Tick before U2P_ItemHighlight does.
+		ChangeStatNum(STAT_USER);
+		
+		self.Player = player;
+		self.PlayerNum = playerNum;
+		
+		// Target selection runs every 4 tics. In multiplayer with a lot of players, this could result in stuttering, from target selection happening for all of them at the same time (every fourth tic). So, we offset which of every fourth tic to perform target selection on, based on the player number. For example:
+		// Player 0 will select targets on tic 0, 3, 6, …
+		// Player 1 will select targets on tic 1, 4, 7, …
+		// Player 2 will select targets on tic 2, 5, 8, …
+		// Player 4 will select targets on tic 0, 3, 6, …
+		// Player 5 will select targets on tic 1, 4, 7, …
+		SelectPhase = playerNum & 3;
+		
+		Reinit();
+		
+		return self;
+	}
+	
+	// Called on WorldLoaded events, which happen when entering a map or loading a save. Take this opportunity to refill transient data, as needed.
+	void Reinit() {
+		if (!Settings)
+			Settings = new('U2P_PlayerSettings').Init(Player);
+		
+		if (!U2P)
+			U2P = UseToPickup.Get();
+		
+		if (!Highlights)
+			Highlights = ThinkerIterator.Create('U2P_ItemHighlight');
+	}
+	
+	override void OnDestroy() {
+		U2P_ItemHighlight h;
+		for (Highlights.Reinit(); h = U2P_ItemHighlight(Highlights.Next());)
+		if (h.ps == self)
+			h.Destroy();
+	}
+	
+	void PushFocusedItem() {
+		if (PushCooldown || !FocusedItem)
+			return;
+		
+		let item = FocusedItem.Target;
+		if (!item || !item.bSpecial)
+			return;
+		
+		let pp = Player.mo;
+		if (!pp)
+			return;
+		
+		item.Thrust(1, pp.AngleTo(item));
+		PushCooldown = PushCooldownTics;
+	}
+	
+	// Apologies for the humongous do-everything function, but this is all done in one place as an optimization. ZScript has a high performance penalty for function calls, and this function runs in a fairly tight loop (once per tic, or 35 times per second).
+	override void Tick() {
+		if (Player.playerstate != PST_LIVE || Player.bot) {
+			// For dead players (and bots, if a regular player somehow becomes a bot), just clear everything out.
+			FocusedItem = null;
+			PushCooldown = 0;
+			if (Player.mo)
+				Player.mo.bPickup = GetDefaultByType(Player.mo.GetClass()).bPickup;
+			return;
+		}
+		
+		// Clear the focused item, if appropriate.
+		if (FocusedItem && !FocusedItem.Target)
+			FocusedItem = null;
+		
+		if (PushCooldown)
+			PushCooldown--;
+		if (PickupDelay)
+			PickupDelay--;
+		
+		let pp = Player.mo;
+		let enabled = Settings.IsEnabled.GetBool();
+		
+		// Block normal pickup, if appropriate.
+		if (pp)
+			pp.bPickup = enabled? false : GetDefaultByType(pp.GetClass()).bPickup;
+		
+		// Clear the focused item, if appropriate.
+		if (FocusedItem) {
+			if (!enabled) {
+				FocusedItem.Target = null;
+				FocusedItem.Focused = false;
+				FocusedItem = null;
+			}
+			else if (!FocusedItem.Focused)
+				FocusedItem = null;
+		}
+		
+		let scanFreq = max(1, usetopickup_scanfreq);
+		if (pp && enabled && (scanFreq == 1 || (gametic % scanFreq) == (PlayerNum % scanFreq))) {
+			// Search for items nearby.
+			Inventory bestTarget = null;
+			U2P_ItemHighlight bestTargetHL = null;
+			double bestDFC = HighlightFOV;
+			let viewPos = pp.Pos;
+			bool canShowUnfocused = Settings.HighlightOpacityUnfocused.GetFloat() > 0.;
+			
+			if (pp.player)
+				viewPos.Z = pp.player.viewz;
+			else
+				viewPos.Z += pp.Height / 2.;
+			
+			let viewPosOfs = viewPos - pp.Pos;
+			
+			// For speed, collect all highlights belonging to this player, and index them by the inventory item they're highlighting. This will let us use Array<Inventory>.Find to look them up, which should be faster than traversing the array in ZScript.
+			Array<Inventory> highlightedItems;
+			Array<U2P_ItemHighlight> myHighlights;
+			{
+				U2P_ItemHighlight h;
+				for (Highlights.Reinit(); h = U2P_ItemHighlight(Highlights.Next());)
+				if (h.ps == self && h.Target) {
+					myHighlights.Push(h);
+					highlightedItems.Push(h.Target);
+				}
+			}
+			uint highlightedItemsMax = highlightedItems.Size();
+			
+			// If usetopickup_highlight_opacity_unfocused is not positive, then we'll never highlight items that aren't within pickup range. Otherwise, get how far away items will be highlighted from.
+			let highlightRange = canShowUnfocused? max(Settings.HighlightRange.GetFloat(), 0.) : 0.;
+			canShowUnfocused = canShowUnfocused && highlightRange > 0.;
+			
+			double pickupRange;
+			bool pickupRange3D;
+			
+			if (usetopickup_fulluserange) {
+				let pp_ = PlayerPawn(pp);
+				// Allow picking up items in a sphere around the viewpoint.
+				pickupRange = max(
+					pp_? pp_.UseRange : GetDefaultByType('PlayerPawn').UseRange,
+					pp.Radius,
+					pp.Height
+				);
+				highlightRange = max(highlightRange, pickupRange);
+				pickupRange3D = true;
+			}
+			else {
+				// Only allow picking up items directly touching the actor.
+				pickupRange = 0;
+				pickupRange3D = false;
+			}
+			
+			let i = BlockThingsIterator.CreateFromPos(viewPos.X, viewPos.Y, viewPos.Z, highlightRange, highlightRange, false);
+			Array<Inventory> itemsShouldHighlight;
+			
+			// Look for the item that's closest to the center of the player actor's field of view.
+			// Also, look for any items that should always be picked up on touch.
+			while (i.Next()) {
+				let item = Inventory(i.thing);
+				if (!item || !item.bSpecial)
+					continue;
+				
+				U2P_ItemHighlight h;
+				{
+					let hi = highlightedItems.Find(item);
+					h = hi != highlightedItemsMax? myHighlights[hi] : null;
+				}
+				
+				// Doom actors are not cylindrical but square shaped. One must check the XY axes separately to determine whether they're touching.
+				// https://forum.zdoom.org/viewtopic.php?f=122&t=61508&p=1066932#p1066643
+				bool touching =
+					!pp.bNOCLIP &&
+					pp.Pos.X + pp.Radius >= item.Pos.X - item.Radius &&
+					pp.Pos.X - pp.Radius <= item.Pos.X + item.Radius &&
+					pp.Pos.Y + pp.Radius >= item.Pos.Y - item.Radius &&
+					pp.Pos.Y - pp.Radius <= item.Pos.Y + item.Radius &&
+					pp.Pos.Z             <= item.Pos.Z + item.Height &&
+					pp.Pos.Z + pp.Height >= item.Pos.Z;
+				
+				// If non-touch pickup and unfocused item highlighting are both disabled, and if not touching the item, then quick out.
+				if (!pickupRange3D && !canShowUnfocused && !touching) {
+					if (h)
+						h.Target = null;
+					continue;
+				}
+				
+				// Can this item only be picked up by touch?
+				let ci = h? h.ClassInfo : U2P.ActorClassInfo(item.GetClass());
+				if (ci && ci.AlwaysTouchPickup) {
+					// For items that can only be picked up by touch, just check if they're touching.
+					if (touching)
+						item.Touch(pp);
+					
+					// Ignore them otherwise.
+					continue;
+				}
+				
+				// Check how close it is to the player's viewpoint.
+				U2P_ActorAdjustedGeometry itemGeom;
+				itemGeom.Update(item, ci);
+				
+				let vecTo = level.Vec3Diff(viewPos, itemGeom.CenterPos);
+				let distTo = vecTo.Length();
+				
+				// Is this item eligible for highlighting at all?
+				if (
+					!touching &&
+					!(canShowUnfocused && distTo <= highlightRange) &&
+					!(pickupRange3D && distTo <= pickupRange)
+				) {
+					// Out of range. Fade this highlight out, if applicable, and skip the item.
+					if (h)
+						h.Target = null;
+					continue;
+				}
+				
+				bool canFocus = true;
+				
+				// Is the item closer to the center of the player's view?
+				let dirTo = vecTo.Unit();
+				let anglesTo = (
+					atan2(dirTo.Y, dirTo.X),
+					-asin(dirTo.Z)
+				);
+				let viewDA = (
+					Actor.deltaangle(anglesTo.X, pp.Angle),
+					Actor.deltaangle(anglesTo.Y, pp.Pitch)
+				);
+				let dfc = viewDA.Length();
+				
+				if (dfc >= bestDFC) {
+					if (canShowUnfocused)
+						canFocus = false;
+					else {
+						if (h)
+							h.Target = null;
+						continue;
+					}
+				}
+				
+				// If touching this item, it's eligible for both display and focus, so no problem there. If not…
+				if (!touching) {
+					// Is there line of sight to the item? If not, the highlight should not be shown at all.
+					let trace = new('U2P_ItemReachabilityTracer');
+					trace.IgnoreActors.Resize(2);
+					trace.IgnoreActors[0] = pp;
+					trace.IgnoreActors[1] = item;
+					
+					if (trace.Trace(viewPos, pp.CurSector, dirTo, distTo, 0)) {
+						// Nope. Something's in the way. Hide the existing highlight, if any, and continue to the next item.
+						if (h)
+							h.Target = null;
+						continue;
+					}
+					
+					// There is line of sight. Is the item close enough to be picked up, or will we be showing a highlight for it only?
+					if (!pickupRange3D || distTo > pickupRange)
+						canFocus = false;
+				}
+				
+				// Item is eligible for highlighting.
+				if (!h)
+					h = new('U2P_ItemHighlight').Init(self, item, ci);
+				
+				itemsShouldHighlight.Push(item);
+				
+				if (canFocus) {
+					// Item is eligible for focus.
+					bestTarget = item;
+					bestTargetHL = h;
+					bestDFC = dfc;
+				}
+			}
+			
+			// Clean up any highlights for items that are no longer eligible for highlighting.
+			for (uint hi = 0, hs = myHighlights.Size(), shs = itemsShouldHighlight.Size(); hi < hs; hi++) {
+				let h = myHighlights[hi];
+				if (h.Target && itemsShouldHighlight.Find(h.Target) == shs)
+					h.Target = null;
+			}
+			
+			if (FocusedItem && FocusedItem != bestTargetHL) {
+				// We're now focusing on something other than what's currently focused (either nothing or a different actor), so clear the current focus.
+				if (canShowUnfocused)
+					FocusedItem.Focused = false;
+				else
+					FocusedItem.Target = null;
+				FocusedItem = null;
+			}
+			
+			if (bestTarget && !FocusedItem) {
+				// Got a new target to focus on. (FocusedItem will be non-null iff the target hasn't changed.)
+				FocusedItem = bestTargetHL;
+				FocusedItem.Focused = true;
+				PickupDelay = clamp(uint(Settings.PickupDelay.GetFloat() * TICRATE + .5), 0, 255);
+			}
+		}
+		
+		// Check if the player is allowed to pick up the focused item.
+		if (
+			enabled &&
+			pp &&
+			!PickupDelay &&
+			FocusedItem &&
+			FocusedItem.Target
+		) {
+			// If so, then block the usual effects of the use button.
+			Player.usedown = true;
+			
+			// Check if the player wants to pick up the item.
+			if (
+				(Player.cmd.buttons & BT_USE) &&
+				!(Player.oldbuttons & BT_USE)
+			)
+				FocusedItem.Target.Touch(pp);
+		}
+	}
+}

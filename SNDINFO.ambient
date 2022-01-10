@@ -1,0 +1,111 @@
+////////////////////////////////////////////////////////////////////////////////
+//  AMBIENT SOUNDS  ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  fire sound  ////////////////////////////////////////////////////////////////
+world/smallfire "sounds/fire/FIRE09.wav"
+$alias AmbSmallFire world/smallfire
+$ambient 01 AmbSmallFire continuous 0.5
+
+sounds/firecrack "sounds/fire/FIRE09.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  door sounds  ///////////////////////////////////////////////////////////////
+sounds/metalDopen "sounds/door/MDOPEN.wav"
+sounds/metalDclose "sounds/door/MDCLOSE.wav"
+sounds/woodD1open "sounds/door/WD1OPEN.wav"
+sounds/woodD1close "sounds/door/WD1CLOSE.wav"
+sounds/woodD2open "sounds/door/WD2OPEN.wav"
+sounds/woodD2close "sounds/door/WD2CLOSE.wav"
+sounds/officeDopen "sounds/door/ODOPEN.wav"
+sounds/officeDclose "sounds/door/ODCLOSE.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  scenery ambients  //////////////////////////////////////////////////////////
+snd/bug1 "sounds/ambient/dsambient/dsambug1.ogg"
+snd/bug2 "sounds/ambient/dsambient/dsambug2.ogg"
+snd/bug3 "sounds/ambient/dsambient/dsambug3.ogg"
+snd/bug4 "sounds/ambient/dsambient/dsambug4.ogg"
+snd/wind1 "sounds/ambient/dsambient/dswindd1.ogg"
+snd/wind2 "sounds/ambient/dsambient/dswindd2.ogg"
+snd/wind3 "sounds/ambient/dsambient/dswindd3.ogg"
+snd/wind4 "sounds/ambient/dsambient/dswindd4.ogg"
+snd/wind1 "sounds/ambient/dsambient/dswindd1.ogg"
+snd/wind2 "sounds/ambient/dsambient/dswindd2.ogg"
+snd/wind3 "sounds/ambient/dsambient/dswindd3.ogg"
+snd/wind4 "sounds/ambient/dsambient/dswindd4.ogg"
+////////////////////////////////////////////////////////////////////////////////
+
+//  ambient cicadas  ///////////////////////////////////////////////////////////
+sounds/cicadas01 "sounds/ambient/cicadas/ADCICA01.wav"
+sounds/cicadas02 "sounds/ambient/cicadas/ADCICA02.wav"
+sounds/cicadas03 "sounds/ambient/cicadas/ADCICA03.wav"
+sounds/cicadas04 "sounds/ambient/cicadas/ADCICA04.wav"
+
+$alias AmbCicadas01 sounds/cicadas01
+$Ambient 45 AmbCicadas01 point continuous 1
+
+$alias AmbCicadas02 sounds/cicadas02
+$Ambient 46 AmbCicadas02 point continuous 1
+
+$alias AmbCicadas03 sounds/cicadas03
+$Ambient 47 AmbCicadas03 point continuous 1
+
+$alias AmbCicadas04 sounds/cicadas04
+$Ambient 48 AmbCicadas04 point continuous 1
+////////////////////////////////////////////////////////////////////////////////
+		
+//  destilacni pristroj  ///////////////////////////////////////////////////////
+sounds/distillery "sounds/ambient/DISTILER.wav"
+$alias AmbMoonshine sounds/distillery
+$ambient 55 AmbMoonshine point continuous 0.7
+////////////////////////////////////////////////////////////////////////////////
+
+//  realm667 wind  /////////////////////////////////////////////////////////////
+sounds/wind  "sounds/ambient/r667wind/wind.ogg"	// Gentle Cold Wind
+$alias AmbWindGentle sounds/wind
+$AMBIENT 56 AmbWindGentle POINT 1.5 CONTINUOUS 1.0
+
+sounds/wind2 "sounds/ambient/r667wind/wind2.ogg"	// Strong Cold Wind
+$alias AmbWindStrong sounds/wind2
+$AMBIENT 57 AmbWindStrong POINT CONTINUOUS 1.0
+
+sounds/wind3 "sounds/ambient/r667wind/wind3.ogg"	// Intense Tornado
+$alias AmbWindTornado sounds/wind3
+$AMBIENT 58 AmbWindTornado POINT CONTINUOUS 1.0
+
+sounds/wind4 "sounds/ambient/r667wind/wind4.ogg"	// Intense Wind
+$alias AmbWindIntense sounds/wind4
+$AMBIENT 59 AmbWindIntense POINT CONTINUOUS 1.0
+
+sounds/wind5 "sounds/ambient/r667wind/wind5.ogg"	// Intense Sandstorm
+$alias AmbWindSandstorm sounds/wind5
+$AMBIENT 60 AmbWindSandstorm POINT CONTINUOUS 1.0
+////////////////////////////////////////////////////////////////////////////////
+
+//  morrowind sounds  //////////////////////////////////////////////////////////
+sounds/ambient/hauntedSND "sounds/mwsound/haunted.wav"
+$alias ambHaunted sounds/ambient/hauntedSND
+$ambient 61 ambHaunted point continuous 0.5
+
+sounds/ambient/hauntedWhispers "sounds/mwsound/hauntedWHSPR.wav"
+$alias ambHauntedWhisper sounds/ambient/hauntedWhispers
+$ambient 62 ambHauntedWhisper point continuous 0.5
+
+sounds/ambient/chant "sounds/mwsound/chant.wav"
+$alias ambChant sounds/ambient/chant
+$ambient 63 ambChant point continuous 0.5
+
+sounds/ambient/mwFire "sounds/mwsound/fire.wav"
+$alias ambMwFire sounds/ambient/mwFire
+$ambient 64 ambMwFire point continuous 0.5
+
+sounds/ambient/heartBeat "sounds/mwsound/heart.wav"
+$alias ambHeartBeat sounds/ambient/heartBeat
+$ambient 65 ambHeartBeat point continuous 1.0
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

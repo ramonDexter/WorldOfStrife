@@ -1,0 +1,358 @@
+// WoS model props /////////////////////////////////////////////////////////////
+
+// deusEx computerPersonal /////////////////////////////////////////////////////
+model wosD_desuExComputerPersonal {
+	path "models/props/computerPersonal/"
+	model 0 "dx_computerPersonal.md3"
+	skin 0 "ComputerPersonalTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+
+// deusEx aiPrototype //////////////////////////////////////////////////////////
+model wosD_dexAIprototype {
+	path "models/props/aiPrototype/"
+	model 0 "dx_aiPrototype.md3"
+	skin 0 "AIPrototypeTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dexAIprototypeCeiling {
+	path "models/props/aiPrototype/"
+	model 0 "dx_aiPrototypeCeiling.md3"
+	skin 0 "AIPrototypeTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 8.0
+	frameindex DUMM A 0 0
+}
+// deusEx ATM //////////////////////////////////////////////////////////////////
+model wosD_dexATM {
+	path "models/props/atm/"
+	model 0 "dx_atm.md3"
+	skin 0 "ATMTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx barrel1 //////////////////////////////////////////////////////////////
+model wosD_dexBarrel1 {
+	path "models/props/barrel1/"
+	model 0 "dx_barrel1.md3"
+	skin 0 "Barrel1Tex3.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx cigaretteMachine /////////////////////////////////////////////////////
+model wosD_dexCigaretteMachine {
+	path "models/props/cigaretteMachine/"
+	model 0 "dx_cigaretteMachine.md3"
+	skin 0 "CigaretteMachineTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx bookClosed ///////////////////////////////////////////////////////////
+model wosD_dexBookClosed {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "dx_bookClosed.md3"
+	skin 0 "BookClosedTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx bookOpen /////////////////////////////////////////////////////////////
+model wosD_dexBookOpen {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "dx_bookOpen.md3"
+	skin 0 "BookOpenTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx coffeeTable //////////////////////////////////////////////////////////
+model wosD_dexCoffeeTable {
+	path "models/props/coffeeTable/"
+	model 0 "dx_coffeeTable.md3"
+	skin 0 "CoffeeTableTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx couchLeather /////////////////////////////////////////////////////////
+model wosD_dexCouchLeather {
+	path "models/props/couchLeather/"
+	model 0 "dx_couchLeather.md3"
+	skin 0 "CouchLeatherTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx officeChair //////////////////////////////////////////////////////////
+model wosD_dexOfficeChair {
+	path "models/props/officeChair/"
+	model 0 "dx_officeChair.md3"
+	skin 0 "OfficeChairTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx retinalScanner ///////////////////////////////////////////////////////
+model wosD_dexRetinalScanner {
+	path "models/props/retinalScanner/"
+	model 0 "dx_retinalScanner.md3"
+	skin 0 "RetinalScannerTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx tree1 ////////////////////////////////////////////////////////////////
+model wosD_dexTree1 {
+	path "models/props/trees/"
+	model 0 "dx_tree1.md3"
+	skin 0 "Tree2Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx tree2 ////////////////////////////////////////////////////////////////
+model wosD_dexTree2 {
+	path "models/props/trees/"
+	model 0 "dx_tree2.md3"
+	skin 0 "Tree2Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx tree3 ////////////////////////////////////////////////////////////////
+model wosD_dexTree3 {
+	path "models/props/trees/"
+	model 0 "dx_tree3.md3"
+	skin 0 "Tree3Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx tree4 ////////////////////////////////////////////////////////////////
+model wosD_dexTree4 {
+	path "models/props/trees/"
+	model 0 "dx_tree4.md3"
+	skin 0 "Tree4Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx bushes1 //////////////////////////////////////////////////////////////
+model wosD_dexBushes1 {
+	path "models/props/bushes/"
+	model 0 "dx_bushes1.md3"
+	skin 0 "Bushes1Tex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dexBushes1_1 {
+	path "models/props/bushes/"
+	model 0 "dx_bushes1.md3"
+	skin 0 "Bushes1Tex1.png"
+	scale 0.325 0.325 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dexBushes1_2 {
+	path "models/props/bushes/"
+	model 0 "dx_bushes1.md3"
+	skin 0 "Bushes1Tex1.png"
+	scale 0.45 0.45 0.6
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx bushes2 //////////////////////////////////////////////////////////////
+model wosD_dexBushes2 {
+	path "models/props/bushes/"
+	model 0 "dx_bushes2.md3"
+	skin 0 "Bushes2Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx bushes3 //////////////////////////////////////////////////////////////
+model wosD_dexBushes3 {
+	path "models/props/bushes/"
+	model 0 "dx_bushes3.md3"
+	skin 0 "Bushes3Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx pots /////////////////////////////////////////////////////////////////
+model wosD_dexPot1 {
+	path "models/props/pots/"
+	model 0 "dex_pot1.md3"
+	skin 0 "Pot1Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dexPot2 {
+	path "models/props/pots/"
+	model 0 "dex_pot2.md3"
+	skin 0 "Pot2Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx trophy ///////////////////////////////////////////////////////////////
+model wosD_dexTrophy {
+	path "models/props/trophy/"
+	model 0 "dx_trophy.md3"
+	skin 0 "TrophyTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx vases ////////////////////////////////////////////////////////////////
+model wosD_dexVase1 {
+	path "models/props/vase/"
+	model 0 "dex_vase1.md3"
+	skin 0 "Vase1Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dexVase2 {
+	path "models/props/vase/"
+	model 0 "dex_vase2.md3"
+	skin 0 "Vase2Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh bench library /////////////////////////////////////////////////////
+model wosD_dexBenchlibrary {
+	path "models/props/librarybench/"
+	model 0 "dx_benchlibrary.md3"
+	skin 0 "WHBenchLibraryTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh bookstandlibrary //////////////////////////////////////////////////
+model wosD_dexBookstandLibrary {
+	path "models/props/librarybookstand/"
+	model 0 "dx_bookstandlibrary.md3"
+	skin 0 "WHBookstandLibraryTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh cabinet ///////////////////////////////////////////////////////////
+model wosD_dexCabinet {
+	path "models/props/cabinet/"
+	model 0 "dex_cabinet.md3"
+	skin 0 "WHCabinetTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh desk small library ////////////////////////////////////////////////
+model wosD_dexDeskSmallLibrary {
+	path "models/props/librarydesksmall/"
+	model 0 "dx_desklibrarysmall.md3"
+	skin 0 "WHDeskLibrarySmallTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh desk oval office //////////////////////////////////////////////////
+model wosD_dexDeskNobleOffice {
+	path "models/props/desknobleoffice/"
+	model 0 "dx_desknobleoffice.md3"
+	skin 0 "WHDeskOvalOfficeTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx wh ovl office chair //////////////////////////////////////////////////
+model wosD_dexChairNobleOffice {
+	path "models/props/chairnobleoffice/"
+	model 0 "dx_chairnobleoffice.md3"
+	skin 0 "WHChairOvalOfficeTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// stimDevice //////////////////////////////////////////////////////////////////
+model wosD_stimDevice1 {
+	path "models/props/stimDevice/"
+	model 0 "dx_stimDevice.md3"
+	skin 0 "tx_SDEV.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameIndex DUMM A 0 0
+}
+model wosD_stimDevice2 {
+	path "models/props/stimDevice/"
+	model 0 "dx_stimDevice.md3"
+	skin 0 "tx_SDEV.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameIndex DUMM A 0 1
+}
+model wosD_stimDevice3 {
+	path "models/props/stimDevice/"
+	model 0 "dx_stimDevice.md3"
+	skin 0 "tx_SDEV.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameIndex DUMM A 0 2
+}
+// cyclones pillar /////////////////////////////////////////////////////////////
+model wosD_cyclonesPillar {
+	path "models/props/cyclonesPillar/"
+	model 0 "dx_cyclonesPillar.md3"
+	scale 20.0 20.0 35.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "pwrcoil1.png"
+	frameindex DUMM A 0 0
+	skin 0 "pwrcoil2.png"
+	frameindex DUMM B 0 0
+	skin 0 "pwrcoil3.png"
+	frameindex DUMM C 0 0
+	skin 0 "pwrcoil4.png"
+	frameindex DUMM D 0 0
+}
+// deusEx lion statue mirrored /////////////////////////////////////////////////
+model wosD_dex_statueLion2 {
+	path "models/props/deusex/"
+	model 0 "dex_lionstatue2.md3"
+	skin 0 "StatueLionTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+// deusEx computerPublic ///////////////////////////////////////////////////////
+model wosD_dexComputerPublick {
+	path "models/props/deusex/"
+	model 0 "dex_computerPublic.md3"
+	skin 0 "ComputerPublicTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+
+model dx_gallowsEmpty {
+	path "models/props/torture/"
+	model 0 "gallows.md3"
+	skin 0 "tx_gilotina.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DSBC A 0 0
+}

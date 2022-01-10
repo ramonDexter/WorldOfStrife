@@ -1,0 +1,3065 @@
+//========================================================================================//
+//------------------------------ASCENSION NATURE------------------------------------------//
+//========================================================================================//
+/*
+ACTOR WoodPile 22100
+{
+//$category Nature
+radius 10
+height 112
++SOLID
+var float user_WoodPileScale;
+States
+{
+Spawn:  
+DUMM A 0 nodelay {A_SetUserVarFloat("user_WoodPileScale",0.01*random(-5,5)+1); A_SetAngle(15*random(0,23)); A_SetScale(user_WoodPileScale); A_SetSize(10*user_WoodPileScale,112*user_WoodPileScale,0);}             
+DUMM A -1
+Stop        
+}
+}
+
+
+
+//=====================================================================//
+//------------------------Mushrooms------------------------------------//
+//=====================================================================//
+
+ACTOR Mushroom01 22101
+{
+//$category NatureMushroom
+  radius 14
+  height 16
+  States 
+  {
+  	Spawn:
+  		MSH1 A -1
+  		Stop
+  }
+}
+  
+ACTOR Mushroom02 22102
+{
+//$category NatureMushroom
+  radius 14
+  height 16
+  States
+  	{
+  	Spawn:
+  		MSH2 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom03 22103
+{
+//$category NatureMushroom
+  radius 10
+  height 16
+  States
+  	{
+  	Spawn:
+  		MSH3 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom04 22104
+{
+//$category NatureMushroom
+  radius 8
+  height 14
+  States
+  	{
+  	Spawn:
+  		MSH4 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom05 22105
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSH5 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom06 22106
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSH6 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom07 22107
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSH7 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Mushroom08 22108
+{
+//$category NatureMushroom
+  radius 5
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSH8 A -1
+  		Stop
+  	}
+  }
+
+ACTOR MushroomPoison 22109
+{
+//$category NatureMushroom
+  radius 14
+  height 26
+  health 20
+  mass 0x7fffffff
+  painchance 225
+            	DamageFactor "Normal", 1.0
+	DamageFactor "NormalFist", 1.0
+        	DamageFactor "NormalHit", 1.0
+        	DamageFactor "NormalCrush", 1.0
+        	DamageFactor "Fire", 1.0
+        	DamageFactor "FireCannon", 1.0
+	DamageFactor "P_FireExplode", 1.0
+        	DamageFactor "Ice", 0.5
+        	DamageFactor "Lightning", 1.0
+	DamageFactor "P_Lightning", 1.0
+        	DamageFactor "Gas", 0.0
+        	DamageFactor "Poison", 0.0
+        	DamageFactor "Magic", 1.0
+	DamageFactor "MagicVampire", 0.0
+  +SOLID
+  +SHOOTABLE
+  +NODROPOFF
+  +NORADIUSDMG
+  +NOICEDEATH
+  +NOBLOOD
+  States
+  	{
+  	Spawn:
+  		MSH9 A 8
+  		Loop
+  	Pain:
+  		MSH9 B 8
+  		Loop
+  	Death:
+  		MSH9 CD 6
+  		MSH9 E 6 A_CustomMissile("UndeadPoisonCloud", 32,0,0,0,0)
+  		MSH9 F -1
+  		Stop
+  	}
+  }
+
+ACTOR Mushroom09 22231
+{
+//$category NatureMushroom
+  radius 5
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB1 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom10 22232
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB2 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom11 22233
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB3 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom12 22234
+{
+//$category NatureMushroom
+  radius 5
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB4 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom13 22235
+{
+//$category NatureMushroom
+  radius 5
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB5 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom14 22236
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB6 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR Mushroom15 22237
+{
+//$category NatureMushroom
+  radius 5
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB7 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Mushroom16 22238
+{
+//$category NatureMushroom
+  radius 12
+  height 24
+  States
+  	{
+  	Spawn:
+  		MSB8 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Mushroom17 22239
+{
+//$category NatureMushroom
+  radius 8
+  height 10
+  States
+  	{
+  	Spawn:
+  		MSB9 A -1
+  		Stop
+  	}
+  }
+
+
+ACTOR BigMushroomRed 10400
+{
+//$category NatureMushroom
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM A -1
+    Stop
+  }
+}
+
+ACTOR BigMushroomGreen 10401
+{
+//$category NatureMushroom
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM B -1
+    Stop
+  }
+}
+
+ACTOR BigMushroomBrown 10402
+{
+//$category NatureMushroom
+  Radius 16
+  Height 48
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM C -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomRed 10403
+{
+//$category NatureMushroom
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM D -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomGreen 10404
+{
+//$category NatureMushroom
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM E -1
+    Stop
+  }
+}
+
+ACTOR SmallMushroomBrown 10405
+{
+//$category NatureMushroom
+  Radius 16
+  Height 24
+  +SOLID
+  States
+  {
+  Spawn:
+    SHRM F -1
+    Stop
+  }
+}
+
+//=====================================================================//
+//------------------------Logs-----------------------------------------//
+//=====================================================================//
+
+ACTOR KLogSpawner 22111
+{
+//$category NatureLog
+States
+{
+Spawn:
+TNT1 A 0 nodelay A_Jump(256,1,2,3,4)
+TNT1 A 1 A_SpawnItemEx("KLog1")
+Stop
+TNT1 A 1 A_SpawnItemEx("KLog2")
+Stop
+TNT1 A 1 A_SpawnItemEx("KLog3")
+Stop
+TNT1 A 1 A_SpawnItemEx("KLog4")
+Stop
+}
+}
+
+ACTOR KLog1 
+{
+radius 24
+height 24
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:  
+LOG1 A 0 nodelay {A_SetAngle(15*random(0,23)); A_SetScale(0.25*random(0,3)+0.5); A_SetPitch(15*random(-6,6)); }             
+LOG1 A -1
+Stop        
+}
+}
+
+Actor KLog2 : KLog1 
+{
+DistanceCheck "A_ModRenDistFlora"
+}
+
+Actor KLog3 : KLog1 
+{
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:  
+LOG1 A 0 nodelay { A_SetAngle(15*random(0,23)); A_SetScale(0.25*random(0,3)+0.5); }             
+LOG1 A -1
+Stop        
+}
+}
+
+Actor KLog4 : KLog3 
+{
+DistanceCheck "A_ModRenDistFlora"
+}
+
+//============================================================//
+
+ACTOR Log02 22112
+{
+//$category NatureLog
+  radius 16
+  height 48
+  States
+  	{
+  	Spawn: 
+  		LG02 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Log03 22113
+{
+//$category NatureLog
+radius 10
+height 20
++SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay  {A_SetAngle(18*random(0,19)); A_SetScale(0.1*random(-5,0)+1.0,0.1*random(-5,5)+1.0,0,true); }
+DUMM A 4
+DUMM A 1 A_SetSize(10*scaleX,20*scaleY, false)
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Log04 22114
+{
+//$category NatureLog
+radius 10
+height 20
++SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.1*random(-5,0)+1.0,0.1*random(-5,5)+1.0,0,true); }
+DUMM A 4
+DUMM A 1 A_SetSize(10*scaleX,20*scaleY, false)
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Log05 23360
+{
+//$category NatureLog
+  radius 8
+  height 64
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  scale 1
+  States
+  	{
+  	Spawn: 
+  		LG05 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Log06 23361
+{
+//$category NatureLog
+  radius 16
+  height 72
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  scale 1
+  States
+  	{
+  	Spawn: 
+  		LG06 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Log07 23362
+{
+//$category NatureLog
+  radius 16
+  height 84
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  scale 1
+  States
+  	{
+  	Spawn: 
+  		LG07 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Log08 23363
+{
+//$category NatureLog
+  radius 16
+  height 64
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  scale 1
+  States
+  	{
+  	Spawn: 
+  		LG08 A -1
+  		Stop
+  	}
+  }
+
+//=====================================================================//
+//------------------------Plants---------------------------------------//
+//=====================================================================//
+
+ACTOR Plant01 22116
+{
+//$category NaturePlant
+  radius 14
+  height 64
+  scale 0.6
+  States
+  	{
+  	Spawn: 
+  		PL01 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Plant02 22117
+{
+//$category NaturePlant
+  radius 16
+  height 80
+  scale 0.75
+  States
+  	{
+  	Spawn: 
+  		PL01 B -1
+  		Stop
+  	}
+  }
+
+ACTOR Plant03 22118
+{
+//$category NaturePlant
+  radius 14
+  height 24
+  scale 0.4
+  States
+  	{
+  	Spawn: 
+  		PL02 A -1
+  		Stop
+  	}
+  }
+
+//-----------------------------------------Chamomile Yellow-------------------------------//
+actor Chamomile2 22119
+{
+//$category NaturePlant
+radius 0
+height 0
+//+SOLID
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(15*random(0,23)); A_SetScale(0.1*random(-1,1)+1); }
+DUMM A -1
+Stop
+}
+}
+
+
+ACTOR Plant05 22120
+{
+//$category NaturePlant
+  radius 14
+  height 48
+  +SOLID
+  scale 0.5
+  States
+  	{
+  	Spawn: 
+  		PL04 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Plant06 22121
+{
+//$category NaturePlant
+  radius 14
+  height 32
+  scale 0.35
+  States
+  	{
+  	Spawn: 
+  		PL04 B -1
+  		Stop
+  	}
+  }
+
+ACTOR Plant07 22122
+{
+//$category NaturePlant
+  Radius 24
+  Height 56
+  -SOLID
+  States
+  {
+  Spawn:
+DUMM A 0 nodelay
+{
+A_SpawnItemEx("IFern",random(-2,-1),0,0, 0, 0, 0, 90, 0, 0);
+A_SpawnItemEx("IFern",random(-2,-1),0, 0, 0, 0, 0, 270, 0, 0);
+A_SpawnItemEx("IFern",random(-2,-1),0,0, 0, 0, 0, 180, 0, 0);
+A_SpawnItemEx("IFern",random(-2,-1),0, 0, 0, 0, 0, 0, 0, 0);
+
+A_SpawnItemEx("IFern",random(-4,-3),0, 0, 0, 0, 0, 45, 0, 128);
+A_SpawnItemEx("IFern",random(-4,-3),0, 0, 0, 0, 0, 135, 0, 128);
+A_SpawnItemEx("IFern",random(-4,-3),0, 0, 0, 0, 0, 225, 0, 128);
+A_SpawnItemEx("IFern",random(-4,-3),0, 0, 0, 0, 0, 315, 0, 128);
+}
+DUMM A -1
+Stop
+  }
+}
+
+ACTOR DUMP101
+{
+radius 1
+height 1
+}
+
+ACTOR Plant08a 22123
+{
+//$category NaturePlant
+  radius 20
+  height 32
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Plant08b 22124
+{
+//$category NaturePlant
+  radius 14
+  height 24
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+//==============================================//
+//----------------------------Typha------------------------------------//
+//============================================//
+
+ACTOR Typha 22126
+{
+//$category NaturePlant
+height 24
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SpawnItemEx("Typha_spawner",-12,-6,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Typha_spawner",-12,6,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Typha_spawner",12,-6,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Typha_spawner",12,6,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Typha_spawner",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+}
+DUMM A 1
+Stop
+}
+}
+
+ACTOR Typha01
+{
+Radius 0
+Height 0
+-SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.1*random(-2,2)+1.0,0.1*random(-1,3)+1.0,0,true); A_SetPitch(random(-7,7)); }
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Typha02 : Typha01 {}
+ACTOR Typha11 : Typha01 {}
+ACTOR Typha12 : Typha01 {}
+
+actor Typha_spawner
+{
+  radius 1
+  height 0
+//+SOLID
+states
+{
+Spawn:
+DUMM A 0 nodelay A_Jump(256,"Spawn1","Spawn2","Spawn3","Spawn4")
+DUMM A -1
+stop
+
+Spawn1:
+DUMM A 0 A_SpawnItemEx("Typha01",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+DUMM A 1
+stop
+
+Spawn2:
+DUMM A 0 A_SpawnItemEx("Typha02",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+DUMM A 1
+stop
+
+Spawn3:
+DUMM A 0 A_SpawnItemEx("Typha11",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+DUMM A 1
+stop
+
+Spawn4:
+DUMM A 0 A_SpawnItemEx("Typha12",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+DUMM A 1
+stop
+}
+}
+
+//---------------------End of Typha-----------------------//
+
+ACTOR Plant11 22127
+{
+//$category NaturePlant
+   radius 24
+   height 16
+   States
+        {
+        Spawn:
+                PL09 A -1
+                Stop
+        }
+}
+
+ACTOR Plant12 22128
+{
+//$category NaturePlant
+  Radius 24
+  Height 56
+  +SOLID
+  States
+  {
+  Spawn:
+DUMM A 0 nodelay
+{
+A_SpawnItemEx("IFern2",random(-2,-1),0,0, 0, 0, 0, 90, 0, 0);
+A_SpawnItemEx("IFern2",random(-2,-1),0, 0, 0, 0, 0, 270, 0, 0);
+A_SpawnItemEx("IFern2",random(-2,-1),0,0, 0, 0, 0, 180, 0, 0);
+A_SpawnItemEx("IFern2",random(-2,-1),0, 0, 0, 0, 0, 0, 0, 0);
+
+A_SpawnItemEx("IFern2",random(-4,-3),0, 0, 0, 0, 0, 45, 0, 128);
+A_SpawnItemEx("IFern2",random(-4,-3),0, 0, 0, 0, 0, 135, 0, 128);
+A_SpawnItemEx("IFern2",random(-4,-3),0, 0, 0, 0, 0, 225, 0, 128);
+A_SpawnItemEx("IFern2",random(-4,-3),0, 0, 0, 0, 0, 315, 0, 128);
+}
+DUMM A -1
+Stop
+  }
+}
+
+ACTOR Plant13 22129
+{
+//$category NaturePlant
+   radius 16
+   height 24
+   States
+        {
+        Spawn:
+                PL11 A -1
+                Stop
+        }
+}
+
+//=============================================//
+ACTOR Plant14 22130
+{
+//$category NaturePlant
+  Radius 8
+  Height 8
+  -SOLID
+DistanceCheck "A_ModRenDistFlora"
+  States
+  {
+  Spawn:
+DUMM A 0 nodelay
+{
+A_SetAngle(18*random(0,19));
+A_SetScale(0.15*random(-1,3)+1);
+}
+DUMM A -1
+Stop
+  }
+}
+
+ACTOR Dummy001
+{
+height 1
+radius 1
+}
+
+ACTOR Plant15 : Plant14 22131
+{
+//$category NaturePlant
+  Radius 16
+  Height 16
+DistanceCheck "A_ModRenDistFlora"
+}
+
+ACTOR Plant16 : Plant14 22132
+{
+//$category NaturePlant
+  Radius 24
+  Height 16
+DistanceCheck "A_ModRenDistFlora"
+}
+
+//----------------------------------------Plant17 Random spawners-----------------//
+
+ACTOR Plant17Spawner : RandomSpawner 22133
+{
+//$category NaturePlant
+    DropItem "Plant17Small"
+    DropItem "Plant17Medium"
+    DropItem "Plant17Large"
+}
+
+ACTOR Plant17Large
+{
+   radius 16
+   height 114
+   scale 0.5
+   States
+        {
+        Spawn:
+                PL15 ABCDEFGHI 8
+                Loop
+        }
+}
+
+ACTOR Plant17Medium : Plant17Large
+{
+   radius 16
+   height 88
+   scale 0.4
+}
+
+ACTOR Plant17Small : Plant17Large
+{
+   radius 10
+   height 56
+   scale 0.25
+}
+
+//----------------------------------------Plant18 Random spawners-----------------//
+
+ACTOR Plant18Spawner : RandomSpawner 22134
+{
+//$category NaturePlant
+    DropItem "Plant18Small"
+    DropItem "Plant18Medium"
+    DropItem "Plant18Large"
+}
+
+ACTOR Plant18Large
+{
+   radius 16
+   height 120
+   scale 0.5
+   States
+        {
+        Spawn:
+                PL16 ABCDEFGHI 8
+                Loop
+        }
+}
+
+ACTOR Plant18Medium : Plant18Large
+{
+   radius 12
+   height 80
+   scale 0.35
+}
+
+ACTOR Plant18Small : Plant18Large
+{
+   radius 8
+   height 48
+   scale 0.2
+}
+
+//-------------------Plant 19------------------//
+
+ACTOR Plant19 22135
+{
+//$category NaturePlant
+  radius 24
+  height 64
+  scale 0.35
+  States
+  	{
+  	Spawn:
+  		PL17 A -1
+  		Stop
+  	}
+  }
+*/
+//======================================================================//
+//------------------------------TREES-----------------------------------//
+//======================================================================//
+
+//-------------------------------------------------------------------------//
+//---------------------------Fir Trees-------------------------------------//
+//-------------------------------------------------------------------------//
+
+ACTOR Tree01 22141
+{
+//$category NatureTree
+
+  radius 32
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+//=========================//
+//----------Larches--------------------------//
+//=========================//
+/*ACTOR Larch 22142
+{
+//$category NatureTree
+Radius 30
+Height 128
++SOLID
+var float user_larchZscale;
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetUserVarFloat("user_larchZscale",0.05*random(1,3)+1.0);
+A_SetScale(0.05*random(-1,3)+1.0,user_larchZscale,0,true);
+A_SpawnItemEx("Larch1",0,0,ceil((48+random(-8,8))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION,64);
+A_SpawnItemEx("Larch2",0,0,ceil((72+random(-8,8))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION,32);
+A_SpawnItemEx("Larch3",0,0,ceil((96+random(-4,2))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Larch4",0,0,ceil((104+random(-1,1))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+}
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch1
+{
++NOINTERACTION
+Radius 0
+Height 0
+-SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.1*random(-3,3)+scalex,scaley,0,true); A_SetPitch(3*random(-5,5));}
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch2
+{
++NOINTERACTION
+Radius 0
+Height 0
+-SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(20*random(0,17)); A_SetScale(0.1*random(-3,3)+scalex,scaley,0,true); A_SetPitch(3*random(-5,5)); }
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch3
+{
++NOINTERACTION
+Radius 0
+Height 0
+-SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(25*random(0,13)); A_SetScale(0.1*random(-1,3)+scalex,scaley,0,true); A_SetPitch(3*random(-5,5)); }
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch4
+{
++NOINTERACTION
+Radius 0
+Height 0
+-SOLID
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetAngle(35*random(0,9)); A_SetScale(0.1*random(-4,0)+scalex,scaley,0,true); A_SetPitch(3*random(-4,4)); }
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch_dry 22143
+{
+//$category NatureTree
+Radius 30
+Height 128
++SOLID
+var float user_larchZscale;
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetUserVarFloat("user_larchZscale",0.1*random(-1,3)+1.0);
+A_SetScale(0.05*random(-1,3)+1.0,user_larchZscale,0,true);
+A_SpawnItemEx("Larch1_dry",0,0,ceil((48+random(-8,8))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION,64);
+A_SpawnItemEx("Larch2_dry",0,0,ceil((72+random(-8,8))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION,32);
+A_SpawnItemEx("Larch3_dry",0,0,ceil((96+random(-4,2))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("Larch4_dry",0,0,ceil((104+random(-1,1))*user_larchZscale), 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+}
+DUMM A -1
+Stop
+}
+}
+
+ACTOR Larch1_dry : Larch1 {}
+ACTOR Larch2_dry : Larch2 {}
+ACTOR Larch3_dry : Larch3 {}
+ACTOR Larch4_dry : Larch4 {}
+*/
+//------------------------------------------------------------------------//
+//----------------------------Green Trees---------------------------------//
+//------------------------------------------------------------------------//
+
+ACTOR Tree04 22144
+{
+//$category NatureTree
+  radius 24
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree04b : Tree04 22145
+{
+States
+  {
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+//----------------------Tree05Spawner-----------------//
+
+ACTOR Tree05Spawner : RandomSpawner 22146
+{
+//$category NatureTree
+  +NOGRAVITY
+  +DONTTHRUST
+    radius 30
+    height 224
+    DropItem "Tree05Medium"
+    DropItem "Tree05Large"
+}
+
+ACTOR Tree05Large
+{
+  radius 30
+  height 224
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree05Medium : Tree05Large
+{
+  +NOGRAVITY
+  +DONTTHRUST
+  radius 30
+  height 180
+  scale 0.8
+}
+
+//----------------------Tree06Spawner-----------------//
+
+ACTOR Tree06Spawner : RandomSpawner 22147
+{
+//$category NatureTree
+  +NOGRAVITY
+  +DONTTHRUST
+    radius 24
+    height 192
+    DropItem "Tree06Medium"
+    DropItem "Tree06Large"
+}
+
+ACTOR Tree06Large
+{
+  radius 24
+  height 192
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree06Medium : Tree06Large
+{
+  radius 24
+  height 144
+  scale 0.8
+}
+
+ACTOR Tree07 22148
+{
+//$category NatureTree
+  radius 10
+  height 128
+  scale 0.65
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree07b : Tree07 22149
+{
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-1,1)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree07c : Tree07 22150
+{
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-1,1)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+}
+
+//----------------------Tree08SpawnerA-----------------//
+
+ACTOR Tree08SpawnerA : RandomSpawner 22151
+{
+//$category NatureTree
+    radius 24
+    height 192
+    DropItem "Tree08AMedium"
+    DropItem "Tree08ALarge"
+}
+
+ACTOR Tree08ALarge
+{
+  radius 28
+  height 192
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		TR08 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree08AMedium : Tree08ALarge
+{
+  radius 28
+  height 144
+  scale 0.75
+}
+
+//----------------------Tree08SpawnerB-----------------//
+
+ACTOR Tree08SpawnerB : RandomSpawner 22152
+{
+//$category NatureTree
+    radius 24
+    height 192
+    DropItem "Tree08BMedium"
+    DropItem "Tree08BLarge"
+}
+
+ACTOR Tree08BLarge
+{
+  radius 28
+  height 192
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		TR08 B -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree08BMedium : Tree08BLarge
+{
+  radius 28
+  height 144
+  scale 0.75
+}
+
+//----------------------Tree09SpawnerA-----------------//
+
+ACTOR Tree09SpawnerA : RandomSpawner 22153
+{
+//$category NatureTree
+    radius 16
+    height 192
+    DropItem "Tree09AMedium"
+    DropItem "Tree09ALarge"
+}
+
+ACTOR Tree09ALarge
+{
+  radius 16
+  height 192
+  scale 0.85
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		TR09 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree09AMedium : Tree09ALarge
+{
+  radius 16
+  height 144
+  scale 0.65
+}
+
+//----------------------Tree09SpawnerB-----------------//
+
+ACTOR Tree09SpawnerB : RandomSpawner 22154
+{
+//$category NatureTree
+    radius 16
+    height 192
+    DropItem "Tree09BMedium"
+    DropItem "Tree09BLarge"
+}
+
+ACTOR Tree09BLarge
+{
+  radius 16
+  height 192
+  scale 0.85
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		TR09 B -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree09BMedium : Tree09BLarge
+{
+  radius 16
+  height 144
+  scale 0.65
+}
+
+//----------------------Tree10Spawner-----------------//
+
+ACTOR Tree10Spawner : RandomSpawner 22155
+{
+//$category NatureTree
+    radius 48
+    height 180
+    DropItem "Tree10Large"
+    DropItem "Tree10Medium"
+    DropItem "Tree10Small"
+}
+
+ACTOR Tree10Large
+{
+  radius 48
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree10Medium : Tree10Large
+{
+  radius 48
+  height 144
+  scale 0.8
+}
+
+ACTOR Tree10Small : Tree10Large
+{
+  radius 48
+  height 108
+  scale 0.6
+}
+
+ACTOR Tree11 22156
+{
+//$category NatureTree
+  radius 16
+  height 128
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-1,1)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+         }
+  }
+
+ACTOR Tree12 22157
+{
+//$category NatureTree
+  radius 16
+  height 192
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+         }
+  }
+
+ACTOR Tree13 22158
+{
+//$category NatureTree
+  radius 24
+  height 224
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+         }
+  }
+
+//-----------------------------Big Tree With Leaves------------------//  
+  
+ACTOR Tree14Leaves 22159
+{
+//$category NatureTree
+  radius 24
+  height 180
+  speed 0
+  +SOLID
+  +LOOKALLAROUND
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A 8 A_Look
+  		Loop
+  	See:
+  		DUMM A 8 A_Chase
+  		DUMM A 8 A_CustomMissile("ALeaf1",64,16,0)
+  		DUMM A 8 A_Chase
+  		DUMM A 8 A_CustomMissile("ALeaf2",32,-16,64)
+  		DUMM A 128
+   		DUMM A 10 A_Chase
+   		DUMM A 8 A_CustomMissile("ALeaf2",96,24,-64)
+   		DUMM A 256
+  		Loop
+  	}
+  }
+
+ACTOR ALeaf1 : Leaf1
+{
+  radius 3
+  height 3
+}  
+  
+ACTOR ALeaf2 : Leaf2
+{
+  radius 3
+  height 3
+}
+
+ACTOR Tree15 22160
+{
+//$category NatureTree
+  radius 24
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+//-------------------------------Breakable Tree-----------------------------------//
+/*
+ACTOR Tree16Break 22161
+{
+//$category NatureTree
+  radius 24
+  height 180
+  deathheight 24
+  health 60
+            	DamageFactor "Normal", 1.0
+	DamageFactor "NormalFist", 0.0
+        	DamageFactor "NormalHit", 1.0
+        	DamageFactor "NormalCrush", 1.0
+        	DamageFactor "Fire", 1.5
+        	DamageFactor "FireCannon", 1.0
+	DamageFactor "P_FireExplode", 1.5
+        	DamageFactor "Ice", 0.5
+        	DamageFactor "Lightning", 1.0
+	DamageFactor "P_Lightning", 1.0
+        	DamageFactor "Gas", 0.0
+        	DamageFactor "Poison", 0.0
+        	DamageFactor "Magic", 1.0
+	DamageFactor "MagicVampire", 0.0
+  mass 0x7fffffff
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +DONTGIB
+  +NOICEDEATH
+  +NODROPOFF
+  states
+  	{
+  	Spawn:
+    		TR16 A -1
+    		stop
+    	Pain:
+    		TR16 A 1
+    		Goto Spawn
+    	Death:
+    		TR16 B 1 A_PlaySound("tree/break")
+    		TR16 BCD 6
+    		TR16 E 6 A_Die
+    		TR16 F 6
+    		TR16 G -1
+    		stop
+        Burn:
+    		TR16 H 1 bright A_PlaySound("tree/burn")
+    		TR16 HIJKLMN 6 bright
+    		TR16 O 6 bright A_Die 
+    		TR16 P 6 
+    		TR16 Q -1
+    		stop
+  	}
+}
+
+//------------------------------------------------------------------------//
+//----------------------------Wasteland Trees-----------------------------//
+//------------------------------------------------------------------------//
+
+ACTOR Tree17 22162
+{
+//$category NatureTree
+  radius 24
+  height 112
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		TR17 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree17Skull : Tree17 22163
+{
+  States
+  	{
+  	Spawn: 
+  		TR17 B -1
+  		Stop
+  	}
+  }*/
+
+ACTOR Tree18 22164
+{
+//$category NatureTree
+  radius 30
+  height 128
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(1.0+0.05*random(-1,1)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree19 22165
+{
+//$category NatureTree
+  radius 20
+  height 128
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(1.0+0.05*random(-1,1)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree20 22166
+{
+//$category NatureTree
+  radius 20
+  height 160
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree21 22167
+{
+//$category NatureTree
+  radius 24
+  height 100
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn:
+  		DUMM A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Tree22 22168
+{
+//$category NatureTree
+  radius 24
+  height 100
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn:
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+/*ACTOR Tree23 22169
+{
+//$category NatureTree
+  radius 30
+  height 112
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+  		TR23 A -1
+  		Stop
+  	}
+  }*/
+
+ACTOR Tree24 22170
+{
+//$category NatureTree
+  radius 30
+  height 160
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn:
+		TNT1 A 0
+                TNT1 A 0 A_Jump(127,2)
+                TNT1 A 0 A_ChangeFlag("SPRITEFLIP",1)  
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+/*
+ACTOR Tree25 22171
+{
+//$category NatureTree
+  radius 30
+  height 128
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		TR25 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree26 22172
+{
+//$category NatureTree
+  radius 30
+  height 144
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		TR26 A -1
+  		Stop
+  	}
+  }
+
+//----------------------Tree27Spawner-----------------//
+
+ACTOR Tree27Spawner : RandomSpawner 22173
+{
+//$category NatureTree
+    radius 16
+    height 192
+    DropItem "Tree27Medium"
+    DropItem "Tree27Large"
+}
+
+ACTOR Tree27Large
+{
+  radius 28
+  height 160
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree27Medium : Tree27Large
+{
+  radius 28
+  height 120
+  scale 0.75
+}
+
+//----------------------Tree28Spawner-----------------//
+
+ACTOR Tree28Spawner : RandomSpawner 22174
+{
+//$category NatureTree
+    radius 30
+    height 144
+    DropItem "Tree28Large"
+    DropItem "Tree28Medium"
+    DropItem "Tree28Small"
+}
+
+ACTOR Tree28Large
+{
+  radius 30
+  height 144
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Tree28Medium : Tree28Large
+{
+  radius 30
+  height 116
+  scale 0.8
+}
+
+ACTOR Tree28Small : Tree28Large
+{
+  radius 30
+  height 88
+  scale 0.6
+}*/
+
+ACTOR Tree14Green 22175
+{
+//$category NatureTree
+  radius 24
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  	{
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+        }
+}
+
+//==========================================================================//
+//----------------------------PALMS-----------------------------------------//
+//==========================================================================//
+
+ACTOR Palm01 22181
+{
+//$category NaturePalm
+  radius 8
+  height 192
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Palm02aSpawner : RandomSpawner 22182
+{
+//$category NaturePalm
+    radius 16
+    height 180
+    DropItem "Palm02aLarge"
+    DropItem "Palm02aMedium"
+}
+
+ACTOR Palm02aLarge 
+{
+  radius 16
+  height 180
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+ACTOR Palm02aMedium : Palm02aLarge
+{
+  scale 0.8
+  radius 16
+  height 144
+}
+
+ACTOR Palm02b 22183
+{
+//$category NaturePalm
+  radius 14
+  height 176
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+/*ACTOR Palm03 22184
+{
+//$category NaturePalm
+  radius 20
+  height 88
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		PLM3 A -1
+  		Stop
+  	}
+  }*/
+
+ACTOR Palm04 22185
+{
+//$category NaturePalm
+  radius 12
+  height 80
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+/*
+//==========================================================================//
+//----------------------------CACTUS----------------------------------------//
+//==========================================================================//
+
+//----------------------Cactus01Spawner-----------------//
+
+ACTOR Cactus01Spawner : RandomSpawner 22191
+{
+//$category NatureCactus
+    radius 16
+    height 120
+    DropItem "Cactus01Large"
+    DropItem "Cactus01Medium"
+    DropItem "Cactus01Small"
+}
+
+ACTOR Cactus01Large
+{
+  radius 16
+  height 120
+  +SOLID
+  States
+       {
+        Spawn:
+                CAC1 A -1
+                Stop
+        }
+}
+
+ACTOR Cactus01Medium : Cactus01Large
+{
+ radius 16
+ height 96
+ scale 0.8
+}
+
+ACTOR Cactus01Small : Cactus01Large
+{
+ radius 16
+ height 72
+ scale 0.6
+}
+
+ACTOR Cactus02 22192
+{
+//$category NatureCactus
+  radius 30
+  height 120
+  +SOLID
+  States
+       {
+        Spawn:
+                DUMM A -1
+                Stop
+        }
+}
+
+//----------------------Cactus03Spawner-----------------//
+
+ACTOR Cactus03Spawner : RandomSpawner 22193
+{
+//$category NatureCactus
+    radius 16
+    height 88
+    DropItem "Cactus03Large"
+    DropItem "Cactus03Medium"
+    DropItem "Cactus03Small"
+}
+
+ACTOR Cactus03Large 
+{
+//$category NatureCactus
+  radius 16
+  height 88
+  +SOLID
+  States
+       {
+        Spawn:
+                CAC3 A -1
+                Stop
+        }
+}
+
+ACTOR Cactus03Medium : Cactus03Large
+{
+ radius 16
+ height 70
+ scale 0.8
+}
+
+ACTOR Cactus03Small : Cactus03Large
+{
+ radius 16
+ height 52
+ scale 0.6
+}
+
+//----------------------Cactus04Spawner-----------------//
+
+ACTOR Cactus04Spawner : RandomSpawner 22194
+{
+//$category NatureCactus
+    radius 12
+    height 88
+    DropItem "Cactus04Large"
+    DropItem "Cactus04Medium"
+    DropItem "Cactus04Small"
+}
+
+ACTOR Cactus04Large
+{
+//$category NatureCactus
+  radius 12
+  height 88
+  +SOLID
+  States
+       {
+        Spawn:
+                CAC4 A -1
+                Stop
+        }
+}
+
+ACTOR Cactus04Medium : Cactus04Large
+{
+ radius 16
+ height 70
+ scale 0.8
+}
+
+ACTOR Cactus04Small : Cactus03Large
+{
+ radius 16
+ height 44
+ scale 0.5
+}
+
+//=========================================================================//
+//--------------------------ROCKS and STALACTITES--------------------------//
+//=========================================================================//
+
+//---------------------------------------------------------//
+//------------------------Rocks----------------------------//
+//---------------------------------------------------------//
+
+ACTOR Rock01 22201
+{
+//$category NatureRock
+  +SOLID
+  radius 30
+  height 40
+  scale 0.65
+  States
+  	{
+  	Spawn: 
+  		RC01 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Rock02 22202
+{
+//$category NatureRock
+  +SOLID
+  radius 24
+  height 32
+  scale 0.7
+  States
+  	{
+  	Spawn: 
+  		RC02 A -1
+  		Stop
+  	}
+  }
+
+//----------------------------------------------Rocks different--------------------------------------------//
+ACTOR Rock03 22203
+{
+//$category NatureRock
+radius 5
+height 10
++SOLID
+var float user_stone1scale;
+//Args[0] sets scale and size of stone
+//Args[0]=0 means random scale and size
+States
+{
+Spawn:
+TNT1 A 1 nodelay A_JumpIf(Args[0]>0, "SpawnPre") 
+goto SpawnRandom
+
+SpawnRandom:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetPitch(15*random(-6,6)); A_SetUserVarFloat("user_stone1scale",0.2*random(-4,5)+1); A_SetScale(user_stone1scale); A_SetSize(5*user_stone1scale,10*user_stone1scale,0); }             
+DUMM A -1
+Stop
+
+SpawnPre:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetPitch(15*random(-6,6));  A_SetUserVarFloat("user_stone1scale",0.2*Args[0]); A_SetScale(user_stone1scale); A_SetSize(5*user_stone1scale,10*user_stone1scale,0); }             
+DUMM A -1
+Stop           
+}
+}
+
+ACTOR Rock04 22204
+{
+//$category NatureRock
+radius 5
+height 10
++SOLID
+var float user_stone1scale;
+//Args[0] sets scale and size of stone
+//Args[0]=0 means random scale and size
+States
+{
+Spawn:
+TNT1 A 1 nodelay A_JumpIf(Args[0]>0, "SpawnPre") 
+goto SpawnRandom
+
+SpawnRandom:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetUserVarFloat("user_stone1scale",0.2*random(-4,5)+1); A_SetScale(user_stone1scale); A_SetSize(5*user_stone1scale,10*user_stone1scale,0); }             
+DUMM A -1
+Stop
+
+SpawnPre:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetUserVarFloat("user_stone1scale",0.2*Args[0]); A_SetScale(user_stone1scale); A_SetSize(5*user_stone1scale,10*user_stone1scale,0); }             
+DUMM A -1
+Stop           
+}
+}
+
+ACTOR Rock05 22205
+{
+//$category NatureRock
+radius 5
+height 10
++SOLID
+var float user_stone1scale;
+
+States
+{
+Spawn:
+TNT1 A 1 nodelay A_JumpIf(Args[0]>0, "SpawnPre") 
+goto SpawnRandom
+
+SpawnRandom:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetUserVarFloat("user_stone1scale",0.2*random(-2,7)+1); A_SetScale(user_stone1scale); A_SetSize(6*user_stone1scale,14*user_stone1scale,0); }             
+DUMM A -1
+Stop
+
+SpawnPre:  
+DUMM A 0 {A_SetAngle(15*random(0,23)); A_SetUserVarFloat("user_stone1scale",0.2*Args[0]); A_SetScale(user_stone1scale); A_SetSize(6*user_stone1scale,14*user_stone1scale,0); }             
+DUMM A -1
+Stop           
+}
+}
+
+ACTOR Rock06 22206
+{
+//$category NatureRock
+  radius 8
+  height 8
+  States
+       {
+        Spawn:
+                RC06 A -1
+                Stop
+        }
+}
+
+ACTOR Rock07 22207
+{
+//$category NatureRock
+  radius 12
+  height 16
+  States
+       {
+        Spawn:
+                RC07 A -1
+                Stop
+        }
+}
+
+ACTOR Rock08 22208
+{
+//$category NatureRock
+  radius 24
+  height 20
+  +SOLID
+  States
+       {
+        Spawn:
+                RC08 A -1
+                Stop
+        }
+}
+
+ACTOR Rock09 22209
+{
+//$category NatureRock
+  radius 30
+  height 40
+  +SOLID
+  States
+       {
+        Spawn:
+                RC09 A -1
+                Stop
+        }
+}
+
+ACTOR Rock10 22210
+{
+//$category NatureRock
+  radius 16
+  height 48
+  +SOLID
+  States
+       {
+        Spawn:
+                RC10 A -1
+                Stop
+        }
+}
+
+ACTOR Rock11 22211
+{
+//$category NatureRock
+  radius 24
+  height 72
+  +SOLID
+  States
+       {
+        Spawn:
+                RC11 A -1
+                Stop
+        }
+}
+
+//---------------------------------------------------------//
+//------------------------Stalactites----------------------//
+//---------------------------------------------------------//
+
+ACTOR Stalag01 22221
+{
+//$category NatureRock
+  radius 16
+  height 64
+  +SOLID
+  States
+       {
+        Spawn:
+                STLG A -1
+                Stop
+        }
+}
+
+ACTOR Stalag02 22222
+{
+//$category NatureRock
+  radius 12
+  height 52
+  +SOLID
+  States
+       {
+        Spawn:
+                STLG B -1
+                Stop
+        }
+}
+
+ACTOR Stalag03 22223
+{
+//$category NatureRock
+  radius 12
+  height 40
+  +SOLID
+  States
+       {
+        Spawn:
+                STLG C -1
+                Stop
+        }
+}
+
+ACTOR Stalag04 22224
+{
+//$category NatureRock
+  radius 16
+  height 64
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  States
+       {
+        Spawn:
+                STLG D -1
+                Stop
+        }
+}
+
+ACTOR Stalag05 22225
+{
+//$category NatureRock
+  radius 12
+  height 52
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  States
+       {
+        Spawn:
+                STLG E -1
+                Stop
+        }
+}
+
+ACTOR Stalag06 22226
+{
+//$category NatureRock
+  radius 12
+  height 40
+  +SOLID
+  +NOGRAVITY
+  +SPAWNCEILING
+  States
+       {
+        Spawn:
+                STLG F -1
+                Stop
+        }
+}
+
+ACTOR Stalag07 22227
+{
+//$category NatureRock
+  radius 16
+  height 128
+  +SOLID
+  States
+       {
+        Spawn:
+                STLG G -1
+                Stop
+        }
+}
+
+//======================================================================//
+//------------------------------Plants-----------------------------------//
+//======================================================================//
+
+
+//-------------------Plant 20------------------//
+
+ACTOR Plant20 23320
+{
+//$category NaturePlant
+  radius 16
+  height 48
+  States
+  	{
+  	Spawn:
+  		PL18 A -1
+  		Stop
+  	}
+  }
+
+//-------------------Plant 21------------------//
+
+ACTOR Plant21 23321
+{
+//$category NaturePlant
+  radius 24
+  height 64
+  Scale 0.5
+  +SOLID 
+  States
+  	{
+  	Spawn:
+  		PL19 A -1
+  		Stop
+  	}
+  }
+
+//-------------------Plant 22------------------//
+
+ACTOR Plant22 23322
+{
+//$category NaturePlant
+  radius 16
+  height 16
+  Scale 0.7
+  States
+  	{
+  	Spawn:
+  		PL20 A -1
+  		Stop
+  	}
+  }
+
+//-------------------Plant 23------------------//
+
+ACTOR Plant23 23323
+{
+//$category NaturePlant
+  radius 12
+  height 36
+  States
+  	{
+  	Spawn:
+  		DUMM A -1
+  		Stop
+  	}
+  }
+
+//-------------------Slime 1------------------//
+
+ACTOR Slime1 23324
+{
+//$category NaturePlant
+  +NOGRAVITY
+  +SPAWNCEILING
+  radius 16
+  height 24
+  States
+  	{
+  	Spawn:
+  		MSS1 A -1
+  		Stop
+  	}
+  }
+
+//-------------------Slime 2------------------//
+
+ACTOR Slime2 23325
+{
+//$category NaturePlant
+  +NOGRAVITY
+  +SPAWNCEILING
+  radius 16
+  height 24
+  States
+  	{
+  	Spawn:
+  		MSS2 A -1
+  		Stop
+  	}
+  }
+
+//-------------------Plant 24------------------//
+
+ACTOR Plant24 23326
+{
+//$category NaturePlant
+  radius 12
+  height 54
+  States
+  	{
+  	Spawn:
+  		PL22 A -1
+  		Stop
+  	}
+  }
+
+
+//-------------------Plant 25------------------//
+
+ACTOR Plant25 23327
+{
+//$category NaturePlant
+  radius 12
+  height 54
+  States
+  	{
+  	Spawn:
+  		PL23 A -1
+  		Stop
+  	}
+  }
+
+
+
+ACTOR Plant26 23328
+{
+//$category NaturePlant
+radius 12
+height 68
+DistanceCheck "A_ModRenDistFlora"
+//Scale 0.3
+States
+{
+Spawn:
+PL24 A 0 nodelay 
+{
+A_SetScale(0.05*random(-3,3)+0.5);
+A_SetAngle(angle + 10*random(-5,5));
+A_SetPitch(4*random(-5,5));
+}
+PL24 A -1
+Stop
+}
+}
+
+
+//-------------------Plant 27------------------//
+
+ACTOR Plant27 23329
+{
+//$category NaturePlant
+radius 12
+height 68
+DistanceCheck "A_ModRenDistFlora"
+//Scale 0.3
+States
+{
+Spawn:
+PL25 A 0 nodelay 
+{
+A_SetScale(0.05*random(-3,3)+0.5);
+A_SetAngle(angle + 10*random(-5,5));
+A_SetPitch(4*random(-5,5));
+}
+PL25 A -1
+Stop
+}
+}
+
+
+//-------------------Plant 28------------------//
+
+ACTOR Plant28 23330
+{
+//$category NaturePlant
+  radius 12
+  height 40
+  States
+  	{
+  	Spawn:
+  		PL26 A -1
+  		Stop
+  	}
+  }
+
+
+//-------------------Plant 29------------------//
+
+ACTOR Plant29 23331
+{
+//$category NaturePlant
+  radius 12
+  height 52
+  States
+  	{
+  	Spawn:
+  		PL27 A -1
+  		Stop
+  	}
+  }
+
+
+//-------------------Plant 30------------------//
+
+ACTOR Plant30 23332
+{
+//$category NaturePlant
+  radius 12
+  height 52
+  States
+  	{
+  	Spawn:
+  		PL28 A -1
+  		Stop
+  	}
+  }
+
+
+
+//-------------------Tree29------------------//
+
+ACTOR Tree29 23340
+{
+//$category NatureTree
+  radius 24
+  height 112
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		TR29 A -1
+  		Stop
+  	}
+  }
+
+
+  
+//==========================================================================//
+//----------------------------PALMS-----------------------------------------//
+//==========================================================================//
+
+ACTOR Palm05 23350
+{
+//$category NaturePalm
+  radius 16
+  height 112
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Palm06 23351
+{
+//$category NaturePalm
+  radius 36
+  height 40
+  States
+  	{
+  	Spawn: 
+  		PLM6 A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Palm07 23352
+{
+//$category NaturePalm
+  radius 20
+  height 88
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+  
+ACTOR Palm08 23353
+{
+//$category NaturePalm
+  radius 32
+  height 92
+  +SOLID
+  States
+  	{
+  	Spawn: 
+  		DUMM A -1
+  		Stop
+  	}
+  }
+  
+//---------------------------------------------------------//
+//------------------------Rocks----------------------------//
+//---------------------------------------------------------//
+
+ACTOR Rock12 23370
+{
+//$category NatureRock
+  +SOLID
+  radius 36
+  height 44
+  scale 0.9
+  States
+  	{
+  	Spawn: 
+  		RC12 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock13 23371
+{
+//$category NatureRock
+  radius 24
+  height 36
+  States
+  	{
+  	Spawn: 
+  		RC13 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock14 23372
+{
+//$category NatureRock
+  +SOLID
+  radius 24
+  height 56
+  States
+  	{
+  	Spawn: 
+  		RC14 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock15 23373
+{
+//$category NatureRock
+  +SOLID
+  radius 32
+  height 72
+  States
+  	{
+  	Spawn: 
+  		RC15 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock16 23374
+{
+//$category NatureRock
+  +SOLID
+  radius 24
+  height 96
+  States
+  	{
+  	Spawn: 
+  		RC16 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock17 23375
+{
+//$category NatureRock
+  +SOLID
+  radius 16
+  height 54
+  States
+  	{
+  	Spawn: 
+  		RC17 A -1
+  		Stop
+  	}
+  } 
+  
+ACTOR Rock18 23376
+{
+//$category NatureRock
+  +SOLID
+  radius 40
+  height 68
+  scale 0.8
+  States
+  	{
+  	Spawn: 
+  		RC18 A -1
+  		Stop
+  	}
+  } 
+  
+//---------------------------------------------------------//
+//------------------------Flowers----------------------------//
+//---------------------------------------------------------//
+ACTOR Tulip 23380
+{
+//$category NaturePlant
+radius 6
+height 8
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay  {A_SetAngle(18*random(0,19)); A_SetScale(0.05*random(-2,2)+1.0,0.1*random(-1,3)+1.0,0,true); A_SetPitch(random(-10,10)); }
+DUMM A -1
+Stop
+}
+}
+
+
+//-------------------------------------------------Campanula----------------------------------//
+ACTOR Campanula 23381
+{
+//$category NaturePlant
+radius 7
+height 25
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetScale(0.05*random(-3,3)+0.5); A_SetAngle(angle + 10*random(-5,5)); A_SetPitch(4*random(-5,5)); }
+DUMM A 0 A_Jump(64,"Spawn2")
+DUMM A -1
+Stop
+
+Spawn2:
+DUMM B -1
+Stop
+}
+}
+
+
+//------------------------------------------------------Campanula 2-------------------------------------//
+ACTOR Campanula2 23382
+{
+//$category NaturePlant
+radius 7
+height 25
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay {A_SetScale(0.05*random(-3,3)+0.5); A_SetAngle(angle + 10*random(-5,5)); A_SetPitch(4*random(-5,5)); }
+DUMM A 0 A_Jump(64,"Spawn2")
+DUMM A -1
+Stop
+
+Spawn2:
+DUMM B -1
+Stop
+}
+}
+
+
+ACTOR Flower4 23387
+{
+//$category NaturePlant
+  -SOLID
+  radius 16
+  height 32
+  scale 1.0
+  States
+  	{
+  	Spawn: 
+  		ROZ4 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Flower5 23388
+{
+//$category NaturePlant
+  -SOLID
+  radius 8
+  height 24
+  scale 1.0
+  States
+  	{
+  	Spawn: 
+  		ROZ5 A -1
+  		Stop
+  	}
+  }
+
+ACTOR Flower6 23389
+{
+//$category NaturePlant
+  -SOLID
+  radius 24
+  height 48
+  scale 1.0
+  States
+  	{
+  	Spawn: 
+  		ROZ6 A -1
+  		Stop
+  	}
+  }
+
+
+//=================================================//
+//--------------------------GRASS SPAWNERS----------------------------------//
+//================================================//
+
+ACTOR IGrass
+{
+Radius 0
+Height 0
+-SOLID
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetAngle(18*random(0,19));
+A_SetScale(0.1*random(-2,2)+0.85);
+}
+DUMM A -1
+Stop
+}
+}
+
+ACTOR IGrass_2 : IGrass 
+{
+Radius 0
+Height 0
+DistanceCheck "A_ModRenDistFlora"
+}
+
+ACTOR Dump01
+{
+radius 1
+height 1
+}
+
+ACTOR IGrassSpawner 23383
+{
+//$category NaturePlant
+radius 0
+height 0
+-SOLID
+States
+{
+Spawn:
+TNT1 A 1 nodelay
+{
+A_SpawnItemEx("IGrass",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass",4*random(-4,-2),4*random(-4,-2),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass",4*random(-4,-2),4*random(2,4),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass",4*random(2,4),4*random(-4,-2),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass",4*random(2,4),4*random(2,4),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+}
+TNT1 A 1
+stop
+}
+}
+
+ACTOR Dump02
+{
+radius 1
+height 1
+}
+
+ACTOR IGrassSpawner2 23384
+{
+//$category NaturePlant
+radius 0
+height 0
+-SOLID
+States
+{
+Spawn:
+TNT1 A 1 nodelay
+{
+A_SpawnItemEx("IGrass_2",0,0,0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass_2",4*random(-4,-2),4*random(-4,-2),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass_2",4*random(-4,-2),4*random(2,4),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass_2",4*random(2,4),4*random(-4,-2),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+A_SpawnItemEx("IGrass_2",4*random(2,4),4*random(2,4),0, 0, 0, 0, 0, SXF_NOCHECKPOSITION);
+}
+TNT1 A 1
+stop
+}
+}
+
+ACTOR Dump03
+{
+radius 1
+height 1
+}
+
+
+ACTOR IFern 
+{
+Radius 0
+Height 0
+-SOLID
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetScale(0.05*random(-2,2)+0.85);
+}
+DUMM A -1
+Stop
+}
+}
+
+ACTOR IFern2 : IFern
+{
++SOLID
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetScale(0.05*random(2,5)+1.25);
+}
+DUMM A -1
+Stop
+}
+}
+
+
+ACTOR Dump04
+{
+radius 1
+height 1
+}
+
+actor Chamomile 23386
+{
+//$category NaturePlant
+radius 0
+height 0
+//+SOLID
+DistanceCheck "A_ModRenDistFlora"
+States
+{
+Spawn:
+DUMM A 0 nodelay
+{
+A_SetAngle(15*random(0,23));
+A_SetScale(0.1*random(-1,1)+1);
+}
+DUMM A -1
+Stop
+}
+}
+*/

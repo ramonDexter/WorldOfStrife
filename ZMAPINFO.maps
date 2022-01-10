@@ -1,0 +1,169 @@
+////////////////////////////////////////////////////////////////////////////////
+///////////////////  World of Strife MAPINFO file  /////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  MAPS DEFINITION  ///////////////////////////////////////////////////////////
+cluster 1 {
+	hub
+}
+map MAP01 "Mines" {
+	sky1 = "SKYMNT02"
+	music = "D_DARKER"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoInfighting
+	NoIntermission
+}
+map MAP02 "Silent Hills" {
+	//sky1 = "SKYMNT02"
+	sky1 = "SKYRGGR"
+	music = "D_TAVERN"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+}
+map MAP03 "Waste Treatment" {
+	sky1 = "SKYMNT02"
+	music = "D_DARKER"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoInfighting
+	NoIntermission
+}
+map MAP04 "Power Plant" {
+	sky1 = "SKYMNT02"
+	music = "D_FAST"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+}
+map MAP05 "Wilderness" {
+	sky1 = "SKYMNT02"
+	music = "D_DANGER"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission	
+}
+map MAP06 "Eastern Highlands" {
+	sky1 = "SKYMNT02"
+	music = "D_DANGER"
+	outSideFogDensity = 255
+	skyFog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission	
+}
+map MAP07 "Ancient Temple" {
+	sky1 = "SKYMNT02"
+	music = "D_TAVERN"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+}
+map MAP08 "Millport" {
+	sky1 = "SKYSNDS"
+	//sky2 = SKYSNDS
+	music = "D_TAVERN"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission	
+}
+map MAP09 "Coastal region" {
+	sky1 = "SKYSNDS"
+	//sky2 = SKYSNDS
+	music = "D_DARKER"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission	
+}
+map MAP10 "Borderlands West" {
+	sky1 = "SKYSNDS"
+	//sky2 = SKYSNDS
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission	
+}
+map map11 "Valley Farm" {
+	sky1 = "SKYRGGR"
+	music = "D_DARKER"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	
+}
+map map12 "Raven Rock" {
+	sky1 = "SKYRGGR"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	
+}
+map map13 "Borderlands North" {
+	sky1 = "SKYRGGR"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	
+}
+
+
+map map99 "#TOP SECRET" {
+	sky1 = "SKYORNG"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+

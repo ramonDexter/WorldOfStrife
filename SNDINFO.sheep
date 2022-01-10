@@ -1,0 +1,9 @@
+$random sounds/sheep/sight { sight1 sight2 sight3 sight4 sight5 sight6 }
+sight1		"sounds/sheep/sight1.ogg"
+sight2		"sounds/sheep/sight2.ogg"
+sight3		"sounds/sheep/sight3.ogg"
+sight4		"sounds/sheep/sight4.ogg"
+sight5		"sounds/sheep/sight5.ogg"
+sight6		"sounds/sheep/sight6.ogg"
+
+sounds/Sheep/Nom "sounds/sheep/SHEEPNOM.ogg"

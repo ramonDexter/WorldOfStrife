@@ -1,0 +1,45 @@
+////Green
+PointLight STRIFEH1
+{
+	color 0.4 1.0 0.4
+    size 26
+}
+
+Object OrderHolo1
+{
+FRAME ORDHA { light STRIFEH1 }
+}
+Object FrontHolo1
+{
+FRAME FRNHA { light STRIFEH1 }
+}
+////Cyan
+PointLight STRIFEH2
+{
+	color 0.2 0.4 0.6
+    size 26
+}
+
+Object OrderHolo2
+{
+FRAME ORDHB { light STRIFEH2 }
+}
+Object FrontHolo2
+{
+FRAME FRNHB { light STRIFEH2 }
+}
+////Orange
+PointLight STRIFEH3
+{
+	color 0.5 0.4 0.2
+    size 26
+}
+
+Object OrderHolo3
+{
+FRAME ORDHC { light STRIFEH3 }
+}
+Object FrontHolo3
+{
+FRAME FRNHC { light STRIFEH3 }
+}

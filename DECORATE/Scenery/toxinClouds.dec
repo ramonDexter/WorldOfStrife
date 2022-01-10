@@ -1,0 +1,278 @@
+ACTOR BrownCloudSmall 15022
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	PROJECTILE
+	-ACTIVATEIMPACT
+	-ACTIVATEPCROSS
+	+NODAMAGETHRUST
+	+ADDITIVEPOISONDAMAGE
+	+BLOODLESSIMPACT
+	PoisonDamage 25
+	Speed 0
+	RenderStyle Translucent
+	Alpha 0.6
+	States
+	{
+	Spawn:
+		BTXS ABCDE 7
+		BTXS A 0 A_Explode(10, 32)
+		Loop
+	}
+}
+
+ACTOR BrownCloudMedium : BrownCloudSmall 15023
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		BTXM ABCDE 7
+		BTXM A 0 A_Explode ( 15, 64 )
+		Loop
+	}
+}
+
+ACTOR BrownCloudLarge : BrownCloudSmall 15024
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		BTXL A 0 A_Jump( 90, "SpawnNew" )
+		BTXL ABCDE 7
+		BTXL A 0 A_Explode ( 20, 96 )
+		Loop
+	SpawnNew:
+		TNT1 A 0 A_CustomMissile( "BrownCloudMissile", 12, 0, random( 0, 359 ), 2 )
+		Goto Spawn+1
+	}
+}
+
+ACTOR BrownCloudMissile
+{
+	PROJECTILE
+	+RIPPER
+	+BLOODLESSIMPACT
+	+NODAMAGETHRUST
+	Speed 1
+	Damage 0
+	DamageType PoisonDamage
+	RenderStyle Translucent
+	Alpha 0.0
+	States
+	{
+	Spawn:
+		BTXS ABCDE 7 A_FadeIn( 0.12 )
+		BTXS A 0 A_Explode ( 10, 24 )
+		BTXS ABCDE 7
+		BTXS A 0 A_Explode ( 9, 20 )
+		BTXS ABCDE 7
+		BTXS A 0 A_Explode ( 8, 16 )
+		BTXS ABCDE 7
+		BTXS A 0 A_Explode ( 7, 12 )
+		BTXS ABCDE 7 A_FadeOut( 0.06 )
+		BTXS A 0 A_Explode ( 5, 8 )
+		BTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	Death:
+		BTXS ABCDE 7 A_FadeOut( 0.06 )
+		BTXS A 0 A_Explode ( 5, 8 )
+		BTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	}
+}
+
+ACTOR GreenCloudSmall : BrownCloudSmall 15025
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		GTXS ABCDE 7
+		GTXS A 0 A_Explode ( 10, 32 )
+		Loop
+	}
+}
+
+ACTOR GreenCloudMedium : BrownCloudSmall 15026
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		GTXM ABCDE 7
+		GTXM A 0 A_Explode ( 15, 64 )
+		Loop
+	}
+}
+
+ACTOR GreenCloudLarge : BrownCloudSmall 15027
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		GTXL A 0 A_Jump( 90, "SpawnNew" )
+		GTXL ABCDE 7
+		GTXL A 0 A_Explode ( 20, 96 )
+		Loop
+	SpawnNew:
+		TNT1 A 0 A_CustomMissile( "GreenCloudMissile", 12, 0, random( 0, 359 ), 2 )
+		Goto Spawn+1
+	}
+}
+
+ACTOR GreenCloudMissile : BrownCloudMissile
+{
+	States
+	{
+	Spawn:
+		GTXS ABCDE 7 A_FadeIn( 0.12 )
+		GTXS A 0 A_Explode ( 10, 24 )
+		GTXS ABCDE 7
+		GTXS A 0 A_Explode ( 9, 20 )
+		GTXS ABCDE 7
+		GTXS A 0 A_Explode ( 8, 16 )
+		GTXS ABCDE 7
+		GTXS A 0 A_Explode ( 7, 12 )
+		GTXS ABCDE 7 A_FadeOut( 0.06 )
+		GTXS A 0 A_Explode ( 5, 8 )
+		GTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	Death:
+		GTXS ABCDE 7 A_FadeOut( 0.06 )
+		GTXS A 0 A_Explode ( 5, 8 )
+		GTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	}
+}
+
+ACTOR OrangeCloudSmall : BrownCloudSmall 15028
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		OTXS ABCDE 7
+		OTXS A 0 A_Explode ( 20, 96 )
+		Loop
+	}
+}
+
+ACTOR OrangeCloudMedium : BrownCloudSmall 15029
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		OTXM ABCDE 7
+		OTXM A 0 A_Explode ( 20, 96 )
+		Loop
+	}
+}
+
+ACTOR OrangeCloudLarge : BrownCloudSmall 15030
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		OTXL A 0 A_Jump( 90, "SpawnNew" )
+		OTXL ABCDE 7
+		OTXL A 0 A_Explode ( 20, 96 )
+		Loop
+	SpawnNew:
+		TNT1 A 0 A_CustomMissile( "OrangeCloudMissile", 12, 0, random( 0, 359 ), 2 )
+		Goto Spawn+1
+	}
+}
+
+ACTOR OrangeCloudMissile : BrownCloudMissile
+{
+	States
+	{
+	Spawn:
+		OTXS ABCDE 7 A_FadeIn( 0.12 )
+		OTXS A 0 A_Explode ( 10, 24 )
+		OTXS ABCDE 7
+		OTXS A 0 A_Explode ( 9, 20 )
+		OTXS ABCDE 7
+		OTXS A 0 A_Explode ( 8, 16 )
+		OTXS ABCDE 7
+		OTXS A 0 A_Explode ( 7, 12 )
+		OTXS ABCDE 7 A_FadeOut( 0.06 )
+		OTXS A 0 A_Explode ( 5, 8 )
+		OTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	Death:
+		OTXS ABCDE 7 A_FadeOut( 0.06 )
+		OTXS A 0 A_Explode ( 5, 8 )
+		OTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	}
+}
+
+ACTOR RedCloudSmall : BrownCloudSmall 15031
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		RTXS ABCDE 7
+		RTXS A 0 A_Explode ( 10, 32 )
+		Loop
+	}
+}
+
+ACTOR RedCloudMedium : BrownCloudSmall 15032
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		RTXM ABCDE 7
+		RTXM A 0 A_Explode ( 15, 64 )
+		Loop
+	}
+}
+
+ACTOR RedCloudLarge : BrownCloudSmall 15033
+{
+	//$Category "Decorations/SFX/Toxin Clouds"
+	States
+	{
+	Spawn:
+		RTXL A 0 A_Jump( 90, "SpawnNew" )
+		RTXL ABCDE 7
+		RTXL A 0 A_Explode ( 20, 96 )
+		Loop
+	SpawnNew:
+		TNT1 A 0 A_CustomMissile( "RedCloudMissile", 12, 0, random( 0, 359 ), 2 )
+		Goto Spawn+1
+	}
+}
+
+ACTOR RedCloudMissile : BrownCloudMissile
+{
+	States
+	{
+	Spawn:
+		RTXS ABCDE 7 A_FadeIn( 0.12 )
+		RTXS A 0 A_Explode ( 10, 24 )
+		RTXS ABCDE 7
+		RTXS A 0 A_Explode ( 9, 20 )
+		RTXS ABCDE 7
+		RTXS A 0 A_Explode ( 8, 16 )
+		RTXS ABCDE 7
+		RTXS A 0 A_Explode ( 7, 12 )
+		RTXS ABCDE 7 A_FadeOut( 0.06 )
+		RTXS A 0 A_Explode ( 5, 8 )
+		RTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	Death:
+		RTXS ABCDE 7 A_FadeOut( 0.06 )
+		RTXS A 0 A_Explode ( 5, 8 )
+		RTXS ABCDE 7 A_FadeOut( 0.06 )
+		Stop
+	}
+}

@@ -1,0 +1,2299 @@
+//Hexen fog spawner
+//==--------------------------------------------------------------------------==
+ACTOR hexFogPatchSmall
+{
+	Speed 0
+	+NOBLOCKMAP
+	-NOGRAVITY
+	+NOCLIP
+	+FLOAT
+	+NOTELEPORT
+	RenderStyle add
+	Alpha 0.25
+
+
+
+  States
+  {
+  Spawn:
+  TNT1 A 0
+   TNT1 A 0 A_SetScale(Random(2,3))
+   TNT1 A 0 A_Jump(256,1,2,3,4)
+   FOGS ABCD 0 A_Jump(256,"Coolness")
+  Coolness:
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeIn(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+   "----" AAAAAAAAAAAAAA 4
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeOut(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+   FOGS ABCDEABCDEABCDEABCDEABCDEABCDE 7
+	loop
+  }
+}
+
+ACTOR hexFogPatchMedium : hexFogPatchSmall
+{
+  States
+  {
+  Spawn:
+  TNT1 A 0
+   TNT1 A 0 A_SetScale(Random(2,3))
+   TNT1 A 0 A_Jump(256,1,2,3,4)
+   FOGM ABCD 0 A_Jump(256,"Coolness")
+  Coolness:
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeIn(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+   "----" AAAAAAAAAAAAAA 4
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeOut(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+    FOGM ABCDEABCDEABCDEABCDEABCDEABCDE 7
+	loop
+  }
+}
+
+ACTOR hexFogPatchLarge : hexFogPatchMedium
+{
+  States
+  {
+  Spawn:
+  TNT1 A 0
+   TNT1 A 0 A_SetScale(Random(2,3))
+   TNT1 A 0 A_Jump(256,1,2,3,4)
+   FOGL ABCD 0 A_Jump(256,"Coolness")
+  Coolness:
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeIn(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+   "----" AAAAAAAAAAAAAA 4
+   "----" AAAAAAAAAAAAAAAAAAAA 10 A_FadeOut(0.002)
+   "----" A 0 A_Jump(256,0,1,2,3,4,5,6,7,8,9,10,11,12,13)
+    FOGL ABCDEABCDEABCDEABCDEABCDEABCDE 7
+	loop
+  }
+}
+
+ACTOR hexFogSpawner 28165
+{
+	//$Category "Decorations/Hexen"
+	//$Title Fog Spawner
+  +NOSECTOR
+  +NOBLOCKMAP
+  +FLOATBOB
+  +NOGRAVITY
+  +INVISIBLE
+  radius 8
+  height 8
+
+  States
+  {
+  Spawn:
+    //TNT1 A 1 A_Jump(96, 1, 2, 3)
+    TNT1 A 1 A_SpawnItemEx("hexFogPatchSmall", random(random(-96, 96), random(-64, 64)), 0, random(0, random(32, 48)), 0, 0, 0, Random(0, 360), 129)
+	TNT1 A 1 A_SpawnItemEx("hexFogPatchMedium", random(random(-96, 96), random(-64, 64)), 0, random(0, random(32, 48)), 0, 0, 0, Random(0, 360), 129)
+	TNT1 A 1 A_SpawnItemEx("hexFogPatchLarge", random(random(-96, 96), random(-64, 64)), 0, random(0, random(32, 48)), 0, 0, 0, Random(0, 360), 129)
+	stop
+  }
+}
+//==--------------------------------------------------------------------------==
+
+ACTOR hexTreeDestructible 28166
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Destructible
+  Health 70
+  Radius 15
+  Height 180
+  DeathHeight 24
+  //Mass 0x7fffffff
+  PainSound "TreeExplode"
+  DeathSound "TreeBreak"
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +NOICEDEATH
+  +DONTTHRUST
+  States
+  {
+  Spawn:
+    TRDT A -1
+    Stop
+  Death:
+    TRDT B 5
+    TRDT C 5 A_Scream
+    TRDT DEF 5
+    TRDT G -1
+    Stop
+  Burn:
+    TRDT H 5 Bright A_Pain
+    TRDT IJKL 5 Bright
+    TRDT M 5 Bright A_Explode(10, 128)
+    TRDT N 5 Bright
+    TRDT OP 5
+    TRDT Q -1
+    Stop
+  }
+}
+
+ACTOR hexZLog 28167
+{
+	//$Category "Decorations/Hexen"
+	//$Title Wooden Log
+  Radius 20
+  Height 25
+  +SOLID
+  States
+  {
+  Spawn:
+    LOGG A -1
+    Stop
+  }
+}
+
+ACTOR hexZRock1 28168
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock 1
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RCK1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRock2 28169
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock 2
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RCK2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRock3 28170
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock 3
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RCK3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRock4 28171
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock 4
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RCK4 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRockBlack 28172
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock Black
+  Radius 20
+  Height 40
+  +SOLID
+  States
+  {
+  Spawn:
+    RKBK A -1
+    Stop
+  }
+}
+
+ACTOR hexZRockBrown1 28173
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock Brown 1
+  Radius 17
+  Height 72
+  +SOLID
+  States
+  {
+  Spawn:
+    RKBL A -1
+    Stop
+  }
+}
+
+ACTOR hexZRockBrown2 28174
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rock Brown 2
+  Radius 15
+  Height 50
+  +SOLID
+  States
+  {
+  Spawn:
+    RKBS A -1
+    Stop
+  }
+}
+
+ACTOR hexZRubble1 28175
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rubble 1
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RBL1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRubble2 28176
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rubble 2
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RBL2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZRubble3 28177
+{
+	//$Category "Decorations/Hexen"
+	//$Title Rubble 3
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    RBL3 A -1
+    Stop
+  }
+}
+
+actor shroomBase : ActivableDeco
+{
+	+Solid
+}
+
+ACTOR hexZShroomLarge1 : shroomBase 28178
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Large 1
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomLarge2 : shroomBase 28179
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Large 2
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomLarge3 : shroomBase 28180
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Large 3
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomSmall1 : shroomBase 28181
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Small 1
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH4 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomSmall2 : shroomBase 28182
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Small 2
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH5 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomSmall3 : shroomBase 28183
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Small 3
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH6 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomSmall4 : shroomBase 28184
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Small 4
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH7 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShroomSmall5 : shroomBase 28185
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shroom Small 5
+  Radius 20
+  Height 16
+  States
+  {
+  Spawn:
+    MSH8 A -1
+    Stop
+  }
+}
+
+ACTOR hexZShrub1 : ActivableDeco 28186
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shrubbery 1
+  Radius 8
+  Height 24
+  Health 20
+  //Mass 0x7fffffff
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +NOICEDEATH
+  DeathSound "TreeExplode"
+  States
+  {
+  Spawn:
+    SHB1 A -1
+    Stop
+  Burn:
+    SHB1 B 7 Bright
+    SHB1 C 6 Bright A_Scream
+    SHB1 D 5 Bright
+    Stop
+  }
+}
+
+ACTOR hexZShrub2 : ActivableDeco 28187
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shrubbery 2
+  Radius 16
+  Height 40
+  Health 20
+  //Mass 0x7fffffff
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +NOICEDEATH
+  DeathSound "TreeExplode"
+  States
+  {
+  Spawn:
+    SHB2 A -1
+    Stop
+  Burn:
+    SHB2 B 7 Bright
+    SHB2 C 6 Bright A_Scream
+    SHB2 D 5 Bright A_Explode(30, 64)
+    SHB2 E 5 Bright
+    Stop
+  }
+}
+
+ACTOR hexZStalagmiteLarge 28188
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stalagmite Large
+  Radius 8
+  Height 48
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    SGM1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStalagmiteMedium 28189
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stalagmite Medium
+  Radius 6
+  Height 40
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    SGM2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStalagmiteSmall 28190
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stalagmite Small
+  Radius 8
+  Height 36
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    SGM3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStalagmitePillar 28191
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stalagmite Pillar
+  Radius 8
+  Height 138
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    SGMP A -1
+    Stop
+  }
+}
+
+ACTOR hexZStumpBare 28192
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stump Bare
+  Radius 12
+  Height 20
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    STM2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStumpBurned 28193
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stump Burned
+  Radius 12
+  Height 20
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    STM1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStumpSwamp1 28194
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stump Swamp 1
+  Radius 20
+  Height 16
+  +DontThrust
+  States
+  {
+  Spawn:
+    STM3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZStumpSwamp2 28195
+{
+	//$Category "Decorations/Hexen"
+	//$Title Stump Swamp 2
+  Radius 20
+  Height 16
+  +DontThrust
+  States
+  {
+  Spawn:
+    STM4 A -1
+    Stop
+  }
+}
+
+ACTOR hexZSwampVine 28196
+{
+	//$Category "Decorations/Hexen"
+	//$Title Swamp Vines
+  Radius 8
+  Height 52
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    SWMV A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeGnarled1 28197
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Gnarled 1
+  Radius 22
+  Height 100
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    TRE6 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeGnarled2 28198
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Gnarled 2
+  Radius 22
+  Height 100
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    TRE7 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeLarge1 28199
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Large 1
+  Radius 15
+  Height 180
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    TRE4 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeLarge2 28200
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Large 2
+  Radius 15
+  Height 180
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    TRE5 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeSwamp120 28201
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Swamp 1
+  Radius 10
+  Height 120
+  scale 0.7
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    TRE3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTreeSwamp150 28202
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Swamp 2
+  Radius 10
+  Height 150
+  +SOLID
+  States
+  {
+  Spawn:
+    TRE3 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTree1 28203
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Swamp Large
+  Radius 15
+  Height 183
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    ZTR2 A -1
+    Stop
+  }
+}
+
+ACTOR hexZTree2 28204
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tree Dead
+
+  Radius 10
+  Height 96
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    ZTR1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZChainBit64 28205
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain Bit 64
+  Radius 4
+  Height 64
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS B -1
+    Stop
+  }
+}
+
+
+
+ACTOR hexZChainEndHook1 28206
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain End Hook 1
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS D -1
+    Stop
+  }
+}
+
+ACTOR hexZChainEndHook2 28207
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain End Hook 2
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS E -1
+    Stop
+  }
+}
+
+ACTOR hexZChainEndSkull 28208
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain End Skull
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS G -1
+    Stop
+  }
+}
+
+ACTOR hexZChainEndSpike 28209
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain End Spike
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS F -1
+    Stop
+  }
+}
+
+ACTOR hexZIronMaiden 28210
+{
+	//$Category "Decorations/Hexen"
+	//$Title Iron Maiden
+  Radius 12
+  Height 60
+  +SOLID
+  +DontThrust
+  States
+  {
+  Spawn:
+    IRON A -1
+    Stop
+  }
+}
+
+
+
+ACTOR hexZBannerTattered 28212
+{
+	//$Category "Decorations/Hexen"
+	//$Title Banner Tattered
+  Radius 8
+  Height 120
+  +SOLID
+  States
+  {
+  Spawn:
+    BNR1 A -1
+    Stop
+  }
+}
+
+ACTOR hexZBlueCandle 28213
+{
+	//$Category "Decorations/Hexen"
+	//$Title Blue Candle
+  Radius 8
+  Height 16
+  scale 0.5
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    BCAN ABCDE 5 Bright
+    Loop
+  }
+}
+
+ACTOR hexZBucket 28214
+{
+	//$Category "Decorations/Hexen"
+	//$Title Hanging Bucket
+  Radius 8
+  Height 72
+  +SOLID
+  +SPAWNCEILING
+  +NOGRAVITY
+  States
+  {
+  Spawn:
+    BCKT A -1
+    Stop
+  }
+}
+
+
+
+
+
+
+ACTOR hexZStatueGargoyleRustTall 28218
+{
+	//$Category "Decorations/Hexen"
+	//$Title Statue Gargoyle Rust Tall
+  Radius 14
+  Height 108
+  +SOLID
+  States
+  {
+  Spawn:
+    GAR5 A -1
+    Stop
+  }
+}
+
+
+
+ACTOR hexZWingedStatue 28221
+{
+	//$Category "Decorations/Hexen"
+	//$Title Winged Statue
+  Radius 10
+  Height 62
+  +SOLID
+  States
+  {
+  Spawn:
+    STTW A -1
+    Stop
+  }
+}
+
+ACTOR hexPottery1 28222
+{
+	//$Category "Decorations/Hexen"
+	//$Title Pottery 1
+  Health 15
+  Speed 10
+  Height 32
+  +SOLID
+  +SHOOTABLE
+  +NOBLOOD
+  +DROPOFF
+  +SLIDESONWALLS
+  +PUSHABLE
+  +TELESTOMP
+  +CANPASS
+  +NOICEDEATH
+
+  States
+  {
+  Spawn:
+    HPT1 A -1
+    Loop
+  Death:
+    HPT1 A 0
+    Stop
+  }
+}
+
+ACTOR hexPottery2 : hexPottery1 28223
+{
+	//$Title Pottery 2
+  Height 25
+  States
+  {
+  Spawn:
+    HPT2 A -1
+    Stop
+  }
+}
+
+ACTOR hexPottery3 : hexPottery1 28224
+{
+	//$Title Pottery 3
+  Height 25
+  States
+  {
+  Spawn:
+    HPT3 A -1
+    Stop
+  }
+}
+
+//udelat hex potterybit spawner
+
+ACTOR hexTableShit1 28225
+{
+	//$Category "Decorations/Hexen"
+	//$Title Wooden Beer Stein
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST1 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit2 28226
+{
+	//$Category "Decorations/Hexen"
+	//$Title Glass Beer Stein
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST2 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit3 28227
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tan Candle with webs
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST3 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit4 28228
+{
+	//$Category "Decorations/Hexen"
+	//$Title White Candle
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST4 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit5 28229
+{
+	//$Category "Decorations/Hexen"
+	//$Title Tan Candle
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST5 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit6 28230
+{
+	//$Category "Decorations/Hexen"
+	//$Title Spilled cup
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST6 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit7 28231
+{
+	//$Category "Decorations/Hexen"
+	//$Title Taller brown cup
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST7 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit8 28232
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shorter brown cup
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST8 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit9 28233
+{
+	//$Category "Decorations/Hexen"
+	//$Title Shorter brown cup with silver rim
+  Radius 8
+  Height 16
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST9 A -1
+    Stop
+  }
+}
+
+ACTOR hexTableShit10 28234
+{
+	//$Category "Decorations/Hexen"
+	//$Title Cleaver
+  Radius 8
+  Height 16
+  scale 0.5
+  
+  +NOBLOCKMAP
+  States
+  {
+  Spawn:
+    TST0 A -1
+    Stop
+  }
+}
+
+ACTOR hexZCauldronON : InteractiveDeco 28235
+{
+	//$Category "Decorations/Hexen"
+	//$Title Cauldron ON
+	Radius 12
+	Height 26
+	+SOLID
+	States
+	{
+		Active:
+			CDRN B 0 Bright A_PlaySound("Ignite")
+			CDRN BCDEFGH 4 Bright
+		Spawn:
+			CDRN BCDEFGH 4 Bright
+			Loop
+		Inactive:
+			CDRN A -1
+			Stop
+	}
+}
+
+ACTOR hexZCauldronOFF : hexZCauldronON 28236
+{
+	//$Title Cauldron OFF
+	Radius 12
+	Height 26
+	+SOLID
+	
+	States
+	{
+		Spawn:
+			goto inactive
+	}
+}
+
+
+
+ACTOR hexZChainEndHeart 28237
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain End Heart
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS C -1
+    Stop
+  }
+}
+
+ACTOR hexFlameSmall 28238
+{
+	//$Category "Decorations/Hexen"
+	//$Title Flame Small
+  -Solid
+  +DontThrust
+  +NoGravity
+  Radius 15
+  RenderStyle Add
+  States
+  {
+
+  Spawn:
+    FFSM ABCDE 3 Bright
+    Loop
+  }
+}
+
+ACTOR hexFlameLRG 28239
+{
+	//$Category "Decorations/Hexen"
+	//$Title Flames Large
+  -Solid
+  +DontThrust
+  +NoGravity
+  Radius 15
+  RenderStyle Add
+  States
+  {
+
+  Spawn:
+    FFLG DEFGHIJKLMNOP 4 Bright
+    Loop
+  }
+}
+
+
+
+ACTOR MagicalSmoke 28242
+{
+	//$Category "Decorations/Hexen"
+	//$Title Magical Smoke
+  Radius 20
+  Height 16
+  +NOGRAVITY
+  +NOBLOCKMAP
+  RenderStyle Translucent
+  Alpha 0.6
+  States
+  {
+  Spawn:
+    MSMK A 4
+    MSMK B 3
+    MSMK C 4
+    MSMK D 3
+    MSMK E 4
+    MSMK F 3
+    MSMK G 4
+    MSMK H 3
+    MSMK I 4
+    MSMK J 3
+    MSMK K 4
+    MSMK L 3
+    MSMK M 4
+    MSMK N 3
+    MSMK O 4
+    MSMK P 3
+    MSMK Q 4
+    MSMK R 3
+    MSMK S 4
+    MSMK T 3
+    MSMK U 4
+    MSMK V 3
+    MSMK W 4
+    MSMK X 3
+    MSMK Y 4
+    MSMK Z 3
+    Loop
+  }
+}
+
+ACTOR hexZChainBit32 28243
+{
+	//$Category "Decorations/Hexen"
+	//$Title Chain Bit 32
+  Radius 4
+  Height 32
+  +SPAWNCEILING
+  +NOGRAVITY
+  +NOBLOCKMAP
+  +DontThrust
+  States
+  {
+  Spawn:
+    CHNS A -1
+    Stop
+  }
+}
+
+ACTOR dagSwampKludge002 23172
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 01"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS02 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge003 23173
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 02"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS03 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge004 23174
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 02"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS04 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge005 23175
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 03"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS05 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge006 23176
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 04"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS06 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge007 23177
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 03"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS07 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge008 23178
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 05"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS09 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge009 23179
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 06"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS16 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge010 23180
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 07"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS20 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge011 23181
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 04"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS11 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge012 23182
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 05"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS14 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge013 23183
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 06"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS27 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge014 23184
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 07"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS28 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge015 23185
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 08"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS29 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge016 23186
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 09"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS30 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge017 23187
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 10"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS31 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge018 23188
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 11"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS32 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge019 23189
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 12"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS33 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge020 23190
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 01"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 75
+	States
+	{
+		Spawn:
+		DS34 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge021 23191
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 13"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS35 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge022 23192
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 14"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS36 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge023 23193
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 15"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS37 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge024 23194
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 16"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS52 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge025 23195
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 17"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS53 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge026 23196
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 18"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS54 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge027 23197
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 19"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS55 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge028 23198
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 20"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS57 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge029 23199
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 21"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS24 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge030 23200
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 23"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS47 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge031 23201
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 23"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS48 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge032 23202
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Grass 24"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS49 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge033 23203
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 08"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS50 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge034 23204
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 09"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 126
+	States
+	{
+		Spawn:
+		DS50 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge035 23205
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 10"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 48
+	States
+	{
+		Spawn:
+		DS51 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge036 23206
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 11"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS56 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge037 23207
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 12"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS40 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge038 23208
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 13"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS41 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge039 23209
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 14"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS42 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge055 23210
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 15"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS43 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge041 23211
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 16"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS44 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge042 23212
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 17"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS45 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge043 23213
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Tree Swamp 18"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 128
+	States
+	{
+		Spawn:
+		DS46 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge044 23214
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Stone 01"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 42
+	States
+	{
+		Spawn:
+		DS10 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge045 23215
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Stone 02"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 42
+	States
+	{
+		Spawn:
+		DS12 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge046 23216
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Stone 03"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 16
+	States
+	{
+		Spawn:
+		DS13 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge047 23217
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Stone 04"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 32
+	States
+	{
+		Spawn:
+		DS17 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge048 23218
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Stone 05"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 32
+	States
+	{
+		Spawn:
+		DS18 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge049 23219
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Shroom"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 8
+	States
+	{
+		Spawn:
+		DS19 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge050 23220
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 03"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 48
+	States
+	{
+		Spawn:
+		DS22 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge051 23221
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 04"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 48
+	States
+	{
+		Spawn:
+		DS23 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge052 23222
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 05"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 48
+	States
+	{
+		Spawn:
+		DS25 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge053 23223
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 06"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 48
+	States
+	{
+		Spawn:
+		DS26 A -1
+		Stop
+	}
+}
+
+ACTOR dagSwampKludge054 23224
+{
+	//$Category "Decorations/Vegetation"
+	//$Title "Swamp Kludge 07"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 8
+	height 48
+	States
+	{
+		Spawn:
+		DS38 A -1
+		Stop
+	}
+}
+
+actor darkTree01 23225
+{
+	//$Category "Trees and Rocks"
+	//$Title "Dark Tree big"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 32
+	height 128
+	scale 0.6
+	States
+	{
+		Spawn:
+			DRT1 A -1
+			Stop
+	}
+}
+
+actor darkTree02 23226
+{
+	//$Category "Trees and Rocks"
+	//$Title "Dark Tree medium"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 32
+	height 128
+	scale 0.8
+	States
+	{
+		Spawn:
+			DRT2 A -1
+			Stop
+	}
+}
+
+actor darkTree03 23227
+{
+	//$Category "Trees and Rocks"
+	//$Title "Dark Tree small"
+	+Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	radius 16
+	height 40
+	scale 0.7
+	States
+	{
+		Spawn:
+			DRT3 A -1
+			Stop
+	}
+}

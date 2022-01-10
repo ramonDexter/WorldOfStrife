@@ -1,0 +1,151 @@
+
+//==============================================================================
+
+
+
+//Flares
+FlickerLight FLARE
+{
+    color 1.0 0.3 0.3
+    size 42
+    secondarySize 40
+    Chance 0.05
+    offset 0 16 0
+}
+
+object ActiveFlare
+{
+    frame FLAR { light FLARE }
+}
+
+
+
+
+//ranger brightmaps
+BrightMap Sprite RNGSA1
+{
+	Map BMRNGSA1
+	DisableFullBright
+}
+BrightMap Sprite RNGSA2A8
+{
+	Map BMRNGSA2
+	DisableFullBright
+}
+BrightMap Sprite RNGSA3A7
+{
+	Map RNGSA3
+	DisableFullBright
+}
+
+
+
+//fires
+//------------------------------------------------------------------------------
+
+flickerlight FireSmall
+{
+	color 0.9 0.8 0.0
+	size 32
+	secondarysize 16
+	chance 0.2
+	offset 0 4 0
+}
+
+flickerlight FireMedium
+{
+	color 0.9 0.8 0.0
+	size 48
+	secondarysize 32
+	chance 0.2
+	offset 0 8 0
+}
+
+flickerlight FireLarge
+{
+	color 0.9 0.8 0.0
+	size 72
+	secondarysize 48
+	chance 0.2
+	offset 0 16 0
+}
+//------------------------------------------------------------------------------
+
+
+pointlight gadget1light
+{
+	color 1.0 1.0 0.8
+	size 64
+	offset 0 18 0
+}
+
+pointlight gadget3light
+{
+	color 0.0 1.0 0.2
+	size 32
+	offset 0 16 0
+}
+
+pointlight gadget4light
+{
+	color 0.0 1.0 0.2
+	size 56
+	offset 0 16 0
+	
+}
+
+pointlight gadget10light1
+{
+	color 1.0 0.0 0.0
+	size 64
+	offset 0 24 0
+}
+pointlight gadget10light2
+{
+	color 0.0 1.0 0.0
+	size 64
+	offset 0 24 0
+}
+
+object MM_gadget_10
+{
+	frame MGDGA { light gadget10light1 }
+	frame MGDGB { light gadget10light2 }
+}
+
+//energykit item light
+//------------------------------------------------------------------------------
+pointlight EnergyKitLight {
+	color 0.0 0.8 0.2
+    size 16
+}
+
+object wosEnergyKit {
+	Frame MENKB { Light EnergyKitLight }
+}
+object wosEnergyPack {
+	frame CPACB { light EnergyKitLight }
+}
+object wosenergypod {
+	frame BRY1B { light EnergyKitLight }
+}
+object MM_ammoCrate_01 {
+	frame DUMMB { light EnergyKitLight }
+}
+object shoulderGunMag_item {
+	frame DUMMB { light EnergyKitLight }
+}
+//------------------------------------------------------------------------------
+
+//  deusEx lights definition  //////////////////////////////////////////////////
+pointlight lightlamp1 {
+	color 0.9 0.8 0.0
+	size 32
+	offset 0 20 0
+}
+pointlight lightlamp3 {
+	color 1.0 0.9 0.4
+	size 32
+	offset 0 10 0
+}
+////////////////////////////////////////////////////////////////////////////////

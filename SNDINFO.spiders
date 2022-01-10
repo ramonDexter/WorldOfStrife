@@ -1,0 +1,193 @@
+// SPIDERS //
+//=======================================================//
+
+misc/secret 			DSSECRET
+misc/blank				DSBLANK
+
+//=======================================================//
+//														 //
+// Enemy Sounds											 //
+//														 //
+//=======================================================//
+
+//Small Spiders//
+
+$Random SSpiders/Active { ACC1 ACC2 ACC3 }	
+ACC1 					DSSSACT1
+ACC2					DSSSACT2
+ACC3					DSSSATT3
+					
+$Random SSpiders/Attack	{ ATT1 ATT2 ATT3 }	
+ATT1					DSSSATK1
+ATT2					DSSSATK2
+ATT3					DSSSATK3
+
+$Random SSpiders/Death { DDT1 DDT2 DDT3 }
+DDT1					DSSSDTH1
+DDT2					DSSSDTH2
+DDT3					DSSSDTH3
+
+//=======================================================//
+
+//Medium Spiders//
+
+Spiders/Invis			DSINVIS
+Spiders/Explode			DSSPEXP
+Spiders/Attack			DSSPIATK
+Spiders/Sight			DSSPISEE
+Spiders/Grunt			DSSPIACT
+Spiders/Active			DSSPIWLK
+Spiders/Pain			DSSPIHRT
+
+$Random Spiders/Aciddth { ADETH1 ADETH2 } //Acid Ball death.
+ADETH1					DSACID1
+ADETH2					DSACID2
+
+$Random Spiders/Death { DETH1 DETH2 DETH3 }
+DETH1					DSSPIDT1
+DETH2					DSSPIDT2
+DETH3					DSSPIDT3
+//========================//=============================//
+
+//Special Spider Sounds//
+
+$Random USpiders/Death	{ UDTH1 UDTH2 }
+UDTH1					DSMSDTH1
+UDTH2					DSMSDTH2
+
+$Random USpiders/See	{ USEE1 USEE2 }
+USEE1					DSMSSEE1
+USEE2					DSMSSEE2
+
+$Random USpiders/Attack	{ UATK1 UATK2 }
+UATK1					DSMSATK1
+UATK2					DSMSATK2
+//========================//=============================//
+
+//Big Spiders//
+
+Bspiders/Sight			DSBSPACT
+Bspiders/Pain			DSBSPHRT
+
+$Random Bspiders/Death { DET1 DET2 DET3 }
+DET1					DSBSPDT1
+DET2					DSBSPDT2
+DET3					DSBSPDT3
+
+//========================//=============================//
+
+//Enemy Cyber Spiders
+
+CyberSP/sight			DSRBSEE
+CyberSP/death			DSRBDTH
+CyberSP/walk			DSRBWLK
+Spiders/Robot			DSROBOT
+Spiders/Robot2			DSROBOT2
+Spiders/RobotPain		DSRBPIN
+weapons/CyberMG3		DSMG3FR
+
+// Strife Stalker
+
+stalker/sight			dsstksee
+stalker/attack			dsstkatk
+stalker/pain			dsstkatk
+stalker/death			dsstkdth
+stalker/active			dsstksee
+
+//========================//=============================//
+ 
+//Hexen II spiders (From DBThanatos's Aeons of Death)
+hx2spider/bite			h2spbite
+hx2spider/death			h2spdeth
+hx2spider/pain			h2sppain
+hx2spider/step			h2spstep
+
+//========================//=============================//
+
+// Powerslave/Exhumed Scorpion
+
+SScorpion/Pain			DSSCPAIN
+SScorpion/Death			DSSCDETH
+
+//Hexen 2 Scorpions
+hx2scorpion/sight		h2scsit
+hx2scorpion/active		h2scact
+hx2scorpion/claw		h2scclaw
+hx2scorpion/tail		h2sctail
+hx2scorpion/pain		h2scpain
+hx2scorpion/death		h2scdie
+
+//========================//=============================//
+
+// Small wasps sounds
+
+Spiders/Flying			DSFSPFLY
+Spiders/FlyingATK		DSFSPATK
+Spiders/FlyingDTH		DSFSPDTH
+
+// Big Wasps Sounds
+
+Wasps/Flying			DSWSFLY1
+
+$Random Wasps/Attack { WAT1 WAT2 WAT3 WAT4 WAT5 }
+WAT1					DSWSATK1
+WAT2					DSWSATK2
+WAT3					DSWSATK3
+WAT4					DSWSATK4
+WAT5					DSWSATK5
+
+$Random Wasps/Pain { WHT1 WHT2 WHT3 WHT4 WHT5 }
+WHT1					DSWSHRT1
+WHT2					DSWSHRT2
+WHT3					DSWSHRT3
+WHT4					DSWSHRT4
+WHT5					DSWSHRT5
+
+$Random Wasps/Death { WDT1 WDT2 WDT3 WDT4 }
+WDT1					DSWSDTH1
+WDT2					DSWSDTH2
+WDT3					DSWSDTH3
+WDT4					DSWSDTH4
+
+// Killmaat Queen
+
+kilmaat/see				DSKMQSEE
+kilmaat/pain			DSKMQPIN
+kilmaat/death			DSKMQDTH
+kilmaat/goreexplosion 	DSKQSLOP
+
+//========================//=============================//
+
+// Turok 2 Sounds (some spiders and some wasps use them) //
+
+//========================//=============================//
+
+$random T2Spiders/Death { T2Spiders/Death1 T2Spiders/Death2 T2Spiders/Death3 T2Spiders/Death4 T2Spiders/Death5 }
+$random T2spiders/See 	{ T2spiders/See1 T2spiders/See2 T2spiders/See3 T2spiders/See4 T2spiders/See5 }
+$random T2Spiders/pain	{ T2Spiders/Pain1 T2Spiders/Pain2 T2Wasps/Attack1 T2Wasps/Attack2 }
+$random T2Wasps/Attack 	{ T2Wasps/Attack1 T2Wasps/Attack2 }
+$random T2Wasps/Death 	{ T2Wasps/Death1 T2Wasps/Death2 }
+$random T2Wasps/Pain 	{ T2Wasps/Pain1 T2Wasps/Pain2 }
+
+T2spiders/See1			DST2SPS1
+T2spiders/See2 			DST2SPS2
+T2spiders/See3 			DST2SPS3
+T2spiders/See4 			DST2SPS4
+T2spiders/See5 			DST2SPS5
+T2Spiders/Pain1 		DST2SPP1
+T2Spiders/Pain2 		DST2SPP2
+T2Spiders/Death1 		DST2SPD1
+T2Spiders/Death2 		DST2SPD2
+T2Spiders/Death3 		DST2SPD3
+T2Spiders/Death4 		DST2SPD4
+T2Spiders/Death5 		DST2SPD5
+
+T2Wasps/Attack1 		DST2WSS1
+T2Wasps/Attack2 		DST2WSS2
+T2Wasps/Pain1 			DST2WSP1
+T2Wasps/Pain2 			DST2WSP2
+T2Wasps/Death1 			DST2WSD1
+T2Wasps/Death2 			DST2WSD2
+
+//End of SNDINFO.
+//=======================================================//

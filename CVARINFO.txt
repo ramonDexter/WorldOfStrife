@@ -1,0 +1,186 @@
+//  Droplets  //////////////////////////////////////////////////////////////////
+server float blood_rand = 1.0;
+server float blood_size = 1.0;
+server float blood_alpha = 0.75;
+server float blood_grav = 1.0;
+server int blood_amt = 1;
+server bool blood_pools = false;
+server bool blood_gibs = false;
+server bool blood_chunky = false;
+server bool blood_alwaysgib = false;
+server bool blood_splash = false;
+server bool blood_mist = true;
+////////////////////////////////////////////////////////////////////////////////
+
+//  Tilt++ CVars  //////////////////////////////////////////////////////////////
+// Strafe tilting
+server bool sv_strafetilt = true;
+server bool sv_strafetiltreversed = false;
+server float sv_strafetiltspeed = 1.0;
+server float sv_strafetiltangle = 0.5;
+// Movement tilting
+server bool sv_movetilt = true;
+server float sv_movetiltspeed = 15.000;
+server float sv_movetiltangle = 0.015;
+server float sv_movetiltscalar = 0.5;
+// Underwater tilting
+server bool sv_underwatertilt = true;
+server float sv_underwatertiltspeed = 0.8;
+server float sv_underwatertiltangle = 0.2;
+server float sv_underwatertiltscalar = 1.0;
+// Death tilting
+server bool sv_deathtilt = true;
+////////////////////////////////////////////////////////////////////////////////
+
+//  hookshot  //////////////////////////////////////////////////////////////////
+Server NoArchive Bool sv_allowhookshot = True;
+////////////////////////////////////////////////////////////////////////////////
+
+//  custom hud  ////////////////////////////////////////////////////////////////
+server bool sv_infoHud = true;
+server bool sv_enemyHealthHUD = false;
+server bool sv_compass = false;
+////////////////////////////////////////////////////////////////////////////////
+
+//  steve's flashlight mod  ////////////////////////////////////////////////////
+// <scope> [noarchive] [cheat] [latch] <type> <name> [= <defaultvalue>];
+
+server color flashlight_color = "FF FF FF";
+server int flashlight_intensity = 128;
+
+server float flashlight_inner = 12.0;
+server float flashlight_outer = 26.0;
+
+server int flashlight_location = 0;
+////////////////////////////////////////////////////////////////////////////////
+
+//  use2pickup  ////////////////////////////////////////////////////////////////
+server bool usetopickup_fulluserange = true;
+server int usetopickup_scanfreq = 1;
+user bool usetopickup_enabled = true;
+user color usetopickup_highlight_color = "bb cb f7";
+user float usetopickup_highlight_opacity = 1;
+user float usetopickup_highlight_opacity_unfocused = .4;
+user float usetopickup_highlight_range = 160;
+user float usetopickup_fadeintime = .2;
+user float usetopickup_fadeouttime = .4;
+user float usetopickup_pickupdelay = .2;
+////////////////////////////////////////////////////////////////////////////////
+
+
+/*
+//extended conversation
+//------------------------------------------------------------------------------
+server noarchive int g_activecolor = 0xDDAA00;
+server noarchive int g_inactivecolor = 0x444444;
+server noarchive int g_altcolor = 0x00AA00;
+//------------------------------------------------------------------------------
+*/
+
+
+//  hellscape navigator  ///////////////////////////////////////////////////////
+// 0 - footsteps
+// 1 - circle
+// 2 - arrow
+// 3 - off
+user int    m8f_hn_marker_type         = 1;
+user int    m8f_hn_marker_spawn_period = 20;  // tics
+user int    m8f_hn_marker_lifetime     = 300; // seconds
+user float  m8f_hn_marker_alpha        = 1.0;
+user bool   m8f_hn_marker_forever      = false;
+user float  m8f_hn_marker_scale        = 1.0;
+user bool   m8f_hn_mark_start          = false;
+server float  m8f_hn_quest_marker_scale  = 0.5;
+server string m8f_hn_sign_note1;
+server string m8f_hn_sign_note2;
+server string m8f_hn_sign_note3;
+server string m8f_hn_area_name;
+server bool   m8f_hn_sign_clear_after_make = false;
+server bool   m8f_hn_sign_add_time         = true;
+server bool   m8f_hn_sign_shootable        = true;
+server float  m8f_hn_area_radius           = 500.0;
+server int    m8f_hn_sign_type             = 0;
+server float  m8f_hn_sign_map_scale        = 1.0;
+server bool   m8f_hn_sign_with_pointer     = true;
+user string m8f_hn_decal_name1;
+user string m8f_hn_decal_name2;
+user int    m8f_hn_print_color;
+user float m8f_hn_compass_y          = 0.0;
+user float m8f_hn_compass_x          = 0.73;
+user bool  m8f_hn_compass_level_name = false;
+user bool  m8f_hn_compass_show       = false;
+user bool  m8f_hn_show_area          = false;
+user bool  m8f_hn_show_grid_coords   = false;
+user bool  m8f_hn_compass_automap    = false;
+user float m8f_hn_compass_scale      = 2.0;
+user float m8f_hn_compass_degrees    = 195.0;
+user bool  m8f_hn_hide_auto_names    = true;
+user int   m8f_hn_compass_style      = 0;
+user bool  m8f_hn_compass_under      = false;
+user bool  m8f_hn_show_explored      = false;
+user bool  m8f_hn_show_switches      = false;
+user bool  m8f_hn_text_separate      = false;
+user float m8f_hn_text_x             = 0.5;
+user float m8f_hn_text_y             = 0.1;
+user bool  m8f_hn_show_access        = false;
+user bool  m8f_hn_show_level_name    = false;
+user bool  m8f_hn_reveal_when_explored = false;
+user bool  m8f_hn_reveal_scanner       = false;
+user bool  m8f_hn_reveal_on_start      = false;
+user bool  m8f_hn_scanner_start        = false;
+user int   m8f_hn_n_translocator          = 0;
+user int   m8f_hn_n_translocator_explored = 0;
+user int   m8f_hn_n_tunneling             = 0;
+user int   m8f_hn_n_tunneling_explored    = 0;
+user bool  m8f_hn_auto_switch_enabled     = false;
+user bool  m8f_hn_auto_switch_mark        = true;
+user bool  m8f_hn_show_speed = false;
+user bool m8f_hn_shootable_switches = false;
+user bool m8f_hn_shootable_exit_switches = false;
+user bool m8f_hn_crumbs_enabled = false;
+user bool m8f_hn_exit_highlight_enabled = false;
+user float m8f_hn_speedometer_scale = 2;
+user float m8f_hn_speedometer_x     = 0.5;
+user float m8f_hn_speedometer_y     = 0.6;
+////////////////////////////////////////////////////////////////////////////////
+
+//  Universal Sway  ////////////////////////////////////////////////////////////
+user bool ws_disablefire = false;
+user bool ws_bobonly = false;
+user bool ws_nobobsway = false;
+user bool ws_vertextend = false;
+user bool ws_extendready = false;
+user bool ws_inversevert = false;
+user bool ws_crouchinversevert = false;
+user float ws_vertscale = 1;
+user float ws_crouchvertscale = 1;
+user bool ws_swayhinverse = false;
+user bool ws_swayhcumulative = false;
+user float ws_swayhcrouchscale = 1;
+user float ws_swayhscale = 1;
+user float ws_swayhspeed = 2;
+user float ws_swayhaccuracy = 3;
+user bool ws_swayvinverse = false;
+user bool ws_swayvcumulative = false;
+user float ws_swayvcrouchscale = 1;
+user float ws_swayvscale = 1;
+user float ws_swayvspeed = 2;
+user float ws_swayvaccuracy = 3;
+user bool ws_nohmove = false;
+user bool ws_novmove = false;
+user bool ws_nofmove = false;
+////////////////////////////////////////////////////////////////////////////////
+
+//  nash HP bar  ///////////////////////////////////////////////////////////////
+user bool nashhpbar_enable = true;
+////////////////////////////////////////////////////////////////////////////////
+
+//  footsetps  /////////////////////////////////////////////////////////////////
+server int fs_enabled = 1;
+server float fs_volume_mul = 1.0;
+server float fs_delay_mul = 1.0;
+////////////////////////////////////////////////////////////////////////////////
+
+//  lowdetail shader  //////////////////////////////////////////////////////////
+server bool gl_lowdetail = false;
+////////////////////////////////////////////////////////////////////////////////

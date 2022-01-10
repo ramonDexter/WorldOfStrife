@@ -1,0 +1,12 @@
+#library "quicktravel"
+#include "zcommon.acs"
+
+//QuickTravel Device
+//==------------------------------------------------------------------------------------------==
+script "quickTravelNavrat" (void) {
+	Teleport(4022, 0, 0);
+	Thing_Remove(40204);
+	Delay(2);
+	Thing_Remove(4022);
+}
+//==------------------------------------------------------------------------------------------==

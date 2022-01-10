@@ -1,0 +1,14 @@
+hardwareshader postprocess scene {
+	Name "lowdetail"
+	Shader "shaders/lowdetail.fp" 330
+}
+// Pixelated film grain shader
+// Ported by Nash Muhandes
+// See shader file for full credits
+HardwareShader PostProcess scene {
+	Name "filmgrainshader"
+	Shader "shaders/FilmGrain.fp" 330
+	Uniform float timer
+	Uniform float amount
+	Uniform float pixelSize
+}

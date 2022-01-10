@@ -1,0 +1,3 @@
+IWAD = "strife1.wad"
+STARTUPTITLE = "World of Strife"
+

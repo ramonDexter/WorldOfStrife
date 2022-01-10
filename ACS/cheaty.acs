@@ -1,0 +1,123 @@
+#library "CHEATY"
+#include "zcommon.acs"
+
+//CHEATS, GIVERS, TAKERS, UPPER, DOWNERS, SCREAMERS, LAUCHERS...ALSO A QUARTER OF RUM
+//==----------------------------------------------------------------------------------
+//cheaty jsou jako quake "impulse", akorat ze tady je to "puke"
+
+script 901 (void)
+{
+	//GiveInventory("",1);
+	GiveInventory("Targeter", 5);
+	GiveInventory("Scanner", 100);
+	GiveInventory("EnvironmentalSuit", 100);
+	GiveInventory("ShadowArmor", 100);
+	GiveInventory("",1);
+	GiveInventory("",1);
+	GiveInventory("",1);
+	
+}
+
+script 902 (void)
+{
+	GiveInventory("upgradeAccuracy", 1);
+	GiveInventory("upgradeAccuracy", 1);
+	GiveInventory("upgradeAccuracy", 1);
+	GiveInventory("upgradeAccuracy", 1);
+	GiveInventory("upgradeAccuracy", 1);
+}
+
+script 903 (void) //
+{
+	GiveInventory("UpgradeStamina", 50);
+	//GiveInventory("HealthUpgrade",1);
+	//GiveInventory("HealthUpgrade",1);
+	//GiveInventory("HealthUpgrade",1);
+	//GiveInventory("HealthUpgrade",1);
+	
+}
+
+script 904 (void)
+{
+	GiveInventory("StaffBlaster", 1);
+}
+
+script 905 (void)
+{
+	GiveInventory("StaffBlasterUpgr", 1);
+}
+
+script 9081 (void)
+{
+	GiveInventory("binder_helmet",1);
+}
+
+script 9082 (void)
+{
+	GiveInventory("inquisitor_helmet",1);
+}
+
+//'inquisitor pack' AccuracyBonus
+//--------------------------------------
+script 909 (void)
+{
+	//GiveInventory("inquisitor_helmet",1);
+    GiveInventory("AmmoSatchel",1);
+    GiveInventory("NightEyeDevice", 1);
+    GiveInventory("GrenadeExplosive", 10);
+    GiveInventory("GrenadeFire", 10);
+    GiveInventory("FlameTurret", 4);
+    GiveInventory("Flare", 30);
+    GiveInventory("Hyposprej", 7);
+    GiveInventory("Kombopack", 4);
+    GiveInventory("InstaLek", 3);
+    GiveInventory("energyPod", 200);
+    GiveInventory("MedPatch", 10);
+    GiveInventory("DeployableShieldItem", 5);
+    GiveInventory("ShieldModule", 100);
+    GiveInventory("zscshadowArmor", 100);
+    GiveInventory("zscEnvironmentalSuit",100);
+    GiveInventory("Energykit_item",5);    
+    GiveInventory("EnergyPack_item",5);
+    GiveInventory("clipofbullets",200); 
+    GiveInventory("hookshotWeapon", 1);	
+    GiveInventory("zscassaultgun", 1);
+    GiveInventory("rangerArmor2", 1);
+    GiveInventory("coin", 65536);
+	GiveInventory("binderBadge",1);
+	
+	
+	//GiveInventory("",1);
+    //GiveInventory("energyPodPack_item", 5);
+    //GiveInventory("EnergyCell", 500);
+    //GiveInventory("lampOilCan",5);
+    //GiveInventory("LampOil",100);
+	//TakeInventory("StaffBlaster", 1);
+    //GiveInventory("StaffBlasterUpgr", 1);
+    //GiveInventory("oldLantern", 1);	
+}
+//--------------------------------------
+
+//combos
+//--------------------------------------
+script 998 (void)
+{
+	ACS_execute(9081, 0);
+	ACS_execute(909, 0);
+	ACS_execute(904, 0);
+	ACS_execute(903, 0);
+	ACS_execute(902, 0);
+
+}
+script 999 (void)
+{
+	//ACS_execute(908, 0);
+	ACS_execute(909, 0);
+	ACS_execute(905, 0);
+	ACS_execute(903, 0);
+	ACS_execute(902, 0);
+}
+//--------------------------------------
+
+
+//==----------------------------------------------------------------------------------

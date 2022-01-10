@@ -1,0 +1,58 @@
+ACTOR PushBlock 25009
+{
+	//$Category "Decorations"
+	//$Title "Block (Pushable)"
+	//$Sprite PBLOA0
+
+	radius 63
+	height 128
+	MaxStepHeight 4
+	Activation THINGSPEC_NoDeathSpecial
+	+SOLID
+	+CANPASS
+	+USESPECIAL
+	+PUSHABLE
+	PushFactor 0.5
+	
+	States
+	{
+		Spawn:
+		PBLO A -1
+		Stop
+	}
+}
+
+ACTOR Uplink 25010
+{
+	//$Category "Decorations"
+	//$Title "Uplink"
+	//$Sprite ULNKA0
+
+	radius 16
+	height 168
+	+SOLID
+	
+	States
+	{
+		Spawn:
+		ULNK A -1
+		Stop
+	}
+}
+
+ACTOR HG_core_1 25011
+{
+	//$Category "Decorations"
+	//$Title "Core"
+	
+	+Solid
+	radius 12
+	height 38
+	
+	States
+	{
+		Spawn:
+			HGCR A -1
+			Stop
+	}
+}

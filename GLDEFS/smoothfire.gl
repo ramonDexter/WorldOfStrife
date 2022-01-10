@@ -1,0 +1,30 @@
+
+pointlight EMBER_O
+	{
+	color 0.5 0.3 0.1
+	size 3
+	}
+
+pointlight EMBER_R
+	{
+	color 0.5 0.1 0.1
+	size 3
+	}
+
+pointlight EMBER_G
+	{
+	color 0.1 0.5 0.1
+	size 3
+	}
+
+pointlight EMBER_B
+	{
+	color 0.1 0.1 0.5
+	size 3
+	}
+
+pointlight EMBER_P
+	{
+	color 0.5 0.1 0.5
+	size 3
+	}

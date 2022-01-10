@@ -1,0 +1,10 @@
+#library "tools"
+#include "zcommon.acs"
+
+script 11001 (void)
+{
+	if(CheckActorInventory(1337, "map05token"))
+	{
+		Print(s:"TOKEN!");
+	}
+}

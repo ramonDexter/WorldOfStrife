@@ -1,0 +1,256 @@
+#library "wosfncs"
+#include "zcommon.acs"
+
+//Functions
+//===============================================================================================
+//script "polyDRswing_Right" (int poly, int spd)
+//script "polyDRswing_Right" (int poly, int spd)
+/*
+SOA_LockedpolyDoor_Right(int poly, int spd, str inv_key)
+SOA_LockedpolyDoor_Left(int poly, int spd, str inv_key)
+SOA_LockedDoor(int doorID, str inv_key)
+*/
+
+function void SOA_LockedpolyDoor_Right(int poly, int spd, str inv_key)
+{
+
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		ACS_NamedExecuteAlways("polyDRswing_Right", 0, poly, spd);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void SOA_LockedpolyDoor_Left(int poly, int spd, str inv_key)
+{
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		ACS_NamedExecuteAlways("polyDRswing_Left", 0, poly, spd);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void SOA_LockedDoor(int doorID, str inv_key)
+{
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		Generic_Door(doorID, 16, 0, 105, 0);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void printSprite(str msgSprite, int msgID, int msgX, int msgY, int delayX)
+{
+    SetFont(msgSprite);
+    HudMessageBold(s:"A"; HUDMSG_PLAIN, msgID, CR_UNTRANSLATED, msgX, msgY, delayX);
+}
+
+function void eraseHudmsg(int msgID)
+{
+	HudMessageBold(s:""; HUDMSG_PLAIN, msgID, CR_UNTRANSLATED, 0, 0, 0);
+}
+
+function void hudMsgCenter(str msgText,int msgID, int coordY, int delayX)
+{
+	HUDMessageBold(s:msgText; HUDMSG_PLAIN, msgID, CR_Yellow, 0.5, coordY, delayX);
+}
+
+function void questIndicator (
+	str QuestMessage, //quest message text
+	int msgID1, //messageID for destroying the message
+	int stage
+) {
+	if ( stage == 1 ) {
+		SetFont("BIGFONT");
+		HUDMessageBold(s:"QUEST STARTED"; HUDMSG_PLAIN, msgID1, CR_Yellow, 0.5, 0.35, 3.0);
+	} else if ( stage == 2 ) {
+		SetFont("BIGFONT");
+		HUDMessageBold(s:"QUEST PROGRESS"; HUDMSG_PLAIN, msgID1, CR_Yellow, 0.5, 0.35, 3.0);
+	} else if ( stage == 3 ) {
+		SetFont("BIGFONT");
+		HUDMessageBold(s:"QUEST FINISHED"; HUDMSG_PLAIN, msgID1, CR_Yellow, 0.5, 0.35, 3.0);
+	}
+	SetFont("SMALLFONT");
+	HUDMessageBold(s:QuestMessage; HUDMSG_PLAIN, (msgID1+1), CR_Yellow, 0.5, 0.45, 3.0);
+}
+function void eraseQuestIndicator (int msgID1) {
+	HudMessageBold(s:""; HUDMSG_PLAIN, msgID1, CR_UNTRANSLATED, 0, 0, 0);
+	HudMessageBold(s:""; HUDMSG_PLAIN, (msgID1+1), CR_UNTRANSLATED, 0, 0, 0);
+}
+
+function void questStart (
+	str questText //quest Text
+) {
+	SetFont("BIGFONT");
+	HUDMessageBold(s:"QUEST STARTED"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+	SetFont("SMALLFONT");
+	HUDMessageBold(s:questText; HUDMSG_PLAIN, 565, CR_Yellow, 0.5, 0.45, 3.0);
+}
+function void questProgress (
+	str questText
+) {
+	SetFont("BIGFONT");
+	HUDMessageBold(s:"QUEST PROGRESS"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+	SetFont("SMALLFONT");
+	HUDMessageBold(s:questText; HUDMSG_PLAIN, 565, CR_Yellow, 0.5, 0.45, 3.0);
+}
+function void questCompleted  (
+	str questText
+) {
+	SetFont("BIGFONT");
+	HUDMessageBold(s:"QUEST COMPLETED"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+	SetFont("SMALLFONT");
+	HUDMessageBold(s:questText; HUDMSG_PLAIN, 565, CR_Yellow, 0.5, 0.45, 3.0);
+}
+
+function void displayQuest (
+	str questText,
+	int phase
+) {
+	switch( phase ) {
+		case 1:
+			SetFont("BIGFONT");
+			HUDMessageBold(s:"QUEST STARTED"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+		break;
+		case 2:
+			SetFont("BIGFONT");
+			HUDMessageBold(s:"QUEST PROGRESS"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+		break;
+		case 3:
+			SetFont("BIGFONT");
+			HUDMessageBold(s:"QUEST COMPLETED"; HUDMSG_PLAIN, 555, CR_Yellow, 0.5, 0.35, 3.0);
+		break;
+	}
+	SetFont("SMALLFONT");
+	HUDMessageBold(s:questText; HUDMSG_PLAIN, 565, CR_Yellow, 0.5, 0.45, 3.0);
+}
+
+//Custom menu functions
+//==--------------------------------------------------==
+function void displayMenuHeader(str headerText)
+{
+	SetFont("SMALLFONT");
+    HUDMessage(s:headerText;
+			HUDMSG_PLAIN, 1, CR_GREEN, 0.5, 0.3, 0.0);
+    HUDMessage(s:"Use 'weapon state key1' to cycle through options\nUse 'weapon state key2' to select an option";
+			HUDMSG_PLAIN, 2, CR_Yellow, 0.5, 0.36, 0.0);
+}
+
+function void displayIndicator(int msgNr, int coordX, int coordY)
+{
+	SetFont("BigFont");
+	//Selection indicator (At "OPEN DOOR" by default)
+    HUDMessageBold(s:">";
+			HUDMSG_PLAIN, msgNr, CR_RED, coordX, coordY, 0.0);
+}
+
+function void choiceText(str choiceTxt, int msgNr, int coordX, int coordY)
+{
+	SetFont("SMALLFONT");
+	HUDMessage(s:choiceTxt;
+			HUDMSG_PLAIN, msgNr, CR_WHITE, coordX, coordY, 0.0);
+
+}
+//==--------------------------------------------------==
+
+//Original code by Isle
+//sprite - passing -1 will not draw sprite
+//must be in loop, so it redraws
+/*
+sample script:
+----------------------
+script 1234 (void)
+{
+	while(true)
+	{
+		HudMessageOnActor(1234, 5566, 0, 0, 0, 0, 1024, -1, "OBJECT", 35*10, "CR_GOLD");
+		delay(1);
+	}
+}
+*/
+function void HudMessageOnActor(int tid, int msgID, int hudX, int hudY, int xOffset, int yOffset, int range, str sprite, str text, int holdTime, str colour)
+{
+
+	int dist, angle, vang, pitch, x, y;
+
+	if (holdTime == 0) { holdTime = 0.1; }
+	if (hudX == 0) { hudX = 640; }
+	if (hudY == 0) { hudY = 480; }
+
+	if(sprite != -1)
+	{
+
+		SetFont(sprite);
+		text = "A";
+
+	}
+
+	SetHudSize(hudX, hudY, 1);
+	x = GetActorX(tid) - GetActorX(0);
+	y = GetActorY(tid) - GetActorY(0);
+
+	vang = VectorAngle(x,y);
+	angle = (vang - GetActorAngle(0) + 1.0) % 1.0;
+
+	if(((vang+0.125)%0.5) > 0.25) dist = FixedDiv(y, sin(vang));
+	else dist = FixedDiv(x, cos(vang));
+
+	if ((angle < 0.23 || angle > 0.85) && (dist >> 16) < range)
+	{
+
+		if (GetActorPitch(0) >= -0.5 && GetActorPitch(0) <= 0.5)
+		{
+
+			pitch = VectorAngle(dist, GetActorZ(tid) - (GetActorZ(0) + GetActorViewHeight(0)));
+			pitch += FixedMul(GetActorPitch(0), 1.2) % 1.0;
+
+			if ((hudX/2) * sin(angle) != 0 && cos(angle) != 0 && (hudX/2) * sin(pitch) != 0 && cos(pitch) != 0)
+			{
+
+				x = hudX/2 - ((hudX/2) * sin(angle) / cos(angle));
+				y = hudY/2 - ((HUDX/2) * sin(pitch) / cos(pitch));
+
+				x+=xOffset;
+				y+=yOffset;
+
+				HudMessage(l:text; HUDMSG_PLAIN, msgID, colour, (x << 16), (y << 16), holdTime);
+
+			}
+
+		}
+
+	}
+
+}
+//===============================================================================================
+
+//  ACS MENU UI functions  /////////////////////////////////////////////////////
+function void drawUIheader(str UImsg, int UIid, int UIclr, int UIx, int UIy) {
+    setFont("BIGFONT");
+    HUDMessage(s:UImsg; HUDMSG_PLAIN, UIid, UIclr, UIx, UIy, 0.0);
+}
+function void drawUItext(str UImsg, int UIid, int UIclr, int UIx, int UIy) {
+    setFont("SMALLFONT");
+    HUDMessage(s:UImsg; HUDMSG_PLAIN, UIid, UIclr, UIx, UIy, 0.0);
+}
+function void drawUIindicator(int UIid, int UIclr, int INDx, int INDy) {
+    setFont("SMALLFONT");
+    HUDMessage(s:">>";
+    HUDMSG_PLAIN, UIid, UIclr, INDx, INDy, 0.0);
+}
+function void clearUI(int UIid) {
+    HUDMessage(s:""; 0, UIid, 0, 0, 0, 0);
+}
+////////////////////////////////////////////////////////////////////////////////

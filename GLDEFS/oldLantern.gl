@@ -1,0 +1,42 @@
+//flashlight
+pointlight FLASHLIGHT2
+{
+        color 0.7 0.7 0.6
+        size 64
+        offset 0 0 0
+}
+
+pointlight FLASHLIGHT2_2
+{
+        color 0.7 0.7 0.6
+        size 56
+        offset 0 0 0
+}
+
+
+
+pulselight Lantern1
+{
+color 1.0 1.0 0.0
+size 120
+secondarySize 140
+interval 0.3
+offset 0 36 0
+}
+pulselight Lantern2
+{
+color 1.0 0.7 0.2
+size 40
+secondarySize 45
+interval 0.3
+offset 0 36 0
+}
+
+Object LanternGlow
+{
+  frame TNT1 { light Lantern1 }
+}
+Object LanternGlow2
+{
+  frame TNT1 { light Lantern2 }
+}

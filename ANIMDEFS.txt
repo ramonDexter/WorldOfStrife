@@ -1,0 +1,329 @@
+////////////////////////////////////////////////////////////////////////////////
+/////////////////////  World of Strife ANIMDEFS file  //////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//   camera  ///////////////////////////////////////////////////////////////////
+CAMERATEXTURE CAMTX01 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX02 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX03 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX04 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX05 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX06 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX07 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX08 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX09 64 64 fit 32 32 worldpanning
+CAMERATEXTURE CAMTX10 64 64 fit 32 32 worldpanning
+////////////////////////////////////////////////////////////////////////////////
+
+//  flats  /////////////////////////////////////////////////////////////////////
+flat X_009 range X_011 tics 8
+flat X_005 range X_008 tics 8
+flat X_001 range X_004 tics 8
+Flat SWATER1 Range SWATERG Tics 2
+////////////////////////////////////////////////////////////////////////////////
+
+//  textures  //////////////////////////////////////////////////////////////////
+texture CMP_12_1 range CMP_12_4 tics 6
+texture CMP_10_1 range CMP_10_4 tics 6
+texture CMP_11_1 range CMP_11_3 tics 6
+texture CMP_13_1 range CMP_13_4 tics 6
+texture CMP_14_1 range CMP_14_4 tics 6
+texture CMP_15_1 range CMP_15_4 tics 6
+texture CMP_16_1 range CMP_16_3 tics 6
+texture CMP_2_1 range CMP_2_3 tics 6
+texture CMP_3_2 range CMP_3_4 tics 6
+texture CMP_4_1 range CMP_4_3 tics 6
+texture CMP_5_1 range CMP_5_3 tics 6
+texture CMP_6_1 range CMP_6_3 tics 6
+texture CMP_7_1 range CMP_7_3 tics 6
+texture CMP_8_1 range CMP_8_4 tics 6
+texture CMP_9_1 range CMP_9_4 tics 6
+texture ANCP2_1 range ANCP2_3 tics 6
+texture ANCP3_1 range ANCP3_2 tics 6
+texture ANCP4_1 range ANCP4_2 tics 6
+texture F_WFAL1 range F_WFAL4 tics 6
+texture ANCP6_1 range ANCP6_3 tics 6
+texture ANCP5_1 range ANCP5_3 tics 6
+texture ANCP4_1 range ANCP4_2 tics 6
+texture ANCP2_1 range ANCP2_3 tics 6
+texture ANCP1_1 range ANCP1_3 tics 6
+texture P_5COMP1 range P_5COMP2 tics 15
+texture SURGUNT1 range SURGUNT2 tics 6
+
+texture WATRMSL1 range WATRMSL8 tics 3
+texture WATRSSL1 range WATRSSL8 tics 3
+
+switch LRSW1_0 on sound switches/bolt pic LRSW1_1 tics 0
+
+
+//  system shock animated doors  ///////////////////////////////////////////////
+animateddoor  SYSD1_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD1_1 
+		pic SYSD1_2
+		pic SYSD1_3 
+		pic SYSD1_4 
+		pic SYSD1_5  
+		pic SYSD1_6 
+		pic SYSD1_7
+	
+animateddoor  SYSD2_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD2_1 
+		pic SYSD2_2
+		pic SYSD2_3 
+		pic SYSD2_4 
+		pic SYSD2_5  
+		pic SYSD2_6 
+		pic SYSD2_7 
+		pic SYSD2_8
+
+animateddoor  SYSD3_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD3_1 
+		pic SYSD3_2
+		pic SYSD3_3 
+		pic SYSD3_4 
+		pic SYSD3_5  
+		pic SYSD3_6 
+		pic SYSD3_7 
+		pic SYSD3_8
+
+animateddoor  SYSD4_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD4_1 
+		pic SYSD4_2
+		pic SYSD4_3 
+		pic SYSD4_4 
+		pic SYSD4_5  
+		pic SYSD4_6 
+		pic SYSD4_7 
+		pic SYSD4_8
+
+animateddoor  SYSD5_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD5_1 
+		pic SYSD5_2
+		pic SYSD5_3 
+		pic SYSD5_4 
+		pic SYSD5_5  
+		pic SYSD5_6
+
+animateddoor  SYSD6_1
+	opensound DoorOpenAirlock
+	closesound DoorCloseAirlock
+		pic SYSD6_1 
+		pic SYSD6_2
+		pic SYSD6_3 
+		pic SYSD6_4 
+		pic SYSD6_5  
+		pic SYSD6_6
+
+animateddoor  SYSD7_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD7_1 
+		pic SYSD7_2
+		pic SYSD7_3 
+		pic SYSD7_4 
+		pic SYSD7_5  
+		pic SYSD7_6 
+		pic SYSD7_7 
+		pic SYSD7_8	
+
+animateddoor  SYSD8_1
+	opensound DoorOpenAirlock
+	closesound DoorCloseAirlock
+		pic SYSD8_1 
+		pic SYSD8_2
+		pic SYSD8_3 
+		pic SYSD8_4 
+		pic SYSD8_5  
+		pic SYSD8_6 
+		pic SYSD8_7 
+
+animateddoor  SYSD9_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSD9_1 
+		pic SYSD9_2
+		pic SYSD9_3 
+		pic SYSD9_4 
+		pic SYSD9_5  
+		pic SYSD9_6 
+		pic SYSD9_7 
+		pic SYSD9_8 
+
+animateddoor  SYSDX_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSDX_1 
+		pic SYSDX_2
+		pic SYSDX_3 
+		pic SYSDX_4 
+		pic SYSDX_5  
+		pic SYSDX_6 
+
+animateddoor  SYSDA_1
+	opensound DoorOpenAirlock
+	closesound DoorCloseAirlock
+		pic SYSDA_1 
+		pic SYSDA_2
+		pic SYSDA_3 
+		pic SYSDA_4 
+		pic SYSDA_5  
+		pic SYSDA_6 
+		pic SYSDA_7 
+
+
+animateddoor  SYSDB_1
+	opensound DoorOpenSmallMetal
+	closesound DoorCloseSmallMetal
+		pic SYSDB_1 
+		pic SYSDB_2
+		pic SYSDB_3 
+		pic SYSDB_4 
+		pic SYSDB_5
+		pic SYSDB_6
+		pic SYSDB_7
+		pic SYSDB_8
+		
+
+animateddoor  SYSDC_1
+	opensound DoorOpenAirlock
+	closesound DoorCloseAirlock
+		pic SYSDC_1 
+		pic SYSDC_2
+		pic SYSDC_3 
+		pic SYSDC_4 
+		pic SYSDC_5  
+		pic SYSDC_6
+
+//  diabolusEX animdefs  ///////////////////////////////////////////////////////
+texture DESKC
+    pic DESKC00 tics 4
+    pic DESKC01 tics 4
+    pic DESKC02 tics 4
+    pic DESKC03 tics 4
+    pic DESKC04 tics 4
+    pic DESKC05 tics 4
+    pic DESKC06 tics 4
+    pic DESKC07 tics 4 
+
+texture HOLOB
+    pic HOLOB00 tics 3
+	pic HOLOB01 tics 3
+	pic HOLOB02 tics 3
+	pic HOLOB03 tics 3
+	pic HOLOB04 tics 3
+	pic HOLOB05 tics 3
+	pic HOLOB06 tics 3
+	pic HOLOB07 tics 3
+	pic HOLOB08 tics 3
+	pic HOLOB09 tics 3
+	pic HOLOB10 tics 3
+
+texture HOLOH
+    pic HOLOH00 tics 3
+	pic HOLOH01 tics 3
+	pic HOLOH02 tics 3
+	pic HOLOH03 tics 3
+	pic HOLOH04 tics 3
+	pic HOLOH05 tics 3
+	pic HOLOH06 tics 3
+	pic HOLOH07 tics 3
+	pic HOLOH08 tics 3
+	pic HOLOH09 tics 3
+	pic HOLOH10 tics 3
+	pic HOLOH11 tics 3
+	pic HOLOH12 tics 3
+	pic HOLOH13 tics 3
+	pic HOLOH14 tics 3
+	pic HOLOH15 tics 3
+	pic HOLOH16 tics 3
+	pic HOLOH17 tics 3
+
+texture SRVRA00
+    pic SRVRA00 tics 6
+	pic SRVRA01 tics 6
+	pic SRVRA02 tics 6
+	pic SRVRA03 tics 6
+	pic SRVRA04 tics 6
+	pic SRVRA05 tics 6
+
+switch SWTCHA on sound Switch1 pic SWTCHB tics 0
+switch SWTCHC on sound Switch1 pic SWTCHD tics 0
+switch SWTCHE on sound Switch1 pic SWTCHF tics 0
+switch SWTCHF on pic SWTCHE tics 0
+switch SWTCHG on pic SWTCHH tics 0
+switch SWTCHI on sound Switch1 pic SWTCHJ tics 0
+
+texture VENDNA00 range VENDNA03 tics 16
+
+
+texture GCVIAL1 range GCVIAL3 tics 6
+
+flat MGLAVA1 range MGLAVA3 tics 12
+
+////////////////////////////////////////////////////////////////////////////////
+/*
+switch TEXTURE 
+	on
+	sound "sound" 
+	pic TEXTURE tics 0
+	pic TEXTURE tics 0 // pokud ma switch vice obrazku nez dva	
+*/
+
+// cybermage switches //////////////////////////////////////////////////////////
+switch CMSW01
+	on sound "switch/lever" pic CMSW02 tics  0
+
+switch CMSW03
+	on sound "switch/switch" pic CMSW04 tics 0
+
+switch CMSW05
+	on sound "switch/switch" pic CMSW06 tics 0
+
+switch CMSW07
+	on sound "switch/monitor" pic CMSW08 tics 0
+
+switch CMSW09
+	on sound "switch/monitor" pic CMSW10 tics 0
+
+switch CMSW11
+	on sound "switch/switch" pic CMSW12 tics 0
+
+switch CMSW13
+	on sound "switch/lever" pic CMSW14 tics 0
+
+switch CMSW15
+	on sound "switch/lever" pic CMSW16 tics 0
+
+switch CMSW17
+	on sound "switch/lever" pic CMSW18 tics 0
+
+switch CMSW19 on sound "switch/lamp" pic CMSW20 tics 0
+switch CMSW20 off sound "switch/lamp" pic CMSW19 tics 0
+
+switch CMSW21
+	on sound "switch/lever" pic CMSW22 tics 0
+
+switch CMSW23 
+	on sound "" pic CMSW24 tics 0
+
+switch CMSW25
+	on sound "switch/monitor" pic CMSW26 tics 0
+
+switch CMSW27
+	on sound "switch/lever" pic CMSW28 tics 0
+
+switch CMSW29
+	on sound "switch/monitor" 
+	pic CMSW30 tics 3 
+	pic CMSW31 tics 0
+////////////////////////////////////////////////////////////////////////////////

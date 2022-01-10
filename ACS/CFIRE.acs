@@ -1,0 +1,103 @@
+#library "CFIRE"
+#include "zcommon.acs"
+
+script 979 (void)
+{
+	//Print(s:"Fire is burning!");
+	Thing_Remove(979);
+	GiveInventory("campfire_item", 1);
+}
+
+
+script 919 (void)
+{
+    //freeze player, so he wont run away :)
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN);
+
+    bool exit = false; //If true, player wants to exit terminal
+    int buttons;
+	
+	while(!exit)
+    {
+        SetFont("SMALLFONT");
+        HUDMessage(l:"M_BEDROLLOPTS";
+            HUDMSG_PLAIN, 231, CR_GOLD, 0.5, 0.4, 0.0);
+        HUDMessage(l:"M_BEDROLL_OPT01";
+            HUDMSG_PLAIN, 232, CR_GRAY, 0.5, 0.44, 0.0);
+		HUDMessage(l:"M_BEDROLL_OPT02";
+            HUDMSG_PLAIN, 233, CR_GRAY, 0.5, 0.47, 0.0);
+		HUDMessage(l:"M_BEDROLL_OPT03";
+            HUDMSG_PLAIN, 234, CR_GRAY, 0.5, 0.5, 0.0);
+
+        buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+
+		//sleep
+        if(buttons & BT_FORWARD)
+        {
+			if(
+				CheckACtorFloorTexture(1337, "GOOP1_1")
+				||
+				CheckACtorFloorTexture(1337, "GOOP2_1")
+				||
+				CheckACtorFloorTexture(1337, "GOOP3_1")
+				||
+				CheckACtorFloorTexture(1337, "GOOP4_1")
+				||
+				CheckACtorFloorTexture(1337, "GOOP2_1")
+				||
+				CheckACtorFloorTexture(1337, "FWATER1")
+				||
+				CheckACtorFloorTexture(1337, "X_009")
+				||
+				CheckACtorFloorTexture(1337, "X_005")
+				||				
+				CheckACtorFloorTexture(1337, "F_NUKK1")
+				||				
+				CheckACtorFloorTexture(1337, "F_MUDD1")
+				||				
+				CheckACtorFloorTexture(1337, "F_NUKA1")
+			)
+			{
+				Print(s:"\c[red]You can't sleep here!");
+				Thing_Remove(919);
+				GiveInventory("bedRoll_item", 1);
+				exit = true;
+			}
+			else
+			{
+				GiveInventory("playerIsSleeping", 1);
+				Fadeto(0, 0, 0, 1.0, 4.5);
+				Delay(35*8);
+				FadeTo(0, 0, 0, 0.0, 4.5);
+				GiveInventory("healBedroll", 100);
+				TakeInventory("playerIsSleeping", 1);
+				Delay(4);
+				Print(s:"You have slept well!");
+				exit = true;
+			}
+        }
+		//pack up bedroll
+        else if(buttons & BT_BACK)
+        {
+            Thing_Remove(919);
+            GiveInventory("bedRoll_item", 1);
+            exit = true;
+
+        }
+		//exit
+        else if(buttons & BT_JUMP)
+        {
+            exit = true;
+        }
+        Delay(3);
+    }
+
+    //erase menu hub elements
+    HUDMessage(s:""; HUDMSG_PLAIN, 231, CR_ORANGE, 0, 0, 0.0);
+    HUDMessage(s:""; HUDMSG_PLAIN, 232, CR_ORANGE, 0, 0, 0.0);
+    HUDMessage(s:""; HUDMSG_PLAIN, 233, CR_ORANGE, 0, 0, 0.0);
+    HUDMessage(s:""; HUDMSG_PLAIN, 234, CR_ORANGE, 0, 0, 0.0);
+    
+    //unfreeze player
+    SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);
+}

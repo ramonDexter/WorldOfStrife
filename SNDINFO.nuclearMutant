@@ -1,0 +1,7 @@
+nuclearMutant/sight "sounds/nuclearmutant/NMUTSIT.wav"
+nuclearMutant/active "sounds/nuclearmutant/NMUTACT.wav"
+nuclearMutant/pain "sounds/nuclearmutant/NMUTPAIN.wav"
+nuclearMutant/raiseGuns "sounds/nuclearmutant/NMUTATK.wav"
+nuclearMutant/death "sounds/nuclearmutant/NMUTDTH.wav"
+nuclearMutant/attack "sounds/nuclearmutant/NMFIRSHT.wav"
+nuclearMutant/shotx "sounds/nuclearmutant/NMFIRXPL.wav"

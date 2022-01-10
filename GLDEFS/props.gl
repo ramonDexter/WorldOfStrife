@@ -1,0 +1,509 @@
+//PROPS
+//==============================================================================
+//Doom64 Lamps
+PointLight D64A
+{
+	color 1.0 0.9 0.3
+	size 64
+	offset 0 -10 0
+}
+PointLight D64B
+{
+	color 0.5 0.5 0.3
+	size 26
+}
+PointLight D64C
+{
+	color 0.5 0.5 0.3
+	size 68
+}
+PointLight D64D
+{
+	color 0.5 0.5 0.3
+	size 38
+}
+
+Object D64Lamp1
+{
+Frame D641 { Light D64D }
+}
+
+Object D64Lamp2
+{
+Frame D642 { Light D64C }
+}
+
+Object D64Lamp3
+{
+Frame D643 { Light D64B }
+}
+
+Object D64Lamp4
+{
+Frame D644 { Light D64A }
+}
+
+//brazier light
+flickerlight2 BRZLGHT
+{
+color 1.0 0.8 0.0
+size 32
+secondarySize 76
+interval 0.1
+offset 0 48 0
+}
+
+
+//some burning objs
+object Brn-Barrel
+{
+frame BARL { light BRZLGHT }
+}
+
+object Brn-Bowl
+{
+frame BOWL { light BRZLGHT }
+}
+
+object Brn-Brazier
+{
+frame BRAZ { light BRZLGHT }
+}
+
+object TallBrazier1
+{
+frame LMPC { light BRZLGHT }
+}
+
+object TallBrazier2
+{
+frame LOGS { light BRZLGHT }
+}
+
+object TallBrazier3
+{
+frame LTRH { light BRZLGHT }
+}
+
+Object TallLamp1
+{
+Frame LAMP { Light D64C }
+}
+
+Object TallLantern
+{
+Frame LANT { Light D64C }
+}
+
+Object DecoLamp1
+{
+Frame LITE { Light D64C }
+}
+
+
+//strife pillars
+pointlight GRNSTR_LAMP
+{
+    color 0.7 0.9 0.5
+    size 56
+    offset 0 44 0
+}
+
+object GreenStrifeColumn
+{
+    frame SPIL { light GRNSTR_LAMP }
+}
+
+pointlight YELSTR_LAMP
+{
+    color 0.9 0.9 0.0
+    size 56
+    offset 0 44 0
+}
+
+object YellowStrifeColumn
+{
+    frame SPIL { light YELSTR_LAMP }
+}
+
+pointlight CYNSTR_LAMP
+{
+    color 0.7 0.8 1.0
+    size 56
+    offset 0 44 0
+}
+
+object CyanStrifeColumn
+{
+    frame SPIL { light CYNSTR_LAMP }
+}
+
+pointlight TELSTR_LAMP
+{
+    color 0.6 0.7 0.8
+    size 56
+    offset 0 44 0
+}
+
+object TealStrifeColumn
+{
+    frame SPIL { light TELSTR_LAMP }
+}
+
+pointlight REDSTR_LAMP
+{
+    color 1.0 0.3 0.3
+    size 56
+    offset 0 44 0
+}
+
+object RedStrifeColumn
+{
+    frame SPIL { light REDSTR_LAMP }
+}
+
+
+pointlight YGRSTR_LAMP
+{
+    color 0.8 0.9 0.2
+    size 56
+    offset 0 44 0
+}
+
+object YellowGreenStrifeColumn
+{
+    frame SPIL { light YGRSTR_LAMP }
+}
+
+pointlight BLUSTR_LAMP
+{
+    color 0.4 0.6 0.8
+    size 56
+    offset 0 44 0
+}
+
+object BlueStrifeColumn
+{
+    frame SPIL { light BLUSTR_LAMP }
+}
+
+pointlight BRNSTR_LAMP
+{
+    color 0.8 0.4 0.4
+    size 56
+    offset 0 44 0
+}
+
+object BrownStrifeColumn
+{
+    frame SPIL { light BRNSTR_LAMP }
+}
+
+
+//Bronze Lamps
+pointlight BRONZELAMP
+{
+    color 0.8 0.8 1.0
+    size 56
+    offset 0 44 0
+}
+
+object BronzeColumn1
+{
+    frame BLMP { light BRONZELAMP }
+}
+
+object BronzeColumn2
+{
+    frame BLMP { light BRONZELAMP }
+}
+
+object BronzeColumn2
+{
+    frame BLMP { light BRONZELAMP }
+}
+
+
+//Tech Lamps
+pointlight TLIGHT1
+{
+    color 1.0 1.0 0.8
+    size 72
+    offset 0 56 0
+}
+
+pointlight TLIGHT2
+{
+    color 1.0 1.0 0.8
+    size 72
+    offset 0 44 0
+}
+
+pointlight TLIGHT3
+{
+    color 1.0 1.0 0.8
+    size 72
+    offset 0 50 0
+}
+
+object TLamp1
+{
+    frame LAMTA { light TLIGHT1 }
+}
+
+object TLamp2
+{
+    frame LAMTB { light TLIGHT2 }
+}
+
+object TLamp3
+{
+    frame LAMTC { light TLIGHT3 }
+}
+
+
+//UAC Holograms
+////Green
+PointLight UAC1
+{
+	color 0.0 1.0 0.0
+    size 26
+}
+
+Object UACHolo1
+{
+FRAME UAC1 { light UAC1 }
+}
+Object UACHolo2
+{
+FRAME UAC1 { light UAC1 }
+}
+////Cyan
+PointLight UAC2
+{
+	color 0.0 0.3 0.5
+    size 26
+}
+
+Object UACHolo3
+{
+FRAME UAC2 { light UAC2 }
+}
+Object UACHolo4
+{
+FRAME UAC2 { light UAC2 }
+}
+////Orange
+PointLight UAC3
+{
+	color 0.5 0.3 0.0
+    size 26
+}
+
+
+
+
+//Burning Corpse
+flickerlight2 ZCorpseBurning1
+{
+	COLOR 1.0 0.7 0.1
+	Size 24
+	SecondarySize 48
+	Interval 0.01
+}
+
+Object ZCorpseBurning
+{
+	Frame WBRN
+	{
+		light ZCorpseBurning1
+	}
+}
+
+
+//Radioactive Corpses
+pointlight RaCorpse1
+{
+    color 0.0 1.0 0.0
+    size 30
+    offset 0 20 0
+}
+
+pointlight RaCorpse2
+{
+    color 0.0 1.0 0.0
+    size 30
+    offset 0 20 0
+}
+
+
+pointlight RaCorpse3
+{
+    color 0.0 1.0 0.0
+    size 30
+    offset 0 20 0
+}
+
+pointlight RaCorpse4
+{
+    color 0.0 1.0 0.0
+    size 30
+    offset 0 20 0
+}
+object RadioactiveCorpse1
+{
+    frame ZOCRA0 { light RaCorpse1 }
+}
+
+object RadioactiveCorpse2
+{
+    frame ZOCRB0 { light RaCorpse2 }
+}
+
+object RadioactiveCorpse3
+{
+    frame ZOCRC0 { light RaCorpse3 }
+}
+
+object RadioactiveCorpse4
+{
+    frame ZOCRD0 { light RaCorpse4 }
+}
+
+pulselight EnergyPodLight
+{
+	color 0 0.7 0
+	offset 0 10 0
+	size 16
+	interval 1
+}
+
+object EnergyPod
+{
+	frame ENPD { light EnergyPodLight }
+}
+
+flickerlight SvicenSmall
+{
+	color 0.9 0.8 0.1
+	size 16
+	secondarysize 8
+	chance 0.3
+	offset 0 8 0
+}
+
+object bloodSvicenSmall
+{
+	frame BCDN { light SvicenSmall }
+}
+
+
+//classic doom candle
+flickerlight doomCandle
+{
+	color 1.0 0.9 0.0
+	size 16
+	secondarysize 8
+	chance 0.2
+	offset 0 8 0
+}
+
+object Candlestick
+{
+	frame CANDA { light doomCandle }
+}
+
+//classic doom candelabra
+flickerlight doomCandelabra
+{
+	color 1.0 0.9 0.0
+	size 48
+	secondarysize 24
+	chance 0.2
+	offset 0 56 0
+}
+
+object Candelabra
+{
+	frame CBRAA { light doomCandelabra }
+}
+
+
+//classic doom burning barrel
+flickerlight doomBurningBarrel
+{
+	color 1.0 0.8 0.2
+	size 48
+	secondarysize 24
+	chance 0.2
+	offset 0 32 0
+}
+
+object BurningBarrel
+{
+	frame FCAN { light doomBurningBarrel }
+}
+
+//fires
+
+flickerlight FireSmall
+{
+	color 0.9 0.8 0.0
+	size 32
+	secondarysize 16
+	chance 0.2
+	offset 0 4 0
+}
+
+flickerlight FireMedium
+{
+	color 0.9 0.8 0.0
+	size 48
+	secondarysize 32
+	chance 0.2
+	offset 0 8 0
+}
+
+flickerlight FireLarge
+{
+	color 0.9 0.8 0.0
+	size 72
+	secondarysize 48
+	chance 0.2
+	offset 0 16 0
+}
+
+object skynetFire1
+{
+	FRAME SKF1 { light FireSmall }
+}
+
+object skynetFire2
+{
+	FRAME SKF2 { light FireMedium }
+}
+
+object skynetFire3
+{
+	FRAME SKF3 { light FireMedium }
+}
+
+object FirePitsOfHell
+{
+	FRAME FIRE { light FireLarge }
+}
+
+object FirePitSmall
+{
+	FRAME FIRE { light FireSmall }
+}
+
+object dagFireplace
+{
+	FRAME FRPL { light FireMedium }
+}
+
+//  deusEx props lights definition  ////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////

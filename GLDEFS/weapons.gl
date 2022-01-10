@@ -1,0 +1,154 @@
+//WEAPONS
+//==============================================================================
+//fg88smg light
+//------------------------------------------------------
+pointlight fg88shoot1
+{
+	color 0.9 0.7 0.0
+	size 64
+}
+object gunFlash
+{
+	frame TNT1 { light fg88shoot1 }
+}
+//------------------------------------------------------
+
+//staff
+//------------------------------------------------------
+pointlight staffShoot
+{
+	color 0 0.2 1
+	size 64
+}
+
+object staffFlash
+{
+	frame TNT1 { light staffShoot }
+}
+//------------------------------------------------------
+
+pointlight pulseShoot
+{
+	color 0 1 0.2
+	size 64
+}
+
+object pulseFlash
+{
+	frame TNT1 { light pulseShoot }
+}
+
+
+
+
+
+//cryogun ammo pulselight
+PulseLight CRYG_L
+{
+	Color 0.6 0.8 1.0
+	Size 10
+	SecondarySize 5
+	Interval 1
+	Offset 0 5 0
+}
+
+
+
+
+//impulse ammo
+pulselight ImpulseLight
+{
+	Color 0.1 1.0 0.3
+	Size 10
+	SecondarySize 5
+	Interval 1
+	Offset 0 4 0
+}
+
+
+
+pointlight STFPlight
+{
+	color 0 0.2 1
+	size 64
+}
+
+pointlight StaffShotDeathA
+{
+	color 0 0.2 1
+	size 56
+}
+
+pointlight StaffShotDeathB
+{
+	color 0 0.2 1
+	size 48
+}
+
+pointlight StaffShotDeathC
+{
+	color 0 0.2 1
+	size 40
+}
+
+pointlight StaffShotDeathD
+{
+	color 0 0.2 1
+	size 32
+}
+
+pointlight StaffShotDeathE
+{
+	color 0 0.2 1
+	size 24
+}
+
+
+
+object StaffShot
+{
+	frame STFSC { light STFPlight }
+	frame STFSD { light STFPlight }
+	frame BLTEA { light StaffShotDeathA }
+	frame BLTEB { light StaffShotDeathB }
+	frame BLTEC { light StaffShotDeathC }
+	frame BLTED { light StaffShotDeathD }
+	frame BLTEE { light StaffShotDeathE }
+}
+
+
+
+//EXPERIMENTAL//
+//PULSELIGHTS 4 PICKUP OBJS//
+//What about pulselights to "nring up" pickup objects?
+//Let's do it!
+
+pulselight BSpickupL
+{
+	color 0.1 0.2 0.9
+	size 16
+	secondarysize 8
+	interval 1
+	offset 0 2 0
+}
+
+object BlasterStaff
+{
+	frame BSPUA { light BSpickupL }
+}
+
+pulselight BSApickupL
+{
+	color 0.1 0.2 0.9
+	size 16
+	secondarysize 8
+	interval 1
+	offset 0 2 0
+}
+
+object StaffAmmo
+{
+	frame BSAMA { light BSApickupL }
+}
+
+

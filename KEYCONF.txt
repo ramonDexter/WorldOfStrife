@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////////////////////////////
+clearplayerclasses
+addplayerclass "binderPlayer"
+////////////////////////////////////////////////////////////////////////////////
+
+// WoS keyconf /////////////////////////////////////////////////////////////////
+addkeysection "World of Strife Custom Keys" wos_keysection
+
+
+AddMenuKey "ShoulderGun" shoulderGun_bind
+alias shoulderGun_bind "use shoulderGun"
+defaultbind "F" shoulderGun_bind
+
+addmenukey "Toggle Flashlight" toggleflashlight_bind 
+alias toggleflashlight_bind "pukename toggleflashlight"  
+defaultbind "G" toggleflashlight_bind
+
+addMenuKey "Toggle Journal" show_journal
+alias show_journal "pukename journal"
+DefaultBind "J" "show_journal"
+
+//AddMenuKey "Kick" +User1
+
+//addMenuKey "Throw explosive grenade" throwExplosiveGrenade
+//alias throwExplosiveGrenade "use GrenadeExplosive"
+//DefaultBind "T" "throwExplosiveGrenade"
+
+//addMenuKey "Throw Fire Grenade" throwFireGrenade
+//alias throwFireGrenade "use GrenadeFire"
+//DefaultBind "Y" "throwFireGrenade"
+
+//addMenuKey "Toggle Compass HUD" show_compass
+//alias show_compass "pukename compassComplete"
+//defaultBind "K" "show_compass"
+
+
+//addMenuKey "Toggle info HUD" toggleHUD
+//alias toggleHUD "pukename HUDswitchScript"
+//DefaultBind "I" "toggleHUD"
+
+//addMenuKey "Toggle enemy HP HUD" toggleHPhud
+//alias toggleHPhud "pukename PrintEnemyHPswitch"
+//DefaultBind "L" "toggleHPhud"
+
+AddKeySection ". . ." emptySection
+////////////////////////////////////////////////////////////////////////////////
+
+
+// Keys ////////////////////////////////////////////////////////////////////////
+
+AddKeySection "Hellscape Navigator Keys" HellscapeNavitagor
+
+AddMenuKey "Make a sign"   m8f_hn_make_sign_open
+AddMenuKey "Press Automap" +press_map
+AddMenuKey "Use and mark"  +m8f_hn_use
+AddMenuKey "Backtrack"     +m8f_hn_backtrack
+AddMenuKey "Throw Sign"    m8f_hn_throw_sign
+
+// Signs ///////////////////////////////////////////////////////////////////////
+
+alias m8f_hn_summon_wooden_sign      "summon m8f_hn_WoodenSign"
+alias m8f_hn_summon_transparent_sign "summon m8f_hn_TransparentSign"
+alias m8f_hn_summon_metal_sign       "summon m8f_hn_MetalSign"
+
+alias m8f_hn_make_sign_open   "openmenu hn_SignNoteMenu"
+alias m8f_hn_make_sign_close  "closemenu; test == $m8f_hn_sign_type 0 m8f_hn_summon_wooden_sign; test == $m8f_hn_sign_type 1 m8f_hn_summon_transparent_sign; test == $m8f_hn_sign_type 2 m8f_hn_summon_metal_sign; test $m8f_hn_sign_clear_after_make m8f_hn_make_sign_clear"
+alias m8f_hn_make_sign_cancel "closemenu"
+alias m8f_hn_make_sign_clear  "m8f_hn_sign_note1 \"\"; m8f_hn_sign_note2 \"\"; m8f_hn_sign_note3 \"\""
+alias m8f_hn_remove_signs     "netevent m8f_hn_remove_signs"
+
+// Automap /////////////////////////////////////////////////////////////////////
+
+alias +press_map "togglemap; wait 1; test == $am_overlay 1 togglemap"
+alias -press_map "togglemap"
+
+// I don't know how and why this works. Most probably this is a terrible hack.
+alias m8f_hn_close_map ""
+
+// Use /////////////////////////////////////////////////////////////////////////
+
+alias +m8f_hn_use "+use; netevent m8f_hn_use"
+alias -m8f_hn_use "-use"
+
+// Backtrack ///////////////////////////////////////////////////////////////////
+
+alias +m8f_hn_backtrack "netevent m8f_hn_backtrack_on"
+alias -m8f_hn_backtrack "netevent m8f_hn_backtrack_off"
+
+// Throwable Sign ////////////////////////////////////////////////////////////
+
+alias m8f_hn_throw_sign "netevent m8f_hn_throw_sign"

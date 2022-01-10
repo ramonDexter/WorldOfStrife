@@ -1,0 +1,136 @@
+model modelCadaver1 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps1.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+
+model modelCadaver2 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps2.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+
+model modelCadaver3 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps3.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+
+model modelCadaver4 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps4.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+
+model modelCadaver5 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps5.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model modelCadaver6 {
+	path "models/corpse/"
+	model 0 "corpse.md3"
+	skin 0 "corps6.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model severedHead1 {
+	path "models/corpse/"
+	model 0 "corpse_head.md3"
+	skin 0 "corps1.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model severedHead2 {
+	path "models/corpse/"
+	model 0 "corpse_head.md3"
+	skin 0 "corps2.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model severedHead3 {
+	path "models/corpse/"
+	model 0 "corpse_head.md3"
+	skin 0 "corps3.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model severedHead4 {
+	path "models/corpse/"
+	model 0 "corpse_head.md3"
+	skin 0 "corps4.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model severedHead5 {
+	path "models/corpse/"
+	model 0 "corpse_head.md3"
+	skin 0 "corps6.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model bodyWOhead1 {
+	path "models/corpse/"
+	model 0 "corpse_body.md3"
+	skin 0 "corps1.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model bodyWOhead2 {
+	path "models/corpse/"
+	model 0 "corpse_body.md3"
+	skin 0 "corps2.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model bodyWOhead3 {
+	path "models/corpse/"
+	model 0 "corpse_body.md3"
+	skin 0 "corps3.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model bodyWOhead4 {
+	path "models/corpse/"
+	model 0 "corpse_body.md3"
+	skin 0 "corps4.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+model bodyWOhead5 {
+	path "models/corpse/"
+	model 0 "corpse_body.md3"
+	skin 0 "corps6.png"
+	scale 1.0 1.0 1.0
+	frameindex DUMM A 0 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

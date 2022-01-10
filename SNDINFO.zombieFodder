@@ -1,0 +1,19 @@
+//zombie fodder
+//=======================================================//
+FODDERSEE1				"sounds/zombiefodder/FODDSEE1.ogg"
+FODDERSEE2				"sounds/zombiefodder/FODDSEE2.ogg"
+FODDERACT1				"sounds/zombiefodder/FODDACT1.ogg"
+FODDERACT2				"sounds/zombiefodder/FODDACT2.ogg"
+ZombieFodder/Pain		"sounds/zombiefodder/FODDPAIN.ogg"
+FODDERDIE1				"sounds/zombiefodder/FODDDIE1.ogg"
+FODDERDIE2				"sounds/zombiefodder/FODDDIE2.ogg"
+ZombieFodder/Melee 		"sounds/zombiefodder/DSCLAW.ogg"
+ZombieFodder/Soul		"sounds/zombiefodder/FODDSOUL.ogg"
+ZFlesh/Throw			"sounds/zombiefodder/FODDATK.ogg"
+ZFlesh/Miss				"sounds/zombiefodder/FODDMISS.ogg"
+ZFlesh/Hit				"sounds/zombiefodder/FODDHIT.ogg"
+
+$random ZombieFodder/Sight { FODDERSEE1 FODDERSEE2 }
+$random ZombieFodder/Active { FODDERACT1 FODDERACT2 }
+$random ZombieFodder/Death { FODDERDIE1 FODDERDIE2 }
+//=======================================================//

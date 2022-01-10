@@ -1,0 +1,8 @@
+model modelBeefSlab
+{
+	path "models/beefslab/"
+	model 0 "beefslab.md3"
+	skin 0 "beefslab.png"
+	scale 0.9 0.9 0.9
+	frameindex DUMM A 0 0
+}

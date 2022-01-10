@@ -1,0 +1,19 @@
+//==----------------------------------------------------------------------------
+
+pointlight greenFlash
+{
+	color 0.0 1.0 0.0
+	size 64
+}
+object staffFlashShort {
+	frame TNT1 { light greenFlash }
+}
+object staffFlashLong {
+	frame TNT1 { light greenFlash }
+}
+
+object redFlashShort {
+	frame TNT1 { light greenFlash }
+}
+
+//==----------------------------------------------------------------------------

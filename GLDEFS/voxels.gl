@@ -1,0 +1,200 @@
+
+//==============================================================================
+
+//VOXELS
+//==============================================================================
+//voxComp01
+pulseLight voxCompL1
+{
+    color 0.2 0.7 0.1
+    size 8
+	secondarySize 4
+	interval 1
+	offset 8 0 0
+}
+
+object voxComp01
+{
+    frame SCP1 { light voxCompL1 }
+}
+
+object voxComp02
+{
+	frame SCP2 { light voxCompL1 }
+}
+
+//pda light
+pulseLight voxPDAlight
+{
+    color 0.2 0.7 0.1
+    size 10
+	secondarySize 5
+	interval 1
+	offset 0 4 0
+}
+
+object voxPDA
+{
+	frame SPDA { light voxPDAlight }
+}
+
+//lamp1 light
+pointlight voxLamp1
+{
+    color 1.0 0.9 0
+	offset 0 16 0
+    size 32
+}
+
+pointlight bloodTableLamp
+{
+    color 1.0 0.9 0
+	offset 0 16 0
+    size 32
+}
+
+object voxBLamp1
+{
+	frame LMP1B { light bloodTableLamp }
+}
+
+object voxTableLamp1
+{
+	frame SHL2B { light voxLamp1 }
+}
+
+object voxTableLamp1ON
+{
+	frame SHL2B { light voxLamp1 }
+}
+
+
+pointLight voxLamp2
+{
+	color 1.0 1.0 1.0
+	offset 0 14 0
+	size 18
+}
+
+object voxTableLamp2
+{
+	frame SHL3B { light voxLamp2 }
+}
+
+object voxTableLamp2ON
+{
+	frame SHL3B { light voxLamp2 }
+}
+
+pointLight voxLamp3
+{
+	color 1 1 1
+	offset 5 10 0
+	size 24
+}
+
+object voxTableLamp3
+{
+	frame SHL4B { light voxLamp3 }
+}
+
+object voxTableLamp3ON
+{
+	frame SHL4B { light voxLamp3 }
+}
+
+object voxTableLamp4
+{
+	frame SHL5B { light voxLamp3 }
+}
+
+object voxTableLamp4ON
+{
+	frame SHL5B { light voxLamp3 }
+}
+
+pointlight voxD64smallLMPlight
+{
+    color 1.0 0.9 0
+	offset 0 40 0
+    size 64
+} 
+
+object voxD64SmallLamp
+{
+	frame D6L1 { light voxD64smallLMPlight }
+}
+
+pulseLight CDEVlight
+{
+	color 1.0 0.0 0.0
+	size 16
+	secondarysize 8
+	interval 1
+	offset 0 10 0
+}
+
+object voxCdevice
+{
+	frame WDEV { light CDEVlight }
+}
+
+pointlight LMPPSTlight
+{
+	color 0.8 0.8 0.0
+	size 128
+	offset 12 113 52
+}
+
+flickerlight StreetLightFlicker
+{
+	color 0.8 0.8 0
+	size 128
+	secondarysize 64
+	chance .025
+	offset 12 113 52
+}
+
+object voxLampPost
+{
+	frame SLM1 { light LMPPSTlight }
+}
+
+object voxStreetLampON
+{
+	frame STRL { light LMPPSTlight }
+}
+
+object voxStreetLampBL
+{
+	frame STRL { light StreetLightFlicker }
+}
+
+pointlight zarivka
+{
+	color 1.0 0.9 0.2
+	size 72
+	offset 0 -64 0
+}
+
+object voxKitchenLight
+{
+	frame SKTL { light zarivka }
+}
+
+object voxZarivka
+{
+	frame SKTL { light zarivka }
+}
+
+pointlight walllight
+{
+	color 0.8 1.0 0.15
+	size 32
+	offset 0 0 -5
+}
+
+object voxWallLight
+{
+	frame WLM1 { light walllight }
+}

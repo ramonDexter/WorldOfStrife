@@ -1,0 +1,362 @@
+object LaserScout
+{
+    frame MECHQ { light SNTNLDTH1 }
+	frame MECHR { light SNTNLDTH1 }
+	frame MECHS { light SNTNLDTH1 }
+    frame MECHT { light SNTNLDTH2 }
+	frame MECHU { light SNTNLDTH2 }
+    frame MECHV { light SNTNLDTH2 }
+
+}
+
+brightmap sprite MECHA1
+{
+	disablefullbright
+	map "MECHA1"
+}
+
+brightmap sprite MECHA2
+{
+	disablefullbright
+	map "MECHA2"
+}
+
+brightmap sprite MECHA3
+{
+	disablefullbright
+	map "MECHA3"
+}
+
+brightmap sprite MECHA7
+{
+	disablefullbright
+	map "MECHA7"
+}
+
+brightmap sprite MECHA8
+{
+	disablefullbright
+	map "MECHA8"
+}
+
+brightmap sprite MECHB1
+{
+	disablefullbright
+	map "MECHB1"
+}
+
+brightmap sprite MECHB2
+{
+	disablefullbright
+	map "MECHB2"
+}
+
+brightmap sprite MECHB3
+{
+	disablefullbright
+	map "MECHB3"
+}
+
+brightmap sprite MECHB7
+{
+	disablefullbright
+	map "MECHB7"
+}
+
+brightmap sprite MECHB8
+{
+	disablefullbright
+	map "MECHB8"
+}
+
+brightmap sprite MECHC1
+{
+	disablefullbright
+	map "MECHC1"
+}
+
+brightmap sprite MECHC2
+{
+	disablefullbright
+	map "MECHC2"
+}
+
+brightmap sprite MECHC3
+{
+	disablefullbright
+	map "MECHC3"
+}
+
+brightmap sprite MECHC7
+{
+	disablefullbright
+	map "MECHC7"
+}
+
+brightmap sprite MECHC8
+{
+	disablefullbright
+	map "MECHC8"
+}
+
+brightmap sprite MECHD1
+{
+	disablefullbright
+	map "MECHD1"
+}
+
+brightmap sprite MECHD2
+{
+	disablefullbright
+	map "MECHD2"
+}
+
+brightmap sprite MECHD3
+{
+	disablefullbright
+	map "MECHD3"
+}
+
+brightmap sprite MECHD4
+{
+	disablefullbright
+	map "MECHD4"
+}
+
+brightmap sprite MECHD7
+{
+	disablefullbright
+	map "MECHD7"
+}
+
+brightmap sprite MECHD8
+{
+	disablefullbright
+	map "MECHD8"
+}
+
+brightmap sprite MECHE1
+{
+	disablefullbright
+	map "MECHE1"
+}
+
+brightmap sprite MECHE2
+{
+	disablefullbright
+	map "MECHE2"
+}
+
+brightmap sprite MECHE3
+{
+	disablefullbright
+	map "MECHE3"
+}
+
+brightmap sprite MECHE7
+{
+	disablefullbright
+	map "MECHE7"
+}
+
+brightmap sprite MECHE8
+{
+	disablefullbright
+	map "MECHE8"
+}
+
+brightmap sprite MECHF1
+{
+	disablefullbright
+	map "MECHF1"
+}
+
+brightmap sprite MECHF2
+{
+	disablefullbright
+	map "MECHF2"
+}
+
+brightmap sprite MECHF3
+{
+	disablefullbright
+	map "MECHF3"
+}
+
+brightmap sprite MECHF4
+{
+	disablefullbright
+	map "MECHF4"
+}
+
+brightmap sprite MECHF5 
+{
+	disablefullbright
+}
+
+brightmap sprite MECHF6 
+{
+	disablefullbright
+}
+
+brightmap sprite MECHF7
+{
+	disablefullbright
+	map "MECHF7"
+}
+
+brightmap sprite MECHF8
+{
+	disablefullbright
+	map "MECHF8"
+}
+
+brightmap sprite MECHG1
+{
+	disablefullbright
+	map "MECHG1"
+}
+
+brightmap sprite MECHG2
+{
+	disablefullbright
+	map "MECHG2"
+}
+
+brightmap sprite MECHG3
+{
+	disablefullbright
+	map "MECHG3"
+}
+
+brightmap sprite MECHG7
+{
+	disablefullbright
+	map "MECHG7"
+}
+
+brightmap sprite MECHG8
+{
+	disablefullbright
+	map "MECHG8"
+}
+
+brightmap sprite MECHH1
+{
+	disablefullbright
+	map "MECHH1"
+}
+
+brightmap sprite MECHH2
+{
+	disablefullbright
+	map "MECHH2"
+}
+
+brightmap sprite MECHH3
+{
+	disablefullbright
+	map "MECHH3"
+}
+
+brightmap sprite MECHH7
+{
+	disablefullbright
+	map "MECHH7"
+}
+
+brightmap sprite MECHH8
+{
+	disablefullbright
+	map "MECHH8"
+}
+
+brightmap sprite MECHI0
+{
+	disablefullbright
+	map "MECHI0"
+}
+
+brightmap sprite MECHJ0
+{
+	disablefullbright
+	map "MECHJ0"
+}
+
+brightmap sprite MECHK0
+{
+	disablefullbright
+	map "MECHK0"
+}
+
+brightmap sprite MECHM0
+{
+	disablefullbright
+	map "MECHM0"
+}
+
+brightmap sprite MECHN0
+{
+	disablefullbright
+	map "MECHN0"
+}
+
+brightmap sprite MECHO0
+{
+	disablefullbright
+	map "MECHO0"
+}
+
+brightmap sprite MECHQ0
+{
+	disablefullbright
+	map "MECHQ0"
+}
+
+brightmap sprite MECHR0
+{
+	disablefullbright
+	map "MECHR0"
+}
+
+brightmap sprite MECHS0
+{
+	disablefullbright
+	map "MECHS0"
+}
+
+brightmap sprite MECHT0
+{
+	disablefullbright
+	map "MECHT0"
+}
+
+brightmap sprite MECHU0
+{
+	disablefullbright
+	map "MECHU0"
+}
+
+brightmap sprite MECHV0
+{
+	disablefullbright
+	map "MECHV0"
+}
+
+object SentinelFX3
+{
+    frame SHT1A { light SNTNL_FX1 }
+    frame SHT1B { light SNTNL_FX2 }
+
+    frame POW1F { light SNTNL_FX3 }
+    frame POW1G { light SNTNL_FX4 }
+    frame POW1H { light SNTNL_FX5 }
+    frame POW1I { light SNTNL_FX6 }
+    frame POW1J { light SNTNL_FX7 }
+}
+
+object LaserTrail
+{
+    frame SHT1A { light SNTNL_FX1 }
+    frame SHT1B { light SNTNL_FX2 }
+}

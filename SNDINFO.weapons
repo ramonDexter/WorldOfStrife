@@ -1,0 +1,137 @@
+////////////////////////////////////////////////////////////////////////////////
+//  WOS WEAPONS SNDINFO  ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  reload - clip out & in  ////////////////////////////////////////////////////
+weapons/clipOut		"sounds/clip/CLIPOUT.wav"
+weapons/clipIn		"sounds/clip/CLIPIN.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  WEAPON SOUNDS  /////////////////////////////////////////////////////////////
+$random 	weapons/casing  { weapons/casing1 weapons/casing2 weapons/casing3 } 
+$limit 		weapons/casing  3
+weapons/casing1		"sounds/casing/dscasin1.wav"
+weapons/casing2		"sounds/casing/dscasin2.wav"
+weapons/casing3		"sounds/casing/dscasin3.wav"
+
+$random 	weapons/shotgunshells { weapons/shell1 weapons/shell2 weapons/shell3 }
+$limit 		weapons/shotgunshells 3
+weapons/shell1	"sounds/casing/DSSHELL1.wav"
+weapons/shell2	"sounds/casing/DSSHELL2.wav"
+weapons/shell3	"sounds/casing/DSSHELL3.wav"
+
+$random chaingun/casing { chaingun/casing1 chaingun/casing2 chaingun/casing3 }
+$limit chaingun/casing 3
+chaingun/casing1	"sounds/casing/CHGNCAS1.wav"
+chaingun/casing2	"sounds/casing/CHGNCAS2.wav"
+chaingun/casing3	"sounds/casing/CHGNCAS3.wav"
+
+// weapon select/equip sound ///////////////////////////////////////////////////
+weapons/weaponUP "sounds/weapons/weaponUP.wav"
+$volume weapons/weaponUP 0.3
+////////////////////////////////////////////////////////////////////////////////
+
+//  storm pistol  //////////////////////////////////////////////////////////////
+weapons/rlPistolShoot "sounds/stormpistol/PISTFIRE.wav"
+weapons/RLpistolRLout "sounds/stormpistol/PIREOUT.wav"
+weapons/RLpistolRLin "sounds/stormpistol/PIREIN.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  executor rifle  ////////////////////////////////////////////////////////////
+weapons/execRiflShoot "sounds/executorRifle/DSARSH.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  flashlight  ////////////////////////////////////////////////////////////////
+flashlight/on "sounds/various/fshlite1.ogg"
+flashlight/off "sounds/various/fshlite2.ogg"
+////////////////////////////////////////////////////////////////////////////////
+
+//  blaster staff  /////////////////////////////////////////////////////////////
+//staff shoot
+weapons/staffShoot "sounds/staffBlaster/staffShoot.ogg"
+weapons/staffShot2 "sounds/staffBlaster/staffShot2.wav"
+//reload sounds
+weapons/staffOpen "sounds/staffBlaster/staffOpen.ogg"
+weapons/staffOut "sounds/staffBlaster/staffOut.ogg"
+weapons/staffIn "sounds/staffBlaster/staffIn.ogg"
+weapons/staffClose "sounds/staffBlaster/staffClose.ogg"
+//projectile sounds
+weapons/staffprojectile "sounds/staffBlaster/staffprojectile.wav"
+weapons/shotdeath "sounds/staffBlaster/shotdeath.wav"
+weapons/plasmax "sounds/staffBlaster/plasxpl.wav"
+weapons/plasmaLoad_2 "sounds/staffBlaster/DSPLASL5.wav"
+//staff swing
+weapons/staffswing "sounds/staffBlaster/staffswing.wav"
+weapons/staffhit "sounds/staffBlaster/staffPunch.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  shoulderGun  ///////////////////////////////////////////////////////////////
+weapons/shoulderGun/use  "sounds/shoulderGun/shoulderGunUse.ogg"
+weapons/shoulderGun/fire  "sounds/shoulderGun/shoulderGunFire.ogg"
+weapons/shoulderGun/loop  "sounds/shoulderGun/shoulderGunLoop.ogg"
+weapons/shoulderGun/stop  "sounds/shoulderGun/shoulderGunStop.ogg"
+weapons/shouldergun/recharge "sounds/shoulderGun/shoulderGunRecharge.wav"
+weapons/shouldergun/noAmmo "sounds/shoulderGun/shoulderGunNoAm.wav"
+items/shGunOpn  "sounds/shoulderGun/dsdbopn.wav"
+items/shcanload  "sounds/shoulderGun/dsdbload.wav"
+items/shcanclose  "sounds/shoulderGun/dsdbcls.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+//  mini missile launcher  /////////////////////////////////////////////////////
+weapons/mmsl_in		"sounds/miniMissileLauncher/LEECHIN.ogg"
+weapons/mmsl_out	"sounds/miniMissileLauncher/LEECHOUT.ogg"
+////////////////////////////////////////////////////////////////////////////////
+
+//  grenades  //////////////////////////////////////////////////////////////////
+weapons/grenadeThrow		"sounds/staffBlaster/STAFSWG.wav"
+weapons/grenadeBounce		"sounds/various/BOUNCE.ogg"
+////////////////////////////////////////////////////////////////////////////////
+
+//  laser pistol  //////////////////////////////////////////////////////////////
+weapons/laserProj  		"sounds/laserPistol/F_LASER4.wav"
+weapons/lasProjDeath	"sounds/laserPistol/F_MKSHOT.wav"
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//  deprecated sndinfo  ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  blaster staff sounds (old)  ////////////////////////////////////////////////
+/*
+weapons/BLstaffShoot		STAFFIRE
+weapons/BLstaffRL			STAFRLD
+weapons/plasmaf				dsplasm
+weapons/staffRLD			STAFRLD
+
+weapons/staffFire			STAFFIRE
+//weapons/staffRecharge1		stafrel1
+//weapons/staffRecharge2		stafrel2
+weapons/upBLstaffShoot		UPSTSHT
+weapons/redProjectile		UPSTSHT
+weapons/open				DSDBOPN
+weapons/close				DSDBCLS
+weapons/load				DSDBLOAD
+weapons/staffAlt 			DSPLASM
+*/
+////////////////////////////////////////////////////////////////////////////////
+
+//  knife  /////////////////////////////////////////////////////////////////////
+/*
+weapons/knifeswing  		dskniswi
+weapons/knifemiss           dskniwal
+weapons/knifehit            dsknihit*/
+////////////////////////////////////////////////////////////////////////////////
+
+//  hookshot  //////////////////////////////////////////////////////////////////
+/*hookshot/loop 			dspulchn
+hookshot/swish 			dsswish
+hookshot/fire 			dschain
+hookshot/hit/terrain 	dsmtalht
+hookshot/hit/flesh 		dsmeatht*/
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

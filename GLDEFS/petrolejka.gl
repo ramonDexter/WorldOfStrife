@@ -1,0 +1,38 @@
+//=PETROLEJKA=
+flickerlight PetrolejkaLight1
+{
+	color 1.0 0.8 0.1
+	size 32
+	secondarysize 20
+	chance 0.1
+	offset 0 6 0
+}
+
+flickerlight PetrolejkaLight2
+{
+	color 1.0 0.8 0.1
+	size 48
+	secondarysize 32
+	chance 0.1
+	offset 0 6 0
+}
+
+object voxPetrolejka1
+{
+	frame PET1 { light PetrolejkaLight1 }
+}
+
+object voxPetrolejka2
+{
+	frame PET2A { light PetrolejkaLight2 }
+}
+
+object bloodCandle
+{
+	frame BCND {  light PetrolejkaLight1  }
+}
+object bloodCandleSkull
+{
+	frame BSCN {  light PetrolejkaLight1  }
+}
+//==============================================================================

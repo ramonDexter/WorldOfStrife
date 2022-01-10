@@ -1,0 +1,34 @@
+object ShieldRebel
+{
+    frame SREBF { light HUMNDATK }
+}
+object EliteRebel
+{
+    frame RAVWF { light HUMNDATK }
+}
+object GrenadeRebel
+{
+    frame GREBF { light HUMNDATK }
+}
+object MaulerRebel
+{
+    frame REEGF { light TEMPATK }
+}
+object RebelGrenade
+{
+    frame BNG4A { light POWCRYS_X1   }
+    frame BNG4B { light POWCRYS_X2   }
+    frame BNG4C { light POWCRYS_X3   }
+    frame BNG4D { light POWCRYS_X4   }
+    frame BNG4E { light POWCRYS_X5   }
+    frame BNG4F { light POWCRYS_X6   }
+    frame BNG4G { light POWCRYS_X7   }
+    frame BNG4H { light POWCRYS_X8   }
+    frame BNG4I { light POWCRYS_X9   }
+    frame BNG4J { light POWCRYS_X10  }
+
+    frame BNG4K { light HEGRENADE_X1 }
+    frame BNG4L { light HEGRENADE_X2 }
+    frame BNG4M { light HEGRENADE_X3 }
+    frame BNG4N { light HEGRENADE_X4 }
+}

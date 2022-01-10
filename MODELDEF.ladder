@@ -1,0 +1,96 @@
+//zscript ladder
+Model TOSLadderYellow
+{
+	USEACTORPITCH
+	USEACTORROLL
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "ladder.md3"
+	//skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset 0.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+Model TOSLadderYellowExtension
+{
+	USEACTORPITCH
+	USEACTORROLL
+
+	Path "Models/MapObjects/TOS/"
+	Model 0 "ladder.md3"
+
+	Path "Textures/Solid/"
+	SurfaceSkin 0 1 "clear.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -4.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+model TOSladderWooden {
+	USEACTORPITCH
+	USEACTORROLL	
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "dx_ladder.md3"
+	skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -16.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+model TOSladderWoodenAttached {
+	USEACTORPITCH
+	USEACTORROLL	
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "dx_ladderW_attached.md3"
+	skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -16.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+model TOSladderWoodenMetal {
+	USEACTORPITCH
+	USEACTORROLL	
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "dx_ladderWoodMetal.md3"
+	skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -16.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+model TOSladderWoodenMetalExtension {
+	USEACTORPITCH
+	USEACTORROLL	
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "dx_ladderWoodMetal_extension.md3"
+	skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -16.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}
+model TOSladderWoodenHoles {
+	USEACTORPITCH
+	USEACTORROLL	
+
+	Path "Models/MapObjects/TOS"
+	Model 0 "dx_ladderWoodenHoles.md3"
+	skin 0 "tx_gilotina.png"
+
+	Scale 2.5 2.5 2.5
+	Offset -16.0 0.0 0.0
+
+	FrameIndex UNKN A 0 0
+}

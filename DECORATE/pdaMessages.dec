@@ -1,0 +1,151 @@
+/*
+//eaxmple by nash---------------------------------------------------------------
+ACTOR TestPDA : PDA 
+{
+	Tag "$PDA_TestPDA_Title"
+	PDA.Text "$PDA_TestPDA_Text"
+	PDA.Image "graphics/PDA/images/Test PDA Image.png"
+	PDA.Audio "PDA/TestPDAAudio"
+
+	States
+	{
+		Spawn:
+			PMAP A -1
+			Stop
+	}
+}
+//eaxmple by nash---------------------------------------------------------------
+
+
+
+//my example--------------------------------------------------------------------
+actor noteTest : PDA {
+	Tag "$PDA_noteTest_TITLE"
+	PDA.Text "$PDA_noteTest_TEXT"
+	PDA.Image "graphics/pda/images/image.png"
+	PDA.Audio "PDA/testPDAaudio"
+	
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+//my example--------------------------------------------------------------------
+*/
+actor PDA : CustomInventory {
+	-INVENTORY.INVBAR
+	+INVENTORY.ALWAYSPICKUP
+	-COUNTITEM
+	//Tag ""
+	radius 12
+	height 12
+	Inventory.PickupSound "sounds/itemPickup"
+	Mass 0
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+		Use:
+			TNT1 A -1
+			Stop
+	}
+}
+
+actor notePrayers : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: prayers"
+	Tag "$PDA_notePrayers_TITLE"
+	//PDA.Text "$PDA_notePrayers_TEXT"
+	//scale 0.5
+	
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHmedical : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH medical"
+	Tag "$PDA_noteSHmedical_TITLE"
+	//PDA.Text "$PDA_noteSHmedical_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop		
+	}
+}
+actor noteSHshouldergun : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH shouldergun"
+	Tag "$PDA_noteSHshouldergun_TITLE"
+	//PDA.Image "graphics/pda/images/pdaI_binderstaff.png"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHbinderStavesTechnical : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH binder staves technical"
+	Tag "$PDA_noteSHbinderStavesTechnical_TITLE"
+	//PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHbinderNote01 : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH binder 01"
+	Tag "$PDA_noteSHbinderNote01_TITLE"
+	//PDA.Text "$PDA_noteSHbinderNote01_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHsilentHillsTouristGuide : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH tourist guide"
+	Tag "$PDA_noteSHsilentHillsTouristGuide_TITLE"
+	//PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHminesReport : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH mines report"
+	Tag "$PDA_noteSHminesReport_TITLE"
+	//PDA.Text "$PDA_noteSHminesReport_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor noteSHbindersOath : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH binder's oath"
+	Tag "$PDA_noteSHbindersOath_TITLE"
+	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}

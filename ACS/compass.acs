@@ -1,0 +1,297 @@
+#library "COMPASS"
+#include "zcommon.acs"
+
+
+//Compass Complete
+//==----------------------------------------------------------------==
+
+script "compassComplete" (void) //called via keyconf
+{
+	if(!getCVAR("sv_compass"))
+	{
+		ACS_NamedExecute("compassNorth", 0, 0, 0, 0);
+		ACS_NamedExecute("compassSouth", 0, 0, 0, 0);
+		ACS_NamedExecute("compassEast", 0, 0, 0, 0);
+		ACS_NamedExecute("compassWest", 0, 0, 0, 0);
+		ACS_NamedExecute("compassNorthEast", 0, 0, 0, 0);
+		ACS_NamedExecute("compassNorthWest", 0, 0, 0, 0);
+		ACS_NamedExecute("compassSouthEast", 0, 0, 0, 0);
+		ACS_NamedExecute("compassSouthWest", 0, 0, 0, 0);
+		setCVAR("sv_compass", true);
+	}
+	else if(getCVAR("sv_compass"))
+	{
+		ACS_NamedTerminate("compassNorth", 0);
+		ACS_NamedTerminate("compassSouth", 0);
+		ACS_NamedTerminate("compassEast", 0);
+		ACS_NamedTerminate("compassWest", 0);
+		ACS_NamedTerminate("compassNorthEast", 0);
+		ACS_NamedTerminate("compassNorthWest", 0);
+		ACS_NamedTerminate("compassSouthEast", 0);
+		ACS_NamedTerminate("compassSouthWest", 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90109, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90139, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94109, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90209, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90239, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94209, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90309, 0, 0, 0, 0);
+		HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90409, 0, 0, 0, 0);
+		setCVAR("sv_compass", false);
+	}
+	
+}
+//==----------------------------------------------------------------==
+//
+//World sides scripts
+//==----------------------------------------------------------------==
+script "compassNorth" (void)
+{
+    int vang, angle; //inicializace promennych
+    while(TRUE) //bezi ve smycce porad dokola >> vykresluje se
+    {    
+        vang = 64 << 8; //vypocet vektorovyho uhlu
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0; //vypocet uhlu
+        if (angle < 0.2 || angle > 0.8) //vykresleni/nevykresleni znacky uhlu
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle)); //vypocet pozice znacky na ose x
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-=:N:=-"; 
+					HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90109, CR_GREEN, sx * 1.0, 100.2, 0); //znacka samotna
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90109, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassNorthEast" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 32 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-:ne:-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90139, CR_DARKGREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90139, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassNorthWest" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 96 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-:nw:-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94109, CR_DARKGREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94109, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassSouth" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 192 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-=:S:=-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90209, CR_GREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90209, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassSouthEast" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 224 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-:se:-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90239, CR_DARKGREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90239, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassSouthWest" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 160 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-:sw:-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94209, CR_DARKGREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94209, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassEast" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 0 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-=:E:=-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90309, CR_GREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90309, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+script "compassWest" (void)
+{
+    int vang, angle;
+    while(TRUE)
+    {    
+        vang = 128 << 8;
+        angle = (vang - GetActorAngle (0) + 1.0) % 1.0;
+        if (angle < 0.2 || angle > 0.8)
+        {
+            int sx = 320 - (320 * Sin (angle) / Cos (angle));
+            SetHudSize (640, 360, 0);
+            HudMessage (s:"-=:W:=-"; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90409, CR_GREEN, sx * 1.0, 100.2, 0);
+        }
+        else
+        {
+            HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90409, 0, 0, 0, 0);
+        }
+        Delay (1);
+    }
+}
+//==----------------------------------------------------------------==
+
+/*
+script "compassOne" (void)
+{
+    int Nvang, Nangle, Svang, Sangle, Evang, Eangle, Wvang, Wangle, NEvang, NEangle, NWvang, NWangle, SEvang, SEangle, SWvang, SWangle;
+
+    while(true)
+    {
+        //vector angles
+        Nvang = 64 << 8;
+        Svang = 192 << 8;
+        Wvang = 128 << 8;
+        Evang = 0 << 8;
+        NEvang = 32 << 8;
+        NWvang = 96 << 8;
+        SEvang = 224 << 8;
+        SWvang = 160 << 8;
+        //angles
+        Nangle = (Nvang - GetActorAngle (0) + 1.0) % 1.0;
+        Sangle = (Svang - GetActorAngle (0) + 1.0) % 1.0;
+        Wangle = (Wvang - GetActorAngle (0) + 1.0) % 1.0;
+        Eangle = (Evang - GetActorAngle (0) + 1.0) % 1.0;
+        NEangle = (NEvang - GetActorAngle (0) + 1.0) % 1.0;
+        NWangle = (NWvang - GetActorAngle (0) + 1.0) % 1.0;
+        SEangle = (SEvang - GetActorAngle (0) + 1.0) % 1.0;
+        SWangle = (SWvang - GetActorAngle (0) + 1.0) % 1.0;
+
+        if(
+            (Nangle < 0.2 || Nangle > 0.8) 
+            || 
+            (Sangle < 0.2 || Sangle > 0.8) 
+            || 
+            (Wangle < 0.2 || Wangle > 0.8) 
+            || 
+            (Eangle < 0.2 || Eangle > 0.8) 
+            || 
+            (NEangle < 0.2 || NEangle > 0.8) 
+            || 
+            (NWangle < 0.2 || NWangle > 0.8) 
+            || 
+            (SWangle < 0.2 || SWangle > 0.8) 
+            || 
+            (SEangle < 0.2 || SEangle > 0.8) 
+            )
+            {
+                int Nsx = 320 - (320 * Sin (Nangle) / Cos (Nangle));
+                int Ssx = 320 - (320 * Sin (Sangle) / Cos (Sangle));
+                int Wsx = 320 - (320 * Sin (Wangle) / Cos (Wangle));
+                int Esx = 320 - (320 * Sin (Eangle) / Cos (Eangle));
+                int NWsx = 320 - (320 * Sin (NWangle) / Cos (NWangle));
+                int NEsx = 320 - (320 * Sin (NEangle) / Cos (NEangle));
+                int SWsx = 320 - (320 * Sin (SWangle) / Cos (SWangle));
+                int SEsx = 320 - (320 * Sin (SEangle) / Cos (SEangle));
+
+                SetHudSize(640, 360, 0);
+                HudMessage (s:"-=:N:=-"; 
+					HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90109, CR_GREEN, Nsx * 1.0, 100.2, 0);
+                HudMessage (s:"-:nw:-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94109, CR_DARKGREEN, NWsx * 1.0, 100.2, 0);
+                HudMessage (s:"-:ne:-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90139, CR_DARKGREEN, NEsx * 1.0, 100.2, 0);
+                HudMessage (s:"-=:S:=-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90209, CR_GREEN, Ssx * 1.0, 100.2, 0);
+                HudMessage (s:"-:se:-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90239, CR_DARKGREEN, SEsx * 1.0, 100.2, 0);
+                HudMessage (s:"-:sw:-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94209, CR_DARKGREEN, SWsx * 1.0, 100.2, 0);
+                HudMessage (s:"-=:E:=-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90309, CR_GREEN, Esx * 1.0, 100.2, 0);
+                HudMessage (s:"-=:W:=-"; 
+                    HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90409, CR_GREEN, Wsx * 1.0, 100.2, 0);
+            }
+            else
+            {
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90109, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90139, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94109, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90209, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90239, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 94209, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90309, 0, 0, 0, 0);
+                HudMessage (s:""; HUDMSG_PLAIN|HUDMSG_LAYER_UNDERHUD, 90409, 0, 0, 0, 0);
+            }
+            Delay(1);
+
+    }
+}
+*/

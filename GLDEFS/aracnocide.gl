@@ -1,0 +1,30 @@
+// ------------------------------------------------------
+// ------------ ARACNOCIDE GAME LIGHTS ------------------
+// ------------------------------------------------------
+
+Object AcidSpit
+{
+    frame BAL7 { light ACIDLIGHT }
+}
+
+Object BigSpit
+{
+    frame BAL7 { light ACIDLIGHT }
+}
+
+pointlight ACIDLIGHT
+{
+    color 0.0 1.0 0.0
+    size 20
+}
+
+Object GoldenSpider
+{
+    frame PSGI { light GLDLIGHT }
+}
+
+pointlight GLDLIGHT
+{
+    color 1.0 1.0 0.0
+    size 20
+}

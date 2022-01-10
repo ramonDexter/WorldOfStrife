@@ -1,0 +1,20 @@
+Model PushBlock
+{
+   Path "models/pushblock"
+   Model 0 "pushblock.md3"
+   Skin 0 "pushblock.png"
+   Scale 1.0 1.0 1.0
+
+   FrameIndex PBLO A 0 0
+}
+
+Model Uplink
+{
+   Path "models/uplink"
+   Model 0 "uplink.md3"
+   Skin 0 "uplink.png"
+   Scale 1.0 1.0 1.0
+
+   FrameIndex ULNK A 0 0
+}
+

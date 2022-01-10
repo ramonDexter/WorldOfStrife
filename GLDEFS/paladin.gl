@@ -1,0 +1,65 @@
+pointlight SNTNL_FX1
+{
+    color 1.0 0.0 0.0
+    size 16
+}
+
+pointlight SNTNL_FX2
+{
+    color 0.5 0.0 0.0
+    size 16
+}
+
+pointlight SNTNL_FX3
+{
+    color 1.0 0.0 0.0
+    size 18
+}
+
+pointlight SNTNL_FX4
+{
+    color 0.8 0.0 0.0
+    size 20
+}
+
+pointlight SNTNL_FX5
+{
+    color 0.6 0.0 0.0
+    size 22
+}
+
+pointlight SNTNL_FX6
+{
+    color 0.4 0.0 0.0
+    size 24
+}
+
+pointlight SNTNL_FX7
+{
+    color 0.2 0.0 0.0
+    size 28
+}
+
+object LaserBolt
+{
+    frame SHT1A { light SNTNL_FX1 }
+    frame SHT1B { light SNTNL_FX2 }
+
+    frame POW1F { light SNTNL_FX3 }
+    frame POW1G { light SNTNL_FX4 }
+    frame POW1H { light SNTNL_FX5 }
+    frame POW1I { light SNTNL_FX6 }
+    frame POW1J { light SNTNL_FX7 }
+}
+
+object LaserBoltTrail
+{
+    frame SHT1A { light SNTNL_FX1 }
+    frame SHT1B { light SNTNL_FX2 }
+
+    frame POW1F { light SNTNL_FX3 }
+    frame POW1G { light SNTNL_FX4 }
+    frame POW1H { light SNTNL_FX5 }
+    frame POW1I { light SNTNL_FX6 }
+    frame POW1J { light SNTNL_FX7 }
+}

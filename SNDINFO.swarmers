@@ -1,0 +1,16 @@
+//Swarmers
+//=======================================================//
+SHPODEXP "sounds/swarmers/SHPODEXP.ogg"
+$Limit SHPODEXP	0
+
+SHDPFLY	"sounds/swarmers/SHDPFLY.ogg"
+//$Limit SHDPFLY	0
+
+SHDPHIT "sounds/swarmers/SHDPHIT.ogg"
+$Limit SHDPHIT	0
+
+SHDPDIE "sounds/swarmers/SHDPDIE.ogg"
+$Limit SHDPDIE	0
+
+SHPODGET "sounds/swarmers/SHPODGET.ogg"
+//=======================================================//

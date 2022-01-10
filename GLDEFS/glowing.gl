@@ -1,0 +1,123 @@
+//GLOWING FLATS
+//==----------------------------------------------------------------------------
+Glow
+{
+	Flats
+	{
+		x_001	//hexen lava
+		x_002
+		x_003
+		x_004
+
+		flathuh1	//heretic lava
+		flathuh2
+		flathuh3
+		flathuh4
+
+		lava1	//doom lava
+		lava2
+		lava3
+		lava4
+
+		nukage1		//doom nukage
+		nukage2
+		nukage3
+
+		
+
+		f_scanr1	//strife scanner green
+		f_scanr2
+		f_scanr3
+		f_scanr4
+
+		f_scanr5	//strife scanner orange
+		f_scanr6
+		f_scanr7
+		f_scanr8
+
+		f_tele1		//strife teleporting pad
+		f_tele2
+
+		lava00
+		lava01
+		lava02
+		lava03
+
+		f_pwatr1
+		f_pwatr2
+		f_pwatr3
+		
+		F_TKSCRN
+		
+		MGLAVA1
+		MGLAVA2
+		MGLAVA3
+	}
+	
+	//Texture "F_PWATR1", 304010, 64
+	//Texture "F_PWATR2", 28380b, 64
+	//Texture "F_PWATR3", 243408, 64
+
+	Texture "F_TELE1", 803000, 32
+	Texture "F_TELE2", 802C00, 32
+	Texture "F_TELE01", 803000, 32
+	Texture "F_TELE02", 802C00, 32
+	
+	Texture "F_1ALTAR", 404040, 64
+	Texture "F_DIRT02", 606060, 64
+	Texture "F_DISCO1", 606060, 64
+	Texture "F_FLKLIT", 606060, 64
+	Texture "F_FLKWHT", 304060, 128
+	Texture "F_GLITE1", 404040, 64
+	Texture "F_GRDLIT", 606060, 64
+	Texture "F_LIGHT1", 606070, 64 
+	Texture "F_RDALN1", 701010, 128
+	Texture "F_RDALN2", 781414, 128
+	Texture "F_RDALN3", 801818, 128
+	Texture "F_RDALN4", 681010, 128
+	Texture "F_SCANR1", 104010, 32
+	Texture "F_SCANR2", 205010, 32
+	Texture "F_SCANR3", 307020, 32
+	Texture "F_SCANR4", 308020, 32
+	Texture "F_SCANR5", B03000, 32
+	Texture "F_SCANR6", B83800, 32
+	Texture "F_SCANR7", C04000, 32
+	Texture "F_SCANR8", C85000, 32
+	Texture "F_SIGWIN", D08000, 128
+	Texture "F_SKYLIT", 909090, 128
+	Texture "F_TKSCRN", 003000, 32
+	Texture "COMP01", FF7000, 32
+	Texture "COMP02", FF7000, 32
+	Texture "COMP03", FF7000, 32
+	Texture "COMP04", FF7000, 32
+	Texture "COMP05", 269900, 32
+	Texture "COMP06", 269900, 32
+	Texture "COMP07", 269900, 32
+	Texture "COMP08", 269900, 32
+	Texture "COMP09", 00998e, 32
+	Texture "COMP10", 00998e, 32
+	Texture "COMP11", 00998e, 32
+	Texture "COMP12", 00998e, 32
+	Texture "COMP13", 999500, 32
+	Texture "COMP14", 999500, 32
+	Texture "COMP15", 999500, 32
+	Texture "COMP16", 999500, 32
+	Texture "COMP17", 059900, 32
+	Texture "COMP18", 059900, 32
+	Texture "COMP19", 059900, 32
+	Texture "COMP20", 059900, 32
+	Texture "COMP21", 059900, 32
+	Texture "COMP22", 059900, 32
+	Texture "COMP23", 059900, 32
+	Texture "COMP24", 059900, 32
+	Texture "MGLAVA1", cb6f00, 32
+	Texture "MGLAVA2", cb6f00, 32
+	Texture "MGLAVA3", cb6f00, 32
+	
+	
+	//sky glow
+	//Texture "F_SKY001", FFFFFF, 256 cb6f00
+
+	
+}
+//==----------------------------------------------------------------------------

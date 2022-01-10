@@ -1,0 +1,71 @@
+#library "enemyHP"
+#include "zcommon.acs"
+
+function void eraseHudmsg(int msgID)
+{
+	HudMessage(s:""; HUDMSG_PLAIN, msgID, CR_UNTRANSLATED, 0, 0, 0);
+}
+
+//ENEMY HEALTH&NAME DISPLAY
+//==----------------------------------------------------------------==
+bool HPhud = true;
+str actorName;
+script "PrintEnemyHPswitch" (void)
+{
+	if(HPhud == true)
+	{
+		Print(s:"\c[green]-=> ENEMY HP HUD ON <=-");
+		ACS_NamedExecute("PrintEnemyHP", 0);
+		HPhud = false;
+	}
+	else if(HPhud == false)
+	{
+		Print(s:"\c[red]-=> ENEMY HP HUD OFF <=-");
+		ACS_NamedTerminate("PrintEnemyHP", 0);
+		eraseHudmsg(1001);
+		eraseHudmsg(1010);
+		HPhud = true;
+	}
+}
+Script "PrintEnemyHP" (void)
+{
+    int ehp, ehpp;
+
+    While(TRUE)
+    {
+        // Get the health as points and percentage.
+        ehp = ACS_NamedExecuteWithResult("GetEnemyHP");
+        ehpp = ACS_NamedExecuteWithResult("GetEnemyHP", TRUE);
+
+        // Only draw if health, as points, is above 0.
+        If(ehp > 0)
+        {
+            HudMessage(s:actorName; //prints enemy name
+									HUDMSG_PLAIN, 1001, CR_RED, 0.5, 0.3, 0.1);
+			HudMessage(i:ehp, s:"/", i:ehpp;  //prints enemy hp
+									HUDMSG_PLAIN, 1010, CR_YELLOW, 0.5, 0.33, 0.1);
+        }
+
+        Delay(1);
+    }
+}
+Script "GetEnemyHP" (int percent)
+{
+    If(SetActivator(0, AAPTR_PLAYER_GETTARGET))
+    {
+		if(CheckFlag(0, "ismonster") == TRUE)
+		{
+			If(!percent)
+				{
+				SetResultValue(GetActorProperty(0, APROP_Health));
+				actorName = GetActorProperty(0, APROP_NameTag);
+				}
+			Else
+				SetResultValue(GetActorProperty(0, APROP_SpawnHealth));
+
+			Terminate;
+		}
+	}
+    SetResultValue(0);
+}
+//==----------------------------------------------------------------==

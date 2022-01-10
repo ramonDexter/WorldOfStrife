@@ -1,0 +1,388 @@
+/*
+Submitted: Yuyu3
+Decorate: Yuyu3
+Sprites: Rogue Entertainment, RpgMaker XP
+Sprite Edit: Yuyu3
+Idea Base: Action Doom 2 trash cans.
+*/
+Actor VegieBarrel 25100
+{
+	//$Category "Decorations/food barrels"
+	//$Title "veggie barrel"
+  Radius 16
+  Height 30
+  Health 20
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOBR A -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    FOBR B 5 
+    FOBR C 5
+    FOBR D 5
+    FOBR E 5
+    FOBR F 0 A_SpawnItemEx("Vegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Vegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Vegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Vegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Vegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 5 
+    FOBR G 5
+    FOBR H 5
+    Wait
+  }
+}
+
+Actor SmallBarrel1 25101
+{
+	//$Category "Decorations/food barrels"
+	//$Title "small barrel 1"
+  Radius 16
+  Height 24
+  Health 10
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOMI A -1
+    Stop
+  Death:
+    NULL A 0 A_Scream 
+    FOMI E 0 A_SpawnItemEx("Vegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Vegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 5
+    FOMI F 5
+    Wait
+  }
+}
+
+Actor SmallBarrel2 25102
+{
+	//$Category "Decorations/food barrels"
+	//$Title "small barrel 2"
+  Radius 16
+  Height 24
+  Health 10
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOMI B -1
+    Stop
+  Death:
+    NULL A 0 A_Scream 
+    FOMI E 0 A_SpawnItemEx("fbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("fbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 5
+    FOMI F 5
+    Wait
+  }
+}
+
+Actor SmallBarrel3 25103
+{
+	//$Category "Decorations/food barrels"
+	//$Title "small barrel 3"
+  Radius 16
+  Height 24
+  Health 10
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOMI C -1
+    Stop
+  Death:
+    NULL A 0 A_Scream 
+    FOMI E 0 A_SpawnItemEx("Vegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Vegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 5
+    FOMI F 5
+    Wait
+  }
+}
+
+Actor SmallBarrel4 25104
+{
+	//$Category "Decorations/food barrels"
+	//$Title "small barrel 4"
+  Radius 16
+  Height 24
+  Health 10
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOMI D -1
+    Stop
+  Death:
+    NULL A 0 A_Scream 
+    FOMI E 0 A_SpawnItemEx("Vegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 5
+    FOMI F 5
+    Wait
+  }
+}
+
+
+Actor EmptyFoodBarrel 25105
+{
+	//$Category "Decorations/food barrels"
+	//$Title "empty barrel"
+  Radius 16
+  Height 30
+  Health 20
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOBR A -1
+    Stop
+  Death:
+    NULL A 0 A_Scream
+    FOBR B 5 
+    FOBR C 5
+    FOBR D 5
+    FOBR E 5
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 5 
+    FOBR G 5
+    FOBR H 5
+    Wait
+  }
+}
+
+Actor MeatBarrel 25106
+{
+	//$Category "Decorations/food barrels"
+	//$Title "meat barrel"
+  Radius 16
+  Height 30
+  Health 20
+  +Solid
+  +Shootable 
+  +noblood
+  DeathSound "Bar/Break"
+  States
+  {
+  Spawn:
+    FOBR A -1
+    Stop
+  Death:
+    NULL A 0 A_Scream 
+    FOBR B 5
+    FOBR C 5
+    FOBR D 5
+    FOBR E 5
+    FOBR F 0 A_SpawnItemEx("fbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("fbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 5
+    FOBR G 5
+    FOBR H 5
+    Wait
+  }
+}
+Actor Vegie1 : Health 
+{
+	Tag "Strange Fruit"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 10
+  Inventory.PickupMessage "Chewed a strange fruit, WTF?."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT A -1
+    Stop
+  }
+}
+
+Actor Vegie2 : Health 
+{
+	Tag "Apple"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 15
+  Inventory.PickupMessage "Eaten an apple, Good."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT B -1
+    Stop
+  }
+}
+
+Actor Vegie3 : Health 
+{
+	Tag "Lettuce"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 10
+  Inventory.PickupMessage "Eaten a Lecttuce, Humn..."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT D -1
+    Stop
+  }
+}
+
+Actor Vegie4 : Health 
+{
+	Tag "Carrots"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 15
+  Inventory.PickupMessage "Eaten some Carrots,..."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT E -1
+    Stop
+  }
+}
+
+Actor Vegie5 : Health 
+{
+	Tag "Onion"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 10
+  Inventory.PickupMessage "Eaten some Onions, Yuck!."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT G -1
+    Stop
+  }
+}
+
+Actor fbMeat1 : Health 
+{
+	Tag "Beef"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 25 
+  Inventory.PickupMessage "Eaten a Beef, Tasty."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  { 
+  Spawn:
+    FRUT C -1 
+    Stop
+  }
+}
+
+
+Actor fbMeat2 : Health 
+{
+	Tag "Cheese"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 20
+  Inventory.PickupMessage "Eaten a Cheese, Yum.."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn:
+    FRUT F -1
+    Stop
+  }
+}
+
+Actor fbMeat3 : Health 
+{
+	Tag "Fish"
+  Inventory.PickupFlash Pickupflash
+  Inventory.Amount 20
+  Inventory.PickupMessage "Eaten a Fish, Gulp.."
+  +DOOMBOUNCE
+  Speed 4
+  States
+  {
+  Spawn: 
+    FRUT H -1
+    Stop
+  }
+}
+
+Actor Woodrem1 
+{
+  +DOOMBOUNCE
+  Speed 5
+  States
+  {
+  Spawn: 
+    BAPA A -1
+    Stop
+  }
+}
+
+Actor Woodrem2 
+{
+  +DOOMBOUNCE
+  Speed 5
+  States
+  {
+  Spawn: 
+    BAPA B -1
+    Stop
+  }
+}
+

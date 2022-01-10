@@ -1,0 +1,35 @@
+//  DROPLETS  //////////////////////////////////////////////////////////////////
+$pitchshiftrange 3
+
+blood/bh1	"sounds/droplets/bullhit1.wav"
+blood/bh2	"sounds/droplets/bullhit2.wav"
+blood/bh3	"sounds/droplets/bullhit3.wav"
+blood/bh4	"sounds/droplets/bullhit4.wav"
+
+$limit blood/bh1 1 128
+$limit blood/bh2 1 128
+$limit blood/bh3 1 128
+$limit blood/bh4 1 128
+
+$random blood/hit { blood/bh1 blood/bh2 blood/bh3 blood/bh4 }
+
+blood/drp1	"sounds/droplets/drip1.ogg"
+blood/drp2	"sounds/droplets/drip2.ogg"
+blood/drp3	"sounds/droplets/drip3.ogg"
+blood/drp4	"sounds/droplets/drip4.ogg"
+blood/drp5	"sounds/droplets/drip5.ogg"
+blood/drp6	"sounds/droplets/drip6.ogg"
+blood/drp7	"sounds/droplets/drip7.ogg"
+/*
+$limit blood/drp1 1 32
+$limit blood/drp2 1 32
+$limit blood/drp3 1 32
+$limit blood/drp4 1 32
+$limit blood/drp5 1 32
+$limit blood/drp6 1 32
+$limit blood/drp7 1 32
+*/
+$random blood/drip { blood/drp1 blood/drp2 blood/drp3 blood/drp4 blood/drp5 blood/drp6 blood/drp7 }
+
+$attenuation blood/drip 2.0
+////////////////////////////////////////////////////////////////////////////////

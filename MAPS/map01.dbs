@@ -1,0 +1,127 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_StrifeUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP01
+	{
+		defaultceiltexture = "F_DECK";
+		overridefloorheight = false;
+		customfloorheight = 0;
+		uselongtexturenames = false;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\DOOM\\WoS\\WoS-Base";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		overrideceiltexture = false;
+		viewpositionx = -14814f;
+		defaulttoptexture = "ELEVTR04";
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				rotationfloor = 1;
+				user_managed_3d_floor = 3;
+				xpanningfloor = 1;
+				ypanningceiling = 1;
+				ypanningfloor = 1;
+				xpanningceiling = 1;
+				yscalefloor = 1;
+				xscalefloor = 1;
+				yscaleceiling = 1;
+				xscaleceiling = 1;
+				rotationceiling = 1;
+			}
+			
+			sidedef
+			{
+				offsety_bottom = 1;
+				offsetx_top = 1;
+				scalex_top = 1;
+				offsety_mid = 1;
+				scaley_bottom = 1;
+				scaley_top = 1;
+				scalex_bottom = 1;
+				offsetx_bottom = 1;
+				offsetx_mid = 1;
+				offsety_top = 1;
+			}
+			
+			linedef
+			{
+				arg0str = 2;
+			}
+			
+			thing
+			{
+				arg0str = 2;
+				conversation = 0;
+			}
+		}
+		overrideceilheight = false;
+		
+		scriptdocuments
+		{
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				activetab = true;
+			}
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 22;
+			}
+		}
+		viewpositiony = 14942f;
+		overridebrightness = false;
+		overridefloortexture = false;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 32;
+			background = "";
+			backoffsety = 0;
+		}
+		overridetoptexture = false;
+		overridebottomtexture = false;
+		defaultbottomtexture = "ELEVTR04";
+		defaultfloortexture = "F_ELTOP2";
+		defaultwalltexture = "ELEVTR04";
+		customceilheight = 128;
+		overridemiddletexture = false;
+		custombrightness = 196;
+		viewscale = 0.02091616f;
+	}
+}

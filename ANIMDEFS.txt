@@ -327,3 +327,100 @@ switch CMSW29
 	pic CMSW30 tics 3 
 	pic CMSW31 tics 0
 ////////////////////////////////////////////////////////////////////////////////
+
+//flats
+flat	DPSCR80			range 	DPSCR85		tics 8
+flat 	BLGRAM01		range 	BLGRAM02	tics 8
+flat	FIREP01			range	FIREP04		tics 8
+
+//textures
+texture	P_1COMP1		range	P_1COMP4	tics 8
+texture	P_2COMP1		range	P_2COMP4	tics 8
+texture	P_3COMP1		range	P_3COMP4	tics 8
+texture	P_4COMP1		range	P_4COMP4	tics 8
+texture P_FAN1			range 	P_FAN2		tics 8
+texture	P_FORCE1		range	P_FORCE4	tics 8
+texture P_FORCE5		range 	P_FORCE8	tics 8
+texture	P_MCOM01		range	P_MCOM04	tics 8
+texture	P_MCOM05		range	P_MCOM08	tics 8
+texture P_MCOM09		range 	P_MCOM12	tics 8
+texture P_TMOGR1		range	P_TMOGR3	tics 8
+texture	DPSCR63			range	DPSCR65		tics 8
+texture	DPSCR80			range	DPSCR85		tics 8
+texture CIRKCF1			range	CIRKCF3		tics 8
+texture CIRKCB1			range	CIRKCB3		tics 8
+texture CIRKDF1			range	CIRKDF3		tics 8
+texture	CIRKDB1			range	CIRKDB3		tics 8
+texture M1CSTON1		range 	M1CSTON2	tics 8
+texture WFALL1			range 	WFALL4		tics 8
+texture DNXFAN01 range DNXFAN04 tics 2
+
+//switches
+switch P_LEVER1 on sound Switch1 pic P_LEVER2 tics 0
+switch P_LEVER3 on sound Switch1 pic P_LEVER4 tics 0
+switch P_PIPSW1 on sound Switch1 pic P_PIPSW2 tics 0
+switch P_PLMSK1 on sound Switch1 pic P_PLMSK2 tics 0
+switch P_BIGSW1 on sound Switch1 pic P_BIGSW2 tics 0
+switch P_EXIT1 on sound Switch1 pic P_EXIT2 tics 0
+switch P_COORD1 on sound Switch1 pic P_COORD2 tics 0
+switch BLSWIOF on sound Switch1 pic BLSWION	tics 0
+
+//camera
+cameratexture	DPCAMTEX	64 64	fit	64 64
+
+//blood gramophone
+texture BLGRAM01		range BLGRAM02	tics 8
+
+//blood hospital machine
+texture BMACH01			range BMACH04	tics 8
+
+//daggerfall fireplace
+texture FIRPLAC1		range FIRPLAC4 tics 8
+
+
+//textures
+texture	SKCP101			range	SKCP106		tics 8
+texture	SKCP201			range	SKCP206		tics 8
+texture	SKCP301			range	SKCP306		tics 8
+texture	SKD101			range	SKD113		tics 8
+texture SKDIS01			range 	SKDIS04		tics 8
+texture	SKDP01			range	SKDP05		tics 8
+
+texture MOLECUL1 		range 	MOLECUL8 	tics 3.25
+texture CMP5_1 			range 	CMP5_5 		rand 8 14
+
+
+texture LOCK2_1			range	LOCK2_4		tics 4
+
+texture WFALL_1 range WFALL_8 tics 2 //waterfall
+
+texture QCANDL_1 range QCANDL_3 rand 3 5 //candle-lit decoration
+
+texture GARG_1 range GARG_4 tics 7 oscillate //glowing gargoyle
+
+texture GLOW_1 range GLOW_5 tics 8 oscillate //glowing runes
+
+texture QSYMB1_1 range QSYMB1_3 tics 6 oscillate //glowing quake symbol
+
+texture QSYMB2_1 range QSYMB2_3 tics 6 oscillate //another glowing quake symbol
+
+texture SLATGL_1 range SLATGL_7 tics 8 oscillate //glowing grate
+
+//I seem to have misplaced most of the liquid flats >_> not really a big deal, here's the cool ones
+warp2 texture QLAVA
+warp2 texture PWATER
+warp2 texture SLIPGATE
+
+/*
+So here it is! Textures from Quake, it's two mission packs (Scourge of Armagon and Dissolution of Eternity),
+the WizardWorks expansion Q!Zone (which was actually a cool episode and not a shovelware shitfest like
+D!Zone, Duke!Zone and H!Zone) and QTest.
+
+I'd like to thank Gez for implementing Quake BSP support into SLADE. I would have done this with XWE, but
+it's batch exporting is flawed when it comes to Quake. So, thanks dude!
+
+Aside from that, there's a few textures that would benefit from mirroring in TEXTURES, like the arches.
+I didn't define the buttons, but that's just because I'm lazy. Have fun, kids! --Ceeb
+
+PS: Yes, Q1EX is intentional. It means Quake 1 + Expansions. :P
+*/

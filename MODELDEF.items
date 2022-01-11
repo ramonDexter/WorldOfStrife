@@ -1,0 +1,1493 @@
+////////////////////////////////////////////////////////////////////////////////
+//  health items  //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  dx items  //////////////////////////////////////////////////////////////////
+
+model journalitem {
+	path "models/props/tablet/"
+	model 0 "tablet.md3"
+	skin 0 "tx_tablet2.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex JRNL A 0 0
+}
+model wosHyposprej {
+	path "models/items/med/"
+	model 0 "dxMed01.md3"
+	skin 0 "tx_hyposprej.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model dummyHyposprej {
+	path "models/items/med/"
+	model 0 "dxMed01.md3"
+	skin 0 "tx_hyposprej.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model wosKombopack {
+	path "models/items/med/"
+	model 0 "dxMed02.md3"
+	skin 0 "tx_kombopack.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model dummyKombopak {
+	path "models/items/med/"
+	model 0 "dxMed02.md3"
+	skin 0 "tx_kombopack.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model wosInstaLek {
+	path "models/items/med/"
+	model 0 "dxMed03.md3"
+	skin 0 "tx_instalek.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model dummyInstaHeal {
+	path "models/items/med/"
+	model 0 "dxMed03.md3"
+	skin 0 "tx_instalek.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  apply med items  ///////////////////////////////////////////////////////////
+
+model Hyposprej_apply {
+	path "models/items/applymed/"
+	model 0 "applyHyposprej.md3"
+	surfaceskin 0 0 "tx_handgrenade.png"
+	surfaceskin 0 1 "tx_hyposprej.png"
+	scale -1.5 1.5 1.5
+	offset 0.0 -30.0 -12.0
+	frameindex AMHS A 0 0
+	frameindex AMHS B 0 2
+	frameindex AMHS C 0 4
+	frameindex AMHS D 0 6
+	frameindex AMHS E 0 8
+	frameindex AMHS F 0 10
+	frameindex AMHS G 0 12
+	frameindex AMHS H 0 14
+	frameindex AMHS I 0 16
+	frameindex AMHS J 0 18
+}
+model Kombopack_apply {
+	path "models/items/applymed/"
+	model 0 "applyKombopack.md3"
+	surfaceskin 0 0 "tx_handgrenade.png"
+	surfaceskin 0 1 "tx_kombopack.png"
+	scale -1.5 1.5 1.5
+	offset 0.0 -30.0 -12.0
+	frameindex AMHS A 0 0
+	frameindex AMHS B 0 2
+	frameindex AMHS C 0 4
+	frameindex AMHS D 0 6
+	frameindex AMHS E 0 8
+	frameindex AMHS F 0 10
+	frameindex AMHS G 0 12
+	frameindex AMHS H 0 14
+	frameindex AMHS I 0 16
+	frameindex AMHS J 0 18
+}
+model InstaLek_apply {
+	path "models/items/applymed/"
+	model 0 "applyInstalek.md3"
+	surfaceskin 0 0 "tx_handgrenade.png"
+	surfaceskin 0 1 "tx_instalek.png"
+	scale -1.5 1.5 1.5
+	offset 0.0 -20.0 -12.0
+	frameindex AMHS A 0 0
+	frameindex AMHS B 0 2
+	frameindex AMHS C 0 4
+	frameindex AMHS D 0 6
+	frameindex AMHS E 0 8
+	frameindex AMHS F 0 10
+	frameindex AMHS G 0 12
+	frameindex AMHS H 0 14
+	frameindex AMHS I 0 16
+	frameindex AMHS J 0 18
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  strife items  //////////////////////////////////////////////////////////////
+model zscSurgeryKit {
+	//frame A
+	path "models/items/med/"
+	model 0 "surgicalKit.md3"
+	skin 0 "tx_surgKit_1.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+	
+	//frame B
+	skin 0 "tx_surgKit_2.png"	
+	frameindex DUMM B 0 1
+}
+model SurgeryKit {
+	//frame A
+	path "models/items/med/"
+	model 0 "surgicalKit.md3"
+	skin 0 "tx_surgKit_1.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	
+	frameindex FULL A 0 1
+	
+	//frame B
+	skin 0 "tx_surgKit_2.png"	
+	frameindex FULL B 0 1
+}
+model MedPatch {
+	path "models/items/med/"
+	model 0 "medpatch.md3"
+	skin 0 "tx_MedPatch.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	
+	frameindex STMP A 0 1
+}
+model zscMedPatch {
+	path "models/items/med/"
+	model 0 "medpatch.md3"
+	skin 0 "tx_MedPatch.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model wosD_zscMedPatch {
+	path "models/items/med/"
+	model 0 "medpatch.md3"
+	skin 0 "tx_MedPatch.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model zscMedicalKit {
+	path "models/items/med/"
+	model 0 "medicalKit.md3"
+	skin 0 "tx_medikit.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_zscMedicalKit {
+	path "models/items/med/"
+	model 0 "medicalKit.md3"
+	skin 0 "tx_medikit.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model MedicalKit {
+	path "models/items/med/"
+	model 0 "medicalKit.md3"
+	skin 0 "tx_medikit.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex MDKT A 0 0
+}
+model wosD_zscSurgeryKit {
+	path "models/items/med/"
+	model 0 "surgicalKit.md3"
+	skin 0 "tx_surgKit_1.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+	
+	//frame B
+	skin 0 "tx_surgKit_2.png"	
+	frameindex DUMM B 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  items  /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  datadisks  /////////////////////////////////////////////////////////////////
+model notePrayers {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHmedical {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHshouldergun {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHbinderStavesTechnical {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHbinderNote01 {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHsilentHillsTouristGuide {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHminesReport {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model noteSHbindersOath {
+	path "models/items/datadisk/"
+	model 0 "datadisk.md3"
+	skin 0 "tx_datadisk.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//  ammunition  ////////////////////////////////////////////////////////////////
+model EnergyPod {
+	path "models/items/ammo/"
+	model 0 "energyPod.md3"
+	skin 0 "tx_energyPod_1.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0	
+	frameIndex BRY1 A 0 1
+	
+	skin 0 "tx_energyPod_2.png"	
+	frameIndex BRY1 B 0 1
+}
+model wosEnergyPod {
+	path "models/items/ammo/"
+	model 0 "energyPod.md3"
+	skin 0 "tx_energyPod_2.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0	
+	frameIndex DUMM A 0 1
+	
+	skin 0 "tx_energyPod_1.png"	
+	frameIndex DUMM B 0 1
+}
+model EnergyPack {
+	path "models/items/ammo/"
+	model 0 "energyPack.md3"
+	skin 0 "tx_energyPack_2.png"
+	scale 3.3 3.3 3.3
+	offset 0.0 0.0 0.0
+	frameindex CPAC A 0 1
+	
+	skin 0 "tx_energyPack_1.png"
+	frameindex CPAC B 0 1
+}
+model wosEnergyPack {
+	path "models/items/ammo/"
+	model 0 "energyPack.md3"
+	skin 0 "tx_energyPack_2.png"
+	scale 3.3 3.3 3.3
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyPack_1.png"
+	frameindex DUMM B 0 1
+}
+model wosD_energyPack {
+	path "models/items/ammo/"
+	model 0 "energyPack.md3"
+	skin 0 "tx_energyPack_2.png"
+	scale 3.3 3.3 3.3
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyPack_1.png"
+	frameindex DUMM B 0 1
+}
+model wosEnergyKit {
+	path "models/items/ammo/"
+	model 0 "energyKit.md3"
+	skin 0 "tx_energyKit_2.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyKit_1.png"
+	frameindex DUMM B 0 1
+}
+model wosD_energyKit {
+	path "models/items/ammo/"
+	model 0 "energyKit.md3"
+	skin 0 "tx_energyKit_2.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyKit_1.png"
+	frameindex DUMM B 0 1
+}
+model ClipOfBullets {
+	path "models/items/ammo/"
+	model 0 "clipOfBullets.md3"
+	skin 0 "tx_clipOfBullets.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex BLIT A 0 0
+}
+model wosBulletCartridge {
+	path "models/items/ammo/"
+	model 0 "clipOfBullets.md3"
+	skin 0 "tx_clipOfBullets.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model BoxOfBullets {
+	path "models/items/ammo/"
+	model 0 "BoxOfBullets.md3"
+	skin 0 "tx_boxOfBulletst.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex BBOX A 0 0
+}
+model wosBulletsBox {
+	path "models/items/ammo/"
+	model 0 "BoxOfBullets.md3"
+	skin 0 "tx_boxOfBulletst.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model MiniMissiles {
+	path "models/items/ammo/"
+	model 0 "minimissiles.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MSSL A 0 0
+}
+model wosBundleMiniMissile {
+	path "models/items/ammo/"
+	model 0 "miniMissilesBundle.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MMMB A 0 0
+}
+model CrateOfMissiles {
+	path "models/items/ammo/"
+	model 0 "miniMissileBox.md3"
+	surfaceskin 0 0 "tx_boxOfBulletst.png"
+	surfaceskin 0 1 "tx_missileLauncher2.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	frameindex ROKT A 0 0
+}
+model wosHEGrenadeBox {
+	path "models/items/ammo/"
+	model 0 "grenadeBox.md3"
+	surfaceskin 0 0 "tx_boxOfBulletst.png"
+	surfaceskin 0 1 "tx_grnd_expl.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	frameindex LHEG A 0 0
+}
+model wosPhosphorusGrenadeBox {
+	path "models/items/ammo/"
+	model 0 "grenadeBox.md3"
+	surfaceskin 0 0 "tx_boxOfBulletst.png"
+	surfaceskin 0 1 "tx_grnd_fire.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	frameindex LPHG A 0 0
+}
+model ElectricBolts {
+	path "models/items/ammo/"
+	model 0 "ElectricBolts.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex XQRL A 0 0
+}
+model wosBoltsElectric {
+	path "models/items/ammo/"
+	model 0 "ElectricBolts.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex XQRL A 0 0
+}
+model PoisonBolts {
+	path "models/items/ammo/"
+	model 0 "PoisonBolts.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex PQRL A 0 0
+}
+model wosBoltsPoison {
+	path "models/items/ammo/"
+	model 0 "PoisonBolts.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex PQRL A 0 0
+}
+model wosBundleElectric {
+	path "models/items/ammo/"
+	model 0 "arrowBundleElectric.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex MEAR A 0 0
+}
+model wosBundlePoison {
+	path "models/items/ammo/"
+	model 0 "arrowBundlePoison.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex MPAR A 0 0
+}
+model AmmoSatchel {
+	path "models/items/ammo/"
+	model 0 "backpack.md3"
+	skin 0 "tx_bpack.png"
+	scale 0.85 0.85 0.85
+	frameindex BKPK A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  gold  //////////////////////////////////////////////////////////////////////
+model coin {
+	path "models/items/goldcoin/"
+	model 0 "goldCoin.md3"
+	skin 0 "tx_strifeCoin.png"
+	scale 3.85 3.85 3.85
+	offset 0.0 0.0 0.0
+	frameindex COIN A 0 0
+}
+model goldCoin {
+	path "models/items/goldcoin/"
+	model 0 "goldCoin.md3"
+	skin 0 "tx_strifeCoin.png"
+	scale 3.85 3.85 3.85
+	offset 0.0 0.0 0.0
+	frameindex COIN A 0 0
+}
+model strifeCoinDummy {
+	path "models/items/goldcoin/"
+	model 0 "goldCoin.md3"
+	skin 0 "tx_strifeCoin.png"
+	scale 3.85 3.85 3.85
+	offset 0.0 0.0 0.0
+	frameindex COIN A 0 0
+}
+model Gold10 {
+	path "models/items/goldcoin/"
+	model 0 "10coins.md3"
+	skin 0 "tx_strifeCoin.png"
+	scale 3.85 3.85 3.85
+	offset 0.0 0.0 0.0
+	frameindex CRED A 0 0
+}
+model Gold25 {
+	path "models/items/goldcoin/"
+	model 0 "25coins.md3"
+	surfaceskin 0 0 "tx_sack.png"
+	surfaceskin 0 1 "tx_strifeCoin.png"
+	scale 3.85 3.85 3.85
+	offset 0.0 0.0 0.0
+	frameindex SACK A 0 0
+}
+model Gold50 {
+	path "models/items/chest/"
+	model 0 "chest.md3"
+	skin 0 "tx_chest.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0	
+	frameindex CHST A 0 1
+}
+model goldChest50_item {
+	path "models/items/chest/"
+	model 0 "chest.md3"
+	skin 0 "tx_chest.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model goldChest100_item {
+	path "models/items/chest/"
+	model 0 "chest.md3"
+	skin 0 "tx_chest.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model goldChest250_item {
+	path "models/items/chest/"
+	model 0 "chest.md3"
+	skin 0 "tx_chest.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+model goldChest500_item {
+	path "models/items/chest/"
+	model 0 "chest.md3"
+	skin 0 "tx_chest.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  binder helmet  /////////////////////////////////////////////////////////////
+model binder_helmet {
+	path "models/items/binderhelm/"
+	model 0 "binder_helmet.md3"
+	skin 0 "tx_binderHelmet.png"
+	scale 17.0 17.0 17.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+model rangerHelmDummy {
+	path "models/items/binderhelm/"
+	model 0 "binder_helmet.md3"
+	skin 0 "tx_binderHelmet.png"
+	scale 17.0 17.0 17.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//deployable shield  ///////////////////////////////////////////////////////////
+model wosDeployableShield {
+	path "models/items/deplshield/"
+	model 0 "deployableShield.md3"
+	skin 0 "tx_deps_A.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
+model ActiveShield {
+	path "models/items/deplshield/"
+	model 0 "deployableShield.md3"	
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_deps_A.png"
+	frameindex DUMM A 0 0
+	
+	skin 0 "tx_deps_B.png"
+	frameindex DUMM B 0 0
+	
+	skin 0 "tx_deps_C.png"
+	frameindex DUMM C 0 0
+	
+	skin 0 "tx_deps_D.png"
+	frameindex DUMM D 0 0
+	
+	skin 0 "tx_deps_E.png"
+	frameindex DUMM E 0 0	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  beacon  ////////////////////////////////////////////////////////////////////
+model TeleporterBeacon {
+	path "models/items/beacon/"
+	model 0 "beacon.md3"
+	skin 0 "tx_deps_A.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	
+	frameindex BEAC A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  climbing rope beacon  //////////////////////////////////////////////////////
+model ZipLineEndpoint {
+	path "models/items/ropeBeacon/"
+	model 0 "ropeBeacon.md3"
+	skin 0 "tx_ropeBeacon.png"
+	scale 4.5 4.5 5.5
+	
+	frameindex ZPLN A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  binder armor  //////////////////////////////////////////////////////////////
+/*model RangerArmor1 {
+	path "models/items/armor/"
+	model 0 "bndArmr1.md3"
+	skin 0 "hunter.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0	
+	frameindex RGA1 V 0 0
+}*/
+model wosBinderArmorBasic {
+	path "models/items/armor/"
+	model 0 "bndArmr1.md3"
+	skin 0 "hunter.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+/*model RangerArmor1_item {
+	path "models/items/armor/"
+	model 0 "bndArmr1.md3"
+	skin 0 "hunter.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	frameindex RGA1 V 0 0
+}*/
+model rangerArmor1Dummy {
+	path "models/items/armor/"
+	model 0 "bndArmr1.md3"
+	skin 0 "hunter.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	frameindex RGA1 A 0 0
+}
+/*model RangerArmor2 {
+	path "models/items/armor/"
+	model 0 "bndArmr2.md3"
+	skin 0 "hunter.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0	
+	frameindex RGA2 V 0 0
+}*/
+model wosBinderArmorAdvanced {
+	path "models/items/armor/"
+	model 0 "bndArmr2.md3"
+	skin 0 "hunter.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+/*model RangerArmor2_item {
+	path "models/items/armor/"
+	model 0 "bndArmr2.md3"
+	skin 0 "hunter.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	
+	frameindex RGA2 V 0 0
+}*/
+model rangerArmor2Dummy {
+	path "models/items/armor/"
+	model 0 "bndArmr2.md3"
+	skin 0 "hunter.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	
+	frameindex RGA2 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  other armor  ///////////////////////////////////////////////////////////////
+/*model kineticArmor {
+	path "models/items/armor/"
+	model 0 "dx_shield2.md3"
+	skin 0 "tx_shield2.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}*/
+model wosKineticArmor {
+	path "models/items/armor/"
+	model 0 "dx_shield2.md3"
+	skin 0 "tx_shield2.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+/*model kineticArmor_item {
+	path "models/items/armor/"
+	model 0 "dx_shield2.md3"
+	skin 0 "tx_shield2.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}*/
+model dummy_kineticArmor {
+	path "models/items/armor/"
+	model 0 "dx_shield2.md3"
+	skin 0 "tx_shield2.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model MetalArmor {
+	path "models/items/armor/"
+	model 0 "metalArmor.md3"
+	skin 0 "tx_metalArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex ARM1 A 0 0
+	frameindex ARM3 A 0 0
+}
+model wosMetalArmor {
+	path "models/items/armor/"
+	model 0 "metalArmor.md3"
+	skin 0 "tx_metalArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex ARM1 A 0 0
+	frameindex ARM3 A 0 0
+}
+model dummy_metalArmor {
+	path "models/items/armor/"
+	model 0 "metalArmor.md3"
+	skin 0 "tx_metalArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model LeatherArmor {
+	path "models/items/armor/"
+	model 0 "leatherArmor.md3"
+	skin 0 "tx_leatherArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex ARM4 A 0 0
+	frameindex ARM2 A 0 0
+}
+model wosLeatherArmor {
+	path "models/items/armor/"
+	model 0 "leatherArmor.md3"
+	skin 0 "tx_leatherArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex ARM4 A 0 0
+	frameindex ARM2 A 0 0
+}
+model dummy_leatherArmor {
+	path "models/items/armor/"
+	model 0 "leatherArmor.md3"
+	skin 0 "tx_leatherArmor.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  grenades  //////////////////////////////////////////////////////////////////
+model wosGrenadeE {
+	path "models/items/grenades/"
+	model 0 "p_grenade.md3"
+	skin 0 "tx_grnd_expl.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosGrenadeE_3 {
+	path "models/items/grenades/"
+	model 0 "p_grenadeTrio.md3"
+	skin 0 "tx_grnd_expl.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosGrenadeE_Throw {
+	path "models/items/grenades/"
+	model 0 "grenade.md3"
+	skin 0 "tx_grnd_expl.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex GRAP A 0 0
+	frameindex GRAP B 0 2
+}
+
+model wosGrenadeF {
+	path "models/items/grenades/"
+	model 0 "p_grenade.md3"
+	skin 0 "tx_grnd_fire.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosGrenadeF_3 {
+	path "models/items/grenades/"
+	model 0 "p_grenadeTrio.md3"
+	skin 0 "tx_grnd_fire.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosGrenadeF_Throw {
+	path "models/items/grenades/"
+	model 0 "grenade.md3"
+	skin 0 "tx_grnd_fire.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex GRIN A 0 0
+	frameindex GRIN B 0 2
+}
+
+model wosGrenadeG {
+	path "models/items/grenades/"
+	model 0 "gasGrenade.md3"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_gasg1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_gasg2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_gasg3.png"
+	frameindex DUMM C 0 0
+}
+model wosGrenadeG_3 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/items/grenades/"
+	model 0 "gasGrenadeTrio.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_gasg1.png"
+	frameindex DUMM A 0 0
+}
+model wosGrenadeG_Throw {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/items/grenades/"
+	model 0 "gasGrenade.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_gasg1.png"
+	frameindex GASG A 0 0
+	skin 0 "tx_gasg2.png"
+	frameindex GASG B 0 0
+	skin 0 "tx_gasg3.png"
+	frameindex GASG C 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  blaster turret  ////////////////////////////////////////////////////////////
+model wosBlasterTurret {
+	path "models/items/blasterTurret/"
+	model 0 "blasterTurret.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model blasterTurretSet {
+	path "models/items/blasterTurret/"
+	model 0 "blasterTurret.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model Blaster_turret {
+	path "models/items/blasterTurret/"
+	model 0 "blasterTurret.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 2
+	frameindex DUMM C 0 4
+	frameindex DUMM D 0 6
+	frameindex DUMM E 0 6
+	frameindex DUMM F 0 8
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  portable map  //////////////////////////////////////////////////////////////
+model wosPortableMap {
+	path "models/items/portablemap/"
+	model 0 "portableMap.md3"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_pmap1.png"
+	frameindex DUMM A 0 0
+	
+	skin 0 "tx_pmap2.png"
+	frameindex DUMM B 0 0
+	
+	skin 0 "tx_pmap3.png"
+	frameindex DUMM C 0 0
+	
+	skin 0 "tx_pmap4.png"
+	frameindex DUMM D 0 0	
+}
+model StrifeMap {
+	path "models/items/portablemap/"
+	model 0 "portableMap.md3"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_pmap2.png"
+	frameindex PMAP A 0 0
+	frameindex SMAP A 0 0
+	
+	skin 0 "tx_pmap3.png"
+	frameindex PMAP B 0 0
+	frameindex SMAP B 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  targeter  //////////////////////////////////////////////////////////////////
+model wosTargeter {
+	path "models/items/targeter/"
+	model 0 "targeter.md3"
+	skin 0 "tx_targeter.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex TARG A 0 0
+}
+model Targeter {
+	path "models/items/targeter/"
+	model 0 "targeter.md3"
+	skin 0 "tx_targeter.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex TARG A 0 0
+}
+model TargetterDummy {
+	path "models/items/targeter/"
+	model 0 "targeter.md3"
+	skin 0 "tx_targeter.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex TARG A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  flares  ////////////////////////////////////////////////////////////////////
+model Flare {
+	//pickup
+	path "models/items/flares/"
+	model 0 "p_flare.md3"
+	skin 0 "tx_flare.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model ActiveFlare {
+	//burning flare
+	path "models/items/flares/"
+	model 0 "flare.md3"
+	skin 0 "tx_flare.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex FLAR A 0 0
+	frameindex FLAR B 0 1
+}
+model FlareBox {
+	//explains itself
+	path "models/items/flares/"
+	model 0 "flareBox.md3"
+	surfaceskin 0 0 "tx_boxOfBulletst.png"
+	surfaceskin 0 1 "tx_flare.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  swarmers  //////////////////////////////////////////////////////////////////
+model wosSwarmers {
+	path "models/items/swarmers/"
+	model 0 "swarmers_ball.md3"
+	skin 0 "tx_swarmers.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model SwarmerPodSet {
+	path "models/items/swarmers/"
+	model 0 "swarmers_ball.md3"
+	skin 0 "tx_swarmers.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model SwarmerPodActive {
+	path "models/items/swarmers/"
+	model 0 "swarmers_ball.md3"
+	skin 0 "tx_swarmers.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model SwarmerMite {
+	path "models/items/swarmers/"
+	model 0 "swarmers_mite.md3"
+	skin 0 "tx_swarmers.png"
+	scale 1.75 1.75 1.75
+	offset 0.0 0.0 0.0
+	frameindex SPMT A 0 0
+	frameindex SPMT B 0 2
+	frameindex SPMT C 0 4
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  regeneration module  ///////////////////////////////////////////////////////
+model wosRegenModule {
+	path "models/items/regenmod/"
+	model 0 "regenModule.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_regenModule1.png"
+	frameindex DUMM A 0 0
+	
+	skin 0 "tx_regenModule2.png"
+	frameindex DUMM B 0 0
+	
+	skin 0 "tx_regenModule3.png"
+	frameindex DUMM C 0 0
+	
+	skin 0 "tx_regenModule4.png"
+	frameindex DUMM D 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  communicator  //////////////////////////////////////////////////////////////
+model Communicator {
+	path "models/items/communicator/"
+	model 0 "communicator.md3"
+	skin 0 "tx_communicator.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex COMM A 0 0
+}
+model CommunicatorDummy {
+	path "models/items/communicator/"
+	model 0 "communicator.md3"
+	skin 0 "tx_communicator.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex COMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  Scanner  ///////////////////////////////////////////////////////////////////
+model Scanner {
+	NOINTERPOLATION
+	path "models/items/scanner/"
+	model 0 "scanner.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP A 0 0
+	
+	skin 0 "tx_scanner2.png"
+	frameindex PMUP B 0 2
+}
+model zscScanner {
+	NOINTERPOLATION
+	path "models/items/scanner/"
+	model 0 "scanner.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP A 0 0
+	
+	skin 0 "tx_scanner2.png"
+	frameindex PMUP B 0 1
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP C 0 2
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP D 0 3 
+}
+model scannerDummy {
+	NOINTERPOLATION
+	path "models/items/scanner/"
+	model 0 "scanner.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP A 0 0
+	
+	skin 0 "tx_scanner2.png"
+	frameindex PMUP B 0 1
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP C 0 2
+	
+	skin 0 "tx_scanner1.png"
+	frameindex PMUP D 0 3 
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  nightEyeDevice  ////////////////////////////////////////////////////////////
+model wosNightEyeDevice {
+	path "models/items/nighteyedev/"
+	model 0 "dx_nedev.md3"
+	skin 0 "tx_nedev.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  flameTurret  ///////////////////////////////////////////////////////////////
+model wosFlameTurret {
+	path "models/items/flameTurret/"
+	model 0 "flameTurret.md3"
+	skin 0 "tx_flameturret.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model FlameTurretSet {
+	path "models/items/flameTurret/"
+	model 0 "flameTurret.md3"
+	skin 0 "tx_flameturret.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model FlameTurretEngage {
+	path "models/items/flameTurret/"
+	model 0 "flameTurret.md3"
+	skin 0 "tx_flameturret.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+}
+model FlameTurretDummy {
+	path "models/items/flameTurret/"
+	model 0 "flameTurret.md3"
+	skin 0 "tx_flameturret.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM E 0 4
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  food items  ////////////////////////////////////////////////////////////////
+model wosWaterBottle {
+	path "models/props/waterbottle/"
+	model 0 "waterBottle.md3"
+	skin 0 "tx_WATRA0.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model wosbeerBottle {
+	path "models/props/waterbottle/"
+	model 0 "waterBottle.md3"
+	skin 0 "tx_btlBeer.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model wosaleBottle {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_12.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosvineBottle {
+	path "models/props/waterbottle/"
+	model 0 "waterBottle.md3"
+	skin 0 "tx_btlWine.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model woshamburger {
+	path "models/items/food/"
+	model 0 "hamburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR A 0 0
+}
+model dummy_hamburger {
+	path "models/items/food/"
+	model 0 "hamburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR A 0 0
+}
+model wosbigburger {
+	path "models/items/food/"
+	model 0 "bigburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR C 0 0
+}
+model dummy_bigburger {
+	path "models/items/food/"
+	model 0 "bigburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR C 0 0
+}
+model woscheeseburger {
+	path "models/items/food/"
+	model 0 "cheeseburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR B 0 0
+}
+model dummy_cheeseburger {
+	path "models/items/food/"
+	model 0 "cheeseburger.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR B 0 0
+}
+model woscheeseburgerDouble {
+	path "models/items/food/"
+	model 0 "cheeseburgerdouble.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR C 0 0
+}
+model dummy_cheeseburgerDouble {
+	path "models/items/food/"
+	model 0 "cheeseburgerdouble.md3"
+	skin 0 "tx_burger.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BRGR C 0 0
+}
+model woshotdog01 {
+	path "models/items/food/"
+	model 0 "hotdog01.md3"
+	skin 0 "tx_hotdog.png"
+	scale 2.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex HTD1 A 0 0
+}
+model dummy_hotdog01 {
+	path "models/items/food/"
+	model 0 "hotdog01.md3"
+	skin 0 "tx_hotdog.png"
+	scale 2.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex HTD1 A 0 0
+}
+model woshotdog02 {
+	path "models/items/food/"
+	model 0 "hotdog02.md3"
+	skin 0 "tx_hotdog.png"
+	scale 2.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex HTD2 A 0 0
+}
+model dummy_hotdog02 {
+	path "models/items/food/"
+	model 0 "hotdog02.md3"
+	skin 0 "tx_hotdog.png"
+	scale 2.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex HTD2 A 0 0
+}
+model wosfoodRation1 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox1.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosfoodRation2 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox2.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosfoodRation3 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox3.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  rebreather  ////////////////////////////////////////////////////////////////
+model wosRebreather {
+	path "models/items/rebreather/"
+	model 0 "dx_rebreather.md3"
+	skin 0 "tx_rebreather.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex RBRT A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  flight harness  ////////////////////////////////////////////////////////////
+/*model jetPack_item {
+	path "models/items/flightharness/"
+	model 0 "dx_flightHarness.md3"
+	skin 0 "tx_flightharness.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}*/
+////////////////////////////////////////////////////////////////////////////////
+
+//  EnvironmentalSuit  /////////////////////////////////////////////////////////
+model EnvironmentalSuit {
+	path "models/items/envirosuit/"
+	model 0 "enviroSuit.md3"
+	surfaceskin 0 0 "tx_envirosuit.png"
+	surfaceskin 0 1 "tx_boots.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex MASK A 0 0
+}
+model wosEnvSuit {
+	path "models/items/envirosuit/"
+	model 0 "enviroSuit.md3"
+	surfaceskin 0 0 "tx_envirosuit.png"
+	surfaceskin 0 1 "tx_boots.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex MASK A 0 0
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+//  Armor Shard - Repair Tool  /////////////////////////////////////////////////
+model wosarmorShard {
+	path "models/items/armorshard/"
+	model 0 "p_repairTool.md3"
+	skin 0 "tx_repairTool.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  interceptor drone  /////////////////////////////////////////////////////////
+model wosInterceptorDrone {
+	path "models/npc/spydrone/"
+	model 0 "spyDrone.md3"
+	skin 0 "SpyDroneTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 2.0
+	frameindex DUMM A 0 0
+}
+model interceptorDrone_Set {
+	path "models/npc/spydrone/"
+	model 0 "spyDrone.md3"
+	skin 0 "SpyDroneTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model interceptorDrone {
+	path "models/npc/spydrone/"
+	model 0 "spyDrone.md3"
+	skin 0 "SpyDroneTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  shadow armor  //////////////////////////////////////////////////////////////
+model ShadowArmor {
+	path "models/items/shadowArmor"
+	model 0 "shadowArmor.md3"
+	skin 0 "tx_shadowArmor.png"
+	scale 0.85 0.85 0.85
+	offset 0.0 0.0 0.0
+	frameindex SHD1 A 0 0	
+}
+model wosShadowArmor {
+	path "models/items/shadowArmor"
+	model 0 "shadowArmor.md3"
+	skin 0 "tx_shadowArmor.png"
+	scale 0.85 0.85 0.85
+	offset 0.0 0.0 0.0
+	frameindex SHD1 A 0 0	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -356,3 +356,2397 @@ model dx_gallowsEmpty {
 	offset 0.0 0.0 0.0
 	frameindex DSBC A 0 0
 }
+
+
+//  staffBlaster parts  ////////////////////////////////////////////////////////
+model DMY_blasterStaffParts_01 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece1.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model DMY_blasterStaffParts_02 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece2.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model DMY_blasterStaffParts_03 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece3.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model DMY_blasterStaffParts_04 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece4.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model DMY_blasterStaffParts_05 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece5.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+model DMY_blasterStaffParts_06 {
+	path "models/weapons/staff/"
+	skin 0 "tx_pxStaffBlaster.png"
+	model 0 "blasterStaff_piece6.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  stool  /////////////////////////////////////////////////////////////////////
+model Stool {
+	path "models/props/stool/"
+	model 0 "stool.md3"
+	skin 0 "tx_WOOD06.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex STOL A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  wooden mug  ////////////////////////////////////////////////////////////////
+model Mug {
+	path "models/props/mug/"
+	model 0 "woodenMug.md3"
+	skin 0 "tx_WOOD07.png"
+	scale 3.3 3.3 3.3
+	offset 0.0 0.0 0.0
+	
+	frameindex MUGG A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  water bottle  //////////////////////////////////////////////////////////////
+model WaterBottle {
+	path "models/props/waterbottle/"
+	model 0 "waterBottle.md3"
+	skin 0 "tx_WATRA0.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	
+	frameindex WATR A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  candle  ////////////////////////////////////////////////////////////////////
+model Candle {
+	path "models/props/candle/"
+	model 0 "candle.md3"
+	skin 0 "tx_candle.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	
+	frameindex KNDL A 0 1
+	frameindex CNDL A 0 1
+}
+model animatedCandle {
+	path "models/props/candle/"
+	model 0 "candle_anim.md3"
+	skin 0 "tx_candle.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	
+	frameindex KNDL A 0 0
+	frameindex KNDL B 0 1
+	frameindex KNDL C 0 2
+	frameindex KNDL D 0 3
+	
+	frameindex CNDL A 0 0
+	frameindex CNDL B 0 1
+	frameindex CNDL C 0 2
+	frameindex CNDL D 0 3
+}
+model candle2 {
+	path "models/props/candle/"
+	model 0 "candle2.md3"
+	skin 0 "tx_candle2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  bushes  ////////////////////////////////////////////////////////////////////
+model dest_ShortBush {
+	path "models/props/bush/"
+	model 0 "bush1.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_WOOD07.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	
+	frameindex BUSH A 0 1
+	
+}
+model dest_TallBush {
+	path "models/props/bush/"
+	model 0 "bush1.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_WOOD07.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SHRB A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  pot, picther, etc.  ////////////////////////////////////////////////////////
+model dest_Pot {
+	path "models/props/pot/"
+	model 0 "pot.md3"
+	skin 0 "tx_pot.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex VASE A 0 0
+	frameindex VAZE A 0 0
+}
+model dest_Pitcher {
+	path "models/props/pitcher/"
+	model 0 "pitcher.md3"
+	skin 0 "tx_pitcher.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	
+	frameindex VAZE B 0 0
+}
+model WoodenBarrel {
+	path "models/props/woodbarrel/"
+	model 0 "wbarrel.md3"
+	skin 0 "tx_wbarrel.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	frameindex BARW A 0 0
+}
+model strifeDecoVaze1 {
+	path "models/props/pitcher/"
+	model 0 "pitcher.md3"
+	skin 0 "tx_pitcher2.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT1 A 0 0
+}
+model dest_strifeDecoPot1 {
+	path "models/props/pot/"
+	model 0 "pot.md3"
+	skin 0 "tx_dpot2.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT2 A 0 0
+}
+model strifeDecoPot1 {
+	path "models/props/pot/"
+	model 0 "pot.md3"
+	skin 0 "tx_dpot2.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT2 A 0 0
+}
+model dest_strifeDecoPot2 {
+	path "models/props/pot/"
+	model 0 "pot3.md3"
+	skin 0 "tx_dpot3.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT3 A 0 0
+}
+model strifeDecoPot2 {
+	path "models/props/pot/"
+	model 0 "pot3.md3"
+	skin 0 "tx_dpot3.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT3 A 0 0
+}
+model dest_strifeDecoPot3 {
+	path "models/props/pot/"
+	model 0 "pot.md3"
+	skin 0 "tx_dpot4.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT4 A 0 0
+}
+model strifeDecoPot3 {
+	path "models/props/pot/"
+	model 0 "pot.md3"
+	skin 0 "tx_dpot4.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT4 A 0 0
+}
+model dest_strifeDecoPot4 {
+	path "models/props/pot/"
+	model 0 "pot5.md3"
+	skin 0 "tx_dpot5.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT5 A 0 0
+}
+model strifeDecoPot4 {
+	path "models/props/pot/"
+	model 0 "pot5.md3"
+	skin 0 "tx_dpot5.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT5 A 0 0
+}
+model dest_strifeDecoVaze2 {
+	path "models/props/pot/"
+	model 0 "pot6.md3"
+	skin 0 "tx_dpot6.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT6 A 0 0
+}
+model strifeDecoVaze2 {
+	path "models/props/pot/"
+	model 0 "pot6.md3"
+	skin 0 "tx_dpot6.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT6 A 0 0
+}
+model dest_strifeDecoVaze3 {
+	path "models/props/pot/"
+	model 0 "pot7.md3"
+	skin 0 "tx_dpot7.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT7 A 0 0
+}
+model strifeDecoVaze3 {
+	path "models/props/pot/"
+	model 0 "pot7.md3"
+	skin 0 "tx_dpot7.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT7 A 0 0
+}
+model dest_strifeDecoPot5 {
+	path "models/props/pot/"
+	model 0 "pot8.md3"
+	skin 0 "tx_dpot8.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT8 A 0 0
+}
+model strifeDecoPot5 {
+	path "models/props/pot/"
+	model 0 "pot8.md3"
+	skin 0 "tx_dpot8.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPT8 A 0 0
+}
+model strifeDecoPotHanging1 {
+	path "models/props/pot/"
+	model 0 "hang_pot1.md3"
+	surfaceskin 0 0 "tx_dPot5.png"
+	surfaceskin 0 1 "tx_rope.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPH1 A 0 0
+}
+model strifeDecoPotHanging2 {
+	path "models/props/pot/"
+	model 0 "hang_pot2.md3"
+	surfaceskin 0 1 "tx_dPot2.png"
+	surfaceskin 0 0 "tx_rope.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPH2 A 0 0
+}
+model strifeDecoPotHanging3 {
+	path "models/props/pot/"
+	model 0 "hang_pot2.md3"
+	surfaceskin 0 1 "tx_dPot4.png"
+	surfaceskin 0 0 "tx_rope.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SPH3 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  lanterns && lights  ////////////////////////////////////////////////////////
+model PoleLantern {
+	path "models/props/lanterns/"
+	model 0 "poleLantern.md3"
+	skin 0 "tx_poleLantern.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	
+	frameindex LANT A 0 0
+	
+}
+model RV_PoleLantern {
+	path "models/props/lanterns/"
+	model 0 "poleLantern.md3"
+	skin 0 "tx_poleLantern.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
+model TechLampBrass {
+	path "models/props/lanterns/"
+	model 0 "TechLampBrass.md3"
+	skin 0 "tx_TechLampBrass.png"
+	scale 5.0 5.0 10.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TECH B 0 0
+}
+model wos_bright_techlampbrass {
+	path "models/props/lanterns/"
+	model 0 "TechLampBrass.md3"
+	skin 0 "tx_TechLampBrass.png"
+	scale 5.0 5.0 10.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TECH B 0 0
+}
+model LightSilverFluorescent {
+	path "models/props/lanterns/"
+	model 0 "LightSilverFluorescent.md3"
+	skin 0 "tx_lits.png"
+	scale 4.0 4.0 4.75
+	offset 0.0 0.0 16.0
+	
+	frameindex LITS A 0 0 
+}
+model LightBrownFluorescent {
+	path "models/props/lanterns/"
+	model 0 "LightBrownFluorescent.md3"
+	skin 0 "tx_lits.png"
+	scale 4.0 4.0 4.75
+	offset 0.0 0.0 16.0
+	
+	frameindex LITB A 0 0
+}
+model LightGoldFluorescent {
+	path "models/props/lanterns/"
+	model 0 "LightGoldFluorescent.md3"
+	skin 0 "tx_lits.png"
+	scale 4.0 4.0 4.75
+	offset 0.0 0.0 16.0
+	
+	frameindex LITG A 0 0
+}
+model TechLampSilver {
+	path "models/props/lanterns/"
+	model 0 "TechLampSilver.md3"
+	skin 0 "tx_TechLampSilver.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex TECH A 0 0
+}
+model modelMediumTorch {
+	path "models/props/lanterns/"
+	model 0 "mediumTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 1.8 1.8 2.5
+	offset 0.0 0.0 0.0
+	frameindex LTRH A 0 0
+	frameindex LTRH B 0 0
+	frameindex LTRH C 0 0
+	frameindex LTRH D 0 0
+}
+model modelHugeTorch {
+	path "models/props/lanterns/"
+	model 0 "HugeTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 2.0 2.0 2.5
+	offset 0.0 0.0 0.0
+	frameindex LOGS A 0 0
+}
+model modelLargeTorch {
+	path "models/props/lanterns/"
+	model 0 "LargeTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 2.0 2.0 2.5
+	offset 0.0 0.0 0.0
+	frameindex LMPC A 0 0
+}
+model modelBurningBowl {
+	path "models/props/lanterns/"
+	model 0 "BurningBowl.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex BOWL A 0 0
+}
+model modelBurningBrazier {
+	path "models/props/lanterns/"
+	model 0 "BurningBrazier.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 7.0 7.0 5.5
+	offset 0.0 0.0 0.0
+	frameindex BRAZ A 0 0
+}
+model modelStrifeBurningBarrel {
+	path "models/props/lanterns/"
+	model 0 "burningBarrel.md3"
+	skin 0 "tx_burningBarrel.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex BBAR A 0 0 
+}
+model LightGlobe {
+	path "models/props/lanterns/"
+	model 0 "lightGlobe.md3"
+	skin 0 "tx_lightGlobe.png"
+	scale 2.3 2.3 2.3
+	offset 0.0 0.0 0.0
+	frameindex LITE A 0 0
+}
+model OutsideLamp {
+	path "models/props/lanterns/"
+	model 0 "OutsideLamp.md3"
+	skin 0 "tx_OutsideLamp.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	frameindex LAMP A 0 0
+}
+model SmallTorchUnlit {
+	path "models/props/lanterns/"
+	model 0 "smallTorch.md3"
+	skin 0 "tx_smallTorch.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 20.0
+	frameindex TRHO A 0 0
+}
+model modelSmallTorchLit {
+	path "models/props/lanterns/"
+	model 0 "smallTorch.md3"
+	skin 0 "tx_smallTorch.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 20.0
+	frameindex TRHL A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  anvil  /////////////////////////////////////////////////////////////////////
+model Anvil {
+	path "models/props/anvil/"
+	model 0 "anvil.md3"
+	skin 0 "tx_anvil.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex ANVL A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  tub  ///////////////////////////////////////////////////////////////////////
+model Tub {
+	path "models/props/tub/"
+	model 0 "tub.md3"
+	skin 0 "tx_wbarrel.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TUB1 A 0 0
+	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  dark trees & strife trees & custom trees  //////////////////////////////////
+model darkTree01 {
+	path "models/props/trees/"
+	model 0 "darkTree2.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_darkTree.png"
+	scale 36.0 36.0 32.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DRT1 A 0 0
+}
+model darkTree02 {
+	path "models/props/trees/"
+	model 0 "darkTree1.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_darkTree.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DRT2 A 0 0
+}
+model darkTree03 {
+	path "models/props/trees/"
+	model 0 "roundBush.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_WOOD06.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DRT3 A 0 0
+}
+model BigTree2 {
+	path "models/props/trees/"
+	model 0 "treeB.md3"
+	surfaceskin 0 0 "tx_bush.png"
+	surfaceskin 0 1 "tx_darkTree.png"
+	scale 25.0 25.0 25.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TREE B 0 0
+}
+model TreeStub {
+	path "models/props/trees/"
+	model 0 "TreeStub.md3"
+	skin 0 "tx_darkTree.png"
+	scale 19.0 19.0 19.0
+	offset 0.0 0.0 0.0
+	frameindex  TRE1 A 0 0
+	frameindex  TRET A 0 0
+}
+model PottedTree {
+	path "models/props/trees/"
+	model 0 "PottedTree.md3"
+	skin 0 "tx_pottedTree.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TREE C 0 0
+}
+model strifeTreeBonsai01 {
+	path "models/props/trees/"
+	model 0 "dxBonsai01.md3"
+	skin 0 "tx_treeBonsai.png"
+	scale 18.0 18.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex SBNS A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  metal pot  /////////////////////////////////////////////////////////////////
+model MetalPot {
+	path "models/props/metalpot/"
+	model 0 "metalPot.md3"
+	skin 0 "tx_anvil.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex MPOT A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  tray  //////////////////////////////////////////////////////////////////////
+model Tray {
+	path "models/props/tray/"
+	model 0 "tray.md3"
+	skin 0 "tx_tray.png"
+	scale 4.5 4.5 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TRAY A 0 0
+}
+model smallerTray {
+	path "models/props/tray/"
+	model 0 "tray.md3"
+	skin 0 "tx_tray.png"
+	scale 4.5 4.5 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex TRAY A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  surgery crab & 3D printer  /////////////////////////////////////////////////
+model SurgeryCrab {
+	path "models/props/SurgeryCrab/"
+	model 0 "SurgeryCrab.md3"
+	skin 0 "tx_SurgeryCrab.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 16.0
+	frameindex CRAB A 0 0
+}
+model medicalCrab2 {
+	path "models/props/SurgeryCrab/"
+	model 0 "SurgeryCrab.md3"
+	skin 0 "tx_SurgeryCrab.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 40.0
+	frameindex CRAB X 0 0
+}
+model dx3Dprinter {
+	path "models/props/SurgeryCrab/"
+	model 0 "3Dprinter.md3"
+	skin 0 "tx_SurgeryCrab.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 40.0
+	frameindex 3DPT A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  ExplosiveBarrel2  //////////////////////////////////////////////////////////
+model ExplosiveBarrel2 {
+	path "models/props/explosiveBarrel/"
+	model 0 "ExplosiveBarrel2.md3"
+	skin 0 "tx_StrifeExplodingBarrel.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex BART A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  blood candle  //////////////////////////////////////////////////////////////
+model modelBloodCandle {
+	path "models/props/candle/"
+	model 0 "bloodCandle.md3"
+	skin 0 "tx_bcandle.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex BCND A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  books  /////////////////////////////////////////////////////////////////////
+model hxnBook01 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "book01.md3"
+	skin 0 "tx_books.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model hxnBook02 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "book02.md3"
+	skin 0 "tx_books.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model hxnBook03 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "book03.md3"
+	skin 0 "tx_books.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model hxnBook04 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/books/"
+	model 0 "book04.md3"
+	skin 0 "tx_books.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  marlboroMike stuff  ////////////////////////////////////////////////////////
+model MM_ammoCrate_01 {
+	path "models/props/mmstuff/"
+	model 0 "mmAmmoCrate01.md3"
+	surfaceskin 0 0 "tx_mmammobox1.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	surfaceskin 0 1 "tx_energyPod_2.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_energyPod_1.png"
+	frameindex DUMM B 0 0
+}
+model MM_gadget_01 {
+	path "models/props/mmstuff/"
+	model 0 "mm_gizmo01.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MGD1 A 0 0
+}
+model MM_gadget_02 {
+	path "models/props/mmstuff/"
+	model 0 "mmGdg02.md3"
+	skin 0 "tx_radgd2.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MGD2 A 0 0
+	
+}
+model model_MM_gadget_03 {
+	path "models/props/mmstuff/"
+	model 0 "projector.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex MGD3 A 0 0
+}
+model model_MM_gadget_04 {
+	path "models/props/mmstuff/"
+	model 0 "projector.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex MGD4 A 0 0
+}
+model MM_gadget_07 {
+	path "models/props/mmstuff/"
+	model 0 "mmGdg07.md3"
+	skin 0 "tx_mmgadget7.png"
+	scale 15.0 15.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex MGD7 A 0 0
+}
+model MM_gadget_08 {
+	path "models/props/mmstuff/"
+	model 0 "projector.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex MGD8 A 0 0
+}
+model MM_gadget_09 {
+	path "models/props/mmstuff/"
+	model 0 "mmGdg09.md3"
+	skin 0 "tx_mmgagd6a9.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MGD9 A 0 0
+}
+model MM_gadget_10 {
+	path "models/props/mmstuff/"
+	model 0 "mmGdgA.md3"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0	
+	skin 0 "tx_mmGadgetA.png"
+	frameindex MGDG A 0 0
+	skin 0 "tx_mmGadgetB.png"
+	frameindex MGDG B 0 0
+}
+model MM_food_06 {
+	path "models/props/mmstuff/"
+	model 0 "mm_food06.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD6 A 0 0
+}
+model MM_food_07 {
+	path "models/props/mmstuff/"
+	model 0 "mm_food07.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD7 A 0 0
+}
+
+model MM_stuff_04 {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_04.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MS04 A 0 0
+}
+model MM_stuff_05 {
+	path "models/props/mmstuff/"
+	model 0 "mmMeds.md3"
+	skin 0 "tx_mmmeds1.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex MS05 A 0 0
+}
+model MM_stuff_06 {
+	path "models/props/mmstuff/"
+	model 0 "mmMeds.md3"
+	skin 0 "tx_mmmeds2.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex MS06 A 0 0
+}
+model MM_stuff_08 {
+	path "models/props/mmstuff/"
+	model 0 "mmKitchenStuff.md3"
+	surfaceskin 0 0 "Pan1Tex1.png"
+	surfaceskin 0 1 "tx_mmkitchStuff.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 37.0
+	frameindex MS08 A 0 0
+}
+model MM_stuff_09 {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_09.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MS09 A 0 0
+}
+model MM_stuff_10 {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_10.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MS10 A 0 0
+}
+model MM_stuff_11 {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_11.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex MS11 A 0 0
+}
+model MM_stuff_12 {
+	path "models/props/mmstuff/"
+	model 0 "MM_stuff_12.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MS12 A 0 0
+}
+model MM_shrubbery {
+	path "models/props/mmstuff/"
+	model 0 "MM_shrubbery.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MSRB A 0 0
+}
+model MM_cactus {
+	path "models/props/mmstuff/"
+	model 0 "mm_cactus.md3"
+	skin 0 "tx_mmstuff.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MCAC A 0 0
+}
+model MM_food_04 {
+	path "models/props/roomstuff/"
+	model 0 "coffeeCup.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex MFD4 A 0 0
+} //cup
+model MM_food_05 {
+	path "models/props/roomstuff/"
+	model 0 "coffeeCupPlate.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex MFD5 A 0 0
+} //cup&plate
+model MM_gold {
+	path "models/props/mmstuff/"
+	model 0 "mmGold.md3"
+	skin 0 "tx_mmgold.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex MGLD A 0 0
+}
+model MM_relic {
+	path "models/props/mmstuff/"
+	model 0 "mmRelic.md3"
+	skin 0 "tx_mmgold.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MREL A 0 0
+}
+model MM_roadBlock {
+	path "models/props/mmstuff/"
+	model 0 "mmRedBar.md3"
+	skin 0 "tx_mmRedBar.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex MMRB A 0 0 
+}
+model MM_radio {
+	path "models/props/mmstuff/"
+	model 0 "mmRadio.md3"
+	skin 0 "tx_radgd2.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex MRAD A 0 0
+}
+model MM_camera_1 {
+	path "models/props/mmstuff/"
+	model 0 "camera01.md3"
+	skin 0 "tx_cameras.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 20.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+}
+model MM_camera_2 {
+	path "models/props/mmstuff/"
+	model 0 "camera02.md3"
+	skin 0 "tx_cameras.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 20.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  tablet  ////////////////////////////////////////////////////////////////////
+model dxTablet01 {
+	path "models/props/tablet/"
+	model 0 "tablet.md3"
+	skin 0 "tx_tablet.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DTB1 A 0 0
+}
+model dxTablet02 {
+	path "models/props/tablet/"
+	model 0 "tablet.md3"
+	skin 0 "tx_tablet2.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DTB2 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  wooden cart  ///////////////////////////////////////////////////////////////
+model dx_woodCart {
+	path "models/props/woodcart/"
+	model 0 "dx_woodenCart.md3"
+	skin 0 "tx_woodCart.png"
+	scale 25.0 25.0 25.0
+	offset 0.0 0.0 0.0
+	frameindex DWCT A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  koste  /////////////////////////////////////////////////////////////////////
+model dx_koste {
+	path "models/props/dompotr/"
+	model 0 "koste.md3"
+	skin 0 "tx_domaciPotreby.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DKST A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  sibenice  //////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+
+//  relic  /////////////////////////////////////////////////////////////////////
+model RelicDummy {
+	path "models/props/relic/"
+	model 0 "relic.md3"
+	skin 0 "tx_relicRed.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex RELC A 0 0
+} //red RELC A
+model blueRelicDecoration {
+	path "models/props/relic/"
+	model 0 "relic.md3"
+	skin 0 "tx_relicBlue.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+} //blue RELB A
+////////////////////////////////////////////////////////////////////////////////
+
+//  hexen props  ///////////////////////////////////////////////////////////////
+model hexTableShit1 {
+	path "models/props/hexen/"
+	model 0 "hx_mugWooden.md3"
+	skin 0 "tx_hxMugs.png"
+	scale 2.5 2.5 3.0
+	offset 0.0 0.0 0.0
+	frameindex TST1 A 0 0
+}
+model hexTableShit2 {
+	path "models/props/hexen/"
+	model 0 "hx_mugGlass.md3"
+	skin 0 "tx_hxMugs.png"
+	scale 2.5 2.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex TST2 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  torture  ///////////////////////////////////////////////////////////////////
+model dx_gallows {
+	path "models/props/torture/"
+	model 0 "gallows.md3"
+	skin 0 "tx_gilotina.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DSBC A 0 0
+}
+model dxGuillotine {
+	path "models/props/torture/"
+	model 0 "dx_gilotina.md3"
+	skin 0 "tx_gilotina.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DGLT A 0 0
+}
+model dxPillory {
+	path "models/props/torture/"
+	model 0 "dx_pillory.md3"
+	skin 0 "tx_gilotina.png"
+	scale 2.8 2.8 2.8
+	offset 0.0 0.0 0.0
+	frameindex PLRY A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  floor & ceiling lanterns  //////////////////////////////////////////////////
+model FloorLantern {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT A 0 0
+}
+model FloorLantern_Animated {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT A 0 0
+	skin 0 "tx_lanterns02.png"
+	frameindex FRLF A 0 0
+}
+model FloorLanternTall {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT B 0 0
+}
+model FloorLanternTall_Animated {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT B 0 0
+	skin 0 "tx_lanterns02.png"
+	frameindex FRLF B 0 0
+}
+model CeilingLantern {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT C 0 0
+}
+model CeilingLantern_Animated {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT C 0 0
+	skin 0 "tx_lanterns02.png"
+	frameindex FRLF C 0 0
+}
+model CeilingLanternTall {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT D 0 0
+}
+model CeilingLanternTall_Animated {
+	path "models/props/lanterns/"
+	model 0 "lant01g.md3"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	skin 0 "tx_lanterns01.png"
+	frameindex FRLT D 0 0
+	skin 0 "tx_lanterns02.png"
+	frameindex FRLF D 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  sigilBanner  ///////////////////////////////////////////////////////////////
+model SigilBanner {
+	path "models/props/sigilBanner/"
+	model 0 "sigilBanner.md3"
+	skin 0 "tx_sigilBanner.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex SBAN A 0 0
+}
+model bannerSigil {
+	path "models/props/sigilBanner/"
+	model 0 "sigilBanner.md3"
+	skin 0 "tx_sigilBanner.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model bannerBinder {
+	path "models/props/sigilBanner/"
+	model 0 "binderBanner.md3"
+	surfaceskin 0 0 "tx_sigilBanner.png"
+	surfaceskin 0 1 "tx_badg.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model bannerBinderSigil {
+	path "models/props/sigilBanner/"
+	model 0 "binderSigilBanner.md3"
+	surfaceskin 0 0 "tx_sigilBanner.png"
+	surfaceskin 0 1 "tx_badg.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  PillarTechno  //////////////////////////////////////////////////////////////
+model PillarTechno {
+	path "models/props/PillarTechno/"
+	model 0 "PillarTechno.md3"
+	skin 0 "tx_PillarTechno.png"
+	scale 52.0 52.0 52.0
+	offset 0.0 0.0 0.0
+	frameindex MONI A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  PillarHugeTech  ////////////////////////////////////////////////////////////
+model PillarHugeTechAnimated {
+	path "models/props/PillarHugeTech/"
+	model 0 "PillarHugeTech.md3"
+	skin 0 "tx_PillarHugeTech.png"
+	scale 18.0 18.0 18.0
+	offset 0.0 0.0 0.0
+	frameindex HUGE A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  cavepillars  ///////////////////////////////////////////////////////////////
+model SStalactiteBig {
+	path "models/props/cavepillar/"
+	model 0 "stalactiteBig.md3"
+	skin 0 "tx_stalagmite.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 54.0
+	frameindex STLG C 0 0
+}
+model SStalagmiteBig {
+	path "models/props/cavepillar/"
+	model 0 "stalagmiteBig.md3"
+	skin 0 "tx_stalagmite.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	frameindex STLG B 0 0
+}
+model SStalactiteSmall {
+	path "models/props/cavepillar/"
+	model 0 "stalactiteSmall.md3"
+	skin 0 "tx_stalagmite.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 40.0
+	frameindex STLG A 0 0
+}
+model SStalagmiteSmall {
+	path "models/props/cavepillar/"
+	model 0 "stalagmiteSmall.md3"
+	skin 0 "tx_stalagmite.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	frameindex STLG F 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  furniture  /////////////////////////////////////////////////////////////////
+model dx_penBlock {
+	path "models/props/penblock/"
+	model 0 "penBlock.md3"
+	skin 0 "tx_penBlock.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex PNBL A 0 0
+}
+model strifeChair01 {
+	path "models/props/roomstuff/"
+	model 0 "dxChair01.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SCH1 A 0 0
+}
+model strifeChair02 {
+	path "models/props/roomstuff/"
+	model 0 "dxChair02.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SCH2 A 0 0
+}
+model strifeChair03 {
+	path "models/props/roomstuff/"
+	model 0 "dxChair03.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex SCH3 A 0 0
+}
+model strifeBed01 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed01.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED A 0 0
+}
+model strifeBed02 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed02.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED B 0 0
+}
+model strifeBed03 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed03.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED C 0 0
+}
+model strifeBed04 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed04.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED D 0 0
+}
+model strifeBed05 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed05.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED E 0 0
+}
+model strifeBed06 {
+	path "models/props/roomstuff/"
+	model 0 "dxBed06.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DBED F 0 0
+}
+model strifeNightStand01 {
+	path "models/props/roomstuff/"
+	model 0 "dxNightStand.md3"
+	skin 0 "tx_nightStand.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SNHT A 0 0
+}
+model strifeNightStand02 {
+	path "models/props/roomstuff/"
+	model 0 "dxNightStand02.md3"
+	skin 0 "tx_nightStand.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SNH2 A 0 0
+}
+model strifeNightStand03 {
+	path "models/props/roomstuff/"
+	model 0 "dxNightStand03.md3"
+	skin 0 "tx_nightStand.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SNH3 A 0 0
+}
+model strifeNightStand04 {
+	path "models/props/roomstuff/"
+	model 0 "dxNightStand04.md3"
+	skin 0 "tx_nightStand.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SNH4 A 0 0
+}
+model strifeCouch01 {
+	path "models/props/roomstuff/"
+	model 0 "dxCouch01.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex SCH4 A 0 0
+}
+model strifeCoffeeTable01 {
+	path "models/props/roomstuff/"
+	model 0 "dxCoffeeTable01.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SCT1 A 0 0
+}
+model strifeCoffeeTable02 {
+	path "models/props/roomstuff/"
+	model 0 "dxCoffeeTable02.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex SCT2 A 0 0
+}
+model strifeTable01 {
+	path "models/props/roomstuff/"
+	model 0 "dxTable01.md3"
+	skin 0 "tx_roomStuff.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex STB1 A 0 0
+}
+model dx_umyvadlo01 {
+	path "models/props/roomstuff/"
+	model 0 "dx_umyvadlo01.md3"
+	skin 0 "tx_dexComps.png"
+	scale 32.0 32.0 32.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_umyvadlo02 {
+	path "models/props/roomstuff/"
+	model 0 "dx_umyvadlo02.md3"
+	surfaceskin 0 0 "tx_dexComps.png"
+	surfaceskin 0 1 "tx_vodBat.png"
+	scale 32.0 32.0 32.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_klavesnice {
+	path "models/props/roomstuff/"
+	model 0 "dx_keyboard.md3"
+	skin 0 "tx_dexComps.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_klavesnice02 {
+	path "models/props/roomstuff/"
+	model 0 "dx_keyboard2.md3"
+	skin 0 "tx_comps1.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_mikrovlnka {
+	path "models/props/roomstuff/"
+	model 0 "dx_mikrovlnka.md3"
+	skin 0 "tx_dexComps.png"
+	scale 24.0 24.0 24.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_comp01 {
+	path "models/props/roomstuff/"
+	model 0 "dx_comp01.md3"
+	skin 0 "tx_comps1.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_comp02 {
+	path "models/props/roomstuff/"
+	model 0 "dx_comp02.md3"
+	skin 0 "tx_comps1.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compBase {
+	path "models/props/roomstuff/"
+	model 0 "dx_compBase.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compKybd {
+	path "models/props/roomstuff/"
+	model 0 "dx_compKybd.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compB3 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compB3.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compB4 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compB4.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compB5 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compB5.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compB6 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compB6.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compK3 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compK3.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compK4 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compK4.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compK5 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compK5.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compK6 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compK6.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXB1 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXB1.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXB2 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXB2.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXB3 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXB3.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXB4 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXB4.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXK1 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXK1.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXK2 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXK2.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXK3 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXK3.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compXK4 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compXK4.md3"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	surfaceskin 0 0 "tx_compsBig.png"
+	
+	surfaceskin 0 1 "tx_comps1.png"
+	frameindex DUMM A 0 0
+	surfaceskin 0 1 "tx_comps2.png"
+	frameindex DUMM B 0 0
+	surfaceskin 0 1 "tx_comps3.png"
+	frameindex DUMM C 0 0
+	surfaceskin 0 1 "tx_comps4.png"
+	frameindex DUMM D 0 0	
+}
+model dx_compBase_mmHolo03 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compBase.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compBase_mmHolo04 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compBase.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compKybd_mmHolo03 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compKybd.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_compKybd_mmHolo04 {
+	path "models/props/roomstuff/"
+	model 0 "dx_compKybd.md3"
+	skin 0 "tx_compsBig.png"
+	scale 20.0 20.0 20.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  hexen 2 skeleton stand  ////////////////////////////////////////////////////
+model daggSkeletonStand {
+	path "models/props/skeletonstand/"
+	model 0 "h2SkeletonStand.md3"
+	surfaceskin 0 0 "skeletonbody_1.png"
+	surfaceskin 0 1 "tx_roomStuff.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	frameindex DG11 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  food props without interactive item  ///////////////////////////////////////
+model d_foodPlatter01 {
+	path "models/props/food/"
+	model 0 "dx_fPlatter01.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD2 A 0 0
+}
+model d_foodPlatter02 {
+	path "models/props/food/"
+	model 0 "dx_fPlatter02.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD2 A 0 0
+}
+model d_foodPlatter03 {
+	path "models/props/food/"
+	model 0 "dx_fPlatter02.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD2 A 0 1
+}
+model d_foodPlatter04 {
+	path "models/props/food/"
+	model 0 "dx_fPlatter03.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex MFD2 A 0 0
+}
+model dx_talir {
+	path "models/props/food/"
+	model 0 "dx_talir.md3"
+	skin 0 "tx_talir.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  vodovod  ///////////////////////////////////////////////////////////////////
+model dx_VodovodniBaterie01 {
+	path "models/props/roomstuff/"
+	model 0 "dx_vodBat01.md3"
+	skin 0 "tx_vodBat.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_VodovodniBaterie02 {
+	path "models/props/roomstuff/"
+	model 0 "dx_vodBat02.md3"
+	skin 0 "tx_vodBat.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_VodovodniBaterie03 {
+	path "models/props/roomstuff/"
+	model 0 "dx_vodBat03.md3"
+	skin 0 "tx_vodBat.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  vegetace  //////////////////////////////////////////////////////////////////
+model dx_grass01 {
+	path "models/props/grass/"
+	model 0 "dx_trava01.md3"
+	skin 0 "tx_grassG.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grass02 {
+	path "models/props/grass/"
+	model 0 "dx_trava02.md3"
+	skin 0 "tx_grassG.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grass03 {
+	path "models/props/grass/"
+	model 0 "dx_trava03.md3"
+	skin 0 "tx_grassG.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grass04 {
+	path "models/props/grass/"
+	model 0 "dx_trava01.md3"
+	skin 0 "tx_grassW.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grass05 {
+	path "models/props/grass/"
+	model 0 "dx_trava02.md3"
+	skin 0 "tx_grassW.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grass06 {
+	path "models/props/grass/"
+	model 0 "dx_trava03.md3"
+	skin 0 "tx_grassW.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grassPatch01 {
+	path "models/props/grass/"
+	model 0 "dx_travaPatch01.md3"
+	skin 0 "tx_grassG.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grassPatch02 {
+	path "models/props/grass/"
+	model 0 "dx_travaPatch02.md3"
+	skin 0 "tx_grassG.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grassPatch03 {
+	path "models/props/grass/"
+	model 0 "dx_travaPatch01.md3"
+	skin 0 "tx_grassW.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dx_grassPatch04 {
+	path "models/props/grass/"
+	model 0 "dx_travaPatch02.md3"
+	skin 0 "tx_grassW.png"
+	scale 30.0 30.0 30.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model daggPlant01 {
+	path "models/props/grass/"
+	model 0 "daggPlant01.md3"
+	skin 0 "tx_daggVegg1.png"
+	scale 40.0 40.0 40.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model daggPlant02 {
+	path "models/props/grass/"
+	model 0 "daggPlant02.md3"
+	skin 0 "tx_daggVegg1.png"
+	scale 55.0 55.0 55.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  strife rebel clothing  /////////////////////////////////////////////////////
+model RebelShirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model green_shirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt5.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model blue_shirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt6.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model azure_shirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt2.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model bronze_shirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt4.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model khaki_shirt {
+	path "models/props/clothing/"
+	model 0 "shirt.md3"
+	skin 0 "tx_shirt3.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex TOPR A 0 0
+}
+model RebelBoots {
+	path "models/props/clothing/"
+	model 0 "boots.md3"
+	skin 0 "tx_boots.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BOTR A 0 0
+}
+model leather_boots {
+	path "models/props/clothing/"
+	model 0 "boots.md3"
+	skin 0 "tx_boots1.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BOTR A 0 0
+}
+model green_boots {
+	path "models/props/clothing/"
+	model 0 "boots.md3"
+	skin 0 "tx_boots2.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BOTR A 0 0
+}
+model bronze_boots {
+	path "models/props/clothing/"
+	model 0 "boots.md3"
+	skin 0 "tx_boots3.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex BOTR A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  gizmos  ////////////////////////////////////////////////////////////////////
+model gizmo01 {
+	path "models/props/gizmo/"
+	model 0 "gizmo01.md3"
+	skin 0 "tx_gizmo01.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex GZ01 A 0 0
+}
+model gizmo02 {
+	path "models/props/gizmo/"
+	model 0 "gizmo02.md3"
+	skin 0 "tx_gizmo02.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex GZ02 A 0 0
+}
+model gizmo03 {
+	path "models/props/gizmo/"
+	model 0 "gizmo03.md3"
+	skin 0 "tx_gizmo03.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex GZ03 A 0 0
+}
+model gizmo06 {
+	path "models/props/gizmo/"
+	model 0 "gizmo06.md3"
+	skin 0 "tx_gizmo06.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex GZ06 A 0 0
+}
+model gizmo05 {
+	path "models/props/gizmo/"
+	model 0 "gizmo05.md3"
+	skin 0 "tx_gizmo05.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ05 A 0 0
+}
+model gizmo07 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox4.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ07 A 0 0
+}
+model gizmo08 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox5.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ08 A 0 0
+}
+model gizmo09 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox1.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ09 A 0 0
+}
+model gizmo10 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox2.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ10 A 0 0
+}
+model gizmo11 {
+	path "models/props/gizmo/"
+	model 0 "foodBox.md3"
+	skin 0 "tx_foodbox3.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex GZ11 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  binder badge  //////////////////////////////////////////////////////////////
+model dummy_binderBadge1 {
+	path "models/props/badge/"
+	model 0 "binderBadge.md3"
+	skin 0 "tx_badg.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dummy_binderBadge2 {
+	path "models/props/badge/"
+	model 0 "binderBadge.md3"
+	skin 0 "tx_badg.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  deusEx props  //////////////////////////////////////////////////////////////
+/*
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+ {
+	path "models/props/deusex/"
+	model 0 ""
+	skin 0 ""
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+*/
+model wosD_dex_Skull {
+	path "models/props/deusex/"
+	model 0 "boneSkull.md3"
+	skin 0 "BoneSkullTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_plant2 {
+	path "models/props/deusex/"
+	model 0 "plant2.md3"
+	surfaceskin 0 0 "Plant2Tex1.png"
+	surfaceskin 0 1 "Plant2Tex2.png"
+	scale 0.45 0.45 0.45
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_plant3 {
+	path "models/props/deusex/"
+	model 0 "plant3.md3"
+	skin 0 "Plant3Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_basket {
+	path "models/props/deusex/"
+	model 0 "basket.md3"
+	skin 0 "BasketTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_bookOpen {
+	path "models/props/deusex/"
+	model 0 "bookOpen.md3"
+	skin 0 "BookOpenTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_cactus1 {
+	path "models/props/deusex/"
+	model 0 "cactus1.md3"
+	skin 0 "Cactus1Tex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_cactus2 {
+	path "models/props/deusex/"
+	model 0 "cactus2.md3"
+	skin 0 "Cactus2Tex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_cart {
+	path "models/props/deusex/"
+	model 0 "cart.md3"
+	skin 0 "CartTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_compSecurity {
+	path "models/props/deusex/"
+	model 0 "compSecurity.md3"
+	skin 0 "ComputerSecurityTex1.png"
+	scale 0.75 0.75 0.75
+	offset -4.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_fireExtinguisher {
+	path "models/props/deusex/"
+	model 0 "hasicak.md3"
+	skin 0 "FireExtinguisherTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_hangingChicken {
+	path "models/props/deusex/"
+	model 0 "hangingChicken.md3"
+	skin 0 "HangingChickenTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 32.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_hangingPig {
+	path "models/props/deusex/"
+	model 0 "hangingPig.md3"
+	skin 0 "HKHangingPigTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 32.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_lamp1 {
+	path "models/props/deusex/"
+	model 0 "lamp1.md3"
+	skin 0 "Lamp1Tex1.png"
+	scale 0.45 0.45 0.45
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_lamp3 {
+	path "models/props/deusex/"
+	model 0 "lamp3.md3"
+	skin 0 "Lamp3Tex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_microscope {
+	path "models/props/deusex/"
+	model 0 "microscope.md3"
+	skin 0 "MicroscopeTex1.png"
+	scale 0.7 0.7 0.7
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_shopLight {
+	path "models/props/deusex/"
+	model 0 "shopLight.md3"
+	skin 0 "ShopLightTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 16.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_showerFaucet {
+	path "models/props/deusex/"
+	model 0 "showerFaucet.md3"
+	skin 0 "ShowerFaucetTex1.png"
+	scale 0.6 0.6 0.6
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_showerHead {
+	path "models/props/deusex/"
+	model 0 "showerHead.md3"
+	skin 0 "ShowerHeadTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_statueLion {
+	path "models/props/deusex/"
+	model 0 "statueLion.md3"
+	skin 0 "StatueLionTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_tad {
+	path "models/props/deusex/"
+	model 0 "TAD.md3"
+	skin 0 "TADTex1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_toilet1 {
+	path "models/props/deusex/"
+	model 0 "toilet1.md3"
+	skin 0 "ToiletTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_toilet2 {
+	path "models/props/deusex/"
+	model 0 "toilet2.md3"
+	skin 0 "Toilet2Tex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_trashcan2 {
+	path "models/props/deusex/"
+	model 0 "trashcan2.md3"
+	skin 0 "Trashcan2Tex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_trashcan3 {
+	path "models/props/deusex/"
+	model 0 "trashcan3.md3"
+	skin 0 "TrashCan3Tex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_waterCooler {
+	path "models/props/deusex/"
+	model 0 "waterCooler.md3"
+	skin 0 "WaterCoolerTex1.png"
+	scale 0.55 0.55 0.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_wineBottle {
+	path "models/props/deusex/"
+	model 0 "wineBottle.md3"
+	skin 0 "WineBottleTex1.png"
+	scale 0.45 0.45 0.45
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_smallBoat {
+	path "models/props/deusex/"
+	model 0 "smallBoat.md3"
+	skin 0 "HKTukTukTex1.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  picnic table  //////////////////////////////////////////////////////////////
+model wosD_dxPicnicTable {
+	path "models/props/picnicTable/"
+	model 0 "dx_picnicTable.md3"
+	skin 0 "tx_sibenice.png"
+	scale 18.0 18.0 18.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  pipa - beer tap  ///////////////////////////////////////////////////////////
+model wosD_dxBeerTap {
+	path "models/props/pipa/"
+	model 0 "dx_beerTap.md3"
+	skin 0 "tx_pipa.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

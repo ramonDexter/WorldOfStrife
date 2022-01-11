@@ -6,7 +6,7 @@ Conversation {
 	ID = 777;
 	Page {
         pageName = "journal_opener";
-		Name = "::[   J O U R N A L   ]::";
+		Name = "::[   PERSONAL JOURNAL   ]::";
 		Dialog = "\c[white]List of notes and active quests.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";

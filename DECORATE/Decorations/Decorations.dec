@@ -7584,3 +7584,71 @@ actor wosD_becomingBinder 21448 {
 			Stop
 	}
 }
+actor wosD_KLog1 21449 {
+	//$Category "Trees and Rocks/WoS"
+	//$Title "Log 01"
+	
+	-SOLID
+	+USESPECIAL
+	+DONTTHRUST
+	scale 1
+	height 24
+	radius 16
+
+    States {
+        Spawn: 
+            DUMM A -1
+            Stop
+    }
+}
+actor wosD_KLog2 21450 {
+	//$Category "Trees and Rocks/WoS"
+	//$Title "Log 02"
+	
+	-SOLID
+	+USESPECIAL
+	+DONTTHRUST
+	scale 1
+	height 24
+	radius 16
+
+    States {
+        Spawn: 
+            DUMM A -1
+            Stop
+    }
+}
+actor wosD_KLog3 21451 {
+	//$Category "Trees and Rocks/WoS"
+	//$Title "Log 03"
+	
+	-SOLID
+	+USESPECIAL
+	+DONTTHRUST
+	scale 1
+	height 24
+	radius 16
+
+    States {
+        Spawn: 
+            DUMM A -1
+            Stop
+    }
+}
+actor wosD_KLog4 21452 {
+	//$Category "Trees and Rocks/WoS"
+	//$Title "Log 04"
+	
+	-SOLID
+	+USESPECIAL
+	+DONTTHRUST
+	scale 1
+	height 24
+	radius 16
+
+    States {
+        Spawn: 
+            DUMM A -1
+            Stop
+    }
+}

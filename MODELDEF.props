@@ -2747,6 +2747,56 @@ model wosD_dxBeerTap {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// logs ////////////////////////////////////////////////////////////////////////
+// Log models by Guest
+
+Model wosD_KLog1 {
+	path "models/props/log/"
+	model 0 "a_log.md3"
+	skin 0 "log.png"
+	model 1 "a_log_branches.md3"
+	skin 1 "log.png"
+	USEACTORPITCH
+	Scale 0.5 0.5 0.5
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+}
+
+Model wosD_KLog2 {
+	path "models/props/log/"
+	model 0 "a_log.md3"
+	skin 0 "log.png"
+	model 1 "a_log_side.md3"
+	skin 1 "log_side.png"
+	model 2 "a_log_branches.md3"
+	skin 2 "log.png"
+	USEACTORPITCH
+	Scale 0.5 0.5 0.5
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+	frameindex DUMM A 2 0
+}
+
+Model wosD_KLog3 {
+	path "models/props/log/"
+	model 0 "a_log2.md3"
+	skin 0 "log.png"
+	Scale 0.5 0.5 0.5
+	frameindex DUMM A 0 0
+}
+
+Model wosD_KLog4 {
+	path "models/props/log/"
+	model 0 "a_log2.md3"
+	skin 0 "log.png"
+	model 1 "a_log_side2.md3"
+	skin 1 "log_side.png"
+	Scale 0.5 0.5 0.5
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

@@ -26,80 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -13574f;
+		viewpositionx = -5695.796f;
 		defaulttoptexture = "MKNRKTN";
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				rotationfloor = 1;
-				user_managed_3d_floor = 3;
-				xpanningfloor = 1;
-				ypanningceiling = 1;
-				ypanningfloor = 1;
-				xpanningceiling = 1;
-				yscalefloor = 1;
-				xscalefloor = 1;
-				yscaleceiling = 1;
-				xscaleceiling = 1;
-				rotationceiling = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_top = 1;
-				scalex_top = 1;
-				scalex_mid = 1;
-				scalex_bottom = 1;
-				scaley_mid = 1;
-				scaley_bottom = 1;
-				offsety_top = 1;
-				scaley_top = 1;
-				offsety_bottom = 1;
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				offsetx_bottom = 1;
-			}
-			
-			linedef
-			{
-				alpha = 1;
-				arg0str = 2;
-			}
-			
-			thing
-			{
-				conversation = 0;
-			}
-		}
 		overrideceilheight = false;
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-				caretposition = 131;
-			}
-		}
-		viewpositiony = 13081.5f;
+		viewpositiony = -545.2913f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -112,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -124,6 +54,103 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.0190018f;
+		viewscale = 0.1792157f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -31424;
+					outertop = 28672;
+					outerbottom = -32192;
+				}
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				alpha = 1;
+				arg0str = 2;
+			}
+			
+			sidedef
+			{
+				offsety_mid = 1;
+				offsetx_mid = 1;
+				offsety_top = 1;
+				offsetx_top = 1;
+				offsetx_bottom = 1;
+				offsety_bottom = 1;
+				scaley_mid = 1;
+				scalex_mid = 1;
+				scalex_top = 1;
+				scaley_top = 1;
+				scaley_bottom = 1;
+				scalex_bottom = 1;
+			}
+			
+			sector
+			{
+				rotationceiling = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				xpanningfloor = 1;
+				ypanningfloor = 1;
+				user_managed_3d_floor = 3;
+			}
+			
+			thing
+			{
+				conversation = 0;
+			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "12391 12392 12393 12394 12395 12396 12398 12399 12400 12401";
+				sectors = "2113 2593 2594 2596 2597 2598";
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				activetab = true;
+			}
+			
+			document1
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 131;
+			}
+		}
 	}
 }

@@ -1,0 +1,42 @@
+
+
+//  CeilingTurret  /////////////////////////////////////////////////////////////
+model CeilingTurret {
+	path "models/npc/turret/"
+	model 0 "turret.md3"
+	skin 0 "tx_turret.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 16.0
+	frameindex TURT A 0 0
+	frameindex TURT B 0 2
+	frameindex TURT D 0 4
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  medical bot  ///////////////////////////////////////////////////////////////
+model dx_medicalBot {
+	path "models/npc/medicalbot/"
+	model 0 "mediBot.md3"
+	skin 0 "tx_medicalBot.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+	frameindex DUMM F 0 5
+	frameindex DUMM G 0 6
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  cleaner bot  ///////////////////////////////////////////////////////////////
+model dx_cleanerBot {
+	path "models/npc/cleanerbot/"
+	model 0 "cleanerBot.md3"
+	skin 0 "tx_CleanerBot.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -24,24 +24,6 @@ maps
 				option2 = 0;
 				notfortesting = 0;
 			}
-			
-			resource1
-			{
-				type = 2;
-				location = "D:\\DOOM\\WoS\\WoS-modelPackPC.pk3";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-			}
-			
-			resource2
-			{
-				type = 2;
-				location = "D:\\DOOM\\WoS\\WoS-textures.pk3";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-			}
 		}
 		overrideceiltexture = false;
 		viewpositionx = 2053.28f;
@@ -132,8 +114,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 114;
-				activetab = true;
+				caretposition = 131;
 			}
 			
 			document1
@@ -143,6 +124,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
+				activetab = true;
 			}
 		}
 	}

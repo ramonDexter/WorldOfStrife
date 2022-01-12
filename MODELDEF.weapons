@@ -1,0 +1,1458 @@
+
+/*
+model executorRifle {
+	//  start  //
+	path "models/weapons/shoulderGun/"
+	model 0 "shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.25 1.25 1.25
+	offset -13.0 -20.0 5.0
+	
+	frameindex SHCN A 0 1
+	frameindex SHCN H 0 1
+	frameindex SHCN G 0 1
+	frameindex SHCN F 0 1
+	frameindex SHCN E 0 1
+	frameindex SHCN D 0 1
+	frameindex SHCN I 0 1
+	//////////////////////////////
+	
+	//  shoot //	
+	offset -13.0 -19 5.0	
+	frameindex SHCN J 0 1
+	frameindex SHCN C 0 1	
+	
+	offset -13.0 -18.0 5.0		
+	frameindex SHCN B 0 1	
+	//////////////////////////////
+	
+	//  show/hide  //
+	path "models/weapons/shoulderGun/"
+	model 0 "shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.25 1.25 1.25
+	offset -13.0 -20.0 5.0	
+	frameindex SHCH A 0 1	
+	
+	offset -13.0 -18.0 5.0	
+	frameindex SHCH B 0 1
+	
+	
+	offset -13.0 -16.0 5.0	
+	frameindex SHCH C 0 1
+	
+	
+	offset -13.0 -14.0 5.0	
+	frameindex SHCH D 0 1
+	
+	
+	offset -13.0 -12.0 5.0	
+	frameindex SHCH E 0 1
+	
+	
+	offset -13.0 -10.0 5.0	
+	frameindex SHCH F 0 1
+	
+	
+	offset -13.0 -6.0 5.0	
+	frameindex SHCH G 0 1
+	
+	
+	offset -13.0 -2.0 5.0	
+	frameindex SHCH H 0 1
+	
+	
+	offset -13.0 2.0 5.0	
+	frameindex SHCH I 0 1
+	
+	
+	offset -13.0 6.0 5.0	
+	frameindex SHCH J 0 1
+	//////////////////////////////
+}
+*/
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  staff lvl1 - pixelated  ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/*
+model staffBlasterModel
+{
+	path "models/weapons/staff/"
+	model 0 "blasterStaff_lvl1.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.5 1.5 1.5
+	frameindex DUMM A 0 0
+}
+*/
+//  dummy  /////////////////////////////////////////////////////////////////////
+model DMYstaffBlaster01 {
+	//ground
+	path "models/weapons/staff/"
+	model 0 "p_staffBlaster.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+model DMYstaffBlaster02 {
+	//standing
+	path "models/weapons/staff/"
+	model 0 "p_staffBlaster.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 2
+}
+model DMYstaffBlaster03 {
+	//side
+	path "models/weapons/staff/"
+	model 0 "p_staffBlaster.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+model staffBlaster {
+	//pickup model
+	path "models/weapons/staff/"
+	model 0 "p_staffBlaster.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 2
+}
+model staffBlaster {	
+	//NOINTERPOLATION
+	//HUD weapon
+	path "models/weapons/staff/"
+	model 0 "blasterStaff_lvl1hand.md3"
+	//skin 0 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 17 "tx_handgrenade.png"
+    SurfaceSkin 0 16 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 15 "tx_handgrenade.png"
+    SurfaceSkin 0 14 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 13 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 12 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 11 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 10 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 9 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 8 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 7 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 6 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 5 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 4 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 3 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 2 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 1 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 0 "tx_pxStaffBlaster.png"
+	scale -1.5 1.5 1.5
+	offset 5.0 -20.0 -10.0
+	frameindex ASTF A 0 0
+	frameindex ASTF H 0 44 //1
+	frameindex ASTF I 0 48 //1
+	frameindex ASTF J 0 50 //1	
+		
+	frameindex STFM A 0 44
+	frameindex STFM B 0 46
+	frameindex STFM C 0 48
+	frameindex STFM D 0 50
+	frameindex STFM E 0 52
+	frameindex STFM F 0 54
+	frameindex STFM G 0 56
+	frameindex STFM H 0 58
+	frameindex STFM I 0 60
+	frameindex STFM J 0 61
+	frameindex STFM K 0 62
+	frameindex STFM L 0 63
+	frameindex STFM M 0 64
+	
+	offset 5.0 -19.0 -10.0
+	frameindex ASTF G 0 8
+	
+	offset 5.0 -18.0 -10.0
+	frameindex ASTF F 0 8
+	
+	offset 5.0 -17.0 -10.0
+	frameindex ASTF E 0 8
+	
+	offset 5.0 -16.0 -10.0
+	frameindex ASTF B 0 2
+	frameindex ASTF D 0 6
+	
+	offset 5.0 -15.0 -10.0
+	frameindex ASTF C 0 6
+	
+	//load	
+	offset 5.0 -20.0 -10.0
+	frameindex ASTL A 0 0
+	frameindex ASTL B 0 0
+	frameindex ASTL C 0 0
+	frameindex ASTL D 0 10
+	frameindex ASTL E 0 12
+	frameindex ASTL F 0 14
+	frameindex ASTL G 0 16
+	frameindex ASTL H 0 18
+	frameindex ASTL I 0 20
+	frameindex ASTL J 0 22
+	frameindex ASTL K 0 24
+	frameindex ASTL L 0 26
+	frameindex ASTL M 0 28
+	frameindex ASTL N 0 30
+	frameindex ASTL O 0 32
+	frameindex ASTL P 0 36
+	frameindex ASTL Q 0 38
+	frameindex ASTL R 0 40
+	frameindex ASTL S 0 42
+	frameindex ASTL T 0 42
+	frameindex ASTL U 0 42
+	frameindex ASTL V 0 42
+	frameindex ASTL W 0 42	
+	//unload
+	offset 5.0 -20.0 -10.0
+	frameindex ASTU A 0 0
+	frameindex ASTU B 0 0
+	frameindex ASTU C 0 0
+	frameindex ASTU D 0 10
+	frameindex ASTU E 0 12
+	frameindex ASTU F 0 14
+	frameindex ASTU G 0 16
+	frameindex ASTU H 0 18
+	frameindex ASTU I 0 20
+	frameindex ASTU J 0 22
+	frameindex ASTU K 0 24
+	frameindex ASTU L 0 26
+	frameindex ASTU M 0 28
+	frameindex ASTU N 0 30
+	frameindex ASTU O 0 32
+	frameindex ASTU P 0 36
+	frameindex ASTU Q 0 38
+	frameindex ASTU R 0 40
+	frameindex ASTU S 0 42
+	frameindex ASTU T 0 42
+	frameindex ASTU U 0 42
+	frameindex ASTU V 0 42
+	frameindex ASTU W 0 42	
+}
+model BlasterTracer {
+	PITCHFROMMOMENTUM
+	path "models/weapons/staff/"
+	model 0 "BlasterTracer02.md3"
+	skin 0 "tx_blasterTracer.png"
+	scale 1.75 1.75 1.75 
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+	frameindex DUMM F 0 5
+	frameindex DUMM G 0 6
+	frameindex DUMM H 0 7
+	frameindex DUMM I 0 8
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  staff lvl2 - pixelated  ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  dummy  /////////////////////////////////////////////////////////////////////
+/*
+model DMYstaffBlasterup01 {
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_ground.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model DMYstaffBlasterup02 {
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_standing.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model DMYstaffBlasterup03 {
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_ground.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 1.2 1.2 1.2
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}*/
+////////////////////////////////////////////////////////////////////////////////
+/*model StaffBlasterUpgr {
+	//pickup model
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_standing.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex USTD W 0 1
+}
+model StaffBlasterUpgr {	
+	//HUD model
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_fire1hand.md3"
+	//skin 0 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 21 "tx_handgrenade.png"
+    SurfaceSkin 0 20 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 19 "tx_handgrenade.png"
+    SurfaceSkin 0 18 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 17 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 16 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 15 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 14 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 13 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 12 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 11 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 10 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 9 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 8 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 7 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 6 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 5 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 4 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 3 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 2 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 1 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 0 "tx_pxStaffBlaster.png"
+	scale 1.5 1.5 1.5
+	offset 5.0 -20.0 -10.0
+	frameIndex USTF A 0 1
+	frameIndex USTF H 0 63
+	frameIndex USTF I 0 67
+	frameIndex USTF J 0 69
+	frameIndex USTF K 0 71
+	frameIndex USTF L 0 73
+	frameIndex USTF M 0 75
+	frameIndex USTF N 0 75
+	frameindex USSW A 0 49
+	frameindex USSW B 0 51
+	frameindex USSW C 0 53
+	frameindex USSW D 0 55
+	frameindex USSW E 0 57
+	
+	offset 5.0 -18.0 -10.0
+	frameIndex USTF G 0 61
+	
+	offset 5.0 -17.0 -10.0
+	frameIndex USTF F 0 1
+	
+	offset 5.0 -16.0 -10.0
+	frameIndex USTF E 0 1
+	
+	offset 5.0 -15.0 -10.0
+	frameIndex USTF B 0 3
+	frameIndex USTF D 0 9
+	
+	offset 5.0 -14.0 -10.0
+	frameIndex USTF C 0 7
+	
+	//load
+	offset 5.0 -20.0 -10.0
+	frameindex USTL A 0 1
+	frameindex USTL B 0 1
+	frameindex USTL C 0 1
+	frameindex USTL D 0 11
+	frameindex USTL E 0 13
+	frameindex USTL F 0 15
+	frameindex USTL G 0 17
+	frameindex USTL H 0 19
+	frameindex USTL I 0 21
+	frameindex USTL J 0 23
+	frameindex USTL K 0 25
+	frameindex USTL L 0 27
+	frameindex USTL M 0 29
+	frameindex USTL N 0 31
+	frameindex USTL O 0 33
+	frameindex USTL P 0 37
+	frameindex USTL Q 0 39
+	frameindex USTL R 0 41
+	frameindex USTL S 0 43
+	frameindex USTL T 0 43
+	frameindex USTL U 0 43
+	frameindex USTL V 0 43
+	frameindex USTL W 0 43
+	//unload
+	offset 5.0 -20.0 -10.0
+	frameindex USTU A 0 1
+	frameindex USTU B 0 1
+	frameindex USTU C 0 1
+	frameindex USTU D 0 11
+	frameindex USTU E 0 13
+	frameindex USTU F 0 15
+	frameindex USTU G 0 17
+	frameindex USTU H 0 19
+	frameindex USTU I 0 21
+	frameindex USTU J 0 23
+	frameindex USTU K 0 25
+	frameindex USTU L 0 27
+	frameindex USTU M 0 29
+	frameindex USTU N 0 31
+	frameindex USTU O 0 33
+	frameindex USTU P 0 37
+	frameindex USTU Q 0 39
+	frameindex USTU R 0 41
+	frameindex USTU S 0 43
+	frameindex USTU T 0 43
+	frameindex USTU U 0 43
+	frameindex USTU V 0 43
+	frameindex USTU W 0 43
+	
+	
+	//HUD altfire
+	path "models/weapons/staff2/"
+	model 0 "blasterStaff_lvl2_fire2hand.md3"
+	//skin 0 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 23 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 22 "tx_handgrenade.png"
+    SurfaceSkin 0 21 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 20 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 19 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 18 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 17 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 16 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 15 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 14 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 13 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 12 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 11 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 10 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 9 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 8 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 7 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 6 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 5 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 4 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 3 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 2 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 1 "tx_pxStaffBlaster.png"
+    SurfaceSkin 0 0 "tx_pxStaffBlaster.png"
+	scale 1.5 1.5 1.5
+	offset 5.0 -20.0 -10.0
+	frameIndex USTG A 0 1
+	frameIndex USTG B 0 3
+	frameIndex USTG C 0 5
+	frameIndex USTG D 0 7
+	
+	offset 5.0 -19.0 -10.0
+	frameIndex USTG E 0 11
+	
+	offset 5.0 -18.0 -10.0
+	frameIndex USTG F 0 13
+	
+}*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  crossbow  //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscStrifeCrossbow {
+	NOINTERPOLATION
+	path "models/weapons/xbow/"
+	model 0 "crossbowPX.md3"
+	skin 0 "tx_xbowPX.png"
+	scale -2.0 2.0 2.0
+	offset 0.0 -20.0 -10.0
+	//idle
+	frameIndex XBOW A 0 12
+	frameIndex XBOW H 0 18
+	//shoot
+	frameIndex XBOW B 0 0
+	frameIndex XBOW C 0 5
+	frameIndex XBOW D 0 9
+	frameIndex XBOW E 0 9
+	
+}
+model zscStrifeCrossbow {
+	NOINTERPOLATION
+	path "models/weapons/xbow/"
+	model 0 "crossbowPX.md3"
+	skin 0 "tx_xbowPX.png"
+	scale -2.0 2.0 2.0
+	offset 0.0 -20.0 -10.0
+	//load arrow with interpolation
+	frameIndex XBOW F 0 10
+	frameIndex XBOW G 0 12
+	
+	frameIndex XBOW I 0 16
+	frameIndex XBOW J 0 18
+}
+model zscStrifeCrossbow {
+	path "models/weapons/xbow/"
+	model 0 "p_crossbow.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 1.75 1.75 1.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0	
+}
+model wosD_xbow {
+	path "models/weapons/xbow/"
+	model 0 "p_crossbow.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 1.75 1.75 1.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0	
+}
+model ElectricBolt {
+	PITCHFROMMOMENTUM
+	path "models/weapons/xbow/"
+	model 0 "arrowElectric.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex AROW A 0 0
+}
+model PoisonBolt {
+	PITCHFROMMOMENTUM
+	path "models/weapons/xbow/"
+	model 0 "arrowPoison.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex ARWP A 0 0
+}
+model zscElectricBolt {
+	PITCHFROMMOMENTUM
+	path "models/weapons/xbow/"
+	model 0 "arrowElectric.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex AROW A 0 0
+}
+model zscPoisonBolt {
+	PITCHFROMMOMENTUM
+	path "models/weapons/xbow/"
+	model 0 "arrowPoison.md3"
+	skin 0 "tx_xbowPX.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex ARWP A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  assaultgun  ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscAssaultGun {
+	path "models/weapons/assaultRifle/"
+	model 0 "p_assaultGun.md3"
+	skin 0 "tx_assaultGun.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_assaultGunGround {
+	path "models/weapons/assaultRifle/"
+	model 0 "p_assaultGun.md3"
+	skin 0 "tx_assaultGun.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model zscAssaultGun_standing {
+	path "models/weapons/assaultRifle/"
+	model 0 "p_assaultGun.md3"
+	skin 0 "tx_assaultGun.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM B 0 2
+}
+model wosD_assaultGunStanding {
+	path "models/weapons/assaultRifle/"
+	model 0 "p_assaultGun.md3"
+	skin 0 "tx_assaultGun.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM B 0 2
+}
+model zscAssaultGun {
+	path "models/weapons/assaultRifle/"
+	model 0 "assaultGun.md3"
+	//skin 0 "tx_assaultGun.png"
+	surfaceskin 0 0 "tx_assaultGun.png"
+	surfaceskin 0 1 "tx_assaultGun.png"
+	surfaceskin 0 2 "tx_assaultGun.png"
+	surfaceskin 0 3 "tx_assaultGun.png"
+	surfaceskin 0 4 "tx_assaultGun.png"
+	surfaceskin 0 5 "tx_assaultGun.png"
+	surfaceskin 0 6 "tx_assaultGun.png"
+	surfaceskin 0 7 "tx_assaultGun.png"
+	surfaceskin 0 8 "tx_assaultGun.png"
+	surfaceskin 0 9 "tx_assaultGun.png"
+	surfaceskin 0 10 "tx_assaultGun.png"
+	surfaceskin 0 11 "tx_assaultGun.png"
+	surfaceskin 0 12 "tx_assaultGun.png"
+	surfaceskin 0 13 "tx_assaultGun.png"
+	surfaceskin 0 14 "tx_assaultGun.png"
+	surfaceskin 0 15 "tx_assaultGun.png"
+	surfaceskin 0 16 "tx_assaultGun.png"
+	surfaceskin 0 17 "tx_assaultGun.png"
+	surfaceskin 0 18 "tx_assaultGun.png"
+	surfaceskin 0 19 "tx_assaultGun.png"
+	surfaceskin 0 20 "tx_assaultGun.png"
+	surfaceskin 0 21 "tx_assaultGun.png"
+	surfaceskin 0 22 "tx_assaultGun.png"
+	surfaceskin 0 23 "tx_handgrenade.png"
+	surfaceskin 0 24 "tx_handgrenade.png"
+	surfaceskin 0 25 "tx_pxStaffBlaster.png"
+	scale -1.0 1.0 1.0
+	offset 5.0 -20.0 -10.0
+	//states
+	//idle
+	frameIndex RIFG A 0 0
+	frameIndex RIFG B 0 0
+	frameIndex RIFG C 0 0
+	frameIndex RIFG D 0 0
+	frameIndex RIFG E 0 0
+	frameIndex RIFG F 0 0
+	frameIndex RIFG G 0 0
+	frameIndex RIFG H 0 0
+	//reload
+	frameIndex RIFR A 0 14
+	frameIndex RIFR B 0 15
+	frameIndex RIFR C 0 16
+	frameIndex RIFR D 0 17
+	frameIndex RIFR E 0 18
+	frameIndex RIFR F 0 19
+	frameIndex RIFR G 0 20
+	frameIndex RIFR H 0 21
+	frameIndex RIFR I 0 22
+	frameIndex RIFR J 0 23
+	frameIndex RIFR K 0 22
+	frameIndex RIFR L 0 21
+	frameIndex RIFR M 0 20
+	frameIndex RIFR N 0 19
+	frameIndex RIFR O 0 18
+	frameIndex RIFR P 0 17
+	
+}
+model zscAssaultGun {
+	path "models/weapons/assaultRifle/"
+	model 0 "assaultGun.md3"
+	//skin 0 "tx_assaultGun.png"
+	surfaceskin 0 0 "tx_assaultGun.png"
+	surfaceskin 0 1 "tx_assaultGun.png"
+	surfaceskin 0 2 "tx_assaultGun.png"
+	surfaceskin 0 3 "tx_assaultGun.png"
+	surfaceskin 0 4 "tx_assaultGun.png"
+	surfaceskin 0 5 "tx_assaultGun.png"
+	surfaceskin 0 6 "tx_assaultGun.png"
+	surfaceskin 0 7 "tx_assaultGun.png"
+	surfaceskin 0 8 "tx_assaultGun.png"
+	surfaceskin 0 9 "tx_assaultGun.png"
+	surfaceskin 0 10 "tx_assaultGun.png"
+	surfaceskin 0 11 "tx_assaultGun.png"
+	surfaceskin 0 12 "tx_assaultGun.png"
+	surfaceskin 0 13 "tx_assaultGun.png"
+	surfaceskin 0 14 "tx_assaultGun.png"
+	surfaceskin 0 15 "tx_assaultGun.png"
+	surfaceskin 0 16 "tx_assaultGun.png"
+	surfaceskin 0 17 "tx_assaultGun.png"
+	surfaceskin 0 18 "tx_assaultGun.png"
+	surfaceskin 0 19 "tx_assaultGun.png"
+	surfaceskin 0 20 "tx_assaultGun.png"
+	surfaceskin 0 21 "tx_assaultGun.png"
+	surfaceskin 0 22 "tx_assaultGun.png"
+	surfaceskin 0 23 "tx_handgrenade.png"
+	surfaceskin 0 24 "tx_handgrenade.png"
+	surfaceskin 0 25 "tx_pxStaffBlaster.png"
+	scale -1.0 1.0 1.0
+	offset 5.0 -18.0 -10.0
+	//states	
+	//shoot
+	frameIndex RIFF A 0 4
+	offset 5.0 -19.0 -10.0
+	frameIndex RIFF B 0 0
+	offset 5.0 -20.0 -10.0
+	frameIndex RIFF C 0 0
+	frameIndex RIFF D 0 0
+	offset 5.0 -18.0 -10.0
+	frameIndex RIFF E 0 10
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  minimissile launcher  //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscMiniMissileLauncher {
+	path "models/weapons/missileLauncher/"
+	model 0 "missileLauncherPX.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale -4.0 4.0 4.0
+	offset 5.0 0.0 -10.0
+	//hud model
+	frameIndex MMIS A 0 1
+	frameIndex MMIS B 0 3
+	frameIndex MMIS C 0 5
+	frameIndex MMIS D 0 7
+	frameIndex MMIS E 0 9
+	frameIndex MMIS F 0 11
+	
+	frameIndex MMIS G 0 1
+	frameIndex MMIS H 0 1
+	frameIndex MMIS I 0 1
+	frameIndex MMIS J 0 1
+	frameIndex MMIS K 0 1
+	frameIndex MMIS L 0 1
+	frameIndex MMIS M 0 1
+	frameIndex MMIS N 0 1
+	frameIndex MMIS O 0 1
+	frameIndex MMIS P 0 1
+	frameIndex MMIS Q 0 1
+	frameIndex MMIS R 0 1
+	
+	frameIndex MMIS T 0 1
+	frameIndex MMIS U 0 3
+	frameIndex MMIS V 0 5
+	frameIndex MMIS W 0 7
+	frameIndex MMIS X 0 9
+	frameIndex MMIS Y 0 11
+	
+	//pickup model
+	path "models/weapons/missileLauncher/"
+	model 0 "p_missileLauncherPX.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 1.0
+	
+	frameindex DUMM A 0 1
+}
+model MiniMissile {
+	PITCHFROMMOMENTUM
+	path "models/weapons/missileLauncher/"
+	model 0 "miniMissile.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex MICR A 0 0
+}
+model zscMiniMissile {
+	PITCHFROMMOMENTUM
+	path "models/weapons/missileLauncher/"
+	model 0 "miniMissile.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex MICR A 0 0
+}
+model wosD_zscMiniMissileLauncher {
+	//pickup model
+	path "models/weapons/missileLauncher/"
+	model 0 "p_missileLauncherPX.md3"
+	skin 0 "tx_missileLauncher2.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 1.0	
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  flamethrower  //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscFlameThrower {
+	path "models/weapons/flamethrower/"
+	model 0 "flamerPX_hand.md3"	
+	surfaceskin 0 0 "tx_flamerPX.png"
+	surfaceskin 0 1 "tx_flamerPX.png"
+	surfaceskin 0 2 "tx_energyPod_1.png"
+	surfaceskin 0 3 "tx_flamerPX.png"
+	surfaceskin 0 4 "tx_handgrenade.png"
+	surfaceskin 0 5 "tx_pxStaffBlaster.png"
+	
+	scale -3.5 3.5 3.5
+	offset 5.0 -15.0 -10.0
+	//states
+	frameIndex FLMT A 0 3
+	frameIndex FLMT B 0 5
+	//shoot
+	frameIndex FLMF A 0 7
+	frameIndex FLMF B 0 9
+	
+	//pickup model
+	path "models/weapons/flamethrower/"
+	model 0 "p_flamer.md3"	
+	surfaceskin 0 0 "tx_flamerPX.png"
+	surfaceskin 0 1 "tx_flamerPX.png"
+	surfaceskin 0 2 "tx_energyPod_1.png"
+	surfaceskin 0 3 "tx_flamerPX.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_zscFlameThrower {
+	//pickup model
+	path "models/weapons/flamethrower/"
+	model 0 "p_flamer.md3"	
+	surfaceskin 0 0 "tx_flamerPX.png"
+	surfaceskin 0 1 "tx_flamerPX.png"
+	surfaceskin 0 2 "tx_energyPod_1.png"
+	surfaceskin 0 3 "tx_flamerPX.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  grenadelauncher  ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscStrifeGrenadeLauncher {
+	path "models/weapons/grenadeLauncher/"
+	model 0 "grenadeLauncherPX_hand.md3"
+	//skin 0 "tx_grndl_px.png"
+	//explosive grenade
+	surfaceskin 0 0 "tx_grndl_px.png"
+	surfaceskin 0 1 "tx_grndl_px.png"
+	surfaceskin 0 2 "tx_grndl_px.png"
+	surfaceskin 0 3 "tx_grndl_px.png"
+	surfaceskin 0 4 "tx_grndl_px.png"
+	surfaceskin 0 5 "tx_grndl_px.png"
+	surfaceskin 0 6 "tx_grndl_px.png"
+	surfaceskin 0 7 "tx_grndl_px.png"
+	surfaceskin 0 8 "tx_grndl_px.png"
+	surfaceskin 0 9 "tx_grndl_px.png"
+	surfaceskin 0 10 "tx_grndl_px.png"
+	surfaceskin 0 11 "tx_grndl_px.png"
+	surfaceskin 0 12 "tx_grndl_px.png"
+	surfaceskin 0 13 "tx_grndl_px.png"
+	surfaceskin 0 14 "tx_handgrenade.png"
+	surfaceskin 0 15 "tx_pxStaffBlaster.png"
+	
+	scale -0.25 0.25 0.25
+	offset 0.0 -20.0 -15.0
+	//states
+	//explosive grenade
+	frameIndex GREN A 0 1
+	frameIndex GREN B 0 3
+	frameIndex GREN C 0 11
+	
+	//fire grenade
+	surfaceskin 0 0 "tx_grndl2_px.png"
+	surfaceskin 0 1 "tx_grndl2_px.png"
+	surfaceskin 0 2 "tx_grndl2_px.png"
+	surfaceskin 0 3 "tx_grndl2_px.png"
+	surfaceskin 0 4 "tx_grndl2_px.png"
+	surfaceskin 0 5 "tx_grndl2_px.png"
+	surfaceskin 0 6 "tx_grndl2_px.png"
+	surfaceskin 0 7 "tx_grndl2_px.png"
+	surfaceskin 0 8 "tx_grndl2_px.png"
+	surfaceskin 0 9 "tx_grndl2_px.png"
+	surfaceskin 0 10 "tx_grndl2_px.png"
+	surfaceskin 0 11 "tx_grndl2_px.png"
+	surfaceskin 0 12 "tx_grndl2_px.png"
+	surfaceskin 0 13 "tx_grndl2_px.png"
+	surfaceskin 0 14 "tx_handgrenade.png"
+	surfaceskin 0 15 "tx_pxStaffBlaster.png"
+	
+	scale -0.25 0.25 0.25
+	offset 0.0 -20.0 -15.0
+	//states
+	//explosive grenade
+	frameIndex GREN D 0 1
+	frameIndex GREN E 0 3
+	frameIndex GREN F 0 11	
+	
+	//pickup model
+	path "models/weapons/grenadeLauncher/"
+	model 0 "p_grenadeLauncherPX.md3"
+	skin 0 "tx_grndl_px.png"
+	scale 0.25 0.25 0.25
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+model wosD_zscStrifeGrenadeLauncher {
+	//pickup model
+	path "models/weapons/grenadeLauncher/"
+	model 0 "p_grenadeLauncherPX.md3"
+	skin 0 "tx_grndl_px.png"
+	scale 0.25 0.25 0.25
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+model HEGrenade {
+	path "models/items/grenades/"
+	model 0 "grenade.md3"
+	skin 0 "tx_grnd_expl.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex GRAP A 0 0
+	frameindex GRAP B 0 2
+}
+model HEGrenadeRounds {
+	path "models/items/grenades/"
+	model 0 "p_grenadeTrio.md3"
+	skin 0 "tx_grnd_expl.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex GRN1 A 0 0
+}
+model PhosphorousGrenade {
+	path "models/items/grenades/"
+	model 0 "grenade.md3"
+	skin 0 "tx_grnd_fire.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex GRIN A 0 0
+	frameindex GRIN B 0 2
+}
+model PhosphorusGrenadeRounds {
+	path "models/items/grenades/"
+	model 0 "p_grenadeTrio.md3"
+	skin 0 "tx_grnd_fire.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex GRN2 A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  mauler  ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model zscMauler {
+	path "models/weapons/mauler/"
+	model 0 "maulerPX_hand.md3"//model 0 "maulerPX.md3"
+	//skin 0 "tx_maulerPX.png"
+	surfaceskin 0 0 "tx_maulerPX.png"
+	surfaceskin 0 1 "tx_maulerPX.png"
+	surfaceskin 0 2 "tx_maulerPX.png"
+	surfaceskin 0 3 "tx_maulerPX.png"
+	surfaceskin 0 4 "tx_maulerPX.png"
+	surfaceskin 0 5 "tx_maulerPX.png"
+	surfaceskin 0 6 "tx_maulerPX.png"
+	surfaceskin 0 7 "tx_maulerPX.png"
+	surfaceskin 0 8 "tx_maulerPX.png"
+	surfaceskin 0 9 "tx_handgrenade.png"
+	surfaceskin 0 10 "tx_handgrenade.png"
+	surfaceskin 0 11 "tx_pxStaffBlaster.png"
+	scale -3.5 3.5 3.5
+	offset 0.0 -10.0 -12.0
+	//states
+	frameIndex MAUL A 0 1
+	//mode1.fire
+	offset 0.0 -7.0 -12.0
+	frameIndex BLSF A 0 3
+	offset 0.0 -8.0 -12.0
+	frameIndex MAUL B 0 5
+	offset 0.0 -9.0 -12.0
+	frameIndex MAUL C 0 7
+	offset 0.0 -10.0 -12.0
+	frameIndex MAUL D 0 9
+	frameIndex MAUL E 0 11
+	//mode1.idle
+	frameIndex MAUL F 0 1
+	frameIndex MAUL G 0 1
+	frameIndex MAUL H 0 1
+	//mode2.idle
+	frameIndex MAUL I 0 1
+	frameIndex MAUL J 0 1
+	frameIndex MAUL K 0 1
+	frameIndex MAUL L 0 1	
+	
+	//pickup model
+	path "models/weapons/mauler/"
+	model 0 "p_maulerPX.md3"
+	skin 0 "tx_maulerPX.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+model mauler_dummy {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/mauler/"
+	model 0 "p_maulerPX.md3"
+	skin 0 "tx_maulerPX.png"
+	scale 4.5 4.5 4.5
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  rlPistol  //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model StormPistol {
+	path "models/weapons/stormPistol/"
+	model 0 "w_stormPistol2.md3"
+	surfaceskin 0 0 "tx_stromPistol.png"
+	surfaceskin 0 1 "tx_stromPistol.png"
+	surfaceskin 0 2 "tx_stromPistol.png"
+	surfaceskin 0 3 "tx_stromPistol.png"
+	surfaceskin 0 4 "tx_stromPistol.png"
+	surfaceskin 0 5 "tx_stromPistol.png"
+	surfaceskin 0 6 "tx_stromPistol.png"
+	surfaceskin 0 7 "tx_stromPistol.png"
+	surfaceskin 0 8 "tx_stromPistol.png"
+	surfaceskin 0 9 "tx_stromPistol.png"
+	surfaceskin 0 10 "tx_stromPistol.png"
+	surfaceskin 0 11 "tx_stromPistol.png"
+	surfaceskin 0 12 "tx_handgrenade.png"
+	surfaceskin 0 13 "tx_handgrenade.png"
+	scale -1.5 1.5 1.5
+	offset 8.0 -25.0 -10.0
+	//states
+	//frameindex SPIS A 0 1
+	//frameindex SPIS B 0 3
+	//frameindex SPIS C 0 4
+	//frameindex SPIS D 0 6	
+	frameindex DUMM A 0 0 
+	frameindex DUMM B 0 1 
+	frameindex DUMM C 0 2 
+	frameindex DUMM D 0 3 
+	frameindex DUMM E 0 4 
+	frameindex DUMM F 0 5 
+	frameindex DUMM G 0 6 
+	frameindex DUMM H 0 7 
+	frameindex DUMM I 0 8 
+	frameindex DUMM J 0 9 
+	frameindex DUMM K 0 10 
+	frameindex DUMM L 0 11
+	frameindex DUMM M 0 12 
+	frameindex DUMM N 0 13 
+	frameindex DUMM O 0 14 
+	frameindex DUMM P 0 15 
+	frameindex DUMM Q 0 16
+	//altfire
+	offset 0.0 -25.0 -5.0
+	frameindex DUMM S 0 0
+	frameindex DUMM T 0 1 
+	frameindex DUMM U 0 2 
+	frameindex DUMM V 0 3 
+	frameindex DUMM W 0 4 
+	frameindex DUMM X 0 5 
+}
+model stormPistol {
+	path "models/weapons/stormPistol/"
+	model 0 "p_stormPistol2.md3"
+	skin 0 "tx_stromPistol.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM R 0 2
+}
+model dummy_stormPistol_0 {
+	path "models/weapons/stormPistol/"
+	model 0 "p_stormPistol2.md3"
+	skin 0 "tx_stromPistol.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dummy_stormPistol_1 {
+	path "models/weapons/stormPistol/"
+	model 0 "p_stormPistol2.md3"
+	skin 0 "tx_stromPistol.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model dummy_stormPistol_2 {
+	path "models/weapons/stormPistol/"
+	model 0 "p_stormPistol2.md3"
+	skin 0 "tx_stromPistol.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 2
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  staffblaster battery  //////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model CasingStaff {
+	path "models/weapons/staff/"
+	model 0 "battery.md3"
+	skin 0 "tx_pxStaffBlaster.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	frameindex SECL A 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//  executor rifle  ////////////////////////////////////////////////////////////
+/*
+model executorRifle {
+	//pickup model
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP A 0 0
+}
+model executorRifle {
+	path "models/weapons/executorRifle/"
+	model 0 "executorRifle_h.md3"
+	//skin 0 "tx_executorRifle.png"
+	surfaceskin 0 0 "tx_executorRifle.png"
+	surfaceskin 0 1 "tx_executorRifle.png"
+	surfaceskin 0 2 "tx_executorRifle.png"
+	surfaceskin 0 3 "tx_executorRifle.png"
+	surfaceskin 0 4 "tx_executorRifle.png"
+	surfaceskin 0 5 "tx_handgrenade.png"
+	surfaceskin 0 6 "tx_handgrenade.png"
+	surfaceskin 0 7 "tx_handgrenade.png"
+	surfaceskin 0 8 "tx_pxStaffBlaster.png"
+	scale -4.0 4.0 4.0
+	offset 4.0 -6.0 -5.0	
+	//idle
+	frameindex ERMD B 0 0
+	//shoot
+	offset 4.0 -4.0 -5.0
+	frameindex ERMD C 0 2
+	offset 4.0 -5.0 -5.0
+	frameindex ERMD D 0 4
+	//idle
+	offset 4.0 -6.0 -5.0	
+	frameindex ERMD E 0 8
+	//reload
+	frameindex ERMD F 0 10
+	frameindex ERMD G 0 11
+	frameindex ERMD H 0 12
+	frameindex ERMD I 0 13
+	frameindex ERMD J 0 14
+	frameindex ERMD K 0 15
+	frameindex ERMD L 0 16
+	frameindex ERMD M 0 17
+	frameindex ERMD N 0 18	
+}
+*/
+/*
+model executorRifle_ground01 {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP A 0 0
+}
+model executorRifle_ground02 {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP B 0 1
+}
+model executorRifle_standing {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP C 0 2
+}
+*/
+
+model dummy_executorRifle_ground01 {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP A 0 0
+}
+model dummy_executorRifle_ground02 {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP B 0 1
+}
+model dummy_executorRifle_standing {
+	path "models/weapons/executorRifle/"
+	model 0 "p_executorRifle.md3"
+	skin 0 "tx_executorRifle.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex ERMP C 0 2
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  punch dagger  //////////////////////////////////////////////////////////////
+model zscPunchDagger {
+	path "models/weapons/punchdagger/"
+	model 0 "punchDagger.md3"
+	surfaceskin 0 0 "tx_handgrenade.png"
+	surfaceskin 0 1 "tx_handgrenade.png"
+	surfaceskin 0 2 "tx_pxStaffBlaster.png"
+	surfaceskin 0 3 "tx_strifeDagger.png"
+	scale -1.0 1.0 1.0
+	offset 0.0 -15.0 -10.0
+	
+	frameindex PUND A 0 0
+	frameindex PUND B 0 1
+	frameindex PUND C 0 2
+	frameindex PUND D 0 3
+	frameindex PUND E 0 4
+	frameindex PUND F 0 5
+	frameindex PUND G 0 6
+	frameindex PUND H 0 7
+	frameindex PUND I 0 8
+	frameindex PUND J 0 9
+	frameindex PUND K 0 10
+	frameindex PUND L 0 11
+	frameindex PUND M 0 12
+	frameindex PUND N 0 13
+	frameindex PUND O 0 14
+	frameindex PUND P 0 15
+	frameindex PUND Q 0 16
+	frameindex PUND R 0 17
+	frameindex PUND S 0 18
+	frameindex PUND T 0 19
+	frameindex PUND U 0 20
+	frameindex PUND V 0 21
+	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+//  laser pistol.weapon  ///////////////////////////////////////////////////////
+model laserPistol {
+	path "models/weapons/laserpistol/"
+	model 0 "w_laserPistolHand.md3"
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 1 "tx_laserpistol2.png"
+	surfaceskin 0 2 "tx_laserpistol2.png"
+	surfaceskin 0 3 "tx_laserpistol2.png"
+	surfaceskin 0 4 "tx_laserpistol2.png"
+	surfaceskin 0 5 "tx_handgrenade.png"
+	surfaceskin 0 6 "tx_handgrenade.png"
+	surfaceskin 0 7 "tx_energyPod_1.png"
+	surfaceskin 0 8 "tx_pxStaffBlaster.png"
+	scale -1.65 1.65 1.65
+	offset 8.0 -25.0 -10.0
+	
+	//  idle
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	frameindex LSPI A 0 23
+	frameindex LSPI B 0 24
+	frameindex LSPI C 0 25
+	//  idle animation
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	frameindex LSPI D 0 25
+	surfaceskin 0 0 "tx_laserpistol3.png"
+	frameindex LSPI E 0 25
+	surfaceskin 0 0 "tx_laserpistol4.png"
+	frameindex LSPI F 0 25
+	surfaceskin 0 0 "tx_laserpistol5.png"
+	frameindex LSPI G 0 25
+	surfaceskin 0 0 "tx_laserpistol6.png"
+	frameindex LSPI H 0 25
+	surfaceskin 0 0 "tx_laserpistol7.png"
+	frameindex LSPI I 0 25
+	//////////////
+	
+	//  reset skin
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	//////////////
+	//  shoot
+	//  animation
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	frameindex LSPS A 0 5
+	surfaceskin 0 0 "tx_laserpistol3.png"
+	frameindex LSPS B 0 5
+	surfaceskin 0 0 "tx_laserpistol4.png"
+	frameindex LSPS C 0 5
+	surfaceskin 0 0 "tx_laserpistol5.png"
+	frameindex LSPS D 0 5
+	surfaceskin 0 0 "tx_laserpistol6.png"
+	frameindex LSPS E 0 5
+	surfaceskin 0 0 "tx_laserpistol7.png"
+	frameindex LSPS F 0 5
+	//  fire
+	surfaceskin 0 0 "tx_laserpistol8.png"
+	offset 8.0 -23.0 -10.0
+	frameindex LSPS G 0 6
+	surfaceskin 0 0 "tx_laserpistol8.png"
+	offset 8.0 -24.0 -10.0
+	frameindex LSPS H 0 7
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	offset 8.0 -25.0 -10.0
+	frameindex LSPS I 0 8	
+	//////////////
+	
+	//  reload
+	frameindex LSPR A 0 8
+	frameindex LSPR A 0 9
+	frameindex LSPR B 0 10
+	frameindex LSPR C 0 11
+	frameindex LSPR D 0 12
+	frameindex LSPR E 0 13
+	frameindex LSPR F 0 14
+	frameindex LSPR G 0 15
+	surfaceskin 0 0 "tx_laserpistol3.png"
+	frameindex LSPR H 0 16 //zacatek nabijeni
+	surfaceskin 0 0 "tx_laserpistol4.png"
+	frameindex LSPR I 0 16
+	surfaceskin 0 0 "tx_laserpistol5.png"
+	frameindex LSPR J 0 16
+	surfaceskin 0 0 "tx_laserpistol6.png"
+	frameindex LSPR K 0 16
+	surfaceskin 0 0 "tx_laserpistol7.png"
+	frameindex LSPR L 0 16
+	surfaceskin 0 0 "tx_laserpistol8.png"
+	frameindex LSPR M 0 17 //konec nabijeni
+	surfaceskin 0 0 "tx_laserpistol2.png"
+	frameindex LSPR N 0 18
+	frameindex LSPR O 0 19
+	frameindex LSPR P 0 20
+	frameindex LSPR Q 0 21
+	frameindex LSPR R 0 22
+	frameindex LSPR S 0 23
+	//////////////
+}
+model laserTracer {
+	USEACTORPITCH
+	USEACTORROLL
+	PITCHFROMMOMENTUM
+	path "models/weapons/laserpistol/"
+	model 0 "laserTracer.md3"
+	skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex LSTR A 0 0
+} //LSTR A
+//  laser pistol.pickup  ///////////////////////////////////////////////////////
+model laserPistol {
+	path "models/weapons/laserpistol/"
+	model 0 "p_laserPistol.md3"
+	//skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_laserpistol2.png"
+	frameindex DUMM A 0 3
+	skin 0 "tx_laserpistol3.png"
+	frameindex DUMM B 0 3
+	skin 0 "tx_laserpistol4.png"
+	frameindex DUMM C 0 3
+	skin 0 "tx_laserpistol5.png"
+	frameindex DUMM D 0 3
+	skin 0 "tx_laserpistol6.png"
+	frameindex DUMM E 0 3
+	skin 0 "tx_laserpistol7.png"
+	frameindex DUMM F 0 3
+}
+//  laser pistol.dummy decoration  /////////////////////////////////////////////
+model dummy_laserPistol00 {
+	path "models/weapons/laserpistol/"
+	model 0 "p_laserPistol.md3"
+	//skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_laserpistol2.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_laserpistol3.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_laserpistol4.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_laserpistol5.png"
+	frameindex DUMM D 0 0
+	skin 0 "tx_laserpistol6.png"
+	frameindex DUMM E 0 0
+	skin 0 "tx_laserpistol7.png"
+	frameindex DUMM F 0 0
+}
+model dummy_laserPistol01 {
+	path "models/weapons/laserpistol/"
+	model 0 "p_laserPistol.md3"
+	//skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_laserpistol2.png"
+	frameindex DUMM A 0 1
+	skin 0 "tx_laserpistol3.png"
+	frameindex DUMM B 0 1
+	skin 0 "tx_laserpistol4.png"
+	frameindex DUMM C 0 1
+	skin 0 "tx_laserpistol5.png"
+	frameindex DUMM D 0 1
+	skin 0 "tx_laserpistol6.png"
+	frameindex DUMM E 0 1
+	skin 0 "tx_laserpistol7.png"
+	frameindex DUMM F 0 1
+}
+model dummy_laserPistol02 {
+	path "models/weapons/laserpistol/"
+	model 0 "p_laserPistol.md3"
+	//skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_laserpistol2.png"
+	frameindex DUMM A 0 2
+	skin 0 "tx_laserpistol3.png"
+	frameindex DUMM B 0 2
+	skin 0 "tx_laserpistol4.png"
+	frameindex DUMM C 0 2
+	skin 0 "tx_laserpistol5.png"
+	frameindex DUMM D 0 2
+	skin 0 "tx_laserpistol6.png"
+	frameindex DUMM E 0 2
+	skin 0 "tx_laserpistol7.png"
+	frameindex DUMM F 0 2
+}
+model dummy_laserPistol03 {
+	path "models/weapons/laserpistol/"
+	model 0 "p_laserPistol.md3"
+	//skin 0 "tx_laserpistol2.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	skin 0 "tx_laserpistol2.png"
+	frameindex DUMM A 0 3
+	skin 0 "tx_laserpistol3.png"
+	frameindex DUMM B 0 3
+	skin 0 "tx_laserpistol4.png"
+	frameindex DUMM C 0 3
+	skin 0 "tx_laserpistol5.png"
+	frameindex DUMM D 0 3
+	skin 0 "tx_laserpistol6.png"
+	frameindex DUMM E 0 3
+	skin 0 "tx_laserpistol7.png"
+	frameindex DUMM F 0 3
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+

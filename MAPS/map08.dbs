@@ -24,77 +24,12 @@ maps
 				option2 = 0;
 				notfortesting = 0;
 			}
-			
-			resource1
-			{
-				type = 2;
-				location = "D:\\DOOM\\WoS\\WoS-modelPackPC.pk3";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-			}
-			
-			resource2
-			{
-				type = 2;
-				location = "D:\\DOOM\\WoS\\WoS-textures.pk3";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 0;
-			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -4530.073f;
+		viewpositionx = -844.726f;
 		defaulttoptexture = "BRKGRY17";
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				rotationfloor = 1;
-				user_managed_3d_floor = 3;
-				xpanningfloor = 1;
-				ypanningceiling = 1;
-				ypanningfloor = 1;
-				xpanningceiling = 1;
-				yscalefloor = 1;
-				xscalefloor = 1;
-				yscaleceiling = 1;
-				xscaleceiling = 1;
-				rotationceiling = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_top = 1;
-				scalex_top = 1;
-				scalex_mid = 1;
-				scalex_bottom = 1;
-				scaley_mid = 1;
-				scaley_bottom = 1;
-				offsety_top = 1;
-				scaley_top = 1;
-				offsety_bottom = 1;
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				offsetx_bottom = 1;
-			}
-			
-			linedef
-			{
-				alpha = 1;
-				arg0str = 2;
-			}
-			
-			thing
-			{
-				arg0str = 2;
-				conversation = 0;
-			}
-		}
 		overrideceilheight = false;
-		viewpositiony = -1656.446f;
+		viewpositiony = -1738.756f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -119,6 +54,80 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.4975001f;
+		viewscale = 0.6467454f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -31744;
+					outertop = 26944;
+					outerbottom = -32448;
+				}
+			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "22454 22471 22479 22480 22483 22487 22491 22503 22504 22507 22511 22514 22537 22540 22541 22546 22549 22550 22552 22553 22674 22676 22677 22679 22680 22681 22683 22684 22686 22687 22689 22690 25456 25464 25469 25477 42146 42147 42148 42149 42150 42151 42152 42153 42154 42155 42156 42157 42158 42159 42160 42161 42162 42163 42164 42165 42166 42167 42168 42169 42170 42171 42172 42173 42174 42175 42176 42177 42178 42179 42180 42181 42182 42183 42184 42185 42186 42187 42188 42189 42190 42191 42192 42193 42194 42195 42196 42197 42198 42199 42200 42201";
+				sectors = "1460 3425 4382 4532 4533 4535 4536 5319 9770 9771 9772 9773 9774 9775 9776 9777 9778 9779 9780 9781 9782 9783 9784 9785 9786 9787 9788 9789 9790 9791 9792 9793 9794 9795 9796 9797 9798 9800 9801 9802";
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				arg0str = 2;
+				alpha = 1;
+			}
+			
+			sidedef
+			{
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsetx_top = 1;
+				scalex_mid = 1;
+				scaley_mid = 1;
+				offsety_bottom = 1;
+				offsetx_bottom = 1;
+				scaley_bottom = 1;
+				scalex_bottom = 1;
+				offsety_top = 1;
+				scaley_top = 1;
+				scalex_top = 1;
+			}
+			
+			sector
+			{
+				rotationceiling = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				xpanningfloor = 1;
+				ypanningfloor = 1;
+				user_managed_3d_floor = 3;
+			}
+			
+			thing
+			{
+				conversation = 0;
+				arg0str = 2;
+			}
+		}
 	}
 }

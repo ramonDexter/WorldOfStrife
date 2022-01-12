@@ -26,74 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -8254f;
+		viewpositionx = 1919.701f;
 		defaulttoptexture = "F_OLDWOD";
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				xscaleceiling = 1;
-				xscalefloor = 1;
-				user_managed_3d_floor = 3;
-				xpanningfloor = 1;
-				yscaleceiling = 1;
-				xpanningceiling = 1;
-				yscalefloor = 1;
-				rotationfloor = 1;
-				user_slopedatasector = 3;
-				rotationceiling = 1;
-				ypanningfloor = 1;
-				ypanningceiling = 1;
-			}
-			
-			sidedef
-			{
-				offsety_bottom = 1;
-				offsetx_top = 1;
-				scaley_mid = 1;
-				offsety_mid = 1;
-				scalex_mid = 1;
-				scaley_bottom = 1;
-				scalex_bottom = 1;
-				offsetx_bottom = 1;
-				offsetx_mid = 1;
-				offsety_top = 1;
-			}
-			
-			linedef
-			{
-				alpha = 1;
-				arg0str = 2;
-			}
-		}
 		overrideceilheight = false;
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-				caretposition = 131;
-			}
-		}
-		viewpositiony = 10205.5f;
+		viewpositiony = 181.9971f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -106,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -118,6 +54,87 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.01657225f;
+		viewscale = 0.2284623f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -512;
+					outerright = 0;
+					outertop = 512;
+					outerbottom = 0;
+				}
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				arg0str = 2;
+				alpha = 1;
+			}
+			
+			sidedef
+			{
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsety_bottom = 1;
+				offsetx_bottom = 1;
+				offsety_top = 1;
+				offsetx_top = 1;
+				scaley_bottom = 1;
+				scalex_mid = 1;
+				scalex_bottom = 1;
+				scaley_mid = 1;
+			}
+			
+			sector
+			{
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationceiling = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xpanningfloor = 1;
+				ypanningfloor = 1;
+				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				user_managed_3d_floor = 3;
+				user_slopedatasector = 3;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				activetab = true;
+			}
+			
+			document1
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 131;
+			}
+		}
 	}
 }

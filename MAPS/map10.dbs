@@ -18,18 +18,27 @@ maps
 			
 			resource0
 			{
+				type = 2;
+				location = "C:\\GAMES\\gzDoom\\gzdoom.pk3";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 1;
+			}
+			
+			resource1
+			{
 				type = 1;
-				location = "D:\\DOOM\\WoS\\WoS-Base";
+				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -5695.796f;
+		viewpositionx = -8855.514f;
 		defaulttoptexture = "MKNRKTN";
 		overrideceilheight = false;
-		viewpositiony = -545.2913f;
+		viewpositiony = -626.0666f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +51,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 8;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +63,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1792157f;
+		viewscale = 0.5118555f;
 		
 		plugins
 		{
@@ -71,6 +80,44 @@ maps
 					outerbottom = -32192;
 				}
 			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "12391 12392 12393 12394 12395 12396 12398 12399 12400 12401";
+				sectors = "2113 2593 2594 2596 2597 2598";
+			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 		
 		fieldtypes
@@ -116,16 +163,6 @@ maps
 			thing
 			{
 				conversation = 0;
-			}
-		}
-		
-		selectiongroups
-		{
-			
-			2
-			{
-				linedefs = "12391 12392 12393 12394 12395 12396 12398 12399 12400 12401";
-				sectors = "2113 2593 2594 2596 2597 2598";
 			}
 		}
 		

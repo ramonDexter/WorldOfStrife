@@ -18,27 +18,18 @@ maps
 			
 			resource0
 			{
-				type = 2;
-				location = "C:\\GAMES\\gzDoom\\gzdoom.pk3";
-				option1 = 0;
-				option2 = 0;
-				notfortesting = 1;
-			}
-			
-			resource1
-			{
 				type = 1;
-				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
+				location = "D:\\DOOM\\WoS\\WoS-Base";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -8855.514f;
+		viewpositionx = 3151.706f;
 		defaulttoptexture = "MKNRKTN";
 		overrideceilheight = false;
-		viewpositiony = -626.0666f;
+		viewpositiony = -841.0029f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -51,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 4;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -63,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.5118555f;
+		viewscale = 1.900482f;
 		
 		plugins
 		{
@@ -171,22 +162,23 @@ maps
 			
 			document0
 			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				activetab = true;
-			}
-			
-			document1
-			{
 				filename = "DIALOGUE";
 				hash = 3588187714;
 				resource;
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 131;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 76;
+				activetab = true;
 			}
 		}
 	}

@@ -1,0 +1,132 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//POLYOBJECT DOORS
+///////////////////////////////////////////////////////////////////////////////////////
+//universal door script - one script to rule dem all
+//==--------------------------------------------------==
+#define MAX_SWINGING_DOORS 1000
+bool polyDoor[MAX_SWINGING_DOORS]; //'dynamic' variable = array
+//==--------------------------------------------------==
+//universal door script with variable sound
+//==--------------------------------------------------==
+script "polyDRswing_Right" (int poly, int spd) {
+	if(!polyDoor[poly]) {
+		Polyobj_RotateRight(poly, spd, 64);
+		if(spd  < 16) {
+			AmbientSound("sounds/DoorCreak", 127);
+		}
+		else if(spd >= 16) {
+			AmbientSound("sounds/officeDopen", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly]) {
+		Polyobj_RotateLeft(poly, spd, 64);
+		if(spd  < 16) {
+			AmbientSound("sounds/DoorCreak", 127);
+		}
+		else if(spd >= 16) {
+			AmbientSound("sounds/officeDclose", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+script "polyDRswing_Left" (int poly, int spd) {
+	if(!polyDoor[poly]) {
+		Polyobj_RotateLeft(poly, spd, 64);
+		if(spd  < 16) {
+			AmbientSound("sounds/DoorCreak", 127);
+		}
+		else if(spd >= 16) {
+			AmbientSound("sounds/officeDopen", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly]) {
+		Polyobj_RotateRight(poly, spd, 64);
+		if(spd  < 16) {
+			AmbientSound("sounds/DoorCreak", 127);
+		}
+		else if(spd >= 16) {
+			AmbientSound("sounds/officeDclose", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+script "polyDRSlide" (int poly, int angle, int dist) {
+	if(!polyDoor[poly]) {
+		Polyobj_Move(poly, 24, angle, dist);
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly]) {
+        int backAngle;
+        switch(angle) {
+            case 0:
+                backAngle = 128;
+            break;
+            case 32:
+                backAngle = 160;
+            break;
+            case 64:
+                backAngle = 192;
+            break;
+            case 96:
+                backAngle = 224;
+            break;
+            case 128:
+                backAngle = 0;
+            break;
+            case 160:
+                backAngle = 32;
+            break;
+            case 192:
+                backAngle = 64;
+            break;
+            case 224:
+                backAngle = 96;
+            break;
+        }
+		Polyobj_Move(poly, 24, backAngle, dist);
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+script "polyDRslideDelay" (int poly, int angle, int dist) {
+	Polyobj_Move(poly, 24, angle, dist);
+	PolyWait(poly);
+	Delay (3*35);
+	int backAngle;
+	switch(angle) {
+		case 0:
+			backAngle = 128;
+		break;
+		case 32:
+			backAngle = 160;
+		break;
+		case 64:
+			backAngle = 192;
+		break;
+		case 96:
+			backAngle = 224;
+		break;
+		case 128:
+			backAngle = 0;
+		break;
+		case 160:
+			backAngle = 32;
+		break;
+		case 192:
+			backAngle = 64;
+		break;
+		case 224:
+			backAngle = 96;
+		break;
+	}
+	Polyobj_Move(poly, 24, backAngle, dist);
+	PolyWait(poly);
+}
+///////////////////////////////////////////////////////////////////////////////////////

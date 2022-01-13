@@ -29,31 +29,6 @@ maps
 		viewpositionx = -788f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 48;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-				caretposition = 131;
-				activetab = true;
-			}
-		}
 		viewpositiony = -2088f;
 		overridebrightness = false;
 		overridefloortexture = false;
@@ -80,5 +55,30 @@ maps
 		overridemiddletexture = false;
 		custombrightness = 196;
 		viewscale = 0.03886237f;
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 131;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 76;
+				activetab = true;
+			}
+		}
 	}
 }

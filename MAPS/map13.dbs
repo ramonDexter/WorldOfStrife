@@ -28,72 +28,7 @@ maps
 		overrideceiltexture = false;
 		viewpositionx = -8766.002f;
 		defaulttoptexture = "CONCRT03";
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				rotationfloor = 1;
-				xscaleceiling = 1;
-				ypanningceiling = 1;
-				ypanningfloor = 1;
-				xpanningfloor = 1;
-				yscalefloor = 1;
-				user_managed_3d_floor = 3;
-				xscalefloor = 1;
-				yscaleceiling = 1;
-				xpanningceiling = 1;
-				rotationceiling = 1;
-			}
-			
-			sidedef
-			{
-				offsety_bottom = 1;
-				offsetx_top = 1;
-				offsety_mid = 1;
-				scaley_bottom = 1;
-				scalex_bottom = 1;
-				offsetx_bottom = 1;
-				offsetx_mid = 1;
-				offsety_top = 1;
-			}
-			
-			linedef
-			{
-				arg0str = 2;
-			}
-			
-			thing
-			{
-				arg0str = 2;
-			}
-		}
 		overrideceilheight = false;
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-				caretposition = 131;
-			}
-		}
 		viewpositiony = 12445.5f;
 		overridebrightness = false;
 		overridefloortexture = false;
@@ -120,5 +55,72 @@ maps
 		overridemiddletexture = false;
 		custombrightness = 196;
 		viewscale = 0.01834713f;
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				arg0str = 2;
+			}
+			
+			sidedef
+			{
+				offsetx_bottom = 1;
+				offsety_mid = 1;
+				offsetx_mid = 1;
+				offsety_top = 1;
+				offsetx_top = 1;
+				offsety_bottom = 1;
+				scalex_bottom = 1;
+				scaley_bottom = 1;
+			}
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+				rotationfloor = 1;
+				ypanningfloor = 1;
+				yscalefloor = 1;
+				rotationceiling = 1;
+				yscaleceiling = 1;
+				xpanningfloor = 1;
+				ypanningceiling = 1;
+				xpanningceiling = 1;
+				xscaleceiling = 1;
+				xscalefloor = 1;
+			}
+			
+			thing
+			{
+				arg0str = 2;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 131;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 6903;
+				firstvisibleline = 276;
+				activetab = true;
+			}
+		}
 	}
 }

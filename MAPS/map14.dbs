@@ -93,6 +93,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
+				caretposition = 76;
 				activetab = true;
 			}
 		}

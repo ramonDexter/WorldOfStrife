@@ -28,78 +28,7 @@ maps
 		overrideceiltexture = false;
 		viewpositionx = 248.8086f;
 		defaulttoptexture = "BRKGRY07";
-		
-		fieldtypes
-		{
-			
-			sector
-			{
-				xscaleceiling = 1;
-				xscalefloor = 1;
-				soundsequence = 2;
-				xpanningfloor = 1;
-				yscaleceiling = 1;
-				xpanningceiling = 1;
-				yscalefloor = 1;
-				user_managed_3d_floor = 3;
-				rotationfloor = 1;
-				rotationceiling = 1;
-				ypanningfloor = 1;
-				ypanningceiling = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_top = 1;
-				scalex_top = 1;
-				scalex_mid = 1;
-				scalex_bottom = 1;
-				scaley_mid = 1;
-				scaley_bottom = 1;
-				offsety_top = 1;
-				scaley_top = 1;
-				offsety_bottom = 1;
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				offsetx_bottom = 1;
-			}
-			
-			linedef
-			{
-				alpha = 1;
-				arg0str = 2;
-			}
-			
-			thing
-			{
-				conversation = 0;
-			}
-		}
 		overrideceilheight = false;
-		
-		scriptdocuments
-		{
-			
-			document1
-			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				activetab = true;
-			}
-			
-			document0
-			{
-				filename = "DIALOGUE";
-				hash = 3588187714;
-				resource;
-				tabtype = 0;
-				scripttype = 18;
-				caretposition = 155;
-			}
-		}
 		viewpositiony = 277.6579f;
 		overridebrightness = false;
 		overridefloortexture = false;
@@ -126,5 +55,77 @@ maps
 		overridemiddletexture = false;
 		custombrightness = 196;
 		viewscale = 0.1810204f;
+		
+		fieldtypes
+		{
+			
+			linedef
+			{
+				arg0str = 2;
+				alpha = 1;
+			}
+			
+			sidedef
+			{
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsetx_bottom = 1;
+				scalex_bottom = 1;
+				scaley_bottom = 1;
+				offsety_bottom = 1;
+				offsetx_top = 1;
+				offsety_top = 1;
+				scalex_top = 1;
+				scaley_top = 1;
+				scalex_mid = 1;
+				scaley_mid = 1;
+			}
+			
+			sector
+			{
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				rotationceiling = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xpanningfloor = 1;
+				ypanningfloor = 1;
+				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				soundsequence = 2;
+				user_managed_3d_floor = 3;
+			}
+			
+			thing
+			{
+				conversation = 0;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 155;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 75;
+				activetab = true;
+			}
+		}
 	}
 }

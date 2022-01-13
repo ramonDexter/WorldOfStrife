@@ -124,6 +124,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
+				caretposition = 75;
 				activetab = true;
 			}
 		}

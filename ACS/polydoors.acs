@@ -1,3 +1,5 @@
+#library "pdoors"
+#include "zcommon.acs"
 ///////////////////////////////////////////////////////////////////////////////////////
 //POLYOBJECT DOORS
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -8,6 +10,67 @@ bool polyDoor[MAX_SWINGING_DOORS]; //'dynamic' variable = array
 //==--------------------------------------------------==
 //universal door script with variable sound
 //==--------------------------------------------------==
+script "polyDoorSwing" (int poly, int spd, int r_l) {
+    if ( !polyDoor[poly] ) {
+        switch(r_l) {
+            case 1:
+            //right
+                Polyobj_RotateRight(poly, spd, 64);
+                if(spd  < 16) {
+                    AmbientSound("sounds/DoorCreak", 127);
+                }
+                else if(spd >= 16) {
+                    AmbientSound("sounds/officeDopen", 127);
+                }
+                PolyWait(poly);
+                polyDoor[poly] = true;
+            break;
+
+            case 2:
+            //left
+                Polyobj_RotateLeft(poly, spd, 64);
+                if(spd  < 16) {
+                    AmbientSound("sounds/DoorCreak", 127);
+                }
+                else if(spd >= 16) {
+                    AmbientSound("sounds/officeDclose", 127);
+                }
+                PolyWait(poly);
+                polyDoor[poly] = false;
+            break;
+        }
+
+    } else if ( polyDoor[poly] ) {
+        switch(r_l) {
+            case 1:
+            //right
+                Polyobj_RotateLeft(poly, spd, 64);
+                if(spd  < 16) {
+                    AmbientSound("sounds/DoorCreak", 127);
+                }
+                else if(spd >= 16) {
+                    AmbientSound("sounds/officeDclose", 127);
+                }
+                PolyWait(poly);
+                polyDoor[poly] = false;
+            break;
+
+            case 2:
+            //left
+                Polyobj_RotateRight(poly, spd, 64);
+                if(spd  < 16) {
+                    AmbientSound("sounds/DoorCreak", 127);
+                }
+                else if(spd >= 16) {
+                    AmbientSound("sounds/officeDopen", 127);
+                }
+                PolyWait(poly);
+                polyDoor[poly] = true;
+            break;
+        }
+    }
+}
+
 script "polyDRswing_Right" (int poly, int spd) {
 	if(!polyDoor[poly]) {
 		Polyobj_RotateRight(poly, spd, 64);

@@ -7,7 +7,7 @@ maps
 	
 	MAP14
 	{
-		defaultceiltexture = "F_SKY001";
+		defaultceiltexture = "BIGSTN02";
 		overridefloorheight = false;
 		customfloorheight = 0;
 		uselongtexturenames = false;
@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 2336f;
-		defaulttoptexture = "BRKGRY17";
+		viewpositionx = 3911.311f;
+		defaulttoptexture = "BIGSTN02";
 		overrideceilheight = false;
-		viewpositiony = 320f;
+		viewpositiony = -440.9625f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,28 +42,41 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
 		overridetoptexture = false;
 		overridebottomtexture = false;
-		defaultbottomtexture = "BRKGRY17";
-		defaultfloortexture = "F_NOLINE";
-		defaultwalltexture = "BRKGRY17";
+		defaultbottomtexture = "BIGSTN02";
+		defaultfloortexture = "F_BASHXL";
+		defaultwalltexture = "BIGSTN02";
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1948929f;
+		viewscale = 0.06274787f;
 		
 		fieldtypes
 		{
+			
+			sidedef
+			{
+				offsetx_bottom = 1;
+				offsetx_mid = 1;
+				offsety_mid = 1;
+				offsety_top = 1;
+				offsety_bottom = 1;
+				offsetx_top = 1;
+				scaley_bottom = 1;
+				scalex_bottom = 1;
+				scalex_top = 1;
+			}
 			
 			sector
 			{
 				xpanningceiling = 1;
 				ypanningceiling = 1;
-				rotationceiling = 1;
+				rotationceiling = 17;
 				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningfloor = 1;
@@ -93,7 +106,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 76;
+				caretposition = 51;
 				activetab = true;
 			}
 		}

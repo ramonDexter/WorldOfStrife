@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -8766.002f;
+		viewpositionx = 5266.475f;
 		defaulttoptexture = "CONCRT03";
 		overrideceilheight = false;
-		viewpositiony = 12445.5f;
+		viewpositiony = 7029.4f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.01834713f;
+		viewscale = 0.0681216f;
 		
 		fieldtypes
 		{
@@ -117,8 +117,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 6903;
-				firstvisibleline = 276;
+				caretposition = 51;
 				activetab = true;
 			}
 		}

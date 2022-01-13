@@ -93,23 +93,24 @@ maps
 			
 			document0
 			{
-				filename = "SCRIPTS";
-				hash = 3469170009;
-				resource;
-				tabtype = 0;
-				scripttype = 1;
-				caretposition = 23;
-				activetab = true;
-			}
-			
-			document1
-			{
 				filename = "DIALOGUE";
 				hash = 3588187714;
 				resource;
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 131;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 7970;
+				firstvisibleline = 251;
+				activetab = true;
 			}
 		}
 	}

@@ -145,6 +145,17 @@ map map13 "Borderlands North" {
 	NoIntermission
 	
 }
+map map14 "Coastal Village" {
+	sky1 = "SKYRGGR"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	
+}
 
 
 map map99 "#TOP SECRET" {

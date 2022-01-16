@@ -15,3 +15,16 @@ chicken/pain "sounds/chicken/DSCHIPAI.wav"
 chicken/death "sounds/chicken/DSCHIDTH.wav"
 chicken/attack "sounds/chicken/DSCHIATK.wav"
 ////////////////////////////////////////////////////////////////////////////////
+
+// NW chicken //////////////////////////////////////////////////////////////////
+$random sight { cluck1 cluck2 cluck3 cluck4 cluck5 cluck6 }
+cluck1		"sounds/chicken/cluck1.ogg"
+cluck2		"sounds/chicken/cluck2.ogg"
+cluck3		"sounds/chicken/cluck3.ogg"
+cluck4		"sounds/chicken/cluck4.ogg"
+cluck5		"sounds/chicken/cluck5.ogg"
+cluck6		"sounds/chicken/cluck6.ogg"
+
+ChickenHurt/Hurt "sounds/chicken/cluck7.ogg"
+ChickenDeath/Death "sounds/chicken/cluck8.ogg"
+////////////////////////////////////////////////////////////////////////////////

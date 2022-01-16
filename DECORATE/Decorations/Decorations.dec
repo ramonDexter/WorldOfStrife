@@ -4424,7 +4424,7 @@ actor strifeTable01 21245 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
-	
+	+ACTLIKEBRIDGE
 	height 24
 	radius 24
 	
@@ -6706,6 +6706,7 @@ actor wosD_dexCoffeeTable 21392 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	+ACTLIKEBRIDGE
 	radius 16
 	height 16
 	States {
@@ -7651,4 +7652,116 @@ actor wosD_KLog4 21452 {
             DUMM A -1
             Stop
     }
+}
+actor wosD_nwMale_03 21453 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 03"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM03 A -1
+			Stop
+	}
+}
+actor wosD_nwMale_04 21454 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 04"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM04 A -1
+			Stop
+	}
+}
+actor wosD_nwMale_05 21455 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 05"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM05 A -1
+			Stop
+	}
+}
+actor wosD_nwMale_06 21456 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 06"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM06 A -1
+			Stop
+	}
+}
+actor wosD_nwMale_07 21457 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 07"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM07 A -1
+			Stop
+	}
+}
+actor wosD_nwMale_08 21458 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 08"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM08 A -1
+			Stop
+	}
+}
+actor wosD_nwFemale_04 21459 {
+	//$Category "Other NPCs/females"
+	//$Title "nw female 04"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	radius 16
+	height 62
+	scale 0.8
+	States {
+		Spawn:
+			NF04 A -1
+			Stop
+	}
 }

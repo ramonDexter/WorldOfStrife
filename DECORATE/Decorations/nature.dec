@@ -1156,8 +1156,9 @@ ACTOR Tree05Spawner : RandomSpawner 22146
     DropItem "Tree05Large"
 }
 
-ACTOR Tree05Large
+ACTOR Tree05Large 22161
 {
+//$category NatureTree
   radius 30
   height 224
   +SOLID
@@ -1172,8 +1173,9 @@ ACTOR Tree05Large
   	}
   }
 
-ACTOR Tree05Medium : Tree05Large
+ACTOR Tree05Medium  : Tree05Large 22162
 {
+//$category NatureTree
   +NOGRAVITY
   +DONTTHRUST
   radius 30
@@ -1196,6 +1198,7 @@ ACTOR Tree06Spawner : RandomSpawner 22147
 
 ACTOR Tree06Large
 {
+//$category NatureTree
   radius 24
   height 192
   +SOLID

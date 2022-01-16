@@ -1,0 +1,327 @@
+/*Model Chest01
+{
+  Path "models/neoworm/"
+  Model 0 "Chest01.md3"
+  Skin 0 "CHESTT01.png"
+  Scale 1 1 1
+  FrameIndex CHS1 A 0 0
+  FrameIndex CHS1 B 0 1
+  FrameIndex CHS1 C 0 2
+  FrameIndex CHS1 D 0 3
+  FrameIndex CHS1 E 0 4
+}
+
+Model Chest02
+{
+  Path "models/neoworm/"
+  Model 0 "Chest02.md3"
+  Skin 0 "CHESTT01.png"
+  Scale 1 1 1
+  FrameIndex CHS2 A 0 0
+  FrameIndex CHS2 B 0 1
+  FrameIndex CHS2 C 0 2
+  FrameIndex CHS2 D 0 3
+  FrameIndex CHS2 E 0 4
+}
+
+Model Chest03A
+{
+  Path "models/neoworm/"
+  Model 0 "Chest03.md3"
+  Skin 0 "CHEST03A.png"
+  Scale 1 1 1
+  FrameIndex CHS3 A 0 0
+  FrameIndex CHS3 B 0 1
+  FrameIndex CHS3 C 0 2
+  FrameIndex CHS3 D 0 3
+  FrameIndex CHS3 E 0 4
+}
+
+Model Chest03B
+{
+  Path "models/neoworm/"
+  Model 0 "Chest03.md3"
+  Skin 0 "CHEST03B.png"
+  Scale 1 1 1
+  FrameIndex CHS3 A 0 0
+  FrameIndex CHS3 B 0 1
+  FrameIndex CHS3 C 0 2
+  FrameIndex CHS3 D 0 3
+  FrameIndex CHS3 E 0 4
+}
+
+Model Chest03C
+{
+  Path "models/neoworm/"
+  Model 0 "Chest03.md3"
+  Skin 0 "CHEST03C.png"
+  Scale 1 1 1
+  FrameIndex CHS3 A 0 0
+  FrameIndex CHS3 B 0 1
+  FrameIndex CHS3 C 0 2
+  FrameIndex CHS3 D 0 3
+  FrameIndex CHS3 E 0 4
+}
+
+Model Chest04A
+{
+  Path "models/neoworm/"
+  Model 0 "Chest04.md3"
+  Skin 0 "CHEST04A.png"
+  Scale 1 1 1
+  FrameIndex CHS4 A 0 0
+  FrameIndex CHS4 B 0 1
+  FrameIndex CHS4 C 0 2
+  FrameIndex CHS4 D 0 3
+}
+
+Model Chest04B
+{
+  Path "models/neoworm/"
+  Model 0 "Chest04.md3"
+  Skin 0 "CHEST04B.png"
+  Scale 1 1 1
+  FrameIndex CHS4 A 0 0
+  FrameIndex CHS4 B 0 1
+  FrameIndex CHS4 C 0 2
+  FrameIndex CHS4 D 0 3
+}
+
+Model Chest05A
+{
+  Path "models/neoworm/"
+  Model 0 "Chest05.md3"
+  Skin 0 "CHEST05A.png"
+  Scale 1 1 1
+  FrameIndex CHS5 A 0 0
+  FrameIndex CHS5 B 0 1
+  FrameIndex CHS5 C 0 2
+  FrameIndex CHS5 D 0 3
+  FrameIndex CHS5 E 0 4
+}
+
+Model Chest05B
+{
+  Path "models/neoworm/"
+  Model 0 "Chest05.md3"
+  Skin 0 "CHEST05B.png"
+  Scale 1 1 1
+  FrameIndex CHS5 A 0 0
+  FrameIndex CHS5 B 0 1
+  FrameIndex CHS5 C 0 2
+  FrameIndex CHS5 D 0 3
+  FrameIndex CHS5 E 0 4
+}*/
+
+Model HayRoll
+{
+  Path "models/neoworm/"
+  Model 0 "hayroll.obj"
+  Skin 0 "HAYSTUFF.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model HayCube
+{
+  Path "models/neoworm/"
+  Model 0 "haycube.obj"
+  Skin 0 "HAYSTUF2.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Table01
+{
+  Path "models/neoworm/"
+  Model 0 "Table01.obj"
+  Skin 0 "FURNI01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Table03
+{
+  Path "models/neoworm/"
+  Model 0 "Table03.obj"
+  Skin 0 "FURNI03.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Cart01
+{
+  Path "models/neoworm/"
+  Model 0 "Cart01.obj"
+  Skin 0 "CARTT01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Cart02
+{
+  Path "models/neoworm/"
+  Model 0 "Cart02.obj"
+  Skin 0 "CARTT01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Cart03
+{
+  Path "models/neoworm/"
+  Model 0 "Cart03.obj"
+  Skin 0 "CARTT01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Box01
+{
+  Path "models/neoworm/"
+  Model 0 "box_01.obj"
+  Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Box02
+{
+  Path "models/neoworm/"
+  Model 0 "box_02.obj"
+  Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Box03
+{
+  Path "models/neoworm/"
+  Model 0 "box_03.obj"
+  Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Box04
+{
+  Path "models/neoworm/"
+  Model 0 "box_04.obj"
+  Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+Model Box05
+{
+  Path "models/neoworm/"
+  Model 0 "box_05.obj"
+  Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+
+/*Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL01"
+  Scale 1 1 1
+  FrameIndex WFLL A 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL02"
+  Scale 1 1 1
+  FrameIndex WFLL B 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL03"
+  Scale 1 1 1
+  FrameIndex WFLL C 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL04"
+  Scale 1 1 1
+  FrameIndex WFLL D 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL05"
+  Scale 1 1 1
+  FrameIndex WFLL E 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL06"
+  Scale 1 1 1
+  FrameIndex WFLL F 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL07"
+  Scale 1 1 1
+  FrameIndex WFLL G 0 0
+}
+Model Waterfall_64x256
+{
+  Path "models/neoworm/"
+  Model 0 "Waterfall01.md3"
+  Skin 0 "WLWTFL08"
+  Scale 1 1 1
+  FrameIndex WFLL H 0 0
+}
+Model CrimsonBanner
+{
+  Path "models/neoworm/"
+  Model 0 "BannerUniversal.obj"
+  Skin 0 "BANNER01.png"
+  Scale 1 1 1
+  FrameIndex BNR2 A 0 0
+}
+Model VioletBanner
+{
+  Path "models/neoworm/"
+  Model 0 "BannerUniversal.obj"
+  Skin 0 "BANNER02.png"
+  Scale 1 1 1
+  FrameIndex BNR2 B 0 0
+}
+Model GreenBanner
+{
+  Path "models/neoworm/"
+  Model 0 "BannerUniversal.obj"
+  Skin 0 "BANNER03.png"
+  Scale 1 1 1
+  FrameIndex BNR2 C 0 0
+}
+Model BlueBanner
+{
+  Path "models/neoworm/"
+  Model 0 "BannerUniversal.obj"
+  Skin 0 "BANNER04.png"
+  Scale 1 1 1
+  FrameIndex BNR2 D 0 0
+}
+Model TribalBanner
+{
+  Path "models/neoworm/"
+  Model 0 "BannerUniversal.obj"
+  Skin 0 "BANNER06.png"
+  Scale 1 1 1
+  FrameIndex BNR3 A 0 0
+}*/

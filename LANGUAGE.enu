@@ -1101,6 +1101,19 @@ PDA_noteSHbindersOath_TEXT = "\c[yellow]Binder's Oath\n"
 								"\c[yellow]-------------------------------\n"
 								"\n"
 								"\c[white]A Binder is the judge and executioner of Order's law. Words of a Binder shape the the lives of commons and may inspire justice and loyalty... or fear and cruelty. The Binder's word is law, and they decide the fate or the regions. Even the smallest of choices shape the land and it's people. ";
+PDA_noteCommonDogmas_Title = "Common Dogmas";
+PDA_noteCommonDogmas_Text = "\c[yellow]Common Dogmas\n"
+							"-------------------------------\n"
+							"\c[white]Hallowed is the Father.\n"
+							"Truth is the beginning of the Path.\n"
+							"Blessed are those that deliver us from evil.\n"
+							"Hallowed are those who walk in unison.\n"
+							"Fear not the Father, fear the darkness that would conceal the knowledge of the universe. Believe in the truth of all things, and you too may find the Path to enlightenment.\n"
+							"Lessons of days gone by teach us what will come to pass."
+							"Guide us on the Path so that we may triumph over the enemy of our salvation, and be with you in the End of Ends on the planes of enlightenment.\n"
+							"The only true darkness lives in the hearts of those who do not follow the Path. Otherwise, there is always some measure of light. And where there is light, the Father see all!\n"
+							"Verily, the corrupted sinner will be cleansed from within.\n"
+							"Make yourself one with the Path, and the journey will lead you to eternity.";
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

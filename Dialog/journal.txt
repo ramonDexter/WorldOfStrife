@@ -6,8 +6,8 @@ Conversation {
 	ID = 777;
 	Page {
         pageName = "journal_opener";
-		Name = "::[   PERSONAL JOURNAL   ]::";
-		Dialog = "\c[white]List of notes and active quests.";
+		Name = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.\n\n\c[yellow]-------------------------------\n";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 
@@ -26,7 +26,7 @@ Conversation {
     //##################################################################################################################
 	Page {
 		PageName = "journal_quests";
-		Name = "::[   Q U E S T S   ]::";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
 		Dialog = "\c[white]Active quests will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -268,7 +268,7 @@ Conversation {
     //##################################################################################################################
 	Page {
 		pageName = "journal_notes";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "\c[white]List of found notes.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -340,11 +340,19 @@ Conversation {
 				amount = 1;
 			}
 		}
+		Choice {
+			Text = "Common Dogmas";
+			NextPage = "journal_notes_noteCommonDogmas";
+			Require {
+				item = "noteCommonDogmas";
+				amount = 1;
+			}
+		}
 		
 	}
 	Page {
 		pageName = "journal_notes_notePrayers";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_notePrayers_TEXT1";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -359,7 +367,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_notePrayers2";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_notePrayers_TEXT2";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -374,7 +382,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHmedical";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHmedical_TEXT";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -385,7 +393,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHbinderstaves";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$";
 		Panel = "M_BNDS";
 		Goodbye = "\c[red][ EXIT ]";
@@ -396,7 +404,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHbinderStavesTechnical";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHbinderStavesTechnical_TEXT";
 		Panel = "M_BNDS";
 		Goodbye = "\c[red][ EXIT ]";
@@ -407,7 +415,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHbinderNote01";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHbinderNote01_TEXT";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -418,7 +426,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHsilentHillsTouristGuide";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHsilentHillsTouristGuide_TEXT1";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -433,7 +441,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHsilentHillsTouristGuide2";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHsilentHillsTouristGuide_TEXT2";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -448,7 +456,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHminesReport";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHminesReport_TEXT";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -459,7 +467,7 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHbindersOath";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHbindersOath_TEXT";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -470,9 +478,20 @@ Conversation {
 	}
 	Page {
 		pageName = "journal_notes_noteSHshouldergun";
-		Name = "::[   N O T E S   ]::";
+		Name = "\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteSHshouldergun_TEXT";
 		Panel = "M_SHGN";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "journal_notes";
+		}
+	}
+	Page {
+		pageName = "journal_notes_noteCommonDogmas";
+		Name = "\c[yellow]::[   N O T E S   ]::";
+		Dialog = "$PDA_noteCommonDogmas_Text";
+		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow][ << BACK ]";

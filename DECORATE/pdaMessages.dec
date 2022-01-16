@@ -149,3 +149,15 @@ actor noteSHbindersOath : PDA {
 			Stop
 	}
 }
+actor noteCommonDogmas : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: SH binder's oath"
+	Tag "$PDA_noteCommonDogmas_Title"
+	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
+	//scale 0.5
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}

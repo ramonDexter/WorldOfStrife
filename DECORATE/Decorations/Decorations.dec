@@ -7318,7 +7318,7 @@ actor wosD_daggFlower01 21433 {
     //$Category "Trees and Rocks/WoS"
 	//$Title "dagg flower 01"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	scale 0.8
@@ -7335,7 +7335,7 @@ actor wosD_daggFlower02 21434 {
     //$Category "Trees and Rocks/WoS"
 	//$Title "dagg flower 02"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	scale 0.8
@@ -7352,7 +7352,7 @@ actor wosD_daggFlower03 21435 {
     //$Category "Trees and Rocks/WoS"
 	//$Title "dagg flower 03"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	scale 0.8
@@ -7367,9 +7367,9 @@ actor wosD_daggFlower03 21435 {
 }
 actor wosD_daggFlower04 21436 {
     //$Category "Trees and Rocks/WoS"
-	//$Title "dagg flower 02"
+	//$Title "dagg flower 04"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	scale 0.8
@@ -7384,9 +7384,9 @@ actor wosD_daggFlower04 21436 {
 }
 actor wosD_daggFlower05 21437 {
     //$Category "Trees and Rocks/WoS"
-	//$Title "dagg flower 02"
+	//$Title "dagg flower 05"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	scale 0.8

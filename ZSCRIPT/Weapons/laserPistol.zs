@@ -278,6 +278,7 @@ class laserExplosion : actor {
 		+NOTELEPORT
 		+CANNOTPUSH
 		+NODAMAGETHRUST
+        +FORCEXYBILLBOARD
 		
 		renderStyle "Add";
 		scale 0.6;

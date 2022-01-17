@@ -25,7 +25,11 @@ class HayCube : Actor
 	Radius 20;
 	Height 32;
 	+SOLID;
-	+ACTLIKEBRIDGE;
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP;
+	+SHOOTABLE;
+	+NOBLOOD;
 	}
 	States
 	{

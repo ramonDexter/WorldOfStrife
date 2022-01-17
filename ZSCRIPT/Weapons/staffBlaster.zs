@@ -303,6 +303,7 @@ class blueshotDeath : actor {
 		+NoDamageThrust
 		+SpawnSoundsource
 		+nogravity
+        +FORCEXYBILLBOARD
 		RenderStyle "Add";
 		scale 0.6;
 	}
@@ -339,6 +340,7 @@ class lightningExplosion : actor {
 		+NOTELEPORT
 		+CANNOTPUSH
 		+NODAMAGETHRUST
+        +FORCEXYBILLBOARD
 		
 		renderStyle "Add";
 		scale 0.6;

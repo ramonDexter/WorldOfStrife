@@ -14,7 +14,7 @@ class wosSheep : actor {
         Height 56;
         Speed 1;
         Mass 100;
-        Scale 1;
+        Scale 0.85;
         PainChance 255;
         seesound "sounds/sheep/sight";
         activesound "sounds/sheep/sight";

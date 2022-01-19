@@ -145,7 +145,7 @@ map map13 "Borderlands North" {
 	NoIntermission
 	
 }
-map map14 "Silkwatch Village" {
+map map14 "Eastcliff Village" {
 	sky1 = "SKYRGGR"
 	music = "ADDER_S"
 	outsidefogdensity = 255

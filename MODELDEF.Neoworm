@@ -119,6 +119,7 @@ Model HayRoll
   Model 0 "hayroll.obj"
   Skin 0 "HAYSTUFF.png"
   Scale 1 1 1
+  offset 0.0 0.0 0.001
   FrameIndex DUMM A 0 0
 }
 
@@ -128,6 +129,7 @@ Model HayCube
   Model 0 "haycube.obj"
   Skin 0 "HAYSTUF2.png"
   Scale 1 1 1
+  offset 0.0 0.0 0.001
   FrameIndex DUMM A 0 0
 }
 

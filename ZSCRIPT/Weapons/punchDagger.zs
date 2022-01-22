@@ -42,7 +42,12 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 		Fire:
 			PUND ACF 1;
 			PUND G 1;
-			PUND H 2 W_stabDagger();
+			PUND H 2 { 
+				W_stabDagger();
+				if ( invoker.altCounter > 0 ) {
+					invoker.altCounter--;
+				}
+			}
 			PUND I 2;
 			PUND JK 1;
 			PUND LMNOP 1;

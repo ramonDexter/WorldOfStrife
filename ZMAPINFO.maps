@@ -93,7 +93,7 @@ map MAP08 "Millport" {
 map MAP09 "Coastal region" {
 	sky1 = "SKYSNDS"
 	//sky2 = SKYSNDS
-	music = "D_DARKER"
+	music = "ADDER_S"
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1

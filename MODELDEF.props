@@ -289,6 +289,18 @@ model wosD_dexChairNobleOffice {
 	frameindex DUMM A 0 0
 }
 // stimDevice //////////////////////////////////////////////////////////////////
+// health item //////////////////////////////////////////
+model wosi_StimDevice {
+	path "models/props/stimDevice/"
+	model 0 "dx_stimDevice.md3"
+	skin 0 "tx_SDEV.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameIndex DUMM A 0 0
+	frameIndex DUMM B 0 1
+	frameIndex DUMM C 0 2
+}
+/////////////////////////////////////////////////////////
 model wosD_stimDevice1 {
 	path "models/props/stimDevice/"
 	model 0 "dx_stimDevice.md3"

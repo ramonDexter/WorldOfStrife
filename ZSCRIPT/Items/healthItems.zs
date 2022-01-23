@@ -25,6 +25,7 @@ const instalekWeight = 6;
 const medpatchWeight = 5;
 const medicalkitWeight = 7;
 const surgerykitWeight = 12;
+const wosStimDeviceWeight = 2;
 ////////////////////////////////////////////////////////////////////////////////
 
 //  apply effect base  /////////////////////////////////////////////////////////
@@ -511,6 +512,59 @@ class zscSurgeryKit : wosPickup replaces SurgeryKit
 			TNT1 A 0 {
 				A_Print("Cannot use SurgeryKit while completely healthy!");
 			}
+			Fail;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// stimDevice //////////////////////////////////////////////////////////////////
+class wosi_StimDevice : wosPickup {
+	Default {
+		//$Category "Health and Armor/WoS"
+		//$Title "stamina stim"
+
+		+INVENTORY.INVBAR;
+		Tag "$T_wosStimDevice";
+		Inventory.Icon "I_STIM";
+		Inventory.PickupMessage "$F_wosStimDevice";
+		Mass wosStimDeviceWeight;
+	}
+	States {
+		// spawn based on first argument //////////////////////
+		Spawn:
+			TNT1 A 0 A_JumpIf(args[0] == 1, "Spawn1");
+			TNT1 A 0 A_JumpIf(args[0] == 2, "Spawn2");
+			TNT1 A 0 A_JumpIf(args[0] == 3, "Spawn3");
+		Spawn1:
+			DUMM A -1;
+			Stop;
+		Spawn2:
+			DUMM B -1;
+			Stop;
+		Spawn3:
+			DUMM C -1;
+			Stop;
+		///////////////////////////////////////////////////////
+		Use:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);				
+				if ( pawn.stamin > 340 ) {
+					return resolveState("UseNot");
+				} else if ( pawn.stamin < 340 ) {
+					return resolveState("UseYes");
+				}
+				return resolveState(null);
+			}
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);				
+				pawn.stamin = pawn.stamin + 350;
+				pawn.A_StartSound("sounds/med",CHAN_ITEM);
+			}
+			Stop;
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ No need to use stimDevice! ]");
 			Fail;
 	}
 }

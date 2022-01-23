@@ -505,7 +505,7 @@ class AvalonSpider : Spider
 		+JUMPDOWN
 		+NOBLOOD
 		
-		Tag ":[ Avalon Spider ]:";
+		Tag "[ Avalon Spider ]";
 		Health 125;
 		Radius 20;
 		Height 20;
@@ -633,7 +633,7 @@ class BloodSpider : Spider
 		//$Category "Monsters/spiders"
 		//$Title "Blood Spider"
 		
-		Tag ":[ Grey Spider ]:";
+		Tag "[ Grey Spider ]";
 		Health 75;
 		PainChance 200;
 		Height 35;
@@ -758,7 +758,7 @@ class DaggerSpider : Spider
 		+BLOODSPLATTER
 		+BOSSDEATH
 		
-		Tag ":[ Spitting Spider ]:";
+		Tag "[ Spitting Spider ]";
 		PainChance 80;
 		Health 600;
 		Radius 48;
@@ -878,7 +878,7 @@ class DeathWidow : Spider
 		+JUMPDOWN
 		+DONTOVERLAP
 		
-		Tag ":[ Death Widow ]:";
+		Tag "[ Death Widow ]";
 		Health 35;
 		Radius 8;
 		Height 20;
@@ -960,7 +960,7 @@ class Fright : Spider
 		-DONTOVERLAP
 		-COUNTKILL
 		
-		Tag ":[ Yellow Spider ]:";
+		Tag "[ Yellow Spider ]";
 		Health 2;
 		Painchance 256;
 		Speed 4;
@@ -1016,7 +1016,7 @@ class GiantSpider : Spider
 		+BLOODSPLATTER
 		+SHOOTABLE
 		
-		Tag ":[ Giant Spider ]:";
+		Tag "[ Giant Spider ]";
 		Scale 0.45;
 		Health 350;
 		Radius 20;
@@ -1093,7 +1093,7 @@ class GoldenSpider : Spider
 		+NOBLOCKMONST
 		+QUICKTORETALIATE
 		
-		Tag ":[ Golden Spider ]:";
+		Tag "[ Golden Spider ]";
 		BloodColor "Gold";
 		PainChance 50;
 		Scale 0.55;
@@ -1169,7 +1169,7 @@ class PowerSlaveSpider2 : Spider
 		//$Category "Monsters/spiders"
 		//$Title "Powerslave Spider Big"
 		
-		Tag ":[ Red Spider ]:";
+		Tag "[ Red Spider ]";
 		Health 35;
 		Height 20;
 		Radius 12;
@@ -1227,7 +1227,7 @@ class PowerSlaveSpider : Spider
 		
 		+JUMPDOWN
 		
-		Tag ":[ Red Spider Small ]:";
+		Tag "[ Red Spider Small ]";
 		Health 10;
 		Radius 5;
 		Height 10;
@@ -1302,7 +1302,7 @@ class ShadowSpider : Spider
 		
 		+QUICKTORETALIATE
 		
-		Tag ":[ Shadow Spider ]:";
+		Tag "[ Shadow Spider ]";
 		Health 60;
 		Radius 16;
 		Height 28;
@@ -1427,7 +1427,7 @@ class ShadowSpider2 : Spider
 		//$Category "Monsters/spiders"
 		//$Title "Shadowcaster Spider Small"
 		
-		Tag ":[ Shadow Spider ]:";
+		Tag "[ Shadow Spider ]";
 		Health 30;
 		Radius 16;
 		Height 15;
@@ -1488,7 +1488,7 @@ class SmallSteal : Spider
 		//$Category "Monsters/spiders"
 		//$Title "Small Thief"
 		
-		Tag ":[ Thief Spider ]:";
+		Tag "[ Thief Spider ]";
 		Health 10;
 		Radius 8;
 		Height 14;
@@ -1556,7 +1556,7 @@ class Widow : Spider
 		+FLOORCLIP 
 		+NOTARGET
 		
-		Tag ":[ Widow ]:";
+		Tag "[ Widow ]";
 		Health 10;
 		PainChance 200;
 		Scale 0.7;
@@ -1637,7 +1637,8 @@ class CycloneWasp : Spider
 		+SPAWNFLOAT
 		+DONTOVERLAP
 		
-		Tag ":[ Red Wasp ]:";
+		Tag "[ Red Wasp ]";
+		Species "Wasp";
 		Health 80;
 		Radius 7;
 		Height 15;
@@ -1715,7 +1716,8 @@ class MutantFly : Spider
 		+DONTOVERLAP
 		+FLOATBOB
 		
-		Tag ":[ Mutated Fly ]:";
+		Tag "[ Mutated Fly ]";
+		Species "Wasp";
 		Health 100;
 		Radius 15;
 		Height 36;
@@ -1723,7 +1725,7 @@ class MutantFly : Spider
 		PainChance 96;
 		Speed 4;
 		Damage 1;
-		Scale 0.4;
+		Scale 0.35;
 		SeeSound "Bspiders/sight";
 		PainSound "Bspiders/pain";
 		DeathSound "Spiders/FlyingDTH";
@@ -1797,7 +1799,8 @@ class PSXWasp : actor
 		+JUMPDOWN
 		+MOVEWITHSECTOR
 		
-		Tag ":[ Wasp Drone ]:";
+		Tag "[ Wasp Drone ]";
+		Species "Wasp";
 		Health 70;
 		Radius 31;
 		Height 56;
@@ -1889,7 +1892,8 @@ class PSRedWasp : Spider
 		+SPAWNFLOAT
 		+DONTOVERLAP
 		
-		Tag ":[ Killer Wasp ]:";
+		Tag "[ Killer Wasp ]";
+		Species "Wasp";
 		Health 700;
 		Radius 24;
 		Height 56;
@@ -1971,7 +1975,8 @@ class PSWasp : Spider
 		+SPAWNFLOAT
 		+DONTOVERLAP
 		
-		Tag ":[ Wasp Warrior ]:";
+		Tag "[ Wasp Warrior ]";
+		Species "Wasp";
 		Health 200;
 		Radius 21;
 		Height 35;

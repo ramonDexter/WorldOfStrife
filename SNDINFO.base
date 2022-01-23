@@ -145,3 +145,65 @@ SquirrelHit/Pain "sounds/squirrel/SQUIPAIN.ogg"
 SquirrelAttack/Attack "sounds/squirrel/SQUIATTA.ogg"
 SquirrelDead/Dead "sounds/squirrel/SQUIDEAD.ogg"
 ////////////////////////////////////////////////////////////////////////////////
+
+//-----------Eel---------------------------------------//
+Eel/death			DSLAVA1
+
+H2Spider/Act			DSSPDACT
+H2Spider/Melee			DSSPDMEL
+H2Spider/Death			DSSPDDTH
+
+//------------ShadowBeast---------------------------------------//
+shadowbeast/attack	BDMATK1
+shadowbeast/death	BDMDTH1
+shadowbeast/idle1	BDMIDL1
+shadowbeast/idle2	BDMIDL2
+$random shadowbeast/active { shadowbeast/idle2 shadowbeast/idle1 }
+shadowbeast/pain	BDMPAN1
+shadowbeast/sight	BDMSIT1
+shadowbeast/pr1death	BDPD1
+shadowbeast/pr1sight	BDPS1
+shadowbeast/pr2death	BDPD2
+shadowbeast/pr2sight	BDPS2
+shadowbeast/spread	BDPSPR
+shadowbeast/spiritsit	BDSPR2
+shadowbeast/spiritdth	BDSPR1
+
+fierybeast/waveshot	dswavsht
+fierybeast/waveexp	dswavxpl
+fierybeast/fire		bdfire
+
+//--------------Lizard----------------------------------------------------------------//
+monster/lizardsee  	acids1
+monster/lizardidle 	acids2
+monster/lizardhurt 	acidh1
+monster/lizardattack	acida1
+monster/lizarddeath1	acidd1
+monster/lizarddeath2	acidd2
+
+//--------------PitFiends------------------------------------//
+pfiend/sight			DSBSTSIT
+pfiend/attack			DSBSTATK
+pfiend/pain			    DSBSTPAI
+pfiend/death			DSBSTDTH
+pfiend/active			DSBSTACT
+
+// dragon ///////////////////////////////////////////////////////////////////
+dragonfam/see dfsee
+dragonfam/pain dfpain
+dragonfam/death dfdie
+dragonfam/idle dfidle
+dragonfam/attack dfattack
+
+WASPDIE1	WASPDIE1
+WASPDIE2	WASPDIE2
+WASPDIE3	WASPDIE3
+WASPDIE4	WASPDIE4
+
+$random Hornet/Death	{ WASPDIE1 WASPDIE2 WASPDIE3 WASPDIE4 }
+
+Hornet/Fly		"sounds/ascension/WASPFLY.ogg"
+$limit Hornet/Fly 0
+//SatTermination Hornet/Fly 3
+
+$attenuation Hornet/Fly 3

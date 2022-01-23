@@ -878,7 +878,8 @@ M_item_battsCantReload = "\c[red][ Can't reload batteries! ]";
 M_item_battsLeft1 = "\c[yellow][ ";
 M_item_battsLeft2 = "\c[yellow]% battery left ]";
 
-
+T_wosStimDevice = "Stamina Stim";
+F_wosStimDevice = "You picked up the Stamina Stim!";
 
 
 
@@ -901,7 +902,21 @@ T_CAMPFIRE = ":[ Portable campfire ]:";
 
 //------------------------------------------------------------------------------
 
-
+// MONSTERS ////////////////////////////////////////////////////////////////////
+T_YoungCarnivorousWeed = "Carnivorous Weed - Young";
+T_CarnivorousWeed = "Carnivorous Weed";
+T_wosGiantEel = "Giant Eel";
+T_FieryBeast = "Fiery Beast";
+T_LizardSmall = "Lizard - Small";
+T_LizardMiddle = "Lizard - Middle";
+T_LizardLarge = "Lizard - Large";
+T_Ophidiant = "Snakeman";
+T_wosPitLord = "Pit Lord";
+T_wosPitFiend = "Pit Fiend";
+T_wosPlagueFiend = "Plague Fiend";
+T_MiniDragon = "Drake";
+T_ascSerpentFly = "Serpent Fly";
+////////////////////////////////////////////////////////////////////////////////
 
 	
 	

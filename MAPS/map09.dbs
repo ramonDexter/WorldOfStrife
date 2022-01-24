@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -11383.84f;
+		viewpositionx = -6352.347f;
 		defaulttoptexture = "F_OLDWOD";
 		overrideceilheight = false;
-		viewpositiony = 1477.019f;
+		viewpositiony = -2086.186f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.4197932f;
+		viewscale = 0.06690039f;
 		
 		plugins
 		{
@@ -111,7 +111,7 @@ maps
 			{
 				xpanningceiling = 1;
 				ypanningceiling = 1;
-				rotationceiling = 1;
+				rotationceiling = 17;
 				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningfloor = 1;
@@ -121,6 +121,11 @@ maps
 				yscalefloor = 1;
 				user_managed_3d_floor = 3;
 				user_slopedatasector = 3;
+			}
+			
+			thing
+			{
+				conversation = 0;
 			}
 		}
 		
@@ -135,6 +140,7 @@ maps
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 131;
+				activetab = true;
 			}
 			
 			document1
@@ -146,7 +152,6 @@ maps
 				scripttype = 1;
 				caretposition = 3447;
 				firstvisibleline = 432;
-				activetab = true;
 			}
 		}
 	}

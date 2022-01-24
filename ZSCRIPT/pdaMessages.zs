@@ -17,7 +17,7 @@ class TestPDA : PDA
 			Stop
 	}
 }
-//eaxmple by nash---------------------------------------------------------------
+//example by nash---------------------------------------------------------------
 
 
 
@@ -59,7 +59,7 @@ class PDA : CustomInventory {
 			Stop;
 		Use:
 			TNT1 A -1;
-			Stop;
+			Fail;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -146,5 +146,11 @@ class noteCommonDogmas : PDA {
         //scale 0.5
     }
 }
-
+class noteCoastalRegion : PDA {
+    Default {
+        //$category "ZSCRIPT/PDAnotes"
+        //$title "note: Coastal Region"
+        Tag "$PDA_noteCoastalRegion_title";
+    }
+}
 ////////////////////////////////////////////////////////////////////////////////

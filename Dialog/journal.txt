@@ -7,7 +7,7 @@ Conversation {
 	Page {
         pageName = "journal_opener";
 		Name = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
-		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.\n\n\c[yellow]-------------------------------\n";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 
@@ -27,7 +27,7 @@ Conversation {
 	Page {
 		PageName = "journal_quests";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[white]Active quests will be listed here.";
+        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Active quests will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		
@@ -266,10 +266,12 @@ Conversation {
     //##################################################################################################################
 	//##########################################[  NOTES  ]#############################################################
     //##################################################################################################################
+
+    // page 1 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	Page {
 		pageName = "journal_notes";
 		Name = "\c[yellow]::[   N O T E S   ]::";
-		Dialog = "\c[white]List of found notes.";
+        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -348,8 +350,32 @@ Conversation {
 				amount = 1;
 			}
 		}
+        Choice {
+            Text = "\c[yellow][ NEXT >> ]";
+            NextPage = "journal_notes2";
+        }
 		
 	}
+    // page 2 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    Page {
+        pageName = "journal_notes2";
+		Name = "\c[yellow]::[   N O T E S   ]::";
+        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "journal_notes";
+		}
+		Choice {
+			Text = "Coastal Region";
+			NextPage = "journal_notes_noteCoastalRegion";
+			Require {
+				item = "noteCoastalRegion";
+				amount = 1;
+			}
+		}
+    }
     //##################################################################################################################
     //## notes pages ###################################################################################################
     //##################################################################################################################
@@ -501,6 +527,17 @@ Conversation {
 			NextPage = "journal_notes";
 		}
 	}
+    Page {
+        pageName = "journal_notes_noteCoastalRegion";
+		Name = "\c[yellow]::[   N O T E S   ]::";
+		Dialog = "$PDA_noteCoastalRegion_text";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "journal_notes2";
+		}
+    }
     //##################################################################################################################
     //##################################################################################################################
     //##################################################################################################################

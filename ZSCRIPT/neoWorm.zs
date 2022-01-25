@@ -5,8 +5,27 @@ class HayRoll : Actor
 	//$Category "Decorations/neoworm"
 	//$Title "Hay rolled"
 	Radius 20;
-	Height 50;
+	Height 40;
 	+SOLID;
+	}
+	States
+	{
+		Spawn:
+		 DUMM A -1;
+		 Stop;
+	}
+}
+class HayRoll2 : Actor
+{
+	Default
+	{
+	//$Category "Decorations/neoworm"
+	//$Title "Hay rolled stackable"
+	Radius 20;
+	Height 40;
+	+SOLID;
+	+NOGRAVITY;
+	+ACTLIKEBRIDGE;
 	}
 	States
 	{
@@ -25,8 +44,8 @@ class HayCube : Actor
 	Radius 20;
 	Height 32;
 	+SOLID;
-	+CANPASS
-	+ACTLIKEBRIDGE
+	+CANPASS;
+	+ACTLIKEBRIDGE;
 	+FLOORCLIP;
 	+SHOOTABLE;
 	+NOBLOOD;

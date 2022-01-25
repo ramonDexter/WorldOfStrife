@@ -122,7 +122,15 @@ Model HayRoll
   offset 0.0 0.0 0.001
   FrameIndex DUMM A 0 0
 }
-
+Model HayRoll2
+{
+  Path "models/neoworm/"
+  Model 0 "hayroll.obj"
+  Skin 0 "HAYSTUFF.png"
+  Scale 1 1 1
+  offset 0.0 0.0 0.001
+  FrameIndex DUMM A 0 0
+}
 Model HayCube
 {
   Path "models/neoworm/"

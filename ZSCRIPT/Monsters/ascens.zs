@@ -1385,7 +1385,7 @@ class LizardLarge : Lizard {
         Tag "$T_LizardLarge";
         Health 500;
         Radius 24;
-        Height 48;
+        Height 64;
         Scale 1.5;
         Speed 15;
         FastSpeed 25;

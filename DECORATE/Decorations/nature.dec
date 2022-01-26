@@ -1497,9 +1497,9 @@ ACTOR Tree14Leaves 22159
   States
   	{
   	Spawn: 
-  		DUMM A 8 A_Look
-  		Loop
-  	See:
+  		DUMM A -1
+  		Stop
+  	/*See:
   		DUMM A 8 A_Chase
   		DUMM A 8 A_CustomMissile("ALeaf1",64,16,0)
   		DUMM A 8 A_Chase
@@ -1508,7 +1508,7 @@ ACTOR Tree14Leaves 22159
    		DUMM A 10 A_Chase
    		DUMM A 8 A_CustomMissile("ALeaf2",96,24,-64)
    		DUMM A 256
-  		Loop
+  		Loop*/
   	}
   }
 
@@ -1535,7 +1535,7 @@ ACTOR Tree15 22160
   States
   	{
   	Spawn: 
-		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
+		//DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
   		DUMM A -1
   		Stop
   	}

@@ -4345,6 +4345,7 @@ actor strifeNightStand01 21240 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
+	+ACTLIKEBRIDGE
 	
 	height 24
 	radius 16
@@ -4440,6 +4441,7 @@ actor strifeNightStand02 21246 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
+	+ACTLIKEBRIDGE
 	
 	height 24
 	radius 16
@@ -4456,6 +4458,7 @@ actor strifeNightStand03 21247 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
+	+ACTLIKEBRIDGE
 	
 	height 48
 	radius 16
@@ -4472,6 +4475,7 @@ actor strifeNightStand04 21248 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
+	+ACTLIKEBRIDGE
 	
 	height 48
 	radius 16
@@ -6625,7 +6629,7 @@ actor wosD_energyPack 21386 {
 	}
 }
 actor wosD_desuExComputerPersonal 21387 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusex"
 	//$Title "dex computerPersonal"
 	+SOLID
 	+USESPECIAL
@@ -6640,7 +6644,7 @@ actor wosD_desuExComputerPersonal 21387 {
 	}
 }
 actor wosD_dexAIprototype 21388 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex teleportBase"
 	+SOLID
 	+USESPECIAL
@@ -6655,7 +6659,7 @@ actor wosD_dexAIprototype 21388 {
 	}
 }
 actor wosD_dexATM 21389 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex ATM"
 	+SOLID
 	+USESPECIAL
@@ -6670,7 +6674,7 @@ actor wosD_dexATM 21389 {
 	}
 }
 actor wosD_dexBarrel1 21390 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex barrel"
 	+SOLID
 	+USESPECIAL
@@ -6685,7 +6689,7 @@ actor wosD_dexBarrel1 21390 {
 	}
 }
 actor wosD_dexCigaretteMachine 21391 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex cigaretteMachine"
 	+SOLID
 	+USESPECIAL
@@ -6700,7 +6704,7 @@ actor wosD_dexCigaretteMachine 21391 {
 	}
 }
 actor wosD_dexCoffeeTable 21392 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex coffeeTable"
 	+SOLID
 	+USESPECIAL
@@ -6716,7 +6720,7 @@ actor wosD_dexCoffeeTable 21392 {
 	}
 }
 actor wosD_dexCouchLeather 21393 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex couchLeather"
 	+SOLID
 	+USESPECIAL
@@ -6731,7 +6735,7 @@ actor wosD_dexCouchLeather 21393 {
 	}
 }
 actor wosD_dexBookClosed 21394 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bookClosed"
 	+SOLID
 	+USESPECIAL
@@ -6746,7 +6750,7 @@ actor wosD_dexBookClosed 21394 {
 	}
 }
 actor wosD_dexBookOpen 21395 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bookOpen"
 	+SOLID
 	+USESPECIAL
@@ -6761,7 +6765,7 @@ actor wosD_dexBookOpen 21395 {
 	}
 }
 actor wosD_dexOfficeChair 21396 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex officeChair"
 	+SOLID
 	+USESPECIAL
@@ -6776,7 +6780,7 @@ actor wosD_dexOfficeChair 21396 {
 	}
 }
 actor wosD_dexRetinalScanner 21397 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex retinalScanner"
 	+SOLID
 	+USESPECIAL
@@ -6791,7 +6795,7 @@ actor wosD_dexRetinalScanner 21397 {
 	}
 }
 actor wosD_dexTree1 21398 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex tree1"
 	+SOLID
 	+USESPECIAL
@@ -6806,7 +6810,7 @@ actor wosD_dexTree1 21398 {
 	}
 }
 actor wosD_dexTree2 21399 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex tree2"
 	+SOLID
 	+USESPECIAL
@@ -6821,7 +6825,7 @@ actor wosD_dexTree2 21399 {
 	}
 }
 actor wosD_dexTree3 21400 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex tree3"
 	+SOLID
 	+USESPECIAL
@@ -6836,7 +6840,7 @@ actor wosD_dexTree3 21400 {
 	}
 }
 actor wosD_dexTree4 21401 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex tree4"
 	+SOLID
 	+USESPECIAL
@@ -6851,7 +6855,7 @@ actor wosD_dexTree4 21401 {
 	}
 }
 actor wosD_dexBushes1 21402 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bushes1"
 	+SOLID
 	+USESPECIAL
@@ -6866,7 +6870,7 @@ actor wosD_dexBushes1 21402 {
 	}
 }
 actor wosD_dexBushes2 21403 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bushes2"
 	+SOLID
 	+USESPECIAL
@@ -6881,7 +6885,7 @@ actor wosD_dexBushes2 21403 {
 	}
 }
 actor wosD_dexBushes3 21404 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bushes3"
 	+SOLID
 	+USESPECIAL
@@ -6906,7 +6910,7 @@ actor wosD_dexBushes1_2 : wosD_dexBushes1 21406 {
 	height 48
 }
 actor wosD_dexPot1 21407 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex pot1"
 	+SOLID
 	+USESPECIAL
@@ -6921,7 +6925,7 @@ actor wosD_dexPot1 21407 {
 	}
 }
 actor wosD_dexPot2 21408 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex pot2"
 	+SOLID
 	+USESPECIAL
@@ -6936,7 +6940,7 @@ actor wosD_dexPot2 21408 {
 	}
 }
 actor wosD_dexTrophy 21409 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex trophy"
 	+SOLID
 	+USESPECIAL
@@ -6951,7 +6955,7 @@ actor wosD_dexTrophy 21409 {
 	}
 }
 actor wosD_dexVase1 21410 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex vase1"
 	+SOLID
 	+USESPECIAL
@@ -6966,7 +6970,7 @@ actor wosD_dexVase1 21410 {
 	}
 }
 actor wosD_dexVase2 21411 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex vase2"
 	+SOLID
 	+USESPECIAL
@@ -6981,7 +6985,7 @@ actor wosD_dexVase2 21411 {
 	}
 }
 actor wosD_dexBenchlibrary 21412 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex benchLibrary"
 	+SOLID
 	+USESPECIAL
@@ -6996,7 +7000,7 @@ actor wosD_dexBenchlibrary 21412 {
 	}
 }
 actor wosD_dexBookstandLibrary 21413 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex bookStandLibrary"
 	+SOLID
 	+USESPECIAL
@@ -7011,7 +7015,7 @@ actor wosD_dexBookstandLibrary 21413 {
 	}
 }
 actor wosD_dexCabinet 21414 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex cabinet"
 	+SOLID
 	+USESPECIAL
@@ -7026,7 +7030,7 @@ actor wosD_dexCabinet 21414 {
 	}
 }
 actor wosD_dexDeskSmallLibrary 21415 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex deskSmallLibrary"
 	+SOLID
 	+USESPECIAL
@@ -7041,7 +7045,7 @@ actor wosD_dexDeskSmallLibrary 21415 {
 	}
 }
 actor wosD_dexDeskNobleOffice 21416 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex deskNobleOffice"
 	+SOLID
 	+USESPECIAL
@@ -7056,7 +7060,7 @@ actor wosD_dexDeskNobleOffice 21416 {
 	}
 }
 actor wosD_dexChairNobleOffice 21417 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex chairNobleOffice"
 	+SOLID
 	+USESPECIAL
@@ -7116,7 +7120,7 @@ actor wosD_stimDevice3 21420 {
 	}
 }
 actor wosD_dexAIprototypeCeiling 21421 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex teleportCeiling"
 	+SOLID
 	+USESPECIAL
@@ -7163,7 +7167,7 @@ actor wosD_dex_statueLion2 21423 {
 	}
 }
 actor wosD_dexComputerPublick 21424 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/deusEx"
 	//$Title "dex computer public"
 	+SOLID
 	+USESPECIAL

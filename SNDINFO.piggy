@@ -1,4 +1,11 @@
-$random sounds/pig/sight { pigSnort1 pigSnort2 pigSnort3 pigSnort4 pigSnort5 }
+// r667 piggy ///////////////////////////////////////////
+$random pigSight { 
+    pigSnort1 
+    pigSnort2 
+    pigSnort3 
+    pigSnort4 
+    pigSnort5 
+}
 pigSnort1		"sounds/pig/snort1.ogg"
 pigSnort2		"sounds/pig/snort2.ogg"
 pigSnort3		"sounds/pig/snort3.ogg"
@@ -7,3 +14,12 @@ pigSnort5		"sounds/pig/snort5.ogg"
 
 PigHurt/Hurt "sounds/pig/SQUEEL1.ogg"
 PigDeath/Death "sounds/pig/SQUEEL2.ogg"
+/////////////////////////////////////////////////////////
+
+// SoA pig //////////////////////////////////////////////
+pig/sight   "sounds/pig/DSPIGSIT.wav"
+pig/active  "sounds/pig/DSPIGACT.wav"
+pig/pain    "sounds/pig/DSPIGPAN.wav"
+pig/death   "sounds/pig/DSPIGDTH.wav"
+pig/attack  "sounds/pig/DSPIGATK.wav"
+/////////////////////////////////////////////////////////

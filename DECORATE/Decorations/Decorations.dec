@@ -4443,7 +4443,7 @@ actor strifeNightStand02 21246 {
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
 	
-	height 24
+	height 20
 	radius 16
 	
 	States {
@@ -7769,3 +7769,57 @@ actor wosD_nwFemale_04 21459 {
 			Stop
 	}
 }
+// daggerfall lanterns ////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_daggerfallLanternHanging01 21460 {
+	//$Category "Decorations/WoS"
+	//$Title "dagg hanging lantern 01"
+	+SOLID
+	+NOGRAVITY
+	+USESPECIAL
+	+DONTTHRUST
+	height 48
+	radius 8
+	scale 1.0
+
+	States {
+		Spawn:
+			DCL1 ABCD 4 Bright light("daggLantLight")
+			Loop
+	}
+}
+actor wosD_daggerfallLanternHanging05 21461 {
+	//$Category "Decorations/WoS"
+	//$Title "dagg hanging lantern 05"
+	+SOLID
+	+NOGRAVITY
+	+USESPECIAL
+	+DONTTHRUST
+	height 48
+	radius 8
+	scale 1.0
+
+	States {
+		Spawn:
+			DCL5 ABCD 4 Bright light("daggLantLight")
+			Loop
+	}
+}
+actor wosD_daggerfallLanternHanging06 21462 {
+	//$Category "Decorations/WoS"
+	//$Title "dagg hanging lantern 06"
+	+SOLID
+	+NOGRAVITY
+	+USESPECIAL
+	+DONTTHRUST
+	height 48
+	radius 8
+	scale 1.0
+
+	States {
+		Spawn:
+			DCL6 A -1 Bright light("daggLantLight")
+			stop
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -57,9 +57,7 @@ class staffBlaster : augmentedWeapon {
 		Fire:
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
 			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1);
-			ASTF A 1 {
-				invoker.staffIsFiring = 1; //takze hul zustane ve stredu obrazu		
-			}				
+			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		
 		RealFire:
 			ASTF A 0 A_JumpIfNoAmmo("Reload");
 			ASTF A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);
@@ -71,9 +69,7 @@ class staffBlaster : augmentedWeapon {
 			ASTF G 5 A_Refire("RealFire");
 			ASTF G 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);				
 			ASTF HIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_NOFIRE|WRF_NOSWITCH);
-			TNT1 A 0 {
-				invoker.staffIsFiring = 0; //hul se muze vratit na stranu
-			}
+			TNT1 A 0 { invoker.staffIsFiring = 0; } //hul se muze vratit na stranu
 			Goto Ready;
 			
 		//staff melee sttack

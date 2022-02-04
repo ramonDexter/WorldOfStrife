@@ -353,7 +353,7 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "Staffmagazine", 48;
 		Player.StartItem "missileLauncherMag", 8;
 		Player.StartItem "stormPistol_magazine", 12;
-		Player.StartItem "executorRifleMagazine", 24;
+		//Player.StartItem "executorRifleMagazine", 24;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
 		//  custom properties  /////////////////////////////////////////////////

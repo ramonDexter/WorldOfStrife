@@ -29,8 +29,7 @@ class dest_ShortBush : ShortBush Replaces ShortBush {
             Stop;
 	}
 }
-class dest_TallBush : dest_ShortBush replaces TallBush
-{
+class dest_TallBush : dest_ShortBush replaces TallBush {
     Default {
         //$Category "Trees and Rocks/WoS"
         //$Title "Tall Bush destructible"
@@ -154,6 +153,8 @@ class LeafParticle: XJunk1 {
     }
 }
 ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 // destructible pot & pitcher //////////////////////////////////////////////////
@@ -182,17 +183,17 @@ class dest_Pot : Pot Replaces Pot
         +NOBLOOD
         Radius 12;
         Height 24;
-        DropItem "ClipOfBullets", 12;
-        DropItem "ClipOfBullets", 12;
-        DropItem "ElectricBolts", 12;
+        DropItem "wosBulletCartridge", 12;
+        DropItem "wosBulletCartridge", 12;
+        DropItem "wosBoltsElectric", 12;
         DropItem "MedPatch", 12;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "PoisonBolts", 3;
-        DropItem "MiniMissiles", 3;
-        DropItem "HEGrenadeRounds", 3;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "wosBoltsPoison", 3;
+        DropItem "wosBundleMiniMissile", 3;
+        DropItem "wosGrenadeE", 3;
         Health 10;
     }
 	
@@ -219,17 +220,17 @@ class dest_Pitcher : Pitcher Replaces Pitcher {
         +NOBLOOD
         Radius 12;
         Height 32;
-        DropItem "ClipOfBullets", 12;
-        DropItem "ClipOfBullets", 12;
-        DropItem "ElectricBolts", 12;
+        DropItem "wosBulletCartridge", 12;
+        DropItem "wosBulletCartridge", 12;
+        DropItem "wosBoltsElectric", 12;
         DropItem "MedPatch", 12;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "Coin", 22;
-        DropItem "PoisonBolts", 3;
-        DropItem "MiniMissiles", 3;
-        DropItem "HEGrenadeRounds", 3;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "goldCoin", 22;
+        DropItem "wosBoltsPoison", 3;
+        DropItem "wosBundleMiniMissile", 3;
+        DropItem "wosGrenadeE", 3;
         Health 10;
     }
 	
@@ -399,4 +400,6 @@ class dest_strifeDecoPot5 : dest_Pot {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

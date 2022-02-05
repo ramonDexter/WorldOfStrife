@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -13452.04f;
+		viewpositionx = -2233.299f;
 		defaulttoptexture = "CONCRT03";
 		overrideceilheight = false;
-		viewpositiony = 3636.776f;
+		viewpositiony = -4598.869f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,34 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1151249f;
+		viewscale = 0.08157228f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32512;
+					outerright = -30528;
+					outertop = 32704;
+					outerbottom = 15424;
+				}
+			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "4296 4297 4303 4304 4316 4318 4320 4321 4331 4339 4341 4342 4343 4345 4346 4347";
+				sectors = "793 800 804 806 809 811";
+			}
+		}
 		
 		fieldtypes
 		{
@@ -80,21 +107,22 @@ maps
 			sector
 			{
 				user_managed_3d_floor = 3;
-				rotationfloor = 17;
-				ypanningfloor = 1;
-				yscalefloor = 1;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
 				rotationceiling = 17;
+				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningfloor = 1;
-				ypanningceiling = 1;
-				xpanningceiling = 1;
-				xscaleceiling = 1;
+				ypanningfloor = 1;
+				rotationfloor = 17;
 				xscalefloor = 1;
+				yscalefloor = 1;
 			}
 			
 			thing
 			{
 				arg0str = 2;
+				conversation = 0;
 			}
 		}
 		

@@ -7821,5 +7821,38 @@ actor wosD_daggerfallLanternHanging06 21462 {
 			stop
 	}
 }
+actor wosD_daggerfallLanternHanging03 21463 {
+	//$Category "Decorations/WoS"
+	//$Title "dagg hanging lantern 03"
+	+SOLID
+	+NOGRAVITY
+	+USESPECIAL
+	+DONTTHRUST
+	height 110
+	radius 8
+	scale 1.0
 
+	States {
+		Spawn:
+			DCL3 ABCD 4 Bright light("daggLantLight")
+			Loop
+	}
+}
+actor wosD_daggerfallLanternHanging04 21464 {
+	//$Category "Decorations/WoS"
+	//$Title "dagg hanging lantern 04"
+	+SOLID
+	+NOGRAVITY
+	+USESPECIAL
+	+DONTTHRUST
+	height 182
+	radius 8
+	scale 1.0
+
+	States {
+		Spawn:
+			DCL4 ABCD 4 Bright light("daggLantLight")
+			Loop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

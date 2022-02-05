@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// wos monsters defs //////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// rebel enemy base class /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class rebelEnemy : Rebel replaces Rebel {
 
 	int gunmag; //
@@ -109,10 +116,14 @@ class rebelEnemy : Rebel replaces Rebel {
 			Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// rebels /////////////////////////////////////////////////////////////////////////////////////////////////////
 class rebelEnemy_spider : rebelEnemy {
 	Default {
-		//$category "Monsters"
+		//$category "Monsters/WoS"
 		//$Title "Spider  ganger"
 		-Friendly
 		
@@ -123,17 +134,14 @@ class rebelEnemy_spider : rebelEnemy {
 	
 	
 }
-
-class ShieldRebel : rebelEnemy 
-{
-	Default
-	{
+class ShieldRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Shield Heretic"
 		
 		-Friendly
 		
-		Tag "Shield Heretic";
+		Tag "$TAG_ShieldRebel";//Shield Heretic
 		Health 70;
 		PainChance 110;
 		Speed 8;
@@ -145,8 +153,7 @@ class ShieldRebel : rebelEnemy
 		Obituary "%o got shot down by a shield-wielding rebel.";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			SREB A 1 A_Look();
 			loop;
@@ -213,10 +220,8 @@ class ShieldRebel : rebelEnemy
 			Stop;
 	}
 }
-class Shield : actor
-{
-	Default
-	{
+class Shield : actor {
+	Default {
 		+DROPOFF
 		+CORPSE
 		+NOTELEPORT
@@ -224,8 +229,7 @@ class Shield : actor
 		Health 1;		
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			RSLD A 1;
 			loop;
@@ -237,27 +241,23 @@ class Shield : actor
 	}
 }
 
-class spider_leader : ShieldRebel
-{
-	Default
-	{
-		//$category "Monsters"
+class spider_leader : ShieldRebel {
+	Default {
+		//$category "Monsters/WoS"
 		//$Title "Spider  leader"
 		
-		Tag "Spider Leader";
+		Tag "$TAG_spider_leader";//Spider leader
 	}
 }
 
-class EliteRebel : rebelEnemy
-{
-	Default
-	{
+class EliteRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Elite Heretic"
 		
 		-Friendly
 		
-		Tag "Elite Heretic";
+		Tag "$TAG_EliteRebel";
 		Health 95;
 		PainChance 140;
 		Speed 7;
@@ -269,8 +269,7 @@ class EliteRebel : rebelEnemy
 		Obituary "%o was riddled by an Elite Rebel.";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			RAVW A 1 A_Look();
 			loop;
@@ -312,17 +311,14 @@ class EliteRebel : rebelEnemy
 			Stop;
 	}
 }
-
-class GrenadeRebel : rebelEnemy
-{
-	Default
-	{
+class GrenadeRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Grenade Heretic"
 		
 		-Friendly
 		
-		Tag "Grenade Heretic";
+		Tag "$TAG_GrenadeRebel";
 		Health 90;
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
@@ -332,8 +328,7 @@ class GrenadeRebel : rebelEnemy
 		Dropitem "randomDrop_03";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			GREB A 1 A_Look();
 			loop;
@@ -371,28 +366,23 @@ class GrenadeRebel : rebelEnemy
 			Stop;
 	}
 }
-class RebelGrenade : HEGrenade
-{
-	Default
-	{
+class RebelGrenade : HEGrenade {
+	Default {
 		BounceCount 3;
 		Speed 25;
 		DamageType "RebelGrenade";
 		Obituary "%o tripped a rebel's grenade.";
 	}
 }
-
-class MaulerRebel : rebelEnemy
-{
-	Default
-	{
+class MaulerRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Mauler Heretic"
 		
 		-Friendly
 		
 		Health 100;
-		Tag "Mauler Heretic";
+		Tag "$TAG_MaulerRebel";
 		AttackSound "templar/shoot";
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
@@ -401,8 +391,7 @@ class MaulerRebel : rebelEnemy
 		Dropitem "randomDrop_04";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			MRBL A 1 A_Look();
 			loop;
@@ -441,23 +430,21 @@ class tgPowerPlant_hereticCaptain : MaulerRebel {
 		//$Category "Monsters/Heretics"
 		//$Title "tg pp heretic captain"
 		
-		Tag "Heretic Captain";
+		Tag "$TAG_tgPowerPlant_hereticCaptain";
 		Health 200;
 		DropItem "SHtgPowerplantKey";
 	}
 }
 
-class FlamerRebel : rebelEnemy
-{
-	Default
-	{
+class FlamerRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Flamer Heretic"
 		
 		-Friendly
 		
 		Health 100;
-		Tag "Flamethrower Rebel";
+		Tag "$TAG_FlamerRebel";
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
 		Obituary "%o got burned to death by a flamethrower rebel.";
@@ -466,8 +453,7 @@ class FlamerRebel : rebelEnemy
 		DamageFactor "Fire", 0.1;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			FLRB A 1 A_Look();
 			loop;
@@ -506,25 +492,22 @@ class FlamerRebel : rebelEnemy
 	}
 }
 
-class RangerRebel : rebelEnemy
-{
-	Default
-	{
+class RangerRebel : rebelEnemy {
+	Default {
 		//$Category "Monsters/Heretics"
 		//$Title "Ranger Heretic"
 		
 		-Friendly
 		+LOOKALLAROUND
 		
-		Tag "Ranger Heretic";
+		Tag "$TAG_RangerRebel";
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
 		AttackSound "monsters/rifle";
 		Dropitem "randomDrop_01";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			RANG A 1 A_Look();
 			loop;
@@ -556,24 +539,25 @@ class RangerRebel : rebelEnemy
 	}
 }
 
-class hereticCaptain : EliteRebel
-{
-	Default
-	{
+class hereticCaptain : EliteRebel {
+	Default {
 		//$Title "Heretic Captain"
 		
-		Tag "Heretic Captain";
+		Tag "$TAG_hereticCaptain";
 		Dropitem "leaderskull";
 		Dropitem "randomDrop_01";
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// spiker trap ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class spikerTrap : actor {
 
-
-class spikerTrap : actor
-{
-	void A_TrapAttack()
-	{
+	void A_TrapAttack() {
 		let targ = target;
 		if (targ)
 		{
@@ -585,9 +569,8 @@ class spikerTrap : actor
 		}
 	}
 
-	Default
-	{
-		//$Category "Monsters"
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Spiker Trap"
 		
 		-FRIENDLY
@@ -601,8 +584,7 @@ class spikerTrap : actor
 	
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			TRAP A 1;
 			Loop;
@@ -625,21 +607,20 @@ class spikerTrap : actor
 			Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//reikall's voxel sentinel - cool stuff :)
-//------------------------------------------------------------------------------
-class RV_Sentinel : Sentinel
-{
-	Default
-	{
-		//$Category "Monsters"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// reikall's voxel sentinel - cool stuff :) ///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class RV_Sentinel : Sentinel {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Sentinel vox"
 		+DONTINTERPOLATE
 		
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			SEWR W 1 
 			{
@@ -649,34 +630,29 @@ class RV_Sentinel : Sentinel
 			SEWR WWWWWWWWW 1 A_SpawnItemEx("RV_SentinelBright");
 			Loop;
 		See:
-			SEWR W 1 
-			{
+			SEWR W 1 {
 				A_SentinelBob(); 
 				A_SpawnItemEx("RV_SentinelBright");
 			}
 			SEWR WWWWW 1 A_SpawnItemEx("RV_SentinelBright");
-			SEWR W 1 
-			{
+			SEWR W 1 {
 				A_Chase(); 
 				A_SpawnItemEx("RV_SentinelBright");
 			}
 			SEWR WWWWW 1 A_SpawnItemEx("RV_SentinelBright");
 			Loop;
 		Missile:
-			SEWR X 1 
-			{
+			SEWR X 1 {
 				A_FaceTarget(); 
 				A_SpawnItemEx("RV_SentinelBright", 0, 0, 8);
 			}
 			SEWR XXX 1 A_SpawnItemEx("RV_SentinelBright", 0, 0, 8);
-			SEWR Y 1 
-			{
+			SEWR Y 1 {
 				A_SentinelAttack(); 
 				A_SpawnItemEx("RV_SentinelBright", 0, 0, 16);
 			}
 			SEWR YYYYYYY 1 A_SpawnItemEx("RV_SentinelBright", 0, 0, 16);
-			SEWR Y 1 
-			{
+			SEWR Y 1 {
 				A_SentinelRefire(); 
 				A_SpawnItemEx("RV_SentinelBright", 0, 0, 16);
 			}
@@ -684,42 +660,34 @@ class RV_Sentinel : Sentinel
 			Goto Missile+1;
 	}
 }
-class RV_SentinelBright : actor
-{
-	Default
-	{
+class RV_SentinelBright : actor {
+	Default {
 		+NOINTERACTION
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			SEWR Z 2 BRIGHT;
 			stop;
 	}
 }
-class RV_CeilingTurret : CeilingTurret
-{
-	Default
-	{
-		//$Category "Monsters"
+class RV_CeilingTurret : CeilingTurret {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Ceiling Turret vox"
 		+DONTINTERPOLATE
 	}
 	
-	States
-	{
+	States {
 		Spawn:
-			TURT Z 1 BRIGHT 
-			{
+			TURT Z 1 BRIGHT {
 				A_TurretLook(); 
 				A_SpawnItemEx("RV_TurretBase");
 			}
 			TURT ZZZZ 1 BRIGHT A_SpawnItemEx("RV_TurretBase");
 			Loop;
 		See:
-			TURT Z 1 BRIGHT 
-			{
+			TURT Z 1 BRIGHT {
 				A_Chase(); 
 				A_SpawnItemEx("RV_TurretBase");
 			}
@@ -727,51 +695,44 @@ class RV_CeilingTurret : CeilingTurret
 			Loop;
 	}
 }
-class RV_TurretBase : actor
-{
-	Default
-	{
+class RV_TurretBase : actor {
+	Default {
 		+NOINTERACTION
 	}
 	
-	States
-	{
-	Spawn:
-		TURT X 2 SLOW;
-		stop;
+	States {
+		Spawn:
+			TURT X 2 SLOW;
+			stop;
 	}
 }
-
-
-class hackedSentinel : Sentinel
-{
-	Default
-	{
-		//$Category "Monsters"
+class hackedSentinel : Sentinel {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Hacked Sentinel"
 		
-		Tag "Hacked Sentinel";
+		Tag "$TAG_hackedSentinel";
 	}
 }
-
-class friendSentinel : Sentinel
-{
-	Default
-	{
-		//$Category "Monsters"
+class friendSentinel : Sentinel {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Friendly Sentinel"
 		
 		+FRIENDLY
 		
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-class ZombieFodder : actor
-{
-	Default
-	{
-		//$Category "Monsters"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  zombie mutant /////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class ZombieFodder : actor {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Zombie Fodder"
 		
 		+FLOORCLIP
@@ -791,8 +752,7 @@ class ZombieFodder : actor
 		Obituary "%o joins the zombies.";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			ZFOD AB 10 A_Look();
 			Loop;
@@ -829,10 +789,8 @@ class ZombieFodder : actor
 }
 
 
-class ZombFlesh : actor
-{
-	Default
-	{
+class ZombFlesh : actor {
+	Default {
 		+CANBOUNCEWATER
 		-NOGRAVITY
 		+NOBLOCKMAP 
@@ -850,8 +808,7 @@ class ZombFlesh : actor
 		Seesound "ZFlesh/Throw";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			ZGIB A 1 A_SpawnItemEx("ZombFleshTrail",0,0,0);
 			Loop;
@@ -864,10 +821,8 @@ class ZombFlesh : actor
 	}
 }
 
-class ZombFleshTrail : actor
-{
-	Default
-	{
+class ZombFleshTrail : actor {
+	Default {
 		+NOBLOCKMAP
 		+NOTELEPORT
 		+NOGRAVITY
@@ -877,24 +832,20 @@ class ZombFleshTrail : actor
 		RenderStyle "Translucent";
 		Alpha 0.8;
 	}
-	States
-	{
+	States {
 		Spawn:
 			BL0D ABCD 3;
 			Stop;
 	}
 }
 
-class FodderSoul : actor
-{
-	Default
-	{
+class FodderSoul : actor {
+	Default {
 		+NOBLOCKMAP
 		+NOGRAVITY
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			ZFSL ABC 5;
 			ZFSL DEFG 9;
@@ -902,18 +853,16 @@ class FodderSoul : actor
 	}
 }
 
-class fodderGhoul : ZombieFodder
-{
-	Default
-	{
-		//$Category "Monsters"
+class fodderGhoul : ZombieFodder {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Ghoul"
-	
+		
+		Tag "$TAG_fodderGhoul";
 		Health 100;
 	}
 	
-	States
-	{
+	States {
 		  Spawn:
 			GHUL AB 10 A_Look();
 			Loop;
@@ -948,12 +897,16 @@ class fodderGhoul : ZombieFodder
 			Goto See;
 	}	
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class MiniSentinel : actor
-{
-	Default
-	{
-		//$Category "Monsters"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// mini sentinel //////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class MiniSentinel : actor {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Mini Sentinel"
 		
 		+SPAWNCEILING
@@ -966,6 +919,7 @@ class MiniSentinel : actor
 		+LOOKALLAROUND
 		+NEVERRESPAWN
 		
+		Tag "$TAG_MiniSentinel";
 		Health 50;
 		Painchance 255;
 		Speed 7;
@@ -979,8 +933,7 @@ class MiniSentinel : actor
 		Obituary "%o was vaporized by a mini sentinel";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			MNDR A 10 A_Look();
 			loop;
@@ -1015,11 +968,8 @@ class MiniSentinel : actor
 			stop;
 	}
 }
-
-class LaserBolt : actor
-{
-	Default
-	{
+class LaserBolt : actor {
+	Default {
 		+STRIFEDAMAGE
 		+NOEXTREMEDEATH
 		+SPAWNSOUNDSOURCE
@@ -1036,8 +986,7 @@ class LaserBolt : actor
 		Decal "PlasmaScorchLower";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			TNT1 A 0;
 			TNT1 A 1 ThrustThingZ(0, random (-7, 1), 0, 1);
@@ -1050,35 +999,37 @@ class LaserBolt : actor
 	}
 }
 
-class LaserBoltTrail : actor
-{
-	Default
-	{
-	+NOINTERACTION
-	+CLIENTSIDEONLY
+class LaserBoltTrail : actor {
+	Default {
+		+NOINTERACTION
+		+CLIENTSIDEONLY
 
-	Renderstyle "Add";
+		Renderstyle "Add";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			SHT1 AB 1 Bright A_FadeOut (0.1);
 			Loop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class Paladin : actor
-{
-	Default
-	{
-		//$Category "Monsters"
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// paladin robot //////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Paladin : actor {
+	Default {
+		//$Category "Monsters/WoS"
 		//$Title "Paladin"
 		
 		+FLOORCLIP
 		+NOBLOOD
 		+MISSILEMORE
 		
+		Tag "$TAG_Paladin";
 		obituary "A paladin's laser cannon wiped the smile off of %o's face.";
 		health 750;
 		radius 32;
@@ -1092,8 +1043,7 @@ class Paladin : actor
 		MONSTER;
 	}
 	
-	states
-	{
+	states {
 		Spawn:
 			RROB B 10 A_Look();
 			loop;
@@ -1129,11 +1079,15 @@ class Paladin : actor
 			stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-class binderNPC : actor
-{
-	Default
-	{
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// binder npc friendly ////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class binderNPC : actor {
+	Default {
 		//$Category "Other NPCs"
 		//$Title "Binder NPC"
 		
@@ -1146,7 +1100,7 @@ class binderNPC : actor
 		Health 120;
 		PainChance 250;
 		Speed 10;	
-		Tag "Binder";
+		Tag "$TAG_binderNPC";
 		Obituary "";
 		ATTACKSOUND "grunt/attack";
 		SeeSound "rebel/sight";
@@ -1155,8 +1109,7 @@ class binderNPC : actor
 		ActiveSound "rebel/active";
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			RNGS A 5 A_Look2();
 			Loop;
@@ -1196,10 +1149,16 @@ class binderNPC : actor
 			Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// shooting stalker ///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class shootingStalker : Stalker {
 	Default {
-		//$category "Monsters"
+		//$category "Monsters/WoS"
 		//$Title "shooting stalker"
 		+NOGRAVITY
 		+DROPOFF
@@ -1208,7 +1167,7 @@ class shootingStalker : Stalker {
 		+INCOMBAT
 		+NOVERTICALMELEERANGE
 
-        Tag "Advanced Stalker";
+        Tag "$TAG_shootingStalker";
 		Health 60;
 		Painchance 40;
 		Speed 16;
@@ -1274,8 +1233,14 @@ class shootingStalker : Stalker {
             Stop;
 	}	
 }
-// acolytes //////////////////////////////////////////////////////////////////// 
-// looting code from Lost Frontier, credits to jarewill ////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// acolytes ///////////////////////////////////////////////////////////////////////////////////////////////////
+// looting code from Lost Frontier, credits to jarewill ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class wosAcolyte : Acolyte replaces Acolyte {
 	int gunmag; //
 	int searchtimer; //
@@ -1346,3 +1311,75 @@ class wosAcolyteLGreen : wosAcolyte replaces AcolyteLGreen {}
 class wosAcolyteGold : wosAcolyte replaces AcolyteGold {}
 class wosAcolyteBlue : wosAcolyte replaces AcolyteBlue {}
 class wosAcolyteShadow : wosAcolyte replaces AcolyteShadow {}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ascension flesh imp ////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class ascImpFlesh : actor {
+	Default {
+		//$category "Monsters/WoS"
+		//$Title "Imp Green"
+		Tag "$TAG_ascImpFlesh";
+		Obituary "$OBI_ascImpFlesh"; //%o was bitten by a Flesh Imp.
+		Health 55;
+		Speed 10;
+		FastSpeed 20;
+		DamageFunction (random(4,8));
+		PainChance 144;
+  		+PUSHABLE;
+	}  
+  	States {
+		Spawn:
+			IMP1 J 8 A_Look();
+			Loop;
+		See:
+			IMP1 BBBCCC 2 A_Chase();
+			IMP1 C 0 A_Playsound("H2Imp/Wings");
+			IMP1 BBBAAA 2 A_Chase();
+			Loop;
+		Melee:
+			IMP1 D 0;
+			IMP1 DE 4 A_FaceTarget();
+			IMP1 F 4 A_CustomMeleeAttack(random(1,8)*2,"H2Imp/Melee","");
+			Goto See;
+		FakeMelee:
+			IMP1 DE 4 A_FaceTarget();
+			IMP1 F 4;
+			Goto See;
+		Missile:
+			IMP1 A 0;
+			IMP1 A 0 A_JumpIfCloser(384, 1);
+			Goto See;
+			IMP1 A 8 A_FaceTarget();
+			IMP1 C 0 A_PlaySound("H2Imp/Charge");
+			IMP1 C 15 A_SkullAttack();
+			IMP1 C 0 A_Stop();
+			Goto See;
+		Pain:
+			IMP1 G 2;
+			IMP1 G 3 A_Pain();
+			Goto See;
+		Death:
+			IMP1 H 0 { bFLOATBOB = 0; }
+			IMP1 H 1 A_Scream();
+			IMP1 H -1;
+		Crash:
+			IMP1 H 0 { bFLOATBOB = 0; }
+			IMP1 I 5;
+			IMP3 J 5;
+			IMP3 K 5 A_NoBlocking();
+			IMP3 L -1;
+			Stop;
+		Idle:
+			IMP1 BBBCCC 2 A_Look();
+			IMP1 B 0 A_Playsound("H2Imp/Wings");
+			IMP1 BBBAAA 2 A_Look();
+			Loop;
+   	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////

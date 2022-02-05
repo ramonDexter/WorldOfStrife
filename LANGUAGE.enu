@@ -916,6 +916,25 @@ T_wosPitFiend = "Pit Fiend";
 T_wosPlagueFiend = "Plague Fiend";
 T_MiniDragon = "Drake";
 T_ascSerpentFly = "Serpent Fly";
+TAG_ascImpFlesh = "Green Flyer";
+OBI_ascImpFlesh = "%o was bitten by a Green Flyer.";
+TAG_ShieldRebel = "Shield Heretic";
+TAG_spider_leader = "Spider Leader";
+TAG_EliteRebel = "Elite Rebel";
+TAG_GrenadeRebel = "Grenade Heretic";
+TAG_MaulerRebel = "Mauler Heretic";
+TAG_tgPowerPlant_hereticCaptain = "Heretic Captain";
+TAG_FlamerRebel = "Flamethrower Heretic";
+TAG_RangerRebel = "Heretic Ranger";
+TAG_hereticCaptain = "Heretic Captain";
+TAG_hackedSentinel = "Hacked Sentinel";
+T_ZOMBIEFODDER = "Zombie Mutant";
+TAG_fodderGhoul = "Ghoul Mutant";
+TAG_MiniSentinel = "Mini Sentinel";
+TAG_Paladin = "Paladin";
+TAG_binderNPC = "Binder";
+TAG_shootingStalker = "Advanced Stalker";
+
 ////////////////////////////////////////////////////////////////////////////////
 
 	

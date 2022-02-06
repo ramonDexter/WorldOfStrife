@@ -94,3 +94,25 @@ model TOSladderWoodenHoles {
 
 	FrameIndex UNKN A 0 0
 }
+model TOSladderRope01 {
+	USEACTORPITCH
+	USEACTORROLL
+
+	path "Models/MapObjects/TOS"
+	model 0 "dx_ladderRope01.md3"
+	skin 0 "tx_travezalano.png"
+	scale 2.5 2.5 2.5
+	offset -16.0 0.0 0.0
+	frameindex UNKN A 0 0
+}
+model TOSladderRope02 {
+	USEACTORPITCH
+	USEACTORROLL
+
+	path "Models/MapObjects/TOS"
+	model 0 "dx_ladderRope02.md3"
+	skin 0 "tx_travezalano.png"
+	scale 2.5 2.5 2.5
+	offset -16.0 0.0 0.0
+	frameindex UNKN A 0 0
+}

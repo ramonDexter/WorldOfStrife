@@ -152,6 +152,18 @@ class TOSladderWoodenHoles : LadderBase {
 		//$Title "ladder wooden holes"
 	}
 }
+class TOSladderRope01 : LadderBase {
+	Default {
+		//$Category "ZSCRIPT"
+		//$Title "ladder rope 01"
+	}
+}
+class TOSladderRope02 : LadderBase {
+	Default {
+		//$Category "ZSCRIPT"
+		//$Title "ladder rope 02"
+	}
+}
 /*
 class NoMonsterLadder : LadderBase
 {

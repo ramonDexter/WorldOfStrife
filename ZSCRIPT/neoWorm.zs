@@ -216,7 +216,7 @@ class Box02 : Box01
 {
 	Default
 	{
-		//$Category "Boxes"
+		//$Category "Decorations/neoworm"
 		//$Title "Box big 2"
 	}
 	States
@@ -305,7 +305,7 @@ class Sack01 : Actor
 	States
 	{
 		Spawn:
-			SACK A -1;
+			NSAK A -1;
 			Stop;
 	}
 }
@@ -322,7 +322,64 @@ class Sack02 : Sack01
 	States
 	{
 		Spawn:
-			SACK B -1;
+			NSAK B -1;
 			Stop;
+	}
+}
+
+class strifeBox01 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox01"
+		Radius 32;
+    	Height 64;
+	}
+}
+class strifeBox02 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox02"
+		Radius 32;
+    	Height 64;
+	}
+}
+class strifeBox03 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox03"
+		Radius 32;
+    	Height 32;
+	}
+}
+class strifeBox04 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox04"
+		Radius 16;
+    	Height 64;
+	}
+}
+class strifeBox05 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox05"
+		Radius 16;
+    	Height 32;
+	}
+}
+class strifeBox06 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox06"
+		Radius 16;
+    	Height 32;
+	}
+}
+class strifeBox07 : Box01 {
+	Default {
+		//$Category "Decorations/neoworm"
+		//$Title "strifeBox07"
+		Radius 32;
+    	Height 32;
 	}
 }

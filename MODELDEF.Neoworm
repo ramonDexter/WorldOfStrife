@@ -194,12 +194,28 @@ Model Box01
   Scale 1 1 1
   FrameIndex DUMM A 0 0
 }
+Model strifeBox01
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box01.md3"
+  Skin 0 "BOXES02.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
 
 Model Box02
 {
   Path "models/neoworm/"
   Model 0 "box_02.obj"
   Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+model strifeBox02 
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box02.md3"
+  Skin 0 "BOXES02.png"
   Scale 1 1 1
   FrameIndex DUMM A 0 0
 }
@@ -212,6 +228,14 @@ Model Box03
   Scale 1 1 1
   FrameIndex DUMM A 0 0
 }
+Model strifeBox03
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box03.md3"
+  Skin 0 "BOXES02.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
 
 Model Box04
 {
@@ -221,12 +245,44 @@ Model Box04
   Scale 1 1 1
   FrameIndex DUMM A 0 0
 }
+model strifeBox04
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box04.md3"
+  Skin 0 "BOXES02.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
 
 Model Box05
 {
   Path "models/neoworm/"
   Model 0 "box_05.obj"
   Skin 0 "BOXES01.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+Model strifeBox05
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box05.md3"
+  Skin 0 "BOXES02.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+Model strifeBox06
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box06.md3"
+  Skin 0 "BOXES02.png"
+  Scale 1 1 1
+  FrameIndex DUMM A 0 0
+}
+Model strifeBox07
+{
+  Path "models/neoworm/"
+  Model 0 "strife_box07.md3"
+  Skin 0 "BOXES02.png"
   Scale 1 1 1
   FrameIndex DUMM A 0 0
 }

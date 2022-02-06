@@ -6651,7 +6651,7 @@ actor wosD_dexAIprototype 21388 {
 	+NOGRAVITY
 	+DONTTHRUST
 	radius 16
-	height 8
+	height 4
 	States {
 		Spawn:
 			DUMM A -1

@@ -98,3 +98,11 @@ script 4206 (void) {
 	//
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+script 4207 (void) {
+	GiveInventory("wosLeatherArmor", 1);
+	GiveInventory("wosMetalArmor", 1);
+	GiveInventory("wosBinderArmorBasic", 1);
+	GiveInventory("wosBinderArmorAdvanced", 1);
+	GiveInventory("wosKineticArmor", 1);
+}

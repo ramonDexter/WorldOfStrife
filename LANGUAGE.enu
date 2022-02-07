@@ -881,7 +881,7 @@ M_item_battsLeft2 = "\c[yellow]% battery left ]";
 T_wosStimDevice = "Stamina Stim";
 F_wosStimDevice = "You picked up the Stamina Stim!";
 
-
+T_Binocular = "Binoculars";
 
 
 
@@ -1024,7 +1024,17 @@ M01_PC_WEAPONS = "\c[yellow][ WEAPONS INFORMATION ]\n"
 				"    In use mainly by the Order forces.\n";
 
 
-
+//##################################################################################################################
+// journal PDA /////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+name_personalJournal = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
+page_journal_opener = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.";
+bye_EXIT = "\c[red][ EXIT ]";
+page_journal_opener_cNotes = "\c[yellow][ NOTES ]";
+page_journal_opener_cQuests = "\c[yellow][ QUESTS ]";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
 
 
 

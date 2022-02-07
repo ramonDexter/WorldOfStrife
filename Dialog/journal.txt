@@ -6,17 +6,17 @@ Conversation {
 	ID = 777;
 	Page {
         pageName = "journal_opener";
-		Name = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
-		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.";
+		Name = "$name_personalJournal";//\c[yellow]::[   PERSONAL  JOURNAL   ]::
+		Dialog = "$page_journal_opener";//\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.
 		Panel = "M_BLNK";
-		Goodbye = "\c[red][ EXIT ]";
+		Goodbye = "$bye_EXIT";//\c[red][ EXIT ]
 
 		Choice {
-			Text = "\c[yellow][ NOTES ]";
+			Text = "$page_journal_opener_cNotes";//\c[yellow][ NOTES ]
 			NextPage = "journal_notes";
 		}
 		Choice {
-			Text = "\c[yellow][ QUESTS ]";
+			Text = "$page_journal_opener_cQuests";//\c[yellow][ QUESTS ]
 			NextPage = "journal_quests";
 		}
 	}

@@ -73,6 +73,8 @@ sounds/DoorCreak  "sounds/door/drcrk5a.ogg"
 sounds/doorOpenClose  "sounds/door/DOORSND.ogg"
 //locked door
 sounds/lockedDoor  "sounds/door/DOORLCKD.wav"
+sounds/slideOpen "sounds/door/SLIDOOR1.WAV"
+sounds/slideClose "sounds/door/SLIDOOR2.WAV"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  DN fire  ///////////////////////////////////////////////////////////////////

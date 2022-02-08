@@ -318,32 +318,32 @@ class wosStatusBar : BaseStatusBar {
 			If(armo.currentarmor > 0 && armo.armoramount > 0) {
 				string armortype;
 				If(armo.currentarmor==1){armortype="I_ARM2";}Else If(armo.currentarmor==2){armortype="I_ARM1";}Else If(armo.currentarmor==3){armortype="I_RGA1";}Else If(armo.currentarmor==4){armortype="I_RGA2";}Else If(armo.currentarmor==5){armortype="I_SHLD";}
-				DrawImage(armortype,(-51, 0),DI_ITEM_OFFSETS);
+				DrawImage(armortype,(-56, 0),DI_ITEM_OFFSETS);
 				//DrawString(mYelFont, FormatNumber(item.Amount, 3, 5), (362, 19), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
 				//DrawInventoryIcon(armortype, (120, 177), DI_ITEM_OFFSETS);
-				If(armo.currentarmor!=6){DrawString(mYelFont, FormatNumber(armo.armoramount, 3, 5), (-24, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
+				If(armo.currentarmor!=6){DrawString(mYelFont, FormatNumber(armo.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
 			}
 
             //  Ammo  //////////////////////////////////////////////////////////		
             Inventory ammo1, ammo2; 
             [ ammo1, ammo2 ]= GetCurrentAmmo ();
             if (ammo2 != NULL) {
-                DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-2, 33), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-                DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (-2, 40), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);		
+                DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 33), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (-12, 40), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);		
 				//drawBar int vertical == 0 left>right; 1 right>left; 2 down>up; 3 up>down
-				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-8, 31), 0, 3);				
-                DrawInventoryIcon (ammo2, (-15, 2), DI_ITEM_OFFSETS);
+				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 31), 0, 3);				
+                DrawInventoryIcon (ammo2, (-25, 2), DI_ITEM_OFFSETS);
             } else if ( ammo1 != NULL ) {
-				DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-2, 37), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
+				DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 37), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
 				//DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (370, 148), DI_TEXT_ALIGN_RIGHT);		
-				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-8, 31), 0, 3);
-				DrawInventoryIcon (ammo1, (-15, 2), DI_ITEM_OFFSETS);
+				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 31), 0, 3);
+				DrawInventoryIcon (ammo1, (-25, 2), DI_ITEM_OFFSETS);
 			}			
 			
             //  weapon icon  ///////////////////////////////////////////////////
             item = CPlayer.ReadyWeapon;
             if ( item != null ) {
-                DrawInventoryIcon(CPlayer.ReadyWeapon, (0, 1), DI_ITEM_OFFSETS);
+                DrawInventoryIcon(CPlayer.ReadyWeapon, (20, 1), DI_ITEM_OFFSETS);
             }            
 
             //  shoulderGun icon + ammo display  ///////////////////////////////

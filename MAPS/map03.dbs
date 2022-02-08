@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -1472.129f;
+		viewpositionx = -2367.953f;
 		defaulttoptexture = "WALTEK12";
 		overrideceilheight = false;
-		viewpositiony = 94.22799f;
+		viewpositiony = 213.4868f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,24 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1351317f;
+		viewscale = 0.3859495f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -512;
+					outerright = 0;
+					outertop = 832;
+					outerbottom = 320;
+				}
+			}
+		}
 		
 		fieldtypes
 		{

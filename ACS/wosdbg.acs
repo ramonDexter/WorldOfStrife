@@ -106,3 +106,14 @@ script 4207 (void) {
 	GiveInventory("wosBinderArmorAdvanced", 1);
 	GiveInventory("wosKineticArmor", 1);
 }
+script 4208 (void) {
+	GiveInventory("zscStrifeCrossbow", 1);
+	GiveInventory("StormPistol", 1);
+	GiveInventory("laserPistol", 1);
+	GiveInventory("zscAssaultGun", 1);
+	GiveInventory("staffBlaster", 1);
+	GiveInventory("zscMiniMissileLauncher", 1);
+	GiveInventory("zscFlameThrower", 1);
+	GiveInventory("zscStrifeGrenadeLauncher", 1);
+	GiveInventory("zscMauler", 1);
+}

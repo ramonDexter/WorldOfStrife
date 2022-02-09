@@ -73,12 +73,12 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"SWATER9:SWATERA:SWATERB:SWATERC:"
 			"SWATERD:SWATERE:SWATERF:SWATERG:"
 			"AXCARPH:AXCARPM:F_ROYCRP:"
-			"WATR01:WATR02:WATR03:WATR04"
-			"WATR05:WATR06:WATR07:WATR08"
-			"WATR09:WATR10:WATR11:WATR12"
-			"WATR13:WATR14:WATR15:WATR16"
-			"WATR17:WATR18:WATR19:WATR20"
-			"WATR21:WATR22:WATR23:WATR24";
+			"CWATR01:CWATR02:CWATR03:CWATR04"
+			"CWATR05:CWATR06:CWATR07:CWATR08"
+			"CWATR09:CWATR10:CWATR11:CWATR12"
+			"CWATR13:CWATR14:CWATR15:CWATR16"
+			"CWATR17:CWATR18:CWATR19:CWATR20"
+			"CWATR21:CWATR22:CWATR23:CWATR24";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -116,30 +116,30 @@ STEP_SWATERD = "step/water";
 STEP_SWATERE = "step/water";
 STEP_SWATERF = "step/water";
 STEP_SWATERG = "step/water";
-STEP_WATR01 = "step/water";
-STEP_WATR02 = "step/water";
-STEP_WATR03 = "step/water";
-STEP_WATR04 = "step/water";
-STEP_WATR05 = "step/water";
-STEP_WATR06 = "step/water";
-STEP_WATR07 = "step/water";
-STEP_WATR08 = "step/water";
-STEP_WATR09 = "step/water";
-STEP_WATR10 = "step/water";
-STEP_WATR11 = "step/water";
-STEP_WATR12 = "step/water";
-STEP_WATR13 = "step/water";
-STEP_WATR14 = "step/water";
-STEP_WATR15 = "step/water";
-STEP_WATR16 = "step/water";
-STEP_WATR17 = "step/water";
-STEP_WATR18 = "step/water";
-STEP_WATR19 = "step/water";
-STEP_WATR20 = "step/water";
-STEP_WATR21 = "step/water";
-STEP_WATR22 = "step/water";
-STEP_WATR23 = "step/water";
-STEP_WATR24 = "step/water";
+STEP_CWATR01 = "step/water";
+STEP_CWATR02 = "step/water";
+STEP_CWATR03 = "step/water";
+STEP_CWATR04 = "step/water";
+STEP_CWATR05 = "step/water";
+STEP_CWATR06 = "step/water";
+STEP_CWATR07 = "step/water";
+STEP_CWATR08 = "step/water";
+STEP_CWATR09 = "step/water";
+STEP_CWATR10 = "step/water";
+STEP_CWATR11 = "step/water";
+STEP_CWATR12 = "step/water";
+STEP_CWATR13 = "step/water";
+STEP_CWATR14 = "step/water";
+STEP_CWATR15 = "step/water";
+STEP_CWATR16 = "step/water";
+STEP_CWATR17 = "step/water";
+STEP_CWATR18 = "step/water";
+STEP_CWATR19 = "step/water";
+STEP_CWATR20 = "step/water";
+STEP_CWATR21 = "step/water";
+STEP_CWATR22 = "step/water";
+STEP_CWATR23 = "step/water";
+STEP_CWATR24 = "step/water";
 
 // Ground //////////////////////////////////////////////////////////////////////
 STEP_FLOOR0_1 = "step/default";

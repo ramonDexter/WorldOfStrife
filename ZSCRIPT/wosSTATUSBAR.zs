@@ -299,7 +299,7 @@ class wosStatusBar : BaseStatusBar {
             drawImage ("HUDiB", (-54, 0), DI_ITEM_OFFSETS, 0.5);
 
             //  Health  ////////////////////////////////////////////////////////
-            DrawString(mGrnFont, FormatNumber(CPlayer.health, 3, 19), (362, 20), DI_TEXT_ALIGN_RIGHT, Font.CR_DARKRED);
+            DrawString(mGrnFont, FormatNumber(CPlayer.health, 3, 19), (359, 20), DI_TEXT_ALIGN_RIGHT, Font.CR_DARKRED);
             int points;        
             if (CPlayer.cheats & CF_GODMODE) {
                 points = 999;

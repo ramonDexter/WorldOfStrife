@@ -2809,6 +2809,48 @@ Model wosD_KLog4 {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// from scattered evil /////////////////////////////////////////////////////////
+model wosD_hexenTreeSwampLarge {
+	path "models/props/hexentreeswamp/"
+	model 0 "hx_treeSwamp.md3"
+	surfaceskin 0 0 "Tree_Swamp.png"
+	surfaceskin 0 1 "Tree_Swamp_1_Base.png"
+	surfaceskin 0 2 "Tree_Swamp_1_Root.png"
+	surfaceskin 0 3 "Tree_Swamp_Cover.png"
+	surfaceskin 0 4 "Tree_Swamp_1_Branch.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hexenLogSwamp {
+	path "models/props/hexenlogswamp/"
+	model 0 "hx_swampLog.md3"
+	surfaceskin 0 0 "Log.png"
+	surfaceskin 0 1 "Log_Branch_1.png"
+	surfaceskin 0 2 "Log_Branch_2.png"
+	surfaceskin 0 3 "Log_Cover.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_headCrusher {
+	path "models/props/torture/"
+	model 0 "headCrusher.md3"
+	skin 0 "headcrusher.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_judasCradle {
+	path "models/props/torture/"
+	model 0 "judasCradle.md3"
+	skin 0 "judascradle.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

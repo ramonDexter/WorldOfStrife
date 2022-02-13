@@ -1,0 +1,19 @@
+Liquidator/See			LQDTRSEE
+$random Liquidator/Active { Active1 Active2 Active3 }
+Active1		LQDTRWK1
+Active2		LQDTRWK2
+Active3		LQDTRWK3
+Liquidator/Pain			LQDTRPIN
+$volume Liquidator/Pain 0.6
+Liquidator/Death		LQDTRDTH
+Liquidator/LegLift		LQDTRST1
+$volume Liquidator/LegLift 0.75
+Liquidator/LegStomp		LQDTRST2
+$volume Liquidator/LegStomp 0.75
+Liquidator/Fire			LQDTSHOT
+LiqPlasma/Explode		LQDTSHTX
+$volume LiqPlasma/Explode 0.7
+$limit LiqPlasma/Explode 4
+Liquidator/BFG			LQDTBFGC
+LiqBFG/Fire				LQDTBFGF
+LiqBFG/Explode			LQDTBFGX

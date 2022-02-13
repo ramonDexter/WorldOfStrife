@@ -1,0 +1,91 @@
+PointLight TROCKET
+{
+	Color 0.9 1.0 0.0
+	Size 68
+	Offset -40 0 0
+	Attenuate 1
+}
+FlickerLight TROCKET_X1
+{
+	Color 0.9 1.0 0.5
+	Size 88
+	SecondarySize 96
+	Chance 0.3
+	Attenuate 1
+}
+FlickerLight TROCKET_X2
+{
+	Color 0.4 0.5 0.1
+	Size 112
+	SecondarySize 120
+	Chance 0.3
+	Attenuate 1
+}
+FlickerLight TROCKET_X3
+{
+	Color 0.2 0.3 0.0
+	Size 136
+	SecondarySize 144
+	Chance 0.3
+	Attenuate 1
+}
+Object RTurretProjectile
+{
+	Frame TMISA { Light TROCKET }
+	Frame TMISB { Light TROCKET_X1 }
+	Frame TMISC { Light TROCKET_X2 }
+	Frame TMISD { Light TROCKET_X3 }
+}
+FlickerLight DEATHEXPSMALLER_1
+{
+	Color 0.9 1.0 0.4
+	Size 68
+	SecondarySize 76
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALLER_2
+{
+	Color 0.9 1.0 0.4
+	Size 84
+	SecondarySize 92
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALLER_3
+{
+	Color 0.8 0.9 0.2
+	Size 80
+	SecondarySize 88
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALLER_4
+{
+	Color 0.7 0.6 0.0
+	Size 76
+	SecondarySize 84
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALLER_5
+{
+	Color 0.6 0.5 0.0
+	Size 52
+	SecondarySize 60
+	Chance 0.8
+}
+Object DeathExplosionSmaller
+{
+	Frame DBOMA { Light DEATHEXPSMALLER_1 }
+	Frame DBOMB { Light DEATHEXPSMALLER_1 }
+	Frame DBOMC { Light DEATHEXPSMALLER_2 }
+	Frame DBOMD { Light DEATHEXPSMALLER_2 }
+	Frame DBOME { Light DEATHEXPSMALLER_2 }
+	Frame DBOMF { Light DEATHEXPSMALLER_3 }
+	Frame DBOMG { Light DEATHEXPSMALLER_3 }
+	Frame DBOMH { Light DEATHEXPSMALLER_4 }
+	Frame DBOMI { Light DEATHEXPSMALLER_4 }
+	Frame DBOMJ { Light DEATHEXPSMALLER_5 }
+	Frame DBOMK { Light DEATHEXPSMALLER_5 }
+}
+Object RocketTurret
+{
+	Frame RTURB { Light DEATHEXPSMALL_1 }
+}

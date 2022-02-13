@@ -50,6 +50,9 @@ version "3.8.0"
 #include "zscript/monsters/sheep.zs"
 #include "zscript/monsters/critters.zs"
 #include "zscript/monsters/ascens.zs"
+#include "zscript/monsters/wosCultist.zs"
+#include "zscript/monsters/wosLiquidator.zs"
+#include "zscript/monsters/wosrocketturret.zs"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  weapons  ///////////////////////////////////////////////////////////////////

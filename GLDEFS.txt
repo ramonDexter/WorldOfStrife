@@ -17,8 +17,8 @@
 #include "gldefs/strifeholograms.gl"
 #include "gldefs/hellscapeNavigator.gl"
 #include "gldefs/shaders.gl"
-//#include "gldefs/props.gl"
-//#include "gldefs/oldLantern.gl"
+#include "gldefs/cultist.gl"
+#include "gldefs/liquidator.gl"
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

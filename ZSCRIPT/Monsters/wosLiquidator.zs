@@ -1,5 +1,7 @@
 class wosLiquidator : actor {
     Default {
+		//$category "Monsters/WoS"
+		//$Title "Liquidator robot"
         Radius 52;
         Height 120;
         Health 2400;
@@ -57,7 +59,7 @@ class wosLiquidator : actor {
             LIQU E 3;
             Goto See;
         Death:
-            LIQU E 2
+            LIQU E 2;
             LIQU E 2 A_Scream();
             LIQU E 4 Bright A_SpawnItemEx("DeathExplosionSmall",random(-8,8),random(-70,70),random(20,90),0,0,0);
             LIQU E 2 Bright A_TossGib();
@@ -141,12 +143,12 @@ States
 			A_SpawnItemEx("whycantyouusedecimalnumbersonmathoperations",0,0,0,0,0,0);
 		}
 		LQBG GHIJKL 2 {
-			A_Explode(user_xplosiondamage,user_xplosionradius,1);
+			A_Explode(xplosiondamage,xplosionradius,1);
 			xplosionradius+=16;
 			xplosiondamage-=3;
 		}
 		TNT1 AAAA 2 {
-			A_Explode(user_xplosiondamage,user_xplosionradius,1);
+			A_Explode(xplosiondamage,xplosionradius,1);
 			xplosionradius+=16;
 			xplosiondamage-=3;
 		}

@@ -1,0 +1,185 @@
+PointLight LIQPLASMA
+{
+	Color 1.0 0.2 0.2
+	Size 32
+}
+PointLight LIQPLASMA_X1
+{
+	Color 1.0 0.3 0.3
+	Size 64
+}
+FlickerLight LIQPLASMA_X2
+{
+	Color 1.0 0.1 0.1
+	Size 48
+	SecondarySize 56
+	Chance 0.7
+}
+FlickerLight LIQPLASMA_X3
+{
+	Color 1.0 0.1 0.1
+	Size 40
+	SecondarySize 48
+	Chance 0.7
+}
+FlickerLight LIQPLASMA_X4
+{
+	Color 1.0 0.1 0.1
+	Size 32
+	SecondarySize 40
+	Chance 0.4
+}
+Object LiquidatorPlasma
+{
+	Frame LQSHA { Light LIQPLASMA }
+	Frame LQSHB { Light LIQPLASMA }
+	Frame LQSHC { Light LIQPLASMA }
+	Frame LQSHD { Light LIQPLASMA_X1 }
+	Frame LQSHE { Light LIQPLASMA_X2 }
+	Frame LQSHF { Light LIQPLASMA_X2 }
+	Frame LQSHG { Light LIQPLASMA_X3 }
+	Frame LQSHH { Light LIQPLASMA_X3 }
+	Frame LQSHI { Light LIQPLASMA_X4 }
+}
+FlickerLight LIQBFG
+{
+	Color 1.0 0.3 0.3
+	Size 96
+	SecondarySize 108
+	Chance 0.8
+}
+PointLight LIQBFG_X1
+{
+	Color 1.0 0.5 0.5
+	Size 142
+}
+FlickerLight LIQBFG_X2
+{
+	Color 1.0 0.4 0.4
+	Size 128
+	SecondarySize 136
+	Chance 0.7
+}
+FlickerLight LIQBFG_X3
+{
+	Color 1.0 0.2 0.2
+	Size 108
+	SecondarySize 120
+	Chance 0.7
+}
+PointLight LIQBFG_X4
+{
+	Color 0.7 0.0 0.0
+	Size 96
+}
+Object LiquidatorBFG
+{
+	Frame LQBGA { Light LIQBFG }
+	Frame LQBGB { Light LIQBFG }
+	Frame LQBGC { Light LIQBFG }
+	Frame LQBGD { Light LIQBFG }
+	Frame LQBGG { Light LIQBFG_X1 }
+	Frame LQBGH { Light LIQBFG_X2 }
+	Frame LQBGI { Light LIQBFG_X2 }
+	Frame LQBGJ { Light LIQBFG_X3 }
+	Frame LQBGK { Light LIQBFG_X3 }
+	Frame LQBGL { Light LIQBFG_X4 }
+}
+FlickerLight DEATHEXPBIG_1
+{
+	Color 0.9 1.0 0.4
+	Size 120
+	SecondarySize 128
+	Chance 0.8
+}
+FlickerLight DEATHEXPBIG_2
+{
+	Color 0.9 1.0 0.2
+	Size 112
+	SecondarySize 120
+	Chance 0.8
+}
+FlickerLight DEATHEXPBIG_3
+{
+	Color 0.7 0.8 0.0
+	Size 104
+	SecondarySize 112
+	Chance 0.8
+}
+FlickerLight DEATHEXPBIG_4
+{
+	Color 0.5 0.6 0.0
+	Size 80
+	SecondarySize 88
+	Chance 0.8
+}
+Object DeathExplosionBig
+{
+	Frame DBO2A { Light DEATHEXPBIG_1 }
+	Frame DBO2B { Light DEATHEXPBIG_1 }
+	Frame DBO2C { Light DEATHEXPBIG_1 }
+	Frame DBO2D { Light DEATHEXPBIG_1 }
+	Frame DBO2E { Light DEATHEXPBIG_1 }
+	Frame DBO2F { Light DEATHEXPBIG_2 }
+	Frame DBO2G { Light DEATHEXPBIG_2 }
+	Frame DBO2H { Light DEATHEXPBIG_2 }
+	Frame DBO2I { Light DEATHEXPBIG_3 }
+	Frame DBO2J { Light DEATHEXPBIG_3 }
+	Frame DBO2K { Light DEATHEXPBIG_4 }
+	Frame DBO2L { Light DEATHEXPBIG_4 }
+}
+FlickerLight DEATHEXPSMALL_1
+{
+	Color 0.9 1.0 0.4
+	Size 80
+	SecondarySize 88
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALL_2
+{
+	Color 0.9 1.0 0.4
+	Size 96
+	SecondarySize 104
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALL_3
+{
+	Color 0.8 0.9 0.2
+	Size 92
+	SecondarySize 100
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALL_4
+{
+	Color 0.6 0.7 0.0
+	Size 88
+	SecondarySize 96
+	Chance 0.8
+}
+FlickerLight DEATHEXPSMALL_5
+{
+	Color 0.5 0.6 0.0
+	Size 64
+	SecondarySize 72
+	Chance 0.8
+}
+Object DeathExplosionSmall
+{
+	Frame DBOMA { Light DEATHEXPSMALL_1 }
+	Frame DBOMB { Light DEATHEXPSMALL_1 }
+	Frame DBOMC { Light DEATHEXPSMALL_2 }
+	Frame DBOMD { Light DEATHEXPSMALL_2 }
+	Frame DBOME { Light DEATHEXPSMALL_2 }
+	Frame DBOMF { Light DEATHEXPSMALL_3 }
+	Frame DBOMG { Light DEATHEXPSMALL_3 }
+	Frame DBOMH { Light DEATHEXPSMALL_4 }
+	Frame DBOMI { Light DEATHEXPSMALL_4 }
+	Frame DBOMJ { Light DEATHEXPSMALL_5 }
+	Frame DBOMK { Light DEATHEXPSMALL_5 }
+}
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+Decal LiqPlasmaLightning1
+{
+	pic BFGLITE1
+	shade "ff 30 30"
+	fullbright
+	x-scale 0.4
+	y-scale 0.4
+	randomflipx
+	animator GoAway2
+	lowerdecal Scorch
+}
+
+Decal LiqPlasmaLightning2
+{
+	pic BFGLITE2
+	shade "ff 30 30"
+	fullbright
+	x-scale 0.4
+	y-scale 0.4
+	randomflipy
+	animator GoAway2
+	lowerdecal Scorch
+}
+DecalGroup LiqPlasmaLightning
+{
+	LiqPlasmaLightning1 1
+	LiqPlasmaLightning2 1
+}
+Decal LiqBFGLightning1
+{
+	pic BFGLITE1
+	shade "ff 30 30"
+	fullbright
+	x-scale 0.8
+	y-scale 0.8
+	randomflipx
+	animator GoAway2
+	lowerdecal BFGScorch
+}
+
+Decal LiqBFGLightning2
+{
+	pic BFGLITE2
+	shade "ff 30 30"
+	fullbright
+	x-scale 0.8
+	y-scale 0.8
+	randomflipy
+	animator GoAway2
+	lowerdecal BFGScorch
+}
+
+DecalGroup LiqBFGLightning
+{
+	LiqBFGLightning1	1
+	LiqBFGLightning2	1
+}
+
+Generator LiquidatorPlasma LiqPlasmaLightning
+Generator LiquidatorBFG LiqBFGLightning

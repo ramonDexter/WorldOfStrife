@@ -1,0 +1,61 @@
+Příběhové pozadí:
+!!!předělat inkvizici na Bindery!!! - hotovo
+hlavní postava je členem Řádu Binderů; musí splnit poslední úkol, aby mohl být pasován na Inkvizitora a měl právo vykonávat právo
+Bindeři jsou polovojenská skupina v Řádu; funguje polosamostatně
+Členové řádu Binderů fungují jako vykonavatelé práva, soudce a kat v jedné osobě (inspirace - Judge Dredd)
+příběh se odehrává cca 50 let před událostmi ve Strifu, na jiném místě
+Řád se zde snaží působit méně represivně a více přátelsky; praktikuje metodu cukru a biče ve fázi permanentního cukru
+Rebelové zde nemají takřka žádnou podporu a platí za teroristy; jsou vedeni padlým knězem Řádu, který si chce uzurpovat moc pro sebe; pomocí artefaktu chtějí zničit Entitu, která řídí Řád; artefakt potřebují ke stavbě zařízení, pomocí kterého entitu chtějí zničit; 
+
+MAPY (lokace):
+Město Silent Hills 
+- Startovní lokace, Hub; hráč se sem může vracet nakupovat vybavení, atd  (TODO: Dodělat teleport z okolních lokací, formou nějaký stanice, nebo tak něco)
+Divočina  
+- okolí města; východní a západní břeh velké řeky, která protéká od města na jihu k jezeru na severu lokace; 
+Východní pahorkatina
+pahorkatina, skály, úzké stezky, mostky, a tak :)
+uprostřed mapy archeologické naleziště, odkud byl ukraden artefakt (main quest)
+v severní části se staví větrná farma, která by měla napájet město v případě výpadku elektrárny
+v jižní části vesnice zemědělců, kteří mají problémy s pavouky (subquest); za vesnicí zemědělců je továrna na munici+zbraně, kterou obsadili rebeleové; ředitel továrny utekl do vesnice, po hráči bude chtít, aby rebely vyhnal/pobil
+postup: hráč sem přijde vyzvednout předmět. V táboře archeologů je pouze jeden muž, který hráče pošle do chrámu. Něco se tam stalo a je potřeba pomoc. Hráč se vydá do chámu, několik bitev, na konci najde zraněného vědce, který ho pošle do vesnice. Na výzkumníky zaútočili rebelové a unesli šéfa výzkumu. Jediný přeživší vědec v chrámu hráče pošle do vesnice, aby se tam poptal, jesli neví něco o rebelech. Tam už na hráče čeká ředitel místní továrny na zbraně. Tu obsadili rebelové. Ředitel továrny potřebuje, aby hráč rebely pobil/vyhnal. 
+POSTUP TOVÁRNOU: 
+hráč přijde do továrny, do haly
+z haly do čističky
+z čističky nejdřív doleva, k reaktoru, získat klíče od pravý části
+v pravý části skrz sklady ven
+ve skladech bitka s rebely, artefakt nikde, vědec mrtvej, najde se jenom poznámka “Millport”
+Ancient Temple
+starý chrám, z dob před dopadem komety
+hrač bude dovnitř poslán vědcem - dole se něco stalo, je potřeba pomoc
+chrám udělat napůl zavalený, kameny, skály a tak
+do toho nějaký pavouky a další havěť (např. sentinely a mech. pavouky)
+
+
+Druhé město
+na ostrově
+mapa divočiny rozdělená na jih a sever ostrova
+mezi jihem a severem momentálně panuje silně napjatá situace
+na severu jsou kacíři, na jihu jsou následovníci Řádu
+na severu město Ravensport
+Millport - město na jihu ostrova
+postavit ho podle klamathu (!! jenom klamath!!) - hodně stylizovat do pouštního stylu
+hlavní základna binderů; cvičí se tady bindeři od noviců, kromě toho se tady provádějí kybernetické operace - novici dostávají nejrůznější vylepšení, aby mohli lépe plnit své úkoly
+3-4 subquesty
+Město Millport je malé město na okraji skal na ostrově <doplnit>. Severně od města leží nápravné zařízení Řádu, kam jsou odesíláni kacíři na převýchovu. Na západě je chemická továrna a toxická skládka, kam je vstup zakázán pod trestem smrti. Na východě leží malá vesnice. Na jihu jsou potom plantáže, odkud je zásobováno obyvatelstvo ostrova. Dále na sever leží malé město, které je pod skrytou kontrolou kacířů. 
+Bindeři nejsou ve městě moc dobře přijímaní, kvůli nehodě na základně. Výbuch v laboratořích zamořil část města jedovatým plynem. 30 lidí zemřelo. Bindeři mají od té doby pošramocenou pověst. Je třeba ji trošku napravit >> 2-3 questy.
+Main quest: Acolytes went roque - pomocí nalezeného artefaktu se rebelům podařilo získat kontrolu nad programátorem, a prostřednictvím programátora získali kontrolu nad místní posádkou Řádu. Hlavním úkolem bude zastavit tuto hrozbu.
+sub quest 1: Prison blues - Ve vězení severně od města došlo ke vzpouře. Osazenstvo povraždilo stráže a chystá se vyplenit Millport. Je třeba tam zaskočit a veliteli vzbouřenců zakroutit krkem. Starosta zaplatí slušnou sumu za důkaz, že je vše v pořádku.
+sub quest 2: Midnight glow - Na skládce toxického odpadu západně od města se ztratil technik. Šéf Tekgildy potřebuje, aby hráč technika našel a přivedl ho, případně přinesl co zbylo. Technika unesli rebelové, kteří se skrývají v opuštěné laboratoři.
+sub quest 3: Clear the garden - Místní hydroponické skleníky byly zamořeny mutanty. Je třeba mutanty pobít a opravit díru, kterou se mutanti dovnitř dostali. Díru opraví zařízení, které za tím účelem hráč získá u Tekgildy. Nejdřív bude třeba za pomoci trhaviny vyčistit díru od trosek a pak ji uzavřít za pomoci zařízení.
+sub quest 4: Blackmail local criminal boss - starosta města má problémy s místním “počestným obchodníkem”, majitelem kasina. Starosta potřebuje, aby hráč získal důkazy, které mu umožní obchodníka podchytit legální cestou. Pro hráče to bude znamenat vloupání se a boj s obchodníkovou ochrankou (TO-DO: udělat nějaký customized sprity acolytů) ve víkendové haciendě obchodníka, která se nachází západně od města.
+sub quest 5: Oh brother, where art thou? - Rebelové unesli bratra místního řezníka. Řezník za jeho nalezení nabízí slušnou odměnu. Rebelové se skrývají v jeskyni kousek od města (západní divočina).
+sub quest 6: Find heretics
+sub quest 7: Z hospody utekl kuchař. Jestli hráč chce, může se poptat po městě, jestli někdo nehledá práci. >> HOTOVO
+Ravensport - město na severu ostrova
+město kacířů, postavit podle Denu
+
+
+divočina kolem města
+pobřeží lemované skalami
+polopouštní téma
+trosky staré továrny, toxická jezírka, mutanti a tak

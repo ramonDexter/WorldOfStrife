@@ -1,0 +1,34 @@
+Millport - koncept
+////////////////////////////////////////////////////////////////////////////////
+
+Město Millport je malé město ležící na jižním okraji Ostrova. Město představuje hlavní bránu obchodu na Ostrově, v místním přístavě se odehrává veškerá výměna zboží s pevninou. Millport je zdejší hlavní obchodní uzel, v městských obchodech lze sehnat prakticky jakékoliv zboží. Město ovládá místní šlechtic, baron Sangfeld. Jeho obchodní praktiky jsou často za hranou zákona, ale díky konexím a štědrým úplatkům spravedlnosti uniká.
+
+Severně od města leží klášter Řádu, kam jsou odesíláni kacíři na převýchovu. Na východě leží malá vesnice. Na západě jsou plantáže, odkud je zásobováno obyvatelstvo ostrova. Dále na sever leží malé město, které je pod skrytou kontrolou kacířů.
+nápad: Klášter byl napaden bandity, hráč dostane quest na vybití banditů v klášteře
+
+- Jaká je atmosféra sídliště?
+přístavní město, obchodní uzel
+- Jaká je velikost sídliště?
+středně velké město
+- Jaká je technologická úroveň sídliště?
+město - mají tady tekoucí vodu, elektrické osvetlení, kanalizaci; je tu dostupná odborná lékařská péče
+- Kdo řídí sídliště, kdo ho ovládá?
+Město je formálně pod kontrolou Řádu, ale veškerou kontrolu nad městem drží místní Baron, vlastník pozemků v okolí města. Baron řídí obchod ve městě prostředictvím podplacené Hanzy.
+- Jací jsou obyvatelé sídliště?
+místí jsou k cizincům poměrně přátelští, na cizince jsou totiž zvyklí díky přístavu
+- Kde pracují obyvatelé sídliště?
+část místních pracuje v přístavu jako dělníci, část pracuje na Baronových pozemcích a část jsou obchodníci
+- Jak jsou obyvatelé sídliště majetní?
+dělníci jsou majetní stejně jako jinde; obchodníci patří k těm bohatším
+- Co dělají ve svém volném čase?
+místní tráví svůj volný čas v městských krčmách nebo výlety v okolí města
+- Jaká je zdejší ochrana zákona?
+dohled nad pořádkem zajištují Akolyté Řádu a Bindeři
+- Jaká je v sídlišti kriminalita?
+kriminalita ve městě je poměrně nízká, pokud nepočítám Baronovy aktivity, které jsou často za hranou zákona
+- Jaké jsou zde náboženství?
+ve městě se nachází kostel Řádu, kam dochází většina obyvatel měst na pravidelné bohoslužby
+- Které organizace zde mají základny?
+ve městě se nachází hlavní základna Binderů
+
+

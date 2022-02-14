@@ -1,0 +1,53 @@
+MAIN QUEST:
+Zastavit kacíře, než přivedou zlo.
+dodělat
+ 
+MĚSTO: Aby se hráč dostal ven z města, musí pro starostu splnit 3 úkoly. Zloději ukradli důležitou součástku z elektrárny a bránu není možné otevřít. Hráč tak musí nejdřív součástku najít. Starosta ho nejdřív pošle do čističky odpadu, kde se prý mají zloději skrývat. Tam najde pouze prázdný úkryt. Po návratu ke starostovi se hráč dozví, že má pokračovat do místní opuštěné továrny, kde se zloději skrývají. Velitel zlodějů je svolný vrátit součástku, za úplatu. Pokud má hráč příslušný obnos, součástku může vykoupit bez boje.
+Pobij pavouky v čističce odpadu a podívej se po zlodějích
+Pobij pavouky >> token1
+Hráč najde skrýš zlodějů, ta je však prázdná >> token2
+Najdi krále zlodějů a získej od něj součástku do elektrárny
+Součástka = token 
+Kterou pak použij na opravu elektrárny. Obnoví se napájení brány a starosta bude moci bránu otevřít.
+Opravení elektrárny >> token
+Soudce: 2x
+Najdi rebely mezi mistnimi - hotovo, otesotvano
+soudce zada quest
+hrac se zacne vyptavat mezi mistnimi; na zaklade tokenu dostane odpovedi >>dalsi token ktery ho nasmeruje k rebelovi
+hrac zabije rebela >>finish token
+navrat, odmena
+Zjisti kdo zabil mistniho obchodnika v laznich - hotovo
+zada se quest, zavola se script ktery vytvori scenu v laznich
+polozit mrtvolu, svedky, straze
+po opusteni lazni se tyto postavy zase odstrani, resp. presunou do svych pozic - svedkove do svych domu
+od svedku zjisti stopu vedouci do prevlekaren, kde mel obchodnik svoje veci, tam najde hrac odpalovaci zarizeni, ktere vyrobil mestsky techsmith >> ten navede hrace k dalimu obchodnikovi, ktery byl se zavrazdenym ve sporu
+vrah bydli ve meste >> hrac ho zajisti, zavola straze
+skript: polozit straze
+navrat k soudci >> odmena
+Biskup: 2x
+Najdi kacire v divocine
+v divocine maji kaciri svoji tajnou svatyni >> dostan se tam, pobij kacire, vrat se
+odmena u biskupa
+Najdi kacire ve meste
+nekde ve meste se nachazi svatyne kaciru. Najdi svatyni a pobij kacire.
+vyptavacka mezi mistnima >> skript: map indicator
+ve svatyni pobij kacire
+seber lebku jejich velitele
+odmena po navratu
+Šéf TekGildy: 3+1
+Prines rudu z dolu
+jdi do dolů a seber zpracovanou rudu
+přines rudu guvernérovi
+Oprav zarizeni v dolech
+jdi do dolů a zjisti, co je třeba k opravě zařízení
+jdi k techsmithovi a požádej ho o součástky
+předá ti součástky
+jdi do dolů a oprav tam zařízení
+vrať se ke guvernérovi pro odměnu
+Vyčisti podzemí od mutantů a pavouků
+v podzemí pod tekgildou se přemnožili pavouci; podzemí je třeba vyčistit
+Divočina: 
+
+MAP06 - Highlands:
+aby se hráč mohl dostat do severního teriotoria, musí pro starostu vesnice splnit dva úkoly 1 - Najdi ztracené/ukradené zařízení; 2 - Oprav místní větrolapy(elektrarna)
+v severním teriotoriu musí pomoct Tekgildě, aby ho její šéf pustil do chodeb, který ho devedou k tajný základně kacířů

@@ -1,0 +1,25 @@
+Příběh - koncept:
+Už padesát let uplynulo od doby, kdy do zdejšího kraje poprvé vstoupila bota vojáka Řádu. Od té doby se mnohé změnilo. řád zprvu postupoval tvrdě a nelítostně, ale postupem času se tvrdá pěst změnila v otevřenou dlaň. Řád pochopil, že více dosáhne klidným a spravedlivým přístupem, než represí. Spolu s Řádem do kraje přišla i Inkvizice, která se zaměřila na vykořenění skrytého nepřítele, kterým se ukázali být všichni, kteří nesouhlasili s oficiálním učením Řádu.
+V současné době dochází k nebývalému vzestupu kacířského hnutí. Řád se snaží všechny případy důsledně utajovat. Případně dochází k tvrzení, že šlo o obyčejné kriminálníky. Faktem však je, že občas někteří lidé beze stopy zmizí. A nejen to, zmizí i jakékoli záznamy o jejich existenci. Přestanou existovat. Řád tak udržuje klid a pořádek.
+U města Silent Hills byly objeveny jisté artefakty. Mezi lidmi se povídá, že pocházejí z doby před dopadem komety. Inkvizice se pokusila artefakty zajistit, ale byly ukradeny dřív, než byly uloženy do bezpečnostních kontejnerů.
+Velitel Inkvizice vybral novice, který byl právě povýšen do hodnosti Inkvizitora. Bude to pro něj dobrý úkol, aby prokázal své schopnosti a loajalitu Řádu. 
+Rebelům se podaří dostat pod svojí kontrolu místní posádku Řádu prostřednictvím zkorumpovaného programátora. Artefakt byl totiž kontrolní čip s kódem, který jim umožnil získat kontrolu nad systémy Řádu. Co je ovšem horší, získali část sigilu. 
+Postup:
+byl ukraden artefakt
+hráč musí nejdřív získat informace, kde by mohl být uložen >> místo najít
+1 - 2 mapy; alespoň jedno město
+informace vedoucí k artefaktu budou jako odměna za splnění questů
+QUEST 1:
+QUEST 2:
+artefakt tam ale není; hráč najde zmínky o tom, že byl převezen na jiné místo
+1 velká mapa, 2 vesnice
+informace vedoucí k artefaktu budou jako odměna
+QUEST 1:
+QUEST 2:
+artefakt tam opět není, byl převezen jinam >> hráč tentokrát získá konečnou lokaci artefaktu
+artefakt je uložen ve starém vojenském komplexu >> hráč nejdřív musí získat přístupové kódy, aby se dostal dovnitř >> další větší venkovní mapa v okolí vojenského komplexu, kde bude hráč hledat kódy >> kódy jsou 3 a jsou uloženy v různých starých krytech, které musí hráč nejdřív najít
+
+
+SVĚT/WORLDMAP:
+
+

@@ -1,0 +1,9 @@
+Komunikátor
+inv item
+hráč bude dostávat zprávy, který se budou zapisovat do journalu (prostřednictvím inv tokenů)
+mapMarkery - pošahaná logika ->> vložím ho do mapy, v ENTER scriptu vložím Thing_Activate(tid markeru) aby nebyl vidět. Aby byl marker vidět, musím dát skriptem/lineaction Thing_DEactivate. Fakt logika, tvl…
+
+Millport
+po získání důvěry obyvatel hráč dostane inv item, na základě kterého se v rozhovorech otevřou nové možnosti s informacemi týkajícími se hlavního questu
+to samé po zadání vedlejších questů >> v rozhovorech otevřít možnosti dotazů na úkoly, ve kterých můžou být rady a hinty
+~možnost spaní včetně přepínání oblohy a změny brightness...to bude asi oříšek, ale půjde to >> hotovo (důkladně otestovat)

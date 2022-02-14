@@ -1,0 +1,25 @@
+MAP02 - Město
+dodělat lázně
+dodělat městskou nemocnici
+dodělat okolí města (alespoň jednu mapu s malým úkolem)
+předělat město u západní brány - rezidenční čtvrť
+
+
+Nápady:
+mini - quest (bez zápisu v journalu): Pokud je hráč binder (== má inquisitorBadge) Na policejní stanici poručík požádá o spolupráci při výslechu, pošle hráče dál do výslechové místnosti. Tam krátkej rozhovor zkončenej zastřelením vyslýchaného, z kterého vypadne vysílačka. Hráč dostane malou finanční odměnu a lokaci tajný skrýše někde v okolí města.
+něco na způsob quest markerů, resp zkusit sreplikovat systém v SVE - hotovo
+předělat pistoli - hotovo
+random rozhovory k civilistům
+mutanty z SOA - ty mnou upravený - hotovo
+altfire pro Upgraded Binder Staff - něco jako blesky ( viz blesky v asterionu - udělat podle nich), nebo tak něco, přepínat se to bude přes altfire, jako xbow, mauler a grndlnchr
+nějaký listiny - udělat je jako flatsprity
+journal udělat strukturovanější - stránky pro jednotlivý mapy
+předělat status screen: místo batterycell dát coin >> předělat text na grafice
+natahal jsem nějaký ženský, takže se je pokusit naroubovat na těla peasantů
+udělat cyber peasanty podle těch zrrionovejch za pomocí textures >> vzít jenom hlavy a ty přidat na existující těla + třeba i color translation
+pokračovat v tvorbě přístavu >> nějaký jeřáby, bedny, krabice, sudy, zařízení, stroje; pokusit se vymodelovat loď na vodě - nějakej katamarán, nebo tak něco. Rozhodně něco futuristickýho.
+Slumy - spletitá síť chodeb a uliček v domech, beggaři, tekPeasanti a tak
+dodělat místnost dolního techsmithe - teď je moc prázdná (nějakej nábytek a tak)
+městský park uvnitř jedný z budov - aby toho nebylo moc
+opravit: shadow armor, předělat targeter >>vytahnout z gzdoom.pk3, taky env armor; shadow armor nechat puvodni
+HG HUD - změnšit display pro ammo - snížit to, ammo pro xbow dát vedle sebe

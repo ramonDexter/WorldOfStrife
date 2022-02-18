@@ -9,7 +9,7 @@ Vedle TekGildy působí na zemí království podobná společnost. Ačkoli men�
 Dalším významným cechem je Gilda Stavitelů. Ve většině měst se zedníci sdružili v nejrůznější spolky, aby mohli lépe a efektivněji vykonávat svoji práci. Při spolupráci měst pak docházelo k neshodám a potyčkám mezi cechy stavitelů z jednotlivých měst, většinou nad řízením a vedením společných staveb. Tyto potyčky často končily krvavě a docházelo i k úmrtím účastníků. Do stupňující se situace vstoupil svojí autoritou král a pomocí svého Ediktu založil Gildu Stavitelů, která sjednotila samostatné cechy pod jednu autoritu, zodpovědnou přímo králi. Gilda Stavitelů však nemá monopol na provádění všech staveb, spíše slouží jako kontrolní a dohlížecí orgán, kontrolující kvalitu a provedení staveb.
 ////////////////////////////////////////////////////////////////////////////////
 
-Časová  osaa
+Časová  osa
 
 
 The Order - Řád

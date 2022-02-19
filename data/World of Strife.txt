@@ -10,10 +10,41 @@ Dalším významným cechem je Gilda Stavitelů. Ve většině měst se zedníci
 ////////////////////////////////////////////////////////////////////////////////
 
 Časová  osa
--30 - Začíná projekt Záchrana, jehož cílem bylo vybudování sítě úkrytů a automatizovaných terraformačních systémů pro případ zničení života na Zemi.
+-30 (2064) - Začíná projekt Záchrana, jehož cílem bylo vybudování sítě úkrytů a automatizovaných terraformačních systémů pro případ zničení života na Zemi.
 0 (2094) - Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života na Zemi.
 128 - Ve středu kontinentu se usazují nomádské skupiny přeživších. Sídliště bude později známo jako město Bodrov.
-155 - Vznik církve Řádu. Původně šlo o přeživší z jednoho z Krytů. AI řídící kryt získala vědomí a začala ke svým svěřencům mluvit jako jejich duch, nebo spíše Bůh. Přeživší vystoupili na povrch a začali budovat novou civilizaci, řízenou z pozadí prastarou AI.
+255 - Vznik církve Řádu. Původně šlo o přeživší z jednoho z Krytů. AI řídící kryt získala vědomí a začala ke svým svěřencům mluvit jako jejich duch, nebo spíše Bůh. Přeživší vystoupili na povrch a začali budovat novou civilizaci, řízenou z pozadí prastarou AI.
+283 - Na jižní pobřeží vzniká osada, která později vyrostě ve město Millport.
+342 - Nomádský kmen Angarů se usazuje na západní poloostrově, který je od té doby nazýván poloostrov Angar. 
+305 - Církve zakládá na východním pobřeží město Holden, které volí za své hlavní sídlo. Od té doby ve městě sídlí nejvyšší Církve.
+325 - V Kalanském zálivu na západním pobřeží vzniká město Narfolk, které se stává sídelním městem Knížete, jehož ozbrojenci snadno získávají kontrolu nad úrodným krajem kolem zálivu. Od té doby rod Narfolků ovládá zdejší kraj.
+331 - Malá obchodní osada na východním okraji Tarských bažin se postupně mění ve město Eldham. Malé provinční město na náhorní plošině je soustavně bičováno větry vanoucími z plání. 
+339 - Eldham se dostává pod kontrolu rodu Ferrisů. Hrabě Ferris získá pod kontrolu kmeny žijící na planinách a profituje z obchodu s domorodým zbožím. 
+343 - Hrabě Ferris nechává na západním okraji Tarských bažin založit město Westmarch. Vzdálenost od Ferrisova panství o pár let později způsobí že se město osamostatní. Místní vyženou Ferrisovy úředníky a vyhlásí samostatnost. Zároveň Westmarch zahájí kolonizaci západní části Annyjského poloostrova.
+352 - Angarové zakládají město Relond, které se má stát hlavním městem jejich rodu. Nejvyšší Chán prohlašuje poloostrov Angar za svatou půdu, do které mají zapovězen vstup všichni cizinci. Začíná tak dekádu trvající doba izolace, která Angarům později přinese hladomor.
+363 - Rod Angarů ukončuje v důsledku dlouhotvající neúrody politiku izolacionismu a vysílá emisary do sousedních krajů, se kterými se snaží obnovit značně pošramocené vztahy. Tyto snahy budou trvat mnoho let.
+402 - V Millportu se schází skupina spravedlivých, která později vejde ve známost jako Řád Binderů. Město si vybírají za svoji hlavní základnu a nejsvětější svatyni. Bindeři později žačnou spolupracovat s Církví a vstoupí do jejích služeb.
+467 - Válka mezi Angarskou říší a Ferrisovým knížectvím končí patovou situací, kterou musí rořešit soudce změny určený Církví. Angarská říše je určena za víteze sporu a Ferrisovo knížectví musí ustoupit v Nagrských územních nárocích. Angarská říše se tak dostává do držení Keralie, úrodného kraje na břehu Severního zálivu. 
+524 - Narodil se muž, který bude v dopělosti znám jako Velký Guru. Jeho učení bude Církví označeno za nejvyšší herezi, kterou Církevní Inkvizice trestá smrtí na hranici. Stoupenci velkého Guru proto šíří Jeho učení v ilegalitě.
+605 - Rod Tabitů, ovládající Millport, podniká vojenskou výpravu za účelenm kolonizace kraje severně od města. Náhorní planina později vejde ve známost jako Tabitská pláň, poskytne místo početným statkům a farmám. Tyto farmy zásobují město, a přebytky pak prodávají cestujícím obchodníkům, jejichž karavany křižují krajem.
+661 - Osada, která bude později známá jako Bodrov, postupně mění majitele. Nejprve ji drží Ferrisové, pak se osada osamostatní jako svobodné město Brod. Tak zůstane zhruba sto let.
+722 - V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků
+758 - Ve měste Brodě se narodil muž jménem Bodrik. Prožil šťastné dětství jako syn strojníka. Jeho otec patřil mezi ty zámožnější, takže si mohl dovolit syna zapsat ke studiu u TekGildy. Bodrik tak získal základní vzdělání. Později se rozhodl vstoupit do zdejší Stráže, kde rychle postupoval vzhůru, až se stal velitelem jedné z pevností na severním okraji území brodských.
+779 - Bodrik se stává velitelem pevnosti na severním oraji území brodských. 
+782 - Bodrikova pevnost je napadena a do základů vypálena muži Ferrisova vosjka. Bodrik a hrstka jeho mužů přežívá. Vracejí se do města, kde se setkávají s obviněním z dezerce. Bodrik je odveden do pevnosti na úpatí hory Aton, kde má strávit následujících dvacet let.
+787 - Bodrik z vězení za pomoci dalších neprávem odsouzených spoluvězňů uniká a slibuje pomstu těm ,kdo ho křivě obvinili. Během dvou let koleme sebe shromažďuje schopnou armádu. Jako první úkol si ukládá dobytí města a vypuzení těch, kteří ho tolik urazili.
+788 - Bodrik dobývá město Brod. Tak vzniká město Bodrov, které Bodrik vyhlašuje za hlavní město svého království. Jako první krok stanovuje stabilizaci vztahů s Ferrisovým knížectvím na severu. K tomu má sloužit nabídka k sňatku s Ferrisovou dcerou, kterou kníže nejprve odmítá. Přesvědčí do až několik vozů zlata, která Bodrik pošle jako svatební dar. Pak už starý kníže nenamítá. Svatba je oslavena na jaře následujícího roku.
+789 - Starý hrabě Ferris umírá a vlády nad jeho knížectvím se tak ujímá Bodrik jakožto manžel Ferrisovy dědičky. Bodrikovo království se tak rozrůstá o značná území na Větrných pláních.
+794 - Do Bodrovu přijíždějí velvyslanci z Angarské říše s nabídkou spojenectví. Královna Angarské říše nabízí Bodrikovi manželství, výměnou za spojení obou říší. Bodrik nejprve váhá, ale pak souhlasí, zcela v rozporu s doktrínou Církve. Nastává tak tříleté období klatby, kde jsou zástupci Církve vykázáni z Bodrikova králoství a město Holden, halvní sídlo Církve, ležící na území králoství, se stálá zakázaným územím. Bodrikovi se tato situace pouze hodí. Církev totiž až příliš často zasahuje do řízení státu a výkonu práva.
+798 - Ferrisova dcera, Bodrikova první manželka, umírá na břišní tyfus. Církev odvolává klatbu a vysílá emisary na území Angarské říše. Královna Angarské říše vyjadřuje nesouhlas s šířením učení Církve, ale je umlčena BOdrikovým ujištění, že je vše pod jeho kontrolou.
+801 - Bodrik uzavírá spojenectví s rodem Tabitů a postupně získává pod svoji kontrolu Tabotské pláně i Kolymu, poloostrov na jihovýchodním pobřežím. Zejména Kolyma je důležitým strategickým územím, protože jde o jeden z nejúrodnějších krajů na Kontinentu.
+812 - Bodrikova armáda získává kontrolu nad divokým Velkým Hvozdem, obývaným kmeny divokých lesních lidí. Zdejší kmeny jsou známy pro svojí řemeslnou výrobu, ale také neobyčejnou krvelačnost a zálibu v lidském mase. Jejich nájezdy na osady na okraji Velkého Hvozdu představoly rostoucí hrozbu, kterou bylo třeba řešit rychle.
+
+
+
+
+
+
 
 
 

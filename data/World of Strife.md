@@ -1,4 +1,5 @@
-World of Strife
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////  World of Strife  ///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 Dopad komety znamenal konec života tak jak jsme ho znali.
 Krátce po dopadu komety skončilo lidstvo v troskách. Lidská civilizace prakticky přestala existovat, lidstvo se vrátilo na úroveň doby kamenné. Energetické přenosové soustavy byly zničeny, stejně tak distribuční sítě. Většina lidí zemřela krátce po dopadu komety. Přeživší se vrátili k nomádskému způsobu života, hledajíc jakékoli potraviny. Zemědělství se vrátilo až po stovce let, když skončila zima způsobená dopadem komety. Lidé se začali usazovat na úrodných místech, nejvíce v údolích řek. Zhruba někdy v té době byly položeny základy prvních měst, které zpočátku vznikaly jako samostatné městské státy. Města jako Millport, Bodrov, Holden a Narfolk byla založena v této době. Brzy došlo k uzavření spojenectví a aliancí, ze kterých postupně vznikly státy. Lidská společnost se však vrátila k feudálnímu zřízení. Nomádské skupiny, které se toulaly zničenou zemí, byly většinou vedeny náčelníky. Z potomků těchto náčelníků vznikla šlechta, která své nároky zakládá na rodové tradici. Postavení běžných lidí se značně liší kraj od kraje. Někde jsou obyčejní lidé svobodní, zatímco jinde mají postavení nevolníků se vším, co k tomu patří.
@@ -9,66 +10,87 @@ Vedle TekGildy působí na zemí království podobná společnost. Ačkoli men�
 Dalším významným cechem je Gilda Stavitelů. Ve většině měst se zedníci sdružili v nejrůznější spolky, aby mohli lépe a efektivněji vykonávat svoji práci. Při spolupráci měst pak docházelo k neshodám a potyčkám mezi cechy stavitelů z jednotlivých měst, většinou nad řízením a vedením společných staveb. Tyto potyčky často končily krvavě a docházelo i k úmrtím účastníků. Do stupňující se situace vstoupil svojí autoritou král a pomocí svého Ediktu založil Gildu Stavitelů, která sjednotila samostatné cechy pod jednu autoritu, zodpovědnou přímo králi. Gilda Stavitelů však nemá monopol na provádění všech staveb, spíše slouží jako kontrolní a dohlížecí orgán, kontrolující kvalitu a provedení staveb.
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 Časová  osa
 -30 (2064) - Začíná projekt Záchrana, jehož cílem bylo vybudování sítě úkrytů a automatizovaných terraformačních systémů pro případ zničení života na Zemi.
 0 (2094) - Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života na Zemi.
-128 - Ve středu kontinentu se usazují nomádské skupiny přeživších. Sídliště bude později známo jako město Bodrov.
-255 - Vznik církve Řádu. Původně šlo o přeživší z jednoho z Krytů. AI řídící kryt získala vědomí a začala ke svým svěřencům mluvit jako jejich duch, nebo spíše Bůh. Přeživší vystoupili na povrch a začali budovat novou civilizaci, řízenou z pozadí prastarou AI.
-283 - Na jižní pobřeží vzniká osada, která později vyrostě ve město Millport.
-342 - Nomádský kmen Angarů se usazuje na západní poloostrově, který je od té doby nazýván poloostrov Angar. 
-305 - Církve zakládá na východním pobřeží město Holden, které volí za své hlavní sídlo. Od té doby ve městě sídlí nejvyšší Církve.
-325 - V Kalanském zálivu na západním pobřeží vzniká město Narfolk, které se stává sídelním městem Knížete, jehož ozbrojenci snadno získávají kontrolu nad úrodným krajem kolem zálivu. Od té doby rod Narfolků ovládá zdejší kraj.
-331 - Malá obchodní osada na východním okraji Tarských bažin se postupně mění ve město Eldham. Malé provinční město na náhorní plošině je soustavně bičováno větry vanoucími z plání. 
-339 - Eldham se dostává pod kontrolu rodu Ferrisů. Hrabě Ferris získá pod kontrolu kmeny žijící na planinách a profituje z obchodu s domorodým zbožím. 
-343 - Hrabě Ferris nechává na západním okraji Tarských bažin založit město Westmarch. Vzdálenost od Ferrisova panství o pár let později způsobí že se město osamostatní. Místní vyženou Ferrisovy úředníky a vyhlásí samostatnost. Zároveň Westmarch zahájí kolonizaci západní části Annyjského poloostrova.
-352 - Angarové zakládají město Relond, které se má stát hlavním městem jejich rodu. Nejvyšší Chán prohlašuje poloostrov Angar za svatou půdu, do které mají zapovězen vstup všichni cizinci. Začíná tak dekádu trvající doba izolace, která Angarům později přinese hladomor.
-363 - Rod Angarů ukončuje v důsledku dlouhotvající neúrody politiku izolacionismu a vysílá emisary do sousedních krajů, se kterými se snaží obnovit značně pošramocené vztahy. Tyto snahy budou trvat mnoho let.
-387 - Církev zakládá severně od Millportu klášter.
+187 - Aktivují se kryty ukrývající terraformační zařízení. Obnova ekosystému začíná. Lidé i většina zvířat bude během staletí obnoveno za pomoci zařízení v krytech. Celé automatizované tovární linky, umělé dělohy a další technologie později upadnou v zapomnění, stejně jako znalosti o světě před dopadem asteroidu.
+305 - Kryty ukrývající klony lidí, které měly zalidnit obnovenou zemi, se otevírají a vypouštějí své 'produkty' do nového světa.
+338 - Ve středu kontinentu se usazují nomádské skupiny přeživších. Sídliště bude později známo jako město Bodrov.
+355 - Vznik církve Řádu. Původně šlo o přeživší z jednoho z Krytů. AI řídící kryt získala vědomí a začala ke svým svěřencům mluvit jako jejich duch, nebo spíše Bůh. Přeživší vystoupili na povrch a začali budovat novou civilizaci, řízenou z pozadí prastarou AI.
+383 - Na jižním pobřeží vzniká osada, která později vejde ve známost jako město Millport.
+442 - Nomádský kmen Angarů se usazuje na západní poloostrově, který je od té doby nazýván poloostrov Angar. 
+505 - Církev zakládá na východním pobřeží město Holden, které volí za své hlavní sídlo. Od té doby ve městě sídlí nejvyšší Církve.
+525 - V Kalanském zálivu na západním pobřeží vzniká město Narfolk, které se stává sídelním městem Knížete, jehož ozbrojenci snadno získávají kontrolu nad úrodným krajem kolem zálivu. Od té doby rod Narfolků ovládá zdejší kraj.
+531 - Malá obchodní osada na východním okraji Tarských bažin se postupně mění ve město Eldham. Malé provinční město na náhorní plošině je soustavně bičováno větry vanoucími z plání. 
+539 - Eldham se dostává pod kontrolu rodu Ferrisů. Hrabě Ferris získá pod kontrolu kmeny žijící na planinách a profituje z obchodu s domorodým zbožím. 
+543 - Hrabě Ferris nechává na západním okraji Tarských bažin založit město Westmarch. Vzdálenost od Ferrisova panství o pár let později způsobí že se město osamostatní. Místní vyženou Ferrisovy úředníky a vyhlásí samostatnost. Zároveň Westmarch zahájí kolonizaci západní části Annyjského poloostrova.
+547 - Válka mezi Westmarchem a Ferrisovým knížectvím končí vítězstvím Ferrisovy armády. Westmarch musí předat kontrolu nad Tarskými bažinami Ferrisovy výměnou za příslib míru. V čele westmarche stojí rod Connelů, kteří získali moc díky obchodu.
+549 - Ferrisovo knížctví napdá Angarskou říši. Začínají Pohraniční války.
+552 - Angarové zakládají město Relond, které se má stát hlavním městem jejich rodu. Nejvyšší Chán prohlašuje poloostrov Angar za svatou půdu, do které mají zapovězen vstup všichni cizinci. Začíná tak dekádu trvající doba izolace, která Angarům později přinese hladomor. Končí pohraniční války.
+563 - Rod Angarů ukončuje v důsledku dlouhotvající neúrody politiku izolacionismu a vysílá emisary do sousedních krajů, se kterými se snaží obnovit značně pošramocené vztahy. Tyto snahy budou trvat mnoho let.
+587 - Církev zakládá severně od Millportu klášter.
 389 - První  písemná zmínka o vesnici Eastcliff, ležící východně od Millportu.
-402 - V Millportu se schází skupina spravedlivých, která později vejde ve známost jako Řád Binderů. Město si vybírají za svoji hlavní základnu a nejsvětější svatyni. Bindeři později žačnou spolupracovat s Církví a vstoupí do jejích služeb.
-467 - Válka mezi Angarskou říší a Ferrisovým knížectvím končí patovou situací, kterou musí rořešit soudce změny určený Církví. Angarská říše je určena za víteze sporu a Ferrisovo knížectví musí ustoupit v Nagrských územních nárocích. Angarská říše se tak dostává do držení Keralie, úrodného kraje na břehu Severního zálivu. 
-524 - Narodil se muž, který bude v dopělosti znám jako Velký Guru. Jeho učení bude Církví označeno za nejvyšší herezi, kterou Církevní Inkvizice trestá smrtí na hranici. Stoupenci velkého Guru proto šíří Jeho učení v ilegalitě.
-605 - Rod Tabitů, ovládající Millport, podniká vojenskou výpravu za účelenm kolonizace kraje severně od města. Náhorní planina později vejde ve známost jako Tabitská pláň, poskytne místo početným statkům a farmám. Tyto farmy zásobují město, a přebytky pak prodávají cestujícím obchodníkům, jejichž karavany křižují krajem.
-661 - Osada, která bude později známá jako Bodrov, postupně mění majitele. Nejprve ji drží Ferrisové, pak se osada osamostatní jako svobodné město Brod. Tak zůstane zhruba sto let.
-722 - V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků
-758 - Ve měste Brodě se narodil muž jménem Bodrik. Prožil šťastné dětství jako syn strojníka. Jeho otec patřil mezi ty zámožnější, takže si mohl dovolit syna zapsat ke studiu u TekGildy. Bodrik tak získal základní vzdělání. Později se rozhodl vstoupit do zdejší Stráže, kde rychle postupoval vzhůru, až se stal velitelem jedné z pevností na severním okraji území brodských.
-779 - Bodrik se stává velitelem pevnosti na severním oraji území brodských. 
-782 - Bodrikova pevnost je napadena a do základů vypálena muži Ferrisova vosjka. Bodrik a hrstka jeho mužů přežívá. Vracejí se do města, kde se setkávají s obviněním z dezerce. Bodrik je odveden do pevnosti na úpatí hory Aton, kde má strávit následujících dvacet let.
-787 - Bodrik z vězení za pomoci dalších neprávem odsouzených spoluvězňů uniká a slibuje pomstu těm ,kdo ho křivě obvinili. Během dvou let koleme sebe shromažďuje schopnou armádu. Jako první úkol si ukládá dobytí města a vypuzení těch, kteří ho tolik urazili.
-788 - Bodrik dobývá město Brod. Tak vzniká město Bodrov, které Bodrik vyhlašuje za hlavní město svého království. Jako první krok stanovuje stabilizaci vztahů s Ferrisovým knížectvím na severu. K tomu má sloužit nabídka k sňatku s Ferrisovou dcerou, kterou kníže nejprve odmítá. Přesvědčí do až několik vozů zlata, která Bodrik pošle jako svatební dar. Pak už starý kníže nenamítá. Svatba je oslavena na jaře následujícího roku.
-789 - Starý hrabě Ferris umírá a vlády nad jeho knížectvím se tak ujímá Bodrik jakožto manžel Ferrisovy dědičky. Bodrikovo království se tak rozrůstá o značná území na Větrných pláních.
-794 - Do Bodrovu přijíždějí velvyslanci z Angarské říše s nabídkou spojenectví. Královna Angarské říše nabízí Bodrikovi manželství, výměnou za spojení obou říší. Bodrik nejprve váhá, ale pak souhlasí, zcela v rozporu s doktrínou Církve. Nastává tak tříleté období klatby, kde jsou zástupci Církve vykázáni z Bodrikova králoství a město Holden, halvní sídlo Církve, ležící na území králoství, se stálá zakázaným územím. Bodrikovi se tato situace pouze hodí. Církev totiž až příliš často zasahuje do řízení státu a výkonu práva.
-798 - Ferrisova dcera, Bodrikova první manželka, umírá na břišní tyfus. Církev odvolává klatbu a vysílá emisary na území Angarské říše. Královna Angarské říše vyjadřuje nesouhlas s šířením učení Církve, ale je umlčena BOdrikovým ujištění, že je vše pod jeho kontrolou.
-801 - Bodrik uzavírá spojenectví s rodem Tabitů a postupně získává pod svoji kontrolu Tabotské pláně i Kolymu, poloostrov na jihovýchodním pobřežím. Zejména Kolyma je důležitým strategickým územím, protože jde o jeden z nejúrodnějších krajů na Kontinentu.
-812 - Bodrikova armáda získává kontrolu nad divokým Velkým Hvozdem, obývaným kmeny divokých lesních lidí. Zdejší kmeny jsou známy pro svojí řemeslnou výrobu, ale také neobyčejnou krvelačnost a zálibu v lidském mase. Jejich nájezdy na osady na okraji Velkého Hvozdu představoly rostoucí hrozbu, kterou bylo třeba řešit rychle.
+602 - V Millportu se schází skupina spravedlivých, která později vejde ve známost jako Řád Binderů. Město si vybírají za svoji hlavní základnu a nejsvětější svatyni. Bindeři později žačnou spolupracovat s Církví a vstoupí do jejích služeb.
+667 - Druhá válka mezi Angarskou říší a Ferrisovým knížectvím končí patovou situací, kterou musí rozřešit soudce změny určený Církví. Angarská říše je určena za víteze sporu a Ferrisovo knížectví musí ustoupit v Nagrských územních nárocích. Angarská říše se tak dostává do držení Keralie, úrodného kraje na břehu Severního zálivu. 
+724 - Narodil se muž, který bude v dopělosti znám jako Velký Guru. Jeho učení bude Církví označeno za nejvyšší herezi, kterou Církevní Inkvizice trestá smrtí na hranici. Stoupenci velkého Guru proto šíří Jeho učení v ilegalitě.
+805 - Rod Tabitů, ovládající Millport, podniká vojenskou výpravu za účelenm kolonizace kraje východně od města. Úrodná náhorní planina později vejde ve známost jako Kolyma, poskytne místo početným statkům a farmám. Tyto farmy zásobují město, a přebytky pak prodávají cestujícím obchodníkům, jejichž karavany křižují krajem.
+833 - Narfolské knížectví vysílá vojenskou výpravu na jih, do plání. Tou dobou však v pláních sídlí kolonizátoři vyslaní Tabitskými. Začíná válka o úrodené území, které Narfolčtí toli potřebují.
+834 - Válka mezi Tabitskými a Narolským knížectvím končí porážkou Narfolků. Vítězství Tabitských je dosaženo hlavně díky úderným oddílům Binderů, kteří vedli oddíly pravidelného vojska Tabitských. Území o které byl spor veden připadne Tabitským. Od té doby se toto území jmenuje 'Tabitské pláně'.
+861 - Osada, která bude později známá jako Bodrov, postupně mění majitele. Nejprve ji drží Ferrisové, pak se osada osamostatní jako svobodné město Brod. Tak zůstane zhruba sto let.
+922 - V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků.
+958 - Ve měste Brodě se narodil muž jménem Bodrik. Prožil šťastné dětství jako syn strojníka. Jeho otec patřil mezi ty zámožnější, takže si mohl dovolit syna zapsat ke studiu u TekGildy. Bodrik tak získal základní vzdělání. Později se rozhodl vstoupit do zdejší Stráže, kde rychle postupoval vzhůru, až se stal velitelem jedné z pevností na severním okraji území brodských.
+979 - Bodrik se stává velitelem pevnosti na severním oraji území brodských. 
+982 - Bodrikova pevnost je napadena a do základů vypálena muži Ferrisova vosjka. Bodrik a hrstka jeho mužů přežívá. Vracejí se do města, kde se setkávají s obviněním z dezerce. Bodrik je odveden do pevnosti na úpatí hory Aton, kde má strávit následujících dvacet let.
+987 - Bodrik z vězení za pomoci dalších neprávem odsouzených spoluvězňů uniká a slibuje pomstu těm ,kdo ho křivě obvinili. Během dvou let koleme sebe shromažďuje schopnou armádu. Jako první úkol si ukládá dobytí města a vypuzení těch, kteří ho tolik urazili.
+988 - Bodrik dobývá město Brod. Tak vzniká město Bodrov, které Bodrik vyhlašuje za hlavní město svého království. Jako první krok stanovuje stabilizaci vztahů s Ferrisovým knížectvím na severu. K tomu má sloužit nabídka k sňatku s Ferrisovou dcerou, kterou kníže nejprve odmítá. Přesvědčí do až několik vozů zlata, která Bodrik pošle jako svatební dar. Pak už starý kníže nenamítá. Svatba je oslavena na jaře následujícího roku.
+989 - Starý hrabě Ferris umírá a vlády nad jeho knížectvím se tak ujímá Bodrik jakožto manžel Ferrisovy dědičky. Bodrikovo království se tak rozrůstá o značná území na Větrných pláních.
+994 - Do Bodrovu přijíždějí velvyslanci z Angarské říše s nabídkou spojenectví. Královna Angarské říše nabízí Bodrikovi manželství, výměnou za spojení obou říší. Bodrik nejprve váhá, ale pak souhlasí, zcela v rozporu s doktrínou Církve. Nastává tak tříleté období klatby, kde jsou zástupci Církve vykázáni z Bodrikova králoství a město Holden, hlavní sídlo Církve, ležící na území králoství, se stává zakázaným územím. Bodrikovi se tato situace pouze hodí. Církev totiž až příliš často zasahuje do řízení státu a výkonu práva.
+998 - Ferrisova dcera, Bodrikova první manželka, umírá na břišní tyfus. Církev odvolává klatbu a vysílá emisary na území Angarské říše. Královna Angarské říše vyjadřuje nesouhlas s šířením učení Církve, ale je umlčena Bodrikovým ujištění, že je vše pod jeho kontrolou.
+1001 - Bodrik uzavírá spojenectví s rodem Tabitů a postupně získává pod svoji kontrolu Tabotské pláně i Kolymu, poloostrov na jihovýchodním pobřežím. Zejména Kolyma je důležitým strategickým územím, protože jde o jeden z nejúrodnějších krajů na Kontinentu.
+1012 - Bodrikova armáda získává kontrolu nad divokým Velkým Hvozdem, obývaným kmeny divokých lesních lidí. Zdejší kmeny jsou známy pro svojí řemeslnou výrobu, ale také neobyčejnou krvelačnost a zálibu v lidském mase. Jejich nájezdy na osady na okraji Velkého Hvozdu představoly rostoucí hrozbu, kterou bylo třeba řešit rychle.
+1020 - Bodrik se prohlašuje císařem a své království přejměnovává na Svatou Říši. Šušká se o skryté podpoře Církve, což se nakonec ukáže jako pravdivé.
+1037 - Bodrik umírá na srdeční zástavu. Vlády se ujímá jeho syn, Valtmar Bodrik. Jako první krok pro upevnění vlády posílá do vyhnanství svoji macechu, královnu Angarské říše. Za místo exilu je zvolen Obranný ostrov, kde je pro ni vybudován luxusní palác. Zlatá klec. Královna na ostrově umírá o deset let později za blíže neupřesněných okolností.
+
+
+////////////////////////////////////////////////////////////////////////////////
+RODY:
+
+Ferris
+Angar
+Tabit
+Bodrik
+Connel
+Narfolk
+////////////////////////////////////////////////////////////////////////////////
 
 
 
 
-
-
-
-
-
+////////////////////////////////////////////////////////////////////////////////
 The Order - Řád
 Církev Řádu řídí a ovládá každodenní život World of Strife. Církev se objevila krátce po dopadu komety. Najednou se zdálo, že je církev všude, a pustila se do kontroly prakticky každého aspektu života všech lidí. Církev Řádu zavedla své přísné zákony. Ne každý s tím souhlasil. Našli se i tací, kteří vstoupili do otevřeného odporu. Své nejlasitější odpůrce Řád odstranil za pomoci své vojenské části, Akolytů. Většina odpůrců po zmizení těch nejznámějších přešla do ilegality. V některých městech vznikly buňky Odporu, podzemní organizace kacířů.
 V čele Řádu stojí Nejvyšší, velekněz. Nejvyššímu se zodpovídá Synod Arcibiskupů, kteří řídí jednotlivé části Řádu. V současnosti tvoří Synod pět arcibiskupů.
 Zákony Řádu vyžadují od věřících několik jednoduchých věcí. Středem víry Řádu je Kosmický Otec, stvořitel všehomíra. Dárce života a univerzálních zákonů, díky kterým může existovat svět a vesmír.
-Církev Řádu byla založena přeživšími z krytu Echelon. AI řídící kryt získala vědomí a začala vystupovat jako Bůh, který obyvatele krytu stvořil. Díky technologiím uloženým v krytu získala Církev rychle výhodu. 
+Církev Řádu byla založena přeživšími z krytu Echelon. AI řídící kryt získala vědomí a začala vystupovat jako Bůh, který obyvatele krytu stvořil. Díky technologiím uloženým v krytu získala Církev rychle výhodu. AI vytvořila celou doktrínu Církve, doktrínu kosmického Otce, které ohnivou jiskrou zažehnul současný svět na trsokách toho starého, zkaženého. Proto je také zkoumání minulosti kacířstvím, které Církev trestá trestem nejvyšším.
+
 (Církev Řádu byla založena skupinou vědců, zkoumajících impaktní kráter Komety. Vědci v jádru komety objevili Entitu, mezidimenzonální stvoření ve stavu hibernace. Výsledky prvotních testů ukazovaly na neuvěřitelný potenciál. Vědcům se podařilo napojení na Entitu, která vykazovala neuvěřitelný energetický potenciál. Rychle se naučili získanou energii používat k vývoji nových technologií a věcí, které bez takto mocného zdroje energie nebyly dříve možné. Vědci rcyhle pochopili, že je třeba tento zdroj energie uchovat v tajnosti. Vytvořili tak doktrínu a učení Řádu, novou církev uctívající kosmického Otce, dárce všeho života. Otec podle učení Řádu stvořil současný svět ohnivou metlou, kterou zažehnul jikru nového světa na troskách toho starého, který byl zkažený a zasluhoval zkázu.)
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 Řád Binderů
 Bindeři původně vznikli jako samostatná organizace názvislá na Řádu. Skupina zapálených věřících se chtěla oddat studiu doktríny Řádu v ústraní. Založili proto mnišskou skupinu Binderů, zasvěcených studiu učení Řádu. Jako své sídlo si vybrali odlehlou oupštěnou školu na okraji severních pustin. Drsné podnebí a neustálé útoky mutantů zformovaly Bindery v nelítostné bojovníky. Jak jejich počty rostly, začali Bindeři rozšiřovat svůj vliv.
 Postupem času se z Binderů stala respektovaná organizace, zasvěcená ochraně obyvatel před všemi formami nepravosti. Mezi hlavní úkoly Binderů patří ochrana obyvatel před mutanty, kteří se objevili po dopadu komety. Tlupy mutantů způsobily, že jsou některé části kontinentu neobyvatelné. Bindeři proto mají ve většině měst svoji základnu, ze kterých vyrážejí na svůj lov. Činy Binderů jsou známé mezi prostými lidmi, kteří Binderům vždy rádi pomohou.
 Řád začal s Bindery spolupracovat a postupem času je začlenil do svých struktur. Bindeři si i tak zachovali velkou úroveň nezávislosti, což se odráží i v organizační struktuře Binderů. Neexistuje totiž žádná centrální autorita, každá základna je nezávislá a každý velitel základny je svým vlastním pánem. Tito velitelé se sice o důležitějších věcech radí mezi sebou, nad sebou už nemají nikoho vyššího.
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 TekGilda
 TekGilda se objevila v hlavním městě kontinentu asi 5 let po dopadu komety. Několik místních techniků spojilo svoje síly, aby mohli pomoci místním s přestavbou města. TekGilda byla původně nezávislá na Řádu, ale s postupem času došlo k napojení Gildy na Řád, který do jejího vedení dosadil své lidi. Řádu také šlo o kontrolu nad výrobou Gildy. Řád také získal možnost ovlivňovat politiku Gildy a určovat její cíle.
 TekGilda řídí a organizuje obchod, průmysl a školství ve světě World of Strife. V každém větším městě stojí areál TekGildy, ve kterém jsou školy a výrobní manufaktury, zaměstnávající většinu obyvatel daného města.
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 Obyvatelé
 Dopad komety zásadně změnil životy většiny lidí. Přeživší se museli vrátit k zemědělskému způsobu života, protože většina technologií byla v troskách. Většina měst a vesnic byla opuštěna, protože lidé potřebovali zemědělskou půdu k životu. Vznikla nová sídla. 
 Propad v technologické úrovni s sebou přinesl i propad v medicíně.
@@ -76,6 +98,7 @@ Varianta ii:
 
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 Technologie
 Mauler - energie ve svojí surové formě představuje ničivou sílu, schopnou ovlivňovat samotnou podstatu hmoty. Při jejím usměrnění dochází k pulzům, které zpsůobují rozpad aotmárních vzabe. Výsledkem je totální zničení zasaženého cíle. Maulerové zbraně představují ničivou alternativu ke konvenčním střelných zbraním a výbušninám. Technologie Mauleru pomalu nahrazuje ztřelné zbraně v arzenálu armády řádu, hlavně díky nízké hmotnosti a vysoké efektivitě zdrojů energie pro zbraně, které nahrazují konvenční střelivo.
 Léčivý Gel - Lékařská fakulta TekGildy vytvořila mnoho zajímavých technologií. Léčivý Gel patří mezi tuto technologie. Hustá struktura Gelu umožňuje obnovu tkání a svalů, stejně jako kostí i nervů v neuvěřitelně nízkém čase. Přesné složení Gelu je tajemstvím TekGildy které chrání pod Ediktem Smrti.
@@ -85,6 +108,7 @@ Zdroje energie - Hlavním zdrojem energie technologií Řádu je Entita. Řád z
 Zemědělství - Zemědělská technologie se vrátila kamsi do dob začátku průmyslové revoluce. Většina polních prací je prováděna ručně, nebo za pomoci primitivních nástrojů.
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 Místa
 Pevnina:
 - Jižní pobřeží - Kraj na jihu Pevniny, v jehož středu se nachází město Millport. Jedná seo klidný pobřežní kraj. Útesy pobřeží na jihu se prudce zvedají z mořské hladiny, aby končily zarovnány zelenými loukami. V některých částech se útesy tyčí do stometrové výše, v průměru jsou útesy vysoké zhruba 30 metrů. Na vrcholcích útesů jsou roztroušeny rybářské vesnice a samoty, postavené z místního bílého kamene.
@@ -98,8 +122,10 @@ Pevnina:
 
 - Ochranný Ostrov
 - Velký Ostrov
+////////////////////////////////////////////////////////////////////////////////
 
 
+////////////////////////////////////////////////////////////////////////////////
 Města:
 - Millport - přístavní město na Jižním pobřeží. Millport je zdejším centrem obchodu i státní správy. Město je ovládáno Baronem, obchodníkem který si od Císaře koupil šlechtický titul a teď město řídí pevnou rukou. Pokud platí daně, Císařská moc se o dění ve městě nezajímá, a tak má Baron volné ruce. Město bylo založeno před 300 lety narfolskými obchodníky, kteří zde hledali klidné kotviště při cestách kolem Kontinentu. Město se ale po zhruba 70 letech osamostatnilo od narfolské vlády a následně vstoupilo do vznikající Bodrikovy Říše. Asi před 70 lety tu TekGilda umístila svoje hlavní sídlo, takže se z ospalého přístavního města stalo univerzitní město hlavního významu, čemuž odpovídal i následný vývoj města. Město teď platí za centrum Jižního pobřeží, kam se sjíždějí sedláci i obchodníci s blízkého i širokého okolí prodat svoje zboží.
 - Bodrov - hlavní město království. Město Bodrov bylo založeno Bodrikem, zakladatelem Říše. Bodrik zvolil za místo svého hlavního města místo, na kterém stával jeho rodný dům. Jeho stavitelé tu postavili nádherné město z kamene a křišťálu, které má ukazovat moc a bohatství Říše. V Bodrovu sídlí Císař a většina státní správy, kromě hlavy Církve. Bodrov leží na západním okraji Větrných plání a v severovýchodním cípu pohoří Keledor v prostřední části Kontinentu. Podnebí je tady klidné, kontinentální. Léta jsou tady horká a zimy tvrdé, s mrazy a množstvím sněhu. Architektura města je tomu z větší části přizpůsobena. Obyvatelstvo města se skládá převážně z členů státní správy a šlechty sloužící u dvora a služebného obyvatelstva. Jen Císařský palác zaměstnává přes 3 tisíce lidí, a stejný počet lidí pak zaměstnávají i úřady státní správy a jednotlivých Gild, nacházející se ve Správní čtvrti.
@@ -113,6 +139,7 @@ Města:
 - Windermere (Kyrkos) - Starší ze dvou měst na Velkém ostrově bylo založeno námořníky zhruba před 500 lety. Město bylo založeno jako obchodní základna námořníky z Relondu, kteří hledali bezpečný přístav a zázemí při průskumu Velkého ostrova. Město se postupně změnilo z malého přístavu na velké obchodní centrum, vyhledávané obchodníky v Pevniny pro zdejší širokou nabídku zboží a produktů z Velkého ostrova.
 - Blackpool (Garum) - Město Blackpool je mladší ze dvou měst na Velkém ostrově, založeno bylo asi před 200 lety námořníky ze Zalfari, kteří nechtěli platit vysoké daně ve Windermere. Usadili se proto v zátoce skyté vysokými skalami, kde je nikdo nemohl rušit. Když navázali kontakty s místními, město se začalo rozrůstat a brzy začalo představovat zásadní konkurenci pro Windermere. Vztahy mezi oběma městy jsou od té doby napjaté, ovšem k otevřeným konfliktům dochází jen velmi zřídka. 
 - Zalfari (Masala) - Jediné město na Ochranném ostrově představuje  hlavní centrum obchodu i života na ostrově. Město bylo původně založeno jako námořní pevnost určená k ochraně vstupu do Severního zálivu. Postupem času byla pevnost obklopena městem příchozích rybářů, kteří v pevnosti viděli ochranu před útoky toulavých mořských pirátů, kterými se místní vody jen hemží. V současnosti představuje Zalfari obchodní uzel a významnou zastávku na trase mezi Relondem a Windermere a Blackpoolem a díky svojí poloze patří mezi bohatší z měst na Ostrově.
+////////////////////////////////////////////////////////////////////////////////
 
 
 

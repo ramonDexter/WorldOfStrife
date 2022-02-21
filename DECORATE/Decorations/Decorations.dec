@@ -4090,7 +4090,7 @@ actor dx_gallows 21226 {
 	
 	States {
 		Spawn:
-			DSBC A -1 NODELAY A_SpawnItemEx("daggHangedOneGround", 0, 0, 48)
+			DSBC A -1 NODELAY A_SpawnItemEx("daggHangedOneGround", 0, 0, 24)
 			Stop
 	}
 }

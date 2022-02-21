@@ -20,10 +20,10 @@ Začíná projekt Záchrana, jehož cílem bylo vybudování sítě úkrytů a a
 0 (2094) 
 Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života na Zemi.
 
-187 
+128 
 Aktivují se kryty ukrývající terraformační zařízení. Obnova ekosystému začíná. Lidé i většina zvířat bude během staletí obnoveno za pomoci zařízení v krytech. Celé automatizované tovární linky, umělé dělohy a další technologie později upadnou v zapomnění, stejně jako znalosti o světě před dopadem asteroidu.
 
-305 
+256 
 Kryty ukrývající klony lidí, které měly zalidnit obnovenou zemi, se otevírají a vypouštějí své 'produkty' do nového světa.
 
 338 
@@ -48,19 +48,19 @@ V Kalanském zálivu na západním pobřeží vzniká město Narfolk, které se 
 Malá obchodní osada na východním okraji Tarských bažin se postupně mění ve město Eldham. Malé provinční město na náhorní plošině je soustavně bičováno větry vanoucími z plání. 
 
 539 
-Eldham se dostává pod kontrolu rodu Ferrisů. Hrabě Ferris získá pod kontrolu kmeny žijící na planinách a profituje z obchodu s domorodým zbožím. 
+Eldham se dostává pod kontrolu rodu Burgerich. Hrabě Burgerich získá pod kontrolu kmeny žijící na planinách a profituje z obchodu s domorodým zbožím. 
 
 543 
-Hrabě Ferris nechává na západním okraji Tarských bažin založit město Westmarch. Vzdálenost od Ferrisova panství o pár let později způsobí že se město osamostatní. Místní vyženou Ferrisovy úředníky a vyhlásí samostatnost. Zároveň Westmarch zahájí kolonizaci západní části Annyjského poloostrova.
+Hrabě Burgerich nechává na západním okraji Tarských bažin založit město Westmarch. Vzdálenost od Burgerichova panství o pár let později způsobí že se město osamostatní. Místní vyženou Burgerichovy úředníky a vyhlásí samostatnost. Zároveň Westmarch zahájí kolonizaci západní části Annyjského poloostrova.
 
 547 
-Válka mezi Westmarchem a Ferrisovým knížectvím končí vítězstvím Ferrisovy armády. Westmarch musí předat kontrolu nad Tarskými bažinami Ferrisovy výměnou za příslib míru. V čele westmarche stojí rod Connelů, kteří získali moc díky obchodu.
+Válka mezi Westmarchem a Burgerichovým knížectvím končí vítězstvím Burgerichovy armády. Westmarch musí předat kontrolu nad Tarskými bažinami Burgerichovy výměnou za příslib míru. V čele westmarche stojí rod Connelů, kteří získali moc díky obchodu.
 
 549 
-Ferrisovo knížectví napadá Angarskou říši. Začínají Pohraniční války.
+Burgerichovo knížectví napadá Angarskou říši. Začínají Pohraniční války.
 
 552 
-Angarové zakládají město Relond, které se má stát hlavním městem jejich rodu. Nejvyšší Chán prohlašuje poloostrov Angar za svatou půdu, do které mají zapovězen vstup všichni cizinci. Začíná tak dekádu trvající doba izolace, která Angarům později přinese hladomor. Končí pohraniční války. Ferrisovo knížectví vítězí a získává úrodné území Keralie, což jenom prohloubí problémy v už tak zničené Angarské říši.
+Angarové zakládají město Relond, které se má stát hlavním městem jejich rodu. Nejvyšší Chán prohlašuje poloostrov Angar za svatou půdu, do které mají zapovězen vstup všichni cizinci. Začíná tak dekádu trvající doba izolace, která Angarům později přinese hladomor. Končí pohraniční války. Burgerichovo knížectví vítězí a získává úrodné území Keralie, což jenom prohloubí problémy v už tak zničené Angarské říši.
 
 563 
 Rod Angarů ukončuje v důsledku dlouhotvající neúrody politiku izolacionismu a vysílá emisary do sousedních krajů, se kterými se snaží obnovit značně pošramocené vztahy. Tyto snahy budou trvat mnoho let.
@@ -75,7 +75,7 @@ První  písemná zmínka o vesnici Eastcliff, ležící východně od Millportu
 V Millportu se schází skupina spravedlivých, která později vejde ve známost jako Řád Binderů. Město si vybírají za svoji hlavní základnu a nejsvětější svatyni. Bindeři později žačnou spolupracovat s Církví a vstoupí do jejích služeb.
 
 667 
-Druhá válka mezi Angarskou říší a Ferrisovým knížectvím končí patovou situací, kterou musí rozřešit soudce změny určený Církví. Angarská říše je určena za víteze sporu a Ferrisovo knížectví musí ustoupit v Nagrských územních nárocích. Angarská říše se tak dostává do držení Keralie, úrodného kraje na břehu Severního zálivu. 
+Druhá válka mezi Angarskou říší a Burgerichovým knížectvím končí patovou situací, kterou musí rozřešit soudce změny určený Církví. Angarská říše je určena za víteze sporu a Burgerichovo knížectví musí ustoupit v Nagrských územních nárocích. Angarská říše se tak dostává do držení Keralie, úrodného kraje na břehu Severního zálivu. 
 
 724 
 Narodil se muž, který bude v dopělosti znám jako Velký Guru. Jeho učení bude Církví označeno za nejvyšší herezi, kterou Církevní Inkvizice trestá smrtí na hranici. Stoupenci velkého Guru proto šíří Jeho učení v ilegalitě.
@@ -90,7 +90,7 @@ Narfolské knížectví vysílá vojenskou výpravu na jih, do plání. Tou dobo
 Válka mezi Tabitskými a Narolským knížectvím končí porážkou Narfolků. Vítězství Tabitských je dosaženo hlavně díky úderným oddílům Binderů, kteří vedli oddíly pravidelného vojska Tabitských. Území o které byl spor veden připadne Tabitským. Od té doby se toto území jmenuje 'Tabitské pláně'.
 
 861 
-Osada, která bude později známá jako Bodrov, postupně mění majitele. Nejprve ji drží Ferrisové, pak se osada osamostatní jako svobodné město Brod. Tak zůstane zhruba sto let.
+Osada, která bude později známá jako Bodrov, postupně mění majitele. Nejprve ji drží Burgerichové, pak se osada osamostatní jako svobodné město Brod. Tak zůstane zhruba sto let.
 
 922 
 V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků.
@@ -102,22 +102,22 @@ Ve měste Brodě se narodil muž jménem Bodrik. Prožil šťastné dětství ja
 Bodrik se stává velitelem pevnosti na severním oraji území brodských. 
 
 982 
-Bodrikova pevnost je napadena a do základů vypálena muži Ferrisova vosjka. Bodrik a hrstka jeho mužů přežívá. Vracejí se do města, kde se setkávají s obviněním z dezerce. Bodrik je odveden do pevnosti na úpatí hory Aton, kde má strávit následujících dvacet let.
+Bodrikova pevnost je napadena a do základů vypálena muži Burgerichova vosjka. Bodrik a hrstka jeho mužů přežívá. Vracejí se do města, kde se setkávají s obviněním z dezerce. Bodrik je odveden do pevnosti na úpatí hory Aton, kde má strávit následujících dvacet let.
 
 987 
 Bodrik z vězení za pomoci dalších neprávem odsouzených spoluvězňů uniká a slibuje pomstu těm ,kdo ho křivě obvinili. Během dvou let koleme sebe shromažďuje schopnou armádu. Jako první úkol si ukládá dobytí města a vypuzení těch, kteří ho tolik urazili.
 
 988 
-Bodrik dobývá město Brod. Tak vzniká město Bodrov, které Bodrik vyhlašuje za hlavní město svého království. Jako první krok stanovuje stabilizaci vztahů s Ferrisovým knížectvím na severu. K tomu má sloužit nabídka k sňatku s Ferrisovou dcerou, kterou kníže nejprve odmítá. Přesvědčí do až několik vozů zlata, která Bodrik pošle jako svatební dar. Pak už starý kníže nenamítá. Svatba je oslavena na jaře následujícího roku.
+Bodrik dobývá město Brod. Tak vzniká město Bodrov, které Bodrik vyhlašuje za hlavní město svého království. Jako první krok stanovuje stabilizaci vztahů s Burgerichovým knížectvím na severu. K tomu má sloužit nabídka k sňatku s Burgerichovou dcerou, kterou kníže nejprve odmítá. Přesvědčí do až několik vozů zlata, která Bodrik pošle jako svatební dar. Pak už starý kníže nenamítá. Svatba je oslavena na jaře následujícího roku.
 
 989 
-Starý hrabě Ferris umírá a vlády nad jeho knížectvím se tak ujímá Bodrik jakožto manžel Ferrisovy dědičky. Bodrikovo království se tak rozrůstá o značná území na Větrných pláních.
+Starý hrabě Burgerich umírá a vlády nad jeho knížectvím se tak ujímá Bodrik jakožto manžel Burgerichovy dědičky. Bodrikovo království se tak rozrůstá o značná území na Větrných pláních.
 
 994 
 Do Bodrovu přijíždějí velvyslanci z Angarské říše s nabídkou spojenectví. Královna Angarské říše nabízí Bodrikovi manželství, výměnou za spojení obou říší. Bodrik nejprve váhá, ale pak souhlasí, zcela v rozporu s doktrínou Církve. Nastává tak tříleté období klatby, kde jsou zástupci Církve vykázáni z Bodrikova králoství a město Holden, hlavní sídlo Církve, ležící na území králoství, se stává zakázaným územím. Bodrikovi se tato situace pouze hodí. Církev totiž až příliš často zasahuje do řízení státu a výkonu práva.
 
 998 
-Ferrisova dcera, Bodrikova první manželka, umírá na břišní tyfus. Církev odvolává klatbu a vysílá emisary na území Angarské říše. Královna Angarské říše vyjadřuje nesouhlas s šířením učení Církve, ale je umlčena Bodrikovým ujištění, že je vše pod jeho kontrolou.
+Burgerichova dcera, Bodrikova první manželka, umírá na břišní tyfus. Církev odvolává klatbu a vysílá emisary na území Angarské říše. Královna Angarské říše vyjadřuje nesouhlas s šířením učení Církve, ale je umlčena Bodrikovým ujištění, že je vše pod jeho kontrolou.
 
 1001 
 Bodrik uzavírá spojenectví s rodem Tabitů a postupně získává pod svoji kontrolu Tabotské pláně i Kolymu, poloostrov na jihovýchodním pobřežím. Zejména Kolyma je důležitým strategickým územím, protože jde o jeden z nejúrodnějších krajů na Kontinentu.
@@ -171,27 +171,56 @@ Císař Berthold umírá  a na jeho místo nastupuje jeho dcera, Larissa. Doba v
 1288
 Císařovna Larissa ze zdravotních důvodů předává vládu svému synovi, Aurikovi. Císař Aurik pokračuje v matčiných započatých reformách a zejména zlepšuje ubytovací podmínky poddaných.
 
-Vlády se ujímá jeho prvorozený syn, Alrik. Jeho bratr Ulfrik je dosazen za velitele vojska.
+1304
+Císař Aurik nechává postavit velkou katedrálu v hlavním měste Říše Bodrovu. Stavba katedrály vyžaduje zboření několika čtvrtí, bohužel osídlených nejchudšími. To vynese císaři nelichotivou přezdívku 'Ničitel'. Stavba katedrály se nakonec protáhne natolik, až se císař jejího dokončení nedožije.
 
+1361
+Císař Aurik umírá. Bohužel, zasažen náhlou srdeční slabostí, nestihl určit dědice. Do boje o vládu se pouštějí jeho tři synové: Vesper, Heinrik a Aurak. Říše je uvržena do vleklé občanské války.
+Na konci roku je vypáleno město Silent Hills ležící severně od Millportu. Armáda prince Aurika napadá ve mestě usazenou armádu prince Vespera. Bitva končí úspěchem armády prince Aurika, kterému se podařilo osobně zajmout generála Vesperovy armády.
 
+1364
+Občanská válka končí vítězstvím prince Aurika, který se následující rok nechá oficiálně korunovat Císařem. Jeho bratr Vesper padl v bitvě na Větrných pláních. Zasáhl ho zbloudilý šíp, který ani nebyl určen jemu. Heinrika Aurikovi muži zajali a jeho bratr ho poslal do vyhnanství na jeden z bezejmenných ostrovů v Severním zálivu.
+
+1366
+Císař Aurik začíná s obnovou zničené země. Jelikož se snažil své armády držet od rabování a okrádání obyvatelstva, většina obyvatel je mu nakloněna. Zároveň začíná nová vlna zatýkání a likvidace příznivců císařových bratrů. Většina toho se děje pod nejvyšším utajením, ale občas nějaké zprávy proniknou na veřejnost.
+
+1412
+Vláda císaře Aurika končí vybudováním monumentální hrobky, do které bude uložena císařovo tělo. Jako by starý císař už jenom čekal na dokončení hrobky, jeho srdce vypovědělo službu krátce po tom, co posel donesl do císařského paláce zprávu u jejím dokončení. Na trůn nastupuje Aurikův syn, Ranan.
+
+1414
+Náboženský zápal císaře Ranana vede k iniciaci stavby mnoha nových statostánků a chrámů Církve. Také zavádí právní reformu, která zavádí do právního systému mnoho Církevních zákonů a nařízení.
+
+1417
+Založení náboženské policie, která má dohlížet na dodržování náboženských pravidel a nařízení. Má stejné pravomoci jako běžná Stráž. Život místních obyvatel už není tak svobodný jako dřív. Zavádění nových pravidel a zákonů je pozvolné, podporované mnoha inscenovanými incidenty, které mají přesvědčit veřejné mínění pro přijetí nových restrikcí. V mnoha městech rostou nová nápravná zařízení, do kterých jsou zavírání všichni, kdo se provinili proti novým pravidlům.
+
+1448
+V mnoha městech se objevuje hnutí odporu. Obyvatelé nové zákony ani po několika desítkách let nepřijali a začínají projevovat nespokojenost. Zatím nějde o žádné organizované hnutí, spíše o oddělené buňky odporu, které se objevují v podzemí.
+
+1453
+Povstání ve městečku Woodpine končí krvavě. Silnější císařské jednotky, podporované akolyty Církve naženou rebely na dvůr místního pivovaru, kde všechny po vynesení rozsudku nechá postřílet. Za městem pak kněží Církve vytyčí zakázané území, kam těla rebelů nechají pohřbít. Vstup na zakázané území je zapovězen pod trestem smrti. Brzy kolem mnoha měst vyrostou podobná zakázaná území.
+
+1466
+Císař Ranan umírá. Za svého nástupce vybral mladšího ze svých synů, Alrika. Jeho starší bratr Ulfrik je dosazen za velitele vojska. Tuto volbu považuje za zradu, také nesouhlasí s náboženským zápalem svého bratra. Tento náboženský zápal nakonec Říši přinese další problémy.
+
+1472
 Císař Alrik je zasažen záchvaty Svaté nemoci. Schizofrenie. Záchvaty šílenství se nejprve objevují pozue náhodně. Jeho stav způsobí delší neúroda, která zasáhne Říši hned následující rok. Císař neúrodu považuje za zásah shůry. Jeho šílenství ještě vzroste poté, co zemře jeho manželka. V jednom ze svých záchvatů má vidění, kde po něm Otec žádá oběti. Jedině po přinesení obětí neúroda skončí a všechno bude jako dřív. Tak začínají krvavé roky.
 
-
+1485
 Nejhorší z Krvavých roků končí vypálením několika vesnic v dohledu Bodrova a odvlečením jejich obyvatel. Velitel armády, císařův bratr Ulfrik, se nadále odmítá podílet na vraždění nevinných a otevřeně napadá bratra. Císař Alrik po krátkém boji umírá mečem svého bratra Ulfrika, který ihned ukončuje obětní šílenství a začíná s reformami. Část Alrikových věrných odmítá nového císaře a odchází do ilegality. Pod vedením generála Mandreda vyhlašují město Relond, poslední město věrné císaři Alrikovi. Území bývalé Angarské říše prohlašují za Svaté Území a obnovují staré zákony zakazující vstup cizincům. Tentokrát mají zapovězen vstup poddaní Svaté Říše, které prohlašují za kacíře. Začíná studená občanská válka.
 
-
+1487
 Císař Ulfik obnovuje pošramocené vztahy s územím Tabitských. Vrací místním většinu práv a obnovuje automnomii území, což výrazně ulehčí císařské pokladně, vyprázdněné změnou vlády a reformami. Území Tabitských se změny nijak nedotkly, a tak může bez problémů zásobovat centrum Říše potravinami a stavebním materiálem.
 
-
+1488
 události WoS.
 Císařská výzvědná služba informuje císaře o spiknutí, které by mělo vést k útoku na Církev i Císaře. Ulfrik kontaktuje řád Binderů s žádostí o pomoc. Bindeři musí zjistit, o co spiklencům jde a jak chtějí svých cílů dosáhnout.
-
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 RODY:
 
-Ferris
-Rod Ferrisů se objevuje kolem roku 539. První kníže Ferris ovládne město Eldham a rychle získá pod svoji kontrolu severní část Větrných plání a Tarské bažiny až ke městu Westmarch. Vláda všech knížat Ferrisů je charakterizována agresivními výpady vůči svým sousedům, což je ukončeno až sňatkem. Budoucí císař Bodrik si vezme za ženu dceru knížete Ferrise, čímž se stane dědicem Ferrisova panství. Po smrti posledního knížete Ferrise je území připojeno k Říši a stává se hlavním územím říše.
+Burgerich
+Rod Burgerichů se objevuje kolem roku 539. První kníže Burgerich ovládne město Eldham a rychle získá pod svoji kontrolu severní část Větrných plání a Tarské bažiny až ke městu Westmarch. Vláda všech knížat Burgerichů je charakterizována agresivními výpady vůči svým sousedům, což je ukončeno až sňatkem. Budoucí císař Bodrik si vezme za ženu dceru knížete Burgeriche, čímž se stane dědicem Burgerichova panství. Po smrti posledního knížete Burgeriche je území připojeno k Říši a stává se hlavním územím říše.
 
 Angar
 Rod Angarů se usazuje na poloostrově na západě Kontinentu kolem roku 442. Skupina nomádských kmenů rychle ovládne území poloostrova. Úrodné území však poskytuje útočiště pouze omezenému počtu lidí, a tak rod brzy začne s výboji ke svým sousedům, což jim přinese pověst nájezdníků a útočníků.
@@ -203,7 +232,7 @@ Bodrik
 Rod bodriků založil císařskou dynastii, která vládne Říši do současnosti. Bodrik, zakladatel dynastie, se narodil roku 958. Roku 1020 dochází k založení Říše a bodrik se prohlašuje Císařem za mocné zákulisní podpory Církve. 
 
 Connel
-Zmínky o rodu Connel se objevují kolem roku 547, kdy se rod dostává do vedení Westmarche, který se právě odtrhnul od Ferrisova knížectví. Obchodnický rod vede Westmarch do roku 1047, kdy je postupně nahrazen ve vedení Westmarche loutkovou vládou dosazenou Říší.
+Zmínky o rodu Connel se objevují kolem roku 547, kdy se rod dostává do vedení Westmarche, který se právě odtrhnul od Burgerichova knížectví. Obchodnický rod vede Westmarch do roku 1047, kdy je postupně nahrazen ve vedení Westmarche loutkovou vládou dosazenou Říší.
 
 Narfolk
 Rod Narfolků se objevuje kolem roku 525, kdy zakládá v Kalanském zálivu město Narfolk. Rod rychle zbohatne, hlavně díky získání monopolu v lodní dopravě. Postupně vytlačí nebo koupí veškerou konkurenci a obchodníci brzy zjistí, že nemohou přepravovat zboží bez tučných provizí Transportní Gildě, kterou ovládá kníže Narfolk.

@@ -215,16 +215,16 @@ V mnoha městech se objevuje hnutí odporu. Obyvatelé nové zákony ani po něk
 Povstání ve městečku Woodpine končí krvavě. Silnější císařské jednotky, podporované akolyty Církve naženou rebely na dvůr místního pivovaru, kde všechny po vynesení rozsudku nechá postřílet. Za městem pak kněží Církve vytyčí zakázané území, kam těla rebelů nechají pohřbít. Vstup na zakázané území je zapovězen pod trestem smrti. Brzy kolem mnoha měst vyrostou podobná zakázaná území.
 
 1466
-Císař Ranan umírá. Za svého nástupce vybral mladšího ze svých synů, Alrika. Jeho starší bratr Araman je dosazen za velitele vojska. Tuto volbu považuje za zradu, také nesouhlasí s náboženským zápalem svého bratra. Tento náboženský zápal nakonec Říši přinese další problémy.
+Císař Ranan umírá. Za svého nástupce vybral mladšího ze svých synů, Alrika. Jeho starší bratr Avahid je dosazen za velitele vojska. Tuto volbu považuje za zradu, také nesouhlasí s náboženským zápalem svého bratra. Tento náboženský zápal nakonec Říši přinese další problémy.
 
 1472
-Císař Alrik je zasažen záchvaty Svaté nemoci. Schizofrenie. Záchvaty šílenství se nejprve objevují pozue náhodně. Jeho stav způsobí delší neúroda, která zasáhne Říši hned následující rok. Císař neúrodu považuje za zásah shůry. Jeho šílenství ještě vzroste poté, co zemře jeho manželka. V jednom ze svých záchvatů má vidění, kde po něm Otec žádá oběti. Jedině po přinesení obětí neúroda skončí a všechno bude jako dřív. Tak začínají krvavé roky.
+Císař Alrik je zasažen záchvaty Svaté nemoci. Schizofrenie. Záchvaty šílenství se nejprve objevují pouze náhodně. Jeho stav způsobí delší neúroda, která zasáhne Říši hned následující rok. Císař neúrodu považuje za zásah shůry. Jeho šílenství ještě vzroste poté, co zemře jeho manželka. V jednom ze svých záchvatů má vidění, kde po něm Otec žádá oběti. Jedině po přinesení obětí neúroda skončí a všechno bude jako dřív. Tak začínají krvavé roky.
 
 1485
-Nejhorší z Krvavých roků končí vypálením několika vesnic v dohledu Bodrova a odvlečením jejich obyvatel. Velitel armády, císařův bratr Araman, se nadále odmítá podílet na vraždění nevinných a otevřeně napadá bratra. Císař Alrik po krátkém boji umírá mečem svého bratra Aramana, který ihned ukončuje obětní šílenství a začíná s reformami. Část Alrikových věrných odmítá nového císaře a odchází do ilegality. Pod vedením generála Mandreda vyhlašují město Relond, poslední město věrné císaři Alrikovi. Území bývalé Angarské říše prohlašují za Svaté Území a obnovují staré zákony zakazující vstup cizincům. Tentokrát mají zapovězen vstup poddaní Svaté Říše, které prohlašují za kacíře. Začíná studená občanská válka.
+Nejhorší z Krvavých roků končí vypálením několika vesnic v dohledu Bodrova a odvlečením jejich obyvatel. Velitel armády, císařův bratr Avahid, se nadále odmítá podílet na vraždění nevinných a otevřeně napadá bratra. Císař Alrik po krátkém boji umírá mečem svého bratra Avahida, který ihned ukončuje obětní šílenství a začíná s reformami. Část Alrikových věrných odmítá nového císaře a odchází do ilegality. Pod vedením generála Mandreda vyhlašují město Relond, poslední město věrné císaři Alrikovi. Území bývalé Angarské říše prohlašují za Svaté Území a obnovují staré zákony zakazující vstup cizincům. Tentokrát mají zapovězen vstup poddaní Svaté Říše, které prohlašují za kacíře. Začíná studená občanská válka.
 
 1487
-Císař Araman obnovuje pošramocené vztahy s územím Tabitských. Vrací místním většinu práv a obnovuje automnomii území, což výrazně ulehčí císařské pokladně, vyprázdněné změnou vlády a reformami. Území Tabitských se změny nijak nedotkly, a tak může bez problémů zásobovat centrum Říše potravinami a stavebním materiálem.
+Císař Avahid obnovuje pošramocené vztahy s územím Tabitských. Vrací místním většinu práv a obnovuje automnomii území, což výrazně ulehčí císařské pokladně, vyprázdněné změnou vlády a reformami. Území Tabitských se změny nijak nedotkly, a tak může bez problémů zásobovat centrum Říše potravinami a stavebním materiálem.
 
 1488
 události WoS.
@@ -253,11 +253,26 @@ Narfolk
 Rod Narfolků se objevuje kolem roku 525, kdy zakládá v Kalanském zálivu město Narfolk. Rod rychle zbohatne, hlavně díky získání monopolu v lodní dopravě. Postupně vytlačí nebo koupí veškerou konkurenci a obchodníci brzy zjistí, že nemohou přepravovat zboží bez tučných provizí Transportní Gildě, kterou ovládá kníže Narfolk.
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+CÍSAŘI ŘÍŠE
+
+Bodrik
+Valtmar
+Valtredd
+Berthold
+Larissa
+Nahas
+Aurik
+Ranan
+Alrik
+Avahid
+////////////////////////////////////////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ORGANIZACE:
 
-The Order Řád
+The Order - Řád
 Církev Řádu řídí a ovládá každodenní život World of Strife. Církev se objevila krátce po dopadu komety. Najednou se zdálo, že je církev všude, a pustila se do kontroly prakticky každého aspektu života všech lidí. Církev Řádu zavedla své přísné zákony. Ne každý s tím souhlasil. Našli se i tací, kteří vstoupili do otevřeného odporu. Své nejlasitější odpůrce Řád odstranil za pomoci své vojenské části, Akolytů. Většina odpůrců po zmizení těch nejznámějších přešla do ilegality. V některých městech vznikly buňky Odporu, podzemní organizace kacířů.
 V čele Řádu stojí Nejvyšší, Velekněz. Nejvyššímu se zodpovídá Synod Arcibiskupů, kteří řídí jednotlivé části Řádu. V současnosti tvoří Synod pět arcibiskupů.
 Zákony Řádu vyžadují od věřících několik jednoduchých věcí. Středem víry Řádu je Kosmický Otec, stvořitel všehomíra. Dárce života a univerzálních zákonů, díky kterým může existovat svět a vesmír.

@@ -60,6 +60,7 @@ OptionMenu "wosDEBUGmenu" {
 	//Command "Powerups", "puke 939"
 	StaticText ""
 	Command "MAP08 - Millport", "map map08"
+	Command "MAP12 - Raven Rock", "map map12"
 	Command "MAP14 - Coastal Village", "map map14"
 }
 ////////////////////////////////////////////////////////////////////////////////

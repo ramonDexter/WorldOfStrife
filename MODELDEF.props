@@ -548,6 +548,15 @@ model WoodenBarrel {
 	
 	frameindex BARW A 0 0
 }
+model wosD_woodenBarrel {
+	path "models/props/woodbarrel/"
+	model 0 "wbarrel.md3"
+	skin 0 "tx_wbarrel.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
 model strifeDecoVaze1 {
 	path "models/props/pitcher/"
 	model 0 "pitcher.md3"

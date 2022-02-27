@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 8108.709f;
+		viewpositionx = 5713.579f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = 2656.57f;
+		viewpositiony = 2973.264f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.4970805f;
+		viewscale = 0.3823696f;
 		
 		plugins
 		{
@@ -110,8 +110,8 @@ maps
 			
 			sector
 			{
-				rotationceiling = 17;
-				rotationfloor = 17;
+				rotationceiling = 1;
+				rotationfloor = 1;
 				xscalefloor = 1;
 				yscalefloor = 1;
 				xscaleceiling = 1;
@@ -151,8 +151,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 8514;
-				firstvisibleline = 185;
+				caretposition = 6768;
+				firstvisibleline = 219;
 				activetab = true;
 			}
 		}

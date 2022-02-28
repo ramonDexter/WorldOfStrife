@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 4410.527f;
+		viewpositionx = -215.9467f;
 		defaulttoptexture = "MRKVBR";
 		overrideceilheight = false;
-		viewpositiony = 572.1835f;
+		viewpositiony = -1796.093f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,19 +42,19 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 8;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
 		overridetoptexture = false;
 		overridebottomtexture = false;
 		defaultbottomtexture = "MRKVBR";
-		defaultfloortexture = "F_GRASS";
+		defaultfloortexture = "BGRAS3";
 		defaultwalltexture = "MRKVBR";
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1535602f;
+		viewscale = 6.046149f;
 		
 		plugins
 		{
@@ -111,12 +111,12 @@ maps
 			{
 				xpanningceiling = 1;
 				ypanningceiling = 1;
-				rotationceiling = 1;
+				rotationceiling = 17;
 				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningfloor = 1;
 				ypanningfloor = 1;
-				rotationfloor = 1;
+				rotationfloor = 17;
 				xscalefloor = 1;
 				yscalefloor = 1;
 				user_managed_3d_floor = 3;
@@ -144,7 +144,7 @@ maps
 				tabtype = 0;
 				scripttype = 1;
 				caretposition = 3695;
-				firstvisibleline = 138;
+				firstvisibleline = 74;
 				activetab = true;
 			}
 		}

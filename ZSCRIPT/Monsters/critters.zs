@@ -476,6 +476,126 @@ class wosFireFly : CritterBase {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+// inquisitor crow by shadowman&bigmemka ///////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+class wosICraw : actor {
+	Default {
+        //$Category "Other NPCs/WoS-critters"
+		//$Title "vrana"
+		
+		-COUNTKILL
+		+NEVERTARGET
+		+FLOORCLIP
+		+FRIGHTENED
+		+SHOOTABLE
+		//+FRIENDLY
+		
+		health 10;
+		radius 8;
+		height 24;
+		mass 10;
+		speed 15;
+		seesound "craw/active";
+		//MONSTER;
+	}
+	
+    States {
+        Spawn:
+			//TNT1 A 0 A_JumpIfCloser(256, "See");
+            CRW1 GGAABBCCDD 4 A_Look2();
+            loop;
+        See:
+            CRW1 A 0 {
+				self.bNoGravity = 0;
+				self.bFloat = 0;
+				A_SetGravity(1.0);
+			}
+            CRW1 E 0 ;
+            CRW1 GGG 4;
+            CRW1 G 0 A_JumpIfCloser(256, "Startfly");
+            CRW1 AABB 4;
+            CRW1 B 0 A_JumpIfCloser(256, "Startfly");
+            CRW1 CCDD 4;
+            CRW1 D 0 A_JumpIfCloser(256, "Startfly");
+            CRW1 A 0 A_Jump(16, "Startfly");
+            CRW1 A 0 A_Jump(128, 1);
+            Goto See;
+            CRW1 AABB 4;
+            CRW1 B 0 A_JumpIfCloser(256, "Startfly");
+            CRW1 CCDD 4;
+            CRW1 D 0 A_JumpIfCloser(256, "Startfly");
+            CRW1 GGGG 4;
+            CRW1 G 0 A_JumpIfCloser(256, "Startfly");
+            Goto See;
+            
+        Startfly:
+            CRW1 A 0;
+            CRW1 E 1; //A_SpawnItemEx("PEMysticEgg", 0, 0, 0, 0, 0, 0, 0, SXF_ABSOLUTEVELOCITY)
+            CRW1 E 0;
+            CRW1 E 1;
+            Goto Fly;
+        Fly:
+            CRW1 A 0;
+            CRW1 A 0 A_SentinelBob();
+            CRW1 A 0 {
+				self.bNoGravity = 1;
+				self.bFloat = 1;
+			}
+            CRW1 EEFFEEFFEEFFEEFFEEFFEEFF 4 A_Wander();
+            CRW1 A 0 A_Jump(128,2);
+            CRW1 A 0 A_StartSound ("Craw/active");
+            CRW1 A 0 A_Jump(32,1);
+            Goto Fly;
+            CRW1 A 0;
+            CRW1 A 0 {
+				self.bNoGravity = 0;
+			}
+            CRW1 E 0 A_SetGravity(0.1);
+            CRW1 EEFFEEFFEEFFEEFF 4 A_Wander();
+            CRW1 E 0 A_SetGravity(0.2);
+            CRW1 EEFFEEFFEEFFEEFF 4 A_Wander();
+            CRW1 E 0 A_SetGravity(0.4);
+            CRW1 EEFFEEFFEEFFEEFF 4 A_Wander();
+            CRW1 E 0 A_SetGravity(0.8);
+            CRW1 EEFFEEFF 4 A_Wander();
+            Goto See;
+        Death:
+            CRW1 H 4; 
+            CRW1 I 4 A_NoBlocking();
+            Goto Fall;
+        Death.Arrow:
+            CRW1 H 4 A_SpawnDebris("BloodSpurt");
+            CRW1 H 0 A_SpawnDebris("BloodSpurt");
+            CRW1 I 4 A_NoBlocking();
+            Goto Fall;
+        Death.Egg:
+            CRW1 H 1;
+            Stop;
+        Fall:
+            CRW1 I 1 A_CheckFloor ("Splat");
+            loop;
+        Splat:
+            CRW1 I 1 A_Stop();
+            CRW1 I 0 A_StartSound("Craw/Splat");
+            CRW1 I -1;
+            stop;
+    }
+}
+
+class wosICrowBoid : HXA_Boid {
+	Default {
+		//$Category "Other NPCs/WoS-critters"
+		//$Title "vrana - boid"
+	}
+	States {
+		Spawn:
+			CRW1 EEFFEEFFEEFF 4;
+			Loop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
 /*
 TO DO list
 - rat spawner

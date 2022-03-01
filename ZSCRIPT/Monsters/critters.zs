@@ -582,11 +582,53 @@ class wosICraw : actor {
             stop;
     }
 }
+////////////////////////////////////////////////////////////////////////////////
+// birds - boids ///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+class wosICrawBoid_leader : HXA_Boid {
 
-class wosICrowBoid : HXA_Boid {
+	Override Void PostBeginPlay() {
+		FlockID = random(0,255);
+		for(int i=0; i<40; i++)
+		{
+			let k = Spawn("wosICrawBoid_follower", pos);
+			wosICrawBoid_follower(k).FlockID = FlockID;
+			wosICrawBoid_follower(k).MaxDistancetoBoid = 1600;
+			wosICrawBoid_follower(k).BoidActor = "wosICrawBoid_leader";
+			wosICrawBoid_follower(k).CloseToMaster = TRUE;
+			wosICrawBoid_follower(k).DistanceFromMaster = 300;
+			k.master = self;
+		} 
+	}
+	Override Void Tick()
+	{
+		if(health > 0)
+		{
+			BoidFlight(null, MaxVelocity: 30, WallDetectionDistance: 10, MinDistanceBeacon: 400, MaxDistanceBeacon: 700, HorizonNormalizer: 30);
+			//A_SpawnParticle("Gray", SPF_FULLBRIGHT, 4,15);
+		}
+		Super.Tick();
+	}
+
 	Default {
 		//$Category "Other NPCs/WoS-critters"
-		//$Title "vrana - boid"
+		//$Title "vrana - boid leader"
+	}
+	States {
+		Spawn:
+			CRW1 EEFFEEFFEEFF 4;
+			Loop;
+	}
+}
+class wosICrawBoid_follower : HXA_Boid {
+	Override Void Tick()
+	{
+		if(health > 0)
+		{
+			BoidFlight("wosICrawBoid_leader", BoidCohesion: 6);
+			//A_SpawnParticle("White", SPF_FULLBRIGHT, 4,15);
+		}
+		Super.Tick();
 	}
 	States {
 		Spawn:

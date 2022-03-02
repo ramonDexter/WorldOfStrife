@@ -7933,6 +7933,8 @@ actor wosD_woodenBarrel 21469 {
 	+NOBLOOD
 	+INCOMBAT
 	+ACTLIKEBRIDGE
+	+NOGRAVITY
+	+DONTTHRUST
 	DeathSound "woodenbarrel/death"
 	States {
 		Spawn:

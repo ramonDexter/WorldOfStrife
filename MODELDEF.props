@@ -81,7 +81,7 @@ model wosD_dexCoffeeTable {
 	path "models/props/coffeeTable/"
 	model 0 "dx_coffeeTable.md3"
 	skin 0 "CoffeeTableTex1.png"
-	scale 0.75 0.75 0.75
+	scale 0.75 0.75 0.7
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -275,7 +275,7 @@ model wosD_dexDeskNobleOffice {
 	path "models/props/desknobleoffice/"
 	model 0 "dx_desknobleoffice.md3"
 	skin 0 "WHDeskOvalOfficeTex1.png"
-	scale 0.75 0.75 0.75
+	scale 0.75 0.75 0.69
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -2597,7 +2597,7 @@ model wosD_dex_compSecurity {
 	model 0 "compSecurity.md3"
 	skin 0 "ComputerSecurityTex1.png"
 	scale 0.75 0.75 0.75
-	offset -4.0 0.0 0.0
+	offset -4.0 0.0 6.0
 	frameindex DUMM A 0 0
 }
 model wosD_dex_fireExtinguisher {

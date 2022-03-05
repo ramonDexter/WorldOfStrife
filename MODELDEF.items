@@ -1237,7 +1237,7 @@ model wosaleBottle {
 	path "models/props/mmstuff/"
 	model 0 "MM_stuff_12.md3"
 	skin 0 "tx_mmstuff.png"
-	scale 5.0 5.0 5.0
+	scale 7.0 7.0 7.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

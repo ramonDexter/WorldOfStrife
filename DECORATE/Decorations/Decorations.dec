@@ -7051,8 +7051,8 @@ actor wosD_dexDeskNobleOffice 21416 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
-	radius 16
-	height 32
+	radius 20
+	height 24
 	States {
 		Spawn:
 			DUMM A -1

@@ -1303,13 +1303,41 @@ class wosAcolyte : Acolyte replaces Acolyte {
 	}
 }
 class wosAcolyteTan : wosAcolyte replaces AcolyteTan {}
-class wosAcolyteRed : wosAcolyte replaces AcolyteRed {}
-class wosAcolyteRust : wosAcolyte replaces AcolyteRust {}
-class wosAcolyteGray : wosAcolyte replaces AcolyteGray {}
-class wosAcolyteDGreen : wosAcolyte replaces AcolyteDGreen {}
-class wosAcolyteLGreen : wosAcolyte replaces AcolyteLGreen {}
-class wosAcolyteGold : wosAcolyte replaces AcolyteGold {}
-class wosAcolyteBlue : wosAcolyte replaces AcolyteBlue {}
+class wosAcolyteRed : wosAcolyte replaces AcolyteRed {
+	Default {
+		Translation 0;
+	}
+}
+class wosAcolyteRust : wosAcolyte replaces AcolyteRust {
+	Default {
+		Translation 1;
+	}
+}
+class wosAcolyteGray : wosAcolyte replaces AcolyteGray {
+	Default {
+		Translation 2;
+	}
+}
+class wosAcolyteDGreen : wosAcolyte replaces AcolyteDGreen {
+	Default {
+		Translation 3;
+	}
+}
+class wosAcolyteGold : wosAcolyte replaces AcolyteGold {
+	Default {
+		Translation 4;
+	}
+}
+class wosAcolyteLGreen : wosAcolyte replaces AcolyteLGreen {
+	Default {
+		Translation 5;
+	}
+}
+class wosAcolyteBlue : wosAcolyte replaces AcolyteBlue {
+	Default {
+		Translation "32:63=0:31", "80:95=64:79", "128:143=144:159", "192:192=1:1", "193:223=1:31", "235:239=224:228";
+	}
+}
 class wosAcolyteShadow : wosAcolyte replaces AcolyteShadow {}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

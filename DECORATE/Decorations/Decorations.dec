@@ -4394,8 +4394,8 @@ actor strifeCoffeeTable01 21243 {
 	+USESPECIAL
 	+DONTTHRUST
 	
-	height 16
-	radius 16
+	height 14
+	radius 12
 	
 	States {
 		Spawn:
@@ -4410,8 +4410,8 @@ actor strifeCoffeeTable02 21244 {
 	+USESPECIAL
 	+DONTTHRUST
 	
-	height 16
-	radius 16
+	height 14
+	radius 12
 	
 	States {
 		Spawn:
@@ -5975,7 +5975,7 @@ actor wosD_dex_compSecurity 21344 {
 	+NOGRAVITY
 	+DONTTHRUST
 	radius 4
-	height 4
+	height 12
 	States {
 		Spawn:
 			DUMM A -1

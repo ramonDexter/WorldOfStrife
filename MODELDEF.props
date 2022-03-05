@@ -1763,7 +1763,7 @@ model strifeCoffeeTable01 {
 	path "models/props/roomstuff/"
 	model 0 "dxCoffeeTable01.md3"
 	skin 0 "tx_roomStuff.png"
-	scale 4.0 4.0 4.0
+	scale 4.0 4.0 4.2
 	offset 0.0 0.0 0.0
 	frameindex SCT1 A 0 0
 }
@@ -1771,7 +1771,7 @@ model strifeCoffeeTable02 {
 	path "models/props/roomstuff/"
 	model 0 "dxCoffeeTable02.md3"
 	skin 0 "tx_roomStuff.png"
-	scale 4.0 4.0 4.0
+	scale 4.0 4.0 4.2
 	offset 0.0 0.0 0.0
 	frameindex SCT2 A 0 0
 }

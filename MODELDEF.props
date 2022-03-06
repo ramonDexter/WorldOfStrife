@@ -900,10 +900,16 @@ model Tub {
 	model 0 "tub.md3"
 	skin 0 "tx_wbarrel.png"
 	scale 8.0 8.0 8.0
-	offset 0.0 0.0 0.0
-	
-	frameindex TUB1 A 0 0
-	
+	offset 0.0 0.0 0.0	
+	frameindex TUB1 A 0 0	
+}
+model wosD_tub {
+	path "models/props/tub/"
+	model 0 "tub.md3"
+	skin 0 "tx_wbarrel.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0	
 }
 ////////////////////////////////////////////////////////////////////////////////
 

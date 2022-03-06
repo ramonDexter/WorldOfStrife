@@ -143,7 +143,7 @@ ACTOR hexZLog 28167
   States
   {
   Spawn:
-    LOGG A -1
+    LOG2 A -1
     Stop
   }
 }

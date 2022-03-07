@@ -266,14 +266,21 @@ Valtredd
 Vláda Císaře Valtdredda je známa hlavně velkým hladomorem, který zasáhl celou Říši.
 
 Berthold
+<<<<<<< Updated upstream
 Císař známý také jako Berthold Stavitel. Vybudoval mnoho významných staveb. Mnoho z nich však padlo za oběť pozdějším válkám.
+=======
+>>>>>>> Stashed changes
 
 Larissa
+První císařovna v čele Svaté Říše. Její vláda je spojena s rozkvětem vědy a průmyslu.
+
 Nahas
 Aurik
 Ranan
 Alrik
+
 Avahid
+Císař Avahid ukončil krvavou vládu svého bratra, bývalého císaře Alrika. Jeho vláda je spojena s reformami spojenými s ukončením agresivní doktríny.
 ////////////////////////////////////////////////////////////////////////////////
 
 

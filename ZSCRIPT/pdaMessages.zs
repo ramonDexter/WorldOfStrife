@@ -153,4 +153,37 @@ class noteCoastalRegion : PDA {
         Tag "$PDA_noteCoastalRegion_title";
     }
 }
+class noteTheGreatHouses : PDA {
+    Default {
+        //$category "ZSCRIPT/PDAnotes"
+        //$title "note: great houses"
+        Tag "$PDA_noteTheGreatHouses_Title";
+    }
+}
+class noteTekGuildNotes : PDA {
+    Default {
+        //$category "ZSCRIPT/PDAnotes"
+        //$title "note: mauler energy"
+        Tag "$PDA_noteTekGuildNotes_Title";
+    }
+}
+class noteMillport : PDA {
+    Default {
+        //$category "ZSCRIPT/PDAnotes"
+        //$title "note: millport"
+        Tag "$PDA_noteMillport_Title";
+    }
+}
+class noteBodrov : PDA {}
+class noteHolden : PDA {}
+class noteNarfolk : PDA {}
+class noteEldham : PDA {}
+class noteWarthford : PDA {}
+class noteRelond : PDA {}
+class noteWestmarch : PDA {}
+class noteBournemouth : PDA {}
+class noteWindermere : PDA {}
+class noteBlackpool : PDA {}
+class noteZalfari : PDA {}
+class noteEastcliff : PDA {}
 ////////////////////////////////////////////////////////////////////////////////

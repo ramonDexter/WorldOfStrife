@@ -634,7 +634,7 @@ Léčivý Gel
 // csy //
 Lékařská fakulta TekGildy vytvořila mnoho zajímavých technologií. Léčivý Gel patří mezi tuto technologie. Hustá struktura Gelu umožňuje obnovu tkání a svalů, stejně jako kostí i nervů v neuvěřitelně nízkém čase. Přesné složení Gelu je tajemstvím TekGildy které chrání pod Ediktem Smrti.
 // enu //
-The TekGild Faculty of Medicine has created many interesting technologies. The healing Gel is one of these technologies. The dense structure of the Gel allows the recovery of tissues and muscles, as well as bones and nerves in an incredibly low time. The exact composition of the Gel is the secret of the TekGild that protects under the Edict of Death.
+The TekGild Faculty of Medicine has created many interesting technologies. The Healing Gel is one of these technologies. The dense structure of the Gel allows the recovery of tissues and muscles, as well as bones and nerves in an incredibly low time. The exact composition of the Gel is the secret of the TekGild that protects under the Edict of Death.
 
 Kybernetické Implantáty
 // csy //

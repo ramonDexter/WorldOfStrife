@@ -59,11 +59,11 @@ actor notePrayers : PDA {
 	//PDA.Text "$PDA_notePrayers_TEXT"
 	//scale 0.5
 	
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHmedical : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -71,11 +71,11 @@ actor noteSHmedical : PDA {
 	Tag "$PDA_noteSHmedical_TITLE"
 	//PDA.Text "$PDA_noteSHmedical_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop		
-	}
+	}*/
 }
 actor noteSHshouldergun : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -83,11 +83,11 @@ actor noteSHshouldergun : PDA {
 	Tag "$PDA_noteSHshouldergun_TITLE"
 	//PDA.Image "graphics/pda/images/pdaI_binderstaff.png"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHbinderStavesTechnical : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -95,11 +95,11 @@ actor noteSHbinderStavesTechnical : PDA {
 	Tag "$PDA_noteSHbinderStavesTechnical_TITLE"
 	//PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHbinderNote01 : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -107,11 +107,11 @@ actor noteSHbinderNote01 : PDA {
 	Tag "$PDA_noteSHbinderNote01_TITLE"
 	//PDA.Text "$PDA_noteSHbinderNote01_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHsilentHillsTouristGuide : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -119,11 +119,11 @@ actor noteSHsilentHillsTouristGuide : PDA {
 	Tag "$PDA_noteSHsilentHillsTouristGuide_TITLE"
 	//PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHminesReport : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -131,11 +131,11 @@ actor noteSHminesReport : PDA {
 	Tag "$PDA_noteSHminesReport_TITLE"
 	//PDA.Text "$PDA_noteSHminesReport_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteSHbindersOath : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -143,11 +143,11 @@ actor noteSHbindersOath : PDA {
 	Tag "$PDA_noteSHbindersOath_TITLE"
 	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
 }
 actor noteCommonDogmas : PDA {
 	//$category "ZSCRIPT/PDAnotes"
@@ -155,9 +155,14 @@ actor noteCommonDogmas : PDA {
 	Tag "$PDA_noteCommonDogmas_Title"
 	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
 	//scale 0.5
-	States {
+	/*States {
 		Spawn:
 			DUMM A -1
 			Stop
-	}
+	}*/
+}
+actor noteTheGreatHouses : PDA {
+	//$category "ZSCRIPT/PDAnotes"
+	//$title "note: The Great Houses"
+	Tag "$PDA_noteTheGreatHouses_Title"
 }

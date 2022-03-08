@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -2389.472f;
+		viewpositionx = -390.9691f;
 		defaulttoptexture = "WALCAV01";
 		overrideceilheight = false;
-		viewpositiony = 412.5522f;
+		viewpositiony = -267.7805f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 4;
+			gridsize = 2;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 5.08433f;
+		viewscale = 0.6232852f;
 		
 		fieldtypes
 		{

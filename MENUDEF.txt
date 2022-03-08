@@ -15,7 +15,7 @@ LISTMENU "MainMenu"
 	//StaticPatch 20, 20, "SOALOG"
 	
 	TextItem "$MM_NEW", "n", "PlayerclassMenu"
-  TextItem "[ wosDEBUG ]", "x", "wosDEBUGmenu"
+	TextItem "[ wosDEBUG ]", "x", "wosDEBUGmenu"
 	TextItem "$MM_OPTIONS","o", "OptionsMenu"
 	TextItem "$MM_LOAD", "l", "LoadGameMenu"
 	TextItem "$MM_SAVE", "s", "SaveGameMenu"	
@@ -44,15 +44,17 @@ AddOptionMenu "OptionsMenu"
 OptionMenu "wosDEBUGmenu" {
 	Title "WoS DEBUG menu"
 	StaticText ""
-	Option "lowDetail shader", "gl_lowdetail", "YesNo"
+	StaticText ":: C H E A T S ::"
 	Command "All Armor", "puke 4207"
 	Command "All weapons", "puke 4208"
 	Command "Ammunition", "give ammo"
-	StaticText ""
-	Command "Heal", "give health 100"
 	Command "Buddha", "buddha"
 	Command "G O D", "god"
 	StaticText ""
+	Command "<< Heal 100 >>", "give health 100"
+	StaticText ""
+	StaticText ":: WoS STUFF ::"
+	Option "lowDetail shader", "gl_lowdetail", "YesNo"
 	Command "50% accuracy", "puke 4202 5"
 	Command "50% stamina", "puke 4203 5"
 	Command "Binder pack", "puke 4201"
@@ -60,7 +62,10 @@ OptionMenu "wosDEBUGmenu" {
 	Command "Binder pack light", "puke 4206"
 	//Command "Powerups", "puke 939"
 	StaticText ""
+	StaticText ":: M A P S ::"
 	Command "MAP08 - Millport", "map map08"
+	Command "MAP09 - Eastern Coast", "map map09"
+	Command "MAP10 - Borderlands West", "map map10"
 	Command "MAP12 - Ravenrock", "map map12"
 	Command "MAP14 - Eastcliff", "map map14"
 }
@@ -191,33 +196,33 @@ OptionMenu "TiltPlusPlusMenu"
 
 OptionValue LocationOptions {
 
-    0, "Helmet"
-    1, "Right Shoulder"
-    2, "Left Shoulder"
-    3, "Center View"
+		0, "Helmet"
+		1, "Right Shoulder"
+		2, "Left Shoulder"
+		3, "Center View"
 
 }
 
 
 OptionMenu "Flashlight"
 {
-    Title "Flashlight"
-    
-    StaticText " "
-    
-    ColorPicker "Color", "flashlight_color"
-    
-    StaticText " "
-    
-    Slider "Intensity ('Range')", "flashlight_intensity", 0, 1024, 1, 0
-    
-    StaticText " "
-    
-    Slider "Inner Angle", "flashlight_inner", 0, 180, 1, 0
-    
-    Slider "Outer Angle", "flashlight_outer", 0, 180, 1, 0
-    
-    Option "Location", flashlight_location, LocationOptions
+		Title "Flashlight"
+		
+		StaticText " "
+		
+		ColorPicker "Color", "flashlight_color"
+		
+		StaticText " "
+		
+		Slider "Intensity ('Range')", "flashlight_intensity", 0, 1024, 1, 0
+		
+		StaticText " "
+		
+		Slider "Inner Angle", "flashlight_inner", 0, 180, 1, 0
+		
+		Slider "Outer Angle", "flashlight_outer", 0, 180, 1, 0
+		
+		Option "Location", flashlight_location, LocationOptions
 
 }
 
@@ -256,261 +261,261 @@ OptionMenu "UseToPickupOptions" {
 
 OptionMenu hn_SignNoteMenu
 {
-  Title "$m8f_hn_new_sign"
+	Title "$m8f_hn_new_sign"
 
-  StaticText ""
-  TextField "$m8f_hn_sign_note1" , m8f_hn_sign_note1
-  TextField "$m8f_hn_sign_note2" , m8f_hn_sign_note2
-  TextField "$m8f_hn_sign_note3" , m8f_hn_sign_note3
+	StaticText ""
+	TextField "$m8f_hn_sign_note1" , m8f_hn_sign_note1
+	TextField "$m8f_hn_sign_note2" , m8f_hn_sign_note2
+	TextField "$m8f_hn_sign_note3" , m8f_hn_sign_note3
 
-  StaticText ""
-  TextField "$m8f_hn_area_name"   , m8f_hn_area_name
-  Slider    "$m8f_hn_area_radius" , m8f_hn_area_radius, 100.0, 10000.0, 100.0, 0
+	StaticText ""
+	TextField "$m8f_hn_area_name"   , m8f_hn_area_name
+	Slider    "$m8f_hn_area_radius" , m8f_hn_area_radius, 100.0, 10000.0, 100.0, 0
 
-  StaticText ""
-  Command "$m8f_hn_make_sign_close"  , m8f_hn_make_sign_close
-  Command "$m8f_hn_make_sign_cancel" , m8f_hn_make_sign_cancel
-  Command "$m8f_hn_make_sign_clear"  , m8f_hn_make_sign_clear
+	StaticText ""
+	Command "$m8f_hn_make_sign_close"  , m8f_hn_make_sign_close
+	Command "$m8f_hn_make_sign_cancel" , m8f_hn_make_sign_cancel
+	Command "$m8f_hn_make_sign_clear"  , m8f_hn_make_sign_clear
 
-  StaticText ""
-  StaticText "$m8f_hn_options", 1
-  Option "$m8f_hn_sign_type"             , m8f_hn_sign_type             , hn_sign_type_values
-  Option "$m8f_hn_sign_clear_after_make" , m8f_hn_sign_clear_after_make , OnOff
-  Option "$m8f_hn_sign_add_time"         , m8f_hn_sign_add_time         , OnOff
-  Option "$m8f_hn_sign_shootable"        , m8f_hn_sign_shootable        , OnOff
-  Option "$m8f_hn_sign_with_pointer"     , m8f_hn_sign_with_pointer     , OnOff
-  Slider "$m8f_hn_sign_map_scale"        , m8f_hn_sign_map_scale        , 0.5, 2.0, 0.1, 1
+	StaticText ""
+	StaticText "$m8f_hn_options", 1
+	Option "$m8f_hn_sign_type"             , m8f_hn_sign_type             , hn_sign_type_values
+	Option "$m8f_hn_sign_clear_after_make" , m8f_hn_sign_clear_after_make , OnOff
+	Option "$m8f_hn_sign_add_time"         , m8f_hn_sign_add_time         , OnOff
+	Option "$m8f_hn_sign_shootable"        , m8f_hn_sign_shootable        , OnOff
+	Option "$m8f_hn_sign_with_pointer"     , m8f_hn_sign_with_pointer     , OnOff
+	Slider "$m8f_hn_sign_map_scale"        , m8f_hn_sign_map_scale        , 0.5, 2.0, 0.1, 1
 
-  StaticText ""
-  SafeCommand "$m8f_hn_remove_signs" , m8f_hn_remove_signs
+	StaticText ""
+	SafeCommand "$m8f_hn_remove_signs" , m8f_hn_remove_signs
 
-  StaticText ""
-  StaticText "$m8f_hn_remove_sign_note", Black
+	StaticText ""
+	StaticText "$m8f_hn_remove_sign_note", Black
 }
 
 OptionMenu hn_FootstepMarkerOptions
 {
-  Title "Footstep Marker Options"
+	Title "Footstep Marker Options"
 
-  StaticText ""
-  Slider "Marker Spawn Period (tics)" , m8f_hn_marker_spawn_period, 1, 50, 1, 0
-  Slider "Marker Lifetime (s)"        , m8f_hn_marker_lifetime, 10, 900, 10, 0
-  Option "Markers Stay Forever"       , m8f_hn_marker_forever , OnOff
-  Option "Mark Start"                 , m8f_hn_mark_start, OnOff
+	StaticText ""
+	Slider "Marker Spawn Period (tics)" , m8f_hn_marker_spawn_period, 1, 50, 1, 0
+	Slider "Marker Lifetime (s)"        , m8f_hn_marker_lifetime, 10, 900, 10, 0
+	Option "Markers Stay Forever"       , m8f_hn_marker_forever , OnOff
+	Option "Mark Start"                 , m8f_hn_mark_start, OnOff
 
-  StaticText ""
-  Slider "Initial Opacity" , m8f_hn_marker_alpha , 0.1, 1.0, 0.1, 1
-  Slider "Size"            , m8f_hn_marker_scale , 0.5, 2.0, 0.1, 1
-  Option "Appearance"      , m8f_hn_marker_type  , hn_marker_type_values
+	StaticText ""
+	Slider "Initial Opacity" , m8f_hn_marker_alpha , 0.1, 1.0, 0.1, 1
+	Slider "Size"            , m8f_hn_marker_scale , 0.5, 2.0, 0.1, 1
+	Option "Appearance"      , m8f_hn_marker_type  , hn_marker_type_values
 
-  StaticText ""
-  StaticText "Footsteps and Arrow type rotation doesn't", Black
-  StaticText "work when automap rotation is on, so", Black
-  StaticText "disable automap rotation here:", Black
-  Option "$AUTOMAPMNU_ROTATE" , "am_rotate" , "RotateTypes"
+	StaticText ""
+	StaticText "Footsteps and Arrow type rotation doesn't", Black
+	StaticText "work when automap rotation is on, so", Black
+	StaticText "disable automap rotation here:", Black
+	Option "$AUTOMAPMNU_ROTATE" , "am_rotate" , "RotateTypes"
 }
 
 OptionMenu hn_SignOptions
 {
-  Title "Sign Options"
+	Title "Sign Options"
 
-  StaticText ""
-  Option "Sign Type"                , m8f_hn_sign_type, hn_sign_type_values
+	StaticText ""
+	Option "Sign Type"                , m8f_hn_sign_type, hn_sign_type_values
 
-  StaticText ""
-  Option "Clear note on Done"       , m8f_hn_sign_clear_after_make , OnOff
-  Option "Add level time to note"   , m8f_hn_sign_add_time         , OnOff
-  Option "Make next sign shootable" , m8f_hn_sign_shootable        , OnOff
-  Option "Add next sign to Compass" , m8f_hn_sign_with_pointer     , OnOff
+	StaticText ""
+	Option "Clear note on Done"       , m8f_hn_sign_clear_after_make , OnOff
+	Option "Add level time to note"   , m8f_hn_sign_add_time         , OnOff
+	Option "Make next sign shootable" , m8f_hn_sign_shootable        , OnOff
+	Option "Add next sign to Compass" , m8f_hn_sign_with_pointer     , OnOff
 
-  StaticText ""
-  Slider "Automap Sign Marker Size" , m8f_hn_sign_map_scale , 0.5, 2.0, 0.1, 1
+	StaticText ""
+	Slider "Automap Sign Marker Size" , m8f_hn_sign_map_scale , 0.5, 2.0, 0.1, 1
 }
 
 OptionMenu hn_CompassOptions
 {
-  Title "Compass Options"
+	Title "Compass Options"
 
-  StaticText ""
-  StaticText "Visibility"          , 1
-  Option     "Compass"             , m8f_hn_compass_show       , OnOff
-  Option     "Level Name"          , m8f_hn_compass_level_name , OnOff
-  Option     "Area Name"           , m8f_hn_show_area          , OnOff
-  Option     "Grid Coordinates"    , m8f_hn_show_grid_coords   , OnOff
-  Option     "Switches"            , m8f_hn_show_switches      , OnOff
-  Option     "Exploration Status"  , m8f_hn_show_explored      , OnOff
-  StaticText "On some maps, Exploration Status 10/10 is unreachable" , Black
-  StaticText "due to the presence of unaccessible areas."            , Black
+	StaticText ""
+	StaticText "Visibility"          , 1
+	Option     "Compass"             , m8f_hn_compass_show       , OnOff
+	Option     "Level Name"          , m8f_hn_compass_level_name , OnOff
+	Option     "Area Name"           , m8f_hn_show_area          , OnOff
+	Option     "Grid Coordinates"    , m8f_hn_show_grid_coords   , OnOff
+	Option     "Switches"            , m8f_hn_show_switches      , OnOff
+	Option     "Exploration Status"  , m8f_hn_show_explored      , OnOff
+	StaticText "On some maps, Exploration Status 10/10 is unreachable" , Black
+	StaticText "due to the presence of unaccessible areas."            , Black
 
-  StaticText ""
-  Option     "Hide Automatic Area Names", m8f_hn_hide_auto_names, OnOff
-  StaticText "Note: Automatic Area Names can reveal secrets" , Black
-  StaticText "that are not discovered yet."                  , Black
+	StaticText ""
+	Option     "Hide Automatic Area Names", m8f_hn_hide_auto_names, OnOff
+	StaticText "Note: Automatic Area Names can reveal secrets" , Black
+	StaticText "that are not discovered yet."                  , Black
 
-  StaticText ""
-  Option     "Show on Automap"     , m8f_hn_compass_automap    , OnOff
+	StaticText ""
+	Option     "Show on Automap"     , m8f_hn_compass_automap    , OnOff
 
-  StaticText ""
-  Slider     "Horizontal position"     , m8f_hn_compass_x       , 0.0, 1.0,  0.01, 2
-  Slider     "Vertical position"       , m8f_hn_compass_y       , 0.0, 0.95, 0.01, 2
-  Slider     "Compass size"            , m8f_hn_compass_scale   , 0.5, 3.0,  0.1,  1
-  Slider     "Compass visible degrees" , m8f_hn_compass_degrees , 90.0, 360.0, 15.0, 0
-  Option     "Compass style"           , m8f_hn_compass_style   , hn_style_options
-  Option     "Text above compass"      , m8f_hn_compass_under   , OnOff
+	StaticText ""
+	Slider     "Horizontal position"     , m8f_hn_compass_x       , 0.0, 1.0,  0.01, 2
+	Slider     "Vertical position"       , m8f_hn_compass_y       , 0.0, 0.95, 0.01, 2
+	Slider     "Compass size"            , m8f_hn_compass_scale   , 0.5, 3.0,  0.1,  1
+	Slider     "Compass visible degrees" , m8f_hn_compass_degrees , 90.0, 360.0, 15.0, 0
+	Option     "Compass style"           , m8f_hn_compass_style   , hn_style_options
+	Option     "Text above compass"      , m8f_hn_compass_under   , OnOff
 
-  StaticText ""
-  Option     "Map Info is separate", m8f_hn_text_separate , OnOff
-  Slider     "Horizontal position" , m8f_hn_text_x        , 0.0, 1.0,  0.01, 2
-  Slider     "Vertical position"   , m8f_hn_text_y        , 0.0, 0.95, 0.01, 2
+	StaticText ""
+	Option     "Map Info is separate", m8f_hn_text_separate , OnOff
+	Slider     "Horizontal position" , m8f_hn_text_x        , 0.0, 1.0,  0.01, 2
+	Slider     "Vertical position"   , m8f_hn_text_y        , 0.0, 0.95, 0.01, 2
 }
 
 OptionMenu hn_DisplayOptions
 {
-  Title       "Hellscape Navigator Display"
+	Title       "Hellscape Navigator Display"
 
-  StaticText  ""
-  Option      "Locked Door Access"     , m8f_hn_show_access     , OnOff
-  StaticText  ""
-  Option      "Level Name on Entering" , m8f_hn_show_level_name , OnOff
-  StaticText  ""
-  Option      "Show Speed"             , m8f_hn_show_speed      , OnOff
-  Slider      "Speedometer Scale"      , m8f_hn_speedometer_scale , 0.5, 3.0,  0.1,  1
-  Slider      "Horizontal position"    , m8f_hn_speedometer_x     , 0.0, 1.0,  0.01, 2
-  Slider      "Vertical position"      , m8f_hn_speedometer_y     , 0.0, 1.0,  0.01, 2
+	StaticText  ""
+	Option      "Locked Door Access"     , m8f_hn_show_access     , OnOff
+	StaticText  ""
+	Option      "Level Name on Entering" , m8f_hn_show_level_name , OnOff
+	StaticText  ""
+	Option      "Show Speed"             , m8f_hn_show_speed      , OnOff
+	Slider      "Speedometer Scale"      , m8f_hn_speedometer_scale , 0.5, 3.0,  0.1,  1
+	Slider      "Horizontal position"    , m8f_hn_speedometer_x     , 0.0, 1.0,  0.01, 2
+	Slider      "Vertical position"      , m8f_hn_speedometer_y     , 0.0, 1.0,  0.01, 2
 }
 
 OptionMenu hn_HelperOptions
 {
-  Title       "Map Helpers"
+	Title       "Map Helpers"
 
-  StaticText  ""
-  StaticText  "Map Revealing", 1
-  Option      "Reveal map on level start"      , m8f_hn_reveal_on_start      , OnOff
-  Option      "Reveal map when it is explored" , m8f_hn_reveal_when_explored , OnOff
-  StaticText  "Doesn't trigger if a map already contains a Map Revealer.", Black
+	StaticText  ""
+	StaticText  "Map Revealing", 1
+	Option      "Reveal map on level start"      , m8f_hn_reveal_on_start      , OnOff
+	Option      "Reveal map when it is explored" , m8f_hn_reveal_when_explored , OnOff
+	StaticText  "Doesn't trigger if a map already contains a Map Revealer.", Black
 
-  StaticText  ""
-  StaticText  "Give at level start:", 1
-  Option      "Scanner"                , m8f_hn_scanner_start     , OnOff
-  StaticText  "Scanner only works if the map is revealed."          , Black
-  StaticText  ""
-  Slider      "Entryway Translocator"  , m8f_hn_n_translocator    , 0, 10, 1, 0
-  StaticText  "Entryway Translocator teleports to the level start." , Black
-  StaticText  ""
-  Slider      "Space Tunneling Device" , m8f_hn_n_tunneling , 0, 10, 1, 0
-  StaticText  "Don't get stuck out of the level boundaries!"  , Black
+	StaticText  ""
+	StaticText  "Give at level start:", 1
+	Option      "Scanner"                , m8f_hn_scanner_start     , OnOff
+	StaticText  "Scanner only works if the map is revealed."          , Black
+	StaticText  ""
+	Slider      "Entryway Translocator"  , m8f_hn_n_translocator    , 0, 10, 1, 0
+	StaticText  "Entryway Translocator teleports to the level start." , Black
+	StaticText  ""
+	Slider      "Space Tunneling Device" , m8f_hn_n_tunneling , 0, 10, 1, 0
+	StaticText  "Don't get stuck out of the level boundaries!"  , Black
 
-  StaticText  ""
-  StaticText  "Give when map is revealed:", 1
-  Option      "Scanner"                 , m8f_hn_reveal_scanner          , OnOff
-  StaticText  "Scanner only works if the map is revealed."                 , Black
-  StaticText  ""
-  Slider      "Entryway Translocator"   , m8f_hn_n_translocator_explored , 0, 10, 1, 0
-  Slider      "Space Tunneling Device"  , m8f_hn_n_tunneling_explored    , 0, 10, 1, 0
+	StaticText  ""
+	StaticText  "Give when map is revealed:", 1
+	Option      "Scanner"                 , m8f_hn_reveal_scanner          , OnOff
+	StaticText  "Scanner only works if the map is revealed."                 , Black
+	StaticText  ""
+	Slider      "Entryway Translocator"   , m8f_hn_n_translocator_explored , 0, 10, 1, 0
+	Slider      "Space Tunneling Device"  , m8f_hn_n_tunneling_explored    , 0, 10, 1, 0
 }
 
 OptionMenu hn_GameplayOptions
 {
-  Title       "Gameplay Options"
+	Title       "Gameplay Options"
 
-  StaticText  ""
-  StaticText  "Auto Use", 1
-  Option      "Automatic Use by looking" , m8f_hn_auto_switch_enabled , OnOff
-  StaticText  "Works for doors and switches at use distance."           , Black
-  StaticText  ""
-  Option      "Set Use Mark on Auto Use" , m8f_hn_auto_switch_mark    , OnOff
+	StaticText  ""
+	StaticText  "Auto Use", 1
+	Option      "Automatic Use by looking" , m8f_hn_auto_switch_enabled , OnOff
+	StaticText  "Works for doors and switches at use distance."           , Black
+	StaticText  ""
+	Option      "Set Use Mark on Auto Use" , m8f_hn_auto_switch_mark    , OnOff
 
-  StaticText  ""
-  StaticText  "Shootable Switches", 1
-  Option      "Switches and doors are shootable" , m8f_hn_shootable_switches , OnOff
-  Option      "Exit switches are shootable"      , m8f_hn_shootable_exit_switches , OnOff
-  StaticText  "Changes take effect on level start or new game.", Black
-  StaticText  "These two options may break intended map flow.", Black
+	StaticText  ""
+	StaticText  "Shootable Switches", 1
+	Option      "Switches and doors are shootable" , m8f_hn_shootable_switches , OnOff
+	Option      "Exit switches are shootable"      , m8f_hn_shootable_exit_switches , OnOff
+	StaticText  "Changes take effect on level start or new game.", Black
+	StaticText  "These two options may break intended map flow.", Black
 }
 
 OptionMenu hn_VisualOptions
 {
-  Title       "Visual Options"
+	Title       "Visual Options"
 
-  StaticText  ""
-  Option      "Highlight Exit Sectors" , m8f_hn_exit_highlight_enabled , OnOff
-  StaticText  "Changes take effect on level start or new game.", Black
+	StaticText  ""
+	Option      "Highlight Exit Sectors" , m8f_hn_exit_highlight_enabled , OnOff
+	StaticText  "Changes take effect on level start or new game.", Black
 
-  StaticText  ""
-  Option      "Breadcrumbs Enabled", m8f_hn_crumbs_enabled, OnOff
+	StaticText  ""
+	Option      "Breadcrumbs Enabled", m8f_hn_crumbs_enabled, OnOff
 }
 
 OptionMenu hn_Controls
 {
-  Title       "Hellscape Navigator Controls"
-  ScrollTop   2
-  StaticTextSwitchable "$CNTRLMNU_SWITCHTEXT1", "$CNTRLMNU_SWITCHTEXT2", "ControlMessage"
+	Title       "Hellscape Navigator Controls"
+	ScrollTop   2
+	StaticTextSwitchable "$CNTRLMNU_SWITCHTEXT1", "$CNTRLMNU_SWITCHTEXT2", "ControlMessage"
 
-  StaticText  ""
-  Control     "Make a sign"      , m8f_hn_make_sign_open
+	StaticText  ""
+	Control     "Make a sign"      , m8f_hn_make_sign_open
 
-  StaticText  ""
-  Control     "Use and mark"     , "+m8f_hn_use"
+	StaticText  ""
+	Control     "Use and mark"     , "+m8f_hn_use"
 
-  StaticText  ""
-  Control     "Backtrack"        , "+m8f_hn_backtrack"
+	StaticText  ""
+	Control     "Backtrack"        , "+m8f_hn_backtrack"
 
-  StaticText  ""
-  Control     "Automap: hold"    , "+press_map"
-  MapControl  "Automap: close"   , m8f_hn_close_map
-  StaticText  "These two controls must be assigned to the same key" , Black
-  StaticText  "so the automap can be switched off in all cases."    , Black
+	StaticText  ""
+	Control     "Automap: hold"    , "+press_map"
+	MapControl  "Automap: close"   , m8f_hn_close_map
+	StaticText  "These two controls must be assigned to the same key" , Black
+	StaticText  "so the automap can be switched off in all cases."    , Black
 
-  StaticText  ""
-  Control     "Throw Sign"       , m8f_hn_throw_sign
+	StaticText  ""
+	Control     "Throw Sign"       , m8f_hn_throw_sign
 }
 
 OptionMenu hn_Options
 {
-  Title       "Hellscape Navigator Options"
+	Title       "Hellscape Navigator Options"
 
-  Submenu     "Controls"         , hn_Controls
+	Submenu     "Controls"         , hn_Controls
 
-  StaticText  ""
-  StaticText  "Commands"         , 1
-  SafeCommand "Remove all signs" , "netevent m8f_hn_remove_signs"
-  SafeCommand "Clear footsteps"  , "netevent m8f_hn_remove_footsteps"
+	StaticText  ""
+	StaticText  "Commands"         , 1
+	SafeCommand "Remove all signs" , "netevent m8f_hn_remove_signs"
+	SafeCommand "Clear footsteps"  , "netevent m8f_hn_remove_footsteps"
 
-  StaticText  ""
-  StaticText  "Options"          , 1
-  Submenu     "Footstep Markers" , hn_FootstepMarkerOptions
-  Submenu     "Sign"             , hn_SignOptions
-  Submenu     "Compass"          , hn_CompassOptions
-  Submenu     "Display"          , hn_DisplayOptions
-  Submenu     "Map Helpers"      , hn_HelperOptions
-  Submenu     "Gameplay"         , hn_GameplayOptions
-  Submenu     "Visuals"          , hn_VisualOptions
+	StaticText  ""
+	StaticText  "Options"          , 1
+	Submenu     "Footstep Markers" , hn_FootstepMarkerOptions
+	Submenu     "Sign"             , hn_SignOptions
+	Submenu     "Compass"          , hn_CompassOptions
+	Submenu     "Display"          , hn_DisplayOptions
+	Submenu     "Map Helpers"      , hn_HelperOptions
+	Submenu     "Gameplay"         , hn_GameplayOptions
+	Submenu     "Visuals"          , hn_VisualOptions
 }
 
 // Option values ///////////////////////////////////////////////////////////////
 
 OptionValue hn_marker_type_values
 {
-  0, "Footsteps"
-  1, "Circle"
-  2, "Arrow"
-  3, "Disabled"
+	0, "Footsteps"
+	1, "Circle"
+	2, "Arrow"
+	3, "Disabled"
 }
 
 OptionValue hn_sign_type_values
 {
-  0, "Wooden"
-  1, "Transparent"
-  2, "Metal"
+	0, "Wooden"
+	1, "Transparent"
+	2, "Metal"
 }
 
 OptionValue hn_style_options
 {
-  0, "Dark"
-  1, "Minimalistic"
-  2, "Blue"
-  3, "Doom"
-  4, "Pixel"
+	0, "Dark"
+	1, "Minimalistic"
+	2, "Blue"
+	3, "Doom"
+	4, "Pixel"
 }
 //hellscape navigator-----------------------------------------------------------
 

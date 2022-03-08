@@ -123,7 +123,7 @@ map map11 "Valley Farm" {
 	NoIntermission
 	
 }
-map map12 "Raven Rock" {
+map map12 "Ravenrock Village" {
 	sky1 = "SKYRGGR"
 	music = "ADDER_S"
 	outsidefogdensity = 255

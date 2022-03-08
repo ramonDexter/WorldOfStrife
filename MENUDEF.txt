@@ -15,6 +15,7 @@ LISTMENU "MainMenu"
 	//StaticPatch 20, 20, "SOALOG"
 	
 	TextItem "$MM_NEW", "n", "PlayerclassMenu"
+  TextItem "[ wosDEBUG ]", "x", "wosDEBUGmenu"
 	TextItem "$MM_OPTIONS","o", "OptionsMenu"
 	TextItem "$MM_LOAD", "l", "LoadGameMenu"
 	TextItem "$MM_SAVE", "s", "SaveGameMenu"	
@@ -60,8 +61,8 @@ OptionMenu "wosDEBUGmenu" {
 	//Command "Powerups", "puke 939"
 	StaticText ""
 	Command "MAP08 - Millport", "map map08"
-	Command "MAP12 - Raven Rock", "map map12"
-	Command "MAP14 - Coastal Village", "map map14"
+	Command "MAP12 - Ravenrock", "map map12"
+	Command "MAP14 - Eastcliff", "map map14"
 }
 ////////////////////////////////////////////////////////////////////////////////
 

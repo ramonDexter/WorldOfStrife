@@ -15,8 +15,7 @@ class dest_ShortBush : ShortBush Replaces ShortBush {
         //DamageFactor "Alarm", 0.0;
     }
 	
-	States
-	{
+	States {
         Spawn:
             BUSH A -1;
             Stop;
@@ -36,8 +35,7 @@ class dest_TallBush : dest_ShortBush replaces TallBush {
         Radius 20;
         Height 64;
     }
-	States
-	{
+	States {
         Spawn:
             SHRB A -1;
             Stop;
@@ -71,8 +69,7 @@ class XJunk1: actor {
         Scale 1.0;
     }
     
-    States
-    {
+    States {
         Spawn:
             //TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash");
             JNK6 ABCD 3;
@@ -94,8 +91,7 @@ class BushPiece1: XJunk1 {
         BounceFactor 0.1;
     }
 
-    States
-    {
+    States {
         Spawn:
             //TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash");
             XST3  ABCD 10;
@@ -116,8 +112,7 @@ class BushPiece2: XJunk1 {
         BounceFactor 0.1;
     }
 
-    States
-    {
+    States {
         Spawn:
             //TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash");
             XST4  ABCD 8;
@@ -138,8 +133,7 @@ class LeafParticle: XJunk1 {
         BounceFactor 0.1;
     }
 
-    States
-    {
+    States {
         Spawn:
             //TNT1 A 0 A_JumpIf(waterlevel > 1, "Splash");
             XST2 ABACA 10;
@@ -173,8 +167,7 @@ class potPuff : actor {
 			Stop;
 	}
 }
-class dest_Pot : Pot Replaces Pot
-{
+class dest_Pot : Pot Replaces Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "Pot destructible"
@@ -197,8 +190,7 @@ class dest_Pot : Pot Replaces Pot
         Health 10;
     }
 	
-	States
-	{
+	States {
         Spawn:
             VASE A -1;
             Stop;
@@ -234,8 +226,7 @@ class dest_Pitcher : Pitcher Replaces Pitcher {
         Health 10;
     }
 	
-	States
-	{
+	States {
         Spawn:
             VAZE B -1;
             Stop;
@@ -262,8 +253,7 @@ class VasePieces : actor {
         BounceFactor 0.5;
     }
     
-    States
-    {
+    States {
         Spawn:
             PBIT ABCDEFGHIJ 1;
             Loop;

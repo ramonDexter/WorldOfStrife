@@ -321,7 +321,7 @@ class binderPlayer : StrifePlayer {
 		//  various player properties  /////////////////////////////////////////
 		Player.ForwardMove 0.75, 0.75;
 		Player.SideMove 0.75, 0.75;
-		Player.AirCapacity 2;
+		Player.AirCapacity 2.0;
 		player.viewheight 48;
 		player.attackzoffset 11;
 		Player.DisplayName "Binder";

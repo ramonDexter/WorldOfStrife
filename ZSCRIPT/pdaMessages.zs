@@ -174,16 +174,4 @@ class noteMillport : PDA {
         Tag "$PDA_noteMillport_Title";
     }
 }
-class noteBodrov : PDA {}
-class noteHolden : PDA {}
-class noteNarfolk : PDA {}
-class noteEldham : PDA {}
-class noteWarthford : PDA {}
-class noteRelond : PDA {}
-class noteWestmarch : PDA {}
-class noteBournemouth : PDA {}
-class noteWindermere : PDA {}
-class noteBlackpool : PDA {}
-class noteZalfari : PDA {}
-class noteEastcliff : PDA {}
 ////////////////////////////////////////////////////////////////////////////////

@@ -51,7 +51,7 @@ OptionMenu "wosDEBUGmenu" {
 	Command "Buddha", "buddha"
 	Command "G O D", "god"
 	StaticText ""
-	Command "<< Heal 100 >>", "give health 100"
+	Command "<< Heal Full >>", "give health"
 	StaticText ""
 	StaticText ":: WoS STUFF ::"
 	Option "lowDetail shader", "gl_lowdetail", "YesNo"

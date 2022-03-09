@@ -174,4 +174,11 @@ class noteMillport : PDA {
         Tag "$PDA_noteMillport_Title";
     }
 }
+class noteEmperorsList : PDA {
+    Default {
+        //$category "ZSCRIPT/PDAnotes"
+        //$title "note: emperors list"
+        Tag "$PDA_noteEmperorsList_Title";
+    }
+}
 ////////////////////////////////////////////////////////////////////////////////

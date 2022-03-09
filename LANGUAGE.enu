@@ -1211,7 +1211,29 @@ PDA_noteMillport_Title = "Millport";
 PDA_noteMillport_Text = "\c[yellow]Millport\n"
 						"-------------------------------\n"
 						"\c[white]A port city on the South Coast. Millport is the center of commerce and government here. The city is controlled by the Baron, a merchant who bought a title of nobility from the Emperor and now runs the city with a firm hand. As long as he pays his taxes, the Imperial power is uninterested in what happens in the city, so the Baron has free rein. The city was founded 300 years ago by Narfol merchants who sought a quiet anchorage while traveling around the Continent. But after about 70 years, the city became independent from the Narfol government and subsequently entered the emerging Bodric Empire. About 70 years ago, the TekGuild established its headquarters here, making the sleepy port city a university city of major importance, which was matched by the subsequent development of the city. The city now pays for the center of the South Coast, where farmers and merchants from near and far come to sell their goods.";
-
+PDA_noteEmperorsList_Title = "List of Emperors";
+PDA_noteEmperorsList_Text1 = "\c[yellow]Millport\n"
+						"-------------------------------\n"
+						"Bodrik\n"
+						"\c[white]The founder of the Bodrik dynasty, the first king and later the first Emperor of the Holy Empire.\n"
+						"\c[yellow]Valtmar\n"
+						"\c[white]Emperor Valtmar is fundamentally expanding the Empire. The territory of the Empire expands during his reign to include the territories of Tabitsk and Westmarch.\n"
+						"\c[yellow]Valtredd\n"
+						"\c[white]The reign of Emperor Valtdredd is known mainly for the great famine that affected the entire Empire.\n"
+						"\c[yellow]Berthold\n"
+						"\c[white]The Emperor also known as Berthold the Builder. He built many important buildings. But many of them fell victim to later wars.\n"
+						"\c[yellow]Larissa\n"
+						"\c[white]The First Empress at the head of the Holy Empire. Her reign is associated with the blossoming of science and industry.\n";
+PDA_noteEmperorsList_Text2 = "\c[yellow]Nahas\n"
+						"\c[white]Emperor Nahas wanted to go down in history as a builder, but is better known as the 'Destroyer'. He had part of the capital demolished for his building plans.\n"
+						"\c[yellow]Aurik\n"
+						"\c[white]The winner of the Successor Wars. He has begun to rebuild a country destroyed by the War of Succession.\n"
+						"\c[yellow]Ranan\n"
+						"\c[white]The Emperor Priest built many new shrines, but also introduced new religious laws and established a religious police.\n"
+						"\c[yellow]Alrik\n"
+						"\c[white]The Bloody Emperor. The madness of the Emperor brought the Empire its worst years, with even human sacrifice. The Bloody Emperor's reign was ended by his brother, Avahid.\n"
+						"\c[yellow]Avahid\n"
+						"\c[white]Emperor Avahid ended the bloody reign of his brother, former Emperor Alrik. His reign is linked to reforms linked to the end of aggressive doctrine.";
 
 
 //##################################################################################################################

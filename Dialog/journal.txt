@@ -399,6 +399,14 @@ Conversation {
 				amount = 1;
 			}
 		}
+		Choice {
+			Text = "List of Emperors";
+			NextPage = "journal_notes_noteEmperorsList1";
+			Require {
+				item = "noteEmperorsList";
+				amount = 1;
+			}
+		}
     }
     //##################################################################################################################
     //## notes pages ###################################################################################################
@@ -724,6 +732,36 @@ Conversation {
 		Dialog = "$PDA_noteMillport_Text";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "journal_notes2";
+		}
+    }
+    Page {
+        pageName = "journal_notes_noteEmperorsList1";
+		Name = "\c[yellow]::[   N O T E S   ]::";
+		Dialog = "$PDA_noteEmperorsList_Text1";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ NEXT PAGE >> ]";
+			NextPage = "journal_notes_noteEmperorsList2";
+		}
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "journal_notes2";
+		}
+    }
+    Page {
+        pageName = "journal_notes_noteEmperorsList2";
+		Name = "\c[yellow]::[   N O T E S   ]::";
+		Dialog = "$PDA_noteEmperorsList_Text2";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow][ << PREVIOUS PAGE ]";
+			NextPage = "journal_notes_noteEmperorsList1";
+		}
 		Choice {
 			Text = "\c[yellow][ << BACK ]";
 			NextPage = "journal_notes2";

@@ -1,0 +1,73 @@
+//==================================================================================================================
+//energy weapons vendor
+//==================================================================================================================
+Conversation {
+	ID = 12;
+	Page {
+        pageName = "SH_energyWeaponsVendor_opener";
+		Name = "Energy Weapons Vendor";
+		Dialog = "\c[white]Welcome, how may I serve you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[gold]Buy Mauler";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMauler";
+			NextPage = "SH_energyWeaponsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 1750;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPod";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyPod";
+			NextPage = "SH_energyWeaponsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 25;
+			}
+		}
+		Choice {
+			Text = "Buy Energykit Pack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyKit";
+			NextPage = "SH_energyWeaponsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 75;
+			}
+		}
+		Choice {
+			Text = "Buy Energy Pack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyPack";
+			NextPage = "SH_energyWeaponsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Flamethrower";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscFlameThrower";
+			NextPage = "SH_energyWeaponsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 1450;
+			}
+		}
+	}
+}
+//==================================================================================================================

@@ -1,0 +1,55 @@
+//==================================================================================================================
+//vratny tekgildy convID 46
+//==================================================================================================================
+Conversation {
+    ID = 46;
+    Page {
+        pageName = "SH_tekGuildVratny_opener";
+        Name = "TekGuild Porter";
+        Dialog = "\c[white]Welcome to the TekGuild. How may I serve you?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What is this place?";
+            Nextpage = "SH_tekGuildVratny_thisplace";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "SH_tekGuildVratny_whatareyoudoing";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildVratny_thisplace";
+        Name = "TekGuild Porter";
+        Dialog = "\c[white]You are standing in the entrance hall of the TekGuild, sir.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What is the TekGuild doing here?";
+            Nextpage = "SH_tekGuildVratny_tekguild";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildVratny_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildVratny_whatareyoudoing";
+        Name = "TekGuild Porter";
+        Dialog = "\c[white]I'm the Porter of the TekGuild. I'm here to serve any guests who came to visit the TekGuild, sir.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildVratny_opener";
+        }
+    }
+    Page {
+        pageName = "SH_tekGuildVratny_tekguild";
+        Name = "TekGuild Porter";
+        Dialog = "\c[white]The purpose of TekGuild is training of new engineers and technicians as a staff for Order's facilities. We also train blacksmiths and techsmiths who offer services to the public. If you want to know more about TekGuild, go ask any of the Masters in guild rooms behind me.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_tekGuildVratny_opener";
+        }
+    }
+}
+//==================================================================================================================

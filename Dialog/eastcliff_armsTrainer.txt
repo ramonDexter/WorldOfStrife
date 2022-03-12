@@ -1,0 +1,91 @@
+Conversation {
+    ID = 4;
+    /*
+    Page {
+        pageName = "";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "EC_armstrainer_opener";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]Hello, Binder. Welcome to my gym. Would you need some training? Or did you come for a little chat?";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "Yes, I would like some training.";
+            Nextpage = "EC_armstrainer_training";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "EC_armstrainer_questions";
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_training";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]Good to hear that from a Binder. A good fighter always wants to leanr more.\nI can teach you precision. For, lets say, 1000 gold.\n(raise accuracy by 10 for 1000 gold)";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "EC_armstrainer_opener";
+        }
+        Choice {
+            Text = "All right, teach me. (pay 1000 gold)";
+            Nextpage = "EC_rebecca_shop_grenades";
+            CloseDialog = true;
+            YesMessage = "Okay, listen carefully...";
+            NoMessage = "Not enough gold!";
+            Special = 80;
+            arg0 = 1201;
+            Cost {
+                item = "goldCoin";
+                amount = 1000;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_questions";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]Yes, a good fighter also seeks knowledge. What did you wanted to know?";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "EC_armstrainer_opener";
+        }
+        Choice {
+            Text = "Could you tell me about Eastcliff?";
+            Nextpage = "EC_armstrainer_questions_eastcliff";
+        }
+        Choice {
+            Text = "This is your gym?";
+            Nextpage = "EC_armstrainer_questions_gym";
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_questions_eastcliff";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]Our village is a peaceful place. The locals live from the abundance of fish in local waters, and from farming on the farms up on the cliffs on the plateau.";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "EC_armstrainer_questions";
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_questions_gym";
+        Name = "Titus, master trainer";
+        Dialog = "\c[white]Yes, it is. My grand-grandfather built this place. He was an army retire, settled here after a long service. And since that time, men in our family are fighters and warriors. Two of my brothers serve in Tabit's army and the third brother is a captain in Imperial Army. And I serve as a master trainer of martial arts, as my father did.";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "EC_armstrainer_questions";
+        }
+    }
+
+}

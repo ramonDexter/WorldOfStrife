@@ -1,0 +1,31 @@
+//==================================================================================================================
+//travel terminal
+//==================================================================================================================
+Conversation {
+    ID = 43;
+    Page {
+        pageName = "SH_travelTerminal_opener";
+        Name = "[ TRAVEL TERMINAL ]";
+        Dialog = "\c[white]Choose your destination. The travel costs 15 gold.";
+        Goodbye = "\c[red][ EXIT ]";
+        Panel = "M_BLNK";
+        Choice {
+            Text = "Travel to Millport";
+            Nextpage = "SH_travelTerminal_opener";
+			DisplayCost = false;
+            CloseDialog = true;
+			NoMessage = "Not enough gold!";
+            Special = 80;
+            arg0 = 2008;
+			Cost {
+				item = "goldCoin";
+				amount = 15;
+			}
+			Require {
+				item = "millPortTransportTicket";
+				amount = 1;
+			}
+        }
+    }
+}
+//==================================================================================================================

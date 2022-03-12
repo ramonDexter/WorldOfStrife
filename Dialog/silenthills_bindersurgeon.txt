@@ -1,0 +1,185 @@
+//==================================================================================================================
+//binder Surgeon
+//==================================================================================================================
+Conversation {
+	ID = 2;
+
+	Page {
+        pageName = "binderSurgeon_opener";
+		link = 2;
+		IfItem {
+			item = "binderBadge";
+			amount = 1;
+		}
+		Name = "Surgeon";
+		Dialog = "\c[white]Hello, how can I help you?"; //Hello, how can I help you?
+		Panel = "M_DCTR";
+		Goodbye = "\c[red]Goodbye";
+
+		Choice {
+			Text = "One medpatch"; //One zscmedpatch
+			NextPage = "binderSurgeon_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscmedpatch";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "One medical kit"; //One Medical Kit
+			NextPage = "binderSurgeon_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedicalKit";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "One surgery kit"; //One Surgery Kit
+			NextPage = "binderSurgeon_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscSurgeryKit";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+	}
+	Page {
+        pageName = "binderSurgeon_openerwbadge";
+		Name = "Surgeon"; //Surgeon
+		Dialog = "\c[white]Hello Binder, how may I be of service?"; //Hello Binder, how may I be of service?
+		Panel = "M_DCTR";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "What can you offer me?"; //What can you offer me?
+			NextPage = "binderSurgeon_badgetrading";
+		}
+		Choice {
+			Text = "I have some questions."; //I have some questions.
+			NextPage = "binderSurgeon_questions";
+		}
+	}
+	Page {
+        pageName = "binderSurgeon_badgetrading";
+		Name = "Surgeon";
+		Dialog = "\c[white]I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff."; //I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff.
+		Panel = "M_DCTR";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK"; //\c[yellow]<< BACK ]
+			NextPage = 2;
+		}
+		Choice {
+			Require {
+				item = "upgradeToken";
+				amount = 1;
+			}
+			Text = "$M01_INQSURGEON_P03_CH02"; //Buy the cybernetic implant.
+			NextPage = "binderSurgeon_badgetrading";
+			CloseDialog = true;
+			YesMessage = "Here you go. Just stand still and everything will be okay."; //Here you go. Just stand still and everything will be okay.
+			NoMessage = "You don't have the upgrade token!"; //You don't have the upgrade token!
+			GiveItem = "UpgradeStamina";
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+
+		Choice {
+			Text = "One Hypospray"; //One zscmedpatch
+			NextPage = "binderSurgeon_badgetrading";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "One Kombopack"; //One Medical Kit
+			NextPage = "binderSurgeon_badgetrading";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "One Instaheal"; //One Surgery Kit
+			NextPage = "binderSurgeon_badgetrading";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+
+	}
+	Page {
+        pageName = "binderSurgeon_questions";
+		Name = "Surgeon";
+		Dialog = "\c[white]Well, I can take a little break for a small talk. What are you interested in?"; //Well, I can take a little break for a small talk. What are you interested in?
+		Panel = "M_DCTR";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "binderSurgeon_openerwbadge";
+		}
+		Choice {
+			Text = "Tell me about yourself."; //Tell me about yourself.
+			NextPage = "binderSurgeon_aboutyourself";
+		}
+		Choice {
+			Text = "What can you tell me about the city?"; //What can you tell me about the city?
+			NextPage = "binderSurgeon_aboutcity";
+		}
+
+	}
+	Page {
+        pageName = "binderSurgeon_aboutyourself";
+		Name = "Surgeon";
+		Dialog = "\c[white]My name is Gregor. I'm the Binder surgeon, as you know. I've come here when the local base was grounded, fifteen years ago. These were harsh times, but I was young. How, when I'm older, I want to settle down, marry and have a family. Maybe."; //My name is Gregor. I'm the Binder surgeon, as you know. I've come here when the local base was grounded, fifteen years ago. These were harsh times, but I was young. How, when I'm older, I want to settle down, marry and have a family. Maybe.
+		Panel = "M_DCTR";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "binderSurgeon_questions";
+		}
+
+	}
+	Page {
+        pageName = "binderSurgeon_aboutcity";
+		Name = "Surgeon";
+		Dialog = "\c[white]Well, Silent Hills is a sleepy hollow. Not, really, it's a small trading community on a big river. Two pubs, lots of shops, bathouse and a port with a market."; //Well, Silent Hills is a sleepy hollow. Not, really, it's a small trading community on a big river. Two pubs, lots of shops, bathouse and a port with a market.
+		Panel = "M_DCTR";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "binderSurgeon_questions";
+		}
+	}
+}
+//==================================================================================================================

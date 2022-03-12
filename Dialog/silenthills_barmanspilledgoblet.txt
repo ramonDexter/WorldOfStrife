@@ -1,0 +1,100 @@
+//==================================================================================================================
+//barman - rumors regarding quests
+//==================================================================================================================
+Conversation
+{
+	ID = 7;
+	Page {
+        pageName = "SH_barkeep1_opener";
+		Name = "Barkeeper";
+		Dialog = "\c[white]Welcome to The Spilled Goblet, would you like some drink? Or do you want some talks?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "What can you offer me?";
+			NextPage = "SH_barkeep1_drinks";
+		}
+		Choice {
+			Text = "I have some questions.";
+			NextPage = 3;
+		}
+	}
+	Page {
+        pageName = "SH_barkeep1_drinks";
+		Name = "Barkeeper";
+		Dialog = "\c[white]I can give you bottle of beer, vine or water. What would you like?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "SH_barkeep1_opener";
+		}
+		Choice {
+			Text = "Give me bottle of vine";
+			NextPage = "SH_barkeep1_drinks";
+			DisplayCost = true;
+			GiveItem = "wosvineBottle";
+			YesMessage = "Here's the vine.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "Give me bottle of beer";
+			NextPage = "SH_barkeep1_drinks";
+			DisplayCost = true;
+			GiveItem = "wosbeerBottle";
+			YesMessage = "Here's the beer.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "Just a bottle of water";
+			NextPage = "SH_barkeep1_drinks";
+			DisplayCost = true;
+			GiveItem = "woswaterBottle";
+			YesMessage = "Here's the water.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+		}
+	}
+	Page {
+        pageName = "SH_barkeep1_questions";
+		Name = "Barkeeper";
+		Dialog = "\c[white]What do you want to know? I know little bit of everything. And also, because I'm a barkeeper, I know everybody here in town.";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Have you heard about any rebels in town?";
+			NextPage = "SH_barkeep1_questions_rebelsintown";
+			Require {
+				item = "twn_judgeQ01_rebels_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_judgeQ01_rebels_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "\c[yellow][ << BACK";
+			NextPage = "SH_barkeep1_opener";
+		}
+	}
+	Page {
+		pageName = "SH_barkeep1_questions_rebelsintown";
+		Name = "Barkeeper";
+		Dialog = "\c[white]You should look on the western bank in the residential quarter. I cannot tell you more, I've heard just that the rebel lives on the western bank.";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow][ << BACK";
+			NextPage = "SH_barkeep1_questions";
+		}
+	}
+}
+//==================================================================================================================

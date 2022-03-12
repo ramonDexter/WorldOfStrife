@@ -1,0 +1,97 @@
+//==================================================================================================================
+//public preacher
+//==================================================================================================================
+Conversation {
+    ID = 24;
+    Page {
+        pageName = "SH_publicPreacher_opener";
+        Name = "Preacher";
+        Dialog = "\c[white]Hello child, what brings you to my humble temple? Are you seeking spriritual services, or do you need some information?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What services do you offer?";
+            Nextpage = "SH_publicPreacher_services";
+        }
+        Choice {
+            Text = "I have some questions.";
+            Nextpage = "SH_publicPreacher_information";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_services";
+        Name = "Preacher";
+        Dialog = "\c[white]You can confess your sins to me. Or, if some of your relatives is nearing his end, I can offer the funeral services.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Will you pray for my success on mission?";
+            Nextpage = "SH_publicPreacher_prayforme";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_publicPreacher_opener";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_prayforme";
+        Name = "Preacher";
+        Dialog = "\c[white]Certainly, yes.\nFather, who came from the void,\nplease, watch this Binder's steps\nas he is your most faithful servant.\nAmen.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Amen.";
+            Nextpage = "SH_publicPreacher_opener";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_information";
+        Name = "Preacher";
+        Dialog = "\c[white]Yes, of course. What information do you need?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Do you know of any heretics around here?";
+            Nextpage = "SH_publicPreacher_heretics";
+        }
+        Choice {
+            Text = "What can you tell about the locals?";
+            Nextpage = "SH_publicPreacher_locals";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            Nextpage = "SH_publicPreacher_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_publicPreacher_opener";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_heretics";
+        Name = "Preacher";
+        Dialog = "\c[white]As a honest member of the Order I would report any heretic I encounter. Hopefully I didn't encounter any heretic in the last time. You are doing fine job rooting out heresy here in the city.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_publicPreacher_information";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_locals";
+        Name = "Preacher";
+        Dialog = "\c[white]The locals are peaceful people. Workers, mostly, with some exceptions, like traders or miners. They are hard working through day and hard rinking during night. Good people.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_publicPreacher_information";
+        }
+    }
+    Page {
+        pageName = "SH_publicPreacher_aboutcity";
+        Name = "Preacher";
+        Dialog = "\c[white]Silent Hills is a peaceful town on the edge of the Wilderness. The Order is keeping peace here and our work is to keep spiritual peace also.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_publicPreacher_information";
+        }
+    }
+}
+//==================================================================================================================

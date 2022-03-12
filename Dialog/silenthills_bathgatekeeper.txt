@@ -1,0 +1,52 @@
+//==================================================================================================================
+//bath gatekeeper
+//==================================================================================================================
+Conversation {
+	ID = 10;
+	Page {
+        pageName = "SH_bathGatekeeper_opener";
+		Name = "Gatekeeper";
+		Dialog = "\c[white]\c[white]Hello, Do you want to enter the baths? Entrance costs 10 coins.";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Do you know abything about the murder down there? Have you seen anybody? Anything?";
+            Nextpage = "SH_bathGatekeeper_murder";
+            require {
+                item = "twn_judgeQ01_vrazdaVlaznich_speakwithgatekeeper";
+                amount = 1;
+            }
+            exclude {
+                item = "twn_judgeQ01_vrazdaVlaznich_prohledejPrevlekarnu";
+                amount = 1;
+            }
+		}
+		Choice {
+			Text = "Yes, I want to shower myself.";
+			NextPage = "SH_bathGatekeeper_opener";
+			GiveItem = "BHbathKey";
+			YesMessage = "I bid you welcome.";
+			NoMessage = "Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+	}
+    Page {
+        pageName = "SH_bathGatekeeper_murder";
+		Name = "Gatekeeper";
+		Dialog = "\c[white]\c[white]Well, I haven't seen much, because we had an unexpected power shortage. But I have seen a guy quickly leaving the place after the shortage. I saw on the video that he left the locker open. You should check this.";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you. You've been helpful.";
+            Nextpage = "SH_bathGatekeeper_opener";
+            YesMessage = "Check the locker. Maybe he left something there.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1102;
+        }
+    }
+}
+//==================================================================================================================

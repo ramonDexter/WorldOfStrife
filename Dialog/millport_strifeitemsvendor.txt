@@ -1,0 +1,150 @@
+//##################################################################################################################
+//strife items vendor id 13
+//##################################################################################################################
+Conversation {
+	ID = 13;
+
+	Page {
+        pageName = "MP_strifeItemsVendor_opener";
+		Name = "Derwin, techsmith";
+		Dialog = "\c[white]Hello, welcome to my humble shop.\nI sell support items - Environmental suit, Scanner, Portable Map, Targeter and Shadow Armor. What will be your choice?";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Environmental Suit";
+			NextPage = "MP_strifeItemsVendor_opener";
+			GiveItem = "wosEnvSuit";
+			YesMessage = "Here is one Environmental Suit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Scanner";
+			NextPage = "MP_strifeItemsVendor_opener";
+			GiveItem = "Scanner";
+			YesMessage = "Here is one Scanner!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 180;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Portable Map";
+			NextPage = "MP_strifeItemsVendor_opener";
+			GiveItem = "wosPortableMap";
+			YesMessage = "Here is one Portable Map!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 250;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Targeter";
+			NextPage = "MP_strifeItemsVendor_opener";
+			GiveItem = "wosTargeter";
+			YesMessage = "Here is one Targeter!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 150;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Shadow Armor";
+			NextPage = "MP_strifeItemsVendor_opener";
+			GiveItem = "wosShadowArmor";
+			YesMessage = "Here is one Shadow Armor!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 350;
+			}
+		}
+        Choice {
+            Text = "I wanted to ask something.";
+            NextPage = "MP_strifeItemsVendor_questions";
+        }
+	}
+    Page {
+        pageName = "MP_strifeItemsVendor_questions";
+		Name = "Derwin, techsmith";
+		Dialog = "\c[white]And what is it you wanted to know?";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Could you tell me about yourself?";
+            NextPage = "MP_strifeItemsVendor_aboutyourself";
+        }
+        Choice {
+            Text = "I wanted to know more about the city.";
+            NextPage = "MP_strifeItemsVendor_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_strifeItemsVendor_opener";
+        }
+    }
+    Page {
+        pageName = "MP_strifeItemsVendor_aboutyourself";
+		Name = "Derwin, techsmith";
+	    Dialog = "\c[white]I am Derwin, techSmith. I make and sell the support equipment. If you're looking for a protective suit, targetter or maybe a shadow armor, ask me. I've got the best stuff in the town.";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_strifeItemsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "MP_strifeItemsVendor_aboutcity";
+		Name = "Derwin, techsmith";
+		Dialog = "\c[white]Well, Millport's my home for most of my life. I came here right after graduating in Silent Hills TekGuild. Well, what could I say about Millport...it looks nice on the surface, but it's rotten inside. Have you heard about the Baron? You don't want to deal with him, trust me. He controls everything here. Every shop owner must pay special monthly tax to him. That's fot the local relationships.\nIf you're tourist type, you can visit the port or the Commons. But, visiting the port isn't that easy.";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Why visiting port is not easy?";
+            NextPage = "MP_strifeItemsVendor_visitingport";
+        }
+        Choice {
+            Text = "The Commons? What's that?";
+            NextPage = "MP_strifeItemsVendor_commons";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_strifeItemsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "MP_strifeItemsVendor_visitingport";
+		Name = "Derwin, techsmith";
+	    Dialog = "\c[white]Well, the port's under control of the Port Authority. The port area is overrun by long fence with locked gates. You need an authorization from the Port Authority, which is not cheap. They are keeping the scum away by using these measures.";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_strifeItemsVendor_aboutcity";
+        }
+    }
+    Page {
+        pageName = "MP_strifeItemsVendor_commons";
+		Name = "Derwin, techsmith";
+	    Dialog = "\c[white]'The Commons' is the name of local residential comples. It's located on the eastern edge of the city, better said it's the eastern edge of the city. It's the housing for most of the local people. It was originally built for the dock workers, but it has grown since that times.";
+		Panel = "M_DRWN";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_strifeItemsVendor_aboutcity";
+        }
+    }
+}
+//##################################################################################################################

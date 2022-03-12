@@ -1,0 +1,55 @@
+//##################################################################################################################
+// binder vtol pilot convID 50 /////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+Conversation {
+    ID = 50;
+    /*
+    Page {
+        pageName = "";
+        Name = "Pilot";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "map02pilot_opener";
+        Name = "Pilot";
+        Dialog = "\c[white]Hello. What can I do for you?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Superior sends me to the rebel base.";
+            Nextpage = "map02pilot_opener";
+            Closedialog = true;
+            Special = 80;
+            arg0 = 90;
+            YesMessage = "\c[white]Step in and well be on our way.";
+            Require {
+                item = "quest01given";
+                amount = 1;
+            }
+            Exclude {
+                item = "rebelsDead";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Thank you for the ride.";
+            Nextpage = "map02pilot_opener";
+            Closedialog = true;
+            YesMessage = "\c[white]You're welcome.";
+            Require {
+                item = "rebelsDead";
+                amount = 1;
+            }
+            Exclude {
+                item = "quest01finished";
+                amount = 1;
+            }
+        }
+    }
+}
+//##################################################################################################################

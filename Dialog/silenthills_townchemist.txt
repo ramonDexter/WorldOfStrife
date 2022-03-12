@@ -1,0 +1,89 @@
+//town chemist
+Conversation {
+	ID = 4;
+	Page {
+        pageName = "SH_townChemist_opener";
+		Name = "Chemist";
+		Dialog = "\c[white]\c[white]Welcome, what can I get you?";
+		PANEL = "M_QUINCY";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "One Hypospray";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "One Combopack";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "One Instaheal";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "One Medical Patch";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscmedpatch";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "One Medical Kit";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedicalKit";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "One Surgery Kit";
+			NextPage = "SH_townChemist_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscSurgeryKit";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+	}
+}

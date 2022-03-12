@@ -1,0 +1,85 @@
+//==================================================================================================================
+//explosive weapons vendor
+//==================================================================================================================
+Conversation {
+	ID = 11;
+	Page {
+        pageName = "SH_explosiveGunsVendor_opener";
+		Name = "Explosive Guns Vendor";
+		Dialog = "\c[white]Hello, what can I get you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[gold]Buy Grenade Launcher";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscStrifeGrenadeLauncher";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 750;
+			}
+		}
+		Choice {
+			Text = "Buy HE grenades";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "HEGrenadeRounds";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 30;
+			}
+		}
+		Choice {
+			Text = "Buy Phosphorous grenades";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "PhosphorusGrenadeRounds";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 30;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Mini-missile Launcher";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMiniMissileLauncher";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 650;
+			}
+		}
+		Choice {
+			Text = "Buy pack of Mini-missiles";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "MiniMissiles";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 35;
+			}
+		}
+		Choice {
+			Text = "Buy crate of Mini-missiles";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "CrateOfMissiles";
+			NextPage = "SH_explosiveGunsVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 65;
+			}
+		}
+	}
+}
+//==================================================================================================================

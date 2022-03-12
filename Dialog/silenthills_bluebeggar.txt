@@ -1,0 +1,39 @@
+//==================================================================================================================
+//zebrak convID 42
+//==================================================================================================================
+Conversation {
+    ID = 42;
+    Page {
+        pageName = "SH_blueBeggar_opener";
+        Name = "Woldrick";
+        Dialog = "RANDOM_SILENTHILLS_COMMONER";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Say, do you know anything about secret heretic hideout somewhere around here?";
+            Nextpage = "SH_blueBeggar_skladiste";
+            Require {
+                item = "twn_bishopQ01_skrysRebelu_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_bishopQ01_skrysRebelu_skladiste";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_blueBeggar_skladiste";
+        Name = "Woldrick";
+        Dialog = "\c[white]You didn't heard that from me, right, right?\nIf I were you, I would take a look around the old storage down there in the southwestern corner of the city. Take a look there, yes. There must be something down there. Sure is.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you, good man.";
+            Nextpage = "SH_blueBeggar_opener";
+            YesMessage = "\c[white]Yes, check the old storage. For sure, man.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1202;
+        }
+    }
+}
+//==================================================================================================================

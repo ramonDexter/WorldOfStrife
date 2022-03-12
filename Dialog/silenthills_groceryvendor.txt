@@ -1,0 +1,73 @@
+//==================================================================================================================
+//grocery vendor
+//==================================================================================================================
+Conversation {
+	ID = 8;
+	Page {
+        pageName = "SH_groceryVendor_opener";
+		Name = "Vendor";
+		Dialog = "\c[white]Hello, how may I serve you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy hamburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "woshamburger";
+			Cost {
+				item = "goldCoin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "Buy cheeseburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "woscheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 20;
+			}
+		}
+		Choice {
+			Text = "Buy bigburger";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "wosbigburger";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "Buy water bottle";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "woswaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "Buy bottle of beer";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "wosbeerBottle";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+	}
+}
+//==================================================================================================================

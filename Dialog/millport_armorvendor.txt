@@ -1,0 +1,119 @@
+//##################################################################################################################
+//armor vendor id 17
+//##################################################################################################################
+Conversation {
+	ID = 17;
+	Page {
+        pageName = "MP_loxleyArmorVendor_opener";
+		Name = "Loxley, armor vendor";
+		Dialog = "\c[white]Hello binder, are you ooking for some protection? I got the leather and metal armor, as well as the superior cybernetic armor. Also, I got Armor Bits to repair your damaged armor.";
+		Panel = "M_LXLY";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Leather Armor";
+			NextPage = "MP_loxleyArmorVendor_opener";
+			GiveItem = "wosLeatherArmor";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Metal Armor";
+			NextPage = "MP_loxleyArmorVendor_opener";
+			GiveItem = "wosMetalArmor";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 200;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Cyber Armor";
+			NextPage = "MP_loxleyArmorVendor_opener";
+			GiveItem = "wosBinderArmorBasic";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 150;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Heavy Cyber Armor";
+			NextPage = "MP_loxleyArmorVendor_opener";
+			GiveItem = "wosBinderArmorAdvanced";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 250;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Armor Repair Kit";
+			NextPage = "MP_loxleyArmorVendor_opener";
+			GiveItem = "wosarmorShard";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+        Choice {
+            Text = "I have some questions.";
+            NextPage = "MP_loxleyArmorVendor_questions";
+        }
+	}
+    Page {
+        pageName = "MP_loxleyArmorVendor_questions";
+		Name = "Loxley, armor vendor";
+		Dialog = "\c[white]Yes? What did you wanted to know?";
+		Panel = "M_LXLY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Who are you?";
+            NextPage = "MP_loxleyArmorVendor_whoareyou";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            NextPage = "MP_loxleyArmorVendor_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_loxleyArmorVendor_opener";
+        }
+    }
+    Page {
+        pageName = "MP_loxleyArmorVendor_whoareyou";
+		Name = "Loxley, armor vendor";
+		Dialog = "\c[white]I'm Loxley. I'm techSmith, as you see. I make armors. The finest ones. I graduated in the Sanctuary TekGuild College, and came here year later.";
+		Panel = "M_LXLY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_loxleyArmorVendor_questions";
+        }
+    }
+    Page {
+        pageName = "MP_loxleyArmorVendor_aboutcity";
+		Name = "Loxley, armor vendor";
+		Dialog = "\c[white]Well, Millport's my home for my whole life. We've got a harbor here, many shops and taverns, prison and even a TekGuild University! Would you believe that? Also, we've got a prison here. You want to avoid this place, believe me.";
+		Panel = "M_LXLY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_loxleyArmorVendor_questions";
+        }
+    }
+}
+//##################################################################################################################

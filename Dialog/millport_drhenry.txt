@@ -1,0 +1,163 @@
+//##################################################################################################################
+//medical vendor id 16
+//##################################################################################################################
+Conversation
+{
+	ID = 16;
+	Page {
+        pageName = "MP_henryMedic_opener";
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]Hello binder, are you in need of medical services? If so, please use on of the autoDocs behind you. If you need some medical supplies, you can buy what I got in stock. And for the last, I can install you cybernetic implants that will raise your health.";
+		Panel = "M_DCTR";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Hypospray";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "wosHyposprej";
+			YesMessage = "Here is one Hypospray!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Combopack";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "wosKombopack";
+			YesMessage = "Here is one Combopack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Instaheal";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "wosInstaLek";
+			YesMessage = "Here is one Instaheal!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy MedPatch";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one MedPatch!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Medical Kit";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Medical Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Surgery Kit";
+			NextPage = "MP_henryMedic_opener";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Surgery Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+        Choice {
+            Text = "Cybernetic implants? That sounds good.";
+            NextPage = "MP_henryMedic_implants";
+        }
+        Choice {
+            Text = "I have some questions.";
+            NextPage = "MP_henryMedic_questions";
+        }
+	}
+    Page {
+        pageName = "MP_henryMedic_implants";
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]Yes, it does so. These implants will permanently raise you health. But, I need upgrade tokens to install the implant. Say, have you got any upgrade tokens?";
+		Panel = "M_DCTR";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I've got one right here.";
+            NextPage = "MP_henryMedic_opener";
+            YesMessage = "Good. Now hold still and everything will be right done.";
+            CloseDialog = true;
+            Cost {
+                item = "upgradeToken";
+                amount = 1;
+            }
+            Require {
+                item = "upgradeToken";
+                amount = 1;
+            }
+            Special = 80;
+            arg0 = 1803;
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_henryMedic_opener";
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_questions";
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]And what did you wanted to know?";
+		Panel = "M_DCTR";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Who are you?";
+            NextPage = "MP_henryMedic_aboutyourself";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            NextPage = "MP_henryMedic_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_henryMedic_opener";
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_aboutyourself";
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]I am doctor Henry. I'm in charge of the local clinic, as you see. Usually, I'm pretty busy, but I've got lot of free time lately. Hard to say why is that.";
+		Panel = "M_DCTR";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_henryMedic_questions";
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_aboutcity";
+		Name = "Henry, medical specialist";
+		Dialog = "\c[white]Well, I don't know much, as most of the time in pinned here on the clinic. But yeah, I was born here, so I know a lot about the city. We've got a port here. It gave the city it's name. Millport's a trading city. But most of the trading is controlled by the Port Authority, which means strong taxation and control over goods. You cannot trade anything here, as some substances are declared illegal. It makes my work hard, sometimes. But besides that, the city is pretty nice. Especially the Commons and the countryside. Also, I cannot forget the City prison. It's next to the clinic, on the northern edge of the city.";
+		Panel = "M_DCTR";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_henryMedic_questions";
+        }
+    }
+}
+//##################################################################################################################

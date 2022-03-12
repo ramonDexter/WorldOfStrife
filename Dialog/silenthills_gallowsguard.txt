@@ -1,0 +1,67 @@
+//==================================================================================================================
+//strazny u sibenice convID 32
+//==================================================================================================================
+Conversation {
+    ID = 32;
+    Page {
+        pageName = "gallowsGuard_opener";
+        Name = "City Guard";
+        Dialog = "\c[white]Hello Binder, how may I help you.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_CTGRD";
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "gallowsGuard_whatareyoudoinghere";
+        }
+        Choice {
+            Text = "What happened here?";
+            Nextpage = "gallowsGuard_whathappenedhere";
+        }
+    }
+    Page {
+        pageName = "gallowsGuard_whatareyoudoinghere";
+        Name = "City Guard";
+        Dialog = "\c[white]I am guarding the city gallows. An honorable work, I say.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_CTGRD";
+        Choice {
+            Text = "Why are you guarding dead bodies of the criminals?";
+            Nextpage = "gallowsGuard_whyareyouguarding";
+        }
+        Choice {
+            Text = "What happened here?";
+            Nextpage = "gallowsGuard_whathappenedhere";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "gallowsGuard_opener";
+        }
+    }
+    Page {
+        pageName = "gallowsGuard_whyareyouguarding";
+        Name = "City Guard";
+        Dialog = "\c[white]It is pretty simple. I'm guarding the gallows so nobody removes the bodies of the executed. These are meant as an example, so removing them is forbidden until the given time. In this case, the bodies should stay here for two months, so my  duty will be a long one.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_CTGRD";
+        Choice {
+            Text = "What happened here?";
+            Nextpage = "gallowsGuard_whathappenedhere";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "gallowsGuard_opener";
+        }
+    }
+    Page {
+        pageName = "gallowsGuard_whathappenedhere";
+        Name = "City Guard";
+        Dialog = "\c[white]There was an execution yesterday. A bunch of accused poachers, who has been harrassing people down the river. Their leader has been executed on the guillotine, while his companions has been hanged. I'm guarding their bodies, which are posed here as an example for those who want to break the law.\nAnd the law is sacred.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_CTGRD";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "gallowsGuard_opener";
+        }
+    }
+}
+//==================================================================================================================

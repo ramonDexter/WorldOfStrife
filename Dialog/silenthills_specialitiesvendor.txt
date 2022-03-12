@@ -1,0 +1,73 @@
+//==================================================================================================================
+//specialities vendor
+//==================================================================================================================
+Conversation {
+	ID = 15;
+	Page {
+        pageName = "SH_specilitiesVendor_opener";
+		Name = "Specialities Vendor";
+		Dialog = "\c[white]Hello, what can I get you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy Environmental Suit";
+			NextPage = "SH_specilitiesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosEnvSuit";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 65;
+			}
+		}
+		Choice {
+			Text = "Buy Targeter";
+			NextPage = "SH_specilitiesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosTargeter";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 45;
+			}
+		}
+		Choice {
+			Text = "Buy Shadow Armor";
+			NextPage = "SH_specilitiesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosShadowArmor";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 145;
+			}
+		}
+		Choice {
+			Text = "Buy Scanner";
+			NextPage = "SH_specilitiesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "Scanner";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 75;
+			}
+		}
+		Choice {
+			Text = "Buy Deployable shield";
+			NextPage = "SH_specilitiesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosDeployableShield";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 100;
+			}
+		}
+	}
+}
+//==================================================================================================================

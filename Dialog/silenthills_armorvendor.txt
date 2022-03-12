@@ -1,0 +1,49 @@
+//==================================================================================================================
+//armor vendor
+//==================================================================================================================
+Conversation {
+	ID = 17;
+	Page {
+        pageName = "SH_armorVendor_opener";
+		Name = "Armor vendor";
+		Dialog = "\c[white]Hello, what can I get you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy Leather Armor";
+			NextPage = "SH_armorVendor_opener";
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosLeatherArmor";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "Buy Metal Armor";
+			NextPage = "SH_armorVendor_opener";
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosMetalArmor";
+			Cost {
+				item = "goldCoin";
+				amount = 125;
+			}
+		}
+		Choice {
+			Text = "Buy Cybernetic Armor";
+			NextPage = "SH_armorVendor_opener";
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBinderArmorBasic";
+			Cost {
+				item = "goldCoin";
+				amount = 175;
+			}
+		}
+	}
+}
+//==================================================================================================================

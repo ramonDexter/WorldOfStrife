@@ -1,0 +1,74 @@
+//==================================================================================================================
+//obchodnik vrah convID 41
+//==================================================================================================================
+Conversation {
+    ID = 41;
+    Page {
+        pageName = "SH_murderer_opener";
+        Name = "Montick, trader";
+        Dialog = "\c[white]What do you want?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_FATTRD";
+        Choice {
+            Text = "Do you know anything about the murder in the city bath?";
+            Nextpage = "SH_murderer_knowanythingaboutmurder";
+            Require {
+                item = "twn_judgeQ01_vrazdaVlaznich_obchodnik";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_judgeQ01_vrazdaVlaznich_usvedcen";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_murderer_knowanythingaboutmurder";
+        Name = "Montick, trader";
+        Dialog = "\c[white]How dare you? How you dare asking me about this hideous happening? Of course I know nothing about this murder!";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_FATTRD";
+        Choice {
+            Text = "The evidence is clear. Have you ordered this detonator at the Techsmith?";
+            Nextpage = "SH_murderer_evidence";
+        }
+    }
+    Page {
+        pageName = "SH_murderer_evidence";
+        Name = "Montick, trader";
+        Dialog = "\c[white]What, where did you get this?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_FATTRD";
+        Choice {
+            Text = "You've left this in the bath locker. A mistake. A big one.";
+            Nextpage = "SH_murderer_bigmistake";
+        }
+    }
+    Page {
+        pageName = "SH_murderer_bigmistake";
+        Name = "Montick, trader";
+        Dialog = "\c[white]That proves nothing. There is no evidence i used it to blow his chest with the nanobomb.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_FATTRD";
+        Choice {
+            Text = "I haven't spoken about any nanobomb...You've caught yourself. Be a man, tell me everything.";
+            Nextpage = "SH_murderer_nanobomb";
+        }
+    }
+    Page {
+        pageName = "SH_murderer_nanobomb";
+        Name = "Montick, trader";
+        Dialog = "\c[white]Okay, good, you got me. I will tell you everything. Yes. This Harris, he was a hard competitor. He took most of my trade interests, actually removing me from the trade. I had to do something. I tried to argue with him. Hard as a rock, and speaking to a rock would be more fruitful. So I decided I have to remove him. Ordered the nanobomb from techsmith, planted it in a rare foods he ordered and BAM! No competition. Thought it was a perfect crime. It would be, if I haven't forgot the detonator in the locker. Okay, I surrender to the Order law. Bring it on me.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_FATTRD";
+        Choice {
+            Text = "An honorable choice.";
+            Nextpage = "SH_murderer_opener";
+            CloseDialog = true;
+            YesMessage = "I'm a sinner and I deserve a punishment.";
+            Special = 80;
+            arg0 = 1106;
+        }
+    }
+}
+//==================================================================================================================

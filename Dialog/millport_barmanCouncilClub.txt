@@ -1,0 +1,184 @@
+//##################################################################################################################
+//hospodsky council club convID 23
+//##################################################################################################################
+Conversation {
+	ID = 23;
+	Page {
+		pageName = "MP_barkeepCouncilClub_opener";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Welcome to the Council Club. Would youu like something to drink, or have you come for a little chat?\nI have some ale, good red wine and fresh mountain water. What would you like?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I've found a cook for you. She'll arrive in a hour.";
+            Nextpage = "MP_barkeepCouncilClub_job_naselkuchare";
+            Require {
+                item = "m08q_CCinnkeeper_naselkuchare";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_CCinnkeeper_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]Buy bottle of beer";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "Here you go!";
+            NoMessage = "Not enough money!";
+            GiveItem = "wosbeerBottle";
+            DisplayCost = true;
+            CloseDialog = false;
+            Cost {
+                item = "goldCoin";
+                amount = 13;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]Buy bottle of wine";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "Here you go!";
+            NoMessage = "Not enough money!";
+            GiveItem = "wosvineBottle";
+            DisplayCost = true;
+            CloseDialog = false;
+            Cost {
+                item = "goldCoin";
+                amount = 22;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]Buy bottle of water";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "Here you go!";
+            NoMessage = "Not enough money!";
+            GiveItem = "woswaterBottle";
+            DisplayCost = true;
+            CloseDialog = false;
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "I have some questions.";
+            Nextpage = "MP_barkeepCouncilClub_questions";
+        }
+	}
+    Page {
+        pageName = "MP_barkeepCouncilClub_questions";
+        Name = "Innkeeper";
+        Dialog = "\c[white]And what did you wanted to speak about?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What could you tell me about your guests?";
+            Nextpage = "MP_barkeepCouncilClub_aboutguests";
+        }
+        Choice {
+            Text = "How's business going? Could you tell me about your inn?";
+            Nextpage = "MP_barkeepCouncilClub_aboutpub";
+            Exclude {
+                item = "m08q_CCinnkeeper_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "How's business going? Could you tell me about your inn?";
+            Nextpage = "MP_barkeepCouncilClub_aboutpub";
+            Require {
+                item = "m08q_CCinnkeeper_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Could you tell me about this city?";
+            Nextpage = "MP_barkeepCouncilClub_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_aboutguests";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Well, I've got to be discreet. But you're a member of the Order, you that means I am obliged to share any information with you. So, what could I say? My guests are all honorable people. We are not involved in any kind of heresy or blasphemous behavior, so I must say this club is peaceful and faithful.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_barkeepCouncilClub_questions";
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_aboutpub";
+        Name = "Innkeeper";
+        Dialog = "\c[white]The Council Club is on of the first building in the city. I am it's third owner, grandson of the first owner. My gramps built this place with his own hands, and passed it to my father when he passed away. I am offering all kinds of drinks and night stay, but no food services. I'm the only one here, and I'm really bad cook. But hey, what do you say for a small sideways job?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Sideways job? What do you want?";
+            Nextpage = "MP_barkeepCouncilClub_job";
+            Exclude {
+                item = "m08q_CCinnkeeper_given";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_barkeepCouncilClub_questions";
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_job";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Well, as I said, I don't sell food. That means, many customers just drink their drink and leave. I'm barely surviving. So I decided to build small kitchen and hire a cook. All I need to find one. And since I'm pinned here, I would like to ask you if you would find a cook for my Council Club. I would give you 250 coins for that job. What do you say?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "No problem.";
+            CloseDialog = true;
+        }
+        Choice {
+            Text = "Ok, I'll do it.";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "Thank you. That will help me a lot.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 2801;
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_aboutpubwithchef";
+        Name = "Innkeeper";
+        Dialog = "\c[white]The Council Club is on of the first building in the city. I am it's third owner, grandson of the first owner. My gramps built this place with his own hands, and passed it to my father when he passed away. I am offering all kinds of drinks and night stay. And thanks to you, I also offer food. The cook you found is a true master. His grilled chicken is delicious.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_barkeepCouncilClub_questions";
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_aboutcity";
+        Name = "Innkeeper";
+        Dialog = "\c[white]MIllport is quite peaceful city, for the port we have here. Lots of sailors who work on the trader's ships need to rest here, so the city lives from their money. If I could give you one advice, keep yourself away from the Baron. Trust me.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_barkeepCouncilClub_questions";
+        }
+    }
+    Page {
+        pageName = "MP_barkeepCouncilClub_job_naselkuchare";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Yeah, I've already received the wonderful news, as the nice lady just arrived. Thank you. Here is your reward and something ont top.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "MP_barkeepCouncilClub_opener";
+            YesMessage = "No, I thank you. You've saved my business.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 2803;
+        }
+    }
+}
+//##################################################################################################################

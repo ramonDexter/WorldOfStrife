@@ -1,0 +1,37 @@
+//==================================================================================================================
+//grenades vendor
+//==================================================================================================================
+Conversation {
+	ID = 16;
+	Page {
+        pageName = "SH_grenadesVendor_opener";
+		Name = "Grenades vendor";
+		Dialog = "\c[white]Welcome, how may I serve you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy HE grenade";
+			NextPage = "SH_grenadesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosgrenadeE";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 10;
+			}
+		}
+		Choice {
+			Text = "Buy Phosphorous grenade";
+			NextPage = "SH_grenadesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosgrenadeF";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 15;
+			}
+		}
+	}
+}
+//==================================================================================================================

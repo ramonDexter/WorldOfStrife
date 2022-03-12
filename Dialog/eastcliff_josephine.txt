@@ -1,0 +1,26 @@
+Conversation {
+    ID = 7;
+    /*
+    Page {
+        pageName = "";
+        Name = "Josephine, mayor's wife";
+        Dialog = "\c[white]";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "EC_josephine_opener";
+        Name = "Josephine, mayor's wife";
+        Dialog = "\c[white]Hello, Binder. What brings you to my chambers?";
+        Goodbye = "Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+
+}

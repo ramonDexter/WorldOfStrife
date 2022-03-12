@@ -1,0 +1,159 @@
+//==================================================================================================================
+//workers inn innkeeper id 22
+//==================================================================================================================
+Conversation {
+    ID = 22;
+    Page {
+        link = "SH_workersinnkeeper_openerbadge";
+        ifitem {
+            item = "binderBadge";
+            amount = 1;
+        }
+        pageName = "SH_workersinnkeeper_opener1";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Welcome, acolyte. Are you thirsty, or seeking some information?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I wanted something to drink.";
+            Nextpage = "SH_workersinnkeeper_drinks";
+        }
+        Choice {
+            Text = "I need some information.";
+            Nextpage = "SH_workersinnkeeper_information";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_openerbadge";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Welcome, Binder. Are you thirsty, or seeking some information?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I wanted something to drink.";
+            Nextpage = "SH_workersinnkeeper_drinks";
+        }
+        Choice {
+            Text = "I need some information.";
+            Nextpage = "SH_workersinnkeeper_information";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_drinks";
+        Name = "Innkeeper";
+        Dialog = "\c[white]I have some beer, wine and some water. So your choice is pretty simple.What would you like to drink?";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Give me bottle of vine";
+			NextPage = "SH_workersinnkeeper_drinks";
+			DisplayCost = true;
+			GiveItem = "wosvineBottle";
+			YesMessage = "Here's the vine.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "Give me bottle of beer";
+			NextPage = "SH_workersinnkeeper_drinks";
+			DisplayCost = true;
+			GiveItem = "wosbeerBottle";
+			YesMessage = "Here's the beer.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "Just a bottle of water";
+			NextPage = "SH_workersinnkeeper_drinks";
+			DisplayCost = true;
+			GiveItem = "woswaterBottle";
+			YesMessage = "Here's the water.";
+			NoMessage = "Not enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_workersinnkeeper_opener1";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_information";
+        Name = "Innkeeper";
+        Dialog = "\c[white]You are asking the right person. As an innkeeper I hear lot of things. Let's say I've got good memory. So, you're free to ask anything you want.";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Have you heard about any heretics around here?";
+			NextPage = "SH_workersinnkeeper_rebelsintown";
+			require {
+				item = "twn_judgeQ01_rebels_given";
+				amount = 1;
+			}
+			exclude {
+				item = "twn_judgeQ01_rebels_rowanIsrebel";
+				amount = 1;
+			}
+		}
+        Choice {
+            Text = "How are the trades going?";
+            Nextpage = "SH_workersinnkeeper_howtrades";
+        }
+        Choice {
+            Text = "Have you heard anything about heretics in town?";
+            Nextpage = "SH_workersinnkeeper_heretics";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            Nextpage = "SH_workersinnkeeper_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_workersinnkeeper_opener1";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_heretics";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Well, to be honest, yes. I have heard about heretics here in city. Do you know old Randolf? Go and visit him. Maybe he will tell you more.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_workersinnkeeper_information";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_howtrades";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Yes, the trades are good. The last brew of beer is especially strong and the wine is good as always, so I got full house everyday. Thanks for asking.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_workersinnkeeper_information";
+        }
+    }
+    Page {
+        pageName = "SH_workersinnkeeper_aboutcity";
+        Name = "Innkeeper";
+        Dialog = "\c[white]Silent Hills is small trading community on the edge of the Wilderness. It's a small beautiful town, at least for me it is. I live here for my whole life, you know. We have a powerplant and mines here, so we are pretty self-sufficient. But we are open for traders, if they are peaceful. The Order's rule is pretty benevolent here, I can even say we are happy the Order's here.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_workersinnkeeper_information";
+        }
+    }
+	Page {
+		pageName = "SH_workersinnkeeper_rebelsintown";
+		Name = "Innkeeper";
+		Dialog = "\c[white]Well, you didn't heard that from me, but you should check the southwestern houseblock. If you're looking for a rebel, I bet you'll find one down there.";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow][ << BACK";
+			NextPage = "SH_workersinnkeeper_information";
+		}
+	}
+}
+//==================================================================================================================

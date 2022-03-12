@@ -1,0 +1,262 @@
+//##################################################################################################################
+//weapons vendors - jony & tony
+//jony - light weapons id 11
+//##################################################################################################################
+Conversation {
+	ID = 11;
+	Page {
+        pageName = "MP_jonyWeaponsVendor_opener";
+		Name = "Jony, weapons vendor";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistols, Laser Pistols and Assault Guns. You should visit my twin brother Tony, he sells heavy weapons.";
+		Panel = "M_JONY";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Storm Pistol";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "StormPistol";
+			YesMessage = "Here is one Storm Pistol!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 150;
+			}
+		}
+		Choice {
+			Text = "Buy Clip of Bullets";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "ClipOfBullets";
+			YesMessage = "Here is one Clip of Bullets!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Laser Pistol";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "laserpistol";
+			YesMessage = "Here is one Laser Pistol!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 270;
+			}
+		}
+		Choice {
+			Text = "Buy Energy Pod";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "wosenergypod";
+			YesMessage = "Here is one Crossbow!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Assault Gun";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "zscAssaultGun";
+			YesMessage = "Here is one Assault Gun!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 350;
+			}
+		}
+		Choice {
+			Text = "Buy Box of Bullets";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "wosBulletsBox";
+			YesMessage = "Here is one Box of Bullets!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+        Choice {
+            Text = "I have some questions.";
+            NextPage = "MP_jonyWeaponsVendor_questions";
+        }
+	}
+    Page {
+        pageName = "MP_jonyWeaponsVendor_questions";
+		Name = "Jony, weapons vendor";
+		Dialog = "\c[white]And what did you wanted to know?";
+		Panel = "M_JONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Could you tell me about yourself?";
+            NextPage = "MP_jonyWeaponsVendor_aboutyourself";
+        }
+        Choice {
+            Text = "Could you tell me about the city? I'm new here and wanted to know the locals.";
+            NextPage = "MP_jonyWeaponsVendor_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_jonyWeaponsVendor_opener";
+        }
+    }
+    Page {
+        pageName = "MP_jonyWeaponsVendor_aboutyourself";
+		Name = "Jony, weapons vendor";
+		Dialog = "\c[white]My name's Jony. As you already see, I am weapons vendor, my specialization is in light weapons. Pistols, Assault Rifles and Crossbows is what I make for most. And when I'm not working, I usually spend my time in one of the city Taverns.";
+		Panel = "M_JONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_jonyWeaponsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "MP_jonyWeaponsVendor_aboutcity";
+		Name = "Jony, weapons vendor";
+		Dialog = "\c[white]You want to better know our city? Go to pubs, speak with the locals. That's the best way to recognize our city. I'm not much into history, so I won't tell you much. Ask my brother, Tony. He'll tell you more.";
+		Panel = "M_JONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_jonyWeaponsVendor_questions";
+        }
+    }
+}
+//tony - heavy weapons id 12
+//##################################################################################################################
+Conversation {
+	ID = 12;
+	Page {
+        pageName = "MP_tonyWeaponsVendor_opener";
+		Name = "Tony, weapons vendor";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on heavy weapons. I sell Flamethrowers, Mini-Missile Launchers and Maulers. You should visit my twin brother Jony, he sells light weapons.";
+		Panel = "M_TONY";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Flamethrower";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "zscFlameThrower";
+			YesMessage = "Here is one Flamethrower!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 450;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPod";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "wosEnergyPod";
+			YesMessage = "Here is one EnergyPod!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 20;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Mini-Missile Launcher";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "zscMiniMissileLauncher";
+			YesMessage = "Here is one Mini-Missile Launcher!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 550;
+			}
+		}
+		Choice {
+			Text = "Buy Mini-Missile Pack";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "wosBundleMiniMissile";
+			YesMessage = "Here is one Mini-Missile Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Mauler";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "zscMauler";
+			YesMessage = "Here is one Mauler!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 650;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPack";
+			NextPage = "MP_tonyWeaponsVendor_opener";
+			GiveItem = "wosenergypack";
+			YesMessage = "Here is one EnergyPack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+        Choice {
+            Text = "I have some questions.";
+            NextPage = "MP_tonyWeaponsVendor_questions";
+        }
+	}
+    Page {
+        pageName = "MP_tonyWeaponsVendor_questions";
+		Name = "Tony, weapons vendor";
+		Dialog = "\c[white]Yes? What did you wanted to know?";
+		Panel = "M_TONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Could you tell me about yourself?";
+            NextPage = "MP_tonyWeaponsVendor_aboutyourself";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            NextPage = "MP_tonyWeaponsVendor_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_tonyWeaponsVendor_opener";
+        }
+    }
+    Page {
+        pageName = "MP_tonyWeaponsVendor_aboutyourself";
+		Name = "Tony, weapons vendor";
+		Dialog = "\c[white]My name is Tony. As you have already observed, I have a twin brother, Jony. We're weapons vendors. He specializes in light weapons, I work in heavy and energy weapons. I you need a flamethrower, missile launcher or mauler, you're at the right place.";
+		Panel = "M_TONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_tonyWeaponsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "MP_tonyWeaponsVendor_aboutcity";
+		Name = "Tony, weapons vendor";
+		Dialog = "\c[white]Yes, Millport. Me and my brother, we've spent our whole life here. Our father was a gunSmith, he built this store and gave it to us when he died. But, you wanted to know about the city, right? Millport is controlled by the Baron. He is the one who pulls all the strings here. If you don't want to get into trouble, don't mess with the Baron. Besides, the second main force here is the TekGuild. These guys act like a military force mixed with religious order. You can trust them, if you've got the guts.";
+		Panel = "M_TONY";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_tonyWeaponsVendor_questions";
+        }
+    }
+}
+//##################################################################################################################

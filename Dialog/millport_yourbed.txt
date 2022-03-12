@@ -1,0 +1,20 @@
+//your bed id 703
+Conversation
+{
+	Id = 703;
+	Page//1
+	{
+		Name = "[ YOUR BED ]";
+		Dialog = "\c[white]Your bed. Looks comfortable.";
+		Goodbye = "\c[red][ LEAVE ]";
+		Choice
+		{
+			Text = "[ Sleep in the bed ]";
+			NextPage = 1;
+			CloseDialog = true;
+			Special = 80;
+			Arg0 = 703;
+		}
+	}
+
+}

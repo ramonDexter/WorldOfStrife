@@ -1,0 +1,64 @@
+//==================================================================================================================
+//svedek na miste convID 38
+//==================================================================================================================
+Conversation {
+    ID = 38;
+    Page {
+        pageName = "SH_muderWitness_opener";
+        Name = "Ketrick";
+        Dialog = "\c[white]Yes? What do you want?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What can you tell me about this murder? What have you seen?";
+            Nextpage = "SH_muderWitness_murder";
+            Require {
+                item = "twn_judgeQ01_vrazdaVlaznich_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_judgeQ01_vrazdaVlaznich_speakwithgatekeeper";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "I have some questions.";
+            Nextpage = "SH_muderWitness_questions";
+        }
+    }
+    //murder witness dialogue ---------------------------------------
+    Page {
+        pageName = "SH_muderWitness_murder";
+        Name = "Ketrick";
+        Dialog = "\c[white]Well, I came to Caldarium just to see the horrible scene. The dead body with the chest ripped open. What could cause such a terrible damage? Nothing out of this world, I say! Must be some heresy involved.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Calm down. This case has really some earthly explanation. I just need to find it out. Have you noticed anything else?";
+            Nextpage = "SH_muderWitness_murder_anythingelse";
+        }
+    }
+    Page {
+        pageName = "SH_muderWitness_murder_anythingelse";
+        Name = "Ketrick";
+        Dialog = "\c[white]Nothing, to be honest. But if you want my advice, speak with the gatekeeper. There are security cameras all over the place. Maybe there is something on the record.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "SH_muderWitness_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1108;
+        }
+    }
+    //murder witness dialogue ---------------------------------------
+    Page {
+        pageName = "SH_muderWitness_questions";
+        Name = "Ketrick";
+        Dialog = "\c[white]What do you want to know?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_muderWitness_opener";
+        }
+    }
+}
+//==================================================================================================================

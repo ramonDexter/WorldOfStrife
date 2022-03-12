@@ -1,0 +1,45 @@
+//==================================================================================================================
+//combat tutor
+//==================================================================================================================
+Conversation {
+	ID = 19;
+	Page {
+        pageName = "SH_combatTutor_opener";
+		Name = "Combat Tutor";
+		Dialog = "\c[white]Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens. And I can sell you upgrade tokens in exchange for beer. Ten bottles for one token. What do you say?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Require {
+				item = "wosbeerBottle";
+				amount = 10;
+			}
+			Text = "Exchange ten beer bottles for one upgrade token";
+			GiveItem = "upgradeToken";
+			YesMessage = "Here you go.";
+			NoMessage = "Not enough beer, dude!";
+			NextPage = 1;
+			CloseDialog = true;
+			Cost {
+				item = "wosbeerBottle";
+				amount = 10;
+			}
+		}
+		Choice {
+			Require {
+				item = "upgradeToken";
+				amount = 1;
+			}
+			Text = "Install me the accuracy bonus.";
+			NextPage = 1;
+			CloseDialog = true;
+			GiveItem = "upgradeAccuracy";
+			YesMessage = "Here you go. Just hold still.";
+			NoMessage = "You need the upgrade token!";
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+	}
+}
+//==================================================================================================================

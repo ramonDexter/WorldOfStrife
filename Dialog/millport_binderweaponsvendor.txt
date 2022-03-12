@@ -1,0 +1,90 @@
+//##################################################################################################################
+//binder weapons vendor convID 3
+//##################################################################################################################
+Conversation {
+    ID = 3;
+    Page {
+        pageName = "MP_binderWeaponsVendor_opener";
+        Name = "Binder Weapons Vendor";
+        Dialog = "\c[white]Welcome, Binder. Are you short on ammunition? Or do you need some serious firpower? I've got some Maulers, Mini-Missile Launchers and Flamers here.";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]Buy Flamethrower";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "zscFlameThrower";
+			YesMessage = "Here is one Flamethrower!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 450;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Mauler";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "zscMauler";
+			YesMessage = "Here is one Mauler!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 650;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPod";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "wosEnergyPod";
+			YesMessage = "Here is one EnergyPod!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 20;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPack";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "wosenergypack";
+			YesMessage = "Here is one EnergyPack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Mini-Missile Launcher";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "zscMiniMissileLauncher";
+			YesMessage = "Here is one Mini-Missile Launcher!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 350;
+			}
+		}
+		Choice
+		{
+			Text = "Buy Mini-Missile Pack";
+			NextPage = "MP_binderWeaponsVendor_opener";
+			GiveItem = "wosBundleMiniMissile";
+			YesMessage = "Here is one Mini-Missile Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+    }
+}
+//##################################################################################################################

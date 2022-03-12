@@ -1,0 +1,27 @@
+//##################################################################################################################
+//##################################################################################################################
+//travel terminal
+//##################################################################################################################
+Conversation {
+    ID = 704;
+    Page {
+        pageName = "SH_travelTerminal_opener";
+        Name = "Choose your destination. The travel costs 15 gold.";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red][ EXIT ]";
+        Panel = "M_BLNK";
+        Choice {
+            Text = "Travel to Silent Hills";
+            Nextpage = "SH_travelTerminal_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8002;
+            NoMessage = "Not enough gold!";
+            Cost {
+                item = "goldCoin";
+                amount = 15;
+            }
+        }
+    }
+}
+//##################################################################################################################

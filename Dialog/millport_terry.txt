@@ -1,0 +1,62 @@
+//##################################################################################################################
+//slapka v Council Clubu convID 28
+//##################################################################################################################
+Conversation {
+    ID = 28;
+    Page {
+        pageName = "MP_ccTerry_opener";
+        Name = "Terry";
+        Dialog = "\c[white]Welcome, handsome. Say, what brings you to my apartment?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "MP_ccTerry_whoareyou";
+        }
+        Choice {
+            Text = "Could you tell me about this city?";
+            Nextpage = "MP_ccTerry_aboutcity";
+        }
+    }
+    Page {
+        pageName = "MP_ccTerry_whoareyou";
+        Name = "Terry";
+        Dialog = "\c[white]My name is Terry. I work here as a hostess. Also, I offer 'special' services. Say, are you in need of my special services?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What kind of special services you offer?";
+            Nextpage = "MP_ccTerry_specialservices";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_ccTerry_opener";
+        }
+    }
+    Page {
+        pageName = "MP_ccTerry_specialservices";
+        Name = "Terry";
+        Dialog = "\c[white]Well, I can be you concubine for a night. My price is 500 gold. Good price for my services you'll never forget and you'll return, I'm sure. Say, do you need to relax yourself? I can be yours for this night.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Ok, I'm really tired and need to relax.";
+            Nextpage = "MP_ccTerry_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1804;
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_ccTerry_opener";
+        }
+    }
+    Page {
+        pageName = "MP_ccTerry_aboutcity";
+        Name = "Terry";
+        Dialog = "\c[white]Oh, Millport is a nice city. I like the Commons, many of my customers come from this part of the city. If you are looking for a good snack, visit Caroline's Tavern in the Commons. And if you are in need of anything else, the shops are in the northern part of the city.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_ccTerry_opener";
+        }
+    }
+}
+//##################################################################################################################

@@ -1,0 +1,74 @@
+//==================================================================================================================
+//historik convID 33
+//==================================================================================================================
+Conversation {
+    ID = 33;
+    Page {
+        pageName = "SH_historian_opener";
+        Name = "Historian";
+        Dialog = "\c[white]Welcome to my humble study. What bring you here? Do you want to know the secrets of city's history?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_HSTR";
+        Choice {
+            Text = "You study history?";
+            Nextpage = "SH_historian_youstudyhistory";
+        }
+        Choice {
+            Text = "Your library is pretty impressive.";
+            Nextpage = "SH_historian_impressivelibrary";
+        }
+    }
+    Page {
+        pageName = "SH_historian_youstudyhistory";
+        Name = "Historian";
+        Dialog = "\c[white]I have devoted my whole life to study of History. I know The Order has forbidden such an activities, but I have been allowed to study the archives, so The Order could use my findings for their purposes. I cannot judge this, as my whole existence lingers on Order's benevolence.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_HSTR";
+        Choice {
+            Text = "What can you tell me abou the city's history?";
+            Nextpage = "SH_historian_cityhistory";
+        }
+        Choice {
+            Text = "What can you tell me about the Order?";
+            Nextpage = "SH_historian_order";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_historian_opener";
+        }
+    }
+    Page {
+        pageName = "SH_historian_cityhistory";
+        Name = "Historian";
+        Dialog = "\c[white]Well, from what I have found in the records, the city has been built around 550 years ago. It has been built as center of local region. Then came king Bodrik, who invited the city into his growing kingdom. And with him came The Order.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_HSTR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_historian_youstudyhistory";
+        }
+    }
+    Page {
+        pageName = "SH_historian_order";
+        Name = "Historian";
+        Dialog = "\c[white]The Order is the church of our society. The military part protects us from the heretics and renegades, while the church part cares for our souls. The Order laws are sacred. The Order police is strict but fair, so those who follow the laws could live their lives in peace. Only those who break the sacred laws have to fear the Order Acolytes, who serve as soldiers and policemen also.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_HSTR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_historian_youstudyhistory";
+        }
+    }
+    Page {
+        pageName = "SH_historian_impressivelibrary";
+        Name = "Historian";
+        Dialog = "\c[white]Yes, thank you. I have inherited most of it from my father, though I have added at least half of it. Mostly history works, and mostly unique ones. But that is because the Order destroyed most other history books. So we could say my library is the only one on the continent, besides the secret order libraries.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_HSTR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_historian_opener";
+        }
+    }
+}
+//==================================================================================================================

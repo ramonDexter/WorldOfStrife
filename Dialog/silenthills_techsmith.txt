@@ -1,0 +1,171 @@
+//==================================================================================================================
+//techsmith convID 9
+//==================================================================================================================
+Conversation {
+	ID = 9;
+	Page {
+        pageName = "SH_techSmith1_opener";
+		Name = "Techsmith";
+		Dialog = "\c[white]Hello, I sell all kinds of tech gizmos. Also, I can upgrade your stuff.";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I'm looking for a new air filter for one of the mine machines.";
+            Nextpage = "SH_techSmith1_newairfilter";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_needFilter";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_newfilter";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Do you know anything about this detonator? And don't play any games with me.";
+            Nextpage = "SH_techSmith1_detonator";
+            require {
+                item = "twn_judgeQ01_vrazdaVlaznich_techsmith";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_judgeQ01_vrazdaVlaznich_obchodnik";
+                amount = 1;
+            }
+        }
+		Choice {
+			Text = "Buy";
+			NextPage = "SH_techSmith1_shop";
+		}
+		Choice {
+			Text = "Upgrade";
+			NextPage = "SH_techSmith1_upgrades";
+		}
+	}
+    Page {
+        pageName = "SH_techSmith1_detonator";
+		Name = "Techsmith";
+		Dialog = "\c[white]Yes, ok, easy. I'll cooperate. This detonator was used to detonate a specialty nanotechnological bomb, that has been order by a wealthy customer by a name of Montick. Paid almost 3000 coins for that. He lives on the west bank, next to the governor's mansion. Go speak with him.";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you, citizen.";
+            Nextpage = "SH_techSmith1_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1105;
+        }
+    }
+	Page {
+        pageName = "SH_techSmith1_shop";
+		Name = "Techsmith";
+		Dialog = "\c[white]What would you like? I make and sell the Night-Eye Device, Armor Repair kits and the Swarmers device.";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "SH_techSmith1_opener";
+		}
+		Choice {
+			Text = "Buy Night-Eye Device";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_techSmith1_shop";
+			DisplayCost = true;
+			GiveItem = "wosNightEyeDevice";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "Buy Armor Repair Kit";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_techSmith1_shop";
+			DisplayCost = true;
+			GiveItem = "wosarmorShard";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "Buy Swarmers";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_techSmith1_shop";
+			DisplayCost = true;
+			GiveItem = "wosSwarmers";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+
+		}
+
+	}
+	Page {
+        pageName = "SH_techSmith1_upgrades";
+		Name = "Techsmith";
+		Dialog = "\c[white]I can upgrade your gizmos. What you got?";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I have this binder armor here.";
+            Nextpage = "SH_techSmith1_upgrades_binderArmor";
+            Require {
+                item = "wosBinderArmorBasic";
+                amount = 1;
+            }
+        }
+		Choice
+		{
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "SH_techSmith1_opener";
+		}
+	}
+    Page {
+        pageName = "SH_techSmith1_upgrades_binderArmor";
+		Name = "Techsmith";
+		Dialog = "\c[white]Yes, the Binder Armor. Valuable thing, good protection. I can upgrade this piece of armor for, lets say, 500 gold. Do you agree?";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Deal. Here's the armor.";
+            Nextpage = "SH_techSmith1_opener";
+            YesMessage = "Done. Here it is.";
+            NoMessage = "Not enough gold.";
+            DisplayCost = false;
+            CloseDialog = true;
+            GiveItem = "wosBinderArmorAdvanced";
+            Cost {
+                item = "goldCoin";
+                amount = 500;
+            }
+            Require {
+                item = "wosBinderArmorBasic";
+                amount = 1;
+            }
+            Exclude {
+                item = "wosBinderArmorAdvanced";
+                amount = 1;
+            }
+            Special = 80;
+            arg0 = 109;
+        }
+        Choice {
+            Text = "\c[yellow][ << BACK ]";
+			NextPage = "SH_techSmith1_upgrades";
+        }
+    }
+    Page {
+        pageName = "SH_techSmith1_newairfilter";
+		Name = "Techsmith";
+		Dialog = "\c[white]Oh, you're looking for the old air filters? No problem, I got a stockpile here, that I wanted to dump anyways as a useless crap. Looks like this crap will help someone at last. Here, take one and no, I don't want anything for it. By taking it you're actually doing me a good job.";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Well, thank you then.";
+            Nextpage = "SH_techSmith1_opener";
+            CloseDialog = true;
+            YesMessage = "No problem.";
+            Special = 80;
+            arg0 = 1505;
+        }
+    }
+}
+//==================================================================================================================

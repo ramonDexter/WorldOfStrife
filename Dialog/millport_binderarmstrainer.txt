@@ -1,0 +1,25 @@
+//##################################################################################################################
+//binder weapons trainer convID 4
+//##################################################################################################################
+Conversation {
+    ID = 4;
+    Page {
+        pageName = "MP_binderWeaponsTrainer_opener";
+        Name = "Master Fighter";
+        Dialog = "\c[white]Welcome, Binder. Are you in need of some training? even skilled warrior has to train himself. I can train you for upgrade tokens, if you have any. Better said, I can provide you a cybernetic implant that will improve your accuracy.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Cybernetic upgrade? That sounds good.";
+            Nextpage = "MP_binderWeaponsTrainer_opener";
+            CloseDialog = true;
+            YesMessage = "Just hold still. It will take only a moment.";
+            Special = 80;
+            arg0 = 1802;
+            Require {
+                item = "upgradeToken";
+                amount = 1;
+            }
+        }
+    }
+}
+//##################################################################################################################

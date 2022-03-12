@@ -1,0 +1,110 @@
+//explosives vendor id 15
+Conversation
+{
+	ID = 15;
+	Page//1
+	{
+		Name = "Gadwin, explosives vendor";
+		Dialog = "\c[white]Hello my good fellow. Would you like to blow something up? I have everything you would need when you want to blow something up - Rockets, Grenades and Hand Grenades.";
+		Panel = "M_GDWN";
+        Goodbye = "\c[red]Goodbye";
+		Choice
+		{
+			Text = "\c[yellow]Buy Pack of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "MiniMissiles";
+			YesMessage = "Here is one Pack of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 40;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Bundle of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "wosBundleMiniMissile";
+			YesMessage = "Here is one Bundle of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Crate of Mini Missiles";
+			NextPage = 1;
+			GiveItem = "CrateOfMissiles";
+			YesMessage = "Here is one Crate of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 150;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy HE Grenades Pack";
+			NextPage = 1;
+			GiveItem = "HEGrenadeRounds";
+			YesMessage = "Here is one HE Grenades Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 60;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Phosphorous Grenades Pack";
+			NextPage = 1;
+			GiveItem = "PhosphorusGrenadeRounds";
+			YesMessage = "Here is one Phosphorous Grenades Pack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 60;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy HE Hand Grenade";
+			NextPage = 1;
+			GiveItem = "wosgrenadeE";
+			YesMessage = "Here is one HE Hand Grenade!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 30;
+			}
+		}
+		Choice
+		{
+			Text = "\c[yellow]Buy Phosphorous Hand Grenade";
+			NextPage = 1;
+			GiveItem = "wosgrenadeF";
+			YesMessage = "Here is one Phosphorous Hand Grenade!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost
+			{
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+	}
+}

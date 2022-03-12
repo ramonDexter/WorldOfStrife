@@ -1,0 +1,41 @@
+//##################################################################################################################
+//binder doorkeeper convID 5
+//##################################################################################################################
+Conversation {
+    ID = 5;
+    Page {
+        pageName = "MP_binderDoorkeep_opener";
+        Name = "The Doorkeeper";
+        Dialog = "\c[white]Welcome to the Binder Base. What is your desire?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What are you doign here?";
+            Nextpage = "MP_binderDoorkeep_whatareyoudoing";
+        }
+        Choice {
+            Text = "What is this place?";
+            Nextpage = "MP_binderDoorkeep_whatisthisplace";
+        }
+    }
+    Page {
+        pageName = "MP_binderDoorkeep_whatareyoudoing";
+        Name = "The Doorkeeper";
+        Dialog = "\c[white]I'm the doorkeeper here. I guard access to the Binder Main Command.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderDoorkeep_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderDoorkeep_whatisthisplace";
+        Name = "The Doorkeeper";
+        Dialog = "\c[white]You're standing at the Binder Main Command.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderDoorkeep_opener";
+        }
+    }
+}
+//##################################################################################################################

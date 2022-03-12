@@ -1,0 +1,122 @@
+//##################################################################################################################
+//hospodska v taverne v commons convID 26
+//##################################################################################################################
+Conversation {
+    ID = 26;
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_opener";
+        Name = "Caroline";
+        Dialog = "\c[white]Hello, sweetie. You've come for a little snack? A chicken bite, maybe? Or a burger? My cheeseburgers ar the best! Or some cold fresh beer? Or a little chat?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]Buy some chicken bits ";
+            Nextpage = "MP_innkeeperCommonsTavern_opener";
+            YesMessage = "Here you go, some tasty bits packed in a box.";
+            NoMessage = "Sorry, sweetie. Not enough gold.";
+            CloseDialog = false;
+            DisplayCost = true;
+            GiveItem = "wosfoodBox";
+            Cost {
+                item = "goldCoin";
+                amount = 15;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]Buy a cheeseburger ";
+            Nextpage = "MP_innkeeperCommonsTavern_opener";
+            YesMessage = "Here you go, good cheeseburger just taken off the grill!";
+            NoMessage = "Sorry, sweetie. Not enough gold.";
+            CloseDialog = false;
+            DisplayCost = true;
+            GiveItem = "woscheeseburger";
+            Cost {
+                item = "goldCoin";
+                amount = 7;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]Buy a bottle of beer ";
+            Nextpage = "MP_innkeeperCommonsTavern_opener";
+            YesMessage = "Here you go, good cheeseburger just taken off the grill!";
+            NoMessage = "Sorry, sweetie. Not enough gold.";
+            CloseDialog = false;
+            DisplayCost = true;
+            GiveItem = "wosbeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 9;
+            }
+        }
+        Choice {
+            Text = "A little chat with such a nice lady? I'm honored.";
+            Nextpage = "MP_innkeeperCommonsTavern_questions";
+        }
+    }
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_questions";
+        Name = "Caroline";
+        Dialog = "\c[white]Oh, you flatterer. What did you wanted to talk about, then?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "MP_innkeeperCommonsTavern_whoareyou";
+        }
+        Choice {
+            Text = "What could you tell me about your tavern?";
+            Nextpage = "MP_innkeeperCommonsTavern_abouttavern";
+        }
+        Choice {
+            Text = "What could you tell me about the commons?";
+            Nextpage = "MP_innkeeperCommonsTavern_aboutcommons";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_innkeeperCommonsTavern_opener";
+        }
+    }
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_whoareyou";
+        Name = "Caroline";
+        Dialog = "\c[white]I'm Caroline, owner of this nice little Tavern. I the cook here. Locals say my cheeseburgers are legendary. Do you want one?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_innkeeperCommonsTavern_questions";
+        }
+    }
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_abouttavern";
+        Name = "Caroline";
+        Dialog = "\c[white]I bought this tavern ten years ago, just after my husband died at the sea fare. What a pity, he was a handsome man. Anyways, I'm the owner and a cook here. I make grilled chicken and cheeseburgers. And the ale I got here is from Ravenrock.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Ravenrock?That's a brewery?";
+            Nextpage = "MP_innkeeperCommonsTavern_ravenrock";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_innkeeperCommonsTavern_questions";
+        }
+    }
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_ravenrock";
+        Name = "Caroline";
+        Dialog = "\c[white]No, Ravenrock is small hamlet on the eastern coast. You can reach the place if you head out the eastern gate, but it's pretty far from here. Better to take the hoverfly, but the ticket's not cheap.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_innkeeperCommonsTavern_questions";
+        }
+    }
+    Page {
+        pageName = "MP_innkeeperCommonsTavern_aboutcommons";
+        Name = "Caroline";
+        Dialog = "\c[white]The city Commons were originally built for the harbor workers. But it has grown since that time. Now it is city's main residential area.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_innkeeperCommonsTavern_questions";
+        }
+    }
+}
+//##################################################################################################################

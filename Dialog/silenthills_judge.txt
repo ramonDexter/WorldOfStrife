@@ -1,0 +1,276 @@
+//==================================================================================================================
+//city judge convID 35
+//==================================================================================================================
+Conversation {
+    ID = 35;
+    Page {
+        pageName = "SH_CityJudge_opener";
+        Name = "City Judge";
+        Dialog = "\c[white]Hello, binder. How may I help you? Are you seeking information? Aro do you want to help me? I've got some cases to solve here.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "I've got some questions to ask.";
+            Nextpage = "SH_CityJudge_questions";
+        }
+        Choice {
+            Text = "You need help? What do you need?";
+            Nextpage = "SH_CityJudge_work";
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_questions";
+        Name = "City Judge";
+        Dialog = "\c[white]Yes, what do you need to know?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_CityJudge_opener";
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work";
+        link = "SH_CityJudge_worknomore";
+        ifitem {
+            item = "twn_judgeQs_solved";
+            amount = 1;
+        }
+        Name = "City Judge";
+        Dialog = "\c[white]Good, I have two unsolved cases here. I have an information that there is a rebel hiding amongst citizens. The second case is a case of murdered trader. So, which one would you pick?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Tell me about the rebels in town.";
+            Nextpage = "SH_CityJudge_work_rebels_opener";
+            Exclude {
+                item = "twn_judgeQ01_rebels_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "A murder? Sounds interesting.";
+            Nextpage = "SH_CityJudge_work_muder_opener";
+			Exclude {
+				item = "twn_judgeQ01_vrazdaVlaznich_finished";
+				amount = 1;
+			}
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_CityJudge_opener";
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_worknomore";
+        Name = "City Judge";
+        Dialog = "\c[white]Thanks to you I have no more work. Thank you, again.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_CityJudge_opener";
+        }
+    }
+    //rebels quest ---------------------------------------------------------
+    Page {
+        link = "SH_CityJudge_work_rebels_searching";
+        ifitem {
+            item = "twn_judgeQ01_rebels_given";
+            amount = 1;
+        }
+        pageName = "SH_CityJudge_work_rebels_opener";
+        Name = "City Judge";
+        Dialog = "\c[white]Yes, the rebel. My informants have told me that there is a rebel hiding amongst the citizens. I just can't figure out who is this outcast. I need you to ask the locals, if they know anything about this case. Try asking the traders, and especially the innkeepers. They always know a lot. When you find the rebel, slay him and report back to me. Is this clear?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "I have to think about it.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "Don't think for too long!";
+        }
+        Choice {
+            Text = "Ok, I'll see what I can do.";
+            Nextpage = "SH_CityJudge_work_rebels_searching";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1001;
+            /*
+            script 1001 (void) {
+                GiveInventory("twn_judgeQ01_rebels_given", 1);
+            }
+            */
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_CityJudge_work";
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_rebels_searching";
+        Name = "City Judge";
+        Dialog = "\c[white]So, have you removed the rebel?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "I'm working on it.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "Keep looking then!";
+			exclude {
+				item = "twn_judgeQ01_rebels_rowanKilled";
+				amount = 1;
+			}
+        }
+        Choice {
+            Text = "Yes, the rebel is dead.";
+            Nextpage = "SH_CityJudge_work_rebels_finish";
+			require {
+				item = "twn_judgeQ01_rebels_rowanKilled";
+				amount = 1;
+			}
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_rebels_killed";
+        Name = "City Judge";
+        Dialog = "\c[white]So, have you removed the rebel?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Yes, the rebel is dead.";
+            Nextpage = "SH_CityJudge_work_rebels_finish";
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_rebels_finish";
+        Name = "City Judge";
+        Dialog = "\c[white]Thank you. I have been trying to solve this case for a long time, but my resources are limited. You acknowledged yourself as a resourceful. Thank you again and here is your reward. You've earned it.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "No, I thank you.";
+            Special = 80;
+            arg0 = 1003;
+            /*
+            script 1003 (void) {
+                GiveInventory ("goldCoin", 250);
+                GiveInventory ("twn_judgeQ01_rebels_finished", 1);
+            }
+            */
+        }
+    }
+    //rebels quest ---------------------------------------------------------
+
+    //murder quest ---------------------------------------------------------
+    Page {
+        pageName = "SH_CityJudge_work_muder_opener";
+        Name = "City Judge";
+        Dialog = "\c[white]I have been reported there had a murder happened in the city bath. Go to the place and find out what's going on. No time to explain, hurry up!";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "I have to think about it.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "Don't think for too long!";
+        }
+        Choice {
+            Text = "Ok, Heading on.";
+            Nextpage = "SH_CityJudge_work_muder_whatdidyoufound";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1101;
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_muder_whatdidyoufound";
+        Name = "City Judge";
+        Dialog = "\c[white]I have been reported there had a murder happened in the city bath. Go to the place and find out what's going on. No time to explain, hurry up!";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Well, not much yet.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "Keep looking then!";
+			exclude {
+				item = "cityBathMurder_Detonator";
+				amount = 1;
+			}
+        }
+        Choice {
+            Text = "I've found this strange detonator. Looks like this was used as a murder tool.";
+            Nextpage = "SH_CityJudge_work_muder_speakwithtechsmith";
+            require {
+                item = "cityBathMurder_Detonator";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_judgeQ01_vrazdaVlaznich_techsmith";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_muder_speakwithtechsmith";
+        Name = "City Judge";
+        Dialog = "\c[white]Yes, show it to me? (he takes the detonator from you, takes a long look at it from all sides and then returns it back to you) Yes, this has been made by the city Techsmith. Take it and speak with him. We have some compromising info on him, so getting information from him should be an easy task. Go.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Will do.";
+            Nextpage = "SH_CityJudge_work_muder_whathetoldyou";
+            CloseDialog = true;
+            YesMessage = "Hurry and show him we're not the ones to play with.";
+            Special = 80;
+            arg0 = 1104;
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_muder_whathetoldyou";
+        Name = "City Judge";
+        Dialog = "\c[white]So, what did the techsmith told you? What have you found out?";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Well, not much yet.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "Keep looking then!";
+			exclude {
+				item = "twn_judgeQ01_vrazdaVlaznich_usvedcen";
+				amount = 1;
+			}
+        }
+        Choice {
+            Text = "It was a wealthy merchant. He murdered other one because of competition.";
+            Nextpage = "SH_CityJudge_work_muder_itwasmerchant";
+            require {
+                item = "twn_judgeQ01_vrazdaVlaznich_usvedcen";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_CityJudge_work_muder_itwasmerchant";
+        Name = "City Judge";
+        Dialog = "\c[white]Yes? Tell me how that happened. (You give the judge complete description of the case) So, it was after all a bunch of two warring traders? Nothing else? That's good. I was worried we are dealing with heretics here. I glad it ended this way. The convict will be execited according to law and this here is your reward. You've earned it.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_JUDGE";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "SH_CityJudge_opener";
+            CloseDialog = true;
+            YesMessage = "No, I thank you. This was a difficult one.";
+            Special = 80;
+            arg0 = 1107;
+        }
+    }
+    //murder quest ---------------------------------------------------------
+
+}
+//==================================================================================================================

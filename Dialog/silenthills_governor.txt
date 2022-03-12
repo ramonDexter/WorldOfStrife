@@ -1,0 +1,225 @@
+//==================================================================================================================
+//governor id 13
+//==================================================================================================================
+Conversation {
+	ID = 13;
+	Page {
+        pageName = "SH_governor_opener";
+		Name = "Governor";
+		Dialog = "\c[white]Hello Binder, what do you need? The gate's closed for a reason. The powerplant's been damaged, the poachers stole the power coupling, so I cannot open the gate. But I know you are a man of cunning, so I'm asking for your help.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "What exactly you need from me?";
+            Nextpage = "SH_governor_gotowastetreatment";
+			Special = 80;
+			arg0 = 99;
+		}
+	}
+    Page {
+        pageName = "SH_governor_gotowastetreatment";
+		Name = "Governor";
+		Dialog = "\c[white]Well, I need you to go to the waste treatment plant. My infomrants told me that the poachers are hiding there, somewhere. You have to search the place. And while you're in, clean the places from the spiders.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Ok, I'll help you.";
+            Nextpage = "SH_governor_poachers_notyet";
+			special = 80;
+			arg0 = 100;
+            Closedialog = true;
+        }
+    }
+    Page {
+        pageName = "SH_governor_poachers_notyet";
+        link = "SH_governor_poachers_gone";
+        IfItem {
+            item = "twn_quest01_cacheFound";
+            amount = 1;
+        }
+		Name = "Governor";
+		Dialog = "\c[white]Hello Binder, I see that you are back. Have you found the poachers?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "No, not yet.";
+            Nextpage = "SH_governor_poachers_notyet";
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page {
+        pageName = "SH_governor_poachers_gone";
+        Name = "Governor";
+		Dialog = "\c[white]Hello Binder, I see that you are back. Have you found the poachers?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I've found their hideout, but the poachers were gone.";
+            Nextpage = "SH_governor_gotomines";
+        }
+    }
+    Page {
+        pageName = "SH_governor_gotomines";
+        Name = "Governor";
+		Dialog = "\c[white]Yes, I know. As my informants told me, they fled just before you entered the waste treatment plant. Al least you got rid of the spiders gang. Good job. Here's something for the hard work and the key to the mines.\nYou should head to the mines now. The poachers are hiding somwhere there. Find them and deal with them and bring back the power coupling, so we can fix the powerplant.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Ok, I'll head to the mines.";
+            Nextpage = "SH_governor_foundcoupling_notyet";
+            Closedialog = true;
+            YesMessage = "Here's something for the work.";
+            Special = 80;
+            arg0 = 101;
+        }
+    }
+    Page {
+        pageName = "SH_governor_foundcoupling_notyet";
+        link = "SH_governor_foundcoupling";
+        IfItem {
+            item = "powerPlant_powerCoupling";
+            amount = 1;
+        }
+        Name = "Governor";
+		Dialog = "\c[white]Have you found the power coupling?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "No, not yet.";
+            Nextpage = 6;
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page {
+        pageName = "SH_governor_foundcoupling";
+        Name = "Governor";
+		Dialog = "\c[white]Have you found the power coupling?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Yes, here it is.";
+            Nextpage = "SH_governor_foundcoupling_hereitis";
+            Giveitem = "twn_quest02_finished";
+        }
+    }
+    Page {
+        pageName = "SH_governor_foundcoupling_hereitis";
+        Name = "Governor";
+		Dialog = "\c[white]Oh, don't give it to me. I'm not the one who will fix the powerplant. Just head there, the technicians will tell you what to do. Also, here's some gold to cover your expenses. And the powerplant key.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Well, ok...";
+            Nextpage = "SH_governor_powerplantFixed_notyet";
+            Closedialog = true;
+            Special = 80;
+            arg0 = 102;
+        }
+    }
+    Page {
+        pageName = "SH_governor_powerplantFixed_notyet";
+        link = "SH_governor_powerplantFixed";
+        IfItem {
+            item = "twn_quest03_powerPlantFixed";
+            amount = 1;
+        }
+        Name = "Governor";
+		Dialog = "\c[white]Hello, I see you are back. But the gate's controls are not working yet. Have you fixed the powerplant?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "No, not yet.";
+            Nextpage = "SH_governor_powerplantFixed_notyet";
+            Closedialog = true;
+            YesMessage = "Keep looking, then.";
+        }
+    }
+    Page {
+        pageName = "SH_governor_powerplantFixed";
+        Name = "Governor";
+		Dialog = "\c[white]Hello, I see you are back and the gate's controls are online now. Good job. Here some extra cash for the good work. Also, I'm opening the town's gates, if you need to leave. Or, if you want, we can speak.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "SH_governor_normalconv";
+            Special = 80;
+            arg0 = 103;
+            Closedialog = true;
+            YesMessage = "You're welcome!";
+        }
+    }
+    Page {
+        pageName = "SH_governor_normalconv";
+        Name = "Governor";
+		Dialog = "\c[white]Hello, what do you need?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Can I have a question?";
+            Nextpage = "SH_governor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_governor_questions";
+        Name = "Governor";
+		Dialog = "\c[white]Hello, what do you need?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = "SH_governor_normalconv";
+        }
+        Choice {
+            Text = "Tell me about the city.";
+            Nextpage = "SH_governor_questions_city";
+        }
+        Choice {
+            Text = "Are there any heretics in the city?";
+            Nextpage = "SH_governor_questions_heretics";
+        }
+        Choice {
+            Text = "Tell me about yourself.";
+            Nextpage = "SH_governor_questions_yourself";
+        }
+    }
+    Page {
+        pageName = "SH_governor_questions_city";
+        Name = "Governor";
+		Dialog = "\c[white]Our city's called Silent Hills, as you already know. It was founded after the comet hit the earth. The Order came here and helped the locals to rebuilt their homes, so the locals started following this new faith. The Order is just, but righteous overseer. We have minimal criminality and none of us starves.\nOur city has many shops, hospital and even a city bath, built on old roman plan.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = "SH_governor_questions";
+        }
+
+    }
+    Page {
+        pageName = "SH_governor_questions_heretics";
+        Name = "Governor";
+		Dialog = "\c[white]I don't know about any. The Binder Order is doing fine job, so we can sleep peacefully.";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = "SH_governor_questions";
+        }
+
+    }
+    Page {
+        pageName = "SH_governor_questions_yourself";
+        Name = "Governor";
+		Dialog = "\c[white]My name's Mervin Hart. I've been proposed to this function two years ago, when the last governor retired. Before that, I was in charge of town's powerplant. I'm an engineer, not a politician, and this work is pretty rough for me. You know, working with machines is easier than working with people. The machines do exactly what you tell them to do. But people?";
+		Panel = "M_PEAS1";
+		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow][ << BACK ]";
+            Nextpage = "SH_governor_questions";
+        }
+
+    }
+}
+//==================================================================================================================

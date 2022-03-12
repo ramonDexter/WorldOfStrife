@@ -1,0 +1,91 @@
+//==================================================================================================================
+//town weaponsmith
+//==================================================================================================================
+Conversation {
+	ID = 5;
+	Page {
+        pageName = "SH_townWeaponsmith_opener";
+		Name = "Weaponsmith";
+		Dialog = "\c[white]\c[white]Hello, what can I offer you?";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[gold]Crossbow";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscStrifeCrossbow";
+			Cost {
+				Item = "goldCoin";
+				Amount = 150;
+			}
+		}
+		Choice {
+			Text = "Electric bolt satchel";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosboltselectric";
+			Cost {
+				Item = "goldCoin";
+				Amount = 5;
+			}
+		}
+		Choice {
+			Text = "Poisonous bolt satchel";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBoltsPoison";
+			Cost {
+				Item = "goldCoin";
+				Amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Assault Gun";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscAssaultGun";
+			Cost {
+				Item = "goldCoin";
+				Amount = 250;
+			}
+		}
+		Choice {
+			Text = "Bullet Clip";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "ClipOfBullets";
+			Cost {
+				Item = "goldCoin";
+				Amount = 10;
+			}
+		}
+		Choice {
+			Text = "Box of Bullets";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBulletsBox";
+			Cost {
+				Item = "goldCoin";
+				Amount = 50;
+			}
+		}
+	}
+}
+//==================================================================================================================

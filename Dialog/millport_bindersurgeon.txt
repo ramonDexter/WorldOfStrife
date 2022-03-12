@@ -1,0 +1,143 @@
+//##################################################################################################################
+//binder surgeon convID 2
+//##################################################################################################################
+Conversation {
+    ID = 2;
+    Page {
+        pageName = "MP_binderSurgeon_opener";
+        Name = "Binder Surgeon";
+        Dialog = "\c[white]Hello, are you in need of medical services? Or do you need to resupply your stocks? Als, if you've got an upgrade token, I can install you a stamina cybernetic upgrade.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_DCTR";
+        Choice {
+            Text = "I'm wounded!";
+            Nextpage = "MP_binderSurgeon_wounded";
+        }
+        Choice {
+            Text = "I need to resupply.";
+            Nextpage = "MP_binderSurgeon_shop";
+        }
+        Choice {
+            Text = "Cybernetic implant? Tell me more.";
+            Nextpage = "MP_binderSurgeon_upgrade";
+            Require {
+                item = "upgradeToken";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "MP_binderSurgeon_wounded";
+        Name = "Binder Surgeon";
+        Dialog = "\c[white]Don't worry and step into the autodoc right there. I've got an surgery in the next room.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_DCTR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderSurgeon_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderSurgeon_shop";
+        Name = "Binder Surgeon";
+        Dialog = "\c[white]Ok, here is what I've got:\nHypospray for 25, Kombopack for 50 and Instaheal for 100.\nMedPatch for 10, Medical Kit for 25 and Surgery Kit for 100.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_DCTR";
+		Choice {
+			Text = "\c[yellow]Buy Hypospray";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "wosHyposprej";
+			YesMessage = "Here is one Hypospray!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Combopack";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "wosKombopack";
+			YesMessage = "Here is one Combopack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Instaheal";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "wosInstaLek";
+			YesMessage = "Here is one Instaheal!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy MedPatch";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one MedPatch!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Medical Kit";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Medical Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Surgery Kit";
+			NextPage = "MP_binderSurgeon_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Surgery Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderSurgeon_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderSurgeon_upgrade";
+        Name = "Binder Surgeon";
+        Dialog = "\c[white]Just give me the upgrade token and I'll install you the stamina implant. Not a big deal, just hold still, it will take just a few minutes.";
+        Goodbye = "\c[red]Goodbye";
+        Panel = "M_DCTR";
+        Choice {
+            Text = "Here is the upgrade token.";
+            Nextpage = "MP_binderSurgeon_opener";
+            CloseDialog = true;
+            YesMessage = "Just hold still.";
+            Special = 80;
+            arg0 = 1801;
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderSurgeon_opener";
+        }
+    }
+}
+//##################################################################################################################

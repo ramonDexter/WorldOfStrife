@@ -1,0 +1,68 @@
+//##################################################################################################################
+//vitaci binder akolyta convID 6
+//##################################################################################################################
+Conversation {
+    ID = 6;
+    Page {
+        pageName = "MP_binderWelcome_opener";
+        Name = "Binder Acolyte";
+        Dialog = "\c[white]Welcome, Binder, to the magnificent Millport. We are happy to welcome you here, but now you have to speak with the Superior. He awaits you in his office.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "OK, happy to see you too. Heading out.";
+            Nextpage = "MP_binderWelcome_dialog";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8101;
+        }
+    }
+    Page {
+        pageName = "MP_binderWelcome_dialog";
+        Name = "Binder Acolyte";
+        Dialog = "\c[white]Yes, did you wanted something?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Tell me about yourself.";
+            Nextpage = "MP_binderWelcome_aboutyourself";
+        }
+        Choice {
+            Text = "Tell me about the base.";
+            Nextpage = "MP_binderWelcome_aboutbase";
+        }
+        Choice {
+            Text = "Could you describe me the city? I'm new here.";
+            Nextpage = "MP_binderWelcome_describecity";
+        }
+    }
+    Page {
+        pageName = "MP_binderWelcome_aboutyourself";
+        Name = "Binder Acolyte";
+        Dialog = "\c[white]I am Lucas, an acolyte. I've joined the Binder Order two years ago, and since that time I'm trying to do my best serving the Order. I won't disappoint you, Binder.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderWelcome_dialog";
+        }
+    }
+    Page {
+        pageName = "MP_binderWelcome_aboutbase";
+        Name = "Binder Acolyte";
+        Dialog = "\c[white]Our base has been built here three years ago. We have a weaponsmith workshop here, even a fully equipped hospital. Go and take a look around yourself, you'll find that the base is even bigger than it looks.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderWelcome_dialog";
+        }
+    }
+    Page {
+        pageName = "MP_binderWelcome_describecity";
+        Name = "Binder Acolyte";
+        Dialog = "\c[white]Well, Millport is small port community on the southern edge of the Island. It is run by the Governor, rich guy who usually resides in his Villa on the southwestern edge of the city, near the port. We are trying to gain his trust, but it's hard to get, since he only accepts the language of money. The TekGuild has it's headquerters here, right next to our base. They helped us to build our base. The northern part of town is the trading part, you'll find most shops here. The eastern part is the residential area.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderWelcome_dialog";
+        }
+    }
+}
+//##################################################################################################################

@@ -1,0 +1,65 @@
+//==================================================================================================================
+//energy weapons ammo vendor
+//==================================================================================================================
+Conversation {
+	ID = 3;
+	Page {
+        pageName = "SH_energyAmmoVendor_opener";
+		Name = "Technician";
+		Dialog = "\c[white]\c[white]Hello, how may I serve you?";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy Night Eye Device";
+			NextPage = "SH_energyAmmoVendor_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosNightEyeDevice";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "Buy Blaster Turret";
+			NextPage = "SH_energyAmmoVendor_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosblasterTurret";
+			Cost {
+				item = "goldCoin";
+				amount = 75;
+			}
+		}
+		/*Choice {
+			Text = "Buy Flight Harness";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "jetpack_item";
+			NextPage = "SH_energyAmmoVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 80;
+			}
+		}*/
+		Choice {
+			Text = "Buy Deployable Shield";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosDeployableShield";
+			NextPage = "SH_energyAmmoVendor_opener";
+			DisplayCost = true;
+			Cost {
+				Item = "goldCoin";
+				Amount = 150;
+			}
+		}
+	}
+}
+
+//==================================================================================================================

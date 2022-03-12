@@ -1,0 +1,58 @@
+//==================================================================================================================
+//rebel - rowan convID 36
+//==================================================================================================================
+Conversation {
+    ID = 36;
+    Page {
+        pageName = "SH_rebelRowan_opener";
+        Name = "Rowan";
+        Dialog = "\c[white]What are you doing here?";
+        Goodbye = "\c[red]Goodbye";
+
+        Choice {
+            Text = "Is that rebel helmet on the bed? And rebel communicator?";
+            Nextpage = "SH_rebelRowan_nothowitlooks";
+            Require {
+                item = "twn_judgeQ01_rebels_rowanIsrebel";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_rebelRowan_nothowitlooks";
+        Name = "Rowan";
+        Dialog = "\c[white]That...that's not how it looks. I'm not with the rebels. Please, don't tell anyone.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Now it's too late.";
+            Nextpage = "SH_rebelRowan_toolate";
+        }
+    }
+    Page {
+        pageName = "SH_rebelRowan_toolate";
+        Name = "Rowan";
+        Dialog = "\c[white]No, please. I'm not with the rebels.";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Don't act like a child. There's evidence here. You're coming with me.";
+            Nextpage = "SH_rebelRowan_opener";
+            CloseDialog = true;
+            YesMessage = "Over my cold dead body!";
+            Special = 80;
+            arg0 = 1002;
+            /*
+            script 1002 (void) {
+                Thing_Hate(65, 0, 4);
+            }
+            */
+        }
+    }
+}
+/*
+//volano pri zabiti rowana
+script "rowanIsKilled" (void) {
+    GiveActorInventory (0, "twn_judgeQ01_rebels_rowanKilled", 1);
+    Print (l:"The rebel scum is dead. You can report your success to the Judge now.");
+}
+*/
+//==================================================================================================================

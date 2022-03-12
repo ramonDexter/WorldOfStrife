@@ -1,0 +1,266 @@
+//==================================================================================================================
+//priest in cathedral id 25
+//==================================================================================================================
+Conversation {
+    ID = 25;
+    Page {
+        pageName = "SH_bishop_opener";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Be welcome, good Binder. We are always happy to welcome such a faithful servant as you. what bring your sets here to the Temple of the Father?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I'm seeking spiritual services.";
+            Nextpage = "SH_bishop_services";
+        }
+        Choice {
+            Text = "I have some questions.";
+            Nextpage = "SH_bishop_questions";
+        }
+        Choice {
+            Text = "I came through some work.";
+            Nextpage = "SH_Bishop_work";
+            Exclude {
+                item = "twn_bishopQ01_skrysRebelu_given";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_bishop_services";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Yes, certainly. And what services you seek, my child?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I just need to pray.";
+            Nextpage = "SH_bishop_services_pray";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_opener";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_services_pray";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Yes, certainly. Pray with me.\nFather, who came from the void,\nplease, watch this Binder's steps\nas he is your most faithful servant.\nAmen.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Amen.";
+            Nextpage = "SH_bishop_opener";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_questions";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Yes, certainly. Many have questions, only few have answers. And only the fewest have the right answers. What do you wish to know, my child?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What can you tell me about the Order?";
+            Nextpage = "SH_bishop_order";
+        }
+        Choice {
+            Text = "What do you know about the locals?";
+            Nextpage = "SH_bishop_localpeople";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            Nextpage = "SH_bishop_aboutcity";
+        }
+        Choice {
+            Text = "Could you tell me about yourself?";
+            Nextpage = "SH_bishop_yourself";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_opener";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_order";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]The Order is a spiritual guide for all who seek guidance in these dark troubled times. We are offering eternal peace and tranquility for all who need and seek our help. Yes, there are those who are misguided. We are trying them to see the truth. Don't be bothered about the fact we call them 'heretics', as it means simply 'misguided', not enemies. We are just trying to help them find the right way.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_questions";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_localpeople";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Yes, the locals are good and faithful people, friendly and caring. But I cannot share more with you, as I!m forbidden to tell their secrets to anyone.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_questions";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_aboutcity";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]City of Silent Hills is a peaceful place. I came here five years ago, when I was promoted to the post of local Bishop. So I cannot tell you more about local history, since I'm busy with my own responsibilities and duties. You can already speak to local historian, who lives in the eastern bank of river, near northern wall.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_questions";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_yourself";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Oh, that's unusual question. I should be honored that you actually care about my presence. Well, I have been serving as a local bishop for the last five years. Before that time, I was serving as a simple priest in a small parish in the north.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_questions";
+        }
+    }
+    Page {
+        pageName = "SH_Bishop_work";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Yes, certainly. I have one case here that needs special approach. One of my informants told that there is a secret heretic hideout here in town. They even built a shrine here, what a blaphemy! My informants have not found out more than the information about existence of the blasphemous place. So you have to ask around and find yourself. I beleieve you'll be succesfull, with Father's guiding hand. Praise him. Hallowed is the Father.\nI would like to ask you to find this hideout and bring me anything you find there. Anything. Are you willing to help the Order?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "SH_bishop_opener";
+            CloseDialog = true;
+            YesMessage = "Take your time, but don't think for too long.";
+        }
+        Choice {
+            Text = "I'll be honored to help the Order.";
+            Nextpage = "SH_Bishop_work_foundanything";
+            CloseDialog = true;
+            YesMessage = "Good, good.";
+            Special = 80;
+            arg0 = 1201;
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_bishop_opener";
+        }
+    }
+    Page {
+        pageName = "SH_Bishop_work_foundanything";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]You're back, my child. Have you found anything?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I have found this heretical relic. And this datadisk.";
+            Nextpage = "SH_Bishop_work_foundrelicanddisk";
+            Require {
+                item = "hereticalRelic";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Not yet.";
+            Nextpage = "SH_Bishop_work_foundanything";
+            CloseDialog = true;
+            YesMessage = "I'm patient, my child.";
+            Exclude {
+                item = "hereticalRelic";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_Bishop_work_foundrelicanddisk";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Oh, show it to me \c[gray](you hand him the relic and the datadisk)\c[white]. Yes, this is a relic of an old demon. This demon was banished by Father's wisdom, so this foul thing here doesn't heed to exist anymore. It will be destroyed. And this disk here? \c[gray](he plugs it into his PDA and reads its contents)\c[white] Hmm, Lots of information here. I have to read through it.\nAnyways, you've proven yourself more then worthy. Here is your reward, you've earned it.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I'm honored, you highness.";
+            Nextpage = "SH_bishop_work2";
+            CloseDialog = true;
+            YesMessage = "Hallowed is the Father!";
+            Special = 80;
+            arg0 = 1203;
+        }
+    }
+
+    Page {
+        pageName = "SH_bishop_work2";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]Be welcome, my child. It's good that you've returned to me. I have read the contents of the datadisk you brought me and I must say I'm truly thrilled. There is and rebel
+ hideout hidden in the Eastern Territory. If the information are correct, they have taken an old factory as their base. That's horrible, they can attack the city anytime!";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "What do you want from me?";
+            Nextpage = "SH_bishop_work2_killthemall";
+        }
+    }
+    Page {
+        pageName = "SH_bishop_work2_killthemall";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]That's simple, my child. All I need from you is to send them all to hell where they belong. Kill them all and bring me skull of their leader as a proof. There is no place for these heretics but the hell. Your steps will be guided by the Father himself, so don't worry and don't fear those foul heretics.\nTo accomplish this task you will need this explosive device. Take it and use to blow the wall that's guarding the old factory. The old factory is located in the Eastern Regions, I've marked the place on your map. Is everything clear?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I have to think about it.";
+            Nextpage = "SH_bishop_work2";
+            CloseDialog = true;
+            YesMessage = "Take your time, but don't think for too long.";
+        }
+        Choice {
+            Text = "Again, it would be an honor to serve the Order.";
+            Nextpage = "SH_bishop_work2_anythingyet";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1301;
+        }
+    }
+    Page {
+        pageName = "SH_bishop_work2_anythingyet";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]You're back, my child. Were you succesfull in your task?";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Not yet.";
+            Nextpage = "SH_bishop_work2_anythingyet";
+            CloseDialog = true;
+            YesMessage = "I'm patient, my child.";
+            Exclude {
+                item = "hereticLeaderSkull";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Yes, here is the skull of their leader. Turns out they were led by a group of renegade Priests.";
+            Nextpage = "SH_bishop_work2_success";
+            Require {
+                item = "hereticLeaderSkull";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "SH_bishop_work2_success";
+        Name = "Bishop of the Order";
+        Dialog = "\c[white]What? They were led by a group of Renegade priests? That's even worse than what I thought about the situation. We have to make a deep investigation in the Orders structures, then.\nAnyways, thank you for your services. Your work here is appreciated by the Order, and the Order thanks you as well. Here, take this reward as our thanks to the Binder order. And take this chalice as a token of gratitude. You've earned it.";
+        Panel = "M_PRST";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Thank you and the Order.";
+            Nextpage = "SH_bishop_opener";
+            CloseDialog = true;
+            YesMessage = "No, we thank you. Hallowed is the Father!";
+            Special = 80;
+            arg0 = 1302;
+        }
+    }
+
+}
+//==================================================================================================================

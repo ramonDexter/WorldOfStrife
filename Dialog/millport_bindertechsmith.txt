@@ -1,0 +1,302 @@
+//##################################################################################################################
+// binder techsmith convid 7
+//##################################################################################################################
+Conversation {
+    ID = 7;
+    /*
+    Page {
+        pageName = "";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_binderTechsmith_opener";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Welcome, brother. I'm Jebediah, the chief Techmisth here on the base. How may I serve you?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'd like to resupply. What you got on stock?";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "MP_binderTechsmith_questions";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Well, I've got plenty of stuff.\nI've got the Kinetic Armor and Deployable Shield. These are meant as protection. Then I have some offensive devices, like conventional grenades and the Swarmers grenade. Also, I sell the Armor Repair Kits.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Kinetic Armor? What's that?";
+            Nextpage = "MP_binderTechsmith_shop_kineticarmor";
+        }
+        Choice {
+            Text = "You've got deployable shields?";
+            Nextpage = "MP_binderTechsmith_shop_deployableshields";
+        }
+        Choice {
+            Text = "I need to restock grenades.";
+            Nextpage = "MP_binderTechsmith_shop_grenades";
+        }
+        Choice {
+            Text = "Swarmers? What's that?";
+            Nextpage = "MP_binderTechsmith_shop_swarmers";
+        }
+        Choice {
+            Text = "I need some repair kits.";
+            Nextpage = "MP_binderTechsmith_shop_armorshards";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop_kineticarmor";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]We've developed this brand new armor as a successor to our cybernetic armors. This type of armor employs kinetic energetic armor shielding whole body. It is lightweight, while offering superior protection. But, as a novelty, it is pretty expensive.\nKinetic Armor costs 360 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "That sounds good. I'll take one. (pay 360 gold)";
+            Nextpage = "MP_binderTechsmith_shop_kineticarmor";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "woskineticarmor";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 360;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop_deployableshields";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Yeah. Handy things, aren't they? But remember, they block all fire, including yours. So you have to get out of cover to shoot.\nOne Deployable Shield costs 150 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'll take one. (pay 150 gold)";
+            Nextpage = "MP_binderTechsmith_shop_deployableshields";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosDeployableShield";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 150;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop_grenades";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]I've got conventional explosive grenades, the nasty phosphorous greandes and the gas grenades.\nExplosive grenade costs 5 gold.\nPhosphorous grenade costs 15 gold.\nGas grenade costs 10 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Give me the explosive one. (pay 5 gold)";
+            Nextpage = "MP_binderTechsmith_shop_grenades";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosGrenadeE";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "Give me the phosphorous one. (pay 15 gold)";
+            Nextpage = "MP_binderTechsmith_shop_grenades";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosGrenadeF";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 15;
+            }
+        }
+        Choice {
+            Text = "Give me the gas one. (pay 10 gold)";
+            Nextpage = "MP_binderTechsmith_shop_grenades";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosGrenadeG";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop_swarmers";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]The Swarmewrs is a new type of grenade, or better said, a offensive device. The big ball spawns swarm of smaller drones equipped with slashing rotary saw, capable of slicing through nearly anything. Nasty thing, is you wanna know my opinion.\nThe Swarmers grenade costs 35 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'll try it. Give me one. (pay 35 gold)";
+            Nextpage = "MP_binderTechsmith_shop_swarmers";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosSwarmers";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 35;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_shop_armorshards";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Yeah, they come in handy. We're making our own, so we don't have to rely on supply from the TekGuild.\nOne repair kit costs 15 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'll try it. Give me one. (pay 15 gold)";
+            Nextpage = "MP_binderTechsmith_shop_armorshards";
+            Closedialog = false;
+            Displaycost = false;
+            GiveItem = "wosArmorShard";
+            YesMessage = "\c[white]Here you go!";
+            NoMessage = "\c[white]Not enough gold, brother!";
+            Cost {
+                item = "goldcoin";
+                amount = 15;
+            }
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_shop";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_questions";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Yeah, I can take a break for a little chat. What would you like to know, brother?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "MP_binderTechsmith_doinghere";
+        }
+        Choice {
+            Text = "What could you tell me about the city?";
+            Nextpage = "MP_binderTechsmith_aboutcity";
+        }
+        Choice {
+            Text = "Do you know any rumors?";
+            Nextpage = "MP_binderTechsmith_rumors";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_doinghere";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]As I said, I'm the chief Techsmith here on our base. I am in charge of all the equipment manufacturing. Hopefully, my deputy is a trustwothy person, so I can take care of the supply shop here. I'm not the management type, you know.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What could you tell me about the city?";
+            Nextpage = "MP_binderTechsmith_aboutcity";
+        }
+        Choice {
+            Text = "Do you know any rumors?";
+            Nextpage = "MP_binderTechsmith_rumors";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_aboutcity";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Well, Millport is a 'southern gate of prosperity', as the official propagation says. It's true, more or less. The city is a nice place, when you look only at the surface. But when you dive deeper, you will find out that the city's a rottne place.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Why is that?";
+            Nextpage = "MP_binderTechsmith_whyisthat";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "MP_binderTechsmith_doinghere";
+        }
+        Choice {
+            Text = "Do you know any rumors?";
+            Nextpage = "MP_binderTechsmith_rumors";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_whyisthat";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]The city's criminal underworld is driven by one man. The local governor is Baron von Stromberg. We are sure he is the mastermind of local underworld, but we ale lacking any evidence. He is too careful and his fingers reach too far.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "MP_binderTechsmith_doinghere";
+        }
+        Choice {
+            Text = "Do you know any rumors?";
+            Nextpage = "MP_binderTechsmith_rumors";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderTechsmith_rumors";
+        Name = "Jebediah, Techsmith";
+        Dialog = "\c[white]Sorry, I cannot help you. I'm not into spreading rumors.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "MP_binderTechsmith_doinghere";
+        }
+        Choice {
+            Text = "What could you tell me about the city?";
+            Nextpage = "MP_binderTechsmith_aboutcity";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderTechsmith_opener";
+        }
+    }
+}
+//##################################################################################################################

@@ -1,0 +1,100 @@
+//##################################################################################################################
+//energy ammo vendor id 10
+//##################################################################################################################
+Conversation {
+	ID = 10;
+
+	Page {
+        pageName = "MP_energyAmmoVendor_opener";
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]Hello Binder. Welcome to my shop. I sell energy weapons ammo. EnergyPods, EnergyKits and EnergyPacks. Also, I sell energyCells to power powerups.";
+		Panel = "M_ENVND";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Buy EnergyPod";
+			NextPage = "MP_energyAmmoVendor_opener";
+			GiveItem = "wosenergypod";
+			YesMessage = "Here is one EnergyPod!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyKit";
+			NextPage = "MP_energyAmmoVendor_opener";
+			GiveItem = "wosenergykit";
+			YesMessage = "Here is one EnergyKit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 30;
+			}
+		}
+		Choice {
+			Text = "Buy EnergyPack";
+			NextPage = "MP_energyAmmoVendor_opener";
+			GiveItem = "wosenergypack";
+			YesMessage = "Here is one EnergyPack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 80;
+			}
+		}
+		Choice
+		{
+			Text = "I have some questions.";
+			NextPage = "MP_energyAmmoVendor_questions";
+		}
+
+	}
+	Page {
+        pageName = "MP_energyAmmoVendor_questions";
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]What do you wanted to ask? I'm not involved in any heresy.";
+		Panel = "M_ENVND";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Tell me about yourself.";
+			NextPage = "MP_energyAmmoVendor_aboutyourself";
+		}
+		Choice {
+			Text = "Tell me about the city.";
+			NextPage = "MP_energyAmmoVendor_aboutcity";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "MP_energyAmmoVendor_opener";
+		}
+	}
+	Page {
+        pageName = "MP_energyAmmoVendor_aboutyourself";
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]My name's Quincy. I'm techsmith, my specialization is ammo crafting. I craft energy weapons ammo. I spend most of the time in mys workshop, it's my main source of income. And when I want to rest, I read a book or go to the riverside fishing.";
+		Panel = "M_ENVND";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "MP_energyAmmoVendor_questions";
+		}
+
+	}
+	Page {
+        pageName = "MP_energyAmmoVendor_aboutcity";
+		Name = "Energy Ammo Vendor";
+		Dialog = "\c[white]Millport's peaceful town. I like this place. I came here twenty years ago, when I was just a journeyman. The Binder presence in town keeps any criminal scum away. I like the local pub. Good choice of drinks.";
+		Panel = "M_ENVND";
+        Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "MP_energyAmmoVendor_questions";
+		}
+
+	}
+}
+//##################################################################################################################

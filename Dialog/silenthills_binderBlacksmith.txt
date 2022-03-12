@@ -1,0 +1,128 @@
+//==================================================================================================================
+//binder blacksmith
+//==================================================================================================================
+Conversation {
+	ID = 1;
+	Page {
+        pageName = "binderBlacksmith_opener";
+		Name = "Forgemaster"; //Forgemaster
+		Dialog = "\c[white]Hello, what may I get you?"; //Hello, what may I get you?
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "What do you sell?"; //One EnergyPod
+			NextPage = "binderBlacksmith_shop";
+
+		}
+
+		Choice {
+			Text = "Do you offer any other services?";
+			NextPage = "binderBlacksmith_otherservices";
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+		}
+
+	}
+	Page {
+		PageName = "binderBlacksmith_shop";
+		Name = "Forgemaster"; //Forgemaster
+		Dialog = "\c[white]I sell the energy ammunition, and ammunition for the shouldergun. So, which one will you pick?"; //Hello, what may I get you?
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "One energy pod"; //One EnergyPod
+			NextPage = "binderBlacksmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!"; //Here it is!
+			NoMessage = "Not enough gold!"; //Not enough gold!
+			GiveItem = "wosEnergyPod";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "One EnergyKit"; //One EnergyKit
+			NextPage = "binderBlacksmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!"; //Here it is!
+			NoMessage = "Not enough gold!"; //Not enough gold!
+			GiveItem = "wosEnergyKit";
+			Cost {
+				item = "goldCoin";
+				amount = 30;
+			}
+		}
+		Choice {
+			Text = "One EnergyPack"; //One EnergyPack
+			NextPage = "binderBlacksmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!"; //Here it is!
+			NoMessage = "Not enough gold!"; //Not enough gold!
+			GiveItem = "wosEnergyPack";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		/*Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+			Text = "One Shouldergun Magazine"; //One EnergyPack
+			NextPage = "binderBlacksmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!"; //Here it is!
+			NoMessage = "Not enough gold!"; //Not enough gold!
+			GiveItem = "shoulderGunMag_item";
+			Cost {
+				item = "goldCoin";
+				amount = 32;
+			}
+
+		}*/
+		Choice {
+			Text = "Sorry, I wanted something else.";
+			NextPage = "binderBlacksmith_opener";
+		}
+	}
+	Page {
+        pageName = "binderBlacksmith_otherservices";
+		Name = "Forgemaster";
+		Dialog = "\c[white]\c[white]Of course. I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade."; //\c[white]Of course. I can upgrade your staff, if you want.\nJust give me your staff, I'll install the upgrade right here and now.\nAlso, I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade.
+		Goodbye = "\c[red]Goodbye";
+		/*Choice {
+			Text = "Ok, here is the staff."; //Ok, here is the staff.
+			NextPage = "binderBlacksmith_otherservices";
+			CloseDialog = true;
+			YesMessage = "Here you go. One small clip and we're done."; //Here you go. One small clip and we're done.
+			NoMessage = "You don't have the staff!"; //You don't have the staff!
+			GiveItem = "StaffBlasterUpgr";
+			Cost {
+				item = "staffBlaster";
+				amount = 1;
+			}
+		}*/
+		Choice {
+			Text = "Cybernetic implant? I like it."; //Cybernetic implant? I like it.
+			NextPage = "binderBlacksmith_otherservices";
+			YesMessage = "Just hold still and we're right done!"; //Just hold still and we're right done!
+			NoMessage = "You need the upgrade token!"; //You need the upgrade token!
+			Giveitem = "upgradeaccuracy";
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Sorry, I wanted something else.";
+			NextPage = "binderBlacksmith_opener";
+		}
+	}
+}
+//==================================================================================================================

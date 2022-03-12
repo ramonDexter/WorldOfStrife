@@ -1,4 +1,5 @@
 //explosives vendor id 15
+namespace = "GZDoom";
 Conversation
 {
 	ID = 15;

@@ -1,4 +1,5 @@
 //your bed id 703
+namespace = "GZDoom";
 Conversation
 {
 	Id = 703;

@@ -2,6 +2,7 @@
 //weapons vendors - jony & tony
 //jony - light weapons id 11
 //##################################################################################################################
+namespace = "GZDoom";
 Conversation {
 	ID = 11;
 	Page {

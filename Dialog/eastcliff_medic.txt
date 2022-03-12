@@ -1,3 +1,4 @@
+namespace = "GZDoom";
 Conversation {
     ID = 1;
     /*

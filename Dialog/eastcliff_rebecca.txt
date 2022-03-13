@@ -6,7 +6,7 @@ Conversation {
         pageName = "";
         Name = "Rebecca";
         Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
+        Goodbye = "\c[red]Goodbye."; 
         Choice {
             Text = "";
             Nextpage = "";

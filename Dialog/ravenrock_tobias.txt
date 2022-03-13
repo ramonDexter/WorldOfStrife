@@ -304,5 +304,19 @@ Conversation {
             Text = "I wanted something else.";
             Nextpage = "ravenrock_tobias_questions";
         }
+        Choice {
+            Text = "I see three guys over there.";
+            Nextpage = "ravenrock_tobias_thirdone";
+        }
+    }
+    Page {
+        pageName = "ravenrock_tobias_thirdone";
+        Name = "Tobias, Techsmith";
+        Dialog = "\c[white]Yeah, the third one's my son, Arlan. He's a handy and smart, soon he'll take my place as the master here.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_tobias_questions";
+        }
     }
 }

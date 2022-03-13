@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Holden, village mayor";
+        Name = "Holden, village mayor"; 
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {

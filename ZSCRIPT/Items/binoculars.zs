@@ -25,11 +25,11 @@ class wosBinocular : wosPickup {
 		Tag "$T_Binocular";
 		Inventory.Icon "I_BNCL";
 		Mass wosBinocularWeight;
-		Scale 0.4;
+		//Scale 0.4;
     }
     States {
         Spawn:
-            BNCL S  -1;
+            DUMM A -1;
             Stop;
         Use:
             TNT1 A 0 {				

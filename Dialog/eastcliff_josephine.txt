@@ -6,7 +6,7 @@ Conversation {
         pageName = "";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "";
             Nextpage = "";
@@ -17,7 +17,7 @@ Conversation {
         pageName = "EC_josephine_opener";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]Hello, Binder. What brings you to my chambers?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "Who are you?";
             Nextpage = "EC_josephine_whoareyou";
@@ -31,7 +31,7 @@ Conversation {
         pageName = "EC_josephine_whoareyou";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]My name is Josephine. I am wife of Holden, the local mayor. I tend to the house, as family is my pride and honor.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "Nice to meet you, Josephine.";
             Nextpage = "EC_josephine_opener";
@@ -41,7 +41,7 @@ Conversation {
         pageName = "EC_josephine_questions";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]Yes, a little chat would be nice. What did you wanted to know?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_josephine_opener";
@@ -59,7 +59,7 @@ Conversation {
         pageName = "EC_josephine_eastcliff";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]Our village is nice quiet place. We got great Temple here, which I visit often. People say that I'm very faithful. Also, we got a pub here. The White Cock has the best kitchen, even better than pubs in Millport.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_josephine_questions";
@@ -69,7 +69,7 @@ Conversation {
         pageName = "EC_josephine_locals";
         Name = "Josephine, mayor's wife";
         Dialog = "\c[white]The locals are nice people. The traders are rich and the fishermen and farmers too, thanks to local abundance of resources. The local waters are full of fish and the fields have rich soil.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_josephine_questions";

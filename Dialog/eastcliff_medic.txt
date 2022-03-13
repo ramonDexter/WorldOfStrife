@@ -6,7 +6,7 @@ Conversation {
         pageName = "";
         Name = "Orin, Medic";
         Dialog = "\c[white]";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "";
             Nextpage = "";
@@ -17,7 +17,7 @@ Conversation {
         pageName = "EC_medic_opener";
         Name = "Orin, Medic";
         Dialog = "\c[white]Welcome to my humble shop, Binder. How may I serve you? Are you in need of medical attention?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I need help.";
             Nextpage = "EC_medic_help";
@@ -35,7 +35,7 @@ Conversation {
         pageName = "EC_medic_help";
         Name = "Orin, Medic";
         Dialog = "\c[white]Oh, I'm busy right now. Just use the autodoc over there.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "Okay.";
             Nextpage = "EC_medic_opener";
@@ -45,7 +45,7 @@ Conversation {
         pageName = "EC_medic_shop";
         Name = "Orin, Medic";
         Dialog = "\c[white]Yeah, I do sell medical supplies. But nothing cheap.\nThe Hypospray costs 25, Kombopack costs 50 and the Instaheal costs 100 gold. Also, I've got the Medpatches for 10, Medical Kits for 25 annd Surgery Kits for 100 gold. What will you take?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_medic_opener";
@@ -127,7 +127,7 @@ Conversation {
         pageName = "EC_medic_questions";
         Name = "Orin, Medic";
         Dialog = "\c[white]What did you wanted to know? As a local, I know lot of things about our village.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_medic_opener";
@@ -141,7 +141,7 @@ Conversation {
         pageName = "EC_medic_eastcliff";
         Name = "Orin, Medic";
         Dialog = "\c[white]Eastcliff's a peaceful place. Our position on the main road gives the local traders a good opportunity to make a good business. Besides that, the locals make their living by fishing and farming.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_medic_questions";
@@ -155,7 +155,7 @@ Conversation {
         pageName = "EC_medic_farms";
         Name = "Orin, Medic";
         Dialog = "\c[white]Because all the farms are located up the cliffs, on the plateau. There's a good rich soil there, so the local farmers are pretty rich.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I've got other questions.";
             Nextpage = "EC_medic_questions";

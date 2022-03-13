@@ -6,7 +6,7 @@ Conversation {
         pageName = "";
         Name = "Rebecca";
         Dialog = "\c[white]";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "";
             Nextpage = "";
@@ -17,7 +17,7 @@ Conversation {
         pageName = "EC_rebecca_opener";
         Name = "Rebecca";
         Dialog = "\c[white]Hello and welcome to our Blacksmith Shop. Do you need something repaired? Or do you want to buy some tools?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "Yes, I wanted to buy something.";
             Nextpage = "EC_rebecca_shop";
@@ -31,7 +31,7 @@ Conversation {
         pageName = "EC_rebecca_shop";
         Name = "Rebecca";
         Dialog = "\c[white]All right, all right. We got grenades, crossbow ammo and energypods. Oh, and my father makes laser pistols. And besides that, we also make the normal farming tools.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_opener";
@@ -57,7 +57,7 @@ Conversation {
         pageName = "EC_rebecca_shop_grenades";
         Name = "Rebecca";
         Dialog = "\c[white]Yeah, my pa's specialty. He makes explosive, fire and gas grenades.\nExplosive grenade costs 5, Fire grenade costs 15 and Gas grenade costs 10 gold.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_shop";
@@ -103,7 +103,7 @@ Conversation {
         pageName = "EC_rebecca_shop_xbowammo";
         Name = "Rebecca";
         Dialog = "\c[white]Who doesn't?\nWe got the arrow bundles and quivers.\nThe electric ammo bundle costs 15, quiver costs 25 gold. The poison bolts bundle costs 50, quiver costs 75 gold.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_shop";
@@ -161,7 +161,7 @@ Conversation {
         pageName = "EC_rebecca_shop_energypods";
         Name = "Rebecca";
         Dialog = "\c[white]These are little bit pricey, but nothing you can't afford.\nThe Energypod costs 10, the Energykit costs 30 and the Energypack costs 50 gold.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_shop";
@@ -207,7 +207,7 @@ Conversation {
         pageName = "EC_rebecca_shop_laserpistol";
         Name = "Rebecca";
         Dialog = "\c[white]That's another of my father specialties. Pretty accurate, but eats batteries faster that hungery dog eats his meal. Costs 200 gold.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_shop";
@@ -229,7 +229,7 @@ Conversation {
         pageName = "EC_rebecca_questions";
         Name = "Rebecca";
         Dialog = "\c[white]A little chat is always nice. What did you wanted to know?";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_opener";
@@ -247,7 +247,7 @@ Conversation {
         pageName = "EC_rebecca_fathershop";
         Name = "Rebecca";
         Dialog = "\c[white]Yes. The shop's been established by my ganrdfather, when he came to Eastcliff as a young apprentice of Tekguild. He passed his knowledge to my father and he does the same with me. My father's skilled artisan, and he showed me many tricks. We're making a good living here.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_opener";
@@ -261,7 +261,7 @@ Conversation {
         pageName = "EC_rebecca_abouteastcliff";
         Name = "Rebecca";
         Dialog = "\c[white]Our little village is a quiet and peaceful place. The locals make their living out of fishing and farming. The farms are on the top of the cliffs. The local inn has a good cook and the food is delicious, stop there for a snack if you're hungry.";
-        Goodbye = "Goodbye.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "I wanted something else.";
             Nextpage = "EC_rebecca_opener";

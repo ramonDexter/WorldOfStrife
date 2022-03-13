@@ -173,8 +173,11 @@ class binderPlayer : StrifePlayer {
 				}
 				A_SelectWeapon("wos_sprintWeap");
 			}
-			Else If(stamin<maxstamin&&!(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED)&&(!(GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT))||vel.length()<2))
-			{stamin++;}
+			Else If( stamin<maxstamin && !(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) && ( !(GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)) || vel.length()<2 ) )
+			/*else if ( stamin<maxstamin && !(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) )*/
+			{
+				stamin++;				
+			}
 			If(player.readyweapon is "wos_sprintWeap") {
 				Player.SetPSprite(PSP_WEAPON,player.readyweapon.FindState("Nope"));
 				A_SelectWeapon(selectedWeapon.GetClassName());

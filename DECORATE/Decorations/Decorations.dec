@@ -7998,6 +7998,77 @@ actor wosD_tub 21474 {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+actor wosD_maleHarris 21475 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc harris"
+	+SOLID
+	+USESPECIAL
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			HARS AABBCCDD 5
+			Loop 
+	}
+}
+actor wosD_maleGovernor 21476 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc governor"
+	+SOLID
+	+USESPECIAL
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			GVNR AAAAAABBCCDDDDDD 5
+			Loop
+	}
+}
+actor wosD_maleGovernor2 21477 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc governor 2"
+	+SOLID
+	+USESPECIAL
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			GVN2 AAAAAABBCCDDDDDD 5
+			Loop
+	}
+}
+actor wosD_maleGovernor3 21478 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc governor 3"
+	+SOLID
+	+USESPECIAL
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			GVN3 AAAAAABBCCDDDDDD 5
+			Loop
+	}
+}
+actor wosD_maleWorner 21479 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc worner"
+	+SOLID
+	+USESPECIAL
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			WRNR AABBCCDD 5
+			Loop
+	}
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

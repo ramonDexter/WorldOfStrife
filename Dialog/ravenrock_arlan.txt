@@ -1,0 +1,22 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 7;
+    /*
+    Page {
+        pageName = "";
+        Name = "Arlan";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_arlan_opener";
+        Name = "Arlan";
+        Dialog = "\c[white]Hello, welcome to our workshop. Sorry, I'm little bit busy here. Maybe I'll have time for a chat later.";
+        Goodbye = "\c[red]Goodbye.";
+    }
+}

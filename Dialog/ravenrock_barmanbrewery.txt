@@ -1,0 +1,196 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 13;
+    /*
+    Page {
+        pageName = "";
+        Name = "Brick, barman";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_barmanbrewery_opener";
+        Name = "Brick, barman";
+        Dialog = "\c[white]Hello, welcome to the Ravenrock Brewery! What may I serve you? One mug of cold ale? Or something to eat?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh yeah, I'd like some beer. Yes.";
+            Nextpage = "ravenrock_barmanbrewery_beer";
+        }
+        Choice {
+            Text = "Well, as you speak about it, I'm little bit hungry.";
+            Nextpage = "ravenrock_barmanbrewery_food";
+        }
+        Choice {
+            Text = "I've got some questions";
+            Nextpage = "ravenrock_barmanbrewery_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_else";
+        Name = "Brick, barman";
+        Dialog = "\c[white]What may I serve you? One mug of cold ale? Or something to eat?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh yeah, I'd like some beer. Yes.";
+            Nextpage = "ravenrock_barmanbrewery_beer";
+        }
+        Choice {
+            Text = "Well, as you speak about it, I'm little bit hungry.";
+            Nextpage = "ravenrock_barmanbrewery_food";
+        }
+        Choice {
+            Text = "I've got some questions";
+            Nextpage = "ravenrock_barmanbrewery_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_beer";
+        Name = "Brick, barman";
+        Dialog = "\c[white]Good choice! Our beer and ale is the best in all Tabit's territory! Both ale and beer are 4 gold per bottle.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_else";
+        }
+        Choice {
+            Text = "One bottle of beer, please! (pay 4 gold)";
+			NextPage = "ravenrock_barmanbrewery_beer";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "One bottle of ale, please! (pay 4 gold)";
+			NextPage = "ravenrock_barmanbrewery_beer";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_food";
+        Name = "Brick, barman";
+        Dialog = "\c[white]So, we got some 'burgers, cheeseburgers, bigburgers and double cheeseburgers. Made in our kitchen, fresh and tasty.\nThe hamburger costs 3, cheeseburger costs 4, bigburger costs 5 and double cheese costs 6 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_else";
+        }
+        Choice {
+            Text = "Gimme one hamburger. (pay 3 gold)";
+			NextPage = "ravenrock_barmanbrewery_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHamburger";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "Gimme one cheeseburger. (pay 4 gold)";
+			NextPage = "ravenrock_barmanbrewery_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "Gimme one bigburger. (pay 5 gold)";
+			NextPage = "ravenrock_barmanbrewery_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "Gimme one double cheese. (pay 6 gold)";
+			NextPage = "ravenrock_barmanbrewery_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburgerDouble";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_questions";
+        Name = "Brick, barman";
+        Dialog = "\c[white]Questions, everyone has questions! Just ask, I know nearly everything you could dig about Ravenrock and the brewery.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_else";
+        }
+        Choice {
+            Text = "Could you tell me abou the brewery?";
+            Nextpage = "ravenrock_barmanbrewery_aboutbrewery";
+        }
+        Choice {
+            Text = "Could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_barmanbrewery_aboutravenrock";
+        }
+        Choice {
+            Text = "Could you tell me about the locals?";
+            Nextpage = "ravenrock_barmanbrewery_aboutlocals";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_aboutbrewery";
+        Name = "Brick, barman";
+        Dialog = "\c[white]Our brewery's been grounded around two hundred years ago. It became a local landmark and a tourist attraction. Our beer is the best in the area, so most of brewery's produce goes to export. We're brewing white beer and dark ale here. The white beer's good for refreshing and the ale's good when you want to relax.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_aboutravenrock";
+        Name = "Brick, barman";
+        Dialog = "\c[white]Ravenrock profits from it's position on main road between Narfolk and Kolyma. Lots of people pass through here, and some visit Ravenrock specially beacuse of our brewery. When the festivals come, the village could get pretty busy.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmanbrewery_aboutlocals";
+        Name = "Brick, barman";
+        Dialog = "\c[white]The locals are nice folk. Hard working people, either on their fields or here in the brewery.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmanbrewery_questions";
+        }
+    }
+}

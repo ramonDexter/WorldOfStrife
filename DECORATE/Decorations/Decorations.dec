@@ -61,7 +61,7 @@ actor dummyHyposprej 21004
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
-	Height 16
+	Height 4
 	Radius 8
 
 	States
@@ -79,7 +79,7 @@ actor dummyKombopak 21005
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
-	Height 16
+	Height 4
 	Radius 8
 	States
 	{
@@ -96,7 +96,7 @@ actor dummyInstaHeal 21006
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
-	Height 16
+	Height 4
 	Radius 8
 	States
 	{
@@ -1106,9 +1106,9 @@ Actor MM_gadget_01 21060
 	+NOGRAVITY
 	+DONTTHRUST
 	
-	radius 8
-	height 36
-	scale 0.8
+	radius 4
+	height 18
+	//scale 0.8
 	
 	States
 	{
@@ -6067,7 +6067,7 @@ actor wosD_dex_microscope 21350 {
 	+NOGRAVITY
 	+DONTTHRUST
 	radius 4
-	height 4
+	height 12
 	States {
 		Spawn:
 			DUMM A -1
@@ -6561,7 +6561,7 @@ actor wosD_zscMedPatch 21382 {
 	+NOGRAVITY
 	+DONTTHRUST
 	radius 8
-	height 16
+	height 4
 	States {
 		Spawn:
 			DUMM A -1
@@ -6576,7 +6576,7 @@ actor wosD_zscMedicalKit 21383 {
 	+NOGRAVITY
 	+DONTTHRUST
 	radius 8
-	height 16
+	height 8
 	States {
 		Spawn:
 			DUMM A -1

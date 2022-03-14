@@ -1,0 +1,82 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 9;
+    /*
+    Page {
+        pageName = "";
+        Name = "Lynette";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_lynette_opener";
+        Name = "Lynette";
+        Dialog = "\c[white]Hello, Binder. What business brings you to my house?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Could you tell me abou Ravenrock?";
+            Nextpage = "ravenrock_lynette_aboutravenrock";
+        }
+        Choice {
+            Text = "Could you tell me about locals?";
+            Nextpage = "ravenrock_lynette_aboutlocals";
+        }
+        Choice {
+            Text = "Could you tell me about surroundings?";
+            Nextpage = "ravenrock_lynette_aboutsurroundings";
+        }
+    }
+    Page {
+        pageName = "ravenrock_lynette_else";
+        Name = "Lynette";
+        Dialog = "\c[white]Yes?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Could you tell me abou Ravenrock?";
+            Nextpage = "ravenrock_lynette_aboutravenrock";
+        }
+        Choice {
+            Text = "Could you tell me about locals?";
+            Nextpage = "ravenrock_lynette_aboutlocals";
+        }
+        Choice {
+            Text = "Could you tell me about surroundings?";
+            Nextpage = "ravenrock_lynette_aboutsurroundings";
+        }
+    }
+    Page {
+        pageName = "ravenrock_lynette_aboutravenrock";
+        Name = "Lynette";
+        Dialog = "\c[white]Well, I won't tell you much. Ravenrock is small farmer's settlement, notable only for the brewery. Yes, it makes locals wealthy, but it also causes a lot people to drink more than they should. Especially the tourists are annoying.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_lynette_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_lynette_aboutlocals";
+        Name = "Lynette";
+        Dialog = "\c[white]The locals are nice people, but little bit too simple for my taste. You know, they are farmers and most of their talks are about the farming.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_lynette_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_lynette_aboutsurroundings";
+        Name = "Lynette";
+        Dialog = "\c[white]Sorry, I don't travel.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_lynette_else";
+        }
+    }
+}

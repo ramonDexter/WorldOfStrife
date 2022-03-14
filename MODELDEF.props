@@ -1122,7 +1122,7 @@ model MM_gadget_01 {
 	path "models/props/mmstuff/"
 	model 0 "mm_gizmo01.md3"
 	skin 0 "tx_mmstuff.png"
-	scale 10.0 10.0 10.0
+	scale 8.0 8.0 8.0
 	offset 0.0 0.0 0.0
 	frameindex MGD1 A 0 0
 }

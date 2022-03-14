@@ -1,0 +1,96 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 12;
+    /*
+    Page {
+        pageName = "";
+        Name = "Carla";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_carla_opener";
+        Name = "Carla";
+        Dialog = "\c[white]Hello, traveller. How may I help you? What bring you to my home? I'm Carla.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_carla_aboutravenrock";
+        }
+        Choice {
+            Text = "Could you tell me about the locals?";
+            Nextpage = "ravenrock_carla_aboutlocals";
+        }
+        Choice {
+            Text = "Is there something interesting in the surrounding area?";
+            Nextpage = "ravenrock_carla_surroundings";
+        }
+    }
+    Page {
+        pageName = "ravenrock_carla_else";
+        Name = "Carla";
+        Dialog = "\c[white]Yes?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_carla_aboutravenrock";
+        }
+        Choice {
+            Text = "Could you tell me about the locals?";
+            Nextpage = "ravenrock_carla_aboutlocals";
+        }
+        Choice {
+            Text = "Is there something interesting in the surrounding area?";
+            Nextpage = "ravenrock_carla_surroundings";
+        }
+    }
+    Page {
+        pageName = "ravenrock_carla_aboutravenrock";
+        Name = "Carla";
+        Dialog = "\c[white]Oh, sure. Our little village is nice place to live. We got everything here. The grocery store's got good merchandise, and the local techsmith is a good artisan. The local medic's also fine and skilled man. We got two pubs here, the brewery pub and the Smart SQuirell Inn, which also rents hotel rooms.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_carla_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_carla_aboutlocals";
+        Name = "Carla";
+        Dialog = "\c[white]The locals are nice people. Most of them are farmers, tending to their fields every day. Some fo them work in the brewery as bottling workers, or as a brewing staff. They are peaceful, but keep away from them when they start to drink. Brawls are likely to happen, especially on free days. They bored, you know.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_carla_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_carla_surroundings";
+        Name = "Carla";
+        Dialog = "\c[white]Oh, yes. I know the surroundings. When I was younger, I spent most of my free time roaming around the village. So, the western part is interesting. There is this old ruin of watchtower and the old cemetery. Locals say it's haunted, but I don't believe such crap. Maybe there are bandints hiding in one of the tombs, but nothing supernatural. You can believe me, I've visited the plcae at night many times. Then there's this old tower, little bit farther from the village. It's a meeting place for local young lovers. I've also visited tha place ... a many times. And I cannot forget the csave system. Be careful when you go inside, the ceilign is lower there. That's the wester part. Then there's the eastern part. It's little bit different.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_carla_else";
+        }
+        Choice {
+            Text = "Different? How?";
+            Nextpage = "ravenrock_carla_easternpart";
+        }
+    }
+    Page {
+        pageName = "ravenrock_carla_easternpart";
+        Name = "Carla";
+        Dialog = "\c[white]Well, the eastern area is little bit wilder. Lot's of local fauna's quite aggressive, you know. And, watch out for the carnivorous plants. Lots of them dot the eastern part, so be careful. The eastern area connects to the Plateau, and forther along the road is city Kolyma.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_carla_else";
+        }
+    }
+}

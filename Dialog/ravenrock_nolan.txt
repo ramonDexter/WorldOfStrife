@@ -1,0 +1,82 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 11;
+    /*
+    Page {
+        pageName = "";
+        Name = "Nolan";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_nolan_opener";
+        Name = "Nolan";
+        Dialog = "\c[white]Oh, hello master Binder. Welcome to my humble home. What business bring you here? My name's Nolan, I am farmer.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_nolan_aboutravenrock";
+        }
+        Choice {
+            Text = "Whats in the surrounding area?";
+            Nextpage = "ravenrock_nolan_surroundings";
+        }
+        Choice {
+            Text = "Were the crops good?";
+            Nextpage = "ravenrock_nolan_crops";
+        }
+    }
+    Page {
+        pageName = "ravenrock_nolan_else";
+        Name = "Nolan";
+        Dialog = "\c[white]Oh, yes. Just ask.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_nolan_aboutravenrock";
+        }
+        Choice {
+            Text = "Whats in the surrounding area?";
+            Nextpage = "ravenrock_nolan_surroundings";
+        }
+        Choice {
+            Text = "Were the crops good?";
+            Nextpage = "ravenrock_nolan_crops";
+        }
+    }
+    Page {
+        pageName = "ravenrock_nolan_aboutravenrock";
+        Name = "Nolan";
+        Dialog = "\c[white]Yes, sure I can do. Ravenrock's nice little village. We got everyhting we need. Our fields give good crops, and we're brewing our own beer here, which is nice.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_nolan_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_nolan_surroundings";
+        Name = "Nolan";
+        Dialog = "\c[white]I'm not usre if I'm the right person to ask. I spend most of my day on the field, so I don't really have time for travelling. The only time I've got time to travel is when I go to visit the market at Millport, which is to the south from here, about fifty kilometres. Well, that's all I can tell you about surroundings.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_nolan_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_nolan_crops";
+        Name = "Nolan";
+        Dialog = "\c[white]Oh yes, good, very good. Thank you for asking, master Binder.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "You're welcome.";
+            Nextpage = "ravenrock_nolan_else";
+        }
+    }
+}

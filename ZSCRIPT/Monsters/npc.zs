@@ -1101,7 +1101,35 @@ class dx_cleanerBot : Actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// monk guy ////////////////////////////////////////////////////////////////////
+class wos_monkGuy : SwitchableDecoration {
+	Default {
+        //$Category "Other NPCs/WoS"
+        //$Title "Monk guy"
+        +SOLID
+        +USESPECIAL
+  		Radius 16;
+  		Height 56;
+        Activation THINGSPEC_Switch;
 
+	}
+	States {
+		Spawn:
+			PRIE F -1;
+			Wait;
+		Active:
+			PRIE ABCDE 5;
+		Ahold:
+			PRIE F -1;
+			Stop;		
+		Inactive:
+			PRIE FEDCB 5;
+		Hold:
+			PRIE A -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
 

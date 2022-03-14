@@ -1,0 +1,22 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 14;
+    /*
+    Page {
+        pageName = "";
+        Name = "Shipping Guild officer";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_shippingguildrep_opener";
+        Name = "Shipping Guild officer";
+        Dialog = "\c[white]Oh, hello. Did you wanted something? Are you in need of our services? Sorry, I'm quite busy right now.";
+        Goodbye = "\c[red]Goodbye.";
+    }
+}

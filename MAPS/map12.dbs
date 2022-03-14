@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -282.708f;
+		viewpositionx = 3386.22f;
 		defaulttoptexture = "MRKVBR";
 		overrideceilheight = false;
-		viewpositiony = 1478.817f;
+		viewpositiony = 1043.893f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 1.352533f;
+		viewscale = 2.971515f;
 		
 		plugins
 		{
@@ -141,7 +141,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 2070;
+				caretposition = 2216;
+				firstvisibleline = 23;
 				activetab = true;
 			}
 			
@@ -153,7 +154,7 @@ maps
 				tabtype = 0;
 				scripttype = 1;
 				caretposition = 3695;
-				firstvisibleline = 77;
+				firstvisibleline = 80;
 			}
 		}
 	}

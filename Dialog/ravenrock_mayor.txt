@@ -79,8 +79,18 @@ Conversation {
         Dialog = "\c[white]The locals are mostly farmers. Around one third of the village population works in the brewery. ";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "";
-            Nextpage = "";
+            Text = "Thank you. I wanted something else.";
+            Nextpage = "ravenrock_mayor_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_mayor_help";
+        Name = "Gunther, Mayor";
+        Dialog = "\c[white]Certainly, yes. Thanks for asking. I can always welcome any help offered.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Thank you. I wanted something else.";
+            Nextpage = "ravenrock_mayor_else";
         }
     }
 }

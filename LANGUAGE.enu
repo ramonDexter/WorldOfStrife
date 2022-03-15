@@ -1054,7 +1054,7 @@ PDA_EMPTY = "-EMPTY-";
 //##################################################################################################################
 
 PDA_notePrayers_Title = "Prayers";
-PDA_notePrayers_TEXT1 = "\c[yellow]Basic prayer for protection and guidance:\n"
+PDA_notePrayers_TEXT = "\c[yellow]Basic prayer for protection and guidance:\n"
 						"\c[yellow]-------------------------------\n"
 						"\c[white]Our Father from the void,\n"
 						"hallowed be your name,\n"
@@ -1067,8 +1067,8 @@ PDA_notePrayers_TEXT1 = "\c[yellow]Basic prayer for protection and guidance:\n"
 						"And lead us not into temptation,\n"
 						"but deliver us into your grace.\n"
 						"Amen.\n"
-						"\n\n";
-PDA_notePrayers_TEXT2 = "\c[yellow]More powerful prayer:\n"
+						"\n\n"
+						"\c[yellow]More powerful prayer:\n"
 						"\c[yellow]-------------------------------\n"
 						"\c[white]Our Father from the void,\n"
 						"Reveal who you are.\n"
@@ -1118,12 +1118,12 @@ PDA_noteSHshouldergun_TEXT = "\c[yellow]ShoulderGun Technical Notes\n"
 										"\c[white]The ShoulderGun is a trustworthy sidearm of the Binder Order's forces. It is a left shoulder mounted mauler energy spread cannon shooting short range arcs of mauler energy. It was developed by the Binder order scientists and is exclusively used by the field operatives of the Binder Order. It is automatically aimed and follows the user's firearm aim. The energy reserve of the ShoulderGun holds 32 charges. A ShoulderGun Charger is used to replenish the ammo of the ShoulderGun. EnergyPods are used to charge the ShoulderGun ammo. \n\n(\c[yellow]Assign a key in the Options menu to quickly use the ShoulderGun OR use it as a normal inventory item.\c[white])";
 
 PDA_noteSHsilentHillsTouristGuide_TITLE = "Silent Hills Tourist Guide";
-PDA_noteSHsilentHillsTouristGuide_TEXT1 = 	"\c[yellow]Silent Hills Tourist Guide\n"
+PDA_noteSHsilentHillsTouristGuide_TEXT = 	"\c[yellow]Silent Hills Tourist Guide\n"
 											"-------------------------------\n"
 											"\c[white]Welcome tourist to the beautiful city of \c[red]Silent Hills\c[white]!\n\n"
 											"Our city offers all kinds of services to anyone willing to spend his gold. In Silent Hills you can find services of blacksmiths and techsmiths, grocery market and open market, both located on the eastern bank of river Wesa. The river itself is a landmark, dividing the city into two halves, the eastern one and the western one. The eastern bank is devoted to trading and markets, most of the city shops and traders are located here. The western bank of river is residential, with the City Bath and the TekGuild Outpost.\n\n"
-											"Peace in our city is guarded by \c[red]The City Watch\c[white], whose officers are vigorously watching over citizens peace throught day and night. The City Watch is sometimes supported by \c[red]The Binders\c[white], who have their base on the western bank of river.\n\n";
-PDA_noteSHsilentHillsTouristGuide_TEXT2 = 	"\c[white]You should also visit the magnificent \c[red]City Bath\c[white] located in northwestern corner of city, near the Western Gate. The City Bath are built in classical imperial style, with big swimming pool and other spa services. The pool is found to the left, whereas a colonnade is found to the right, which leads to the men's quarters, which are split into the apodyterium (dressing room), with the frigidarium (for cold baths), which leads to the tepidarium (for medium temperature baths) and then to the calidarium (hot sauna). The heating is guaranteed by a piping system in the walls and double floors that circulate the hot air coming from the furnaces and from mobile braziers. The women's quarters, close to the men's quarters, are split the same way in the apodyterium, tepidarium and calidarium. However, all arew smaller and has no rich decorations as the men's quarters. Women enters through a separate door, on which “Mulier” (woman) is written. Isn't a relaxing bath all what a tired traveller needs?";
+											"Peace in our city is guarded by \c[red]The City Watch\c[white], whose officers are vigorously watching over citizens peace throught day and night. The City Watch is sometimes supported by \c[red]The Binders\c[white], who have their base on the western bank of river.\n\n"
+											"\c[white]You should also visit the magnificent \c[red]City Bath\c[white] located in northwestern corner of city, near the Western Gate. The City Bath are built in classical imperial style, with big swimming pool and other spa services. The pool is found to the left, whereas a colonnade is found to the right, which leads to the men's quarters, which are split into the apodyterium (dressing room), with the frigidarium (for cold baths), which leads to the tepidarium (for medium temperature baths) and then to the calidarium (hot sauna). The heating is guaranteed by a piping system in the walls and double floors that circulate the hot air coming from the furnaces and from mobile braziers. The women's quarters, close to the men's quarters, are split the same way in the apodyterium, tepidarium and calidarium. However, all arew smaller and has no rich decorations as the men's quarters. Women enters through a separate door, on which “Mulier” (woman) is written. Isn't a relaxing bath all what a tired traveller needs?";
 											
 PDA_noteSHminesReport_TITLE = "Silent Hills Mines report";
 PDA_noteSHminesReport_TEXT = 	"\c[yellow]Silent Hills Mines report\n"
@@ -1166,43 +1166,33 @@ PDA_noteCoastalRegion_text = 	"\c[yellow]Coastal Region\n"
 								"The Coastal Region is the area located eastward of city Millport. The region is known for its mild climate and lush landscape, overgrown with green foliage.";
 
 PDA_noteTheGreatHouses_Title = "The Great Houses";
-
-PDA_noteTheGreatHouses_Text1 = "\c[yellow]Great Houses of the Empire\n"
-								"-------------------------------\n"
-								"\c[white]- House Burgerich\n"
-								"- House Angara\n"
-								"- House Tabit\n"
-								"- House Bodrik\n"
-								"- House Connel\n"
-								"- House Narfolk\n";
-PDA_noteTheGreatHouses_Text2 = "\c[yellow]House Burgerich\n"
+PDA_noteTheGreatHouses_Text = "\c[yellow]Great Houses of the Empire\n"
+								"\c[yellow]House Burgerich\n"
 									"-------------------------------\n"
-								"\c[white]The House of Burgerich appears around 539. The first Prince of Burgerich takes possession of the city of Eldham and quickly takes control of the northern part of the Windy Plains and the Tar Swamp to the town of Westmarch. The reign of all the Princes of Burgerich is characterised by aggressive attacks against their neighbours, which are only ended by marriage. The future Emperor Bodric marries the daughter of Prince Burgerich, making him heir to the Burgerich estate. After the death of the last Prince of Burgerich, the territory is annexed to the Empire and becomes the main territory of the Empire.\n";
-PDA_noteTheGreatHouses_Text3 = "\c[yellow]House Angara\n"
+								"\c[white]The House of Burgerich appears around 539. The first Prince of Burgerich takes possession of the city of Eldham and quickly takes control of the northern part of the Windy Plains and the Tar Swamp to the town of Westmarch. The reign of all the Princes of Burgerich is characterised by aggressive attacks against their neighbours, which are only ended by marriage. The future Emperor Bodric marries the daughter of Prince Burgerich, making him heir to the Burgerich estate. After the death of the last Prince of Burgerich, the territory is annexed to the Empire and becomes the main territory of the Empire.\n"
+								"\c[yellow]House Angara\n"
 									"-------------------------------\n"
-								"\c[white]The House of Angara settles on a peninsula in the west of the Continent around the year 442. A group of nomadic tribes quickly dominate the territory of the peninsula. But the fertile territory provides refuge for only a limited number of people, and so the House soon begins to lash out at its neighbours, giving them a reputation for invading and invading.\n";
-PDA_noteTheGreatHouses_Text4 = "\c[yellow]House Tabit\n"
+								"\c[white]The House of Angara settles on a peninsula in the west of the Continent around the year 442. A group of nomadic tribes quickly dominate the territory of the peninsula. But the fertile territory provides refuge for only a limited number of people, and so the House soon begins to lash out at its neighbours, giving them a reputation for invading and invading.\n"
+								"\c[yellow]House Tabit\n"
 									"-------------------------------\n"
-								"\c[white]The just house of Tabit, or so it is said of the rulers of the South Coast. The Duke of Tabit has ruled the territory of the South Coast since about 520, when his ancestors came to the settlement of Millport and converted it into a town. With the help of the Binder order, who settled in the town, the Tabites were able to use peaceful methods to control the South Coast and later the Kolyma and Tabit Plains, which they had acquired from the Narfolians.\n";
-PDA_noteTheGreatHouses_Text5 = "\c[yellow]House Bodrik\n"
+								"\c[white]The just house of Tabit, or so it is said of the rulers of the South Coast. The Duke of Tabit has ruled the territory of the South Coast since about 520, when his ancestors came to the settlement of Millport and converted it into a town. With the help of the Binder order, who settled in the town, the Tabites were able to use peaceful methods to control the South Coast and later the Kolyma and Tabit Plains, which they had acquired from the Narfolians.\n"
+								"\c[yellow]House Bodrik\n"
 									"-------------------------------\n"
-								"\c[white]The House of Bodrik founded the imperial dynasty that governs the Empire to the present day. Bodrik, the founder of the dynasty, was born in 958. The Empire is founded in 1020 and Bodrik proclaims himself Emperor as a powerful behind-the-scenes support of the Church.\n";
-PDA_noteTheGreatHouses_Text6 = "\c[yellow]House Connel\n"
+								"\c[white]The House of Bodrik founded the imperial dynasty that governs the Empire to the present day. Bodrik, the founder of the dynasty, was born in 958. The Empire is founded in 1020 and Bodrik proclaims himself Emperor as a powerful behind-the-scenes support of the Church.\n"
+								"\c[yellow]House Connel\n"
 									"-------------------------------\n"
-								"\c[white]Mentions of the Connel family appear around 547, when the family comes under the leadership of Westmarch, which has just broken away from the Principality of Burgerich. The merchant family runs Westmarch until 1047, when it is gradually replaced in the leadership of Westmarch by a puppet government installed by the Empire.\n";
-PDA_noteTheGreatHouses_Text7 = "\c[yellow]House Narfolk\n"
+								"\c[white]Mentions of the Connel family appear around 547, when the family comes under the leadership of Westmarch, which has just broken away from the Principality of Burgerich. The merchant family runs Westmarch until 1047, when it is gradually replaced in the leadership of Westmarch by a puppet government installed by the Empire.\n"
+								"\c[yellow]House Narfolk\n"
 									"-------------------------------\n"
 								"\c[white]The House of Narfolk appears around 525, when it establishes the town of Narfolk in the Gulf of Kalan. The family quickly becomes wealthy, mainly through the acquisition of a monopoly in shipping. Gradually they displace or buy all competition, and the merchants soon discover that they cannot transport goods without fat commissions to the Shipping Guild, which is controlled by Prince Narfolk.\n";
 
 PDA_noteTekGuildNotes_Title = "Technical Notes";
-PDA_noteTekGuildNotes_Text1 = "\c[yellow]TekGuild Notes\n"
+PDA_noteTekGuildNotes_Text = "\c[yellow]TekGuild Notes\n"
 									"-------------------------------\n"
 									"\c[yellow]Mauler\n"
 									"\c[white]Energy in its raw form is a destructive force, capable of influencing the very nature of matter. As it is channelled, pulses occur, causing decay and death. The result is the total destruction of the target. Mauler weapons are a destructive alternative to conventional firearms and explosives. Mauler technology is slowly replacing firearms in the arsenal of the Army of the Order, mainly due to the low weight and high efficiency of energy sources for weapons that replace conventional ammunition.\n\n"
 									"\c[yellow]Healing Gel\n"
-									"\c[white]The TekGild Faculty of Medicine has created many interesting technologies. The Healing Gel is one of these technologies. The dense structure of the Gel allows the recovery of tissues and muscles, as well as bones and nerves in an incredibly low time. The exact composition of the Gel is the secret of the TekGild that protects under the Edict of Death.\n\n";
-PDA_noteTekGuildNotes_Text2 = 		"\c[yellow]TekGuild Notes\n"
-									"-------------------------------\n"
+									"\c[white]The TekGild Faculty of Medicine has created many interesting technologies. The Healing Gel is one of these technologies. The dense structure of the Gel allows the recovery of tissues and muscles, as well as bones and nerves in an incredibly low time. The exact composition of the Gel is the secret of the TekGild that protects under the Edict of Death.\n\n"
 									"\c[yellow]Cybernetic Implants\n"
 									"\c[white]Cybernetic implants serve a variety of purposes. Whether it's to replace malfunctioning or damaged limbs and organs, to enhance a variety of properties and senses. Cyber implants provide all of these. The Order provides implants to its servants so they can better perform their duties.\n\n"
 									"\c[yellow]Nanotechnology\n"
@@ -1212,19 +1202,19 @@ PDA_noteMillport_Text = "\c[yellow]Millport\n"
 						"-------------------------------\n"
 						"\c[white]A port city on the South Coast. Millport is the center of commerce and government here. The city is controlled by the Baron, a merchant who bought a title of nobility from the Emperor and now runs the city with a firm hand. As long as he pays his taxes, the Imperial power is uninterested in what happens in the city, so the Baron has free rein. The city was founded 300 years ago by Narfol merchants who sought a quiet anchorage while traveling around the Continent. But after about 70 years, the city became independent from the Narfol government and subsequently entered the emerging Bodric Empire. About 70 years ago, the TekGuild established its headquarters here, making the sleepy port city a university city of major importance, which was matched by the subsequent development of the city. The city now pays for the center of the South Coast, where farmers and merchants from near and far come to sell their goods.";
 PDA_noteEmperorsList_Title = "List of Emperors";
-PDA_noteEmperorsList_Text1 = "\c[yellow]Millport\n"
+PDA_noteEmperorsList_Text = "\c[yellow]List of Emperors\n"
 						"-------------------------------\n"
 						"Bodrik\n"
 						"\c[white]The founder of the Bodrik dynasty, the first king and later the first Emperor of the Holy Empire.\n"
 						"\c[yellow]Valtmar\n"
-						"\c[white]Emperor Valtmar is fundamentally expanding the Empire. The territory of the Empire expands during his reign to include the territories of Tabitsk and Westmarch.\n"
+						"\c[white]Emperor Valtmar is fundamentally expanding the Empire. The territory of the Empire expands during his reign to include the territories of Tabit and Westmarch.\n"
 						"\c[yellow]Valtredd\n"
 						"\c[white]The reign of Emperor Valtdredd is known mainly for the great famine that affected the entire Empire.\n"
 						"\c[yellow]Berthold\n"
 						"\c[white]The Emperor also known as Berthold the Builder. He built many important buildings. But many of them fell victim to later wars.\n"
 						"\c[yellow]Larissa\n"
-						"\c[white]The First Empress at the head of the Holy Empire. Her reign is associated with the blossoming of science and industry.\n";
-PDA_noteEmperorsList_Text2 = "\c[yellow]Nahas\n"
+						"\c[white]The First Empress at the head of the Holy Empire. Her reign is associated with the blossoming of science and industry.\n"
+						"\c[yellow]Nahas\n"
 						"\c[white]Emperor Nahas wanted to go down in history as a builder, but is better known as the 'Destroyer'. He had part of the capital demolished for his building plans.\n"
 						"\c[yellow]Aurik\n"
 						"\c[white]The winner of the Successor Wars. He has begun to rebuild a country destroyed by the War of Succession.\n"

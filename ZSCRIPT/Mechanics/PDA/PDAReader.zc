@@ -85,6 +85,7 @@ class PDAReader : Inventory
 		Inventory.MaxAmount 1;
 		Inventory.Icon "I_ZPDA";		
 		Inventory.PickUpMessage "$PDA_READER_PICKUP";
+		Mass 0;
 		+Inventory.UNDROPPABLE
 		+Inventory.INVBAR
 	}

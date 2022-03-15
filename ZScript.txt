@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////  World of Strife ZSCRIPT file  ////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-version "3.8.0"
+version "4.6.0"
 
 // statusbar ///////////////////////////////////////////////////////////////////
 #include "zscript/wosSTATUSBAR.zs"
@@ -20,7 +20,7 @@ version "3.8.0"
 #include "zscript/mapMarkers.zs"
 #include "zscript/wosHandler.zs"
 #include "zscript/neoworm.zs"
-#include "zscript/pdamessages.zs"
+//#include "zscript/pdamessages.zs"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  mechanics  /////////////////////////////////////////////////////////////////
@@ -38,6 +38,18 @@ version "3.8.0"
 #include "zscript/mechanics/footsteps.zs"
 #include "zscript/mechanics/lowdetail.zs"
 #include "zscript/mechanics/boids.zs"
+
+#include "zscript/Mechanics/PDA/PDAZForms/Include.zs"
+#include "zscript/Mechanics/PDA/PDAMenuElements.zc"
+#include "zscript/Mechanics/PDA/PDAMenu.zc"
+#include "zscript/Mechanics/PDA/PDAConfig.zc"
+#include "zscript/Mechanics/PDA/PDAMenuHandler.zc"
+#include "zscript/Mechanics/PDA/PDAEventHandler.zc"
+#include "zscript/Mechanics/PDA/PDAReader.zc" //inv item
+#include "zscript/Mechanics/PDA/PDAReaderTutorialMenu.zc"
+#include "zscript/Mechanics/PDA/PDA.zc"
+#include "zscript/Mechanics/PDA/PDADummyPDA.zc"
+
 ////////////////////////////////////////////////////////////////////////////////
 
 //  monsters  //////////////////////////////////////////////////////////////////
@@ -109,17 +121,6 @@ version "3.8.0"
 //#include "zscript/weapons/hookShot.zs"
 //#include "zscript/weapons/executorRifle.zs"
 //#include "zscript/mechanics/nashmove.zs"
-/*
-#include "zscript/Mechanics/PDA/PDAZForms/Include.zs"
-#include "zscript/Mechanics/PDA/PDAMenuElements.zc"
-#include "zscript/Mechanics/PDA/PDAMenu.zc"
-#include "zscript/Mechanics/PDA/PDAConfig.zc"
-#include "zscript/Mechanics/PDA/PDAMenuHandler.zc"
-#include "zscript/Mechanics/PDA/PDAEventHandler.zc"
-#include "zscript/Mechanics/PDA/PDAReader.zc" //inv item
-#include "zscript/Mechanics/PDA/PDAReaderTutorialMenu.zc"
-#include "zscript/Mechanics/PDA/PDA.zc"
-#include "zscript/Mechanics/PDA/PDADummyPDA.zc"
-*/
+
 ////////////////////////////////////////////////////////////////////////////////
 

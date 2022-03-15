@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 // pda actor classes ///////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-/*
+
 //old decorate example by nash--------------------------------------------------
-class TestPDA : PDA 
+/*class TestPDA : PDA 
 {
 	Tag "$PDA_TestPDA_Title"
 	PDA.Text "$PDA_TestPDA_Text"
@@ -16,13 +16,13 @@ class TestPDA : PDA
 			PMAP A -1
 			Stop
 	}
-}
+}*/
 //example by nash---------------------------------------------------------------
 
 
 
 //my example--------------------------------------------------------------------
-class noteTest : PDA {
+/*class noteTest : PDA {
     Default {
         Tag "$PDA_noteTest_TITLE";
         PDA.Text "$PDA_noteTest_TEXT";
@@ -36,13 +36,20 @@ class noteTest : PDA {
 			DUMM A -1;
 			Stop;
 	}
+}*/
+class noteBase : PDA {
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
 }
 //my example--------------------------------------------------------------------
-*/
+
 ////////////////////////////////////////////////////////////////////////////////
 
 // base class //////////////////////////////////////////////////////////////////
-class PDA : CustomInventory {
+/*class PDA : CustomInventory {
     Default {
         -INVENTORY.INVBAR;
         +INVENTORY.ALWAYSPICKUP;
@@ -61,65 +68,65 @@ class PDA : CustomInventory {
 			TNT1 A -1;
 			Fail;
 	}
-}
+}*/
 ////////////////////////////////////////////////////////////////////////////////
 
 // notes actors ////////////////////////////////////////////////////////////////
-class notePrayers : PDA {
+class notePrayers : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: prayers"
         Tag "$PDA_notePrayers_TITLE";
-        //PDA.Text "$PDA_notePrayers_TEXT"
+        PDA.Text "$PDA_notePrayers_TEXT";
         //scale 0.5
     }
 }
-class noteSHmedical : PDA {
+class noteSHmedical : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH medical"
         Tag "$PDA_noteSHmedical_TITLE";
-        //PDA.Text "$PDA_noteSHmedical_TEXT"
+        //PDA.Text "$PDA_noteSHmedical_TEXT";
         //scale 0.5
     }
 }
-class noteSHshouldergun : PDA {
+class noteSHshouldergun : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH shouldergun"
         Tag "$PDA_noteSHshouldergun_TITLE";
-        //PDA.Image "graphics/pda/images/pdaI_binderstaff.png"
+        //PDA.Image "graphics/pda/images/pdaI_binderstaff.png";
         //scale 0.5
     }
 }
-class noteSHbinderStavesTechnical : PDA {
+class noteSHbinderStavesTechnical : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH binder staves technical"
         Tag "$PDA_noteSHbinderStavesTechnical_TITLE";
-        //PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
+        //PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT";
         //scale 0.5
     }
 }
-class noteSHbinderNote01 : PDA {
+class noteSHbinderNote01 : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH binder 01"
         Tag "$PDA_noteSHbinderNote01_TITLE";
-        //PDA.Text "$PDA_noteSHbinderNote01_TEXT"
+        //PDA.Text "$PDA_noteSHbinderNote01_TEXT";
         //scale 0.5
     }
 }
-class noteSHsilentHillsTouristGuide : PDA {
+class noteSHsilentHillsTouristGuide : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH tourist guide"
         Tag "$PDA_noteSHsilentHillsTouristGuide_TITLE";
-        //PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
+        //PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT";
         //scale 0.5
     }
 }
-class noteSHminesReport : PDA {
+class noteSHminesReport : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH mines report"
@@ -128,7 +135,7 @@ class noteSHminesReport : PDA {
         //scale 0.5
     }
 }
-class noteSHbindersOath : PDA {
+class noteSHbindersOath : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH binder's oath"
@@ -137,7 +144,7 @@ class noteSHbindersOath : PDA {
         //scale 0.5
     }
 }
-class noteCommonDogmas : PDA {
+class noteCommonDogmas : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: SH binder's oath"
@@ -146,35 +153,35 @@ class noteCommonDogmas : PDA {
         //scale 0.5
     }
 }
-class noteCoastalRegion : PDA {
+class noteCoastalRegion : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: Coastal Region"
         Tag "$PDA_noteCoastalRegion_title";
     }
 }
-class noteTheGreatHouses : PDA {
+class noteTheGreatHouses : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: great houses"
         Tag "$PDA_noteTheGreatHouses_Title";
     }
 }
-class noteTekGuildNotes : PDA {
+class noteTekGuildNotes : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: mauler energy"
         Tag "$PDA_noteTekGuildNotes_Title";
     }
 }
-class noteMillport : PDA {
+class noteMillport : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: millport"
         Tag "$PDA_noteMillport_Title";
     }
 }
-class noteEmperorsList : PDA {
+class noteEmperorsList : noteBase {
     Default {
         //$category "ZSCRIPT/PDAnotes"
         //$title "note: emperors list"

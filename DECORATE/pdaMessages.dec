@@ -1,62 +1,23 @@
-/*
-//eaxmple by nash---------------------------------------------------------------
-ACTOR TestPDA : PDA 
-{
-	Tag "$PDA_TestPDA_Title"
-	PDA.Text "$PDA_TestPDA_Text"
-	PDA.Image "graphics/PDA/images/Test PDA Image.png"
-	PDA.Audio "PDA/TestPDAAudio"
+////////////////////////////////////////////////////////////////////////////////////////////////
+// PDA messages ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
 
-	States
-	{
-		Spawn:
-			PMAP A -1
-			Stop
-	}
-}
-//eaxmple by nash---------------------------------------------------------------
-
-
-
-//my example--------------------------------------------------------------------
-actor noteTest : PDA {
-	Tag "$PDA_noteTest_TITLE"
-	PDA.Text "$PDA_noteTest_TEXT"
-	PDA.Image "graphics/pda/images/image.png"
-	PDA.Audio "PDA/testPDAaudio"
-	
+// base class //////////////////////////////////////////////////////////////////////////////////
+actor noteBase : PDA {
 	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-//my example--------------------------------------------------------------------
-*/
-actor PDA : CustomInventory {
-	-INVENTORY.INVBAR
-	+INVENTORY.ALWAYSPICKUP
-	-COUNTITEM
-	//Tag ""
-	radius 12
-	height 12
-	Inventory.PickupSound "sounds/itemPickup"
-	Mass 0
-	States {
-		Spawn:
-			DUMM A -1
-			Stop
-		Use:
-			TNT1 A -1
-			Stop
-	}
-}
+////////////////////////////////////////////////////////////////////////////////////////////////
 
-actor notePrayers : PDA {
+// notes ///////////////////////////////////////////////////////////////////////////////////////
+actor notePrayers : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: prayers"
 	Tag "$PDA_notePrayers_TITLE"
-	//PDA.Text "$PDA_notePrayers_TEXT"
+	PDA.Text "$PDA_notePrayers_TEXT"
 	//scale 0.5
 	
 	/*States {
@@ -65,11 +26,11 @@ actor notePrayers : PDA {
 			Stop
 	}*/
 }
-actor noteSHmedical : PDA {
+actor noteSHmedical : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH medical"
 	Tag "$PDA_noteSHmedical_TITLE"
-	//PDA.Text "$PDA_noteSHmedical_TEXT"
+	PDA.Text "$PDA_noteSHmedical_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -77,11 +38,11 @@ actor noteSHmedical : PDA {
 			Stop		
 	}*/
 }
-actor noteSHshouldergun : PDA {
+actor noteSHshouldergun : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH shouldergun"
 	Tag "$PDA_noteSHshouldergun_TITLE"
-	//PDA.Image "graphics/pda/images/pdaI_binderstaff.png"
+	PDA.Text "$PDA_noteSHshouldergun_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -89,11 +50,11 @@ actor noteSHshouldergun : PDA {
 			Stop
 	}*/
 }
-actor noteSHbinderStavesTechnical : PDA {
+actor noteSHbinderStavesTechnical : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder staves technical"
 	Tag "$PDA_noteSHbinderStavesTechnical_TITLE"
-	//PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
+	PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -101,11 +62,11 @@ actor noteSHbinderStavesTechnical : PDA {
 			Stop
 	}*/
 }
-actor noteSHbinderNote01 : PDA {
+actor noteSHbinderNote01 : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder 01"
 	Tag "$PDA_noteSHbinderNote01_TITLE"
-	//PDA.Text "$PDA_noteSHbinderNote01_TEXT"
+	PDA.Text "$PDA_noteSHbinderNote01_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -113,11 +74,11 @@ actor noteSHbinderNote01 : PDA {
 			Stop
 	}*/
 }
-actor noteSHsilentHillsTouristGuide : PDA {
+actor noteSHsilentHillsTouristGuide : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH tourist guide"
 	Tag "$PDA_noteSHsilentHillsTouristGuide_TITLE"
-	//PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
+	PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -125,7 +86,7 @@ actor noteSHsilentHillsTouristGuide : PDA {
 			Stop
 	}*/
 }
-actor noteSHminesReport : PDA {
+actor noteSHminesReport : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH mines report"
 	Tag "$PDA_noteSHminesReport_TITLE"
@@ -137,11 +98,11 @@ actor noteSHminesReport : PDA {
 			Stop
 	}*/
 }
-actor noteSHbindersOath : PDA {
+actor noteSHbindersOath : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder's oath"
 	Tag "$PDA_noteSHbindersOath_TITLE"
-	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
+	PDA.Text "$PDA_noteSHbindersOath_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -149,11 +110,11 @@ actor noteSHbindersOath : PDA {
 			Stop
 	}*/
 }
-actor noteCommonDogmas : PDA {
+actor noteCommonDogmas : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder's oath"
 	Tag "$PDA_noteCommonDogmas_Title"
-	//PDA.Text "$PDA_noteSHbindersOath_TEXT"
+	PDA.Text "$PDA_noteSHbindersOath_TEXT"
 	//scale 0.5
 	/*States {
 		Spawn:
@@ -161,8 +122,57 @@ actor noteCommonDogmas : PDA {
 			Stop
 	}*/
 }
-actor noteTheGreatHouses : PDA {
+actor noteTheGreatHouses : noteBase {
 	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: The Great Houses"
 	Tag "$PDA_noteTheGreatHouses_Title"
+	PDA.Text "$PDA_noteTheGreatHouses_Text"
+	/*States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}*/
 }
+actor noteTekGuildNotes : noteBase {
+    
+    //$category "ZSCRIPT/PDAnotes"
+    //$title "note: mauler energy"
+    Tag "$PDA_noteTekGuildNotes_Title"
+	PDA.Text "$PDA_noteTekGuildNotes_Text"
+	/*States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}*/
+    
+}
+actor noteMillport : noteBase {
+    
+    //$category "ZSCRIPT/PDAnotes"
+    //$title "note: millport"
+    Tag "$PDA_noteMillport_Title"
+	PDA.Text "$PDA_noteMillport_Text"
+	/*States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}*/
+    
+}
+actor noteEmperorsList : noteBase {
+    
+    //$category "ZSCRIPT/PDAnotes"
+    //$title "note: emperors list"
+    Tag "$PDA_noteEmperorsList_Title"
+	PDA.Text "$PDA_noteEmperorsList_Text"
+	/*States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}*/
+    
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////

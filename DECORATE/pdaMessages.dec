@@ -4,6 +4,7 @@
 
 // base class //////////////////////////////////////////////////////////////////////////////////
 actor noteBase : PDA {
+	//$category "ZSCRIPT/PDAnotes"
 	States {
 		Spawn:
 			DUMM A -1
@@ -14,80 +15,67 @@ actor noteBase : PDA {
 
 // notes ///////////////////////////////////////////////////////////////////////////////////////
 actor notePrayers : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: prayers"
 	Tag "$PDA_notePrayers_TITLE"
 	PDA.Text "$PDA_notePrayers_TEXT"
 }
 actor noteSHmedical : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH medical"
 	Tag "$PDA_noteSHmedical_TITLE"
 	PDA.Text "$PDA_noteSHmedical_TEXT"
 }
 actor noteSHshouldergun : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH shouldergun"
 	Tag "$PDA_noteSHshouldergun_TITLE"
 	PDA.Text "$PDA_noteSHshouldergun_TEXT"
 }
 actor noteSHbinderStavesTechnical : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder staves technical"
 	Tag "$PDA_noteSHbinderStavesTechnical_TITLE"
 	PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
 }
 actor noteSHbinderNote01 : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder 01"
 	Tag "$PDA_noteSHbinderNote01_TITLE"
 	PDA.Text "$PDA_noteSHbinderNote01_TEXT"
 }
 actor noteSHsilentHillsTouristGuide : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH tourist guide"
 	Tag "$PDA_noteSHsilentHillsTouristGuide_TITLE"
 	PDA.Text "$PDA_noteSHsilentHillsTouristGuide_TEXT"
 }
 actor noteSHminesReport : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH mines report"
 	Tag "$PDA_noteSHminesReport_TITLE"
 	PDA.Text "$PDA_noteSHminesReport_TEXT"
 }
 actor noteSHbindersOath : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder's oath"
 	Tag "$PDA_noteSHbindersOath_TITLE"
 	PDA.Text "$PDA_noteSHbindersOath_TEXT"
 }
 actor noteCommonDogmas : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: SH binder's oath"
 	Tag "$PDA_noteCommonDogmas_Title"
 	PDA.Text "$PDA_noteCommonDogmas_Text"
 }
 actor noteTheGreatHouses : noteBase {
-	//$category "ZSCRIPT/PDAnotes"
 	//$title "note: The Great Houses"
 	Tag "$PDA_noteTheGreatHouses_Title"
 	PDA.Text "$PDA_noteTheGreatHouses_Text"
 }
-actor noteTekGuildNotes : noteBase {    
-    //$category "ZSCRIPT/PDAnotes"
+actor noteTekGuildNotes : noteBase {  
     //$title "note: mauler energy"
     Tag "$PDA_noteTekGuildNotes_Title"
 	PDA.Text "$PDA_noteTekGuildNotes_Text"    
 }
-actor noteMillport : noteBase {    
-    //$category "ZSCRIPT/PDAnotes"
+actor noteMillport : noteBase {
     //$title "note: millport"
     Tag "$PDA_noteMillport_Title"
 	PDA.Text "$PDA_noteMillport_Text"
     
 }
-actor noteEmperorsList : noteBase {    
-    //$category "ZSCRIPT/PDAnotes"
+actor noteEmperorsList : noteBase {
     //$title "note: emperors list"
     Tag "$PDA_noteEmperorsList_Title"
 	PDA.Text "$PDA_noteEmperorsList_Text"

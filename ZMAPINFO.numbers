@@ -227,8 +227,8 @@ DoomEdNums {
 	20222 = wosGold10
 	20223 = wosGold25
 	20224 = wosGold50
-	20225 = m8f_hn_AreaNameMarker_SH_armorVendor
-	20226 = m8f_hn_AreaNameMarker_SH_temple
+	20225 = noteEmperorsList
+	20226 = noteEastcliff
 	20227 = m8f_hn_AreaNameMarker_SH_specialityVendor
 	20228 = m8f_hn_AreaNameMarker_SH_explosiveWeapsVendor
 	20229 = m8f_hn_AreaNameMarker_SH_weaponsVendor

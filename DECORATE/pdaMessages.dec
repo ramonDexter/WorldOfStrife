@@ -72,13 +72,17 @@ actor noteTekGuildNotes : noteBase {
 actor noteMillport : noteBase {
     //$title "note: millport"
     Tag "$PDA_noteMillport_Title"
-	PDA.Text "$PDA_noteMillport_Text"
-    
+	PDA.Text "$PDA_noteMillport_Text"    
 }
 actor noteEmperorsList : noteBase {
     //$title "note: emperors list"
     Tag "$PDA_noteEmperorsList_Title"
 	PDA.Text "$PDA_noteEmperorsList_Text"
+}
+actor noteEastcliff : noteBase {
+	//$Title "note: eastcliff"
+    Tag "$PDA_noteEastcliff_Title"
+	PDA.Text "$PDA_noteEastcliff_Text"
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

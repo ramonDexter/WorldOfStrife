@@ -701,7 +701,7 @@ MM_EXIT = "[ EXIT ]";
 T_OLDLANTERN = "Oil Lantern";
 F_OLDLANTERN = "You picked up the oil lantern!";
 
-T_PUNCHDAGGER = "Qatar Dagger";
+T_PUNCHDAGGER = "Punch Dagger";
 
 T_PISTOL = "Storm Pistol";
 F_PISTOL = "You picked up the Storm pistol!";

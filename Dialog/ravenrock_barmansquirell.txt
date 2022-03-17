@@ -1,0 +1,256 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 15;
+    /*
+    Page {
+        pageName = "";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "ravenrock_barmansquirell_opener";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Hello and welcome to the Smart Squirell Inn. How may I serve you? We have the best kitchen in town, also we sell the local beer and we rent rooms for travellers.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'm little bit hungry.";
+            Nextpage = "ravenrock_barmansquirell_food";
+        }
+        Choice {
+            Text = "I'd like something to drink.";
+            Nextpage = "ravenrock_barmansquirell_drink";
+        }
+        Choice {
+            Text = "Rooms? I need a place to rest.";
+            Nextpage = "ravenrock_barmansquirell_rentaroom";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_else";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]How may I serve you? We have the best kitchen in town, also we sell the local beer and we rent rooms for travellers.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I'm little bit hungry.";
+            Nextpage = "ravenrock_barmansquirell_food";
+        }
+        Choice {
+            Text = "I'd like something to drink.";
+            Nextpage = "ravenrock_barmansquirell_drink";
+        }
+        Choice {
+            Text = "Rooms? I need a place to rest.";
+            Nextpage = "ravenrock_barmansquirell_rentaroom";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_food";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]That could be easily solved! Our kitchen is the best in town. Our burgers are famous. Hmaburger costs 3, cheeseburger costs 4, the bigburger costs 5 and double cheeseburger costs 6 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_else";
+        }
+        Choice {
+            Text = "I'll take one hamburger. (pay 3 gold)";
+			NextPage = "ravenrock_barmansquirell_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHamburger";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "I'll take one cheeseburger. (pay 4 gold)";
+			NextPage = "ravenrock_barmansquirell_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "I'll take one bigburger. (pay 5 gold)";
+			NextPage = "ravenrock_barmansquirell_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "I'll take the double cheese. (pay 6 gold)";
+			NextPage = "ravenrock_barmansquirell_food";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburgerDouble";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_drink";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]We have beer and ale. We also got strong Angaran wine. And water for those who don't like alcohol.\nBeer and ale costs 4 gold. Wine costs 5 gold and bottle of water costs 2 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_else";
+        }
+        Choice {
+            Text = "I'll take bottle of beer. (pay 4 gold)";
+			NextPage = "ravenrock_barmansquirell_drink";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "I'll take bottle of ale. (pay 4 gold)";
+			NextPage = "ravenrock_barmansquirell_drink";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "I'll take bottle of wine. (pay 5 gold)";
+			NextPage = "ravenrock_barmansquirell_drink";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "I'll take bottle of water. (pay 2 gold)";
+			NextPage = "ravenrock_barmansquirell_drink";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 2;
+			}
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_rentaroom";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Not a problem, mister Binder. We have three nice rooms, and our guests say that the beds are warm and soft. We charge 5 gold per night. Will you stay here? Breakfast's included in the price of the room.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_else";
+        }
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "ravenrock_barmansquirell_else";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_questions";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Yes, you have questions and I have answers. After all, barman knows everything, isn't it?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_else";
+        }
+        Choice {
+            Text = "How's business going?";
+            Nextpage = "ravenrock_barmansquirell_business";
+        }
+        Choice {
+            Text = "Could you tell me about your guests?";
+            Nextpage = "ravenrock_barmansquirell_guests";
+        }
+        Choice {
+            Text = "Could you tell me about Ravenrock?";
+            Nextpage = "ravenrock_barmansquirell_aboutravenrock";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_business";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Oh yes, the business is very good. Thanks for asking. The late season was a good one, I could say of the best in the last few years.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+        Choice {
+            Text = "Is this pub yours";
+            Nextpage = "ravenrock_barmansquirell_yourpub";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_yourpub";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Oh yes, it is. My grand-grand father built this place, almost hundred years ago. From that time, our family inherits this inn and tends to it as family's main treasure.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_guests";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Our guests are travellers passing through our village. Mainly traders and caravaners from the Shipping Guild. Also, tourists like to use our services, when they visit the brewery.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+    }
+    Page {
+        pageName = "ravenrock_barmansquirell_aboutravenrock";
+        Name = "Woolson, barman";
+        Dialog = "\c[white]Ravenrock's nice little village. Peaceful place, good for living.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "ravenrock_barmansquirell_questions";
+        }
+    }
+}

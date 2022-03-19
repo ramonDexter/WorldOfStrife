@@ -4,10 +4,12 @@
 //
 //===========================================================================
 
-PDA/Interface/Menu_Open "sounds/pda/pda_open.ogg"
+//PDA/Interface/Menu_Open "sounds/pda/pda_open.ogg"
+PDA/Interface/Menu_Open "sounds/menutick/dsradio.wav"
 PDA/Interface/Menu_Close "sounds/pda/pda_close.ogg"
 PDA/Interface/Hover "sounds/pda/pda_hover.ogg"
-PDA/Interface/Activate "sounds/pda/pda_activate.ogg"
+//PDA/Interface/Activate "sounds/pda/pda_activate.ogg"
+PDA/Interface/Activate "sounds/menutick/dsradio.wav"
 
 //===========================================================================
 //

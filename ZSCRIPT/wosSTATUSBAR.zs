@@ -106,12 +106,13 @@ class wosStatusBar : BaseStatusBar {
 			DrawMainBar (TicFrac);
 		}
 		else {
-			if (state == HUD_Fullscreen) {
+			//disable fullscreen statusbar entirely
+			/*if (state == HUD_Fullscreen) {
 				//BeginHUD();
 				//DrawFullScreenStuff ();
 				BeginStatusBar();
 				DrawMainBar (TicFrac);
-			}
+			}*/
 
 			// Draw pop screen (log, keys, and status)
 			if (CurrentPop != POP_None && PopHeight < 0) {
@@ -594,7 +595,8 @@ class wosStatusBar : BaseStatusBar {
 					"HEGrenadeRounds",			
 					"PhosphorusGrenadeRounds",	
 					"MiniMissiles",			
-					"EnergyPod"};				
+					"EnergyPod"
+				};				
 				//  ammo y coordinate
 				static const int AmmoY[] = {0, 16, 24, 40, 48, 56, 64};
 				
@@ -622,12 +624,6 @@ class wosStatusBar : BaseStatusBar {
 					"zscStrifeGrenadeLauncher",
 					"zscMauler",
 					"StormPistol"
-					/*"StrifeCrossbow",
-					"AssaultGun",
-					"FlameThrower",
-					"MiniMissileLauncher",
-					"StrifeGrenadeLauncher",
-					"Mauler"*/
 				};
 				static const int WeaponX[] = {64, 23, 57, 24, 59, 20, 54, 22, 77};
 				static const int WeaponY[] = {0, 7, 17, 25, 39, 50, 60, 77, 83};

@@ -114,6 +114,8 @@ sounds/medicalHiss  "sounds/deusex/medicalHiss.wav"
 $volume world/waterfall 0.45
 //$volume world/river 0.45
 
+sounds/menutick "sounds/menutick/dsradio.wav"
+
 // switches sounds /////////////////////////////////////////////////////////////
 switch/monitor "sounds/switch/monitor.wav"
 $volume switch/monitor 0.5

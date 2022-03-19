@@ -74,12 +74,10 @@
 // ACS call /////////////////////////////////////////////////////////////////
 //===========================================================================
 class PDAFromDialog {
-	static void showPDA (actor activator) {
-		if (activator && activator.player) {
-			//if (Owner == players[consoleplayer].mo) {
-				// open the PDA reader menu
-				Menu.SetMenu('PDAMenu');
-			//}
+	static void showPDA (actor activator) {		
+		if (activator && activator.player) {			
+			// open the PDA reader menu
+			Menu.SetMenu('PDAMenu');			
 		}
 	}
 }
@@ -88,8 +86,6 @@ class PDAFromDialog {
 
 class PDAReader : Inventory
 {
-	// Has a DoomEdNum of 20000 defined inside MAPINFO
-
 	bool showTut;
 	property ShowTutorial : showTut;
 

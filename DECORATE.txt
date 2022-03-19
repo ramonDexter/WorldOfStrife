@@ -5,6 +5,23 @@
 #include "Decorate/Base.dec"
 #include "Decorate/pdaMessages.dec"
 
+//  scenery  ///////////////////////////////////////////////////////////////////
+#include "Decorate/scenery/Fog.dec"
+#include "Decorate/scenery/swarmFly.dec"
+#include "Decorate/scenery/toxinClouds.dec"
+////////////////////////////////////////////////////////////////////////////////
+
+//  decorations  ///////////////////////////////////////////////////////////////
+#include "Decorate/Decorations/Decorations.dec"
+#include "Decorate/Decorations/wafers.dec"
+#include "Decorate/Decorations/lanterns.dec"
+#include "Decorate/Decorations/hexenProps.dec"
+#include "Decorate/Decorations/hiredGuns.dec"
+#include "Decorate/Decorations/foodbarrels.dec"
+#include "Decorate/Decorations/waterfall.dec"
+#include "Decorate/Decorations/nature.dec"
+////////////////////////////////////////////////////////////////////////////////
+
 //  Droplets  //////////////////////////////////////////////////////////////////
 // A necessary evil, this file is for compatibility purposes.
 /*
@@ -44,22 +61,7 @@ ACTOR C_BlackBlood_LM : BloodSquirt replaces BlackBlood_LM
 */
 ////////////////////////////////////////////////////////////////////////////////
 
-//  scenery  ///////////////////////////////////////////////////////////////////
-#include "Decorate/scenery/Fog.dec"
-#include "Decorate/scenery/swarmFly.dec"
-#include "Decorate/scenery/toxinClouds.dec"
-////////////////////////////////////////////////////////////////////////////////
 
-//  decorations  ///////////////////////////////////////////////////////////////
-#include "Decorate/Decorations/Decorations.dec"
-#include "Decorate/Decorations/wafers.dec"
-#include "Decorate/Decorations/lanterns.dec"
-#include "Decorate/Decorations/hexenProps.dec"
-#include "Decorate/Decorations/hiredGuns.dec"
-#include "Decorate/Decorations/foodbarrels.dec"
-#include "Decorate/Decorations/waterfall.dec"
-#include "Decorate/Decorations/nature.dec"
-////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////////////////

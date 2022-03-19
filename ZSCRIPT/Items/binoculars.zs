@@ -10,13 +10,28 @@ const wosBinocularWeight = 42;
 // inventory item //////////////////////////////////////////////////////////////
 class wosBinocular : wosPickup {
     bool binocUsed;
+    action void W_EquipBinoc(void) {
+        if ( player == null ) {
+            return;
+        }
+
+        let pawn = binderPlayer(self);
+        pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
+        A_GiveInventory("binoc_weapon", 1);
+        A_SelectWeapon("binoc_weapon");
+		A_Overlay(7, "Binoc");
+        invoker.binocUsed = true;
+    }
     action void W_RemoveBinoc(void) {
         if ( player == null ) {
             return;
         }
+
         let pawn = binderPlayer(self);
         A_SelectWeapon(pawn.selectedWeapon.GetClassName(), SWF_SELECTPRIORITY);
         A_TakeInventory("binoc_weapon", 1);
+        A_ClearOverlays(7, 7);
+        invoker.binocUsed = false;
     }
     Default {
 		//$Category "Powerups/WoS"
@@ -42,26 +57,14 @@ class wosBinocular : wosPickup {
             }
             Fail;
         Equip:
-            TNT1 A 0 {
-                let pawn = binderPlayer(self);
-                pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
-                A_GiveInventory("binoc_weapon", 1);
-                A_SelectWeapon("binoc_weapon");
-				A_Overlay(7, "Binoc");
-                invoker.binocUsed = true;
-            }
+            TNT1 A 0 W_EquipBinoc();
             Fail;
         Unequip:
-            TNT1 A 0 {
-                W_RemoveBinoc();
-				A_ClearOverlays(7, 7);
-                invoker.binocUsed = false;
-            }
+            TNT1 A 0 W_RemoveBinoc();
             Fail;
 		Binoc:
 			RBPY ABCD 4;
-			loop;
-			
+			loop;			
     }
 }
 // aby nebylo mozne utocit pri zvednutem dalekohledu ///////////////////////////

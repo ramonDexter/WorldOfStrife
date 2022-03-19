@@ -32,3 +32,46 @@ ve městě se nachází kostel Řádu, kam dochází většina obyvatel měst na
 ve městě se nachází hlavní základna Binderů
 
 
+////////////////////////////////////////////////////////////////////////////////
+// QUESTY //////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//MILLPORT
+
+Ziskej noveho kuchare pro Council Club - HOTOVO
+
+Guverner: Vyber dane od starostu vesnic v okoli Millportu - Eastcliff, Ravenrock a Aeredale
+Guverner: Ziskej kompromitujici informace od Transportni Guildy.
+Guverner: Najdi pocitace ukradene jednim z Guvernerovych zamestnancu.
+
+Najdi kontraband v pristavu
+
+Najdi kacire mezi studenty TekGuildy
+
+Zajisti dodavky piva z pivovaru v Ravenrocku do Council Clubu
+
+Ztratil se student TekGuildy - najdi studenta
+
+Knez v chramu Cirkve: Cirkev zada Bindery o spolupraci pri hledani kaciru ve vsi na zapade.
+Knez v chramu Cirkve: Pomoz se svecenim sochy na namesti. 
+
+Transportni Guilda: Dones balicek zastupci v eastcliffu.
+
+Sezen soucastky na opravu zarizeni v mestskem muzeu.
+
+Dones dopis do Eastcliffu. Mestan hrace pozaada o doneseni dopisu sestre ktera zije v eastcliffu.
+
+Soudce zmeny: Dones prikaz Ediktu starostovi Ravenrocku.
+Soudce zmeny: Zlikviduj doupe banditu v zapadnim teritoriu.
+Soudce zmeny: Pobij bandity v severnim teritoriu.
+Soudce zmeny: Najdi ukradene artefakty.
+
+//RAVENROCK
+
+//EASTCLIFF
+
+//AEREDALE
+
+
+
+

@@ -820,4 +820,18 @@ The village of Eastcliff lies roughly thirty kilometres east of the town of Mill
 ////////////////////////////////////////////////////////////////////////////////
 
 
+////////////////////////////////////////////////////////////////////////////////
+Main quest:
+- hrac po prijezdu do mesta zjisti ze kradez artfeaktu byl pouze kryci manevr povstalcu.
+- Skutecnost je mnohem horsi.
+- povstalci se pripravuji svrhnout cisare, chteji k tomu vyuzit Guvernery v jednotlivych mestech
+- Guverner v Millportu s povstalci spolupracuje
+- ukolem hrace bude ziskat na guvernera dukazy a dovest ho tak k spravedlnosti
+- k ziskani guvernerovy duvery musi hrac splnit tri ukoly ktere mu guverner zada
+- hrac pak ziska informace ohledne guvernerovy zrady
 
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////

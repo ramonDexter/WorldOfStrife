@@ -8,6 +8,7 @@ const hotdogWeight = 4;
 const donutsWeight = 4;
 const foodBoxWeight = 5;
 const foodRationWeight = 10;
+const grilledChickenWeight = 10;
 ////////////////////////////////////////////////////////////////////////////////
 
 class waterBottle_heal : Health {
@@ -282,18 +283,14 @@ class wosHotdog02 : wosPickup {
 }
 
 
-class donuts_heal : Health
-{
-	Default
-	{
+class donuts_heal : Health {
+	Default {
 		inventory.amount 7;
 	}
 }
 
-class wosDonuts : wosPickup
-{
-	Default
-	{
+class wosDonuts : wosPickup {
+	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "Donuts"
 		
@@ -304,8 +301,7 @@ class wosDonuts : wosPickup
 		Mass donutsWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DNTS A -1;
 			Stop;
@@ -315,18 +311,14 @@ class wosDonuts : wosPickup
 	}
 }
 
-class foodBox_heal : Health
-{
-	Default
-	{
+class foodBox_heal : Health {
+	Default {
 		inventory.amount 15;
 	}
 }
 
-class wosFoodBox : wosPickup
-{
-	Default
-	{
+class wosFoodBox : wosPickup {
+	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "Foodbox"
 		
@@ -337,8 +329,7 @@ class wosFoodBox : wosPickup
 		Mass foodBoxWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DBOX A -1;
 			Stop;
@@ -348,18 +339,14 @@ class wosFoodBox : wosPickup
 	}
 }
 
-class foodRation_heal : Health
-{
-	Default
-	{
+class foodRation_heal : Health {
+	Default {
 		inventory.amount 20;
 	}
 }
 
-class wosFoodRation1 : wosPickup
-{
-	Default
-	{
+class wosFoodRation1 : wosPickup {
+	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations I"
 		
@@ -370,8 +357,7 @@ class wosFoodRation1 : wosPickup
 		Mass foodRationWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
@@ -380,10 +366,8 @@ class wosFoodRation1 : wosPickup
 			Stop;
 	}
 }
-class wosFoodRation2 : wosPickup
-{
-	Default
-	{
+class wosFoodRation2 : wosPickup {
+	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations II"
 		
@@ -394,8 +378,7 @@ class wosFoodRation2 : wosPickup
 		Mass foodRationWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
@@ -404,10 +387,8 @@ class wosFoodRation2 : wosPickup
 			Stop;
 	}
 }
-class wosFoodRation3 : wosPickup
-{
-	Default
-	{
+class wosFoodRation3 : wosPickup {
+	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations III"
 		
@@ -418,13 +399,36 @@ class wosFoodRation3 : wosPickup
 		Mass foodRationWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
 			TNT1 A 0 A_GiveInventory("foodRation_heal", 1);
+			Stop;
+	}
+}
+class wosGrilledChicken_Heal : Health {
+	Default {
+		inventory.amount 20;
+	}
+}
+class wosGrilledChicken : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "grilled chicken"
+		Tag "Grilled Chicken";
+		inventory.icon "I_CHKN";
+		Inventory.PickupMessage "You picked up the Grilled Chicken!";
+		inventory.usesound "sounds/eat";
+		Mass grilledChickenWeight;
+	}
+	States {
+		Spawn:
+			CHKN V -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("wosGrilledChicken_Heal", 1);
 			Stop;
 	}
 }

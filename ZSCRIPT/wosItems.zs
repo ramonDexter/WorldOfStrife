@@ -113,10 +113,9 @@ class journalitem : CustomInventory {
 		+SHOOTABLE
 		+NODAMAGE
 		+NOBLOOD
-		+CANPASS
+		+CANPASS		
 		
-		
-		Tag "Journal";	
+		Tag "$TAG_journalitem";	
 		Inventory.PickupSound "misc/i_pkup";
 		inventory.amount 1;
 		inventory.maxamount 1;
@@ -133,8 +132,7 @@ class journalitem : CustomInventory {
 			JRNL A -1;
             Stop;
 		Use:
-			TNT1 A 0 
-			{
+			TNT1 A 0 {
 				ACS_NamedExecute("journal", 0, 0, 0, 0);
 				//A_GiveInventory("journalitem",1);
 			}

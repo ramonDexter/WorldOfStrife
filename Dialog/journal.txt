@@ -16,6 +16,13 @@ Conversation {
 			NextPage = "journal_notes";
 		}*/
 		Choice {
+			Text = "$page_journal_opener_cNotes";//\c[yellow][ NOTES ]
+			NextPage = "journal_opener";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 4209;
+		}
+		Choice {
 			Text = "$page_journal_opener_cQuests";//\c[yellow][ QUESTS ]
 			NextPage = "journal_quests";
 		}

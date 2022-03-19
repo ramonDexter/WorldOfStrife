@@ -441,7 +441,7 @@ Sprite "I_LOCB", 36, 30
 
 Sprite "I_JRNL", 36, 30
 {
-	Patch "NOTEP2", 8, 2
+	Patch "NOTEP", 8, 2
 }
 
 Sprite "JRNLA0", 20, 26

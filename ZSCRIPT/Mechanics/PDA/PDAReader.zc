@@ -68,8 +68,23 @@
 //
 // PDAReader
 // PDA content reader
-//
 //===========================================================================
+
+//===========================================================================
+// ACS call /////////////////////////////////////////////////////////////////
+//===========================================================================
+class PDAFromDialog {
+	static void showPDA (actor activator) {
+		if (activator && activator.player) {
+			//if (Owner == players[consoleplayer].mo) {
+				// open the PDA reader menu
+				Menu.SetMenu('PDAMenu');
+			//}
+		}
+	}
+}
+//===========================================================================
+
 
 class PDAReader : Inventory
 {
@@ -87,7 +102,7 @@ class PDAReader : Inventory
 		Inventory.PickUpMessage "$PDA_READER_PICKUP";
 		Mass 0;
 		+Inventory.UNDROPPABLE
-		+Inventory.INVBAR
+		-Inventory.INVBAR
 	}
 
 	//===========================================================================

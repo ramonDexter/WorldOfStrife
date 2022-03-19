@@ -117,3 +117,7 @@ script 4208 (void) {
 	GiveInventory("zscStrifeGrenadeLauncher", 1);
 	GiveInventory("zscMauler", 1);
 }
+
+script 4209 (void) {
+	ScriptCall("PDAFromDialog", "showPDA");
+}

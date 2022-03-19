@@ -1029,6 +1029,8 @@ M01_PC_WEAPONS = "\c[yellow][ WEAPONS INFORMATION ]\n"
 //##################################################################################################################
 // journal PDA /////////////////////////////////////////////////////////////////////////////////////////////////////
 //##################################################################################################################
+TAG_journalitem = "Personal Journal";
+
 name_personalJournal = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
 page_journal_opener = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.";
 bye_EXIT = "\c[red][ EXIT ]";
@@ -1042,8 +1044,8 @@ page_journal_opener_cQuests = "\c[yellow][ QUESTS ]";
 
 
 // PDA system by nash muhandes ========================================================================================
-PDA_READER = "Message Reader";
-PDA_PICKUP = "Message found!";
+PDA_READER = "Note Reader";
+PDA_PICKUP = "Note found!";
 PDA_DEFAULT_TITLE = "[Untitled PDA]";
 PDA_EMPTY = "-EMPTY-";
 //PDA_<object>_TITLE = "object title";
@@ -1053,7 +1055,7 @@ PDA_EMPTY = "-EMPTY-";
 //  NOTES  /////////////////////////////////////////////////////////////////////
 //##################################################################################################################
 
-PDA_notePrayers_Title = "Prayers";
+PDA_notePrayers_Title = "Common Prayers";
 PDA_notePrayers_TEXT = "\c[yellow]Basic prayer for protection and guidance:\n"
 						"\c[yellow]-------------------------------\n"
 						"\c[white]Our Father from the void,\n"
@@ -1112,7 +1114,7 @@ PDA_noteSHbinderStavesTechnical_TEXT = 	"\c[yellow]Binder Staves Technical Notes
 										"\c[yellow]-------------------------------\n"
 										"\c[white]The Mauler Staff is a Binder's personal weapon and a symbol of Binder Order. It is designed and built exclusively by the TekGuild in requisition of the Binder Order. The Staff is a trustworthy sidearm capable of disposal of targets over long range due to the focused mauler dispenser, using magnetic coils for fine tuning weapon's range and precision. The Staff is well balanced and could be also used as a short range melee weapon. The melle damage output is multiplied by the hardened metalic bottom of the staff. The Mauler Staff uses standard Energy Pods as an ammunition.\nMagazine of the Mauler Staff holds 48 charges. Uses EnergyPods as ammunition.";
 
-PDA_noteSHshouldergun_Title = "ShoulderGun Technical Notes";
+PDA_noteSHshouldergun_Title = "ShoulderGun Tech Notes";
 PDA_noteSHshouldergun_TEXT = "\c[yellow]ShoulderGun Technical Notes\n"
 										"\c[yellow]-------------------------------\n"
 										"\c[white]The ShoulderGun is a trustworthy sidearm of the Binder Order's forces. It is a left shoulder mounted mauler energy spread cannon shooting short range arcs of mauler energy. It was developed by the Binder order scientists and is exclusively used by the field operatives of the Binder Order. It is automatically aimed and follows the user's firearm aim. The energy reserve of the ShoulderGun holds 32 charges. A ShoulderGun Charger is used to replenish the ammo of the ShoulderGun. EnergyPods are used to charge the ShoulderGun ammo. \n\n(\c[yellow]Assign a key in the Options menu to quickly use the ShoulderGun OR use it as a normal inventory item.\c[white])";

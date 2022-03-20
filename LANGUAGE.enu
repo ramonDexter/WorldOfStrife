@@ -79,7 +79,8 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"CWATR13:CWATR14:CWATR15:CWATR16:"
 			"CWATR17:CWATR18:CWATR19:CWATR20:"
 			"CWATR21:CWATR22:CWATR23:CWATR24:"
-			"F_NAT02:";
+			"F_NAT02:FCARP01:F_CARP1:KBEDB:"
+			"SBEDR01:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -205,6 +206,10 @@ STEP_AXCARPH = "step/carpet";
 STEP_AXCARPM = "step/carpet";
 STEP_F_ROYCRP = "step/carpet";
 STEP_F_NAT02 = "step/carpet";
+STEP_FCARP01 = "step/carpet";
+STEP_F_CARP1 = "step/carpet";
+STEP_KBEDB = "step/carpet";
+STEP_SBEDR01 = "step/carpet";
 
 // Dirt ////////////////////////////////////////////////////////////////////////
 STEP_RROCK16 = "step/dirt";

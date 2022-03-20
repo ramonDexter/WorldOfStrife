@@ -2546,7 +2546,7 @@ model wosD_dex_plant2 {
 	model 0 "plant2.md3"
 	surfaceskin 0 0 "Plant2Tex1.png"
 	surfaceskin 0 1 "Plant2Tex2.png"
-	scale 0.45 0.45 0.45
+	scale 0.9 0.9 0.9
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -2865,6 +2865,15 @@ model wosD_judasCradle {
 	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+model wosD_bucketHandle {
+	path "models/props/sof2/"
+	model 0 "dx_bucketHandle.md3"
+	skin 0 "bucket_handles.png"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

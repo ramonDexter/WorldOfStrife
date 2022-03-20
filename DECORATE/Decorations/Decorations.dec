@@ -5869,8 +5869,8 @@ actor wosD_dex_plant2 21337 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
-	radius 4
-	height 4
+	radius 8
+	height 40
 	States {
 		Spawn:
 			DUMM A -1
@@ -8066,6 +8066,18 @@ actor wosD_maleWorner 21479 {
 		Spawn:
 			WRNR AABBCCDD 5
 			Loop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_bucketHandle 21480 {
+	//$Category "Decorations/WoS"
+	//$Title "dx bucket handle"
+	+NOBLOCKMAP
+	radius 12
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
 	}
 }
 

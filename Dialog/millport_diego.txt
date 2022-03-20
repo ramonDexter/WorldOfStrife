@@ -1,0 +1,132 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 30;
+    /*
+    Page {
+        pageName = "";
+        Name = "Diego";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_diego_opener";
+        Name = "Diego";
+        Dialog = "\c[white]Hello, do you want hamburger? Or a hotdog? My burgers and dogs are the best in town. By the way, I'm Diego.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Yeah, I would like one.";
+            Nextpage = "mp_diego_shop";
+        }
+        Choice {
+            Text = "What about some questions?";
+            Nextpage = "mp_diego_questions";
+        }
+    }
+    Page {
+        pageName = "mp_diego_shop";
+        Name = "Diego";
+        Dialog = "\c[white]Okay, one tasty burger.\nHamburger costs 3, cheeseburger costs 4, bigburger costs 5 and doublecheese costs 6 gold. The hotdogs cost 4 gold. Which one would you like?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_diego_opener";
+        }
+        Choice {
+            Text = "I'll take hamburger. (pay 3 gold)";
+			NextPage = "mp_diego_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHamburger";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "I'll take cheeseburger. (pay 4 gold)";
+			NextPage = "mp_diego_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "I'll take bigburger. (pay 5 gold)";
+			NextPage = "mp_diego_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "I'll take doublecheese. (pay 6 gold)";
+			NextPage = "mp_diego_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburgerDouble";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        }
+        Choice {
+            Text = "I'll take hotdog. (pay 4 gold)";
+			NextPage = "mp_diego_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHotdog02";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+    }
+    Page {
+        pageName = "mp_diego_questions";
+        Name = "Diego";
+        Dialog = "\c[white]Oh yeah, I could take a break for a little talk. What do you want to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_diego_opener";
+        } 
+        Choice {
+            Text = "This is yours burger stand?";
+            Nextpage = "mp_diego_burgerstand";
+        } 
+        Choice {
+            Text = "Could you tell me about Millport?";
+            Nextpage = "mp_diego_aboutmillport";
+        } 
+        Choice {
+            Text = "Do you know anything about the governor?";
+            Nextpage = "mp_diego_aboutgovernor";
+        }
+    }
+    Page {
+        pageName = "mp_diego_burgerstand";
+        Name = "Diego";
+        Dialog = "\c[white]Oh yes, this is my treasure. I've bought it three years ago, when I've finished the school. My father wanted me to be a blacksmith, but no, I've always wanted to be a cook. So I've left my parents in Eastcliff and moved here. I've used all my money to buy this litte stand and here I am. I cannot say this is a gold mine. It takes hard work to sthrive, but I like it. I'm not rich, but I can make a living.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_diego_questions";
+        }
+    }
+}

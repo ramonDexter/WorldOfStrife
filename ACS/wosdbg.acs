@@ -3,6 +3,7 @@
 
 // binder pack regular /////////////////////////////////////////////////////////
 script 4201 (void) {
+	//ScriptCall("wosDebugCommands", "dbg_GiveBinderHeavy");
 	GiveInventory("binder_helmet", 1);
 	//weapons
 	GiveInventory("shoulderGun", 1);
@@ -32,7 +33,7 @@ script 4201 (void) {
 	GiveInventory("wosSwarmers", 5);
 	// goldCoin x2500
 	GiveInventory("goldCoin", 2500);
-	//	
+	//
 }
 // accuracy upgrades ///////////////////////////////////////////////////////////
 //count is x10
@@ -68,12 +69,14 @@ script 4204 (int itemAmount) {
 }
 // give shouldergun ////////////////////////////////////////////////////////////
 script 4205 (void) {
+	//ScriptCall("wosDebugCommands", "dbg_GiveShoulderGun");
 	GiveInventory("shoulderGun", 1);
 	GiveInventory("shldrGunMag", 32);
 	GiveInventory("shoulderGunCgarger", 1);	
 }
 // binder pack light ///////////////////////////////////////////////////////////
 script 4206 (void) {
+	//ScriptCall("wosDebugCommands", "dbg_GiveBinderLight");
 	GiveInventory("binder_helmet", 1);
 	// weapons
 	GiveInventory("shoulderGun", 1);
@@ -100,6 +103,7 @@ script 4206 (void) {
 ////////////////////////////////////////////////////////////////////////////////
 
 script 4207 (void) {
+	//ScriptCall("wosDebugCommands", "dbg_GiveAllArmor");
 	GiveInventory("wosLeatherArmor", 1);
 	GiveInventory("wosMetalArmor", 1);
 	GiveInventory("wosBinderArmorBasic", 1);
@@ -107,6 +111,7 @@ script 4207 (void) {
 	GiveInventory("wosKineticArmor", 1);
 }
 script 4208 (void) {
+	//ScriptCall("wosDebugCommands", "dbg_GiveAllWeapons");
 	GiveInventory("zscStrifeCrossbow", 1);
 	GiveInventory("StormPistol", 1);
 	GiveInventory("laserPistol", 1);

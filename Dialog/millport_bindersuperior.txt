@@ -7,7 +7,7 @@ Conversation {
     Page {
         pageName = "MP_binderLeader_quest2finish";
         Name = "Tiberius, Binder Superior";
-        Dialog = "\c[white]Welcome, Tobias. I've been waiting for you. Your superior from Silent Hills has repoted that you've proven yourself well. But as it seems, more delicate work awaits you here. Say, are you ready for more work?";
+        Dialog = "\c[white]Welcome, Tobias. I've been waiting for you.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
         Choice {
@@ -18,11 +18,33 @@ Conversation {
     Page {
         pageName = "MP_binderLeader_reportingforduty";
         Name = "Tiberius, Binder Superior";
-        Dialog = "\c[white]Good, good. I've been reported that your are skilled warrior, as well as good negotitor. Both skills will be required here. Our position here is little bit brittle. Your main task here will be to gain trust of the local Governor. Visit him in his Villa and offer him your services. Also, you'll have a flat here, it's next to the weapons keeper. Welcome to the Millport.";
+        Dialog = "\c[white]Your superior from Silent Hills has reported that you've proven yourself well. But as it seems, we are facing more serious threat than we've expected. We are facing traitorous heretics with unlimited resources, and their connections reach the highest places.";
         Goodbye = "\c[red]Goodbye";
-        Panel = "M_BNDR";
+        Panel = "M_BNDR"; 
         Choice {
-            Text = "Thank you, superior.";
+            Text = "So, the theft of the artifact was a scam?";
+            Nextpage = "MP_binderLeader_theftscam";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_theftscam";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Yes, the heretics tried to divert our attention. And I could say they were almost succesfull. But our intelligence has secured most vluable information. The heretical rebels are planning coup d'etat. They want to overthrow our beloved emperor and replace him with their puppet ruler. They have to be stopped.";
+        Goodbye = "\c[red]Goodbye.";
+        Panel = "M_BNDR"; 
+        Choice {
+            Text = "By all means, how?";
+            Nextpage = "MP_binderLeader_howstopthem";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_howstopthem";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Well, this will be your task. We have found out that one of the rebels is the local governor. Unfortunately, we don't have enough evidence to bring him to justice. He is too cautious about his actions. So we need a spacial agent, someone like you. You'll have to make him trust you, so you could secure any information regarding his treachery. You'll have our full material support, as this task is of highest importance.";
+        Goodbye = "\c[red]Goodbye."; 
+        Panel = "M_BNDR"; 
+        Choice {
+            Text = "Thank you, superior. I'll try to do my best.";
             Nextpage = "MP_binderLeader_opener";
             CloseDialog = true;
             Special = 80;
@@ -42,6 +64,10 @@ Conversation {
         Choice {
             Text = "Could you tell me about the base?";
             Nextpage = "MP_binderLeader_aboutbase";
+        }
+        Choice {
+            Text = "Could you tell me about the governor?";
+            Nextpage = "MP_binderLeader_aboutgovernor";
         }
         Choice {
             Text = "Could you tell me about Millport?";
@@ -91,6 +117,16 @@ Conversation {
         Dialog = "\c[white]You'll find the plantations if you'll head to the west. The city is supplied from the Plantations, and sells, its produce. To the east is small village of Ravensrock. Strange community of non believers. We're trying to gain our influence there. To the north is the rocky wildernesss with the Order Correctional Facility.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_binderLeader_opener";
+        }
+    }
+    Page {
+        pageName = "MP_binderLeader_aboutgovernor";
+        Name = "Tiberius, Binder Superior";
+        Dialog = "\c[white]Governor's name is Lucius Ergalla. He serves as a governor here for the last twenty years, so he might seem as a loyal servant of the emperor. But as our intelligence found out, he is one of the rebels who are planning coup d'etat.\nHe lives in The Castle, the big fortress near eastern gate, north of the Church temple. It's guarded by his loyal personal guards.";
+        Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
             Nextpage = "MP_binderLeader_opener";

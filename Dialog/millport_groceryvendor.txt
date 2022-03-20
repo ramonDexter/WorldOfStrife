@@ -1,0 +1,122 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 29;
+    /*
+    Page {
+        pageName = "";
+        Name = "Grocery vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_groceryvendor_opener";
+        Name = "Grocery vendor";
+        Dialog = "\c[white]Hello, welcome to the grocery store. Do you need something?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I'd like to to buy something?";
+            Nextpage = "mp_groceryvendor_shop";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "mp_groceryvendor_questions";
+        }
+    }
+    Page {
+        pageName = "mp_groceryvendor_shop";
+        Name = "Grocery vendor";
+        Dialog = "\c[white]Yes, that's why we're here.\nSo, we got water, some beer imported from ravenrock brewery and some kolyman wine. If you're hungry, we're selling food ration packs.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_groceryvendor_opener";
+        }
+        Choice {
+            Text = "Give me bottle of water. (pay 3 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "Give me bottle of beer. (pay 4 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "Give me bottle of wine. (pay 5 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "Give me food ration 1. (pay 12 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation1";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        }
+        Choice {
+            Text = "Give me food ration 2. (pay 12 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation2";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        }
+        Choice {
+            Text = "Give me food ration 3. (pay 12 gold)";
+			NextPage = "mp_groceryvendor_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation3";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        }
+    }
+    Page {
+        pageName = "mp_groceryvendor_questions";
+        Name = "Grocery vendor";
+        Dialog = "\c[white]Sorry sir, but I don't have for talking. I'm here for business.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_groceryvendor_opener";
+        }
+    }
+}

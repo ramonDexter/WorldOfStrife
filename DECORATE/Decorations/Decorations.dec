@@ -4041,7 +4041,7 @@ actor dxTablet01 21223 {
 	
 	States {
 		Spawn:
-			DTB1 A -1 Bright
+			DUMM A -1 Bright
 			Stop
 	}
 }
@@ -4107,7 +4107,7 @@ actor dxTablet02 21227 {
 	
 	States {
 		Spawn:
-			DTB2 A -1 Bright
+			DUMM A -1 Bright
 			Stop
 	}
 }
@@ -8081,6 +8081,40 @@ actor wosD_bucketHandle 21480 {
 	}
 }
 
+actor wosD_dxTablet03 21481 {
+	//$Category "Decorations/WoS"
+	//$Title "Tablet 03"
+	+useSpecial
+	+solid
+	//+nogravity
+	+DontThrust
+	
+	height 8
+	radius 8
+
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dxTablet04 21482 {
+	//$Category "Decorations/WoS"
+	//$Title "Tablet 04"
+	+useSpecial
+	+solid
+	//+nogravity
+	+DontThrust
+	
+	height 8
+	radius 8
+
+	States {
+		Spawn:
+			DUMM ABCD 6
+			Loop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

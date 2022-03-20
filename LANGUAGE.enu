@@ -80,7 +80,8 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"CWATR17:CWATR18:CWATR19:CWATR20:"
 			"CWATR21:CWATR22:CWATR23:CWATR24:"
 			"F_NAT02:FCARP01:F_CARP1:KBEDB:"
-			"SBEDR01:";
+			"SBEDR01:RCRPT01:RCRPT02:RCRPT03:"
+			"RCRPT04:RCRPT05:RCRPT06:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -210,6 +211,12 @@ STEP_FCARP01 = "step/carpet";
 STEP_F_CARP1 = "step/carpet";
 STEP_KBEDB = "step/carpet";
 STEP_SBEDR01 = "step/carpet";
+STEP_RCRPT01 = "step/carpet";
+STEP_RCRPT02 = "step/carpet";
+STEP_RCRPT03 = "step/carpet";
+STEP_RCRPT04 = "step/carpet";
+STEP_RCRPT05 = "step/carpet";
+STEP_RCRPT06 = "step/carpet";
 
 // Dirt ////////////////////////////////////////////////////////////////////////
 STEP_RROCK16 = "step/dirt";
@@ -1238,6 +1245,12 @@ PDA_noteEastcliff_Text = "\c[yellow]Eastcliff village\n"
 						"-------------------------------\n\n"
 						"\c[white]The village of Eastcliff lies roughly thirty kilometres east of the town of Millport on the seashore. The village was founded before 589, when it is first mentioned in the Chronicles of the Monastery. The village was established as a supply station for traders travelling along the South Coast further inland. The old settlement no longer exists, it was completely rebuilt to its present form sometime around 876. The rebuilding was funded by the Transport Guild, which has its port and branch here. The village lies on the edge of a high cliff. On the western edge of the settlement stands a tall lighthouse, warning ships of the dangerous rocks that line the local coast. At the eastern end of the settlement lies the Church Temple, where the footsteps of pilgrims from far away go. The local inn provides excellent cuisine and favourable prices, as do the local traders. The Imperial Employment Office is also based here.";
 
+PDA_noteTekGuild_Title = "The TekGuild";
+PDA_noteTekGuild_Text = "\c[yellow]The Tekguild\n"
+						"-------------------------------\n\n"
+						"Twenty years or so before the creation of the Holy Empire, the Tech Guild emerges in its capital, and twenty years later, the mighty TekGuild emerges. Over time, the original guild organization is transformed into a corporate-type company, which, through its contacts, quickly dominates the entire technology market and has acquired from the king the exclusive right to produce, develop, and distribute technology. Even from the Church of the Order, TekGuild gains certain advantages, for a simple reason. The Church of the Order is TekGuild's largest customer.\n"
+						"The Tekguild is the main technology manufacturer in the Holy Empire. Also, it serves as the main imperial supplier, which means the Tekguild gains many advantages from such a relationship. The present superior of the TekGuild is Lord Walther Tabit, brother of Duke of Tabit.\n"
+						"The Tekguild offers education for everybody for small or no fee, when the student has good study results. Also, the Tekguild's university offers accomodation for the students in the form of student colleges, located in the university campus. The colleges offers everything including food and clothing.";
 
 //##################################################################################################################
 //##################################################################################################################

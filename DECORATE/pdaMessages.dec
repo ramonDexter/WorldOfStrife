@@ -5,10 +5,14 @@
 // base class //////////////////////////////////////////////////////////////////////////////////
 actor noteBase : PDA {
 	//$category "ZSCRIPT/PDAnotes"
+
+	radius 8
+	height 16
+
 	States {
 		Spawn:
-			DUMM A -1
-			Stop
+			DUMM ABCD 6
+			Loop
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -55,7 +59,7 @@ actor noteSHbindersOath : noteBase {
 	PDA.Text "$PDA_noteSHbindersOath_TEXT"
 }
 actor noteCommonDogmas : noteBase {
-	//$title "note: SH binder's oath"
+	//$title "note: Common Dogmas"
 	Tag "$PDA_noteCommonDogmas_Title"
 	PDA.Text "$PDA_noteCommonDogmas_Text"
 }
@@ -65,7 +69,7 @@ actor noteTheGreatHouses : noteBase {
 	PDA.Text "$PDA_noteTheGreatHouses_Text"
 }
 actor noteTekGuildNotes : noteBase {  
-    //$title "note: mauler energy"
+    //$title "note: tekguild notes"
     Tag "$PDA_noteTekGuildNotes_Title"
 	PDA.Text "$PDA_noteTekGuildNotes_Text"    
 }
@@ -84,7 +88,11 @@ actor noteEastcliff : noteBase {
     Tag "$PDA_noteEastcliff_Title"
 	PDA.Text "$PDA_noteEastcliff_Text"
 }
-
+actor noteTekGuild : noteBase {
+	//$Title "note: eastcliff"
+    Tag "$PDA_noteTekGuild_Title"
+	PDA.Text "$PDA_noteTekGuild_Text"
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////

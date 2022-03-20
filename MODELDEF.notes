@@ -1,0 +1,215 @@
+
+////////////////////////////////////////////////////////////////////////////////
+//  datadisks - notes  /////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+model notePrayers {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHmedical {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHshouldergun {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHbinderStavesTechnical {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHbinderNote01 {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHsilentHillsTouristGuide {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHminesReport {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteSHbindersOath {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteCommonDogmas {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteTheGreatHouses {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteTekGuildNotes {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteMillport {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteEmperorsList {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteEastcliff {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+model noteTekGuild {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
+////////////////////////////////////////////////////////////////////////////////

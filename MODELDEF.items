@@ -6,11 +6,19 @@
 //  dx items  //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-model journalitem {
+/*model journalitem {
 	path "models/props/tablet/"
 	model 0 "tablet.md3"
 	skin 0 "tx_tablet2.png"
 	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex JRNL A 0 0
+}*/
+model journalitem {
+	path "models/items/journal/"
+	model 0 "dx_journal.md3"
+	skin 0 "tx_journal.png"
+	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex JRNL A 0 0
 }
@@ -227,73 +235,128 @@ model wosD_zscSurgeryKit {
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
-//  datadisks  /////////////////////////////////////////////////////////////////
+//  datadisks - notes  /////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model notePrayers {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHmedical {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHshouldergun {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHbinderStavesTechnical {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHbinderNote01 {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHsilentHillsTouristGuide {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHminesReport {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model noteSHbindersOath {
-	path "models/items/datadisk/"
-	model 0 "datadisk.md3"
-	skin 0 "tx_datadisk.png"
-	scale 1.5 1.5 1.5
-	offset 0.0 0.0 0.0	
-	frameindex DUMM A 0 1
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
-
+model noteCommonDogmas {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteTheGreatHouses {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteTekGuildNotes {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteMillport {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteEmperorsList {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteEastcliff {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model noteTekGuild {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	skin 0 "tx_tablet3.png"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

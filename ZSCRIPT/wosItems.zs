@@ -69,8 +69,8 @@ class wosPickup : CustomInventory {
 		Inventory.InterHubAmount 999;
 		Inventory.PickupSound "sounds/itemPickup";
 		Mass 0;
-		radius 10;
-		height 16;
+		radius 12;
+		height 12;
     }
 }
 ////////////////////////////////////////////////////////////////////////////////

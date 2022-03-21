@@ -212,4 +212,18 @@ model noteTekGuild {
 	skin 0 "tx_tablet6_4.png"
 	frameindex DUMM D 0 0
 }
+model noteBinderOrder {
+	path "models/props/tablet/"
+	model 0 "tablet3.md3"
+	scale 7.0 7.0 7.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_tablet6_1.png"
+	frameindex DUMM A 0 0
+	skin 0 "tx_tablet6_2.png"
+	frameindex DUMM B 0 0
+	skin 0 "tx_tablet6_3.png"
+	frameindex DUMM C 0 0
+	skin 0 "tx_tablet6_4.png"
+	frameindex DUMM D 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////

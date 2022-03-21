@@ -13,7 +13,7 @@ středně velké město
 - Jaká je technologická úroveň sídliště?
 město - mají tady tekoucí vodu, elektrické osvetlení, kanalizaci; je tu dostupná odborná lékařská péče
 - Kdo řídí sídliště, kdo ho ovládá?
-Město je formálně pod kontrolou Řádu, ale veškerou kontrolu nad městem drží místní Baron, vlastník pozemků v okolí města. Baron řídí obchod ve městě prostředictvím podplacené Hanzy.
+Město je formálně pod kontrolou Řádu, ale veškerou kontrolu nad městem drží místní Guverner, vlastník pozemků v okolí města. Guverner řídí obchod ve městě prostředictvím podplacené Hanzy.
 - Jací jsou obyvatelé sídliště?
 místí jsou k cizincům poměrně přátelští, na cizince jsou totiž zvyklí díky přístavu
 - Kde pracují obyvatelé sídliště?
@@ -55,13 +55,13 @@ Ztratil se student TekGuildy - najdi studenta
 Knez v chramu Cirkve: Cirkev zada Bindery o spolupraci pri hledani kaciru ve vsi na zapade.
 Knez v chramu Cirkve: Pomoz se svecenim sochy na namesti. 
 
-Transportni Guilda: Dones balicek zastupci v eastcliffu.
-
-Sezen soucastky na opravu zarizeni v mestskem muzeu.
+Transportni Guilda: Dones balicek zastupci v Eastcliffu.
 
 Dones dopis do Eastcliffu. Mestan hrace pozaada o doneseni dopisu sestre ktera zije v eastcliffu.
 
-
+Bohaty obchodnik: Dojednej dodavky obili z Eastcliffu.
+Bohaty obchodnik: Dones balicek starostovi Aeredale.
+Bohaty obchodnik: Zlikviduj bandity ve vychodnim teritoriu.
 
 Soudce zmeny: Dones prikaz Ediktu starostovi Ravenrocku.
 Soudce zmeny: Zlikviduj doupe banditu v zapadnim teritoriu.

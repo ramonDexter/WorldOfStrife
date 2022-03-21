@@ -6,8 +6,8 @@
 actor noteBase : PDA {
 	//$category "ZSCRIPT/PDAnotes"
 
-	radius 8
-	height 16
+	radius 12
+	height 12
 
 	States {
 		Spawn:
@@ -29,14 +29,16 @@ actor noteSHmedical : noteBase {
 	PDA.Text "$PDA_noteSHmedical_TEXT"
 }
 actor noteSHshouldergun : noteBase {
-	//$title "note: SH shouldergun"
+	//$title "note: SH shouldergun" 
 	Tag "$PDA_noteSHshouldergun_TITLE"
 	PDA.Text "$PDA_noteSHshouldergun_TEXT"
+	PDA.Image "graphics/PDA/images/shouldergun.png"
 }
 actor noteSHbinderStavesTechnical : noteBase {
-	//$title "note: SH binder staves technical"
+	//$title "note: SH binder staves technical" 
 	Tag "$PDA_noteSHbinderStavesTechnical_TITLE"
 	PDA.Text "$PDA_noteSHbinderStavesTechnical_TEXT"
+	PDA.Image "graphics/PDA/images/binderstaff.png"
 }
 actor noteSHbinderNote01 : noteBase {
 	//$title "note: SH binder 01"
@@ -92,6 +94,11 @@ actor noteTekGuild : noteBase {
 	//$Title "note: eastcliff"
     Tag "$PDA_noteTekGuild_Title"
 	PDA.Text "$PDA_noteTekGuild_Text"
+}
+actor noteBinderOrder : noteBase {
+	//$Title "note: binder order"
+    Tag "$PDA_noteBinderOrder_Title"
+	PDA.Text "$PDA_noteBinderOrder_Text"
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////

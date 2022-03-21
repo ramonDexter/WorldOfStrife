@@ -1848,7 +1848,7 @@ model dx_mikrovlnka {
 	path "models/props/roomstuff/"
 	model 0 "dx_mikrovlnka.md3"
 	skin 0 "tx_dexComps.png"
-	scale 24.0 24.0 24.0
+	scale 16.8 16.8 16.8
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

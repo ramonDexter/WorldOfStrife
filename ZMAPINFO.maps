@@ -82,7 +82,7 @@ map MAP07 "Ancient Temple" {
 map MAP08 "Millport" {
 	sky1 = "SKYSNDS"
 	//sky2 = SKYSNDS
-	music = "D_TAVERN"
+	music = "DM2TRK09"//"D_TAVERN"
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1

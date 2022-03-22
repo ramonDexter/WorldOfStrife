@@ -431,6 +431,15 @@ model Stool {
 	
 	frameindex STOL A 0 1
 }
+model wosD_stool {
+	path "models/props/stool/"
+	model 0 "stool.md3"
+	skin 0 "tx_WOOD06.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 1
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  wooden mug  ////////////////////////////////////////////////////////////////

@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -2893.163f;
+		viewpositionx = -6120.897f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = -3519.198f;
+		viewpositiony = -4269.672f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 4;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.8650399f;
+		viewscale = 0.665412f;
 		
 		plugins
 		{
@@ -79,8 +79,36 @@ maps
 			2
 			{
 				linedefs = "7715 14039 14040 14041 14042 14129 14130 14133 14175 14176 14177 14182 14202 14203 14206 14207 14208 14212 14214 14215 14216 14217 14218 14456 14457 14458 14459 14461 14462 14465 14466 14467 14468 14472 14482 14483 14484 14485 14493 14494 14495 14523 14934 14939 15138 15140 15204 15205 15206 15209 15210 15211 22454 22471 22479 22480 22483 22487 22491 22503 22504 22507 22511 22514 22537 22540 22541 22546 22549 22550 22552 22553 22674 22676 22677 22679 22680 22681 22683 22684 22686 22687 22689 22690 23495 23496 23515 23516 23517 23518 23520 23521 23522 23523 23524 23525 23526 23536 23537 23538 23539 23540 23541 25456 25464 25469 25477 30523 30616 30623 30624 30625 30655 30656 30659 30660 30661 30663 41706 41708 41897 41901 41902 41903 41904 41905 41906 41907 41908 41909 41910 41911 41912 41915 41916 41917 41918 41919 41922 41923 41924 41928 41929 41931 41932 41933 41934 41935 41936 41937 41938 41939 41940 41941 41942 41943 41944 41945 41962 41963 41964 41965 41966 41968 42156 42157 42158 42159 42160 42161 42165 42166 42167 42168 42169 42175 42176 42179 42180 42181 42183 42185 42187 42328 42329 42330 42331 42332 42333 42334 42335 42336 42337 42339 42340 42341 42342 42343 42347 42348 42349 42355 42356 42357 42364 42365 42366 42367 42368 42369 42401 42402 42403 42404 42405 42406 42407 42408 42409 42412 42413 42415 42416 42417 42419 42420 42421 42423 42424";
-				sectors = "1460 1462 2631 2654 2683 2684 2685 2686 2687 2688 2689 2690 2720 2722 2736 2745 2750 2753 2866 2924 2949 2950 2951 3004 3312 3425 4532 4536 4625 4732 5999 6000 6001 6004 6005 6394 6395 6400 6401 6402 6403 6657 9756 9758 9759 9760 9800 9804 9808 9836 9841 9851 9852 9855 9856 9876 9877";
+				sectors = "1460 1462 2631 2654 2683 2684 2685 2686 2687 2688 2689 2690 2720 2722 2736 2745 2750 2753 2866 2924 2949 2950 2951 3004 3312 3425 4532 4536 4625 4732 5999 6000 6001 6004 6005 6394 6395 6400 6401 6402 6403 6657 9756 9758 9759 9760 9800 9804 9808 9836 9841 9851 9852 9855 9856 9876 9877 9889";
 			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 		
 		fieldtypes
@@ -110,12 +138,12 @@ maps
 			
 			sector
 			{
-				rotationceiling = 1;
+				rotationceiling = 17;
 				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningceiling = 1;
 				ypanningceiling = 1;
-				rotationfloor = 1;
+				rotationfloor = 17;
 				xscalefloor = 1;
 				yscalefloor = 1;
 				xpanningfloor = 1;
@@ -154,34 +182,6 @@ maps
 				firstvisibleline = 203;
 				activetab = true;
 			}
-		}
-		
-		reloadresourceprecommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
-		}
-		
-		reloadresourcepostcommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
-		}
-		
-		testprecommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
-		}
-		
-		testpostcommand
-		{
-			autocloseonsuccess = true;
-			exitcodeiserror = true;
-			stderriserror = true;
 		}
 	}
 }

@@ -19,17 +19,17 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "D:\\DOOM\\WoS\\WoS-Base";
+				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 536.9045f;
+		viewpositionx = -2893.163f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = -4764.633f;
+		viewpositiony = -3519.198f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 1.900493f;
+		viewscale = 0.8650399f;
 		
 		plugins
 		{
@@ -110,12 +110,12 @@ maps
 			
 			sector
 			{
-				rotationceiling = 17;
+				rotationceiling = 1;
 				xscaleceiling = 1;
 				yscaleceiling = 1;
 				xpanningceiling = 1;
 				ypanningceiling = 1;
-				rotationfloor = 17;
+				rotationfloor = 1;
 				xscalefloor = 1;
 				yscalefloor = 1;
 				xpanningfloor = 1;
@@ -154,6 +154,34 @@ maps
 				firstvisibleline = 203;
 				activetab = true;
 			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 	}
 }

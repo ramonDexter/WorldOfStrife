@@ -12,6 +12,7 @@ map MAP01 "Mines" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoInfighting
@@ -24,9 +25,11 @@ map MAP02 "Silent Hills" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 }
 map MAP03 "Waste Treatment" {
 	sky1 = "SKYMNT02"
@@ -34,6 +37,7 @@ map MAP03 "Waste Treatment" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoInfighting
@@ -45,9 +49,11 @@ map MAP04 "Power Plant" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 }
 map MAP05 "Wilderness" {
 	sky1 = "SKYMNT02"
@@ -55,9 +61,11 @@ map MAP05 "Wilderness" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
+	NoInfighting
 }
 map MAP06 "Eastern Highlands" {
 	sky1 = "SKYMNT02"
@@ -65,9 +73,11 @@ map MAP06 "Eastern Highlands" {
 	outSideFogDensity = 255
 	skyFog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
+	NoInfighting
 }
 map MAP07 "Ancient Temple" {
 	sky1 = "SKYMNT02"
@@ -75,9 +85,11 @@ map MAP07 "Ancient Temple" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 }
 map MAP08 "Millport" {
 	sky1 = "SKYSNDS"
@@ -86,9 +98,11 @@ map MAP08 "Millport" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
+	NoInfighting
 }
 map MAP09 "Coastal region" {
 	sky1 = "SKYSNDS"
@@ -97,9 +111,11 @@ map MAP09 "Coastal region" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
+	NoInfighting
 }
 map MAP10 "Borderlands West" {
 	sky1 = "SKYSNDS"
@@ -108,9 +124,11 @@ map MAP10 "Borderlands West" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
+	NoInfighting
 }
 map map11 "Valley Farm" {
 	sky1 = "SKYRGGR"
@@ -118,9 +136,11 @@ map map11 "Valley Farm" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 	
 }
 map map12 "Ravenrock Village" {
@@ -129,9 +149,11 @@ map map12 "Ravenrock Village" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 	
 }
 map map13 "Borderlands North" {
@@ -140,9 +162,11 @@ map map13 "Borderlands North" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 	
 }
 map map14 "Eastcliff Village" {
@@ -151,9 +175,11 @@ map map14 "Eastcliff Village" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 	
 }
 
@@ -164,9 +190,11 @@ map map99 "#TOP SECRET" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
+	//flags
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
+	NoInfighting
 	
 }
 ////////////////////////////////////////////////////////////////////////////////

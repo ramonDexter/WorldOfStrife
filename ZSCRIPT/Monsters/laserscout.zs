@@ -6,7 +6,7 @@ Class LaserScout : Sentinel
 		//$Title "Heretic Laser Scout"
 		Health 250;
 		Speed 11;
-		Radius 40;
+		Radius 16;
 		Height 56;
 		Mass 450;
 		PainChance 40;

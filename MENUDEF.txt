@@ -63,6 +63,7 @@ OptionMenu "wosDEBUGmenu" {
 	//Command "Powerups", "puke 939"
 	StaticText ""
 	StaticText ":: M A P S ::"
+	Command "MAP05 - Heretic Castle", "map map05"
 	Command "MAP08 - Millport", "map map08"
 	Command "MAP09 - Eastern Coast", "map map09"
 	Command "MAP10 - Borderlands West", "map map10"

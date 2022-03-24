@@ -2,6 +2,7 @@ class wosLiquidator : actor {
     Default {
 		//$category "Monsters/WoS"
 		//$Title "Liquidator robot"
+        Tag "$T_wosLiquidator";
         Radius 52;
         Height 120;
         Health 2400;

@@ -19,7 +19,7 @@ Class LaserScout : Sentinel
 		Tag "Laser-Scout";
 		DeathSound "scout/death";
 		Obituary "%o was vaporized by a laser-scout.";
-		DropItem "EnergyPod";
+		DropItem "wosEnergyPod";
 		GibHealth 100;
 	}
 	States

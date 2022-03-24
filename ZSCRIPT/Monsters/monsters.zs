@@ -128,7 +128,7 @@ class rebelEnemy_spider : rebelEnemy {
 		-Friendly
 		
 		Tag "Spider";
-		Dropitem "gold10";
+		Dropitem "wosgold10";
 		Dropitem "ClipOfBullets";
 	}
 	
@@ -147,7 +147,7 @@ class ShieldRebel : rebelEnemy {
 		Speed 8;
 		DropItem "AssaultGun";
 		DropItem "Shield";
-		Dropitem "randomDrop_02";
+		//Dropitem "randomDrop_02";
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
 		Obituary "%o got shot down by a shield-wielding rebel.";
@@ -264,8 +264,8 @@ class EliteRebel : rebelEnemy {
 		DropItem "AssaultGun";
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
-		DropItem "ClipofBullets";
-		Dropitem "randomDrop_01";
+		//DropItem "ClipofBullets";
+		//Dropitem "randomDrop_01";
 		Obituary "%o was riddled by an Elite Rebel.";
 	}
 	
@@ -325,7 +325,7 @@ class GrenadeRebel : rebelEnemy {
 		DamageFactor "RebelGrenade", 0.1;
 		DropItem "StrifeGrenadeLauncher";
 		Obituary "%o was shot by a Rebel Grenadier.";
-		Dropitem "randomDrop_03";
+		//Dropitem "randomDrop_03";
 	}
 	
 	States {
@@ -388,7 +388,7 @@ class MaulerRebel : rebelEnemy {
 		DeathSound "NewRebelDeath";
 		Obituary "%o got mauled by a Mauler Rebel.";
 		DropItem "Mauler";
-		Dropitem "randomDrop_04";
+		//Dropitem "randomDrop_04";
 	}
 	
 	States {
@@ -449,7 +449,7 @@ class FlamerRebel : rebelEnemy {
 		DeathSound "NewRebelDeath";
 		Obituary "%o got burned to death by a flamethrower rebel.";
 		DropItem "Flamethrower";
-		Dropitem "randomDrop_04";
+		//Dropitem "randomDrop_04";
 		DamageFactor "Fire", 0.1;
 	}
 	
@@ -504,7 +504,7 @@ class RangerRebel : rebelEnemy {
 		PainSound "NewRebelPain";
 		DeathSound "NewRebelDeath";
 		AttackSound "monsters/rifle";
-		Dropitem "randomDrop_01";
+		//Dropitem "randomDrop_01";
 	}
 	
 	States {
@@ -545,7 +545,7 @@ class hereticCaptain : EliteRebel {
 		
 		Tag "$TAG_hereticCaptain";
 		Dropitem "leaderskull";
-		Dropitem "randomDrop_01";
+		//Dropitem "randomDrop_01";
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -559,8 +559,7 @@ class spikerTrap : actor {
 
 	void A_TrapAttack() {
 		let targ = target;
-		if (targ)
-		{
+		if (targ) {
 			int damage = random[spikerTrap](1, 8) * 3;
 			A_StartSound("Spiders/Attack", CHAN_WEAPON);
 			int newdam = targ.DamageMobj (self, self, damage, "Melee");

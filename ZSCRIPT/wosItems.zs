@@ -215,6 +215,7 @@ class wosGold10 : wosPickup {
 		//Inventory.Amount 10
 		Tag "$TAG_10GOLD"; // "10 gold"
 		Inventory.PickupMessage "$TXT_10GOLD"; // "You picked up 10 gold."
+		Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}
@@ -234,6 +235,7 @@ class wosGold25 : wosPickup {
 		-INVENTORY.INVBAR
 		Tag "$TAG_25GOLD";
 		Inventory.PickupMessage "$TXT_25GOLD";
+		Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}
@@ -253,6 +255,7 @@ class wosGold50 : wosPickup {
 		-INVENTORY.INVBAR
 		Tag "$TAG_50GOLD";
 		Inventory.PickupMessage "$TXT_50GOLD";
+		Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}

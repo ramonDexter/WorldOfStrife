@@ -1,0 +1,289 @@
+namespace = "GZdoom";
+Conversation {
+    ID = 801;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 801;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 802;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 802;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 803;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 803;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 804;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 804;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 805;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 805;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 806;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 806;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 807;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 807;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 808;
+    /*
+    Page {
+        pageName = "";
+        Name = "Public Bath";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_publicBath_opener";
+        Name = "Public Bath";
+        Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "Use the public bath. (pay 3 gold)";
+            Nextpage = "MP_publicBath_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 808;
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+            Require {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+}

@@ -1110,8 +1110,7 @@ class wos_monkGuy : SwitchableDecoration {
         +USESPECIAL
   		Radius 16;
   		Height 56;
-        Activation THINGSPEC_Switch;
-
+        Activation THINGSPEC_Switch; // dulezity pokud to ma jit aktivovat!!!!
 	}
 	States {
 		Spawn:

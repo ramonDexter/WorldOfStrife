@@ -144,8 +144,7 @@ class binderPlayer : StrifePlayer {
 		ViewBob=1.1*hpeed;
 		speed=hpeed;
 	}
-	void HealthShake()
-	{
+	void HealthShake() {
 		double shake = 0.2 - health*0.002;
 		double stamshak = 0.001 * (350 - stamin);
 		If(stamshak>0){shake+=stamshak;}

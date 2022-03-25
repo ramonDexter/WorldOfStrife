@@ -1,0 +1,155 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 31;
+    /*
+    Page {
+        pageName = "";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    \c[yellow]<< BACK
+    */
+    Page {
+        pageName = "MP_rudyard_opener";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Hello, welcome to my humble workshop. I am Rudyard, a techsmith, as you can see. How may I serve you?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "What do you sell?";
+            Nextpage = "MP_rudyard_shop";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "MP_rudyard_questions";
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_shop";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Well, I've got here the gas grenades, these cost 10 gold, then I've got here the swarmer grenades and the deployable shields. The Swarmers cost 35 gold, and the Deployable Shield cost 150 gold. And I cannot forget the energykits, I've got special discount on them. Only 27 for each!";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_rudyard_opener";
+        } 
+        Choice {
+            Text = "I'll take the gas grenade. (pay 10 gold)";
+			NextPage = "MP_rudyard_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrenadeG";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+        } 
+        Choice {
+            Text = "I'll take the gas swarmers grenade. (pay 35 gold)";
+			NextPage = "MP_rudyard_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSwarmers";
+			Cost {
+				item = "goldCoin";
+				amount = 35;
+			}
+        } 
+        Choice {
+            Text = "I'll take the deployable shield. (pay 150 gold)";
+			NextPage = "MP_rudyard_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosDeployableShield";
+			Cost {
+				item = "goldCoin";
+				amount = 150;
+			}
+        } 
+        Choice {
+            Text = "I'll take the energykit. (pay 27 gold)";
+			NextPage = "MP_rudyard_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyKit";
+			Cost {
+				item = "goldCoin";
+				amount = 27;
+			}
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_questions";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Yes? What would you like to know?";
+        Goodbye = "\c[red]Goodbye.";  
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_rudyard_opener";
+        }
+        Choice {
+            Text = "This is your workshop?";
+            Nextpage = "MP_rudyard_workshop";
+        }
+        Choice {
+            Text = "Could you tell me about The Commons?";
+            Nextpage = "MP_rudyard_aboutcommons";
+        }
+        Choice {
+            Text = "Could you tell me about Millport?";
+            Nextpage = "MP_rudyard_aboutmillport";
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_workshop";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Oh, yes, it is. I've bought it five years ago.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "MP_rudyard_questions";
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_aboutcommons";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Well, life here is the same as in other places. The only difference is that we live in tunnel, so if you want to see sunlight or sky, you need to go outside. But it's quiet and calm here. The neighbours are nice and helpful, so life is easy here. Even when the power runs out.";
+        Goodbye = "\c[red]Goodbye.";  
+        Choice {
+            Text = "Power runs out here? Happens often?";
+            Nextpage = "MP_rudyard_powerrunout";
+        }
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "MP_rudyard_questions";
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_powerrunout";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Yes, pretty often. The TekGuild tries to fix the power cables, but something weird is happening on the underground collector where the cables are laid. You can try speaking with the people at TekGuild, they will tell you more.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "MP_rudyard_questions";
+        }
+    }
+    Page {
+        pageName = "MP_rudyard_aboutmillport";
+        Name = "Rudyard, Techsmith";
+        Dialog = "\c[white]Millport's a nice place to live. Little bit busy for me, but I like it. We've got everything here. Rich shops, good pubs and even the city bath, the Tabitian Bath. Visit this place when you're tired and you won't be disappointed.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "MP_rudyard_questions";
+        }
+    }
+}

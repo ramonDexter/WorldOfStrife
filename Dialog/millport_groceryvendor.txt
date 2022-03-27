@@ -37,9 +37,10 @@ Conversation {
             Nextpage = "mp_groceryvendor_opener";
         }
         Choice {
-            Text = "Give me bottle of water. (pay 3 gold)";
+            Text = "\c[yellow]Give me bottle of water ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosWaterBottle";
@@ -49,7 +50,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me bottle of beer. (pay 4 gold)";
+            Text = "\c[yellow]Give me bottle of beer ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -61,7 +62,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me bottle of wine. (pay 5 gold)";
+            Text = "\c[yellow]Give me bottle of wine ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -73,7 +74,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me food ration 1. (pay 12 gold)";
+            Text = "\c[yellow]Give me food ration 1 ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -85,7 +86,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me food ration 2. (pay 12 gold)";
+            Text = "\c[yellow]Give me food ration 2 ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -97,7 +98,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me food ration 3. (pay 12 gold)";
+            Text = "\c[yellow]Give me food ration 3 ";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
 			YesMessage = "Here it is!";

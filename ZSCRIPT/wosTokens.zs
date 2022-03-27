@@ -1,12 +1,11 @@
-class tokenBase : Inventory
-{
-	Default
-	{
+class tokenBase : Inventory {
+	Default {
 		-inventory.invbar		
 		
 		inventory.amount 1;
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
+		Mass 0;
 	}
 }
 
@@ -20,13 +19,13 @@ class map08token : tokenBase {}
 
 // QUEST TOKENS ////////////////////////////////////////////////////////////////
 
-//main quest
+//main quest 01 - kill heretics in castle //////////////////////////////////////
 class speakWithLeader : tokenBase {}
 class quest01given : tokenBase {}
 class rebelsDead : tokenBase {}
 class quest01finished : tokenBase {}
 class inquisitorPromoted : tokenBase {}
-//find artifact
+//main quest 02 - find artifact ////////////////////////////////////////////////
 class quest02given : tokenBase {}
 class quest02_goinside : tokenBase {}
 class quest02_artifact_stolen : tokenBase {}

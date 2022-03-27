@@ -12,7 +12,7 @@ Conversation {
 		Panel = "M_ENVND";
         Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy EnergyPod";
+			Text = "Buy EnergyPod ";
 			NextPage = "MP_energyAmmoVendor_opener";
 			GiveItem = "wosenergypod";
 			YesMessage = "Here is one EnergyPod!";
@@ -24,7 +24,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy EnergyKit";
+			Text = "Buy EnergyKit ";
 			NextPage = "MP_energyAmmoVendor_opener";
 			GiveItem = "wosenergykit";
 			YesMessage = "Here is one EnergyKit!";
@@ -36,7 +36,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy EnergyPack";
+			Text = "Buy EnergyPack ";
 			NextPage = "MP_energyAmmoVendor_opener";
 			GiveItem = "wosenergypack";
 			YesMessage = "Here is one EnergyPack!";

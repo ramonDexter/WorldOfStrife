@@ -169,7 +169,6 @@ maps
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 1232;
-				activetab = true;
 			}
 			
 			document1
@@ -179,8 +178,9 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 14327;
-				firstvisibleline = 461;
+				caretposition = 3412;
+				firstvisibleline = 122;
+				activetab = true;
 			}
 		}
 	}

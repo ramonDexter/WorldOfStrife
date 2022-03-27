@@ -32,15 +32,12 @@ Conversation {
         pageName = "MP_rudyard_shop";
         Name = "Rudyard, Techsmith";
         Dialog = "\c[white]Well, I've got here the gas grenades, these cost 10 gold, then I've got here the swarmer grenades and the deployable shields. The Swarmers cost 35 gold, and the Deployable Shield cost 150 gold. And I cannot forget the energykits, I've got special discount on them. Only 27 for each!";
-        Goodbye = "\c[red]Goodbye."; 
+        Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_rudyard_opener";
-        } 
-        Choice {
-            Text = "I'll take the gas grenade. (pay 10 gold)";
+            Text = "\c[yellow]I'll take the gas grenade ";
 			NextPage = "MP_rudyard_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrenadeG";
@@ -50,9 +47,10 @@ Conversation {
 			}
         } 
         Choice {
-            Text = "I'll take the gas swarmers grenade. (pay 35 gold)";
+            Text = "\c[yellow]I'll take the swarmers grenade ";
 			NextPage = "MP_rudyard_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSwarmers";
@@ -62,9 +60,10 @@ Conversation {
 			}
         } 
         Choice {
-            Text = "I'll take the deployable shield. (pay 150 gold)";
+            Text = "\c[yellow]I'll take the deployable shield ";
 			NextPage = "MP_rudyard_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosDeployableShield";
@@ -74,9 +73,10 @@ Conversation {
 			}
         } 
         Choice {
-            Text = "I'll take the energykit. (pay 27 gold)";
+            Text = "\c[yellow]I'll take the energykit ";
 			NextPage = "MP_rudyard_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyKit";
@@ -84,7 +84,11 @@ Conversation {
 				item = "goldCoin";
 				amount = 27;
 			}
-        }
+        } 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_rudyard_opener";
+        } 
     }
     Page {
         pageName = "MP_rudyard_questions";

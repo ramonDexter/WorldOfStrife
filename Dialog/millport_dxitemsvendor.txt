@@ -11,7 +11,7 @@ Conversation {
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow]Buy Deployable Shield";
+			Text = "\c[yellow]Buy Deployable Shield ";
 			NextPage = "MP_gregoryTechsmith_opener";
 			GiveItem = "wosDeployableShield";
 			YesMessage = "Here is one Deployable Shield!";
@@ -23,7 +23,7 @@ Conversation {
 			}
 		}
 		/*Choice {
-			Text = "\c[yellow]Buy Flight Harness";
+			Text = "\c[yellow]Buy Flight Harness ";
 			NextPage = "MP_gregoryTechsmith_opener";
 			GiveItem = "jetPack_item";
 			YesMessage = "Here is one Flight Harness!";
@@ -35,7 +35,7 @@ Conversation {
 			}
 		}*/
 		Choice {
-			Text = "\c[yellow]Buy Flame Turret";
+			Text = "\c[yellow]Buy Flame Turret ";
 			NextPage = "MP_gregoryTechsmith_opener";
 			GiveItem = "wosFlameTurret";
 			YesMessage = "Here is one Flame Turret!";
@@ -47,7 +47,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Armor Repair Kit";
+			Text = "\c[yellow]Buy Armor Repair Kit ";
 			NextPage = "MP_gregoryTechsmith_opener";
 			GiveItem = "wosarmorShard";
 			YesMessage = "Here is one Armor Repair Kit!";
@@ -59,7 +59,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Swarmer Grenade";
+			Text = "\c[yellow]Buy Swarmer Grenade ";
 			NextPage = "MP_gregoryTechsmith_opener";
 			GiveItem = "wosSwarmers";
 			YesMessage = "Here is one Swarmer Grenade!";

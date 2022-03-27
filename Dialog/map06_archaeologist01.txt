@@ -1,0 +1,32 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//archaeologist 01 ID 1
+//==================================================================================================================
+Conversation {
+	ID = 2;
+	Page {
+        pageName = "M06_archaeologist_opener";
+		Name = "Archaeologist";
+		Dialog = "\c[white]Hello Binder, good to have you here. We were ambushed by the heretics. They have taken everything and fled to the temple. You have to hurry, maybe you'll catch them.";
+		Choice {
+			Text = "What happened?";
+			NextPage = "M06_archaeologist_whathappened";
+            Require {
+                item = "quest02given";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+        pageName = "M06_archaeologist_whathappened";
+		Name = "Archaeologist";
+		Dialog = "We were working in the temple, while the heretics came. Murdered everyone and took the chief scientist inside. They said we are stealing some ancient artifact and they are here to retrieve it. Please, go inside and try to save the chief scientist.";
+		Choice {
+			Text = "Okay.";
+			NextPage = "M06_archaeologist_whathappened";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 113;
+		}
+	}
+}

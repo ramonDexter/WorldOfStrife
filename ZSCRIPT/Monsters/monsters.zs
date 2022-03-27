@@ -431,7 +431,7 @@ class tgPowerPlant_hereticCaptain : MaulerRebel {
 		//$Title "tg pp heretic captain"
 		
 		Tag "$TAG_tgPowerPlant_hereticCaptain";
-		Health 200;
+		Health 222;
 		DropItem "SHtgPowerplantKey";
 	}
 }
@@ -545,6 +545,7 @@ class hereticCaptain : EliteRebel {
 		
 		Tag "$TAG_hereticCaptain";
 		Dropitem "leaderskull";
+		Health 222;
 		//Dropitem "randomDrop_01";
 	}
 }
@@ -560,7 +561,7 @@ class spikerTrap : actor {
 	void A_TrapAttack() {
 		let targ = target;
 		if (targ) {
-			int damage = random[spikerTrap](1, 8) * 3;
+			int damage = random[spikerTrap](1, 8) * 2;
 			A_StartSound("Spiders/Attack", CHAN_WEAPON);
 			int newdam = targ.DamageMobj (self, self, damage, "Melee");
 			targ.TraceBleed (newdam > 0 ? newdam : damage, self);
@@ -574,10 +575,12 @@ class spikerTrap : actor {
 		
 		-FRIENDLY
 		+FLOORCLIP
-				
+		
+		Radius 8;
+		Height 8;
 		Monster;
 		Speed 0;
-		Health 2000;
+		Health 256;
 		Mass 10000;
 		PainChance 200;
 	
@@ -585,11 +588,11 @@ class spikerTrap : actor {
 	
 	States {
 		Spawn:
-			TRAP A 1;
+			TRAP A 1 A_Look();
 			Loop;
 			
 		See:
-			TRAP A 1 A_Chase();
+			TRAP A 1 A_Chase("Melee");
 			Loop;
 		
 		Melee:
@@ -1410,3 +1413,35 @@ class ascImpFlesh : actor {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// heretic loremaster /////////////////////////////////////////////////////////////////////////////////////////
+class wosLoremasterHeretic_base : Loremaster {
+	Default {
+		//$category "Monsters/WoS"
+	}
+	States {
+		Death:
+		PDED A 6;
+		PDED B 6 A_Scream();
+		PDED C 4;
+		PDED D 3 A_Fall();
+		PDED E 3;
+		PDED FGHIJIJIJKL 3;
+		PDED MNOP 3;
+		PDED Q 4;
+		PDED RS 4;
+		PDED T -1;
+		Stop;
+	}
+}
+class wosLoremasterHereticLesser : wosLoremasterHeretic_base {
+	Default {
+		//$Title "heretic loremaster lesser"
+		Health 300;
+	}
+}
+class wosLoremasterHereticMaster : wosLoremasterHeretic_base {
+	Default {
+		//$Title "heretic loremaster master"
+	}
+}

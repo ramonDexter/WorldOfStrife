@@ -1,0 +1,162 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 32;
+    /*
+    Page {
+        pageName = "";
+        Name = "Richards";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "MP_richards_opener";
+        Name = "Richards";
+        Dialog = "\c[white]Hello, welcome to my office. If you're injured, please use the autodoc over there. And I also provide some special services, if you belong to the wealthy clients...";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Do you sell medical resources?";
+            Nextpage = "MP_richards_shop";
+        } 
+        Choice {
+            Text = "What kind of special services do you offer?";
+            Nextpage = "MP_richards_special";
+        }
+    }
+    Page {
+        pageName = "MP_richards_shop";
+        Name = "Richards";
+        Dialog = "\c[white]Oh, yes, certainly. I sell the hyposprays, kombopacks and instaheals. And also I sell the stamina stims.\nHypospray costs 25, Kombopack costs 50 and Instaheal costs 100 gold. Stamina stim costs 25 gold.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]Buy the hypospray ";
+			NextPage = "MP_richards_shop";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+        } 
+        Choice {
+            Text = "\c[yellow]Buy the kombopack ";
+			NextPage = "MP_richards_shop";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+        } 
+        Choice {
+            Text = "\c[yellow]Buy the instaheal ";
+			NextPage = "MP_richards_shop";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+        } 
+        Choice {
+            Text = "\c[yellow]Buy the stamina stim ";
+			NextPage = "MP_richards_shop";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosi_StimDevice";
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+        }
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "MP_richards_opener";
+        }
+    }
+    Page {
+        pageName = "MP_richards_special";
+        Name = "Richards";
+        Dialog = "\c[white]Well, I can provide you cybernetic implants that enhance your accuracy and health. But the price is high. 1500 gold for health implant and 2000 gold for the accuracy implant.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_richards_opener";
+        } 
+        Choice {
+            Text = "Say, is this legal?";
+            Nextpage = "MP_richards_opener";
+            CloseDialog = true;
+            YesMessage = "\c[white]Sorry, I've got other things to do. Please leave my office.";
+        } 
+        Choice {
+            Text = "Okay, I'm interested in the accuracy implant.";
+            Nextpage = "MP_richards_implantAccuracy";
+        } 
+        Choice {
+            Text = "The health implant would be useful.";
+            Nextpage = "MP_richards_implantStamina";
+        }
+    }
+    Page {
+        pageName = "MP_richards_implantAccuracy";
+        Name = "Richards";
+        Dialog = "\c[white]Great. This will help your aim and booster your skill. The procedure will just take a moment. The price is 2000 gold for accuracy implant.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "MP_richards_special";
+        } 
+        Choice {
+            Text = "Okay, let's do it. \c[yellow](pay 2000 gold)";
+            Nextpage = "MP_richards_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1802;
+			YesMessage = "\c[white]Just hold still...";
+			NoMessage = "\c[white]Not enough gold!";
+            Cost {
+                item = "goldCoin";
+                amount = 2000;
+            }
+        }
+    }
+    Page {
+        pageName = "MP_richards_implantStamina";
+        Name = "Richards";
+        Dialog = "\c[white]Good, good. The Stamina implant will improve your overall health. The procedure will just take a moment. The price is 1500 gold for stamina implant.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "MP_richards_special";
+        }
+        Choice {
+            Text = "Okay, let's do it. \c[yellow](pay 1500 gold)";
+            Nextpage = "MP_richards_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1802;
+			YesMessage = "\c[white]Just hold still...";
+			NoMessage = "\c[white]Not enough gold!";
+            Cost {
+                item = "goldCoin";
+                amount = 1500;
+            }
+        }
+    }
+}

@@ -12,7 +12,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "Tiberius, Binder Superior";
-		Dialog = "\c[white]\c[white]Hello, acolyte Theo, I have a task for you. A group of rebels has established their base in the city's vicinity. I order you to clear the heretic's lair and return peace to the land. If you'll succeed, you will be promoted a full ranking Binder.";
+		Dialog = "\c[white]\c[white]Hello, acolyte Zeno, I have a task for you. A group of rebels has established their base in the city's vicinity. I order you to clear the heretic's lair and return peace to the land. If you'll succeed, you will be promoted a full ranking Binder.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -244,7 +244,7 @@ Conversation {
 	Page {
         pageName = "binderLeader_ceremony_1";
 		Name = "Tiberius, Binder Superior";
-		Dialog = "\c[white]You have finished all the trials. Do you pledge yourself to the Binder Order?";
+		Dialog = "\c[white]You have finished all the trials. Arius Augurius Zeno, do you pledge yourself to the Binder Order?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -269,7 +269,7 @@ Conversation {
 	Page {
 		pagename = "binderLeader_ceremony_2_1";
 		Name = "Tiberius, Binder Superior";
-		Dialog = "Here is the ShoulderGun and ShoulderGun Charger. This weapon will give you you an off-hand advantage over your opponents. It is an shoulder mounted mauler cannon, capable of shooting sprays of mauler energy. The charger is used to replenish ShoulderGun's ammo reserve from your EnergyPod ammo pool. Use it wisely.";
+		Dialog = "\c[white]Here is the ShoulderGun and ShoulderGun Charger. This weapon will give you you an off-hand advantage over your opponents. It is an shoulder mounted mauler cannon, capable of shooting sprays of mauler energy. The charger is used to replenish ShoulderGun's ammo reserve from your EnergyPod ammo pool. Use it wisely.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
@@ -282,7 +282,7 @@ Conversation {
 	Page {
         pageName = "binderLeader_ceremony_3";
 		Name = "Tiberius, Binder Superior";
-		Dialog = "\c[white]Now, you will head to the Eastern Highlands. There you will retrieve ancient artifact that's been discovered lately by the scientists. Find me in my office, I'll tell you more there.";
+		Dialog = "\c[white]Now, you will head to the Eastern Highlands. There you will retrieve ancient artifact that's been stolen lately by the heretics. Find me in my office, I'll tell you more there.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

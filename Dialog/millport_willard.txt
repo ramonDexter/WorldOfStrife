@@ -1,0 +1,120 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 34;
+    /*
+    Page {
+        pageName = "";
+        Name = "Willard";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_willard_opener";
+        Name = "Willard";
+        Dialog = "\c[white]Hello, binder. Did you wanted something? My name's Willard, I'm the historian here in Millport. If you want to know about the city history, I'm the right person to ask.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Yes, please tell me about the city history.";
+            Nextpage = "mp_willard_millporthistory";
+        } 
+        Choice {
+            Text = "Could you tell me about the commons?";
+            Nextpage = "mp_willard_aboutcommons";
+        }
+    }
+    Page {
+        pageName = "mp_willard_else";
+        Name = "Willard";
+        Dialog = "\c[white]Yes?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Yes, please tell me about the city history.";
+            Nextpage = "mp_willard_millporthistory";
+        } 
+        Choice {
+            Text = "Could you tell me about the commons?";
+            Nextpage = "mp_willard_aboutcommons";
+        }
+    }
+    Page {
+        pageName = "mp_willard_millporthistory";
+        Name = "Willard";
+        Dialog = "\c[white]The oldest written mention of Millport is in the manuscript of the old Monastery. But I have t note that it just a copy of an older work. So, the oldest mention is dated into year 383. In that time, Millport was a simple hunter settlement. Around year 520 the house Tabit takes control of the local area and makes Millport their main city. They have built their castle not far from the city, fifty kilometres to the west. The TekGuild came to the city about 70 years ago, when they relocated here their main HQ from Bodrov.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "The old Monastery? Whats that?";
+            Nextpage = "mp_willard_oldmonastery";
+        } 
+        Choice {
+            Text = "Tell me more about house Tabit.";
+            Nextpage = "mp_willard_housetabit";
+        } 
+        Choice {
+            Text = "Could you tell me more about TekGuild?";
+            Nextpage = "mp_willard_tekguild";
+        }
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_else";
+        }
+    }
+    Page {
+        pageName = "mp_willard_oldmonastery";
+        Name = "Willard";
+        Dialog = "\c[white]The Old Monastery is the first monastery that was built by the Church of the Order in year 587. It is the spiritual center of the Church in the area. But noew it serves more wordly purpose, as the heretics and apostates are being held and treated there. The Monastery ahs a great library that held more than one thousand books and scrolls.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_millporthistory";
+        }
+    }
+    Page {
+        pageName = "mp_willard_housetabit";
+        Name = "Willard";
+        Dialog = "\c[white]The honest house Tabit, you could hear some say. And for me, it is mostly true. The Duke Tabit is a just and honorable ruler. The southern lands bloom under his rule, and the people are happy and rich. The duke rules from his castle, which is located fifty kilommetres to the west from Millport. It's great fort, especiall after the reconstruction, which took place fourty years ago.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Tell me about the Tabit Castle.";
+            Nextpage = "mp_willard_tabitcastle";
+        }
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_millporthistory";
+        }
+    }
+    Page {
+        pageName = "mp_willard_tabitcastle";
+        Name = "Willard";
+        Dialog = "\c[white]As I said, the castle has been rebuilt 40 years ago, when the present Duke Tabit took his rule after his father passed. It's a great fortress now, and a palace also. You should visit it. Duke is a hospitable person, and he offers good work, especially for someone like you.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_millporthistory";
+        }
+    }
+    Page {
+        pageName = "mp_willard_tekguild";
+        Name = "Willard";
+        Dialog = "\c[white]Well, the TekGuild is the main manufacturer of technology in the Holy Empire. It is also the amin supplier of the Imperial Army, so their influence is far and strong. They offer education to the people. But when you want to make and sell technology, you have to buy a licence from them and pay them monthly fees.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_millporthistory";
+        }
+    }
+    Page {
+        pageName = "mp_willard_aboutcommons";
+        Name = "Willard";
+        Dialog = "\c[white]The Commons is the oldest housing complex here in Millport. The first parts of the Commons has been built 150 years ago, when the need for new housing started. Since that times, it has grown into the present state of art. Some say that the Commons are crowded and dangerous. The first part is true, but the second part is mostly the spirit of the history. The Commons began as a housing for the poorest working class. The criminality was high in that times, and the negative fame is something that simply does not disapper over night. So, most of the rumors are not true, for now.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something else.";
+            Nextpage = "mp_willard_else";
+        }
+    }
+}

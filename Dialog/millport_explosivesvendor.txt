@@ -11,7 +11,7 @@ Conversation
         Goodbye = "\c[red]Goodbye";
 		Choice
 		{
-			Text = "\c[yellow]Buy Pack of Mini Missiles";
+			Text = "\c[yellow]Buy Pack of Mini Missiles ";
 			NextPage = 1;
 			GiveItem = "MiniMissiles";
 			YesMessage = "Here is one Pack of Mini Missiles!";
@@ -25,7 +25,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy Bundle of Mini Missiles";
+			Text = "\c[yellow]Buy Bundle of Mini Missiles ";
 			NextPage = 1;
 			GiveItem = "wosBundleMiniMissile";
 			YesMessage = "Here is one Bundle of Mini Missiles!";
@@ -39,7 +39,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy Crate of Mini Missiles";
+			Text = "\c[yellow]Buy Crate of Mini Missiles ";
 			NextPage = 1;
 			GiveItem = "CrateOfMissiles";
 			YesMessage = "Here is one Crate of Mini Missiles!";
@@ -53,7 +53,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy HE Grenades Pack";
+			Text = "\c[yellow]Buy HE Grenades Pack ";
 			NextPage = 1;
 			GiveItem = "HEGrenadeRounds";
 			YesMessage = "Here is one HE Grenades Pack!";
@@ -67,7 +67,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy Phosphorous Grenades Pack";
+			Text = "\c[yellow]Buy Phosphorous Grenades Pack ";
 			NextPage = 1;
 			GiveItem = "PhosphorusGrenadeRounds";
 			YesMessage = "Here is one Phosphorous Grenades Pack!";
@@ -81,7 +81,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy HE Hand Grenade";
+			Text = "\c[yellow]Buy HE Hand Grenade ";
 			NextPage = 1;
 			GiveItem = "wosgrenadeE";
 			YesMessage = "Here is one HE Hand Grenade!";
@@ -95,7 +95,7 @@ Conversation
 		}
 		Choice
 		{
-			Text = "\c[yellow]Buy Phosphorous Hand Grenade";
+			Text = "\c[yellow]Buy Phosphorous Hand Grenade ";
 			NextPage = 1;
 			GiveItem = "wosgrenadeF";
 			YesMessage = "Here is one Phosphorous Hand Grenade!";

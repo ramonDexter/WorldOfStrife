@@ -39,6 +39,7 @@ class wosBinocular : wosPickup {
 		+INVENTORY.INVBAR
 		Tag "$T_Binocular";
 		Inventory.Icon "I_BNCL";
+		inventory.PickupMessage "$F_Binocular";
 		Mass wosBinocularWeight;
 		//Scale 0.4;
     }

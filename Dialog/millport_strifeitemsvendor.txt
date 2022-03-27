@@ -12,7 +12,7 @@ Conversation {
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow]Buy Environmental Suit";
+			Text = "\c[yellow]Buy Environmental Suit ";
 			NextPage = "MP_strifeItemsVendor_opener";
 			GiveItem = "wosEnvSuit";
 			YesMessage = "Here is one Environmental Suit!";
@@ -24,7 +24,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Scanner";
+			Text = "\c[yellow]Buy Scanner ";
 			NextPage = "MP_strifeItemsVendor_opener";
 			GiveItem = "Scanner";
 			YesMessage = "Here is one Scanner!";
@@ -36,7 +36,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Portable Map";
+			Text = "\c[yellow]Buy Portable Map ";
 			NextPage = "MP_strifeItemsVendor_opener";
 			GiveItem = "wosPortableMap";
 			YesMessage = "Here is one Portable Map!";
@@ -48,7 +48,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Targeter";
+			Text = "\c[yellow]Buy Targeter ";
 			NextPage = "MP_strifeItemsVendor_opener";
 			GiveItem = "wosTargeter";
 			YesMessage = "Here is one Targeter!";
@@ -60,7 +60,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Shadow Armor";
+			Text = "\c[yellow]Buy Shadow Armor ";
 			NextPage = "MP_strifeItemsVendor_opener";
 			GiveItem = "wosShadowArmor";
 			YesMessage = "Here is one Shadow Armor!";

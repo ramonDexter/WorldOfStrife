@@ -1,0 +1,22 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 4;
+    Page {
+        pageName = "M06_transportOfficer_opener";
+        Name = "Transport Officer";
+        Dialog = "\c[white]Hello, Binder. Did you wanted something?";
+        Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Take me to Millport.";
+            Nextpage = "M06_transportOfficer_opener";
+            CloseDialog = true;
+            YesMessage = "Will do. Just wait a sec, got to heat up the engines.";
+            Special = 80;
+            arg0 = 114;
+            Require {
+                item = "millPortTransportTicket";
+                amount = 1;
+            }
+        }
+    }
+}

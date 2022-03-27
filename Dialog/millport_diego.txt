@@ -37,9 +37,10 @@ Conversation {
             Nextpage = "mp_diego_opener";
         }
         Choice {
-            Text = "I'll take hamburger. (pay 3 gold)";
+            Text = "\c[yellow]Buy hamburger ";
 			NextPage = "mp_diego_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosHamburger";
@@ -49,9 +50,10 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take cheeseburger. (pay 4 gold)";
+            Text = "\c[yellow]Buy cheeseburger ";
 			NextPage = "mp_diego_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosCheeseburger";
@@ -61,9 +63,10 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take bigburger. (pay 5 gold)";
+            Text = "\c[yellow]Buy bigburger ";
 			NextPage = "mp_diego_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBigburger";
@@ -73,9 +76,10 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take doublecheese. (pay 6 gold)";
+            Text = "\c[yellow]Buy doublecheese ";
 			NextPage = "mp_diego_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosCheeseburgerDouble";
@@ -85,9 +89,10 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take hotdog. (pay 4 gold)";
+            Text = "\c[yellow]Buy hotdog ";
 			NextPage = "mp_diego_shop";
 			CloseDialog = true;
+            DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosHotdog02";

@@ -396,6 +396,12 @@ Ve všech krajích Říše je zaznamenána neobyčejná nadúroda. V některých
 // enu //
 In all parts of the Empire, extraordinary overcrops are recorded. In some villages, they even have to build granaries. The Emperor declares special holidays to celebrate the rich harvest.
 
+1410
+// csy //
+TekGuilda přesunuje svoje sídlo do Millportu.
+// enu //
+TekGuild relocates it's HQ to Millport.
+
 1412
 // csy //
 Vláda císaře Aurika končí vybudováním monumentální hrobky, do které bude uložena císařovo tělo. Jako by starý císař už jenom čekal na dokončení hrobky, jeho srdce vypovědělo službu krátce po tom, co posel donesl do císařského paláce zprávu u jejím dokončení. Na trůn nastupuje Aurikův syn, Ranan.
@@ -417,8 +423,10 @@ Establishment of a religious police to oversee the observance of religious rules
 1448
 // csy //
 V mnoha městech se objevuje hnutí odporu. Obyvatelé nové zákony ani po několika desítkách let nepřijali a začínají projevovat nespokojenost. Zatím nějde o žádné organizované hnutí, spíše o oddělené buňky odporu, které se objevují v podzemí.
+Současný vévoda Tabitský, Arik III., nastupuje do čela rodu Tabit poté co jeho otec umírá na lovu. Ihned začíná s přestavbou rodového sídla.
 // enu //
 In many cities, a resistance movement is emerging. Decades later, residents have not adopted the new laws, and they are beginning to show discontent. So far, it is not an organized movement, but rather separate cells of resistance appearing underground.
+The present duke of Tabit, Arik III., tooks rule after his father dies on hunt. He immediately start with reconstruction of the family's castle.
 
 1453
 // csy //
@@ -582,6 +590,16 @@ The Church of the Order was founded by the survivors of the Echelon Shelter. The
 Bindeři původně vznikli jako samostatná organizace názvislá na Řádu. Skupina zapálených věřících se chtěla oddat studiu doktríny Řádu v ústraní. Založili proto mnišskou skupinu Binderů, zasvěcených studiu učení Řádu. Jako své sídlo si vybrali odlehlou oupštěnou školu na okraji severních pustin. Drsné podnebí a neustálé útoky mutantů zformovaly Bindery v nelítostné bojovníky. Jak jejich počty rostly, začali Bindeři rozšiřovat svůj vliv.
 Postupem času se z Binderů stala respektovaná organizace, zasvěcená ochraně obyvatel před všemi formami nepravosti. Mezi hlavní úkoly Binderů patří ochrana obyvatel před mutanty, kteří se objevili po dopadu komety. Tlupy mutantů způsobily, že jsou některé části kontinentu neobyvatelné. Bindeři proto mají ve většině měst svoji základnu, ze kterých vyrážejí na svůj lov. Činy Binderů jsou známé mezi prostými lidmi, kteří Binderům vždy rádi pomohou.
 Řád začal s Bindery spolupracovat a postupem času je začlenil do svých struktur. Bindeři si i tak zachovali velkou úroveň nezávislosti, což se odráží i v organizační struktuře Binderů. Neexistuje totiž žádná centrální autorita, každá základna je nezávislá a každý velitel základny je svým vlastním pánem. Tito velitelé se sice o důležitějších věcech radí mezi sebou, nad sebou už nemají nikoho vyššího.
+
+Hierarchie:
+1 Layman
+2 Novice
+3 Acolyte
+4 Disciple
+5 Invoker
+6 Oracle
+7 Evoker
+
 // enu //
 The Binders originally emerged as a organization independent of the Order Church. A group of ardent believers wanted to devote themselves to the study of the doctrine of the Order in seclusion. So they founded a monk group of Binders, dedicated to the study of the teachings of the Order. They chose a remote abandoned school on the edge of the northern wastelands as their headquarters. The harsh climate and constant attacks by mutants shaped the Binders into fierce fighters. As their numbers grew, the Binders began to expand their influence.
 Over time, the Binders became a respected organization, dedicated to protecting the inhabitants from all forms of iniquity. Among the Binders' main tasks is to protect the inhabitants from mutants that appeared after the comet hit. The bands of mutants made some parts of the continent uninhabitable. As a result, the Binders have their own base in most cities, from which they set out to hunt. The actions of the Binders are known among the common people, who are always happy to help the Binders.

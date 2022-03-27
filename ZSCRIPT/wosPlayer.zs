@@ -224,7 +224,7 @@ class binderPlayer : StrifePlayer {
 					If(mod=="Fire"&&currentarmor==6) {newdamage/=2;}
 					If(mod=="Fire"/*&&CountInv("LFPowerMask")>0)||*/&&currentarmor==4){}
 					Else{
-						armoramount -= damage/3;
+						armoramount -= damage/3; //vykomnetovanim se vypne damage armoru >> armor funguje jako ve falloutu nebo v hexenu
 					}
 					If(armoramount<=0) {
 						armorpower=0;
@@ -355,7 +355,7 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "Staffmagazine", 48;
 		Player.StartItem "missileLauncherMag", 8;
 		Player.StartItem "stormPistol_magazine", 12;
-		//Player.StartItem "executorRifleMagazine", 24;
+		Player.StartItem "notePlayerPersonal", 1;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
 		//  custom properties  /////////////////////////////////////////////////

@@ -100,6 +100,26 @@ actor noteBinderOrder : noteBase {
     Tag "$PDA_noteBinderOrder_Title"
 	PDA.Text "$PDA_noteBinderOrder_Text"
 }
+actor notePlayerPersonal : noteBase {
+	//$Title "note: player personal"
+    Tag "$PDA_notePlayerPersonal_Title"
+	PDA.Text "$PDA_notePlayerPersonal_Text"
+}
+actor noteLustyKolymanMaid1 : noteBase {
+	//$Title "note: lusty kolyman maid 1"
+    Tag "$PDA_noteLustyKolymanMaid1_Title"
+	PDA.Text "$PDA_noteLustyKolymanMaid1_Text"
+}
+actor noteLustyKolymanMaid2 : noteBase {
+	//$Title "note: lusty kolyman maid 2"
+    Tag "$PDA_noteLustyKolymanMaid2_Title"
+	PDA.Text "$PDA_noteLustyKolymanMaid2_Text"
+}
+actor noteLustyKolymanMaid3 : noteBase {
+	//$Title "note: lusty kolyman maid 3"
+    Tag "$PDA_noteLustyKolymanMaid3_Title"
+	PDA.Text "$PDA_noteLustyKolymanMaid3_Text"
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////

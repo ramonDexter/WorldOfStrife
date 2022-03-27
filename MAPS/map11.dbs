@@ -117,8 +117,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 7456;
-				firstvisibleline = 215;
+				caretposition = 3316;
+				firstvisibleline = 110;
 				activetab = true;
 			}
 		}

@@ -2,6 +2,7 @@ class wosRocketTurret : Actor {
     Default {
 		//$category "Monsters/WoS"
 		//$Title "rocket turret"
+        Tag "Rocket Turret";
         Radius 20;
         Height 24;
         Speed 0;

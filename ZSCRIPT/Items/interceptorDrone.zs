@@ -70,7 +70,7 @@ class interceptorDrone : actor {
 		+SPAWNFLOAT
 		+FLOAT
 
-        Tag "Interceptor Drone";
+        Tag "$T_interceptorDrone";
         Monster;
 		Species "interceptorDrone";
 		Mass 50;

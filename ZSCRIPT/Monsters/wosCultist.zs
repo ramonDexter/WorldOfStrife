@@ -2,6 +2,7 @@ class wosCultist : actor {
     Default {
 		//$category "Monsters/WoS"
 		//$Title "heretic cultist aggresive"
+        Tag "Heretic Cultist";
         Health 75;
         PainChance 200;
         DropItem "Fire";

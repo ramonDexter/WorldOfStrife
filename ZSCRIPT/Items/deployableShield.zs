@@ -610,6 +610,7 @@ class ActiveShield : actor {
 		-SOLID
 		-SHOOTABLE
 		
+		Tag "$T_DEPLSHIELD";
 		scale 0.95;
 		radius 12;
 		height 27;

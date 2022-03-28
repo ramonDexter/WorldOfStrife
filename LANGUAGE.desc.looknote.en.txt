@@ -1,0 +1,12 @@
+[en default]
+// This file contians strings used by the looknote addon describer
+// These are sample strings for debugging only, delete/replace for production. 
+DESC_LOOKNOTE_1_XX="This is the North wall.";
+DESC_LOOKNOTE_2_XX="This is the East wall.";
+DESC_LOOKNOTE_3_XX="This is the South wall.";
+DESC_LOOKNOTE_4_XX="It opens the door next to the crusher.";
+DESC_LOOKNOTE_5_XX="What is this doing here?";
+DESC_LOOKNOTE_6_XX="It is opened by the button next to the computer.";
+DESC_LOOKNOTE_DOOR1_XX="This is DOOR1.";
+DESC_LOOKNOTE_STARTAN2_XX="This is teh best texture ever!!!";
+DESC_LOOKNOTE_HEADSONASTICK_XX="Gross!";

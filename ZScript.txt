@@ -50,7 +50,12 @@ version "4.6.0"
 #include "zscript/Mechanics/PDA/PDAReaderTutorialMenu.zc"
 #include "zscript/Mechanics/PDA/PDA.zc"
 #include "zscript/Mechanics/PDA/PDADummyPDA.zc"
-
+// lookcursor by sir robin /////////////////////////////////////////////////////
+#include "zscript/mechanics/mwr_lookcursor/MWR_Cursor3d.zs"
+#include "zscript/mechanics/mwr_lookcursor/MWR_LanguageHandler.zs"
+#include "zscript/mechanics/mwr_lookcursor/MWR_Describer.zs"
+#include "zscript/mechanics/mwr_lookcursor/DefaultDescribers.zs"
+#include "zscript/mechanics/mwr_lookcursor/MWR_Lookcursor.zs"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  monsters  //////////////////////////////////////////////////////////////////

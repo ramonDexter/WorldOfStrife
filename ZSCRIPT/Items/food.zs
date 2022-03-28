@@ -106,7 +106,7 @@ class wosVineBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Vine Bottle"	
 		
-		Tag "Vine Bottle";
+		Tag "Wine Bottle";
 		height 24;
 		Inventory.PickupMessage "You picked up the Vine Bottle!";
 		Inventory.Icon "I_SVIN";

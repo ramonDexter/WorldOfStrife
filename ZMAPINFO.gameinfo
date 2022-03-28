@@ -24,7 +24,9 @@ GameInfo {
                    , "m8f_hn_BacktrackEventHandler"
 	AddEventHandlers = "DropletsEventHandler"
 	AddEventHandlers = "LowDetailHandler"
-	//AddEventHandlers = "NashMoveHandler"
+	AddEventHandlers = "MWR_LanguageHandler" //Required by DescriberProvider
+	AddEventHandlers = "MWR_DescriberProvider" //Required by LookCursorHandler
+	AddEventHandlers = "MWR_LookCursorHandler" //Required for LookCursor to function
 	
 	
 	quitsound = "silence" // Sound effects handled by message box code

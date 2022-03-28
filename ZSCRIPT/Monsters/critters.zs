@@ -13,6 +13,7 @@ class CritterBase : actor {
 ////////////////////////////////////////////////////////////////////////////////
 class wosSquirrel : CritterBase {
 	Default {
+		Tag "Squirrel";
 		Health 30;
 		Radius 8;
 		Height 28;
@@ -75,6 +76,7 @@ class Fix1 : actor {
 ////////////////////////////////////////////////////////////////////////////////
 class wosRat : CritterBase {
 	Default {
+		Tag "Rat";
 		Health 10;
 		Radius 10;
 		Height 20;
@@ -235,6 +237,7 @@ class wosRat : CritterBase {
 ////////////////////////////////////////////////////////////////////////////////
 class wosChickenCritter : CritterBase {
 	Default {
+		Tag "Chicken";
 		Health 60;
 		Radius 10;
 		Height 24;
@@ -363,6 +366,7 @@ class Feathers : actor {
 ////////////////////////////////////////////////////////////////////////////////
 class wosCrab : CritterBase {
 	Default {
+		Tag "Red Crab";
 		Health 2;
 		PainChance 0;
 		Speed 4;
@@ -416,6 +420,7 @@ class wosCrab : CritterBase {
 ////////////////////////////////////////////////////////////////////////////////
 class wosDragonFly : CritterBase {
 	Default {
+		Tag "Dragonfly";
 		scale 0.75;
 		Health 1;
 		Radius 3;
@@ -449,6 +454,7 @@ class wosDragonFly : CritterBase {
 ////////////////////////////////////////////////////////////////////////////////
 class wosFireFly : CritterBase {
 	Default {
+		Tag "Firefly";
 		scale  0.5;
 		Health 1;
 		Radius 3;
@@ -491,6 +497,7 @@ class wosICraw : actor {
 		+SHOOTABLE
 		//+FRIENDLY
 		
+		Tag "Raven";
 		health 10;
 		radius 8;
 		height 24;

@@ -239,7 +239,7 @@ class wosEnergyKit : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "EnergyKit";
+		Tag "Energy Kit";
 		Inventory.Icon "I_MENK";
 		Inventory.PickupMessage "You picked up the energy kit.";
 		Mass energyKitWeight;
@@ -370,7 +370,7 @@ class wosPhosphorusGrenadeBox : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Explosive Grenade Box";
+		Tag "Phosphorous Grenade Box";
 		Inventory.Icon "I_LPHG";
 		Inventory.PickupMessage "You picked up the Phosphorus-Grenade Box.";
 		Mass fireGRboxWeight;

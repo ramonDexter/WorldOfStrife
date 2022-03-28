@@ -19,6 +19,11 @@ addMenuKey "Toggle Journal" show_journal
 alias show_journal "pukename journal"
 DefaultBind "J" "show_journal"
 
+addmenukey "Look" +look
+defaultbind Q +look
+alias +look "netevent mwr_lookcursor_on"
+alias -look "netevent mwr_lookcursor_off"
+
 //AddMenuKey "Kick" +User1
 
 //addMenuKey "Throw explosive grenade" throwExplosiveGrenade

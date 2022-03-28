@@ -26,7 +26,7 @@ class wosBlasterTurret : wosPickup {
 		+inventory.alwayspickup;
 		+FLOORCLIP;
 		
-		Tag "Blaster Turret";
+		Tag "Mauler Turret";
 		Inventory.PickupMessage "You picked up the Blaster Turret.";
 		Inventory.Icon "I_STTR";		
 		radius 10;
@@ -50,6 +50,7 @@ class blasterTurretSet : actor {
         +CANBOUNCEWATER
         +Missile
 
+        Tag "Mauler Turret";
         DontHurtShooter;
         Radius 10;
         Height 8;

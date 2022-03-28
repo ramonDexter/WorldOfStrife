@@ -133,6 +133,7 @@ class SwarmerMite : actor
 		+USEBOUNCESTATE
 		+DROPOFF
 		
+		Tag "Active Swarmers Mite";
 		Radius 2;
 		Height 2;
 		Speed 12;

@@ -8,6 +8,7 @@ class wosPiggy : actor {
     Default {
         //$Category "Other NPCs/WoS"
         //$Title "piggy - prase"
+        Tag "Piggy";
         Monster;
         health 30;
 		radius 12;

@@ -807,10 +807,10 @@ F_POISONBOLTS = "You picked up the Poison Bolts!";
 T_BOXOFBULLETS = "Box of Bullets";
 F_BOXOFBULLETS = "You picked up the Box of Bullets!";
 
-T_ENERGYPOD = "Energypod";
+T_ENERGYPOD = "Energy pod";
 F_ENERGYPOD = "You picked up the Energypod!";
 
-T_ENERGYPODPACK = "Energypod Pack";
+T_ENERGYPODPACK = "Energy pod Pack";
 F_ENERGYPODPACK = "You picked up the Energypod Pack!";
 
 T_ENERGYPACK = "Energypack";
@@ -933,7 +933,7 @@ T_wosPitFiend = "Pit Fiend";
 T_wosPlagueFiend = "Plague Fiend";
 T_MiniDragon = "Drake";
 T_ascSerpentFly = "Serpent Fly";
-TAG_ascImpFlesh = "Green Flyer";
+TAG_ascImpFlesh = "Red Flyer";
 OBI_ascImpFlesh = "%o was bitten by a Green Flyer.";
 TAG_ShieldRebel = "Shield Heretic";
 TAG_spider_leader = "Spider Leader";
@@ -951,13 +951,15 @@ TAG_MiniSentinel = "Mini Sentinel";
 TAG_Paladin = "Paladin";
 TAG_binderNPC = "Binder";
 TAG_shootingStalker = "Advanced Stalker";
+T_NUCLEARMUTANT = "Nuclear Mutant";
+T_wosLiquidator = "Liquidator";
 
 ////////////////////////////////////////////////////////////////////////////////
 
 	
 	
 // RANDOM CONVERSATIONS ////////////////////////////////////////////////////////
-TXT_RANDOM_INQUISITOR_01 = "\c[white]Hello Tobias, what a beautiful day! Have you slept well?";
+TXT_RANDOM_INQUISITOR_01 = "\c[white]Hello Arius, what a beautiful day! Have you slept well?";
 
 
 
@@ -1152,7 +1154,7 @@ PDA_noteSHminesReport_TEXT = 	"\c[yellow]Silent Hills Mines report\n"
 								"- Miners reported repeating attacks from some spiders that inhabit one of the cave openings. Might need to call the Binders to clean the mines.\n"
 								"- Explosive material stocks are near depletion. Urgent replenish requested at TekGuild on 13.6., no reply yet.\n";
 
-PDA_noteSHbindersOath_TITLE = "Binder's Oath";
+PDA_noteSHbindersOath_TITLE = "Binders Oath";
 PDA_noteSHbindersOath_TEXT = "\c[yellow]Binder's Oath\n"
 								"-------------------------------\n"
 								"\c[white]I swear to serve the Binder Order and the father with all my mind and might.\n"
@@ -1278,7 +1280,7 @@ PDA_notePlayerPersonal_Text = 	"\c[yellow]Personal ID\n"
 								"\c[white]Arius Augurius Zeno was born in 1453 in Silent Hills. Zeno attended school in Silent Hills, after school attended TekGuild university in Millport. Zeno joined the Binder order in 1473. His exceptional skills allowed him to quickly raise ranks to the rank of Disciple, which gains him full Binder authority.\n"
 								"Arius Augurius Zeno is a faithful follower of the Church of the Order. Zeno recevied his confirmation on his age of 7 in Silent Hills temple from the hands of local Bishop. His service in the Binder order show his true dedication to the Church of the Order.";
 
-PDA_noteLustyKolymanMaid1_Title = "Lusty Kolyman Maid v.1";
+PDA_noteLustyKolymanMaid1_Title = "Lusty Kolyman Maid v1";
 PDA_noteLustyKolymanMaid1_Text = 	"\c[yellow]Lusty Kolyman Maid v.1\n"
 									"-------------------------------\n"
 									"\c[yellow]ACT IV, SCENE III, CONTINUED\n\n"
@@ -1294,7 +1296,7 @@ PDA_noteLustyKolymanMaid1_Text = 	"\c[yellow]Lusty Kolyman Maid v.1\n"
 									"\c[yellow]Crantius Colto:\c[white] Plenty of time, my sweet. Plenty of time...\n\n"
 									"\c[yellow]END OF ACT IV, SCENE III\n";
 
-PDA_noteLustyKolymanMaid2_Title = "Lusty Kolyman Maid v.2";
+PDA_noteLustyKolymanMaid2_Title = "Lusty Kolyman Maid v2";
 PDA_noteLustyKolymanMaid2_Text = 	"\c[yellow]Lusty Kolyman Maid v.2\n"
 									"-------------------------------\n"
 									"\c[yellow]ACT VII, SCENE II, CONTINUED\n\n"
@@ -1311,7 +1313,7 @@ PDA_noteLustyKolymanMaid2_Text = 	"\c[yellow]Lusty Kolyman Maid v.2\n"
 									"\c[yellow]END OF ACT VII, SCENE II\n";
 
 
-PDA_noteLustyKolymanMaid3_Title = "Lusty Kolyman Maid v.3";
+PDA_noteLustyKolymanMaid3_Title = "Lusty Kolyman Maid v3";
 PDA_noteLustyKolymanMaid3_Text = 	"\c[yellow]Lusty Kolyman Maid v.3\n"
 									"-------------------------------\n"
 									"\c[yellow]ACT X, SCENE IV, CONTINUED\n\n"

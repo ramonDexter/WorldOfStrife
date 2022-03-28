@@ -101,6 +101,7 @@ class SpringMineActive : actor
 		+NOCLIP
 		+PAINLESS
 		
+		Tag "$T_SPRINGMINE";
 		Radius 10;
 		Height 5;
 		Mass 1000000;

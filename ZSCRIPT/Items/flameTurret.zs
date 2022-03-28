@@ -73,6 +73,7 @@ class FlameTurretEngage : actor
 		+MOVEWITHSECTOR
 		+BRIGHT
 		
+		Tag "$T_FLAMETURRET";
 		Radius 12;
 		Height 40;
 		Health 100;
@@ -115,6 +116,7 @@ class FlameTurretDummy : actor
 		+MOVEWITHSECTOR
 		+BRIGHT
 		
+		Tag "$T_FLAMETURRET";
 		Radius 12;
 		Height 3;		
 		ReactionTime 8;

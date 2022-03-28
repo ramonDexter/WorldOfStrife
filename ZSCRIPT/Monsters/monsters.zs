@@ -1418,6 +1418,7 @@ class ascImpFlesh : actor {
 class wosLoremasterHeretic_base : Loremaster {
 	Default {
 		//$category "Monsters/WoS"
+		Tag "Heretic Loremaster";
 	}
 	States {
 		Death:

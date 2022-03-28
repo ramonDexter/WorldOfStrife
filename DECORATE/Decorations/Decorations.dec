@@ -7,6 +7,7 @@ actor rangerHelmDummy 21001
 	+SOLID
 	+NOGRAVITY
 
+	Tag "Binder Helmet"
 	Height 16
 	Radius 8
 
@@ -25,6 +26,7 @@ actor rangerArmor1Dummy 21002
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
+	Tag "$T_CYBERARMOR1"
 	Height 16
 	Radius 8
 
@@ -43,6 +45,7 @@ actor rangerArmor2Dummy 21003
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
+	Tag "$T_CYBERARMOR2"
 	Height 16
 	Radius 8
 
@@ -61,6 +64,7 @@ actor dummyHyposprej 21004
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
+	Tag "$T_HYPOSPREJ"
 	Height 4
 	Radius 8
 
@@ -79,6 +83,7 @@ actor dummyKombopak 21005
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
+	Tag "$T_KOMBOPACK"
 	Height 4
 	Radius 8
 	States
@@ -96,6 +101,7 @@ actor dummyInstaHeal 21006
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
+	Tag "$T_INSTALEK"
 	Height 4
 	Radius 8
 	States
@@ -113,6 +119,7 @@ actor medicalCrab2 21007
 	+SpawnCeiling
 	+nogravity
 	-Solid
+	Tag "Medical Crab"
 	height 40
 	radius 16
 	
@@ -130,6 +137,7 @@ actor RelicDummy 21008
 	//$Title "deco Relic"
 	+useSpecial
 	+Solid
+	Tag "Holy Relic"
 	height 16
 	radius 8
 	States
@@ -147,6 +155,7 @@ actor CommunicatorDummy 21009
 	+useSpecial
 	+Solid
 	+NOGRAVITY
+	Tag "$TAG_COMMUNICATOR"
 	height 8
 	radius 8
 	States
@@ -164,6 +173,7 @@ actor TargetterDummy 21010
 	+useSpecial
 	+Solid
 	+NOGRAVITY
+	Tag "$TAG_TARGETER"
 	height 8
 	radius 8
 	States
@@ -181,6 +191,7 @@ actor scannerDummy 21011
 	+useSpecial
 	+Solid
 	+NOGRAVITY
+	Tag "$TAG_SCANNER"
 	height 8
 	radius 8
 	States
@@ -196,6 +207,7 @@ ACTOR bloodKapacka1 21012
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 1"
 	+SOLID
+	Tag "Drip pole"
 	scale .5
 	height 64
 	radius 12
@@ -212,6 +224,7 @@ ACTOR bloodKapacka2 21013
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 2"
 	+SOLID
+	Tag "Drip pole"
 	scale .5
 	height 64
 	radius 12
@@ -228,6 +241,7 @@ ACTOR bloodCandle
 	
 	+SOLID
 	//scale .6
+	Tag "Candle"
 	radius 10
 	height 28
 	States
@@ -242,6 +256,7 @@ actor bloodCandleFire {
 	+NOGRAVITY
 	+DONTTHRUST
 	+FORCEYBILLBOARD
+	Tag "Candle"
 	scale 0.55
 	States {
 		Spawn:
@@ -255,6 +270,7 @@ actor modelBloodCandle : bloodCandle replaces bloodCandle 21014 {
 	+SOLID
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Candle"
 	radius 4
 	height 16
 	
@@ -272,6 +288,7 @@ actor voxTortureRack 21015
 	+Solid
 	+DontThrust
 	+UseSpecial
+	Tag "Torture rack"
 	height 48
 	radius 16
 	States
@@ -289,6 +306,7 @@ actor voxPillory 21016
 	+Solid
 	+DontThrust
 	+UseSpecial
+	Tag "Pillory"
 	height 48
 	radius 16
 	States
@@ -306,6 +324,7 @@ actor voxHeadCrusher 21017
 	+Solid
 	+DontThrust
 	+UseSpecial
+	Tag "Head crusher"
 	height 50
 	radius 16
 	States
@@ -323,6 +342,7 @@ actor voxGuillotine 21018
 	+Solid
 	+DontThrust
 	+UseSpecial
+	Tag "Guillotine";
 	radius 10
 	height 64
 	States
@@ -341,6 +361,7 @@ actor skynetFire1  21019
 	-SOLID
 	+UseSpecial
 	
+	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
@@ -363,6 +384,7 @@ actor skynetFire2  21020
 	-SOLID
 	+UseSpecial
 	
+	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
@@ -385,6 +407,7 @@ actor skynetFire3  21021
 	-SOLID
 	+UseSpecial
 	
+	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
@@ -403,6 +426,7 @@ actor skynetBones1  21022
 {
   //$Category "Decorations/WoS"
   //$Title "skynet Bones 1"
+  Tag "Bones"
   scale 1
   Radius 16
   Height 8
@@ -420,6 +444,7 @@ actor skynetBones2  21023
 {
   //$Category "Decorations/WoS"
   //$Title "skynet Bones 2"
+  Tag "Bones"
   scale 1
   Radius 16
   Height 18
@@ -437,6 +462,7 @@ actor skynetBones3  21024
 {
   //$Category "Decorations/WoS"
   //$Title "skynet Bones 3"
+  Tag "Bones"
   scale 1
   Radius 16
   Height 18
@@ -455,6 +481,7 @@ Actor FirePitSmall 21025
 {
 	//$Category "Decorations/WoS"
 	//$Title "Fire small"
+	Tag "Fireplace"
 	scale 0.5
 	height 16
 	radius 16
@@ -482,6 +509,7 @@ actor voxMicroscrope2 21026
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Microscope"
 	height 8
 	radius 8
 	States
@@ -500,6 +528,7 @@ actor voxPillarDrill 21027
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Pillar drill"
 	height 64
 	radius 16
 
@@ -519,6 +548,7 @@ actor voxStojanovaBruska 21028
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Grinder"
 	height 40
 	radius 16
 	
@@ -538,6 +568,7 @@ actor voxChicken 21029
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Grilled chicken"
 	height 16
 	radius 12
 	//scale 0.35
@@ -558,6 +589,7 @@ actor voxSoustruh2 29198
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Lathe"
 	height 32
 	radius 16
 	States
@@ -577,6 +609,7 @@ ACTOR blueRelicDecoration 21030
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	Tag "Holy Relic"
 	Radius 10
 	Height 16
 	
@@ -597,6 +630,7 @@ ACTOR HPipe1 21031
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
+	Tag "Piping"
 	Radius 16
 	Height 128
 
@@ -616,6 +650,7 @@ ACTOR HPipe2 21032
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
+	Tag "Piping"
 	Radius 16
 	Height 128
 	
@@ -635,6 +670,7 @@ ACTOR HPipe3 21033
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
+	Tag "Piping"
 	Radius 16
 	Height 128	
  
@@ -654,6 +690,7 @@ ACTOR HPipe4 21034
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
+	Tag "Piping"
 	Radius 16
 	Height 128
 	
@@ -673,6 +710,7 @@ ACTOR HPipe5 21035
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
+	Tag "Piping"
 	Radius 16
 	Height 128
 	
@@ -700,6 +738,7 @@ ACTOR falloutCorn1 : falloutCornBase 21036
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 1"
+	Tag "Corn plant"
 	
 	States
 	{
@@ -713,6 +752,7 @@ ACTOR falloutCorn2 : falloutCornBase 21037
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 2"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -725,6 +765,7 @@ ACTOR falloutCorn3 : falloutCornBase 21038
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 3"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -736,6 +777,7 @@ ACTOR falloutCorn4 : falloutCornBase 21039
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 4"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -747,6 +789,7 @@ ACTOR falloutCorn5 : falloutCornBase 21040
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 5"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -758,6 +801,7 @@ ACTOR falloutCorn6 : falloutCornBase 21041
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 6"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -769,6 +813,7 @@ ACTOR falloutCorn7 : falloutCornBase 21042
 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 7"
+	Tag "Corn plant"
 	States
 	{
 		Spawn:
@@ -786,6 +831,7 @@ actor MMofficeChair 21043
 	//$Title "office chair"
 	
 	+SOLID
+	Tag "Office chair"
 	height 16
 	radius 12
 	
@@ -808,6 +854,7 @@ actor MM_camera_1 21044
 	-SOLID
 	+NOGRAVITY
 	
+	Tag "security camera"
 	radius 10
 	height 20
 	
@@ -830,6 +877,7 @@ Actor MM_camera_2 21045
 	-SOLID
 	+NOGRAVITY
 	
+	Tag "security camera"
 	radius 10
 	height 21
 	
@@ -851,6 +899,7 @@ Actor MM_ammoCrate_01 21046
 	+usespecial
 	+NOGRAVITY
 	
+	Tag "ammo crate"
 	radius 8
 	height 18
 	//scale 0.6
@@ -872,6 +921,7 @@ Actor MM_ammoCrate_02 21047
 	+Solid
 	+usespecial
 	
+	Tag "ammo crate"
 	radius 8
 	height 18
 	scale 0.6
@@ -893,6 +943,7 @@ Actor MM_bag_01 21048
 	-solid
 	+usespecial
 	
+	Tag "cloth bag"
 	radius 8
 	height 8
 	scale 0.6
@@ -913,6 +964,7 @@ Actor MM_bag_02 21049
 	-solid
 	+usespecial
 	
+	Tag "cloth bag"
 	radius 8
 	height 8
 	scale 0.6
@@ -933,6 +985,7 @@ Actor MM_box_01 21050
 	+solid
 	+usespecial
 	
+	Tag "box"
 	radius 10
 	height 12
 	scale 0.7
@@ -953,6 +1006,7 @@ Actor MM_box_02 21051
 	+solid
 	+usespecial
 	
+	Tag "box"
 	radius 10
 	height 12
 	scale 0.7
@@ -970,6 +1024,7 @@ Actor MM_cactus 21052
 	//$Category "Decorations/MM stuff"
 	//$Title "cactus in pot"
 	
+	Tag "cactus in pot"
 	radius 16
 	height 36
 	
@@ -1068,6 +1123,7 @@ Actor MM_food_06 21058
 	+NOGRAVITY
 	+DONTTHRUST
 	
+	Tag "pot small"
 	radius 8
 	height 8
 	
@@ -1086,6 +1142,7 @@ Actor MM_food_07 21059
 	+NOGRAVITY
 	+DONTTHRUST
 	
+	Tag "pot large"
 	radius 8
 	height 8
 	
@@ -1106,6 +1163,7 @@ Actor MM_gadget_01 21060
 	+NOGRAVITY
 	+DONTTHRUST
 	
+	Tag "table lamp"
 	radius 4
 	height 18
 	//scale 0.8
@@ -1173,6 +1231,7 @@ actor model_MM_gadget_03 : MM_gadget_03 replaces MM_gadget_03 21062 {
 	//$Title "gadget 3"
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "holodisplay"
 	States {
 		Spawn:
 			MGD3 A -1 Bright NODELAY A_SpawnItemEx("mm_gadget_03_holodisplay", 0, 0, 6)
@@ -1213,6 +1272,7 @@ actor model_MM_gadget_04 : MM_gadget_04 replaces MM_gadget_04 21063 {
 	//Default	
 	//$Category "Decorations/MM stuff"
 	//$Title "gadget 4"
+	Tag "holodisplay"
 	States {
 		Spawn:
 			MGD4 A -1 Bright NODELAY A_SpawnItemEx("mm_gadget_04_holodisplay", 0, 0, 6)
@@ -1351,6 +1411,7 @@ Actor MM_gold 21070
 	+Solid
 	+NOGRAVITY
 	
+	Tag "mmgold"
 	radius 8
 	height 20
 	
@@ -1388,6 +1449,7 @@ Actor MM_relic 21072
 	+Solid
 	+NOGRAVITY
 	
+	Tag "golden relic"
 	radius 8
 	height 32
 	//scale 0.8
@@ -5104,6 +5166,7 @@ actor dx_klavesnice 21289 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Small Keyboard"
 	radius 4
 	height 4
 	States {
@@ -5296,6 +5359,7 @@ actor dx_klavesnice02 21301 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Keyboard"
 	radius 4
 	height 4
 	States {
@@ -5312,6 +5376,7 @@ actor dx_comp01 21302 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Computer body"
 	radius 4
 	height 4
 	States {
@@ -5328,6 +5393,7 @@ actor dx_comp02 21303 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Computer body"
 	radius 4
 	height 4
 	States {
@@ -5344,6 +5410,7 @@ actor dx_compBase 21304 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5360,6 +5427,7 @@ actor dx_compKybd 21305 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5376,6 +5444,7 @@ actor dx_compB3 21306 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5392,6 +5461,7 @@ actor dx_compB4 21307 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5408,6 +5478,7 @@ actor dx_compB5 21308 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5424,6 +5495,7 @@ actor dx_compK3 21309 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5440,6 +5512,7 @@ actor dx_compK4 21310 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5456,6 +5529,7 @@ actor dx_compK5 21311 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -5472,6 +5546,7 @@ actor dx_compXB1 21312 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -5488,6 +5563,7 @@ actor dx_compXB2 21313 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -5504,6 +5580,7 @@ actor dx_compXK1 21314 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -5520,6 +5597,7 @@ actor dx_compXK2 21315 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -5536,6 +5614,7 @@ actor dx_compBase_mmHolo03 21316 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with holo screen"
 	radius 4
 	height 4
 	States {
@@ -5552,6 +5631,7 @@ actor dx_compBase_mmHolo04 21317 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with holo screen"
 	radius 4
 	height 4
 	States {
@@ -5568,6 +5648,7 @@ actor dx_compKybd_mmHolo03 21318 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with holo screen"
 	radius 4
 	height 4
 	States {
@@ -5584,6 +5665,7 @@ actor dx_compKybd_mmHolo04 21319 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with holo screen"
 	radius 4
 	height 4
 	States {
@@ -5854,6 +5936,7 @@ actor wosD_dex_Skull 21336 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "human skull"
 	radius 4
 	height 4
 	States {
@@ -5869,6 +5952,7 @@ actor wosD_dex_plant2 21337 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "decorative plant"
 	radius 8
 	height 40
 	States {
@@ -5884,6 +5968,7 @@ actor wosD_dex_plant3 21338 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "decorative plant"
 	radius 4
 	height 4
 	States {
@@ -5899,6 +5984,7 @@ actor wosD_dex_basket 21339 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "wicker basket"
 	radius 4
 	height 4
 	States {
@@ -5914,6 +6000,7 @@ actor wosD_dex_bookOpen 21340 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "open book"
 	radius 4
 	height 4
 	States {
@@ -5929,6 +6016,7 @@ actor wosD_dex_cactus1 21341 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "cactus"
 	radius 8
 	height 96
 	States {
@@ -5959,6 +6047,7 @@ actor wosD_dex_cart 21343 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "metal cart"
 	radius 16
 	height 32
 	States {
@@ -5974,6 +6063,7 @@ actor wosD_dex_compSecurity 21344 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "security terminal"
 	radius 4
 	height 12
 	States {
@@ -5989,6 +6079,7 @@ actor wosD_dex_fireExtinguisher 21345 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "fire extinguisher"
 	radius 4
 	height 4
 	States {
@@ -6005,6 +6096,7 @@ actor wosD_dex_hangingChicken 21346 {
 	+NOGRAVITY
 	+DONTTHRUST
 	+SPAWNCEILING
+	Tag "hanging chicken"
 	radius 4
 	height 32
 	States {
@@ -6021,6 +6113,7 @@ actor wosD_dex_hangingPig 21347 {
 	+NOGRAVITY
 	+DONTTHRUST
 	+SPAWNCEILING
+	Tag "hanging pig"
 	radius 4
 	height 32
 	States {
@@ -6036,6 +6129,7 @@ actor wosD_dex_lamp1 21348 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "bed lamp"
 	radius 4
 	height 4
 	States {
@@ -6051,6 +6145,7 @@ actor wosD_dex_lamp3 21349 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "table lamp"
 	radius 4
 	height 4
 	States {
@@ -6066,6 +6161,7 @@ actor wosD_dex_microscope 21350 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "microscope"
 	radius 4
 	height 12
 	States {
@@ -6082,6 +6178,7 @@ actor wosD_dex_shopLight 21351 {
 	+NOGRAVITY
 	+DONTTHRUST
 	+SPAWNCEILING
+	Tag "shop light"
 	radius 4
 	height 16
 	States {
@@ -6097,6 +6194,7 @@ actor wosD_dex_showerFaucet 21352 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "shower faucet"
 	radius 4
 	height 4
 	States {
@@ -6112,6 +6210,7 @@ actor wosD_dex_showerHead 21353 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "shower head"
 	radius 4
 	height 4
 	States {
@@ -6127,6 +6226,7 @@ actor wosD_dex_statueLion 21354 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Lion statue"
 	radius 28
 	height 96
 	States {
@@ -6142,6 +6242,7 @@ actor wosD_dex_tad 21355 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "TAD"
 	radius 4
 	height 4
 	States {
@@ -6157,6 +6258,7 @@ actor wosD_dex_toilet1 21356 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "toilet"
 	radius 8
 	height 24
 	States {
@@ -6172,6 +6274,7 @@ actor wosD_dex_toilet2 21357 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "pissoir"
 	radius 4
 	height 4
 	States {
@@ -6187,6 +6290,7 @@ actor wosD_dex_trashcan2 21358 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "trash can"
 	radius 8
 	height 24
 	States {
@@ -6202,6 +6306,7 @@ actor wosD_dex_trashcan3 21359 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "trash can"
 	radius 8
 	height 24
 	States {
@@ -6217,6 +6322,7 @@ actor wosD_dex_waterCooler 21360 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "water cooler"
 	radius 8
 	height 24
 	States {
@@ -6232,6 +6338,7 @@ actor wosD_dex_wineBottle 21361 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "wine bottle"
 	radius 4
 	height 4
 	States {
@@ -6247,6 +6354,7 @@ actor wosD_dex_smallBoat 21362 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "small boat"
 	radius 16
 	height 16
 	States {
@@ -6433,6 +6541,7 @@ actor dx_compB6 21374 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -6449,6 +6558,7 @@ actor dx_compK6 21375 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer"
 	radius 4
 	height 4
 	States {
@@ -6465,6 +6575,7 @@ actor dx_compXB3 21376 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -6481,6 +6592,7 @@ actor dx_compXB4 21377 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -6497,6 +6609,7 @@ actor dx_compXK3 21378 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -6513,6 +6626,7 @@ actor dx_compXK4 21379 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 4
 	height 4
 	States {
@@ -6635,6 +6749,7 @@ actor wosD_desuExComputerPersonal 21387 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Personal computer with large screen"
 	radius 12
 	height 24
 	States {
@@ -6771,6 +6886,7 @@ actor wosD_dexOfficeChair 21396 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "office chair"
 	radius 12
 	height 32
 	States {
@@ -7158,6 +7274,7 @@ actor wosD_dex_statueLion2 21423 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Lion statue"
 	radius 28
 	height 96
 	States {
@@ -7173,6 +7290,7 @@ actor wosD_dexComputerPublick 21424 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "Public computer"
 	radius 12
 	height 64
 	States {

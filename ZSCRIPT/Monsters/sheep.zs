@@ -8,6 +8,7 @@ class wosSheep : actor {
     Default {
         //$Category "Other NPCs/WoS"
         //$Title "sheep - ovce"
+        Tag "Sheep";
         Monster;
         Health 50;
         Radius 30;

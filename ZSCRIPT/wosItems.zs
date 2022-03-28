@@ -277,7 +277,7 @@ class goldChest50_item : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Chest with coins (50)";
+		Tag "Chest with coins";
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "You picked up the Chest with coins.";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -304,7 +304,7 @@ class goldChest100_item : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Chest with coins (100)";
+		Tag "Chest with coins";
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "You picked up the Chest with coins.";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -331,7 +331,7 @@ class goldChest250_item : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Chest with coins (250)";
+		Tag "Chest with coins";
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "You picked up the Chest with coins.";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -358,7 +358,7 @@ class goldChest500_item : wosPickup {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Chest with coins (500)";
+		Tag "Chest with coins";
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "You picked up the Chest with coins.";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -471,7 +471,7 @@ class hereticDatapad1 : CustomInventory
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Heretic Datapad #1";
+		Tag "Heretic Datapad 1";
 		inventory.icon "I_HDPD";
 		inventory.amount 1;
 		inventory.maxamount 1;

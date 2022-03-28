@@ -80,7 +80,7 @@ class wosgrenadeF_3 : Custominventory {
 	Default {
 		//$Category "Ammunition/WoS"
 		//$Title "Grenade Fire THRW 3x"
-		Tag "Fire Grenades";
+		Tag "Phosphorous Grenades";
 		radius 10;
 		height 10;
 		-inventory.invbar

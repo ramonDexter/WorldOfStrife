@@ -342,7 +342,7 @@ actor voxGuillotine 21018
 	+Solid
 	+DontThrust
 	+UseSpecial
-	Tag "Guillotine";
+	Tag "Guillotine"
 	radius 10
 	height 64
 	States
@@ -6643,6 +6643,7 @@ actor wosD_dxPicnicTable 21380 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "picnic table"
 	radius 32
 	height 28
 	States {
@@ -6659,6 +6660,7 @@ actor wosD_dxBeerTap 21381 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "beer tap"
 	radius 8
 	height 16
 	States {

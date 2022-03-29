@@ -60,10 +60,10 @@ OptionMenu "wosDEBUGmenu" {
 	Command "50% accuracy", "puke 4202 5"
 	Command "50% stamina", "puke 4203 5"
 	//Command "Binder pack", "puke 4201"
-	Command "Binder pack", "netevent give_binderPackRegular" //zscript approach
+	Command "Binder pack", "netevent give_binderPackRegular" //zscript approach	
+	Command "Binder pack light", "netevent give_binderpackLight"
 	Command "Shouldergun", "netevent give_shouldergun"
 	//Command "Binder pack light", "puke 4206"
-	Command "Binder pack light", "netevent give_binderpackLight"
 	//Command "Powerups", "puke 939"
 	StaticText ""
 	StaticText ":: M A P S ::"

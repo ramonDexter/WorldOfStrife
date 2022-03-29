@@ -157,6 +157,9 @@ class dummy_explosion : actor {
 
 // light replacers - to brighten up ////////////////////////////////////////////
 class wos_bright_techlampbrass : techlampbrass replaces techlampbrass {
+	Default {
+		Tag "techlamp brass";
+	}
 	States {
 		Spawn:
 			TECH B -1 Bright light("TLLIGHT2");

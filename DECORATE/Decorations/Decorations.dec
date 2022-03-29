@@ -1157,7 +1157,7 @@ Actor MM_gadget_01 21060
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 1"
+	//$Title "gadget 1 table lamp"
 	
 	+Solid
 	+NOGRAVITY
@@ -1179,12 +1179,12 @@ Actor MM_gadget_02 21061
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 2"
+	//$Title "gadget 2 green flask"
 	
 	-Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "green flask"
 	radius 8
 	height 16
 	
@@ -1219,6 +1219,7 @@ actor mm_gadget_03_holodisplay {
 	-SOLID
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "holodisplay"
 	States {
 		Spawn:
 			MG3D A -1 Bright Light("gadget3light")
@@ -1228,7 +1229,7 @@ actor mm_gadget_03_holodisplay {
 actor model_MM_gadget_03 : MM_gadget_03 replaces MM_gadget_03 21062 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 3"
+	//$Title "gadget 3 holodisplay"
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "holodisplay"
@@ -1262,6 +1263,7 @@ actor mm_gadget_04_holodisplay {
 	-SOLID
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "holodisplay"
 	States {
 		Spawn:
 			MG4D A -1 Bright Light("gadget3light")
@@ -1271,7 +1273,7 @@ actor mm_gadget_04_holodisplay {
 actor model_MM_gadget_04 : MM_gadget_04 replaces MM_gadget_04 21063 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 4"
+	//$Title "gadget 4 holodisplay"
 	Tag "holodisplay"
 	States {
 		Spawn:
@@ -1283,12 +1285,12 @@ Actor MM_gadget_05 21064
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 5"
+	//$Title "gadget 5 pocket radio"
 	
 	-Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "pocket radio"
 	radius 8
 	height 16
 	
@@ -1303,12 +1305,12 @@ Actor MM_gadget_06 21065
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 6"
+	//$Title "gadget 6 dual controller"
 	
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "dual controller"
 	radius 16
 	height 20
 	scale 0.7
@@ -1324,12 +1326,12 @@ Actor MM_gadget_07 21066
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 7"
+	//$Title "gadget 7 glass dome"
 	
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "glass dome"
 	radius 16
 	height 27
 	
@@ -1344,12 +1346,12 @@ Actor MM_gadget_08 21067
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 8"
+	//$Title "gadget 8 holodisplay"
 	
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "holodisplay"
 	radius 12
 	height 8
 	
@@ -1364,12 +1366,12 @@ Actor MM_gadget_09 21068
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget 9"
+	//$Title "gadget 9 energy storage"
 	
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "energy storage"
 	radius 16
 	height 27
 	scale 0.8
@@ -1385,13 +1387,13 @@ Actor MM_gadget_10 21069
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "gadget I"
+	//$Title "gadget 10 road block"
 	//light defined in main.gldefs
 	
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "road block"
 	radius 8
 	height 40
 	
@@ -1504,7 +1506,7 @@ Actor MM_stuff_01 21075
 	//$Title "device 1"
 	
 	+Solid
-	
+	tag "device"
 	radius 8
 	height 16
 	
@@ -1522,6 +1524,7 @@ Actor MM_stuff_02 21076
 	//$Title "device 2"
 	
 	+Solid
+	tag "device"
 	
 	radius 8
 	height 16
@@ -1540,6 +1543,7 @@ Actor MM_stuff_03 21077
 	//$Title "device 3"
 	
 	+Solid
+	tag "device"
 	
 	radius 8
 	height 16
@@ -1560,7 +1564,7 @@ Actor MM_stuff_04 21078
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "bottle"
 	radius 8
 	height 16
 	
@@ -1578,7 +1582,7 @@ Actor MM_stuff_05 21079
 	//$Title "stuff 1"
 	
 	-Solid
-	
+	tag "medical stuff"
 	radius 8
 	height 8
 	
@@ -1596,6 +1600,7 @@ Actor MM_stuff_06 21080
 	//$Title "stuff 2"
 	
 	-Solid
+	tag "medical stuff"
 	
 	radius 8
 	height 8
@@ -1614,6 +1619,7 @@ Actor MM_stuff_07 21081
 	//$Title "stuff 3"
 	
 	-Solid
+	tag "medical stuff"
 	
 	radius 8
 	height 8
@@ -1634,7 +1640,7 @@ Actor MM_stuff_08 21082
 	-Solid
 	+spawnceiling
 	+nogravity
-	
+	tag "kitchen hanger"
 	radius 16
 	height 37
 	
@@ -1654,7 +1660,7 @@ Actor MM_stuff_09 21083
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "bottle"
 	radius 8
 	height 16
 	
@@ -1674,7 +1680,7 @@ Actor MM_stuff_10 21084
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "bottle"
 	radius 8
 	height 16
 	
@@ -1694,7 +1700,7 @@ Actor MM_stuff_11 21085
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "bottle"
 	radius 8
 	height 16
 	
@@ -1714,7 +1720,7 @@ Actor MM_stuff_12 21086
 	+Solid
 	+NOGRAVITY
 	+DONTTHRUST
-	
+	tag "bottle"
 	radius 8
 	height 16
 	
@@ -1732,6 +1738,7 @@ Actor leather_boots : RebelBoots 21087
 	//$Category "Decorations/WoS"
 	//$Title "boots leather"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "leather boots"
 	Translation "16:31=206:220"
 }
@@ -1742,6 +1749,7 @@ Actor green_boots : RebelBoots 21088
 	//$Category "Decorations/WoS"
 	//$Title "boots green"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "leather boots" 
 	Translation "16:31=48:63"
 }
@@ -1752,6 +1760,7 @@ Actor bronze_boots : RebelBoots 21089
 	//$Category "Decorations/WoS"
 	//$Title "boots bronze"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "leather boots"
 	Translation "16:31=80:95"
 }
@@ -1761,6 +1770,7 @@ Actor green_shirt : RebelShirt 21090
 	//$Category "Decorations/WoS"
 	//$Title "shirt green"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "linen shirt"
 	Translation "128:143=96:111"
 }
@@ -1770,6 +1780,7 @@ Actor blue_shirt : RebelShirt 21091
 	//$Category "Decorations/WoS"
 	//$Title "shirt blue"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "linen shirt"
 	Translation "128:143=112:127"
 }
@@ -1779,6 +1790,7 @@ Actor azure_shirt : RebelShirt 21092
 	//$Category "Decorations/WoS"
 	//$Title "shirt azure"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "linen shirt"
 	Translation "128:143=144:159"
 }
@@ -1788,6 +1800,7 @@ Actor bronze_shirt : RebelShirt 21093
 	//$Category "Decorations/WoS"
 	//$Title "shirt bronze"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "linen shirt"
 	Translation "128:143=80:95"
 }
@@ -1797,6 +1810,7 @@ Actor khaki_shirt : RebelShirt 21094
 	//$Category "Decorations/WoS"
 	//$Title "shirt khaki"
 	+NOGRAVITY
+	-NOBLOCKMAP
 	tag "linen shirt"
 	Translation "128:143=48:63"
 }
@@ -1847,7 +1861,7 @@ Actor voxGateControls : Piston 21097
 	//Default
 	//$Category "Decorations/WoS"
 	//$Title "vox Piston"
-	
+	tag "piston"
 	Speed 0
 	
 	States
@@ -2471,10 +2485,10 @@ actor officeChair2 21130
 actor gizmo01 21131
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 01"
+	//$Title "gizmo 01 pocket map"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "pocket map"
 	radius 8
 	height 8
 	//scale 0.35
@@ -2489,10 +2503,10 @@ actor gizmo01 21131
 actor gizmo02 21132
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 02"
+	//$Title "gizmo 02 charger"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "charger"
 	radius 8
 	height 8
 	//scale 0.35
@@ -2507,10 +2521,10 @@ actor gizmo02 21132
 actor gizmo03 21133
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 03"
+	//$Title "gizmo 03 ring device"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "ring device"
 	radius 8
 	height 8
 	//scale 1.0
@@ -2525,10 +2539,10 @@ actor gizmo03 21133
 actor gizmo04 21134
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 04"
+	//$Title "gizmo 04 breathing apparatus"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "breathing apparatus"
 	radius 12
 	height 32
 	scale 0.8
@@ -2543,10 +2557,10 @@ actor gizmo04 21134
 actor gizmo05 21135
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 05"
+	//$Title "gizmo 05 energy canister"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "energy canister"
 	radius 8
 	height 8
 	//scale 0.8
@@ -2561,10 +2575,10 @@ actor gizmo05 21135
 actor gizmo06 21136
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 06"
+	//$Title "gizmo 06 toolbox large"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "toolbox large"
 	radius 8
 	height 8
 	//scale 0.5
@@ -2579,10 +2593,10 @@ actor gizmo06 21136
 actor gizmo07 21137
 {
 	//$Category "Decorations/gizmos"
-	//$Title "gizmo 07"
+	//$Title "gizmo 07 toolbox small"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "toolbox small"
 	radius 4
 	height 4
 	//scale 0.5
@@ -2600,7 +2614,7 @@ actor gizmo08 21138
 	//$Title "gizmo 08"
 	-SOLID
 	+NOGRAVITY
-	
+	tag "first aid kit"
 	radius 4
 	height 4
 	//scale 0.5
@@ -2618,7 +2632,7 @@ actor gizmo09 21139
 	//$Title "gizmo 09"
 	-SOLID
 	+NOGRAVITY
-	
+	Tag "Food Rations I"
 	radius 4
 	height 4
 	//scale 0.5
@@ -2636,7 +2650,7 @@ actor gizmo10 21140
 	//$Title "gizmo 10"
 	-SOLID
 	+NOGRAVITY
-	
+	Tag "Food Rations II"
 	radius 4
 	height 4
 	//scale 0.5
@@ -2654,7 +2668,7 @@ actor gizmo11 21141
 	//$Title "gizmo 11"
 	-SOLID
 	+NOGRAVITY
-	
+	Tag "Food Rations III"
 	radius 4
 	height 4
 	//scale 0.5
@@ -2788,19 +2802,7 @@ actor plumbingPipe03 21148
 	}
 	
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// odtud pokracovat //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 actor sacrificedGuyX : SacrificedGuy 21149
 {
 	//$Category "Corpses"
@@ -3493,10 +3495,12 @@ actor hxnBook01 21192 {
 	//$Title "book 1"
 	
 	+solid
+	+useSpecial
 	+NOGRAVITY
 	+DONTTHRUST
+	-NOBLOCKMAP
 	radius 8
-	height 8
+	height 12
 	//scale 0.5
 	tag "book"
 	States {
@@ -3510,10 +3514,12 @@ actor hxnBook02 21193 {
 	//$Title "book 2"
 	
 	+solid
+	+useSpecial
 	+NOGRAVITY
 	+DONTTHRUST
+	-NOBLOCKMAP
 	radius 8
-	height 8
+	height 12
 	//scale 0.5
 	tag "holy book"
 	States {
@@ -3527,10 +3533,12 @@ actor hxnBook03 21194 {
 	//$Title "book 3"
 	
 	+solid
+	+useSpecial
 	+NOGRAVITY
 	+DONTTHRUST
+	-NOBLOCKMAP
 	radius 8
-	height 8
+	height 12
 	//scale 0.5
 	tag "book"
 	States {
@@ -3544,10 +3552,12 @@ actor hxnBook04 21195 {
 	//$Title "book 4"
 	
 	+solid
+	+useSpecial
 	+NOGRAVITY
 	+DONTTHRUST
+	-NOBLOCKMAP
 	radius 8
-	height 8
+	height 12
 	//scale 0.5
 	tag "book"
 	States {
@@ -4578,7 +4588,7 @@ actor strifeNightStand02 21246 {
 	+USESPECIAL
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
-	
+	Tag "night stand"
 	height 20
 	radius 16
 	
@@ -4595,7 +4605,7 @@ actor strifeNightStand03 21247 {
 	+USESPECIAL
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
-	
+	tag "wooden cabinet"
 	height 48
 	radius 16
 	
@@ -4612,7 +4622,7 @@ actor strifeNightStand04 21248 {
 	+USESPECIAL
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
-	
+	tag "small wooden cabinet"
 	height 48
 	radius 16
 	

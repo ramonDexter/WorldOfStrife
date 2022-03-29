@@ -3,7 +3,7 @@ ACTOR PushBlock 25009
 	//$Category "Decorations"
 	//$Title "Block (Pushable)"
 	//$Sprite PBLOA0
-
+	tag "pushable block"
 	radius 63
 	height 128
 	MaxStepHeight 4
@@ -27,7 +27,7 @@ ACTOR Uplink 25010
 	//$Category "Decorations"
 	//$Title "Uplink"
 	//$Sprite ULNKA0
-
+	tag "Uplink"
 	radius 16
 	height 168
 	+SOLID
@@ -45,6 +45,7 @@ ACTOR HG_core_1 25011
 	//$Category "Decorations"
 	//$Title "Core"
 	
+	tag "core"
 	+Solid
 	radius 12
 	height 38

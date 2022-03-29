@@ -104,11 +104,7 @@ class wosHyposprej : wosPickup {
 	Default {
 		//$Category "Health and Armor/WoS"
 		//$Title "Hyposprej"
-		-SOLID
-		+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS
+		
 		+INVENTORY.INVBAR
 		
 		Tag "$T_HYPOSPREJ";		
@@ -215,11 +211,7 @@ class wosKombopack : wosPickup {
 	Default {
 		//$Category "Health and Armor/WoS"
 		//$Title "Kombopak"
-		-SOLID
-		+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS
+		
 		+INVENTORY.INVBAR
 		
 		Tag "$T_KOMBOPACK";
@@ -326,11 +318,7 @@ class wosInstaLek : wosPickup {
 	Default {
 		//$Category "Health and Armor/WoS"		
 		//$Title "InstaLek"
-		-SOLID
-		+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS
+		
 		+INVENTORY.INVBAR
 		
 		Tag "$T_INSTALEK";

@@ -1041,7 +1041,7 @@ ACTOR hexTableShit1 28225
   Radius 8
   Height 16
   tag "beer stein wooden"
-  +NOBLOCKMAP
+  
   States
   {
   Spawn:
@@ -1057,7 +1057,7 @@ ACTOR hexTableShit2 28226
   Radius 8
   Height 16
   tag "beer stein glass"
-  +NOBLOCKMAP
+  
   States
   {
   Spawn:

@@ -99,6 +99,7 @@ ACTOR hexTreeDestructible 28166
 {
 	//$Category "Decorations/Hexen"
 	//$Title Tree Destructible
+	"tree destructible"
   Health 70
   Radius 15
   Height 180
@@ -140,6 +141,7 @@ ACTOR hexZLog 28167
   Radius 20
   Height 25
   +SOLID
+  tag "wooden log"
   States
   {
   Spawn:
@@ -154,6 +156,7 @@ ACTOR hexZRock1 28168
 	//$Title Rock 1
   Radius 20
   Height 16
+  tag "rock"
   States
   {
   Spawn:
@@ -168,6 +171,7 @@ ACTOR hexZRock2 28169
 	//$Title Rock 2
   Radius 20
   Height 16
+  tag "rock"
   States
   {
   Spawn:
@@ -182,6 +186,7 @@ ACTOR hexZRock3 28170
 	//$Title Rock 3
   Radius 20
   Height 16
+  tag "rock"
   States
   {
   Spawn:
@@ -196,6 +201,7 @@ ACTOR hexZRock4 28171
 	//$Title Rock 4
   Radius 20
   Height 16
+  tag "rock"
   States
   {
   Spawn:
@@ -210,6 +216,7 @@ ACTOR hexZRockBlack 28172
 	//$Title Rock Black
   Radius 20
   Height 40
+  tag "rock black"
   +SOLID
   States
   {
@@ -225,6 +232,7 @@ ACTOR hexZRockBrown1 28173
 	//$Title Rock Brown 1
   Radius 17
   Height 72
+  tag "rock brown"
   +SOLID
   States
   {
@@ -240,6 +248,7 @@ ACTOR hexZRockBrown2 28174
 	//$Title Rock Brown 2
   Radius 15
   Height 50
+  tag "rock brown"
   +SOLID
   States
   {
@@ -255,6 +264,7 @@ ACTOR hexZRubble1 28175
 	//$Title Rubble 1
   Radius 20
   Height 16
+  tag "rubble"
   States
   {
   Spawn:
@@ -269,6 +279,7 @@ ACTOR hexZRubble2 28176
 	//$Title Rubble 2
   Radius 20
   Height 16
+  tag "rubble"
   States
   {
   Spawn:
@@ -283,6 +294,7 @@ ACTOR hexZRubble3 28177
 	//$Title Rubble 3
   Radius 20
   Height 16
+  tag "rubble"
   States
   {
   Spawn:
@@ -302,6 +314,7 @@ ACTOR hexZShroomLarge1 : shroomBase 28178
 	//$Title Shroom Large 1
   Radius 20
   Height 16
+  tag "shroom large"
   States
   {
   Spawn:
@@ -316,6 +329,7 @@ ACTOR hexZShroomLarge2 : shroomBase 28179
 	//$Title Shroom Large 2
   Radius 20
   Height 16
+  tag "shroom large"
   States
   {
   Spawn:
@@ -330,6 +344,7 @@ ACTOR hexZShroomLarge3 : shroomBase 28180
 	//$Title Shroom Large 3
   Radius 20
   Height 16
+  tag "shroom large"
   States
   {
   Spawn:
@@ -344,6 +359,7 @@ ACTOR hexZShroomSmall1 : shroomBase 28181
 	//$Title Shroom Small 1
   Radius 20
   Height 16
+  tag "shroom small"
   States
   {
   Spawn:
@@ -358,6 +374,7 @@ ACTOR hexZShroomSmall2 : shroomBase 28182
 	//$Title Shroom Small 2
   Radius 20
   Height 16
+  tag "shroom small"
   States
   {
   Spawn:
@@ -372,6 +389,7 @@ ACTOR hexZShroomSmall3 : shroomBase 28183
 	//$Title Shroom Small 3
   Radius 20
   Height 16
+  tag "shroom small"
   States
   {
   Spawn:
@@ -386,6 +404,7 @@ ACTOR hexZShroomSmall4 : shroomBase 28184
 	//$Title Shroom Small 4
   Radius 20
   Height 16
+  tag "shroom small"
   States
   {
   Spawn:
@@ -400,6 +419,7 @@ ACTOR hexZShroomSmall5 : shroomBase 28185
 	//$Title Shroom Small 5
   Radius 20
   Height 16
+  tag "shroom small"
   States
   {
   Spawn:
@@ -415,6 +435,7 @@ ACTOR hexZShrub1 : ActivableDeco 28186
   Radius 8
   Height 24
   Health 20
+  tag "shrubbery"
   //Mass 0x7fffffff
   +SOLID
   +SHOOTABLE
@@ -441,6 +462,7 @@ ACTOR hexZShrub2 : ActivableDeco 28187
   Radius 16
   Height 40
   Health 20
+  tag "shrubbery"
   //Mass 0x7fffffff
   +SOLID
   +SHOOTABLE
@@ -467,6 +489,7 @@ ACTOR hexZStalagmiteLarge 28188
 	//$Title Stalagmite Large
   Radius 8
   Height 48
+  tag "stalagmite large"
   +SOLID
   +DontThrust
   States
@@ -483,6 +506,7 @@ ACTOR hexZStalagmiteMedium 28189
 	//$Title Stalagmite Medium
   Radius 6
   Height 40
+  tag "stalagmite medium"
   +SOLID
   +DontThrust
   States
@@ -499,6 +523,7 @@ ACTOR hexZStalagmiteSmall 28190
 	//$Title Stalagmite Small
   Radius 8
   Height 36
+  tag "stalagmite small"
   +SOLID
   +DontThrust
   States
@@ -515,6 +540,7 @@ ACTOR hexZStalagmitePillar 28191
 	//$Title Stalagmite Pillar
   Radius 8
   Height 138
+  tag "stalagmite pillar"
   +SOLID
   +DontThrust
   States
@@ -531,6 +557,7 @@ ACTOR hexZStumpBare 28192
 	//$Title Stump Bare
   Radius 12
   Height 20
+  tag "stump bare"
   +SOLID
   +DontThrust
   States
@@ -547,6 +574,7 @@ ACTOR hexZStumpBurned 28193
 	//$Title Stump Burned
   Radius 12
   Height 20
+  tag "stump burned"
   +SOLID
   +DontThrust
   States
@@ -563,6 +591,7 @@ ACTOR hexZStumpSwamp1 28194
 	//$Title Stump Swamp 1
   Radius 20
   Height 16
+  tag "stump swamp"
   +DontThrust
   States
   {
@@ -578,6 +607,7 @@ ACTOR hexZStumpSwamp2 28195
 	//$Title Stump Swamp 2
   Radius 20
   Height 16
+  tag "stump swamp"
   +DontThrust
   States
   {
@@ -593,6 +623,7 @@ ACTOR hexZSwampVine 28196
 	//$Title Swamp Vines
   Radius 8
   Height 52
+  tag "swamp vines"
   +SOLID
   +DontThrust
   States
@@ -609,6 +640,7 @@ ACTOR hexZTreeGnarled1 28197
 	//$Title Tree Gnarled 1
   Radius 22
   Height 100
+  tag "tree gnarled"
   +SOLID
   +DontThrust
   States
@@ -625,6 +657,7 @@ ACTOR hexZTreeGnarled2 28198
 	//$Title Tree Gnarled 2
   Radius 22
   Height 100
+  tag "tree gnarled"
   +SOLID
   +DontThrust
   States
@@ -641,6 +674,7 @@ ACTOR hexZTreeLarge1 28199
 	//$Title Tree Large 1
   Radius 15
   Height 180
+  tag "tree large"
   +SOLID
   +DontThrust
   States
@@ -657,6 +691,7 @@ ACTOR hexZTreeLarge2 28200
 	//$Title Tree Large 2
   Radius 15
   Height 180
+  tag "tree large"
   +SOLID
   +DontThrust
   States
@@ -674,6 +709,7 @@ ACTOR hexZTreeSwamp120 28201
   Radius 10
   Height 120
   scale 0.7
+  tag "tree swamp"
   +SOLID
   +DontThrust
   States
@@ -690,6 +726,7 @@ ACTOR hexZTreeSwamp150 28202
 	//$Title Tree Swamp 2
   Radius 10
   Height 150
+  tag "tree swamp"
   +SOLID
   States
   {
@@ -705,6 +742,7 @@ ACTOR hexZTree1 28203
 	//$Title Tree Swamp Large
   Radius 15
   Height 183
+  tag "tree swamp"
   +SOLID
   +DontThrust
   States
@@ -722,6 +760,7 @@ ACTOR hexZTree2 28204
 
   Radius 10
   Height 96
+  tag "tree dead"
   +SOLID
   +DontThrust
   States
@@ -738,6 +777,7 @@ ACTOR hexZChainBit64 28205
 	//$Title Chain Bit 64
   Radius 4
   Height 64
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -758,6 +798,7 @@ ACTOR hexZChainEndHook1 28206
 	//$Title Chain End Hook 1
   Radius 4
   Height 32
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -776,6 +817,7 @@ ACTOR hexZChainEndHook2 28207
 	//$Title Chain End Hook 2
   Radius 4
   Height 32
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -794,6 +836,7 @@ ACTOR hexZChainEndSkull 28208
 	//$Title Chain End Skull
   Radius 4
   Height 32
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -812,6 +855,7 @@ ACTOR hexZChainEndSpike 28209
 	//$Title Chain End Spike
   Radius 4
   Height 32
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -830,6 +874,7 @@ ACTOR hexZIronMaiden 28210
 	//$Title Iron Maiden
   Radius 12
   Height 60
+  tag "iron maiden"
   +SOLID
   +DontThrust
   States
@@ -848,6 +893,7 @@ ACTOR hexZBannerTattered 28212
 	//$Title Banner Tattered
   Radius 8
   Height 120
+  tag "banner tattered"
   +SOLID
   States
   {
@@ -865,6 +911,7 @@ ACTOR hexZBlueCandle 28213
   Height 16
   scale 0.5
   +NOBLOCKMAP
+  tag "candle"
   States
   {
   Spawn:
@@ -879,6 +926,7 @@ ACTOR hexZBucket 28214
 	//$Title Hanging Bucket
   Radius 8
   Height 72
+  tag "hanging bucket"
   +SOLID
   +SPAWNCEILING
   +NOGRAVITY
@@ -899,6 +947,7 @@ ACTOR hexZStatueGargoyleRustTall 28218
 {
 	//$Category "Decorations/Hexen"
 	//$Title Statue Gargoyle Rust Tall
+	tag "gargoyle statue"
   Radius 14
   Height 108
   +SOLID
@@ -916,6 +965,7 @@ ACTOR hexZWingedStatue 28221
 {
 	//$Category "Decorations/Hexen"
 	//$Title Winged Statue
+	tag "winged statue"
   Radius 10
   Height 62
   +SOLID
@@ -943,6 +993,7 @@ ACTOR hexPottery1 28222
   +TELESTOMP
   +CANPASS
   +NOICEDEATH
+  tag "decorative vase"
 
   States
   {
@@ -959,6 +1010,7 @@ ACTOR hexPottery2 : hexPottery1 28223
 {
 	//$Title Pottery 2
   Height 25
+  tag "decorative vase"
   States
   {
   Spawn:
@@ -971,6 +1023,7 @@ ACTOR hexPottery3 : hexPottery1 28224
 {
 	//$Title Pottery 3
   Height 25
+  tag "decorative vase"
   States
   {
   Spawn:
@@ -987,6 +1040,7 @@ ACTOR hexTableShit1 28225
 	//$Title Wooden Beer Stein
   Radius 8
   Height 16
+  tag "beer stein wooden"
   +NOBLOCKMAP
   States
   {
@@ -1002,6 +1056,7 @@ ACTOR hexTableShit2 28226
 	//$Title Glass Beer Stein
   Radius 8
   Height 16
+  tag "beer stein glass"
   +NOBLOCKMAP
   States
   {
@@ -1018,6 +1073,7 @@ ACTOR hexTableShit3 28227
   Radius 8
   Height 16
   +NOBLOCKMAP
+  tag "candle"
   States
   {
   Spawn:
@@ -1032,6 +1088,7 @@ ACTOR hexTableShit4 28228
 	//$Title White Candle
   Radius 8
   Height 16
+  tag "candle"
   +NOBLOCKMAP
   States
   {
@@ -1047,6 +1104,7 @@ ACTOR hexTableShit5 28229
 	//$Title Tan Candle
   Radius 8
   Height 16
+  tag "candle"
   +NOBLOCKMAP
   States
   {
@@ -1062,6 +1120,7 @@ ACTOR hexTableShit6 28230
 	//$Title Spilled cup
   Radius 8
   Height 16
+  tag "cup spilled"
   +NOBLOCKMAP
   States
   {
@@ -1077,6 +1136,7 @@ ACTOR hexTableShit7 28231
 	//$Title Taller brown cup
   Radius 8
   Height 16
+  tag "tall brown cup"
   +NOBLOCKMAP
   States
   {
@@ -1092,6 +1152,7 @@ ACTOR hexTableShit8 28232
 	//$Title Shorter brown cup
   Radius 8
   Height 16
+  tag "short brown cup"
   +NOBLOCKMAP
   States
   {
@@ -1107,6 +1168,7 @@ ACTOR hexTableShit9 28233
 	//$Title Shorter brown cup with silver rim
   Radius 8
   Height 16
+  tag "short brown cup"
   +NOBLOCKMAP
   States
   {
@@ -1123,6 +1185,7 @@ ACTOR hexTableShit10 28234
   Radius 8
   Height 16
   scale 0.5
+  tag "bloody cleaver"
   
   +NOBLOCKMAP
   States
@@ -1137,6 +1200,7 @@ ACTOR hexZCauldronON : InteractiveDeco 28235
 {
 	//$Category "Decorations/Hexen"
 	//$Title Cauldron ON
+	tag "iron cauldron"
 	Radius 12
 	Height 26
 	+SOLID
@@ -1157,6 +1221,7 @@ ACTOR hexZCauldronON : InteractiveDeco 28235
 ACTOR hexZCauldronOFF : hexZCauldronON 28236
 {
 	//$Title Cauldron OFF
+	tag "iron cauldron"
 	Radius 12
 	Height 26
 	+SOLID
@@ -1174,6 +1239,7 @@ ACTOR hexZChainEndHeart 28237
 {
 	//$Category "Decorations/Hexen"
 	//$Title Chain End Heart
+	tag "chain"
   Radius 4
   Height 32
   +SPAWNCEILING
@@ -1275,6 +1341,7 @@ ACTOR hexZChainBit32 28243
 	//$Title Chain Bit 32
   Radius 4
   Height 32
+  tag "chain"
   +SPAWNCEILING
   +NOGRAVITY
   +NOBLOCKMAP
@@ -1291,6 +1358,7 @@ ACTOR dagSwampKludge002 23172
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 01"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1309,6 +1377,7 @@ ACTOR dagSwampKludge003 23173
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 02"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1327,6 +1396,7 @@ ACTOR dagSwampKludge004 23174
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 02"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1345,6 +1415,7 @@ ACTOR dagSwampKludge005 23175
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 03"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1363,6 +1434,7 @@ ACTOR dagSwampKludge006 23176
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 04"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1385,6 +1457,7 @@ ACTOR dagSwampKludge007 23177
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	tag "swamp grass"
 	radius 8
 	height 8
 	States
@@ -1399,6 +1472,7 @@ ACTOR dagSwampKludge008 23178
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 05"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1417,6 +1491,7 @@ ACTOR dagSwampKludge009 23179
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 06"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1435,6 +1510,7 @@ ACTOR dagSwampKludge010 23180
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 07"
+	tag "tree swamp"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1453,6 +1529,7 @@ ACTOR dagSwampKludge011 23181
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 04"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1471,6 +1548,7 @@ ACTOR dagSwampKludge012 23182
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 05"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1489,6 +1567,7 @@ ACTOR dagSwampKludge013 23183
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 06"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1507,6 +1586,7 @@ ACTOR dagSwampKludge014 23184
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 07"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1525,6 +1605,7 @@ ACTOR dagSwampKludge015 23185
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 08"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1543,6 +1624,7 @@ ACTOR dagSwampKludge016 23186
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 09"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1561,6 +1643,7 @@ ACTOR dagSwampKludge017 23187
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 10"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1579,6 +1662,7 @@ ACTOR dagSwampKludge018 23188
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 11"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1597,6 +1681,7 @@ ACTOR dagSwampKludge019 23189
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 12"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1615,6 +1700,7 @@ ACTOR dagSwampKludge020 23190
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 01"
+	tag "swamp grass"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1633,6 +1719,7 @@ ACTOR dagSwampKludge021 23191
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 13"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1651,6 +1738,7 @@ ACTOR dagSwampKludge022 23192
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 14"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1669,6 +1757,7 @@ ACTOR dagSwampKludge023 23193
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 15"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1687,6 +1776,7 @@ ACTOR dagSwampKludge024 23194
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 16"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1705,6 +1795,7 @@ ACTOR dagSwampKludge025 23195
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 17"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1723,6 +1814,7 @@ ACTOR dagSwampKludge026 23196
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 18"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1741,6 +1833,7 @@ ACTOR dagSwampKludge027 23197
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 19"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1759,6 +1852,7 @@ ACTOR dagSwampKludge028 23198
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 20"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1777,6 +1871,7 @@ ACTOR dagSwampKludge029 23199
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 21"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1795,6 +1890,7 @@ ACTOR dagSwampKludge030 23200
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 23"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1813,6 +1909,7 @@ ACTOR dagSwampKludge031 23201
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 23"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1831,6 +1928,7 @@ ACTOR dagSwampKludge032 23202
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Grass 24"
+	tag "swamp grass"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -1849,6 +1947,7 @@ ACTOR dagSwampKludge033 23203
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 08"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1867,6 +1966,7 @@ ACTOR dagSwampKludge034 23204
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 09"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1885,6 +1985,7 @@ ACTOR dagSwampKludge035 23205
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 10"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1903,6 +2004,7 @@ ACTOR dagSwampKludge036 23206
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 11"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1921,6 +2023,7 @@ ACTOR dagSwampKludge037 23207
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 12"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1939,6 +2042,7 @@ ACTOR dagSwampKludge038 23208
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 13"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1957,6 +2061,7 @@ ACTOR dagSwampKludge039 23209
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 14"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1975,6 +2080,7 @@ ACTOR dagSwampKludge055 23210
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 15"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -1993,6 +2099,7 @@ ACTOR dagSwampKludge041 23211
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 16"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2011,6 +2118,7 @@ ACTOR dagSwampKludge042 23212
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 17"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2029,6 +2137,7 @@ ACTOR dagSwampKludge043 23213
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Tree Swamp 18"
+	tag "swamp tree"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2047,6 +2156,7 @@ ACTOR dagSwampKludge044 23214
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Stone 01"
+	tag "swamp stone"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2065,6 +2175,7 @@ ACTOR dagSwampKludge045 23215
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Stone 02"
+	tag "swamp stone"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2083,6 +2194,7 @@ ACTOR dagSwampKludge046 23216
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Stone 03"
+	tag "swamp stone"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2101,6 +2213,7 @@ ACTOR dagSwampKludge047 23217
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Stone 04"
+	tag "swamp stone"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2119,6 +2232,7 @@ ACTOR dagSwampKludge048 23218
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Stone 05"
+	tag "swamp stone"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2137,6 +2251,7 @@ ACTOR dagSwampKludge049 23219
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Shroom"
+	tag "swamp shroom"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2155,6 +2270,7 @@ ACTOR dagSwampKludge050 23220
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 03"
+	tag "swamp kludge"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2173,6 +2289,7 @@ ACTOR dagSwampKludge051 23221
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 04"
+	tag "swamp kludge"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2191,6 +2308,7 @@ ACTOR dagSwampKludge052 23222
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 05"
+	tag "swamp kludge"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2209,6 +2327,7 @@ ACTOR dagSwampKludge053 23223
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 06"
+	tag "swamp kludge"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2227,6 +2346,7 @@ ACTOR dagSwampKludge054 23224
 {
 	//$Category "Decorations/Vegetation"
 	//$Title "Swamp Kludge 07"
+	tag "swamp kludge"
 	-Solid
 	+DontThrust
 	+UseSpecial
@@ -2245,6 +2365,7 @@ actor darkTree01 23225
 {
 	//$Category "Trees and Rocks"
 	//$Title "Dark Tree big"
+	tag "tree large"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2264,6 +2385,7 @@ actor darkTree02 23226
 {
 	//$Category "Trees and Rocks"
 	//$Title "Dark Tree medium"
+	tag "tree medium"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -2283,6 +2405,7 @@ actor darkTree03 23227
 {
 	//$Category "Trees and Rocks"
 	//$Title "Dark Tree small"
+	tag "tree small"
 	+Solid
 	+DontThrust
 	+UseSpecial

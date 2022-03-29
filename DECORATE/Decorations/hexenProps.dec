@@ -99,7 +99,7 @@ ACTOR hexTreeDestructible 28166
 {
 	//$Category "Decorations/Hexen"
 	//$Title Tree Destructible
-	"tree destructible"
+	tag "tree destructible"
   Health 70
   Radius 15
   Height 180

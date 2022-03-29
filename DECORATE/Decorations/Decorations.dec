@@ -2153,6 +2153,7 @@ actor DMY_blasterStaffParts_01 : staffPartsBase 21113
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. complete"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2166,6 +2167,7 @@ actor DMY_blasterStaffParts_02 : staffPartsBase 21114
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. party disemboweled"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2179,6 +2181,7 @@ actor DMY_blasterStaffParts_03 : staffPartsBase 21115
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. objimka"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2192,6 +2195,7 @@ actor DMY_blasterStaffParts_04 : staffPartsBase 21116
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. barrel disemboweled"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2205,6 +2209,7 @@ actor DMY_blasterStaffParts_05 : staffPartsBase 21117
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. underthing"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2218,6 +2223,7 @@ actor DMY_blasterStaffParts_06 : staffPartsBase 21118
 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. wood"
+	tag "staff parts"
 	States
 	{
 		Spawn:
@@ -2240,6 +2246,7 @@ actor specimenTankXX 21119
 	+SOLID
 	radius 16
 	height 74
+	tag "specimen tank"
 	
 	States
 	{
@@ -2255,7 +2262,7 @@ actor binderStatue_left 21120
 	//$Title "Binder statue - left"
 	
 	+SOLID
-	
+	tag "binder statue"
 	radius 16
 	height 59
 	
@@ -2272,6 +2279,7 @@ actor binderStatue_right 21121
 	//$Title "Binder statue - right"
 	
 	+SOLID
+	tag "binder statue"
 	
 	radius 16
 	height 59
@@ -2289,6 +2297,7 @@ actor binderStatue_front 21122
 	//$Title "Binder statue - front"
 	
 	+SOLID
+	tag "binder statue"
 	
 	radius 16
 	height 59
@@ -2306,6 +2315,7 @@ actor binderStatue_rotated 21123
 	//$Title "Binder statue - rotated"
 	
 	+SOLID
+	tag "binder statue"
 	
 	radius 16
 	height 59
@@ -2324,7 +2334,7 @@ actor guardUniform_decoration 21124
 	//$Title "guard uniform decoration"
 	
 	-SOLID
-	
+	Tag "guard uniform"
 	radius 10
 	height 12
 	
@@ -2343,6 +2353,7 @@ actor officerUniform_decoration 21125
 	-SOLID
 	radius 10
 	height 12
+	tag "officer uniform"
 	
 	States
 	{
@@ -2362,7 +2373,7 @@ actor voxStreetLamp 21126
 	+noblood
 	+canpass
 	+useSpecial
-	
+	Tag "street lamp"
 	scale 1.0
 	height 115
 	radius 12
@@ -2384,7 +2395,7 @@ actor fourLamp 21127
 	+CANPASS
 	+NOBLOOD
 	+USESPECIAL
-	
+	Tag "street lamp"
 	radius 12
 	height 115
 	
@@ -2446,7 +2457,7 @@ actor officeChair2 21130
 	//$Category "Decorations/WoS"
 	//$Title "office chair 2"
 	+SOLID
-	
+	tag "office chair"
 	radius 14
 	height 32
 	
@@ -2660,7 +2671,7 @@ actor sshockBarrel_01 21142
 	//$Category "Decorations/WoS"
 	//$Title "sshock barrel 01"
 	-SOLID
-	
+	tag "metal barrel"
 	radius 16
 	height 32
 	scale 0.5
@@ -2677,7 +2688,7 @@ actor sshockBarrel_02 21143
 	//$Category "Decorations/WoS"
 	//$Title "sshock barrel 02"
 	-SOLID
-	
+	tag "metal barrel"
 	radius 16
 	height 32
 	scale 0.5
@@ -2694,7 +2705,7 @@ actor sshockBarrel_03 21144
 	//$Category "Decorations/WoS"
 	//$Title "sshock barrel 03"
 	-SOLID
-	
+	tag "metal barrel"
 	radius 16
 	height 32
 	scale 0.5
@@ -2711,7 +2722,7 @@ actor sshockBarrel_04 21145
 	//$Category "Decorations/WoS"
 	//$Title "sshock barrel 04"
 	-SOLID
-	
+	tag "metal barrel"
 	radius 16
 	height 32
 	scale 0.5
@@ -2729,7 +2740,7 @@ actor plumbingPipe01 21146
 	//$Title "plumbing pipe 01"
 	
 	+SOLID
-	
+	tag "plumbing pipe"
 	radius 12
 	height 127
 	
@@ -2747,7 +2758,7 @@ actor plumbingPipe02 21147
 	//$Title "plumbing pipe 02"
 	
 	+SOLID
-	
+	tag "plumbing pipe"
 	radius 8
 	height 127
 	
@@ -2765,7 +2776,7 @@ actor plumbingPipe03 21148
 	//$Title "plumbing pipe 03"
 	
 	+SOLID
-	
+	tag "plumbing pipe"
 	radius 12
 	height 127
 	
@@ -2777,7 +2788,19 @@ actor plumbingPipe03 21148
 	}
 	
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// odtud pokracovat //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor sacrificedGuyX : SacrificedGuy 21149
 {
 	//$Category "Corpses"

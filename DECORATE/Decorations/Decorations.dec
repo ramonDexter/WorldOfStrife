@@ -8342,7 +8342,7 @@ actor wosD_tub 21474 {
 	//$Category "Decorations/WoS"
 	//$Title "dx Tub"
 	Tag "wooden tub"
-	+NOBLOCKMAP
+	-NOBLOCKMAP
 	radius 12
 
 	States {

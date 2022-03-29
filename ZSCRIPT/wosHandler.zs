@@ -156,7 +156,84 @@ class wosEventHandler : EventHandler {
 		Footsteps fsteps = Footsteps(Actor.Spawn("Footsteps",player.pos));
         fsteps.Init(player);
 	}
-	
+	// cheats & debug //////////////////////////////////////////////////////////
+	override void NetworkProcess(ConsoleEvent e) {
+        let pawn = binderPlayer(players[e.Player].mo);
+
+        if ( e.Name == "give_binderPackRegular" ) {
+            pawn.A_GiveInventory("binder_helmet", 1);
+			pawn.A_GiveInventory("shoulderGun", 1);
+			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("StaffBlaster", 1);
+			pawn.A_GiveInventory("laserpistol", 1);
+			//armor
+			pawn.A_GiveInventory("wosKineticArmor", 1);
+			//ammo
+			pawn.A_GiveInventory("EnergyPod", 400);
+			pawn.A_GiveInventory("wosenergykit", 10);
+			pawn.A_GiveInventory("shoulderGunCharger", 1);
+			//grenades
+			pawn.A_GiveInventory("wosGrenadeE", 15);
+			pawn.A_GiveInventory("wosGrenadeF", 15);
+			pawn.A_GiveInventory("wosGrenadeG", 15);
+			pawn.A_GiveInventory("wosArmorShard", 10);
+			//medical
+			pawn.A_GiveInventory("wosHyposprej", 30);
+			pawn.A_GiveInventory("wosKombopack", 10);
+			pawn.A_GiveInventory("wosInstaLek", 5);
+			//BlasterTurret_item
+			pawn.A_GiveInventory("wosInterceptordrone", 5);	
+			//DeployableShieldItem
+			pawn.A_GiveInventory("wosDeployableShield", 1);
+			//Swarmers_item
+			pawn.A_GiveInventory("wosSwarmers", 5);
+			// goldCoin x2500
+			pawn.A_GiveInventory("goldCoin", 2500);
+        } else if ( e.Name == "give_binderpackLight" ) {
+			pawn.A_GiveInventory("binder_helmet", 1);
+			// weapons
+			pawn.A_GiveInventory("shoulderGun", 1);
+			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("StaffBlaster", 1);
+			// armor
+			pawn.A_GiveInventory("wosKineticArmor", 1);
+			// ammo
+			pawn.A_GiveInventory("EnergyPod", 400);
+			pawn.A_GiveInventory("wosenergykit", 10);
+			pawn.A_GiveInventory("shoulderGunCharger", 1);
+			// medical
+			pawn.A_GiveInventory("wosHyposprej", 20);
+			pawn.A_GiveInventory("wosKombopack", 5);
+			pawn.A_GiveInventory("wosInstaLek", 2);
+			// grenades
+			pawn.A_GiveInventory("wosGrenadeE", 5);
+			pawn.A_GiveInventory("wosGrenadeF", 5);
+			pawn.A_GiveInventory("wosInstaLek", 5);
+			// gold
+			pawn.A_GiveInventory("goldCoin", 2500);
+		} else if ( e.Name == "give_allarmor" ) {
+			pawn.A_GiveInventory("wosLeatherArmor", 1);
+			pawn.A_GiveInventory("wosMetalArmor", 1);
+			pawn.A_GiveInventory("wosBinderArmorBasic", 1);
+			pawn.A_GiveInventory("wosBinderArmorAdvanced", 1);
+			pawn.A_GiveInventory("wosKineticArmor", 1);
+		} else if ( e.Name == "give_allweapons" ) {
+			pawn.A_GiveInventory("zscStrifeCrossbow", 1);
+			pawn.A_GiveInventory("StormPistol", 1);
+			pawn.A_GiveInventory("laserPistol", 1);
+			pawn.A_GiveInventory("zscAssaultGun", 1);
+			pawn.A_GiveInventory("staffBlaster", 1);
+			pawn.A_GiveInventory("zscMiniMissileLauncher", 1);
+			pawn.A_GiveInventory("zscFlameThrower", 1);
+			pawn.A_GiveInventory("zscStrifeGrenadeLauncher", 1);
+			pawn.A_GiveInventory("zscMauler", 1);
+		} else if ( e.Name == "give_shouldergun" ) {
+			pawn.A_GiveInventory("shoulderGun", 1);
+			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("shoulderGunCharger", 1);
+		}
+    }
+	////////////////////////////////////////////////////////////////////////////
 	
 
 }

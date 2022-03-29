@@ -13,6 +13,7 @@ class dest_ShortBush : ShortBush Replaces ShortBush {
         Height 40;
         Health 70;
         //DamageFactor "Alarm", 0.0;
+        Tag "short bush";
     }
 	
 	States {
@@ -32,6 +33,7 @@ class dest_TallBush : dest_ShortBush replaces TallBush {
     Default {
         //$Category "Trees and Rocks/WoS"
         //$Title "Tall Bush destructible"
+        Tag "tall bush";
         Radius 20;
         Height 64;
     }
@@ -174,6 +176,7 @@ class dest_Pot : Pot Replaces Pot {
         +SOLID
         +SHOOTABLE
         +NOBLOOD
+        tag "earthenware pot";
         Radius 12;
         Height 24;
         DropItem "wosBulletCartridge", 12;
@@ -210,6 +213,7 @@ class dest_Pitcher : Pitcher Replaces Pitcher {
         +SOLID
         +SHOOTABLE
         +NOBLOOD
+        Tag "ceramic pitcher";
         Radius 12;
         Height 32;
         DropItem "wosBulletCartridge", 12;
@@ -273,6 +277,7 @@ class dest_strifeDecoVaze1 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco vase 1 destructible"
+        tag "decorative vase";
         radius 12;
         height 32;
         +SOLID
@@ -289,6 +294,7 @@ class dest_strifeDecoPot1 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco pot small destructible"
+        tag "decorative vase";
         radius 12;
         height 23;
         +SOLID
@@ -304,6 +310,7 @@ class dest_strifeDecoPot2 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco pot tall destructible"
+        tag "tall decorative pot";
         radius 12;
         height 38;
         +SOLID
@@ -319,6 +326,7 @@ class dest_strifeDecoPot3 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco pot medium destructible"
+        tag "medium decorative pot";
         radius 12;
         height 24;
         +SOLID;
@@ -334,6 +342,7 @@ class dest_strifeDecoPot4 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco pot tall 2 destructible"
+        tag "tall decorative pot";
         radius 12;
         height 31;
         +SOLID
@@ -349,6 +358,7 @@ class dest_strifeDecoVaze2 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco vase 2 destructible"
+        tag "decorative vase";
         radius 10;
         height 25;
         +SOLID
@@ -364,6 +374,7 @@ class dest_strifeDecoVaze3 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco vase 3 destructible"
+        tag "decorative vase";
         radius 10;
         height 30;
         +SOLID
@@ -379,6 +390,7 @@ class dest_strifeDecoPot5 : dest_Pot {
     Default {
         //$Category "Decorations/WoS"
         //$Title "deco pot large destructible"
+        tag "large decorative pot";
         radius 16;
         height 29;
         +SOLID

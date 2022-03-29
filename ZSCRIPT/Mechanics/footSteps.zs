@@ -112,4 +112,7 @@ class Footsteps : Actor
         
         Super.Tick();
     }  
+    Default {
+        Tag "footsteps";
+    }
 }

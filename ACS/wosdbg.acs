@@ -2,7 +2,7 @@
 #include "zcommon.acs"
 
 // binder pack regular /////////////////////////////////////////////////////////
-script 4201 (void) {
+/*script 4201 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveBinderHeavy");
 	GiveInventory("binder_helmet", 1);
 	//weapons
@@ -34,7 +34,7 @@ script 4201 (void) {
 	// goldCoin x2500
 	GiveInventory("goldCoin", 2500);
 	//
-}
+}*/
 // accuracy upgrades ///////////////////////////////////////////////////////////
 //count is x10
 script 4202 (int count) {
@@ -68,14 +68,14 @@ script 4204 (int itemAmount) {
 	//GiveInventory("", itemAmount);
 }
 // give shouldergun ////////////////////////////////////////////////////////////
-script 4205 (void) {
+/*script 4205 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveShoulderGun");
 	GiveInventory("shoulderGun", 1);
 	GiveInventory("shldrGunMag", 32);
 	GiveInventory("shoulderGunCgarger", 1);	
-}
+}*/
 // binder pack light ///////////////////////////////////////////////////////////
-script 4206 (void) {
+/*script 4206 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveBinderLight");
 	GiveInventory("binder_helmet", 1);
 	// weapons
@@ -99,18 +99,18 @@ script 4206 (void) {
 	// gold
 	GiveInventory("goldCoin", 2500);
 	//
-}
+}*/
 ////////////////////////////////////////////////////////////////////////////////
 
-script 4207 (void) {
+/*script 4207 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveAllArmor");
 	GiveInventory("wosLeatherArmor", 1);
 	GiveInventory("wosMetalArmor", 1);
 	GiveInventory("wosBinderArmorBasic", 1);
 	GiveInventory("wosBinderArmorAdvanced", 1);
 	GiveInventory("wosKineticArmor", 1);
-}
-script 4208 (void) {
+}*/
+/*script 4208 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveAllWeapons");
 	GiveInventory("zscStrifeCrossbow", 1);
 	GiveInventory("StormPistol", 1);
@@ -121,7 +121,7 @@ script 4208 (void) {
 	GiveInventory("zscFlameThrower", 1);
 	GiveInventory("zscStrifeGrenadeLauncher", 1);
 	GiveInventory("zscMauler", 1);
-}
+}*/
 
 script 4209 (void) {
 	ScriptCall("PDAFromDialog", "showPDA");

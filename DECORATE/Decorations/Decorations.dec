@@ -609,6 +609,7 @@ ACTOR blueRelicDecoration 21030
 	+DontThrust
 	+UseSpecial
 	+NoGravity
+	-NOBLOCKMAP
 	Tag "Holy Relic"
 	Radius 10
 	Height 16

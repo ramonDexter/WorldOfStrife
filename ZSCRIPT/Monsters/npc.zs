@@ -332,6 +332,7 @@ class tekPeasant01_base : StrifeHumanoid {
 		+JUSTHIT
 		+FRIENDLY
 		
+		Tag "tekpeasant";
 		Health 64;
 		PainChance 200;
 		Speed 8;
@@ -401,6 +402,7 @@ class tekPeasant02_base : StrifeHumanoid {
 		+JUSTHIT
 		+FRIENDLY
 		
+		Tag "tekpeasant";
 		Health 64;
 		PainChance 200;
 		Speed 8;
@@ -471,6 +473,7 @@ class tekPeasant03_base : StrifeHumanoid {
 		+JUSTHIT
 		+FRIENDLY
 		
+		Tag "tekpeasant";
 		Health 64;
 		PainChance 200;
 		Speed 8;
@@ -541,6 +544,7 @@ class tekPeasant04_base : StrifeHumanoid {
 		+JUSTHIT
 		+FRIENDLY
 		
+		Tag "tekpeasant";
 		Health 64;
 		PainChance 200;
 		Speed 8;
@@ -609,6 +613,7 @@ class tekPeasant05_base : StrifeHumanoid {
 		+JUSTHIT
 		+FRIENDLY
 		
+		Tag "tekpeasant";
 		Health 64;
 		PainChance 200;
 		Speed 8;
@@ -1012,6 +1017,7 @@ class dx_medicalBot : SwitchableDecoration {
         +SOLID
         +USESPECIAL
 
+		Tag "medical bot";
         radius 16;
         height 42;
         Mass 5000;
@@ -1047,6 +1053,7 @@ class dx_cleanerBot : Actor {
         +NODAMAGE
         +INVULNERABLE
 
+		Tag "cleaner bot";
         radius 8;
         height 16;
         Health 9999999;

@@ -1432,7 +1432,7 @@ Actor MM_radio 21071
 	//$Title "radio"
 	
 	+Solid
-	
+	tag "pocket radio"
 	radius 8
 	height 25
 	
@@ -1471,7 +1471,7 @@ Actor MM_roadBlock 21073
 	//$Title "road block"
 	
 	+Solid
-	
+	tag "road block"
 	radius 8
 	height 36
 	
@@ -1566,7 +1566,7 @@ Actor MM_stuff_04 21078
 	+NOGRAVITY
 	+DONTTHRUST
 	tag "bottle"
-	radius 8
+	radius 4
 	height 16
 	
 	States
@@ -1662,7 +1662,7 @@ Actor MM_stuff_09 21083
 	+NOGRAVITY
 	+DONTTHRUST
 	tag "bottle"
-	radius 8
+	radius 4
 	height 16
 	
 	States
@@ -1682,7 +1682,7 @@ Actor MM_stuff_10 21084
 	+NOGRAVITY
 	+DONTTHRUST
 	tag "bottle"
-	radius 8
+	radius 4
 	height 16
 	
 	States
@@ -1702,8 +1702,8 @@ Actor MM_stuff_11 21085
 	+NOGRAVITY
 	+DONTTHRUST
 	tag "bottle"
-	radius 8
-	height 16
+	radius 4
+	height 8
 	
 	States
 	{
@@ -1722,7 +1722,7 @@ Actor MM_stuff_12 21086
 	+NOGRAVITY
 	+DONTTHRUST
 	tag "bottle"
-	radius 8
+	radius 4
 	height 16
 	
 	States
@@ -6085,7 +6085,7 @@ actor wosD_dex_Skull 21336 {
 	+DONTTHRUST
 	Tag "human skull"
 	radius 4
-	height 4
+	height 6
 	States {
 		Spawn:
 			DUMM A -1
@@ -6132,8 +6132,8 @@ actor wosD_dex_basket 21339 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "wicker basket"
-	radius 4
-	height 4
+	radius 12
+	height 8
 	States {
 		Spawn:
 			DUMM A -1
@@ -6148,7 +6148,7 @@ actor wosD_dex_bookOpen 21340 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "open book"
-	radius 4
+	radius 8
 	height 4
 	States {
 		Spawn:
@@ -6163,7 +6163,7 @@ actor wosD_dex_cactus1 21341 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
-	Tag "cactus"
+	Tag "big cactus"
 	radius 8
 	height 96
 	States {
@@ -6179,6 +6179,7 @@ actor wosD_dex_cactus2 21342 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "small cactus"
 	radius 8
 	height 32
 	States {
@@ -6228,7 +6229,7 @@ actor wosD_dex_fireExtinguisher 21345 {
 	+DONTTHRUST
 	Tag "fire extinguisher"
 	radius 4
-	height 4
+	height 14
 	States {
 		Spawn:
 			DUMM A -1
@@ -6277,8 +6278,8 @@ actor wosD_dex_lamp1 21348 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "bed lamp"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM A -1 Bright light("lightlamp1")
@@ -6294,7 +6295,7 @@ actor wosD_dex_lamp3 21349 {
 	+DONTTHRUST
 	Tag "table lamp"
 	radius 4
-	height 4
+	height 12
 	States {
 		Spawn:
 			DUMM A -1 Bright light("lightlamp3")
@@ -6423,7 +6424,7 @@ actor wosD_dex_toilet2 21357 {
 	+DONTTHRUST
 	Tag "pissoir"
 	radius 4
-	height 4
+	height 36
 	States {
 		Spawn:
 			DUMM A -1
@@ -6454,8 +6455,8 @@ actor wosD_dex_trashcan3 21359 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "trash can"
-	radius 8
-	height 24
+	radius 12
+	height 28
 	States {
 		Spawn:
 			DUMM A -1
@@ -6470,8 +6471,8 @@ actor wosD_dex_waterCooler 21360 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "water cooler"
-	radius 8
-	height 24
+	radius 6
+	height 38
 	States {
 		Spawn:
 			DUMM A -1
@@ -6487,7 +6488,7 @@ actor wosD_dex_wineBottle 21361 {
 	+DONTTHRUST
 	Tag "wine bottle"
 	radius 4
-	height 4
+	height 16
 	States {
 		Spawn:
 			DUMM A -1
@@ -6815,7 +6816,7 @@ actor wosD_dxBeerTap 21381 {
 	+DONTTHRUST
 	Tag "beer tap"
 	radius 8
-	height 16
+	height 24
 	States {
 		Spawn:
 			DUMM A -1
@@ -6943,7 +6944,7 @@ actor wosD_dexATM 21389 {
 	+DONTTHRUST
 	Tag "ATM"
 	radius 8
-	height 16
+	height 52
 	States {
 		Spawn:
 			DUMM A -1
@@ -6957,9 +6958,9 @@ actor wosD_dexBarrel1 21390 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
-	Tag "wooden barrel"
-	radius 8
-	height 32
+	Tag "metal barrel"
+	radius 14
+	height 36
 	States {
 		Spawn:
 			DUMM A -1
@@ -6975,7 +6976,7 @@ actor wosD_dexCigaretteMachine 21391 {
 	+DONTTHRUST
 	Tag "cigarette machine"
 	radius 8
-	height 16
+	height 36
 	States {
 		Spawn:
 			DUMM A -1

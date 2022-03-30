@@ -984,6 +984,7 @@ ACTOR Tree01 22141
 
   radius 32
   height 180
+  Tag "spruce tree"
   +SOLID
   +NOGRAVITY
   +DONTTHRUST
@@ -1118,6 +1119,7 @@ ACTOR Larch4_dry : Larch4 {}
 ACTOR Tree04 22144
 {
 //$category NatureTree
+  Tag "pine tree"
   radius 24
   height 180
   +SOLID
@@ -1134,6 +1136,7 @@ ACTOR Tree04 22144
 
 ACTOR Tree04b : Tree04 22145
 {
+  Tag "pine tree"
 States
   {
   	Spawn: 
@@ -1159,6 +1162,7 @@ ACTOR Tree05Spawner : RandomSpawner 22146
 ACTOR Tree05Large 22161
 {
 //$category NatureTree
+  tag "large oak"
   radius 30
   height 224
   +SOLID
@@ -1178,6 +1182,7 @@ ACTOR Tree05Medium  : Tree05Large 22162
 //$category NatureTree
   +NOGRAVITY
   +DONTTHRUST
+  tag "oak tree"
   radius 30
   height 180
   scale 0.8
@@ -1222,6 +1227,7 @@ ACTOR Tree06Medium : Tree06Large
 ACTOR Tree07 22148
 {
 //$category NatureTree
+  Tag "small dry tree"
   radius 10
   height 128
   scale 0.65
@@ -1238,6 +1244,7 @@ ACTOR Tree07 22148
 
 ACTOR Tree07b : Tree07 22149
 {
+  tag "small tree"
   States
   	{
   	Spawn: 
@@ -1249,6 +1256,7 @@ ACTOR Tree07b : Tree07 22149
 
 ACTOR Tree07c : Tree07 22150
 {
+  tag "small tree"
   States
   	{
   	Spawn: 
@@ -1436,6 +1444,7 @@ ACTOR Tree10Small : Tree10Large
 ACTOR Tree11 22156
 {
 //$category NatureTree
+  tag "tall tree"
   radius 16
   height 128
   +SOLID
@@ -1455,6 +1464,7 @@ ACTOR Tree12 22157
 //$category NatureTree
   radius 16
   height 192
+  tag "tall tree"
   +SOLID
   +NOGRAVITY
   +DONTTHRUST
@@ -1474,6 +1484,7 @@ ACTOR Tree13 22158
   +SOLID
   +NOGRAVITY
   +DONTTHRUST
+  tag "tall tree"
   States
   	{
   	Spawn: 
@@ -1487,6 +1498,7 @@ ACTOR Tree13 22158
 ACTOR Tree14Leaves 22159
 {
 //$category NatureTree
+  tag "beech tree"
   radius 24
   height 180
   speed 0
@@ -1527,20 +1539,37 @@ ACTOR ALeaf2 : Leaf2
 ACTOR Tree15 22160
 {
 //$category NatureTree
+  tag "beech tree dry"
   radius 24
   height 180
   +SOLID
   +NOGRAVITY
   +DONTTHRUST
   States
-  	{
+  {
   	Spawn: 
 		//DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
   		DUMM A -1
   		Stop
-  	}
   }
-
+}
+ACTOR Tree14Green 22175
+{
+//$category NatureTree
+  tag "beech tree"
+  radius 24
+  height 180
+  +SOLID
+  +NOGRAVITY
+  +DONTTHRUST
+  States
+  {
+  	Spawn: 
+		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
+  		DUMM A -1
+  		Stop
+  }
+}
 //-------------------------------Breakable Tree-----------------------------------//
 /*
 ACTOR Tree16Break 22161
@@ -1627,6 +1656,7 @@ ACTOR Tree17Skull : Tree17 22163
 ACTOR Tree18 22164
 {
 //$category NatureTree
+  tag "dead tree"
   radius 30
   height 128
   +SOLID
@@ -1644,6 +1674,7 @@ ACTOR Tree18 22164
 ACTOR Tree19 22165
 {
 //$category NatureTree
+  tag "dead tree"
   radius 20
   height 128
   +SOLID
@@ -1661,6 +1692,7 @@ ACTOR Tree19 22165
 ACTOR Tree20 22166
 {
 //$category NatureTree
+  tag "dead tree"
   radius 20
   height 160
   +SOLID
@@ -1677,6 +1709,7 @@ ACTOR Tree20 22166
 ACTOR Tree21 22167
 {
 //$category NatureTree
+  tag "dead tree"
   radius 24
   height 100
   +SOLID
@@ -1693,6 +1726,7 @@ ACTOR Tree21 22167
 ACTOR Tree22 22168
 {
 //$category NatureTree
+  tag "dead tree"
   radius 24
   height 100
   +SOLID
@@ -1725,6 +1759,7 @@ ACTOR Tree22 22168
 ACTOR Tree24 22170
 {
 //$category NatureTree
+  tag "dead tree"
   radius 30
   height 160
   +SOLID
@@ -1840,22 +1875,7 @@ ACTOR Tree28Small : Tree28Large
   scale 0.6
 }*/
 
-ACTOR Tree14Green 22175
-{
-//$category NatureTree
-  radius 24
-  height 180
-  +SOLID
-  +NOGRAVITY
-  +DONTTHRUST
-  States
-  	{
-  	Spawn: 
-		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetScale(0.9+0.05*random(-2,2)); A_SetPitch(2*random(-2,2));}
-  		DUMM A -1
-  		Stop
-        }
-}
+
 
 //==========================================================================//
 //----------------------------PALMS-----------------------------------------//

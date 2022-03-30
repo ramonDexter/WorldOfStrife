@@ -195,7 +195,9 @@ class MWR_Cursor3d : Actor
 	Default{
 		+NOINTERACTION;
 		+FLATSPRITE;
-		//Scale 0.75;
+		Scale 0.45;
+		Renderstyle "Translucent";
+		Alpha 0.65;
 	}
 
 	States{

@@ -225,9 +225,9 @@ Conversation {
         }
     }
     Page {
-        pageName = "SH_trhovec27_wherefrom";
+        pageName = "SH_trhovec29_wherefrom";
         Name = "Trader";
-        Dialog = "\c[white]I'm from small town of Snapneck, it far to the north.";
+        Dialog = "\c[white]I'm from small town of Greenhills, it far to the north.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
@@ -287,7 +287,7 @@ Conversation {
         }
     }
     Page {
-        pageName = "SH_trhovec27_wherefrom";
+        pageName = "SH_trhovec30_wherefrom";
         Name = "Trader";
         Dialog = "\c[white]I live in village called The Bottom, it's not far from here. Like, ten kilometres to the south.";
         Goodbye = "\c[red]Goodbye.";

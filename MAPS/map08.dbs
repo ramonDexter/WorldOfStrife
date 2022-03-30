@@ -19,17 +19,17 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
+				location = "D:\\DOOM\\WoS\\WoS-Base";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -12007.78f;
+		viewpositionx = -4285.593f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = 5130.359f;
+		viewpositiony = -794.0151f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 1.124524f;
+		viewscale = 0.393727f;
 		
 		plugins
 		{

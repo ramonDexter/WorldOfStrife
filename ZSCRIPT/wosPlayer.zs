@@ -358,6 +358,7 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "notePlayerPersonal", 1;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
+		Player.StartItem "wosi_scanner", 1;
 		//  custom properties  /////////////////////////////////////////////////
 		binderPlayer.MaxLedgeHeight 56;
 		binderPlayer.ClimbSpeed 2;	

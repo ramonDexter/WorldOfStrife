@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
     ID = 26;
+    /*
+    Page {
+        pageName = "";
+        Name = "Trader";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
     Page {
         pageName = "SH_trhovec26_opener";
         Name = "Trader";
@@ -60,6 +72,20 @@ Conversation {
                 item = "goldCoin";
                 amount = 20;
             }
+        }
+        Choice {
+            Text = "Where are you from?";
+            Nextpage = "SH_trhovec26_wherefrom";
+        }
+    }
+    Page {
+        pageName = "SH_trhovec26_wherefrom";
+        Name = "Trader";
+        Dialog = "\c[white]Well, I hail from small village called Dubyanka. It's like thirty clicks from here to the west. Lovely small village, if you ask me.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_trhovec26_opener";
         }
     }
 }
@@ -135,6 +161,20 @@ Conversation {
                 amount = 60;
             }
         }
+        Choice {
+            Text = "Where are you from?";
+            Nextpage = "SH_trhovec27_wherefrom";
+        }
+    }
+    Page {
+        pageName = "SH_trhovec27_wherefrom";
+        Name = "Trader";
+        Dialog = "\c[white]I came here from village called Ravenrock. We've got a big brewery there.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_trhovec27_opener";
+        }
     }
 }
 Conversation {
@@ -178,6 +218,20 @@ Conversation {
                 item = "goldCoin";
                 amount = 12;
             }
+        }
+        Choice {
+            Text = "Where are you from?";
+            Nextpage = "SH_trhovec29_wherefrom";
+        }
+    }
+    Page {
+        pageName = "SH_trhovec27_wherefrom";
+        Name = "Trader";
+        Dialog = "\c[white]I'm from small town of Snapneck, it far to the north.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_trhovec29_opener";
         }
     }
 }
@@ -226,6 +280,20 @@ Conversation {
                 item = "goldCoin";
                 amount = 180;
             }
+        }
+        Choice {
+            Text = "Where are you from?";
+            Nextpage = "SH_trhovec30_wherefrom";
+        }
+    }
+    Page {
+        pageName = "SH_trhovec27_wherefrom";
+        Name = "Trader";
+        Dialog = "\c[white]I live in village called The Bottom, it's not far from here. Like, ten kilometres to the south.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_trhovec30_opener";
         }
     }
 }

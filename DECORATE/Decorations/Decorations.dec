@@ -2152,7 +2152,6 @@ ACTOR DMYstaffBlaster03 21112
 actor staffPartsBase
 {
 	-SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS

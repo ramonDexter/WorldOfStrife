@@ -6,7 +6,7 @@ const wosscannerWeight = 32;
 
 ////////////////////////////////////////////////////////////////////////////////
 class wosI_scanner : wosPickup {
-    bool scannerUsed;
+    bool scannerUsed;    
 
     action void W_EquipScanner (void) {
         if ( player == null ) {
@@ -69,6 +69,22 @@ class wosI_scanner : wosPickup {
 }
 ////////////////////////////////////////////////////////////////////////////////
 class wosscannerweapon : weapon {
+
+    action void W_startScanner (void) {
+        if ( player == null ) {
+            return;
+        }
+
+        MWR_LookCursorHandler.SendNetworkEvent("mwr_lookcursor_on");
+    }
+    action void W_stopScanner (void) {
+        if ( player == null ) {
+            return;
+        }
+
+        MWR_LookCursorHandler.SendNetworkEvent("mwr_lookcursor_off");
+    }
+
 	Default {
         inventory.icon "H_SCHD";
 		weapon.selectionOrder 4000;
@@ -92,8 +108,13 @@ class wosscannerweapon : weapon {
 		DeselectLoop:
             TNT1 A 0 A_Lower();
             Loop;
-        Fire:
+        Fire: //actually scanner action, when held, repeated action
             TNT1 A 0;
+            TNT1 A 1 W_startScanner();
+            TNT1 A 1;
+            TNT1 A 1 W_stopScanner();
+            TNT1 A 0 A_Refire("Fire");
+            TNT1 AAAAA 0;            
             Goto Ready;
 	}
 }

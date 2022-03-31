@@ -232,7 +232,7 @@ class dest_Pitcher : Pitcher Replaces Pitcher {
 	
 	States {
         Spawn:
-            VAZE B -1;
+            DUMM A -1;
             Stop;
         Death:
             TNT1 A 0 A_Scream();

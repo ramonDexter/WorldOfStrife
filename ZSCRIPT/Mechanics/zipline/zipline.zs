@@ -51,7 +51,7 @@ class ZipLineEndpoint : SwitchableDecoration
 		// $Sprite ZPLNA0
 		// $Title Zip Line Endpoint
 		// $Color 13
-
+		Tag "zipline endpoint";
 		Radius 16;
 		Height 32;
 		Activation THINGSPEC_ThingTargets | THINGSPEC_Switch; // THINGSPEC_Activate or Deactivate seems to only allow said thing to be either activated or deactivated for some stupid reason...

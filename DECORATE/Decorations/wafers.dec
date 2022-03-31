@@ -3,6 +3,7 @@ actor wafer_base {
 	+FLATSPRITE
 	-SOLID
 	+USESPECIAL	
+	tag "paper document"
 	height 0
 	radius 8
 	scale 0.5

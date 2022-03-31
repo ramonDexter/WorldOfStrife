@@ -3500,7 +3500,7 @@ actor hxnBook01 21192 {
 	+DONTTHRUST
 	-NOBLOCKMAP
 	radius 8
-	height 12
+	height 6
 	//scale 0.5
 	tag "book"
 	States {
@@ -3519,7 +3519,7 @@ actor hxnBook02 21193 {
 	+DONTTHRUST
 	-NOBLOCKMAP
 	radius 8
-	height 12
+	height 6
 	//scale 0.5
 	tag "holy book"
 	States {
@@ -3538,7 +3538,7 @@ actor hxnBook03 21194 {
 	+DONTTHRUST
 	-NOBLOCKMAP
 	radius 8
-	height 12
+	height 6
 	//scale 0.5
 	tag "book"
 	States {
@@ -3557,7 +3557,7 @@ actor hxnBook04 21195 {
 	+DONTTHRUST
 	-NOBLOCKMAP
 	radius 8
-	height 12
+	height 6
 	//scale 0.5
 	tag "book"
 	States {
@@ -4214,7 +4214,7 @@ actor dx_gallows 21226 {
 	+USESPECIAL
 	+DONTTHRUST
 	Tag "gallows"
-	height 64
+	height 124
 	radius 4
 	
 	States {
@@ -5541,8 +5541,8 @@ actor dx_compBase 21304 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 8
 	States {
 		Spawn:
 			DUMM A -1
@@ -5558,8 +5558,8 @@ actor dx_compKybd 21305 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 8
 	States {
 		Spawn:
 			DUMM A -1
@@ -5575,8 +5575,8 @@ actor dx_compB3 21306 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5592,8 +5592,8 @@ actor dx_compB4 21307 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5609,8 +5609,8 @@ actor dx_compB5 21308 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5626,8 +5626,8 @@ actor dx_compK3 21309 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5643,8 +5643,8 @@ actor dx_compK4 21310 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5660,8 +5660,8 @@ actor dx_compK5 21311 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5677,8 +5677,8 @@ actor dx_compXB1 21312 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5694,8 +5694,8 @@ actor dx_compXB2 21313 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5711,8 +5711,8 @@ actor dx_compXK1 21314 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5728,8 +5728,8 @@ actor dx_compXK2 21315 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -5745,7 +5745,7 @@ actor dx_compBase_mmHolo03 21316 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with holo screen"
-	radius 4
+	radius 6
 	height 4
 	States {
 		Spawn:
@@ -5762,7 +5762,7 @@ actor dx_compBase_mmHolo04 21317 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with holo screen"
-	radius 4
+	radius 6
 	height 4
 	States {
 		Spawn:
@@ -5779,7 +5779,7 @@ actor dx_compKybd_mmHolo03 21318 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with holo screen"
-	radius 4
+	radius 6
 	height 4
 	States {
 		Spawn:
@@ -5796,7 +5796,7 @@ actor dx_compKybd_mmHolo04 21319 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with holo screen"
-	radius 4
+	radius 6
 	height 4
 	States {
 		Spawn:
@@ -6195,8 +6195,8 @@ actor wosD_dex_cart 21343 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "metal cart"
-	radius 16
-	height 32
+	radius 12
+	height 25
 	States {
 		Spawn:
 			DUMM A -1
@@ -6695,8 +6695,8 @@ actor dx_compB6 21374 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 16
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -6712,8 +6712,8 @@ actor dx_compK6 21375 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -6729,8 +6729,8 @@ actor dx_compXB3 21376 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -6746,8 +6746,8 @@ actor dx_compXB4 21377 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -6763,8 +6763,8 @@ actor dx_compXK3 21378 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -6780,8 +6780,8 @@ actor dx_compXK4 21379 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Personal computer with large screen"
-	radius 4
-	height 4
+	radius 6
+	height 20
 	States {
 		Spawn:
 			DUMM ABCD 6
@@ -8487,6 +8487,20 @@ actor wosD_stool 21483 {
 			DUMM A -1
 			Stop
   	}
+}
+
+actor wosD_anvil replaces anvil 21484 {
+	//$Category "Decorations/WoS"
+	//$Title "dx anvil"
+	tag "metal anvil"
+	Radius 16
+  	Height 32
+  	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

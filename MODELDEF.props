@@ -546,7 +546,7 @@ model dest_Pitcher {
 	scale 7.0 7.0 7.0
 	offset 0.0 0.0 0.0
 	
-	frameindex VAZE B 0 0
+	frameindex DUMM A 0 0
 }
 model WoodenBarrel {
 	path "models/props/woodbarrel/"
@@ -900,6 +900,14 @@ model Anvil {
 	offset 0.0 0.0 0.0
 	
 	frameindex ANVL A 0 0
+}
+model wosD_anvil {
+	path "models/props/anvil/"
+	model 0 "anvil.md3"
+	skin 0 "tx_anvil.png"
+	scale 8.0 8.0 8.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
 

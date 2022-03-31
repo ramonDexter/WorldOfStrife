@@ -120,6 +120,7 @@ class zscAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 		Inventory.PickupMessage "$TXT_ASSAULTGUN";
 		radius 12;
 		height 32;
+		Tag "$T_ASSAULTGUN";
 	}
 	
 	States {

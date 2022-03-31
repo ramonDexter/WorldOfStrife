@@ -1,6 +1,7 @@
 actor FloorLantern 4680
 {
 	//$Category "Light sources"
+  tag "lantern floor"
 	Radius 16
 	Height 20
 	States
@@ -14,20 +15,22 @@ actor FloorLantern 4680
 actor FloorLantern_Animated 4681
 {
 	//$Category "Light sources"
+  tag "lantern floor blinking"
   Radius 16
   Height 20
   States
   {
   Spawn:
     FRLT A 5 Bright
-	FRLF A 10
-	Loop
+	  FRLF A 10
+	  Loop
   }
 }
 
 actor FloorLanternTall 4682
 {
 	//$Category "Light sources"
+  tag "lantern floor tall"
   Radius 16
   Height 20
   States
@@ -41,6 +44,7 @@ actor FloorLanternTall 4682
 actor FloorLanternTall_Animated 4683
 {
 	//$Category "Light sources"
+  tag "lantern floor tall blinking"
   Radius 16
   Height 20
   States
@@ -55,6 +59,7 @@ actor FloorLanternTall_Animated 4683
 actor CeilingLantern 4684
 {
 	//$Category "Light sources"
+  tag "ceiling lantern"
   Radius 16
   Height 20
   +SPAWNCEILING
@@ -70,6 +75,7 @@ actor CeilingLantern 4684
 actor CeilingLantern_Animated 4685
 {
 	//$Category "Light sources"
+  tag "ceiling lantern blinking"
   Radius 16
   Height 20
   +SPAWNCEILING
@@ -86,6 +92,7 @@ actor CeilingLantern_Animated 4685
 actor CeilingLanternTall 4686
 {
 	//$Category "Light sources"
+  tag "ceiling lantern tall"
   Radius 16
   Height 20
   +SPAWNCEILING
@@ -101,6 +108,7 @@ actor CeilingLanternTall 4686
 actor CeilingLanternTall_Animated 4687
 {
 	//$Category "Light sources"
+  tag "ceiling lantern tall blinking"
   Radius 16
   Height 20
   +SPAWNCEILING

@@ -5,12 +5,66 @@ namespace = "GZDoom";
 
 Conversation {
 	ID = 23;
+    /*
+    Page {
+        pageName = "";
+        Name = "Armor vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
 		pageName = "SH_citySurgeon_opener";
 		Name = "Medic";
 		Dialog = "\c[white]Hello binder, are you injured? Fell free to use the autodoc, I've just cleaned it and it's ready to use.";
 		Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_citySurgeon_questions";
+        }
 	}
+    Page {
+        pageName = "SH_citySurgeon_questions";
+        Name = "Armor vendor";
+        Dialog = "\c[white]Yes? What did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_citySurgeon_opener";
+        }
+        Choice {
+            Text = "Could you tell me about your patients?";
+            Nextpage = "SH_citySurgeon_aboutpatients";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            Nextpage = "SH_citySurgeon_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_citySurgeon_aboutpatients";
+        Name = "Armor vendor";
+        Dialog = "\c[white]Well, I cannot tell you any personal information about my patients. Medical secret, sorry.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_citySurgeon_opener";
+        }
+    }
+    Page {
+        pageName = "SH_citySurgeon_aboutsilenthills";
+        Name = "Armor vendor";
+        Dialog = "\c[white]Silent Hills is nice little town. I've been assigned here three years ago, so I really don't know much, yet. I've got lots of work here in the lab, so if you really want to know about the town's history, you have to ask someone else.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_citySurgeon_opener";
+        }
+    }
 }
 
 //==================================================================================================================

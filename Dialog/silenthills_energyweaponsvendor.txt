@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 12;
+    /*
+    Page {
+        pageName = "";
+        Name = "Energy Weapons Vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_energyWeaponsVendor_opener";
 		Name = "Energy Weapons Vendor";
@@ -15,6 +27,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscMauler";
 			NextPage = "SH_energyWeaponsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -27,6 +40,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPod";
 			NextPage = "SH_energyWeaponsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -39,6 +53,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyKit";
 			NextPage = "SH_energyWeaponsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -51,6 +66,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPack";
 			NextPage = "SH_energyWeaponsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -63,12 +79,55 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscFlameThrower";
 			NextPage = "SH_energyWeaponsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
 				Amount = 1450;
 			}
 		}
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_energyWeaponsVendor_questions";
+        }
 	}
+    Page {
+        pageName = "SH_energyWeaponsVendor_questions";
+        Name = "Energy Weapons Vendor";
+        Dialog = "\c[white]Yes?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_energyWeaponsVendor_opener";
+        }
+        Choice {
+            Text = "This is your shop?";
+            Nextpage = "SH_energyWeaponsVendor_yourshop";
+        }
+        Choice {
+            Text = "Could you tell me about the city?";
+            Nextpage = "SH_energyWeaponsVendor_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_energyWeaponsVendor_yourshop";
+        Name = "Energy Weapons Vendor";
+        Dialog = "\c[white]Yes, it is. My father built this place, and he passed it to me when he passed away. I'm doing good trade here, I'm supplying the local guard here, and also I supply your order. You're good customers, I say.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_energyWeaponsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_energyWeaponsVendor_aboutsilenthills";
+        Name = "Energy Weapons Vendor";
+        Dialog = "\c[white]Well, Silent Hills is my home for my whole life. I've never left this palce, except for small trading trips to surrounding towns. We've got everything here, traders, pubs, and even big public bathhouse.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_energyWeaponsVendor_questions";
+        }
+    }
 }
 //==================================================================================================================

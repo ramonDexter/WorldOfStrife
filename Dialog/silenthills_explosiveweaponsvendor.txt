@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 11;
+    /*
+    Page {
+        pageName = "";
+        Name = "Explosive Guns Vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_explosiveGunsVendor_opener";
 		Name = "Explosive Guns Vendor";
@@ -15,6 +27,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscStrifeGrenadeLauncher";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -27,6 +40,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "HEGrenadeRounds";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -39,6 +53,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "PhosphorusGrenadeRounds";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -51,6 +66,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscMiniMissileLauncher";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -63,6 +79,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "MiniMissiles";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
@@ -75,12 +92,55 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "CrateOfMissiles";
 			NextPage = "SH_explosiveGunsVendor_opener";
+			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
 				Item = "goldCoin";
 				Amount = 65;
 			}
 		}
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_explosiveGunsVendor_questions";
+        }
 	}
+    Page {
+        pageName = "SH_explosiveGunsVendor_questions";
+        Name = "Explosive Guns Vendor";
+        Dialog = "\c[white]Oh, you wanted a little chat. What did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_explosiveGunsVendor_opener";
+        }
+        Choice {
+            Text = "You make all these weapons?";
+            Nextpage = "SH_explosiveGunsVendor_weapons";
+        }
+        Choice {
+            Text = "Could you tell me about the town?";
+            Nextpage = "SH_explosiveGunsVendor_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_explosiveGunsVendor_weapons";
+        Name = "Explosive Guns Vendor";
+        Dialog = "\c[white]Yes, I make all these weapons. I'm specialized in explosive weapons since I left the tekguild school.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_explosiveGunsVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_explosiveGunsVendor_aboutsilenthills";
+        Name = "Explosive Guns Vendor";
+        Dialog = "\c[white]Well, our town is quiet nice place. But it wasn't always like that. Back when I was a little brat, it was busy mining town. The miners were low on temper, so the streets wre sometimes dangerous. Especially on teh payday.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_explosiveGunsVendor_questions";
+        }
+    }
 }
 //==================================================================================================================

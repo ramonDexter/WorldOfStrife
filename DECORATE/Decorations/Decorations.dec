@@ -1882,7 +1882,6 @@ actor voxVTOLgreen 21098
 	Radius 32
 	Height 68
 	+SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS
@@ -1902,7 +1901,6 @@ actor FlyingCarRed 21099
 	Radius 32
 	Height 32
 	+SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS
@@ -2082,7 +2080,6 @@ ACTOR DMYstaffBlaster01 21110
 	//$Category "Weapons/dummy"
 	//$Title "dummy Blaster Staff (ground)"
     -SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS
@@ -2105,7 +2102,6 @@ ACTOR DMYstaffBlaster02 21111
 	//$Category "Weapons/dummy"
 	//$Title "dummy Blaster Staff (standing)"
     -SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS
@@ -2127,7 +2123,6 @@ ACTOR DMYstaffBlaster03 21112
 	//$Category "Weapons/dummy"
 	//$Title "dummy Blaster Staff (side)"
     -SOLID
-	+SHOOTABLE
 	+NODAMAGE
 	+NOBLOOD
 	+CANPASS

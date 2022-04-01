@@ -1,0 +1,210 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 51;
+    /*
+    Page {
+        pageName = "";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "SH_merrick_opener";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]Hello, welcome to the riverside inn. We got good beer to drink, we got some tabitian wine and some good old water. And if you're hungry, we got some burgers or grilled chicken. What would you like?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I wanted something to drink.";
+            Nextpage = "SH_merrick_drinks";
+        }
+        Choice {
+            Text = "I'm little bit hungry.";
+            Nextpage = "SH_merrick_food";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_merrick_questions";
+        }
+    }
+    Page {
+        pageName = "SH_merrick_drinks";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]All right, let's get some drink!\nThe beer and ale costs 3, wine costs 5 and fresh water is for 2 gold. What would you like?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
+        }
+        Choice {
+            Text = "I'll take the beer ";
+			NextPage = "SH_merrick_drinks";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "I'll take the ale ";
+			NextPage = "SH_merrick_drinks";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "I'll take the wine ";
+			NextPage = "SH_merrick_drinks";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "I'll take the water ";
+			NextPage = "SH_merrick_drinks";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 2;
+			}
+        }
+    }
+    Page {
+        pageName = "SH_merrick_food";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]Okay, so you're hungry. That could be easily solved.\nThe hambruger costs 4, cheeseburger is for 5 and the bigburger costs 6 gold. The grilled chicken is for 10 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
+        }
+        Choice {
+            Text = "I'll take the hamburger ";
+			NextPage = "SH_merrick_food";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHamburger";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        }
+        Choice {
+            Text = "I'll take the cheeseburger ";
+			NextPage = "SH_merrick_food";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "I'll take the bigburger ";
+			NextPage = "SH_merrick_food";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        }
+        Choice {
+            Text = "I'll take the grilled chicken ";
+			NextPage = "SH_merrick_food";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+        }
+    }
+    Page {
+        pageName = "SH_merrick_questions";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]Okay, what did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
+        }
+        Choice {
+            Text = "This is your inn?";
+            Nextpage = "SH_merrick_yourinn";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_merrick_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_merrick_yourinn";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]Oh yes, thanks for asking. I've bought this place ten years ago. I've always wanted to own a inn near a river, and when I saw a proposal to buy such a place, I left my last job and bought this magnificent place. And since that time, I'm improving this little inn. I've recently built the patio outside.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_questions";
+        }
+        Choice {
+            Text = "So the trade is good I guess..";
+            Nextpage = "SH_merrick_tradeisgood";
+        }
+    }
+    Page {
+        pageName = "SH_merrick_tradeisgood";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]True, it is. We're having good weather for the last few weeks, so people are enjoying their time outside. And they like to hang aroud the river. They come here, buy a drink or some snack and onjoy their time. They're happy and I'm happy too. Harmony, I say.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_questions";
+        }
+    }
+    Page {
+        pageName = "SH_merrick_aboutsilenthills";
+        Name = "Merrick, innkeeper";
+        Dialog = "\c[white]Well, Silent Hills is quiet town. The locals are peaceful and hard working, so they just spend most of their daytime in work. And when evening comes, they just return home tired. The streets are more busy only during weekends and holidays. The workers have a free days during weekends and holidays, so they roam the streets, or wander around town.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_questions";
+        }
+    }
+}

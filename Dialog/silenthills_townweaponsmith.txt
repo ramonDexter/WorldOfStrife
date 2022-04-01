@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 5;
+    /*
+    Page {
+        pageName = "";
+        Name = "Weaponsmith";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_townWeaponsmith_opener";
 		Name = "Weaponsmith";
@@ -87,6 +99,48 @@ Conversation {
 				Amount = 50;
 			}
 		}
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_townWeaponsmith_questions";
+        }
 	}
+    Page {
+        pageName = "SH_townWeaponsmith_questions";
+        Name = "Weaponsmith";
+        Dialog = "\c[white]Yes? What did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townWeaponsmith_opener";
+        }
+        Choice {
+            Text = "Is this your shop?";
+            Nextpage = "SH_townWeaponsmith_yourshop?";
+        }
+        Choice {
+            Text = "Could you tell me about the town?";
+            Nextpage = "SH_townWeaponsmith_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_townWeaponsmith_yourshop";
+        Name = "Weaponsmith";
+        Dialog = "\c[white]Oh yes, this shop is mine. My grandfather built it, so I'm just expanding it. The trade is good, I must say.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townWeaponsmith_questions";
+        }
+    }
+    Page {
+        pageName = "SH_townWeaponsmith_aboutsilenthills";
+        Name = "Weaponsmith";
+        Dialog = "\c[white]Our little town's nice place to live. We've got a town bath here, and the locals pubs are also nice. I like to hang around the inn next to river when the day's over.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townWeaponsmith_questions";
+        }
+    }
 }
 //==================================================================================================================

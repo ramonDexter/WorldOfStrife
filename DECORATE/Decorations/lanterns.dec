@@ -7,7 +7,7 @@ actor FloorLantern 4680
 	States
 	{
 		Spawn:
-		FRLT A -1 Bright
+		FRLT A -1 Bright light("FloorLanternLight")
 		Stop
 	}
 }
@@ -21,7 +21,7 @@ actor FloorLantern_Animated 4681
   States
   {
   Spawn:
-    FRLT A 5 Bright
+    FRLT A 5 Bright light("FloorLanternLight")
 	  FRLF A 10
 	  Loop
   }
@@ -36,7 +36,7 @@ actor FloorLanternTall 4682
   States
   {
   Spawn:
-    FRLT B -1 Bright
+    FRLT B -1 Bright light("FloorLanternLight")
 	Stop
   }
 }
@@ -50,8 +50,8 @@ actor FloorLanternTall_Animated 4683
   States
   {
   Spawn:
-    FRLT B 5 Bright
-	FRLF B 10
+    FRLT B 5 Bright light("FloorLanternLight")
+	  FRLF B 10
 	Loop
   }
 }
@@ -67,7 +67,7 @@ actor CeilingLantern 4684
   States
   {
   Spawn:
-    FRLT C -1 Bright
+    FRLT C -1 Bright light("CeilingLanternLight")
 	Stop
   }
 }
@@ -83,8 +83,8 @@ actor CeilingLantern_Animated 4685
   States
   {
   Spawn:
-    FRLT C 5 Bright
-	FRLF C 10
+    FRLT C 5 Bright light("CeilingLanternLight")
+	  FRLF C 10
 	Loop
   }
 }
@@ -100,7 +100,7 @@ actor CeilingLanternTall 4686
   States
   {
   Spawn:
-    FRLT D -1 Bright
+    FRLT D -1 Bright light("CeilingLanternLight")
 	Stop
   }
 }
@@ -116,8 +116,8 @@ actor CeilingLanternTall_Animated 4687
   States
   {
   Spawn:
-    FRLT D 5 Bright
-	FRLF D 10
+    FRLT D 5 Bright light("CeilingLanternLight")
+	  FRLF D 10
 	Loop
   }
 }

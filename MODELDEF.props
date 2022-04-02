@@ -452,6 +452,15 @@ model Mug {
 	
 	frameindex MUGG A 0 1
 }
+model wosD_mug {
+	path "models/props/mug/"
+	model 0 "woodenMug.md3"
+	skin 0 "tx_WOOD07.png"
+	scale 3.3 3.3 3.3
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  water bottle  //////////////////////////////////////////////////////////////
@@ -1529,7 +1538,7 @@ model FloorLantern_Animated {
 }
 model FloorLanternTall {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant02g.md3"
 	scale 10.0 10.0 10.0
 	offset 0.0 0.0 0.0
 	
@@ -1538,7 +1547,7 @@ model FloorLanternTall {
 }
 model FloorLanternTall_Animated {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant02g.md3"
 	scale 10.0 10.0 10.0
 	offset 0.0 0.0 0.0
 	
@@ -1549,18 +1558,18 @@ model FloorLanternTall_Animated {
 }
 model CeilingLantern {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant01c.md3"
 	scale 10.0 10.0 10.0
-	offset 0.0 0.0 0.0
+	offset 0.0 0.0 20.0
 	
 	skin 0 "tx_lanterns01.png"
 	frameindex FRLT C 0 0
 }
 model CeilingLantern_Animated {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant01c.md3"
 	scale 10.0 10.0 10.0
-	offset 0.0 0.0 0.0
+	offset 0.0 0.0 20.0
 	
 	skin 0 "tx_lanterns01.png"
 	frameindex FRLT C 0 0
@@ -1569,18 +1578,18 @@ model CeilingLantern_Animated {
 }
 model CeilingLanternTall {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant02c.md3"
 	scale 10.0 10.0 10.0
-	offset 0.0 0.0 0.0
+	offset 0.0 0.0 20.0
 	
 	skin 0 "tx_lanterns01.png"
 	frameindex FRLT D 0 0
 }
 model CeilingLanternTall_Animated {
 	path "models/props/lanterns/"
-	model 0 "lant01g.md3"
+	model 0 "lant02c.md3"
 	scale 10.0 10.0 10.0
-	offset 0.0 0.0 0.0
+	offset 0.0 0.0 20.0
 	
 	skin 0 "tx_lanterns01.png"
 	frameindex FRLT D 0 0
@@ -2913,6 +2922,51 @@ model wosD_bucketHandle {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+
+// daggerfall hanging lanterns /////////////////////////////////////////////////
+model wosD_daggerfallLanternHanging01 {
+	path "models/props/dagglantern/"
+	model 0 "dagg_lantern_01.md3"
+	surfaceskin 0 0 "tx_chain.png"
+	surfaceskin 0 1 "tx_daggLant.png"
+	scale 0.88 0.88 0.88
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
+model wosD_daggerfallLanternHanging03 {
+	path "models/props/dagglantern/"
+	model 0 "dagg_lantern_03.md3"
+	surfaceskin 0 0 "tx_chain.png"
+	surfaceskin 0 1 "tx_daggLant.png"
+	scale 0.88 0.88 0.88
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
+model wosD_daggerfallLanternHanging04 {
+	path "models/props/dagglantern/"
+	model 0 "dagg_lantern_04.md3"
+	surfaceskin 0 0 "tx_chain.png"
+	surfaceskin 0 1 "tx_daggLant.png"
+	surfaceskin 0 2 "tx_chain.png"
+	scale 0.88 0.88 0.88
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
+model wosD_daggerfallLanternHanging05 {
+	path "models/props/dagglantern/"
+	model 0 "dagg_lantern_05.md3"
+	surfaceskin 0 0 "tx_chain.png"
+	surfaceskin 0 1 "tx_daggLant.png"
+	scale 0.88 0.88 0.88
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

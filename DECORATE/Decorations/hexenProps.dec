@@ -1038,8 +1038,8 @@ ACTOR hexTableShit1 28225
 {
 	//$Category "Decorations/Hexen"
 	//$Title Wooden Beer Stein
-  Radius 8
-  Height 16
+  Radius 4
+  Height 12
   tag "beer stein wooden"
   
   States
@@ -1054,8 +1054,8 @@ ACTOR hexTableShit2 28226
 {
 	//$Category "Decorations/Hexen"
 	//$Title Glass Beer Stein
-  Radius 8
-  Height 16
+  Radius 4
+  Height 12
   tag "beer stein glass"
   
   States

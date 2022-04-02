@@ -1,48 +1,16 @@
 //lanterns
-pointlight FLOORLANT
+pointlight FloorLanternLight
 {
     color 1.0 1.0 0.5
     size 32
     offset 0 12 0
-	attenuate 1
+	//attenuate 1
 }
 
-object FloorLantern
-{
-    frame FRLT { light FLOORLANT }
+pointlight CeilingLanternLight {
+    color 1.0 1.0 0.5
+    size 56
+    offset 0 0 0
+	//attenuate 1
 }
 
-object FloorLantern_Animated
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object FloorLanternTall
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object FloorLanternTall_Animated
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object CeilingLantern
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object CeilingLantern_Animated
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object CeilingLanternTall
-{
-    frame FRLT { light FLOORLANT }
-}
-
-object CeilingLanternTall_Animated
-{
-    frame FRLT { light FLOORLANT }
-}

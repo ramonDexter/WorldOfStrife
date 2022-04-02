@@ -4140,8 +4140,10 @@ actor modelStrifeBurningBarrel : StrifeBurningBarrel replaces StrifeBurningBarre
 			Stop
 	}
 }
+
 actor modelSmallTorchLit : SmallTorchLit replaces SmallTorchLit { //smallTorchFlames
 	tag "small torch"
+	-NOBLOCKMAP
 	States {
 		Spawn:
 			TRHL A -1 NODELAY A_SpawnItemEx("smallTorchFlames", 0, 0, 46)
@@ -4384,8 +4386,8 @@ actor strifeBed01 21234 {
 	+DONTTHRUST
 	
 	Tag "wooden bed"
-	height 16
-	radius 16
+	height 20
+	radius 28
 	
 	States {
 		Spawn:
@@ -4401,8 +4403,8 @@ actor strifeBed02 21235 {
 	+DONTTHRUST
 	
 	Tag "wooden bed"
-	height 16
-	radius 16
+	height 20
+	radius 28
 	
 	States {
 		Spawn:
@@ -4487,7 +4489,7 @@ actor strifeNightStand01 21240 {
 	+ACTLIKEBRIDGE
 	Tag "night stand"
 	height 24
-	radius 16
+	radius 12
 	States {
 		Spawn:
 			SNHT A -1
@@ -4502,7 +4504,7 @@ actor strifeChair03 21241 {
 	+DONTTHRUST
 	Tag "wooden armchair"
 	height 16
-	radius 16
+	radius 12
 	
 	States {
 		Spawn:
@@ -4585,7 +4587,7 @@ actor strifeNightStand02 21246 {
 	+ACTLIKEBRIDGE
 	Tag "night stand"
 	height 20
-	radius 16
+	radius 12
 	
 	States {
 		Spawn:
@@ -4601,8 +4603,8 @@ actor strifeNightStand03 21247 {
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
 	tag "wooden cabinet"
-	height 48
-	radius 16
+	height 46
+	radius 12
 	
 	States {
 		Spawn:
@@ -4618,8 +4620,8 @@ actor strifeNightStand04 21248 {
 	+DONTTHRUST
 	+ACTLIKEBRIDGE
 	tag "small wooden cabinet"
-	height 48
-	radius 16
+	height 36
+	radius 12
 	
 	States {
 		Spawn:
@@ -8107,6 +8109,11 @@ actor wosD_nwFemale_04 21459 {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // daggerfall lanterns ////////////////////////////////////////////////////////////////////////////////////////
+
+actor daggCandleFire : bloodCandleFire {
+	scale 1.0
+}
+
 actor wosD_daggerfallLanternHanging01 21460 {
 	//$Category "Decorations/WoS"
 	//$Title "dagg hanging lantern 01"
@@ -8120,9 +8127,12 @@ actor wosD_daggerfallLanternHanging01 21460 {
 	scale 1.0
 
 	States {
-		Spawn:
+		/*Spawn:
 			DCL1 ABCD 4 Bright light("daggLantLight")
-			Loop
+			Loop*/
+		Spawn:
+			DUMM A -1 Bright NODELAY A_SpawnItemEx("daggCandleFire", 0, 0, 18)
+			Stop
 	}
 }
 actor wosD_daggerfallLanternHanging05 21461 {
@@ -8138,9 +8148,12 @@ actor wosD_daggerfallLanternHanging05 21461 {
 	scale 1.0
 
 	States {
-		Spawn:
+		/*Spawn:
 			DCL5 ABCD 4 Bright light("daggLantLight")
-			Loop
+			Loop*/
+		Spawn:
+			DUMM A -1 Bright NODELAY A_SpawnItemEx("daggCandleFire", 0, 0, 18)
+			Stop
 	}
 }
 actor wosD_daggerfallLanternHanging06 21462 {
@@ -8174,9 +8187,12 @@ actor wosD_daggerfallLanternHanging03 21463 {
 	scale 1.0
 
 	States {
-		Spawn:
+		/*Spawn:
 			DCL3 ABCD 4 Bright light("daggLantLight")
-			Loop
+			Loop*/
+		Spawn:
+			DUMM A -1 Bright NODELAY A_SpawnItemEx("daggCandleFire", 0, 0, 18)
+			Stop
 	}
 }
 actor wosD_daggerfallLanternHanging04 21464 {
@@ -8192,9 +8208,12 @@ actor wosD_daggerfallLanternHanging04 21464 {
 	scale 1.0
 
 	States {
-		Spawn:
+		/*Spawn:
 			DCL4 ABCD 4 Bright light("daggLantLight")
-			Loop
+			Loop*/
+		Spawn:
+			DUMM A -1 Bright NODELAY A_SpawnItemEx("daggCandleFire", 0, 0, 18)
+			Stop
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -8340,7 +8359,7 @@ actor wosD_tub 21474 {
 	Tag "wooden tub"
 	-NOBLOCKMAP
 	radius 12
-
+	height 16
 	States {
 		Spawn:
 			DUMM A -1
@@ -8490,6 +8509,20 @@ actor wosD_anvil replaces anvil 21484 {
 	tag "metal anvil"
 	Radius 16
   	Height 32
+  	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+
+actor wosD_mug replaces mug 21485 {
+	//$Category "Decorations/WoS"
+	//$Title "dx mug"
+	tag "wooden mug"
+	Radius 4
+  	Height 8
   	+SOLID
 	States {
 		Spawn:

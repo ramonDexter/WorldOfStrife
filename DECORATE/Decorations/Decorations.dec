@@ -6340,7 +6340,7 @@ actor wosD_dex_showerFaucet 21352 {
 	+DONTTHRUST
 	Tag "shower faucet"
 	radius 4
-	height 4
+	height 8
 	States {
 		Spawn:
 			DUMM A -1
@@ -6356,7 +6356,7 @@ actor wosD_dex_showerHead 21353 {
 	+DONTTHRUST
 	Tag "shower head"
 	radius 4
-	height 4
+	height 8
 	States {
 		Spawn:
 			DUMM A -1

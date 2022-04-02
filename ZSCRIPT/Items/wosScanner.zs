@@ -109,12 +109,12 @@ class wosscannerweapon : weapon {
             TNT1 A 0 A_Lower();
             Loop;
         Fire: //actually scanner action, when held, repeated action
-            TNT1 A 0;
-            /*TNT1 A 1 W_startScanner();
+            //TNT1 A 0;
+            TNT1 A 1 W_startScanner();
             TNT1 A 1;
             TNT1 A 1 W_stopScanner();
-            TNT1 A 0 A_Refire("Fire");
-            TNT1 AAAAA 0;*/       
+            TNT1 A 0 /*A_Refire("Fire")*/;
+            TNT1 A 1;       
             Goto Ready;
 	}
 }

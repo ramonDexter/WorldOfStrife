@@ -2715,7 +2715,7 @@ model wosD_dex_showerFaucet {
 	model 0 "showerFaucet.md3"
 	skin 0 "ShowerFaucetTex1.png"
 	scale 0.6 0.6 0.6
-	offset 0.0 0.0 0.0
+	offset -4.0 0.0 4.0
 	frameindex DUMM A 0 0
 }
 model wosD_dex_showerHead {
@@ -2723,7 +2723,7 @@ model wosD_dex_showerHead {
 	model 0 "showerHead.md3"
 	skin 0 "ShowerHeadTex1.png"
 	scale 0.75 0.75 0.75
-	offset 0.0 0.0 0.0
+	offset -4.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_dex_statueLion {

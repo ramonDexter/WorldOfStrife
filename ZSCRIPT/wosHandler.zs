@@ -161,10 +161,10 @@ class wosEventHandler : EventHandler {
 		Footsteps fsteps = Footsteps(Actor.Spawn("Footsteps",player.pos));
         fsteps.Init(player);
 	}
-	override void PlayerDisconnected(PlayerEvent e) {
+	/*override void PlayerDisconnected(PlayerEvent e) {
 		//Footsteps fsteps = footsteps("footsteps");
 		//fsteps.Destroy();
-	}
+	}*/
 	// cheats & debug //////////////////////////////////////////////////////////
 	override void NetworkProcess(ConsoleEvent e) {
         let pawn = binderPlayer(players[e.Player].mo);
@@ -244,7 +244,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("shldrGunMag", 32);
 			pawn.A_GiveInventory("shoulderGunCharger", 1);
 		} 
-		// ACS support //
+		// ACS script support //
 		else if ( e.Name == "selectDagger" ) {
 			pawn.A_SelectWeapon("zscPunchDagger");
 		}

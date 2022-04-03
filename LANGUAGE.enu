@@ -81,7 +81,8 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"CWATR21:CWATR22:CWATR23:CWATR24:"
 			"F_NAT02:FCARP01:F_CARP1:KBEDB:"
 			"SBEDR01:RCRPT01:RCRPT02:RCRPT03:"
-			"RCRPT04:RCRPT05:RCRPT06:";
+			"RCRPT04:RCRPT05:RCRPT06:F_ELTOP2:"
+			"";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -281,6 +282,7 @@ STEP_SLIME14 = "step/metal/a";
 STEP_SLIME15 = "step/metal/a";
 STEP_SLIME16 = "step/metal/a";
 
+
 // Metal B /////////////////////////////////////////////////////////////////////
 STEP_FLAT22 = "step/metal/b";
 STEP_FLAT23 = "step/metal/b";
@@ -301,6 +303,7 @@ STEP_F_CRPMET = "step/metal/b";
 STEP_F_DECK = "step/metal/b";
 STEP_F_GIRDER = "step/metal/b";
 STEP_F_TEKPLT = "step/metal/b";
+STEP_F_ELTOP2 = "step/metal/b";
 
 // Rock ////////////////////////////////////////////////////////////////////////
 STEP_FLAT1 = "step/rock";

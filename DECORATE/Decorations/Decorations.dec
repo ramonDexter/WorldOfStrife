@@ -8534,7 +8534,7 @@ actor wosD_mug replaces mug 21485 {
 actor wosD_pottedTree : pottedTree 21486 {
 	//$Category "Decorations/WoS"
 	//$Title "dx potted tree"
-	tag "potted tree";
+	tag "potted tree"
 	Radius 15
   	Height 64
   	+SOLID

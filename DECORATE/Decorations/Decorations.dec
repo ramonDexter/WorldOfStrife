@@ -8111,6 +8111,7 @@ actor wosD_nwFemale_04 21459 {
 // daggerfall lanterns ////////////////////////////////////////////////////////////////////////////////////////
 
 actor daggCandleFire : bloodCandleFire {
+	Tag "hanging lantern"
 	scale 1.0
 }
 

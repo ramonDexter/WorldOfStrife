@@ -8562,6 +8562,194 @@ actor wosD_combine_dispenser 21487 {
 			Stop
 	}
 }
+
+actor wosD_npc_daggerfallMale01 21488 {
+	//$Category "Other NPCs/wos"
+	//$Title "bald black noble"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "bald black noble"
+	radius 16
+	height 60
+
+	States {
+		Spawn:
+			DM01 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale02 21489 {
+	//$Category "Other NPCs/wos"
+	//$Title "bald guy writing"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "bald guy writing"
+	radius 16
+	height 43
+
+	States {
+		Spawn:
+			DM02 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale03 21490 {
+	//$Category "Other NPCs/wos"
+	//$Title "balding flutist"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "balding flutist"
+	radius 16
+	height 56
+
+	States {
+		Spawn:
+			DM03 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale04 21491 {
+	//$Category "Other NPCs/wos"
+	//$Title "brown noble"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "brown noble"
+	radius 16
+	height 60
+
+	States {
+		Spawn:
+			DM04 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale05 21492 {
+	//$Category "Other NPCs/wos"
+	//$Title "naked boy"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "naked boy"
+	radius 16
+	height 43
+
+	States {
+		Spawn:
+			DM05 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale06 21493 {
+	//$Category "Other NPCs/wos"
+	//$Title "brown guy"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "brown guy"
+	radius 16
+	height 61
+
+	States {
+		Spawn:
+			DM06 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale07 21494 {
+	//$Category "Other NPCs/wos"
+	//$Title "white guy"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "white guy"
+	radius 16
+	height 61
+
+	States {
+		Spawn:
+			DM07 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale08 21495 {
+	//$Category "Other NPCs/wos"
+	//$Title "tall guy"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "tall guy"
+	radius 16
+	height 64
+
+	States {
+		Spawn:
+			DM08 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale09 21496 {
+	//$Category "Other NPCs/wos"
+	//$Title "blonde guy"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "blonde guy"
+	radius 16
+	height 60
+
+	States {
+		Spawn:
+			DM09 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale10 21497 {
+	//$Category "Other NPCs/wos"
+	//$Title "naked prisoner"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "naked prisoner"
+	radius 16
+	height 60
+
+	States {
+		Spawn:
+			DM10 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale11 21498 {
+	//$Category "Other NPCs/wos"
+	//$Title "horserider"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "horserider"
+	radius 32
+	height 79
+
+	States {
+		Spawn:
+			DM11 AAAAAAAAAAAAAAAABBCC 4
+			Loop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

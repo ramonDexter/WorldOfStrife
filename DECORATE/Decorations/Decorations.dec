@@ -8113,6 +8113,11 @@ actor wosD_nwFemale_04 21459 {
 actor daggCandleFire : bloodCandleFire {
 	Tag "hanging lantern"
 	scale 1.0
+	States {
+		Spawn:
+			BCDF ABCD 4 Bright light("daggCandleLight")
+			Loop
+	}
 }
 
 actor wosD_daggerfallLanternHanging01 21460 {
@@ -8170,9 +8175,12 @@ actor wosD_daggerfallLanternHanging06 21462 {
 	scale 1.0
 
 	States {
-		Spawn:
+		/*Spawn:
 			DCL6 A -1 Bright light("daggLantLight")
-			stop
+			stop*/
+		Spawn:
+			DUMM A -1 Bright NODELAY A_SpawnItemEx("daggCandleFire", 0, 0, 18)
+			Stop
 	}
 }
 actor wosD_daggerfallLanternHanging03 21463 {

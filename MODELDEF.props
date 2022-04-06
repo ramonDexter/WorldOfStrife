@@ -51,7 +51,7 @@ model wosD_dexCigaretteMachine {
 	model 0 "dx_cigaretteMachine.md3"
 	skin 0 "CigaretteMachineTex1.png"
 	scale 0.75 0.75 0.75
-	offset 0.0 0.0 0.0
+	offset -1.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 // deusEx bookClosed ///////////////////////////////////////////////////////////
@@ -2966,6 +2966,16 @@ model wosD_daggerfallLanternHanging04 {
 model wosD_daggerfallLanternHanging05 {
 	path "models/props/dagglantern/"
 	model 0 "dagg_lantern_05.md3"
+	surfaceskin 0 0 "tx_chain.png"
+	surfaceskin 0 1 "tx_daggLant.png"
+	scale 0.88 0.88 0.88
+	offset 0.0 0.0 0.0
+
+	frameindex DUMM A 0 0
+}
+model wosD_daggerfallLanternHanging06 {
+	path "models/props/dagglantern/"
+	model 0 "dagg_lantern_06.md3"
 	surfaceskin 0 0 "tx_chain.png"
 	surfaceskin 0 1 "tx_daggLant.png"
 	scale 0.88 0.88 0.88

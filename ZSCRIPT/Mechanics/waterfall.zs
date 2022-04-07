@@ -13,6 +13,7 @@ Class WaterfallFogSpawner : Actor {
 		+NOINTERACTION
 		+SYNCHRONIZED
 		+DONTBLAST
+		Tag "waterfall fog";
 		radius 8;
 		height 16;
 		FloatBobPhase 0;

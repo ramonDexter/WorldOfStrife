@@ -3568,6 +3568,7 @@ actor female01_ladyWithBall 21196 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady with ball"
 	scale 0.75
 	radius 16
 	height 56
@@ -3586,6 +3587,7 @@ actor female02_girl01 21197 {
 	//+nogravity
 	+DontThrust
 	//scale 0.75
+	tag "black girl"
 	radius 16
 	height 56
 	
@@ -3603,6 +3605,7 @@ actor female02_girl02 21198 {
 	//+nogravity
 	+DontThrust
 	//scale 0.75
+	tag "blonde girl"
 	radius 16
 	height 56
 	
@@ -3620,6 +3623,7 @@ actor female02_girl03 21199 {
 	//+nogravity
 	+DontThrust
 	//scale 0.75
+	tag "red girl"
 	radius 16
 	height 56
 	
@@ -3636,6 +3640,7 @@ actor female03_green 21200 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady green"
 	scale 0.9
 	radius 16
 	height 56
@@ -3653,6 +3658,7 @@ actor female03_red 21201 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady red"
 	scale 0.85
 	radius 16
 	height 56
@@ -3670,6 +3676,7 @@ actor female04_greenSkirt 21202  {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady green skirt"
 	scale 0.75
 	radius 16
 	height 56
@@ -3687,6 +3694,7 @@ actor female05_blueSkirt 21203 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady blue skirt"
 	scale 0.75
 	radius 16
 	height 56
@@ -3704,6 +3712,7 @@ actor female06_redDress 21204 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady red dress"
 	scale 0.75
 	radius 16
 	height 56
@@ -3721,6 +3730,7 @@ actor female07_blackLady 21205 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady black"
 	scale 0.75
 	radius 16
 	height 56
@@ -3738,6 +3748,7 @@ actor female08_ladyNoSkirt01 21206 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady no skirt"
 	scale 0.75
 	radius 16
 	height 56
@@ -3755,6 +3766,7 @@ actor female08_ladyNoSkirt02 21207 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady no skirt"
 	scale 0.75
 	radius 16
 	height 56
@@ -3772,6 +3784,7 @@ actor female08_ladyNoSkirt03 21208 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady no skirt"
 	scale 0.75
 	radius 16
 	height 56
@@ -3789,6 +3802,7 @@ actor female09_blackWarrior 21209 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady black warrior"
 	scale 0.75
 	radius 16
 	height 56
@@ -3806,6 +3820,7 @@ actor female10_ladyWrod 21210 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady with rod"
 	scale 0.75
 	radius 16
 	height 56
@@ -3823,6 +3838,7 @@ actor female11_ladyNaked 21211 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Lady naked"
 	scale 0.75
 	radius 16
 	height 56
@@ -3840,6 +3856,7 @@ actor female12_nobleBlue 21212 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Noble lady blue"
 	scale 0.75
 	radius 16
 	height 56
@@ -3857,6 +3874,7 @@ actor female13_nobleCyan 21213 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Noble lady cyan"
 	scale 0.45
 	radius 16
 	height 56
@@ -3874,6 +3892,7 @@ actor female13_nobleWhite 21214 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Noble lady white"
 	scale 0.45
 	radius 16
 	height 56
@@ -3891,6 +3910,7 @@ actor female14_nobleFlute 21215 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "Noble lady flute"
 	scale 0.45
 	radius 16
 	height 56
@@ -3909,6 +3929,7 @@ actor male01_pubkeeper 21216 {
 	+useSpecial
 	//+nogravity
 	+DontThrust
+	tag "pubkeeper"
 	scale 0.75
 	height 64
 	radius 16
@@ -3926,7 +3947,7 @@ actor male02_fatNoble 21217 {
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
-	
+	tag "fat noble"
 	scale 0.75
 	height 64
 	radius 16
@@ -6514,6 +6535,7 @@ actor wosD_nwFemale_01 21363 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "blonde girl in white"
 	radius 16
 	height 62
 	scale 0.9
@@ -6530,6 +6552,7 @@ actor wosD_nwFemale_02 21364 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "noble lady"
 	radius 16
 	height 62
 	scale 0.9
@@ -6546,6 +6569,7 @@ actor wosD_nwFemale_03 21365 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "brunette green pants"
 	radius 16
 	height 62
 	scale 0.8
@@ -6557,11 +6581,12 @@ actor wosD_nwFemale_03 21365 {
 }
 actor wosD_nwMale_01 21366 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 01"
+	//$Title "nw male 01 merry pubkeeper"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "merry pubkeeper"
 	radius 16
 	height 62
 	scale 0.9
@@ -6573,11 +6598,12 @@ actor wosD_nwMale_01 21366 {
 }
 actor wosD_nwMale_02 21367 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 02"
+	//$Title "nw male 02 bearded monk"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "bearded monk"
 	radius 16
 	height 62
 	scale 0.9
@@ -7996,11 +8022,12 @@ actor wosD_KLog4 21452 {
 }
 actor wosD_nwMale_03 21453 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 03"
+	//$Title "nw male 03 short trader"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "short trader"
 	radius 16
 	height 62
 	scale 0.9
@@ -8012,11 +8039,12 @@ actor wosD_nwMale_03 21453 {
 }
 actor wosD_nwMale_04 21454 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 04"
+	//$Title "nw male 04 travelling gypsy"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "travelling gypsy"
 	radius 16
 	height 62
 	scale 0.9
@@ -8028,11 +8056,12 @@ actor wosD_nwMale_04 21454 {
 }
 actor wosD_nwMale_05 21455 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 05"
+	//$Title "nw male 05 bearded oldguy in blue"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "bearded oldguy in blue"
 	radius 16
 	height 62
 	scale 0.9
@@ -8044,11 +8073,12 @@ actor wosD_nwMale_05 21455 {
 }
 actor wosD_nwMale_06 21456 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 06"
+	//$Title "nw male 06 man in blue"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "man in blue"
 	radius 16
 	height 62
 	scale 0.9
@@ -8060,11 +8090,12 @@ actor wosD_nwMale_06 21456 {
 }
 actor wosD_nwMale_07 21457 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 07"
+	//$Title "nw male 07 blackbeard guy"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "blackbeard guy"
 	radius 16
 	height 62
 	scale 0.9
@@ -8076,11 +8107,12 @@ actor wosD_nwMale_07 21457 {
 }
 actor wosD_nwMale_08 21458 {
 	//$Category "Other NPCs/males"
-	//$Title "nw male 08"
+	//$Title "nw male 08 bald monk"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "bald monk"
 	radius 16
 	height 62
 	scale 0.9
@@ -8097,6 +8129,7 @@ actor wosD_nwFemale_04 21459 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
+	tag "blonde girl brown dress"
 	radius 16
 	height 62
 	scale 0.8

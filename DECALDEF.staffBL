@@ -1,40 +1,37 @@
-//staffBlaster decal/scorch
-//==----------------------------------------------------------------------------
-//blueshot
-decal blueScorch1
-{
+///////////////////////////////////////////////////////////////////////////////
+// staffBlaster decal/scorch //////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// blueshot ///////////////////////////////////////////////////////////////////
+decal blueScorch1 {
 	pic GP_DA0
 	add 1.0
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal blueScorch2
-{
+decal blueScorch2 {
 	pic GP_DB0
 	add 0.7
 	fullbright
 	animator GoAway	
 	lowerdecal DoomImpScorch
 }
-decal blueScorch3
-{
+decal blueScorch3 {
 	pic GP_DC0
 	add 0.5
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal blueScorch4
-{
+decal blueScorch4 {
 	pic GP_DD0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal blueScorch5
-{
+decal blueScorch5 {
 	pic GP_DE0
 	add 0.2
 	fullbright
@@ -42,55 +39,48 @@ decal blueScorch5
 	lowerdecal DoomImpScorch
 
 }
-//endof blueshot
-//
-//redshot
-decal redScorch1
-{
+///////////////////////////////////////////////////////////////////////////////
+
+// redshot ////////////////////////////////////////////////////////////////////
+decal redScorch1 {
 	pic RP_DA0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal redScorch2
-{
+decal redScorch2 {
 	pic RP_DB0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal redScorch3
-{
+decal redScorch3 {
 	pic RP_DC0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal redScorch4
-{
+decal redScorch4 {
 	pic RP_DD0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-decal redScorch5
-{
+decal redScorch5 {
 	pic RP_DE0
 	add 0.2
 	fullbright
 	animator GoAway
 	lowerdecal DoomImpScorch
 }
-//endof reshot
-//
-//decal definition
-//==------------------------------------
-decalgroup blueShotScorch
-{
+///////////////////////////////////////////////////////////////////////////////
+
+// decal definition ///////////////////////////////////////////////////////////
+decalgroup blueShotScorch {
 	blueScorch1 1
 	blueScorch2 1
 	blueScorch3 1
@@ -98,13 +88,15 @@ decalgroup blueShotScorch
 	blueScorch5 1
 	
 }
-decalgroup redShotScorch
-{
+decalgroup redShotScorch {
 	redScorch1 1
 	redScorch2 1
 	redScorch3 1
 	redScorch4 1
 	redScorch5 1
 }
-//==------------------------------------
-//==----------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////

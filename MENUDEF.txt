@@ -1,13 +1,11 @@
 
-DEFAULTLISTMENU
-{
+DEFAULTLISTMENU {
 	Selector "cursor", -5,5
 	Font "SmallFont", "red"
 	Linespacing 12
 }
 
-LISTMENU "MainMenu"
-{
+LISTMENU "MainMenu" {
 	Selector "cursor", -5,5
 	Font "SmallFont", "white"
 	Position 240, 55
@@ -23,8 +21,7 @@ LISTMENU "MainMenu"
 }
 
 
-AddOptionMenu "OptionsMenu"
-{	
+AddOptionMenu "OptionsMenu" {	
 	StaticText "= CUSTOM OPTIONS ="	
 	staticText ""
 	Submenu "$MENU_TITLE", "WSOptions"
@@ -77,8 +74,7 @@ OptionMenu "wosDEBUGmenu" {
 ////////////////////////////////////////////////////////////////////////////////
 
 //  universal sway  ////////////////////////////////////////////////////////////
-OptionMenu "WSOptions"
-{
+OptionMenu "WSOptions" {
 	Class "WSOptionMenu"
 	Title "$MENU_TITLE"
 	
@@ -126,23 +122,20 @@ OptionMenu "WSOptions"
 	WSOption "$OPTION_FSWAY", "$HELP_FSWAY", "ws_nofmove", "Toggle"
 }
 
-OptionValue "Toggle"
-{
+OptionValue "Toggle" {
 	0, "$VALUE_DISABLED"
 	1, "$VALUE_ENABLED"
 }
 ////////////////////////////////////////////////////////////////////////////////
 
 //  blood  droplets  ///////////////////////////////////////////////////////////
-OptionValue "BloodAmount"
-{
+OptionValue "BloodAmount" {
 	0, "Mild"
 	1, "Normal"
 	2, "Excessive"
 }
 
-OptionMenu "BloodOptions"
-{
+OptionMenu "BloodOptions" {
 	Title "Blood Options"
 	Option "Blood Amount", "blood_amt", "BloodAmount"
 	StaticText " "
@@ -166,8 +159,7 @@ OptionMenu "BloodOptions"
 ////////////////////////////////////////////////////////////////////////////////
 
 
-OptionMenu "TiltPlusPlusMenu"
-{
+OptionMenu "TiltPlusPlusMenu" {
 	Class "TiltPlusPlusMenu"
 	Title "$TILTPLUSPLUSMNU_TITLE"
 
@@ -209,8 +201,7 @@ OptionValue LocationOptions {
 }
 
 
-OptionMenu "Flashlight"
-{
+OptionMenu "Flashlight" {
 		Title "Flashlight"
 		
 		StaticText " "
@@ -264,8 +255,7 @@ OptionMenu "UseToPickupOptions" {
 
 // Menus ///////////////////////////////////////////////////////////////////////
 
-OptionMenu hn_SignNoteMenu
-{
+OptionMenu hn_SignNoteMenu {
 	Title "$m8f_hn_new_sign"
 
 	StaticText ""
@@ -298,8 +288,7 @@ OptionMenu hn_SignNoteMenu
 	StaticText "$m8f_hn_remove_sign_note", Black
 }
 
-OptionMenu hn_FootstepMarkerOptions
-{
+OptionMenu hn_FootstepMarkerOptions {
 	Title "Footstep Marker Options"
 
 	StaticText ""
@@ -320,8 +309,7 @@ OptionMenu hn_FootstepMarkerOptions
 	Option "$AUTOMAPMNU_ROTATE" , "am_rotate" , "RotateTypes"
 }
 
-OptionMenu hn_SignOptions
-{
+OptionMenu hn_SignOptions {
 	Title "Sign Options"
 
 	StaticText ""
@@ -337,8 +325,7 @@ OptionMenu hn_SignOptions
 	Slider "Automap Sign Marker Size" , m8f_hn_sign_map_scale , 0.5, 2.0, 0.1, 1
 }
 
-OptionMenu hn_CompassOptions
-{
+OptionMenu hn_CompassOptions {
 	Title "Compass Options"
 
 	StaticText ""
@@ -374,8 +361,7 @@ OptionMenu hn_CompassOptions
 	Slider     "Vertical position"   , m8f_hn_text_y        , 0.0, 0.95, 0.01, 2
 }
 
-OptionMenu hn_DisplayOptions
-{
+OptionMenu hn_DisplayOptions {
 	Title       "Hellscape Navigator Display"
 
 	StaticText  ""
@@ -389,8 +375,7 @@ OptionMenu hn_DisplayOptions
 	Slider      "Vertical position"      , m8f_hn_speedometer_y     , 0.0, 1.0,  0.01, 2
 }
 
-OptionMenu hn_HelperOptions
-{
+OptionMenu hn_HelperOptions {
 	Title       "Map Helpers"
 
 	StaticText  ""
@@ -419,8 +404,7 @@ OptionMenu hn_HelperOptions
 	Slider      "Space Tunneling Device"  , m8f_hn_n_tunneling_explored    , 0, 10, 1, 0
 }
 
-OptionMenu hn_GameplayOptions
-{
+OptionMenu hn_GameplayOptions {
 	Title       "Gameplay Options"
 
 	StaticText  ""
@@ -438,8 +422,7 @@ OptionMenu hn_GameplayOptions
 	StaticText  "These two options may break intended map flow.", Black
 }
 
-OptionMenu hn_VisualOptions
-{
+OptionMenu hn_VisualOptions {
 	Title       "Visual Options"
 
 	StaticText  ""
@@ -450,8 +433,7 @@ OptionMenu hn_VisualOptions
 	Option      "Breadcrumbs Enabled", m8f_hn_crumbs_enabled, OnOff
 }
 
-OptionMenu hn_Controls
-{
+OptionMenu hn_Controls {
 	Title       "Hellscape Navigator Controls"
 	ScrollTop   2
 	StaticTextSwitchable "$CNTRLMNU_SWITCHTEXT1", "$CNTRLMNU_SWITCHTEXT2", "ControlMessage"
@@ -475,8 +457,7 @@ OptionMenu hn_Controls
 	Control     "Throw Sign"       , m8f_hn_throw_sign
 }
 
-OptionMenu hn_Options
-{
+OptionMenu hn_Options {
 	Title       "Hellscape Navigator Options"
 
 	Submenu     "Controls"         , hn_Controls
@@ -499,23 +480,20 @@ OptionMenu hn_Options
 
 // Option values ///////////////////////////////////////////////////////////////
 
-OptionValue hn_marker_type_values
-{
+OptionValue hn_marker_type_values {
 	0, "Footsteps"
 	1, "Circle"
 	2, "Arrow"
 	3, "Disabled"
 }
 
-OptionValue hn_sign_type_values
-{
+OptionValue hn_sign_type_values {
 	0, "Wooden"
 	1, "Transparent"
 	2, "Metal"
 }
 
-OptionValue hn_style_options
-{
+OptionValue hn_style_options {
 	0, "Dark"
 	1, "Minimalistic"
 	2, "Blue"
@@ -525,8 +503,7 @@ OptionValue hn_style_options
 //hellscape navigator-----------------------------------------------------------
 
 //  footsteps options  /////////////////////////////////////////////////////////
-OptionMenu "FootstepOptions"
-{
+OptionMenu "FootstepOptions" {
 	title "Footstep Options"
 
 	StaticText " "

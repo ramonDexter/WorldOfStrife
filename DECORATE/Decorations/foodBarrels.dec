@@ -9,6 +9,7 @@ Actor VegieBarrel 25100
 {
 	//$Category "Decorations/food barrels"
 	//$Title "veggie barrel"
+  tag "veggie barrel"
   Radius 16
   Height 30
   Health 20
@@ -47,6 +48,7 @@ Actor SmallBarrel1 25101
 {
 	//$Category "Decorations/food barrels"
 	//$Title "small barrel 1"
+  tag "food barrel"
   Radius 16
   Height 24
   Health 10
@@ -77,6 +79,7 @@ Actor SmallBarrel2 25102
 {
 	//$Category "Decorations/food barrels"
 	//$Title "small barrel 2"
+  tag "food barrel"
   Radius 16
   Height 24
   Health 10
@@ -107,6 +110,7 @@ Actor SmallBarrel3 25103
 {
 	//$Category "Decorations/food barrels"
 	//$Title "small barrel 3"
+  tag "food barrel"
   Radius 16
   Height 24
   Health 10
@@ -137,6 +141,7 @@ Actor SmallBarrel4 25104
 {
 	//$Category "Decorations/food barrels"
 	//$Title "small barrel 4"
+  tag "food barrel"
   Radius 16
   Height 24
   Health 10
@@ -168,6 +173,7 @@ Actor EmptyFoodBarrel 25105
 {
 	//$Category "Decorations/food barrels"
 	//$Title "empty barrel"
+  tag "empty barrel"
   Radius 16
   Height 30
   Health 20
@@ -201,6 +207,7 @@ Actor MeatBarrel 25106
 {
 	//$Category "Decorations/food barrels"
 	//$Title "meat barrel"
+  tag "c"
   Radius 16
   Height 30
   Health 20
@@ -233,8 +240,10 @@ Actor MeatBarrel 25106
     Wait
   }
 }
-Actor Vegie1 : Health 
+Actor Vegie1 : Health 25107
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Strange Fruit"
 	Tag "Strange Fruit"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 10
@@ -249,8 +258,10 @@ Actor Vegie1 : Health
   }
 }
 
-Actor Vegie2 : Health 
+Actor Vegie2 : Health 25108
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Apple"
 	Tag "Apple"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 15
@@ -265,8 +276,10 @@ Actor Vegie2 : Health
   }
 }
 
-Actor Vegie3 : Health 
+Actor Vegie3 : Health 25109
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Lettuce"
 	Tag "Lettuce"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 10
@@ -281,8 +294,10 @@ Actor Vegie3 : Health
   }
 }
 
-Actor Vegie4 : Health 
+Actor Vegie4 : Health 25110
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Carrots"
 	Tag "Carrots"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 15
@@ -297,8 +312,10 @@ Actor Vegie4 : Health
   }
 }
 
-Actor Vegie5 : Health 
+Actor Vegie5 : Health 25111
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Onion"
 	Tag "Onion"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 10
@@ -313,8 +330,10 @@ Actor Vegie5 : Health
   }
 }
 
-Actor fbMeat1 : Health 
+Actor fbMeat1 : Health 25112
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Beef"
 	Tag "Beef"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 25 
@@ -330,8 +349,10 @@ Actor fbMeat1 : Health
 }
 
 
-Actor fbMeat2 : Health 
+Actor fbMeat2 : Health 25113
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Cheese"
 	Tag "Cheese"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 20
@@ -346,8 +367,10 @@ Actor fbMeat2 : Health
   }
 }
 
-Actor fbMeat3 : Health 
+Actor fbMeat3 : Health 25114
 {
+	//$Category "Decorations/food barrels"
+	//$Title "Fish"
 	Tag "Fish"
   Inventory.PickupFlash Pickupflash
   Inventory.Amount 20

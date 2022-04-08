@@ -1025,6 +1025,15 @@ model MetalPot {
 	
 	frameindex MPOT A 0 0
 }
+model wosD_metalPot {
+	path "models/props/metalpot/"
+	model 0 "metalPot.md3"
+	skin 0 "tx_anvil.png"
+	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  tray  //////////////////////////////////////////////////////////////////////
@@ -2269,7 +2278,7 @@ model dx_VodovodniBaterie01 {
 	model 0 "dx_vodBat01.md3"
 	skin 0 "tx_vodBat.png"
 	scale 3.0 3.0 3.0
-	offset 0.0 0.0 0.0
+	offset -4.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model dx_VodovodniBaterie02 {
@@ -2277,7 +2286,7 @@ model dx_VodovodniBaterie02 {
 	model 0 "dx_vodBat02.md3"
 	skin 0 "tx_vodBat.png"
 	scale 3.0 3.0 3.0
-	offset 0.0 0.0 0.0
+	offset -4.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model dx_VodovodniBaterie03 {

@@ -8328,12 +8328,9 @@ actor wosD_judasCradle 21468 {
 	}
 }
 
-actor wosD_woodenBarrel 21469 {
+actor wosD_woodenBarrel : WoodenBarrel 21469 {
 	//$Category "Decorations/WoS"
 	//$Title "dx wooden barrel"
-	Tag "wooden barrel"
- 	Radius 10
-	Height 28
 	+SOLID
 	+SHOOTABLE
 	+NOBLOOD
@@ -8341,10 +8338,21 @@ actor wosD_woodenBarrel 21469 {
 	+ACTLIKEBRIDGE
 	+NOGRAVITY
 	+DONTTHRUST
+	Tag "wooden barrel"
+	Health 28
+ 	Radius 10
+	Height 28
 	DeathSound "woodenbarrel/death"
 	States {
 		Spawn:
 			DUMM A -1
+			Stop
+		Death:
+			BARW B 2 A_Scream
+    		BARW C 2
+			BARW D 2 A_NoBlocking
+			BARW EFG 2
+			BARW H -1
 			Stop
 	}
 }
@@ -8789,6 +8797,20 @@ actor wosD_npc_daggerfallMale11 21498 {
 		Spawn:
 			DM11 AAAAAAAAAAAAAAAABBCC 4
 			Loop
+	}
+}
+actor wosD_metalPot replaces metalPot 21499 {
+	//$Category "Decorations/WoS"
+	//$Title "dx metal pot"
+	-NOBLOCKMAP
+	tag "metal pot"
+	radius 8
+	height 6
+
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

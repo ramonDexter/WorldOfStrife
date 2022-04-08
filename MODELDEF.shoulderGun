@@ -9,6 +9,57 @@ model shoulderGun {
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0	
+
+	//  start  //
+	path "models/weapons/shoulderGun/"
+	model 0 "shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.25 1.25 1.25
+	offset -13.0 -20.0 5.0
+	
+	frameindex SHCN A 0 1
+	frameindex SHCN D 0 1
+	frameindex SHCN E 0 1
+	frameindex SHCN F 0 1
+	frameindex SHCN G 0 1
+	frameindex SHCN H 0 1
+	frameindex SHCN I 0 1
+	//////////////////////////////
+	
+	//  shoot //	
+	offset -13.0 -19 5.0	
+	frameindex SHCN J 0 1
+	frameindex SHCN C 0 1	
+	offset -13.0 -18.0 5.0		
+	frameindex SHCN B 0 1	
+	//////////////////////////////
+	
+	//  show/hide  //
+	path "models/weapons/shoulderGun/"
+	model 0 "shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.25 1.25 1.25
+	offset -13.0 -20.0 5.0	
+	frameindex SHCH A 0 1	
+	offset -13.0 -18.0 5.0	
+	frameindex SHCH B 0 1	
+	offset -13.0 -16.0 5.0	
+	frameindex SHCH C 0 1
+	offset -13.0 -14.0 5.0	
+	frameindex SHCH D 0 1
+	offset -13.0 -12.0 5.0	
+	frameindex SHCH E 0 1
+	offset -13.0 -10.0 5.0	
+	frameindex SHCH F 0 1
+	offset -13.0 -6.0 5.0	
+	frameindex SHCH G 0 1
+	offset -13.0 -2.0 5.0	
+	frameindex SHCH H 0 1
+	offset -13.0 2.0 5.0	
+	frameindex SHCH I 0 1
+	offset -13.0 6.0 5.0	
+	frameindex SHCH J 0 1
+	//////////////////////////////
 }
 model shoulderGunMag_item {
 	path "models/weapons/shoulderGun/"
@@ -58,6 +109,7 @@ model shoulderGun3_dummy {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+/*
 //  punch dagger  //////////////////////////////////////////////////////////////
 model wos_sprintWeap {
 	//  start  //
@@ -239,7 +291,7 @@ model staffBlaster {
 	//////////////////////////////
 }
 ////////////////////////////////////////////////////////////////////////////////
-
+*/
 //  StaffBlasterUpgr  //////////////////////////////////////////////////////////
 /*model StaffBlasterUpgr {
 	//  start  //
@@ -316,7 +368,7 @@ model staffBlaster {
 	//////////////////////////////
 }*/
 ////////////////////////////////////////////////////////////////////////////////
-
+/*
 //  zscStrifeCrossbow  //////////////////////////////////////////////////////////
 model zscStrifeCrossbow {
 	//  start  //
@@ -921,4 +973,5 @@ model laserPistol {
 	frameindex SHCH J 0 1
 	//////////////////////////////
 }
+*/
 ////////////////////////////////////////////////////////////////////////////////

@@ -28,11 +28,11 @@ Actor VegieBarrel 25100
     FOBR C 5
     FOBR D 5
     FOBR E 5
-    FOBR F 0 A_SpawnItemEx("Vegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("Vegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("Vegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("Vegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("Vegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosVegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosVegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosVegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosVegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosVegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
@@ -63,8 +63,8 @@ Actor SmallBarrel1 25101
     Stop
   Death:
     NULL A 0 A_Scream 
-    FOMI E 0 A_SpawnItemEx("Vegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOMI E 0 A_SpawnItemEx("Vegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosVegie1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosVegie2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
@@ -125,8 +125,8 @@ Actor SmallBarrel3 25103
     Stop
   Death:
     NULL A 0 A_Scream 
-    FOMI E 0 A_SpawnItemEx("Vegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOMI E 0 A_SpawnItemEx("Vegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosVegie3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosVegie4", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
@@ -156,8 +156,8 @@ Actor SmallBarrel4 25104
     Stop
   Death:
     NULL A 0 A_Scream 
-    FOMI E 0 A_SpawnItemEx("Vegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOMI E 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosVegie5", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOMI E 0 A_SpawnItemEx("wosfbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
@@ -226,10 +226,10 @@ Actor MeatBarrel 25106
     FOBR C 5
     FOBR D 5
     FOBR E 5
-    FOBR F 0 A_SpawnItemEx("fbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("fbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOBR F 0 A_SpawnItemEx("fbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosfbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosfbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosfbMeat2", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    FOBR F 0 A_SpawnItemEx("wosfbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOBR F 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
@@ -240,7 +240,7 @@ Actor MeatBarrel 25106
     Wait
   }
 }
-Actor Vegie1 : Health 25107
+/*Actor Vegie1 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Strange Fruit"
@@ -256,9 +256,9 @@ Actor Vegie1 : Health 25107
     FRUT A -1
     Stop
   }
-}
+}*/
 
-Actor Vegie2 : Health 25108
+/*Actor Vegie2 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Apple"
@@ -274,9 +274,9 @@ Actor Vegie2 : Health 25108
     FRUT B -1
     Stop
   }
-}
+}*/
 
-Actor Vegie3 : Health 25109
+/*Actor Vegie3 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Lettuce"
@@ -292,9 +292,9 @@ Actor Vegie3 : Health 25109
     FRUT D -1
     Stop
   }
-}
+}*/
 
-Actor Vegie4 : Health 25110
+/*Actor Vegie4 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Carrots"
@@ -310,9 +310,9 @@ Actor Vegie4 : Health 25110
     FRUT E -1
     Stop
   }
-}
+}*/
 
-Actor Vegie5 : Health 25111
+/*Actor Vegie5 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Onion"
@@ -328,9 +328,9 @@ Actor Vegie5 : Health 25111
     FRUT G -1
     Stop
   }
-}
+}*/
 
-Actor fbMeat1 : Health 25112
+/*Actor fbMeat1 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Beef"
@@ -346,10 +346,10 @@ Actor fbMeat1 : Health 25112
     FRUT C -1 
     Stop
   }
-}
+}*/
 
 
-Actor fbMeat2 : Health 25113
+/*Actor fbMeat2 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Cheese"
@@ -365,9 +365,9 @@ Actor fbMeat2 : Health 25113
     FRUT F -1
     Stop
   }
-}
+}*/
 
-Actor fbMeat3 : Health 25114
+/*Actor fbMeat3 : Health 
 {
 	//$Category "Decorations/food barrels"
 	//$Title "Fish"
@@ -383,7 +383,7 @@ Actor fbMeat3 : Health 25114
     FRUT H -1
     Stop
   }
-}
+}*/
 
 Actor Woodrem1 
 {

@@ -238,14 +238,14 @@ DoomEdNums {
 	20233 = noteLustyKolymanMaid2
 	20234 = noteLustyKolymanMaid3
 	20235 = wosI_scanner
-	20236 = m8f_hn_AreaNameMarker_SH_wasteTreatment
-	20237 = m8f_hn_AreaNameMarker_SH_marketplace
-	20238 = m8f_hn_AreaNameMarker_SH_BH_natatio
-	20239 = m8f_hn_AreaNameMarker_SH_BH_entranceHall
-	20240 = m8f_hn_AreaNameMarker_SH_BH_frigidarium
-	20241 = m8f_hn_AreaNameMarker_SH_BH_apodyterium
-	20242 = m8f_hn_AreaNameMarker_SH_BH_tepidarium
-	20243 = m8f_hn_AreaNameMarker_SH_BH_calidarium
+	20236 = wosVegie1
+	20237 = wosVegie2
+	20238 = wosVegie3
+	20239 = wosVegie4
+	20240 = wosVegie5
+	20241 = wosfbMeat1
+	20242 = wosfbMeat2
+	20243 = wosfbMeat3
 	20244 = m8f_hn_AreaNameMarker_SH_BH_latrine
 	20245 = m8f_hn_AreaNameMarker_SH_BH_supervisorOffice
 	20246 = m8f_hn_AreaNameMarker_SH_BH_hipBaths
@@ -395,6 +395,37 @@ DoomEdNums {
 	/*
 	20389 = 
 	20390 = 
+	20391 = 
+	20392 = 
+	20393 = 
+	20394 = 
+	20395 = 
+	20396 = 
+	20397 = 
+	20398 = 
+	20399 = 
+	20400 = 
+	20401 = 
+	20402 = 
+	20403 = 
+	20404 = 
+	20405 = 
+	20406 = 
+	20407 = 
+	20408 = 
+	20409 = 
+	20410 = 
+	20411 = 
+	20412 = 
+	20413 = 
+	20414 = 
+	20415 = 
+	20416 = 
+	20417 = 
+	20418 = 
+	20419 = 
+	20420 = 
+
 	*/
 
 

@@ -410,7 +410,7 @@ class wosFoodRation3 : wosPickup {
 }
 class wosGrilledChicken_Heal : Health {
 	Default {
-		inventory.amount 20;
+		inventory.amount 35;
 	}
 }
 class wosGrilledChicken : wosPickup {
@@ -432,3 +432,213 @@ class wosGrilledChicken : wosPickup {
 			Stop;
 	}
 }
+// food from foodbarrels //////////////////////////////////////////////////////
+class Vegie1 : health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class wosVegie1 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Strange Fruit"
+		Tag "Strange Fruit";
+		inventory.icon "I_FRTA";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Chewed a strange fruit, WTF?.";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("Vegie1", 1);
+			Stop;
+	}
+}
+class Vegie2 : health {
+	Default {
+		Inventory.Amount 15;
+	}
+}
+class wosVegie2 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Apple"
+		Tag "Apple";
+		inventory.icon "I_FRTB";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten an apple, Good.";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT B -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("Vegie2", 1);
+			Stop;
+	}
+}
+class Vegie3 : Health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class wosVegie3 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Lettuce"
+		Tag "Lettuce";
+		inventory.icon "I_FRTD";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten a Lecttuce, Humn...";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT D -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("Vegie3", 1);
+			Stop;
+	}
+}
+class Vegie4 : Health {
+	Default {
+		Inventory.Amount 15;
+	}
+}
+class wosVegie4 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Carrots"
+		Tag "Carrots";
+		inventory.icon "I_FRTE";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten some Carrots,...";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT E -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("Vegie4", 1);
+			Stop;
+	}
+}
+class Vegie5 : Health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class wosVegie5 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Onion"
+		Tag "Onion";
+		inventory.icon "I_FRTG";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten some Onions, Yuck!.";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT G -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("Vegie5", 1);
+			Stop;
+	}
+}
+class fbMeat1 : Health {
+	Default {
+		Inventory.Amount 25;
+	}
+}
+class wosfbMeat1 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Beef"
+		Tag "Beef";
+		inventory.icon "I_FRTC";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten a Beef, Tasty.";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT C -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("fbMeat1", 1);
+			Stop;
+	}
+}
+class fbMeat2 : Health {
+	Default {
+		Inventory.Amount 20;
+	}
+}
+class wosfbMeat2 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Cheese"
+		Tag "Cheese";
+		inventory.icon "I_FRTF";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten a Cheese, Yum..";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT F -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("fbMeat2", 1);
+			Stop;
+	}
+}
+class fbMeat3 : Health {
+	Default {
+		Inventory.Amount 20;
+	}
+}
+class wosfbMeat3 : wosPickup {
+	Default {
+		//$Category "Decorations/food barrels"
+		//$Title "Fish"
+		Tag "Fish";
+		inventory.icon "I_FRTH";
+		Inventory.PickupFlash "Pickupflash";
+		Inventory.PickupMessage "Eaten a Fish, Gulp..";
+		inventory.usesound "sounds/eat";
+		+DOOMBOUNCE
+		Speed 4;
+	}
+	States {
+		Spawn:
+			FRUT H -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("fbMeat3", 1);
+			Stop;
+	}
+}
+///////////////////////////////////////////////////////////////////////////////

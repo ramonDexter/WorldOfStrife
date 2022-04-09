@@ -219,33 +219,6 @@ class shldrGunMag : CustomInventory {
 			Stop;
 	}
 }
-class shoulderGunMag_item : wosPickup {
-	Default {
-		//$Category "Ammunition/WoS"
-		//$Title "Shouldercannon Ammo pack"
-		
-		+INVENTORY.INVBAR		
-		radius 10;
-		height 10;
-		//scale 0.55;
-		Tag "$TAG_shoulderGunMag_item";
-		inventory.icon "I_SHMG";
-		inventory.amount 1;
-		Inventory.MaxAmount 10;
-		inventory.interhubamount 10;
-		Inventory.PickupMessage "$PICKUP_shoulderGunMag_item";
-		
-		Mass shoulderGunMagWeight;
-	}
-	States {
-		Spawn:
-			DUMM AAAABBB 6;
-			Loop;
-		Use:
-			TNT1 A 0 A_GiveInventory("shldrGunMag", 32);
-			Stop;
-	}
-}
 class shoulderGunCharger : wosPickup {
     action void WOS_reloadShoulderGun() {
         if ( player == null ) {
@@ -286,6 +259,33 @@ class shoulderGunCharger : wosPickup {
             TNT1 A 0 WOS_reloadShoulderGun();
             Fail;
     }
+}
+class shoulderGunMag_item : wosPickup {
+	Default {
+		//$Category "Ammunition/WoS"
+		//$Title "Shouldercannon Ammo pack"
+		
+		+INVENTORY.INVBAR		
+		radius 10;
+		height 10;
+		//scale 0.55;
+		Tag "$TAG_shoulderGunMag_item";
+		inventory.icon "I_SHMG";
+		inventory.amount 1;
+		Inventory.MaxAmount 10;
+		inventory.interhubamount 10;
+		Inventory.PickupMessage "$PICKUP_shoulderGunMag_item";
+		
+		Mass shoulderGunMagWeight;
+	}
+	States {
+		Spawn:
+			DUMM AAAABBB 6;
+			Loop;
+		Use:
+			TNT1 A 0 A_GiveInventory("shldrGunMag", 32);
+			Stop;
+	}
 }
 //  projectile  ////////////////////////////////////////////////////////////////
 class greenArcLightning : FastProjectile

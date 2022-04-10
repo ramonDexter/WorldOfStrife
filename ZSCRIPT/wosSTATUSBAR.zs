@@ -312,8 +312,8 @@ class wosStatusBar : BaseStatusBar {
 
 			// stamina bar /////////////////////////////////////////////////////
 			let pawn = binderPlayer(CPlayer.mo);
-			DrawBar("stamBar", "stamBck", pawn.stamin, 400, (369, 97), 0, 3);
-
+			DrawBar("stamBar", "stamBck", pawn.stamin, pawn.maxstamin, (369, 97), 0, 3);
+			DrawString(mGrnFont, FormatNumber(pawn.stamin, 3, 19), (359, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
             //  Armor  /////////////////////////////////////////////////////////			
 			let armo = binderPlayer(CPlayer.mo);
 			If(armo.currentarmor > 0 && armo.armoramount > 0) {

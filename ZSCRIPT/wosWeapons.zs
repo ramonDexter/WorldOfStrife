@@ -225,7 +225,6 @@ class augmentedWeapon : StrifeWeapon {
 		else {
 			int power = MIN(10, stamina / 10);
 			damage = random[JabDagger](0, power + 8) * (power + 2);
-
 			if (FindInventory("PowerStrength")) {
 				damage *= 10;
 			}
@@ -253,16 +252,14 @@ class augmentedWeapon : StrifeWeapon {
 		else {
 			int power = MIN(10, stamina / 10);
 			damage = random[JabDagger](0, power + 16) * (power + 4);
-
 			if (FindInventory("PowerStrength")) {
 				damage *= 10;
 			}
 		}
 		// draw stamina with alt attack //
 		let pawn = binderPlayer(self);
-		pawn.stamin -= 100;
-		
-
+		pawn.stamin -= 100;		
+		//////////////////////////////////
 		double angle = angle + random2[JabDagger]() * (5.625 / 256);
 		double pitch = AimLineAttack (angle, 80.);
 		LineAttack (angle, 80., pitch, damage, 'Melee', "StrifeSpark", true, t);
@@ -280,7 +277,7 @@ class augmentedWeapon : StrifeWeapon {
 	////////////////////////////////////////////////////////////////////////////
 		
 	////////////////////////////////////////////////////////////////////////////
-	//A_Kicking(string puffType); //////////////////////////////////////////////
+	// A_Kicking(string puffType); /////////////////////////////////////////////
 	// credits: gzdoom.pk3 /////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
 	action void W_Kicking(string puffType) {

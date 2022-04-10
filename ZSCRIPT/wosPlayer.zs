@@ -25,7 +25,7 @@ class binderPlayer : StrifePlayer {
 	int armoramount;
 	int armorpower;
 	int SpeedUpgrade;
-	
+	int maxstamin; //to allow handling of var in statusbar
 	Actor backplaye;
 	bool nightEyeGrainEnable;
 	
@@ -153,14 +153,18 @@ class binderPlayer : StrifePlayer {
 		angle+=frandom(-shake,shake);
 		pitch+=frandom(-shake,shake);
 	}
+	
 	void SprintSpeed() {
-        int maxstamin = 400;
-		If(maxhealth==120){maxstamin=420;}
-		If(maxhealth==140){maxstamin=490;}
-		If(maxhealth==160){maxstamin=560;}
-		If(maxhealth==180){maxstamin=630;}
-		If(maxhealth==200){maxstamin=700;}
-		If(player.cheats&(CF_GODMODE|CF_GODMODE2)){stamin=maxstamin;}
+		// modified working stamina raise according to player's health modified by UpgradeStamina //
+        maxstamin = 400;
+		int pawnmaxhealth = GetMaxHealth(true);
+		If ( pawnmaxhealth >= 120 && pawnmaxhealth < 140 ) { maxstamin = 440; }
+		else If ( pawnmaxhealth >= 140 && pawnmaxhealth < 160 ) { maxstamin = 520; }
+		else If ( pawnmaxhealth >= 160 && pawnmaxhealth < 180 ) { maxstamin = 600; }
+		else If ( pawnmaxhealth >= 180 && pawnmaxhealth < 200 ) { maxstamin = 700; }
+		else If ( pawnmaxhealth == 200 ) { maxstamin = 800; }
+		////////////////////////////////////////////////////////////////////////////////////////////
+		else If (player.cheats&(CF_GODMODE|CF_GODMODE2)) {stamin=maxstamin;}
 		If(sprinting==0) {
 			If(stamin>10&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) {
 				//A_Print("speeding up!", 1.0);
@@ -335,6 +339,7 @@ class binderPlayer : StrifePlayer {
 		Mass 100;
 		PainChance 255;
 		MaxStepHeight 20;
+		Player.MaxHealth 100;
 		//  weaponslots  ///////////////////////////////////////////////////////
 		Player.WeaponSlot 1, "zscPunchDagger";
 		Player.WeaponSlot 2, "zscStrifeCrossbow", "StormPistol", "laserPistol";

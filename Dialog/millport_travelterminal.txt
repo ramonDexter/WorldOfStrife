@@ -7,7 +7,7 @@ Conversation {
     ID = 704;
     Page {
         pageName = "SH_travelTerminal_opener";
-        Name = "Choose your destination. The travel costs 15 gold.";
+        Name = "\c[yellow]Choose your destination. The travel costs 15 gold.";
         Dialog = "\c[white]";
         Goodbye = "\c[red][ EXIT ]";
         Panel = "M_BLNK";

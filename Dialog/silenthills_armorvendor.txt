@@ -7,7 +7,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -67,7 +67,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_armorVendor_questions";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -89,7 +89,7 @@ Conversation {
     }
     Page {
         pageName = "SH_armorVendor_armor";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Yes, I'm promoted techmisth of the TekGuild. I'm working as a armorsmith for the last ten years, so I've had mastered all the fineses that you need to make good armor.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -99,7 +99,7 @@ Conversation {
     }
     Page {
         pageName = "SH_armorVendor_aboutsilenthills";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Silent Hills is a quiet small town in the middle of nowhere. Don't take my word, the locals say these lands are great. And for our little town, we got plethora of shops here, and I cannot forget the magnificent city bath. Visit this place sometime, you won't be disappointed.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -109,7 +109,7 @@ Conversation {
     }
     Page {
         pageName = "SH_armorVendor_abutlocals";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Oh yeah, the locals are nice and faithful people. We got low criminality rate here, thanks to your order, so I must say the locals are nice and welcoming people.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

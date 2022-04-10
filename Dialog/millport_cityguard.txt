@@ -6,7 +6,7 @@ Conversation {
 	ID = 25;
 	Page {
 		pageName = "MP_cityGuard_opener";
-        Name = "City Watch Officer";
+        Name = "\c[yellow]City Watch Officer";
         Dialog = "RANDOM_GUARD";
         Goodbye = "\c[red]Goodbye";
 	}

@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_lewis_opener";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]Hello, welcome to my grocery store. How may I serve you?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]You're at the right place. My prices are fair and I've got everything you could need.\nI've got the travel rations, water, vine, beer and ale, flares, binocular, the hazard suits and armor repair kits.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -63,7 +63,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_rations";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]Yes, the rations are the latest stock. All cost the same, 12 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -109,7 +109,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_drinks";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -167,7 +167,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_flares";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]Flares are always handy. Especially when you need to light some area.\nOne flare costs 7, box of flares costs 30 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -201,7 +201,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_binoc";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]Good binocular with sturdy outer shell and oil-stabilised lens. Comes in handy when you want to scout some area. Costs 130 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -223,7 +223,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_hazardsuit";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]Yes, hazard suit could come in handy.\nHazard suit costs 80 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -245,7 +245,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_shop_armorshard";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]The armor repair kits are cheap. Just 20 gold for each.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -267,7 +267,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_questions";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]What did you wanted to know? I know a little bit about the village, but I rarely leave the place. So if you want to know about surrounding area, you have to ask someone else.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -285,7 +285,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_aboutravenrock";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]The village of Ravenrock is a peaceful place, thank to the Order's Acolytes. I can thank them for guarding my shop, yeah. Our place on the road from Narfolk to Kolyma and Millport gives us good opportunity for trading and exchanging our produce. The brewery makes good beer and ale, and the kitchen at the Smart Squirell Inn is quite good.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -295,7 +295,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lewis_aboutlocals";
-        Name = "Lewis, grocery vendor";
+        Name = "\c[yellow]Lewis, grocery vendor";
         Dialog = "\c[white]The locals are pretty wealthy. Most of them are farmers, but some work in the brewery. Nice poeple, but little bit simple. Farmers, you know. Bt they work hard and the hard work gives plentiful fruits.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

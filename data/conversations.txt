@@ -13,7 +13,7 @@ Conversation {
             item = "";
             amount = ?;
         }
-        Name = "";
+        Name = "\c[yellow]";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye";
         Panel = "";
@@ -57,7 +57,7 @@ Conversation {
     ID = 28;
     Page {
         pageName = "MP_ccTerry_opener";
-        Name = "Terry";
+        Name = "\c[yellow]Terry";
         Dialog = "\c[white]Welcome, handsome. Say, what brings you to my apartment?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -71,7 +71,7 @@ Conversation {
     }
     Page {
         pageName = "MP_ccTerry_whoareyou";
-        Name = "Terry";
+        Name = "\c[yellow]Terry";
         Dialog = "\c[white]My nae is Terry. I work here as a hostess. Also, I offer 'special' services. Say, are you in need of my special services?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -85,7 +85,7 @@ Conversation {
     }
     Page {
         pageName = "MP_ccTerry_specialservices";
-        Name = "Terry";
+        Name = "\c[yellow]Terry";
         Dialog = "\c[white]Well, I can be you concubine for a night. My price is 500 coins. Good price for my services you'll never forget and you'll return, I'm sure. Ssay, do you need to relax yourself? I can be yours for this night.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -102,7 +102,7 @@ Conversation {
     }
     Page {
         pageName = "MP_ccTerry_aboutcity";
-        Name = "Terry";
+        Name = "\c[yellow]Terry";
         Dialog = "\c[white]Oh, Millport is a nice city. I like the Commons, many of my customers come from this part of the city. If you are looking for a good snack, visit Caroline's Tavern in the Commons. And if you are in need of anything else, the shops are in the northern part of the city.";
         Goodbye = "\c[red]Goodbye";
         Choice {

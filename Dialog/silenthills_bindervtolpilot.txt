@@ -7,7 +7,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Pilot";
+        Name = "\c[yellow]Pilot";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -18,7 +18,7 @@ Conversation {
     */
     Page {
         pageName = "map02pilot_opener";
-        Name = "Pilot";
+        Name = "\c[yellow]Pilot";
         Dialog = "\c[white]Hello. What can I do for you?";
         Goodbye = "\c[red]Goodbye.";
         Choice {

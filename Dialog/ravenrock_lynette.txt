@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_lynette_opener";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]Hello, Binder. What business brings you to my house?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lynette_else";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lynette_aboutravenrock";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]Well, I won't tell you much. Ravenrock is small farmer's settlement, notable only for the brewery. Yes, it makes locals wealthy, but it also causes a lot people to drink more than they should. Especially the tourists are annoying.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lynette_aboutlocals";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]The locals are nice people, but little bit too simple for my taste. You know, they are farmers and most of their talks are about the farming.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -71,7 +71,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_lynette_aboutsurroundings";
-        Name = "Lynette";
+        Name = "\c[yellow]Lynette";
         Dialog = "\c[white]Sorry, I don't travel.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

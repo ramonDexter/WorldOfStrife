@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_poachers_gone";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Hello Binder, I see that you are back. Have you found the poachers?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -62,7 +62,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_gotomines";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Yes, I know. As my informants told me, they fled just before you entered the waste treatment plant. Al least you got rid of the spiders gang. Good job. Here's something for the hard work and the key to the mines.\nYou should head to the mines now. The poachers are hiding somwhere there. Find them and deal with them and bring back the power coupling, so we can fix the powerplant.";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -82,7 +82,7 @@ Conversation {
             item = "powerPlant_powerCoupling";
             amount = 1;
         }
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Have you found the power coupling?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -95,7 +95,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_foundcoupling";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Have you found the power coupling?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -107,7 +107,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_foundcoupling_hereitis";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Oh, don't give it to me. I'm not the one who will fix the powerplant. Just head there, the technicians will tell you what to do. Also, here's some gold to cover your expenses. And the powerplant key.";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -126,7 +126,7 @@ Conversation {
             item = "twn_quest03_powerPlantFixed";
             amount = 1;
         }
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Hello, I see you are back. But the gate's controls are not working yet. Have you fixed the powerplant?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -139,7 +139,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_powerplantFixed";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Hello, I see you are back and the gate's controls are online now. Good job. Here some extra cash for the good work. Also, I'm opening the town's gates, if you need to leave. Or, if you want, we can speak.";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -154,7 +154,7 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_normalconv";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Hello, what do you need?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
@@ -165,12 +165,12 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_questions";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Hello, what do you need?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_governor_normalconv";
         }
         Choice {
@@ -188,36 +188,36 @@ Conversation {
     }
     Page {
         pageName = "SH_governor_questions_city";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]Our city's called Silent Hills, as you already know. It was founded after the comet hit the earth. The Order came here and helped the locals to rebuilt their homes, so the locals started following this new faith. The Order is just, but righteous overseer. We have minimal criminality and none of us starves.\nOur city has many shops, hospital and even a city bath, built on old roman plan.";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_governor_questions";
         }
 
     }
     Page {
         pageName = "SH_governor_questions_heretics";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]I don't know about any. The Binder Order is doing fine job, so we can sleep peacefully.";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_governor_questions";
         }
 
     }
     Page {
         pageName = "SH_governor_questions_yourself";
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "\c[white]My name's Mervin Hart. I've been proposed to this function two years ago, when the last governor retired. Before that, I was in charge of town's powerplant. I'm an engineer, not a politician, and this work is pretty rough for me. You know, working with machines is easier than working with people. The machines do exactly what you tell them to do. But people?";
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_governor_questions";
         }
 

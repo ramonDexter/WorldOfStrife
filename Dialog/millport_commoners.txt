@@ -6,7 +6,7 @@ Conversation {
     ID = 24;
     Page {
         pageName = "MP_commoner_opener";
-        Name = "$N_COMMONER";
+        Name = "\c[yellow]$N_COMMONER";
         Dialog = "RANDOM_MILLPORT_COMMONER";
         Goodbye = "\c[red]Goodbye";
     }

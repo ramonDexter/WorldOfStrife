@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "EC_medic_opener";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]Welcome to my humble shop, Binder. How may I serve you? Are you in need of medical attention?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "EC_medic_help";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]Oh, I'm busy right now. Just use the autodoc over there.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -43,7 +43,7 @@ Conversation {
     }
     Page {
         pageName = "EC_medic_shop";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]Yeah, I do sell medical supplies. But nothing cheap.\nThe Hypospray costs 25, Kombopack costs 50 and the Instaheal costs 100 gold. Also, I've got the Medpatches for 10, Medical Kits for 25 annd Surgery Kits for 100 gold. What will you take?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -125,7 +125,7 @@ Conversation {
     }
     Page {
         pageName = "EC_medic_questions";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]What did you wanted to know? As a local, I know lot of things about our village.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -139,7 +139,7 @@ Conversation {
     }
     Page {
         pageName = "EC_medic_eastcliff";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]Eastcliff's a peaceful place. Our position on the main road gives the local traders a good opportunity to make a good business. Besides that, the locals make their living by fishing and farming.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -153,7 +153,7 @@ Conversation {
     }
     Page {
         pageName = "EC_medic_farms";
-        Name = "Orin, Medic";
+        Name = "\c[yellow]Orin, Medic";
         Dialog = "\c[white]Because all the farms are located up the cliffs, on the plateau. There's a good rich soil there, so the local farmers are pretty rich.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

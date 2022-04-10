@@ -10,7 +10,7 @@ Conversation {
             amount = 1;
         }
         pageName = "SHmines_brokenMachine_opener";
-        Name = "Mining Machinery";
+        Name = "\c[yellow]Mining Machinery";
         Dialog = "\c[white]Some kind of mining machinery, used to process the mined ore. It's not working.";
         Goodbye = "\c[red]EXIT";
         Choice {
@@ -40,7 +40,7 @@ Conversation {
     }
     Page {
         pageName = "SHmines_brokenMachine_checkmachine";
-        Name = "Mining Machinery";
+        Name = "\c[yellow]Mining Machinery";
         Dialog = "\c[white]The machine is not working. First thing that catches your eyes is thick layer of dust covering all of the machine's openings. Further investigation reveals that the air filter is completely filled with the dust. Also, looks like it has burned recently. It needs to be replaced. You should speak to TechSmith, maybe he could build a new filter.";
         Goodbye = "\c[red]EXIT";
         Choice {
@@ -53,7 +53,7 @@ Conversation {
     }
     Page {
         pageName = "SHmines_brokenMachine_repairmachine";
-        Name = "Mining Machinery";
+        Name = "\c[yellow]Mining Machinery";
         Dialog = "\c[white]You quickly replace the old burned-out filter with a new one. As you replace the filter, the machine starts to hum silently.";
         Goodbye = "\c[red]EXIT";
         Choice {
@@ -66,7 +66,7 @@ Conversation {
     }
     Page {
         pageName = "SHmines_brokenMachine_fixedOpener";
-        Name = "Mining Machinery";
+        Name = "\c[yellow]Mining Machinery";
         Dialog = "\c[white]Some kind of mining machinery, used to process the mined ore. It's working properly.";
         Goodbye = "\c[red]EXIT";
     }

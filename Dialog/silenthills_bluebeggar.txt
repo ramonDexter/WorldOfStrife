@@ -6,7 +6,7 @@ Conversation {
     ID = 42;
     Page {
         pageName = "SH_blueBeggar_opener";
-        Name = "Woldrick";
+        Name = "\c[yellow]Woldrick";
         Dialog = "RANDOM_SILENTHILLS_COMMONER";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -24,7 +24,7 @@ Conversation {
     }
     Page {
         pageName = "SH_blueBeggar_skladiste";
-        Name = "Woldrick";
+        Name = "\c[yellow]Woldrick";
         Dialog = "\c[white]You didn't heard that from me, right, right?\nIf I were you, I would take a look around the old storage down there in the southwestern corner of the city. Take a look there, yes. There must be something down there. Sure is.";
         Goodbye = "\c[red]Goodbye";
         Choice {

@@ -3,7 +3,7 @@ Conversation {
     ID = 4;
     Page {
         pageName = "M06_transportOfficer_opener";
-        Name = "Transport Officer";
+        Name = "\c[yellow]Transport Officer";
         Dialog = "\c[white]Hello, Binder. Did you wanted something?";
         Goodbye = "\c[red]Goodbye";
         Choice {

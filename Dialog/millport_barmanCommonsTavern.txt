@@ -6,7 +6,7 @@ Conversation {
     ID = 26;
     Page {
         pageName = "MP_innkeeperCommonsTavern_opener";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]Hello, sweetie. You've come for a little snack? A chicken bite, maybe? Or a burger? My cheeseburgers ar the best! Or some cold fresh beer? Or a little chat?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -55,7 +55,7 @@ Conversation {
     }
     Page {
         pageName = "MP_innkeeperCommonsTavern_questions";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]Oh, you flatterer. What did you wanted to talk about, then?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -77,7 +77,7 @@ Conversation {
     }
     Page {
         pageName = "MP_innkeeperCommonsTavern_whoareyou";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]I'm Caroline, owner of this nice little Tavern. I the cook here. Locals say my cheeseburgers are legendary. Do you want one?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -87,7 +87,7 @@ Conversation {
     }
     Page {
         pageName = "MP_innkeeperCommonsTavern_abouttavern";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]I bought this tavern ten years ago, just after my husband died at the sea fare. What a pity, he was a handsome man. Anyways, I'm the owner and a cook here. I make grilled chicken and cheeseburgers. And the ale I got here is from Ravenrock.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -101,7 +101,7 @@ Conversation {
     }
     Page {
         pageName = "MP_innkeeperCommonsTavern_ravenrock";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]No, Ravenrock is small hamlet on the eastern coast. You can reach the place if you head out the eastern gate, but it's pretty far from here. Better to take the hoverfly, but the ticket's not cheap.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -111,7 +111,7 @@ Conversation {
     }
     Page {
         pageName = "MP_innkeeperCommonsTavern_aboutcommons";
-        Name = "Caroline";
+        Name = "\c[yellow]Caroline";
         Dialog = "\c[white]The city Commons were originally built for the harbor workers. But it has grown since that time. Now it is city's main residential area.";
         Goodbye = "\c[red]Goodbye";
         Choice {

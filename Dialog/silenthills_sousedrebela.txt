@@ -6,7 +6,7 @@ Conversation {
     ID = 37;
     Page {
         pageName = "SH_beldin_opener";
-        Name = "Beldin";
+        Name = "\c[yellow]Beldin";
         Dialog = "\c[white]Hello, do you need something? I was just heading to work, you know.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -24,7 +24,7 @@ Conversation {
     }
     Page {
         pageName = "SH_beldin_rebel";
-        Name = "Beldin";
+        Name = "\c[yellow]Beldin";
         Dialog = "\c[white]Well, I'm not hundred percent sure, but looks like my neighbor has something to do with the blasphemers. Check the guy next door, in the middle of the block.";
         Goodbye = "\c[red]Goodbye";
         Choice {

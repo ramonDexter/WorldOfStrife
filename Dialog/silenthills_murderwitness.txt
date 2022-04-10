@@ -6,7 +6,7 @@ Conversation {
     ID = 38;
     Page {
         pageName = "SH_muderWitness_opener";
-        Name = "Ketrick";
+        Name = "\c[yellow]Ketrick";
         Dialog = "\c[white]Yes? What do you want?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     //murder witness dialogue ---------------------------------------
     Page {
         pageName = "SH_muderWitness_murder";
-        Name = "Ketrick";
+        Name = "\c[yellow]Ketrick";
         Dialog = "\c[white]Well, I came to Caldarium just to see the horrible scene. The dead body with the chest ripped open. What could cause such a terrible damage? Nothing out of this world, I say! Must be some heresy involved.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -39,7 +39,7 @@ Conversation {
     }
     Page {
         pageName = "SH_muderWitness_murder_anythingelse";
-        Name = "Ketrick";
+        Name = "\c[yellow]Ketrick";
         Dialog = "\c[white]Nothing, to be honest. But if you want my advice, speak with the gatekeeper. There are security cameras all over the place. Maybe there is something on the record.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -53,7 +53,7 @@ Conversation {
     //murder witness dialogue ---------------------------------------
     Page {
         pageName = "SH_muderWitness_questions";
-        Name = "Ketrick";
+        Name = "\c[yellow]Ketrick";
         Dialog = "\c[white]What do you want to know?";
         Goodbye = "\c[red]Goodbye";
         Choice {

@@ -7,7 +7,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -18,7 +18,7 @@ Conversation {
     */
     Page {
         pageName = "SH_trhovec26_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Welcome, are you interested in small buy? I got some food and some drinks.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -80,7 +80,7 @@ Conversation {
     }
     Page {
         pageName = "SH_trhovec26_wherefrom";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Well, I hail from small village called Dubyanka. It's like thirty clicks from here to the west. Lovely small village, if you ask me.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -93,7 +93,7 @@ Conversation {
     ID = 27;
     Page {
         pageName = "SH_trhovec27_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Hello binder, what brings you to my shop? Are you in need of supplies? I sell flares and ammunition. Just ask what you need and I'll see what I can do.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -168,7 +168,7 @@ Conversation {
     }
     Page {
         pageName = "SH_trhovec27_wherefrom";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]I came here from village called Ravenrock. We've got a big brewery there.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -181,7 +181,7 @@ Conversation {
     ID = 28;
     Page {
         pageName = "SH_trhovec28_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Sorry, I'm already packing my stuff. I've sold everything, so I can return back home with pockets full o' gold.";
         Goodbye = "\c[red]Goodbye";
     }
@@ -190,7 +190,7 @@ Conversation {
     ID = 29;
     Page {
         pageName = "SH_trhovec29_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Hello, do you need anything? I sell only wine and good ale.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -226,7 +226,7 @@ Conversation {
     }
     Page {
         pageName = "SH_trhovec29_wherefrom";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]I'm from small town of Greenhills, it far to the north.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -239,7 +239,7 @@ Conversation {
     ID = 30;
     Page {
         pageName = "SH_trhovec30_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Welcome, binder. Do you need anything? I got some specialties. The Springmines, Jetpack and the Swarmers. Rare stuff, so the prices are appropriate.";
         Goodbye = "\c[red]Goodbye";
         /*Choice {
@@ -288,7 +288,7 @@ Conversation {
     }
     Page {
         pageName = "SH_trhovec30_wherefrom";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]I live in village called The Bottom, it's not far from here. Like, ten kilometres to the south.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -301,7 +301,7 @@ Conversation {
     ID = 31;
     Page {
         pageName = "SH_trhovec31_opener";
-        Name = "Trader";
+        Name = "\c[yellow]Trader";
         Dialog = "\c[white]Yes? Sorry, I'm already leaving. Sold everything, so I cannot provide you anything. Sorry.";
         Goodbye = "\c[red]Goodbye";
     }

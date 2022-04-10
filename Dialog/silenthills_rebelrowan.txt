@@ -6,7 +6,7 @@ Conversation {
     ID = 36;
     Page {
         pageName = "SH_rebelRowan_opener";
-        Name = "Rowan";
+        Name = "\c[yellow]Rowan";
         Dialog = "\c[white]What are you doing here?";
         Goodbye = "\c[red]Goodbye";
 
@@ -21,7 +21,7 @@ Conversation {
     }
     Page {
         pageName = "SH_rebelRowan_nothowitlooks";
-        Name = "Rowan";
+        Name = "\c[yellow]Rowan";
         Dialog = "\c[white]That...that's not how it looks. I'm not with the rebels. Please, don't tell anyone.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -31,7 +31,7 @@ Conversation {
     }
     Page {
         pageName = "SH_rebelRowan_toolate";
-        Name = "Rowan";
+        Name = "\c[yellow]Rowan";
         Dialog = "\c[white]No, please. I'm not with the rebels.";
         Goodbye = "\c[red]Goodbye";
         Choice {

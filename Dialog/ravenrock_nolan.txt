@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_nolan_opener";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]Oh, hello master Binder. Welcome to my humble home. What business bring you here? My name's Nolan, I am farmer.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_nolan_else";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]Oh, yes. Just ask.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_nolan_aboutravenrock";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]Yes, sure I can do. Ravenrock's nice little village. We got everyhting we need. Our fields give good crops, and we're brewing our own beer here, which is nice.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_nolan_surroundings";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]I'm not usre if I'm the right person to ask. I spend most of my day on the field, so I don't really have time for travelling. The only time I've got time to travel is when I go to visit the market at Millport, which is to the south from here, about fifty kilometres. Well, that's all I can tell you about surroundings.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -71,7 +71,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_nolan_crops";
-        Name = "Nolan";
+        Name = "\c[yellow]Nolan";
         Dialog = "\c[white]Oh yes, good, very good. Thank you for asking, master Binder.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

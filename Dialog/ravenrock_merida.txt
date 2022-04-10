@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_merida_opener";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]Hello, Binder. What brings you to my house? I'm Merida.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_merida_else";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -47,7 +47,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_merida_aboutravenrock";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]Well, Ravenrock is my home, as I have been born here and spent most of my life here. Our village is quiet, as most of the locals are farmers or brewery workers. One could think that with this brewery here, we could have some ramble here. But that's not true. The only people making a mess here are the tourists who visit Ravenrock mostly to see the brewery.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -57,7 +57,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_merida_proud";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]Thank you for saying that, Binder. Yes, I'm proud. My husband is skilled artisan capable of making nearly anything. And Arlan, my son, has inherited most of his father's dextertity. He will be a great master.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -67,7 +67,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_merida_surroundings";
-        Name = "Merida";
+        Name = "\c[yellow]Merida";
         Dialog = "\c[white]Oh, I don't travel that much. Like I said, I spent most of my life here in village. The only time I left the village was when I attended a school in Millport. So, I could tell you a lot about Millport, but if your looking for some better info about the area around Ravenrock, you better ask someone else.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

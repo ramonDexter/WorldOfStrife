@@ -6,7 +6,7 @@ Conversation {
     ID = 1;
     Page {
         pageName = "MP_binderLeader_quest2finish";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Welcome, Tobias. I've been waiting for you.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -17,7 +17,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_reportingforduty";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Your superior from Silent Hills has reported that you've proven yourself well. But as it seems, we are facing more serious threat than we've expected. We are facing traitorous heretics with unlimited resources, and their connections reach the highest places.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR"; 
@@ -28,7 +28,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_theftscam";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Yes, the heretics tried to divert our attention. And I could say they were almost succesfull. But our intelligence has secured most vluable information. The heretical rebels are planning coup d'etat. They want to overthrow our beloved emperor and replace him with their puppet ruler. They have to be stopped.";
         Goodbye = "\c[red]Goodbye.";
         Panel = "M_BNDR"; 
@@ -39,7 +39,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_howstopthem";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Well, this will be your task. We have found out that one of the rebels is the local governor. Unfortunately, we don't have enough evidence to bring him to justice. He is too cautious about his actions. So we need a spacial agent, someone like you. You'll have to make him trust you, so you could secure any information regarding his treachery. You'll have our full material support, as this task is of highest importance.";
         Goodbye = "\c[red]Goodbye."; 
         Panel = "M_BNDR"; 
@@ -53,7 +53,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_opener";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Yes, did you wanted something?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -80,7 +80,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_aboutbinders";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Our sacred Order is devoted to procteting the Order, as well as procetion its fathful followers. We are using our tools to fulfill this mission and to gain eternal tranquility.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -91,7 +91,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_aboutbase";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Our base has been built three years ago. It's a strong bastion of our Order, and our main base here on the Island. We have all kind of services here. A fully equipped hospital, techsmith, library and a shooting range down in the lower floor.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -102,7 +102,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_aboutmillport";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Millport is small peaceful trading community. We came here three years ago to restore peace here, as the heretic influence was strong here, and still is! We have many problems here. We're also glad you're here, as you've proven yourself worthy in the Silent Hills.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -113,7 +113,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_aroundtown";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]You'll find the plantations if you'll head to the west. The city is supplied from the Plantations, and sells, its produce. To the east is small village of Ravensrock. Strange community of non believers. We're trying to gain our influence there. To the north is the rocky wildernesss with the Order Correctional Facility.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_BNDR";
@@ -124,7 +124,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderLeader_aboutgovernor";
-        Name = "Tiberius, Binder Superior";
+        Name = "\c[yellow]Tiberius, Binder Superior";
         Dialog = "\c[white]Governor's name is Lucius Ergalla. He serves as a governor here for the last twenty years, so he might seem as a loyal servant of the emperor. But as our intelligence found out, he is one of the rebels who are planning coup d'etat.\nHe lives in The Castle, the big fortress near eastern gate, north of the Church temple. It's guarded by his loyal personal guards.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

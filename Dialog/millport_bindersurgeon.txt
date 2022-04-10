@@ -6,7 +6,7 @@ Conversation {
     ID = 2;
     Page {
         pageName = "MP_binderSurgeon_opener";
-        Name = "Binder Surgeon";
+        Name = "\c[yellow]Binder Surgeon";
         Dialog = "\c[white]Hello, are you in need of medical services? Or do you need to resupply your stocks? Als, if you've got an upgrade token, I can install you a stamina cybernetic upgrade.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_DCTR";
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderSurgeon_wounded";
-        Name = "Binder Surgeon";
+        Name = "\c[yellow]Binder Surgeon";
         Dialog = "\c[white]Don't worry and step into the autodoc right there. I've got an surgery in the next room.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_DCTR";
@@ -40,7 +40,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderSurgeon_shop";
-        Name = "Binder Surgeon";
+        Name = "\c[yellow]Binder Surgeon";
         Dialog = "\c[white]Ok, here is what I've got:\nHypospray for 25, Kombopack for 50 and Instaheal for 100.\nMedPatch for 10, Medical Kit for 25 and Surgery Kit for 100.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_DCTR";
@@ -123,7 +123,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderSurgeon_upgrade";
-        Name = "Binder Surgeon";
+        Name = "\c[yellow]Binder Surgeon";
         Dialog = "\c[white]Just give me the upgrade token and I'll install you the stamina implant. Not a big deal, just hold still, it will take just a few minutes.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_DCTR";

@@ -5,7 +5,7 @@ Conversation {
     ID = 45;
     Page {
         pageName = "SH_tekGuildChief_opener";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Yes? Did you wanted something? I'm little bit busy here.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -64,7 +64,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_whoareyou";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]I am Norwick, chief of the local TekGuild branch office. So you could say I'm the executive here. So that means I'm pretty busy.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -75,7 +75,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_whatareyoudoinghere";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]I'm the executive here. I'm in charge of the local TekGuild office. And that means I got a work to do here.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -86,7 +86,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_aboutteklguild";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]The TekGuild is responsible for education of all technical staff. Also, we design basically any technology you might encounter.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -97,7 +97,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_dontneedhelp";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Well, you've helped us a lot, but no, I don't have anything here for you now. Thank you, again.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -108,7 +108,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_needhelp";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]As you ask, yes. In fact, I might need some help here.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -123,7 +123,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_needhelpwith";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Well, right now I'm looking for somebody to deliver me a shipment of Degnin Ore from the Mines. Say, would you do that for me? Esay task, just go the mines, take the ore from mines foreman and return to me. What do you say?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -143,7 +143,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_illbringore";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]You're back. Do you have the Ore I sent you for?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -168,7 +168,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_orePicked";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Yes, it is. Also, it is one of the most valuable ores, because we obtain raw metals from it. Anyways, give it to me, so I can give you your reward. Also, I'll have more work for you, if you're interested.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -183,7 +183,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q2_opener";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Yes, yes. The foreman just called me, saying one of the mining machines has broken down. None of the miners has skills required to repair it, so I need someone more skilled to take a look at it. Say, would you go again to the mines and try to fix the broken mining machine? Reward included, of courese. This time higher than last time. What do you say?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -204,7 +204,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q2_howsitgoing";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]So, were you successful? Is the machine repaired?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -229,7 +229,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q2_machinefixed";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]Was it taht simple? An air filter? I see we have to educate the miners a little bit. They are completely capable of replacing spare parts. Anyways, here is your reward. You've deserved it. And, I have more work for you, if you're interested.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -244,7 +244,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q3_opener";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]This time it's more serious. Two days ago, our windtrap powerplant on the coast has cut off communcation. Also, our technicians have reported drop in power supply. So something has happened there. I need you to go there and find out what happened. Then report back to me. I cannot send any of my staff, since most of the are occupied anywhere else, so I'm asking you. Say, will you go there?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -261,7 +261,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q3_details";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]You can use our portal, that connects our base with the coastla outpost. Then, I've marked the coastal windtrap powerplant on your map. Go there and find out what heppened there.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -276,7 +276,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q3_progress";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]So, what happened there?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
@@ -301,7 +301,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildChief_Q3_finished";
-        Name = "Norwick, chief of TekGuild";
+        Name = "\c[yellow]Norwick, chief of TekGuild";
         Dialog = "\c[white]What? Heretics killed our powerplant staff? Horrible, just horrible. Well, I must say you've proven yourself. We have do repair the powerplant, but that's our task. I must say I am grateful that you helped us. I must say that Binder Order is quite helpful. Here is your reward.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";

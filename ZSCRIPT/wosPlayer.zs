@@ -105,7 +105,7 @@ class binderPlayer : StrifePlayer {
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
 		// LF sprinting code //
-        stamin = 350;
+        stamin = 400;
 		////////
     }	
 	//  Lost Frontier adapted code  ////////////////////////////////////////////
@@ -146,7 +146,7 @@ class binderPlayer : StrifePlayer {
 	}
 	void HealthShake() {
 		double shake = 0.2 - health*0.002;
-		double stamshak = 0.001 * (350 - stamin);
+		double stamshak = 0.001 * (400 - stamin);
 		If(stamshak>0){shake+=stamshak;}
 		If(shake<0){shake=0;}
 		If(health<1){shake=0;}
@@ -154,7 +154,7 @@ class binderPlayer : StrifePlayer {
 		pitch+=frandom(-shake,shake);
 	}
 	void SprintSpeed() {
-        int maxstamin = 350;
+        int maxstamin = 400;
 		If(maxhealth==120){maxstamin=420;}
 		If(maxhealth==140){maxstamin=490;}
 		If(maxhealth==160){maxstamin=560;}

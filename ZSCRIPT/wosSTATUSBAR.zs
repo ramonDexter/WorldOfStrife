@@ -312,7 +312,7 @@ class wosStatusBar : BaseStatusBar {
 
 			// stamina bar /////////////////////////////////////////////////////
 			let pawn = binderPlayer(CPlayer.mo);
-			DrawBar("stamBar", "stamBck", pawn.stamin, 350, (369, 97), 0, 3);
+			DrawBar("stamBar", "stamBck", pawn.stamin, 400, (369, 97), 0, 3);
 
             //  Armor  /////////////////////////////////////////////////////////			
 			let armo = binderPlayer(CPlayer.mo);

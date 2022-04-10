@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "millport_gladiusbinder_opener";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]Hello, brother. What brings you to my apartment?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -37,7 +37,7 @@ Conversation {
     }
     Page {
         pageName = "millport_gladiusbinder_howareyou";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]Oh, I'm good. Thanks for asking. And you?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -47,7 +47,7 @@ Conversation {
     }
     Page {
         pageName = "millport_gladiusbinder_doinghere";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]I'm assigned here to watch over the locals in the Commons. While peaceful now, Commons used to be a place with negative reputation. It was first built as a housing for lowest class workers, so the criminality was pretty high here. But that's history now. And binder assigned here is a relic of this wilder past.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -57,7 +57,7 @@ Conversation {
     }
     Page {
         pageName = "millport_gladiusbinder_aboutcommons";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]The Commons has a reputation of a housing for the poor. True is that it was firstly built as a housing for the lowest working class. As it grew over time, more varied sort of citizens moved in. Now we have traders here, even techsmiths, a buthcer, a library and a good tavern in the Commons. Now the Commons represents a good place to live. The only downside is the general lack of natural sunlight, because the streets are roofed in.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -67,7 +67,7 @@ Conversation {
     }
     Page {
         pageName = "millport_gladiusbinder_aboutmillport";
-        Name = "Gladius, binder Invoker";
+        Name = "\c[yellow]Gladius, binder Invoker";
         Dialog = "\c[white]Millport's a trading hub of the southern coast. The city's owned by the Tabitian family, and they built their castle nearby the city to the west. Millport city is a trading city, you can find all kinds of shops and vendors here. Also, the TekGuild moved their HQ here few years ago, so Millport's now a academic centre also. The city is quite peaceful, but that changes when the trading ships arrive. Population could grow twice in such times!";
         Goodbye = "\c[red]Goodbye."; 
         Choice {

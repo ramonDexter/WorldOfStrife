@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "mp_diego_opener";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Hello, do you want hamburger? Or a hotdog? My burgers and dogs are the best in town. By the way, I'm Diego.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "mp_diego_shop";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Okay, one tasty burger.\nHamburger costs 3, cheeseburger costs 4, bigburger costs 5 and doublecheese costs 6 gold. The hotdogs cost 4 gold. Which one would you like?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -104,7 +104,7 @@ Conversation {
     }
     Page {
         pageName = "mp_diego_questions";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Oh yeah, I could take a break for a little talk. What do you want to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -126,7 +126,7 @@ Conversation {
     }
     Page {
         pageName = "mp_diego_burgerstand";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Oh yes, this is my treasure. I've bought it three years ago, when I've finished the school. My father wanted me to be a blacksmith, but no, I've always wanted to be a cook. So I've left my parents in Eastcliff and moved here. I've used all my money to buy this litte stand and here I am. I cannot say this is a gold mine. It takes hard work to sthrive, but I like it. I'm not rich, but I can make a living.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -136,7 +136,7 @@ Conversation {
     }
     Page {
         pageName = "mp_diego_aboutmillport";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Sure, but I don't know much. I came here three years ago, so you'll better ask one of the natives. Well, Millport's a port city, so it could become little bit busy when the shipping guild's vessels arrive. We got a TekGuild HQ here, and their main university. And I cannot forget the Tabitian Bath. Wonderful place. Tender warm water, and nice hostesses.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -146,7 +146,7 @@ Conversation {
     }
     Page {
         pageName = "mp_diego_aboutgovernor";
-        Name = "Diego";
+        Name = "\c[yellow]Diego";
         Dialog = "\c[white]Oh, our governor, the majesty. He's a powerful guy, way too powerful. Don't let yourself get into his games. Your neck'll snap you don't know how. Trust me. Keep away from him.";
         Goodbye = "\c[red]Goodbye.";  
         Choice {

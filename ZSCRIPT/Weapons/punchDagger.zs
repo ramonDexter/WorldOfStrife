@@ -21,12 +21,7 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
 		Ready:
-			PUND A 1 {
-				A_WeaponReady(WRF_ALLOWUSER1);
-				if ( invoker.altCounter > 0 ) {
-					invoker.altCounter--;
-				}
-			}
+			PUND A 1 A_WeaponReady(WRF_ALLOWUSER1);
 			Loop;
 			
 		Deselect:
@@ -42,12 +37,7 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 		Fire:
 			PUND ACF 1;
 			PUND G 1;
-			PUND H 2 { 
-				W_stabDagger();
-				if ( invoker.altCounter > 0 ) {
-					invoker.altCounter--;
-				}
-			}
+			PUND H 2 W_stabDagger();
 			PUND I 2;
 			PUND JK 1;
 			PUND LMNOP 1;
@@ -56,7 +46,8 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 			
 		AltFire:
 			TNT1 A 0 {
-				if ( invoker.altCounter > 0 ) {
+				let pawn = binderplayer(self);
+				if ( pawn.stamin <= 0 ) {
 					return resolveState("Ready");
 				}
 				return resolveState(null);
@@ -65,10 +56,7 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 			PUND S 1;
 			PUND T 1 A_SetPitch(pitch-3);							
 			PUND U 1 A_SetPitch(pitch-3);
-			PUND V 1 {
-				W_stabDaggerAlt();
-				invoker.altCounter = 45;
-			}
+			PUND V 1 W_stabDaggerAlt();
 			PUND VV 1;
 			PUND UU 1;
 			PUND T 2;

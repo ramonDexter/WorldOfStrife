@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_barmanbrewery_opener";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]Hello, welcome to the Ravenrock Brewery! What may I serve you? One mug of cold ale? Or something to eat?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_else";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]What may I serve you? One mug of cold ale? Or something to eat?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_beer";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]Good choice! Our beer and ale is the best in all Tabit's territory! Both ale and beer are 4 gold per bottle.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -85,7 +85,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_food";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]So, we got some 'burgers, cheeseburgers, bigburgers and double cheeseburgers. Made in our kitchen, fresh and tasty.\nThe hamburger costs 3, cheeseburger costs 4, bigburger costs 5 and double cheese costs 6 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -143,7 +143,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_questions";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]Questions, everyone has questions! Just ask, I know nearly everything you could dig about Ravenrock and the brewery.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -165,7 +165,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_aboutbrewery";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]Our brewery's been grounded around two hundred years ago. It became a local landmark and a tourist attraction. Our beer is the best in the area, so most of brewery's produce goes to export. We're brewing white beer and dark ale here. The white beer's good for refreshing and the ale's good when you want to relax.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -175,7 +175,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_aboutravenrock";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]Ravenrock profits from it's position on main road between Narfolk and Kolyma. Lots of people pass through here, and some visit Ravenrock specially beacuse of our brewery. When the festivals come, the village could get pretty busy.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -185,7 +185,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmanbrewery_aboutlocals";
-        Name = "Brick, barman";
+        Name = "\c[yellow]Brick, barman";
         Dialog = "\c[white]The locals are nice folk. Hard working people, either on their fields or here in the brewery.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

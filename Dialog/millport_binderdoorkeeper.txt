@@ -6,7 +6,7 @@ Conversation {
     ID = 5;
     Page {
         pageName = "MP_binderDoorkeep_opener";
-        Name = "The Doorkeeper";
+        Name = "\c[yellow]The Doorkeeper";
         Dialog = "\c[white]Welcome to the Binder Base. What is your desire?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -20,7 +20,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderDoorkeep_whatareyoudoing";
-        Name = "The Doorkeeper";
+        Name = "\c[yellow]The Doorkeeper";
         Dialog = "\c[white]I'm the doorkeeper here. I guard access to the Binder Main Command.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -30,7 +30,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderDoorkeep_whatisthisplace";
-        Name = "The Doorkeeper";
+        Name = "\c[yellow]The Doorkeeper";
         Dialog = "\c[white]You're standing at the Binder Main Command.";
         Goodbye = "\c[red]Goodbye";
         Choice {

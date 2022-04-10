@@ -6,7 +6,7 @@ Conversation {
     ID = 47;
     Page {
         pageName = "SH_tekGuildMaster01_opener";
-        Name = "Herbert, TekGuild Master";
+        Name = "\c[yellow]Herbert, TekGuild Master";
         Dialog = "\c[white]Welcome, Binder. Did you wanted something?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -24,7 +24,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster01_whoareyou";
-        Name = "Herbert, TekGuild Master";
+        Name = "\c[yellow]Herbert, TekGuild Master";
         Dialog = "\c[white]I am Herbert, master of the TekGuild. I am working as a professor and practical tutor here at the workshop.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -34,7 +34,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster01_whatareyoudoing";
-        Name = "Herbert, TekGuild Master";
+        Name = "\c[yellow]Herbert, TekGuild Master";
         Dialog = "\c[white]Well, I'm the practical tutor here at the workshop. I'm trying to teach my students the things they will need in their future work assignement.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -48,7 +48,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster01_teachme";
-        Name = "Herbert, TekGuild Master";
+        Name = "\c[yellow]Herbert, TekGuild Master";
         Dialog = "\c[white]Sorry, I'm quite busy right now. Anyways, you're not even a student here. If you want to study here, you have to enlist. Sorry, I've got to keep to the rules.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -58,7 +58,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster01_abouttekguild";
-        Name = "Herbert, TekGuild Master";
+        Name = "\c[yellow]Herbert, TekGuild Master";
         Dialog = "\c[white]The TekGuild's been established ahortly after our Father came to us. The prupose of the Guild was to train new workers for the Order's facilities. We have widened our services since these times. We are also training new technicians, blacksmiths and techsmiths who offer their services to the public. Our outpost could be found in any bigger city on the continent. We are also offering services to the public in the form of repairing devices and machinery and creation of new contraptions also. But these services are pricy.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -75,7 +75,7 @@ Conversation {
 Conversation {
     ID = 48;
     Page {
-        Name = "TekGuild Teacher";
+        Name = "\c[yellow]TekGuild Teacher";
         Dialog = "\c[white]Sorry, Binder. I'm having a lecture here. We can talk later.";
         Goodbye = "\c[red]Goodbye";
     }
@@ -89,7 +89,7 @@ Conversation {
     ID = 49;
     Page {
         pageName = "SH_tekGuildMaster02_opener";
-        Name = "Worner, TekGuild Master";
+        Name = "\c[yellow]Worner, TekGuild Master";
         Dialog = "\c[white]Hello, Binder. Did you come for a small lecture?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -107,7 +107,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster02_smalllecture";
-        Name = "Worner, TekGuild Master";
+        Name = "\c[yellow]Worner, TekGuild Master";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -117,7 +117,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster02_whatareyoudoinghere";
-        Name = "Worner, TekGuild Master";
+        Name = "\c[yellow]Worner, TekGuild Master";
         Dialog = "\c[white]I am the teacher here for today's lesson. We are practicing the weapons creation here. Did you know that we are the creators of the mauler staff you carry?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -131,7 +131,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster02_tekguildstaff";
-        Name = "Worner, TekGuild Master";
+        Name = "\c[yellow]Worner, TekGuild Master";
         Dialog = "\c[white]Sure. The mauler staves was one of our biggest requisition from the Order. We designed them after Binder Order's special request, for a weapon that could be used both as a weapon and a tool, and that could also serve as a symbol of the Binders. I must say we are proud of it. It's a masterpiece.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -141,7 +141,7 @@ Conversation {
     }
     Page {
         pageName = "SH_tekGuildMaster02_abouttekguild";
-        Name = "Worner, TekGuild Master";
+        Name = "\c[yellow]Worner, TekGuild Master";
         Dialog = "\c[white]Well, the TekGuild's main purpose is to train new staff for the Order's facilities. That's the official slogan. The unofficial truth is that we are responsible for most of the technology that you'll encounter. We design the weapons that Order forces use, we design and develop all the technology that is available on the market. One could say that we are monopolous. I don't contradict that objection. But as the only player we also hold all the know-how and all the brains. So that makes us pretty efficient player.";
         Goodbye = "\c[red]Goodbye";
         Choice {

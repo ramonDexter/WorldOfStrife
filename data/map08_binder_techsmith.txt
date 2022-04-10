@@ -6,7 +6,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -17,7 +17,7 @@ Conversation {
     */
     Page {
         pageName = "MP_binderTechsmith_opener";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Welcome, brother. I'm Jebediah, the chief Techmisth here on the base. How may I serve you?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -31,7 +31,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Well, I've got plenty of stuff.\nI've got the Kinetic Armor and Deployable Shield. These are meant as protection. Then I have some offensive devices, like conventional grenades and the Swarmers grenade. Also, I sell the Armor Repair Kits.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop_kineticarmor";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]We've developed this brand new armor as a successor to our cybernetic armors. This type of armor employs kinetic energetic armor shielding whole body. It is lightweight, while offering superior protection. But, as a novelty, it is pretty expensive.\nKinetic Armor costs 360 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -84,7 +84,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop_deployableshields";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Yeah. Handy things, aren't they? But remember, they block all fire, including yours. So you have to get out of cover to shoot.\nOne Deployable Shield costs 150 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -107,7 +107,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop_grenades";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]I've got conventional explosive grenades, the nasty phosphorous greandes and the gas grenades.\nExplosive grenade costs 5 gold.\nPhosphorous grenade costs 15 gold.\nGas grenade costs 10 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -156,7 +156,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop_swarmers";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]The Swarmewrs is a new type of grenade, or better said, a offensive device. The big ball spawns swarm of smaller drones equipped with slashing rotary saw, capable of slicing through nearly anything. Nasty thing, is you wanna know my opinion.\nThe Swarmers grenade costs 35 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -179,7 +179,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_shop_armorshards";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Yeah, they come in handy. We're making our own, so we don't have to rely on supply from the TekGuild.\nOne repair kit costs 15 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -202,7 +202,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_questions";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Yeah, I can take a break for a little chat. What would you like to know, brother?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -224,7 +224,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_doinghere";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]As I said, I'm the chief Techsmith here on our base. I am in charge of all the equipment manufacturing. Hopefully, my deputy is a trustwothy person, so I can take care of the supply shop here. I'm not the management type, you know.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -242,7 +242,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_aboutcity";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Well, Millport is a 'southern gate of prosperity', as the official propagation says. It's true, more or less. The city is a nice place, when you look only at the surface. But when you dive deeper, you will find out that the city's a rottne place.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -264,7 +264,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_whyisthat";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]The city's criminal underworld is driven by one man. The local governor is Baron von Stromberg. We are sure he is the mastermind of local underworld, but we ale lacking any evidence. He is too careful and his fingers reach too far.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -282,7 +282,7 @@ Conversation {
     }
     Page {
         pageName = "MP_binderTechsmith_rumors";
-        Name = "Jebediah, Techsmith";
+        Name = "\c[yellow]Jebediah, Techsmith";
         Dialog = "\c[white]Sorry, I cannot help you. I'm not into spreading rumors.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

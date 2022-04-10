@@ -14,7 +14,7 @@ Conversation
 			amount = 1;
 		}
 		//-------------------
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[white]The superior has a task for you.\n\nYou should visit him at the command center.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
@@ -28,7 +28,7 @@ Conversation
     }
     Page {
         pageName = "SH_playerPC_trueOpener";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[white]- Personal notes\n- Information";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
@@ -50,12 +50,12 @@ Conversation
     }
     Page {
         pageName = "SH_playerPC_personalNotes";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[white]Personal notes";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_playerPC_trueOpener";
         }
         Choice {
@@ -73,47 +73,47 @@ Conversation
     }
     Page {
         pageName = "SH_playerPC_personalNotes_note1";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[yellow]NOTE #1\n\c[green]==-----------==\n\c[white]The trainig's hard, but I'm making progress. Maybe some day I'll be promoted full ranking Binder.\nI hope so. I don't want do dissappoint my parents, and all the ancestors.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_playerPC_personalNotes";
         }
     }
     Page {
         pageName = "SH_playerPC_personalNotes_note2";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[yellow]NOTE #2\n\c[green]==-----------==\n\c[white]That bastard Jax stole my shoes. I'll beat shit out of him.\n\nOr maybe not. Maybe I should take his badge and hide it somewhere. That would bring him into trouble. Yeah, that's what he deserves.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_playerPC_personalNotes";
         }
     }
     Page {
         pageName = "SH_playerPC_personalNotes_note3";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[yellow]NOTE #3\n\c[green]==-----------==\n\c[white]All my hard work has reached it's succesfull end. I'll be promoted full ranking Binder, but only after I'll finish my last task as an Cadet.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_playerPC_personalNotes";
         }
     }
 	Page {
         pageName = "SH_playerPC_information";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]\c[yellow][ GAME INFO ]\n\c[green]==-----------==\n\c[white]- rpg system \n- weapons\n- items\n- backstory";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "SH_playerPC_trueOpener";
         }
 		Choice {
@@ -136,45 +136,45 @@ Conversation
 	}
 	Page {
         pageName = "SH_playerPC_information_rpgsystem";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]The RPG system in World of Strife is quite simple. Player has two statistics that affect his behaviour.\nAccuracy affects player's shooting skill. The higher the number, the more precise the shooting is.\nStamina affects player's health level. Each level of Stamina adds according amount to player's health. So, for example, Stamina of 10 means player's maximum health of 110.";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = "SH_playerPC_information";
 		}
 	}
 	Page {
         pageName = "SH_playerPC_information_weapons";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]$M01_PC_WEAPONS";
 		Panel = "M_WPNS";
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = "SH_playerPC_information";
 		}
 	}
 	Page {
         pageName = "SH_playerPC_information_items";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]INFO_ITEMS";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = "SH_playerPC_information";
 		}
 	}
 	Page {
         pageName = "SH_playerPC_information_backstory";
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]INFO_BACKSTORY";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = "SH_playerPC_information";
 		}
 	}

@@ -8,7 +8,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -29,7 +29,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_citySurgeon_questions";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Yes? What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -47,7 +47,7 @@ Conversation {
     }
     Page {
         pageName = "SH_citySurgeon_aboutpatients";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Well, I cannot tell you any personal information about my patients. Medical secret, sorry.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -57,7 +57,7 @@ Conversation {
     }
     Page {
         pageName = "SH_citySurgeon_aboutsilenthills";
-        Name = "Armor vendor";
+        Name = "\c[yellow]Armor vendor";
         Dialog = "\c[white]Silent Hills is nice little town. I've been assigned here three years ago, so I really don't know much, yet. I've got lots of work here in the lab, so if you really want to know about the town's history, you have to ask someone else.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

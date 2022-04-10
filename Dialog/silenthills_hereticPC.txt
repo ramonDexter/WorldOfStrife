@@ -6,7 +6,7 @@ Conversation {
     ID = 44;
     Page {
         pageName = "SH_hereticPC_opener";
-        Name = "[ STORAGE TERMINAL ]";
+        Name = "\c[yellow][ STORAGE TERMINAL ]";
         Dialog = "\c[white]Select your choice:";
         Goodbye = "\c[red][ EXIT ]";
         Panel = "M_BLNK";
@@ -27,7 +27,7 @@ Conversation {
     }
     Page {
         pageName = "SH_hereticPC_note";
-        Name = "[ STORAGE TERMINAL ]";
+        Name = "\c[yellow][ STORAGE TERMINAL ]";
         Dialog = "\c[white]Smarty, we send the things to mister you-know-who. The shrine on the place is ready, just remember, door next to the flag.";
         Goodbye = "\c[red][ EXIT ]";
         Panel = "M_BLNK";

@@ -6,7 +6,7 @@ Conversation {
     ID = 3;
     Page {
         pageName = "MP_binderWeaponsVendor_opener";
-        Name = "Binder Weapons Vendor";
+        Name = "\c[yellow]Binder Weapons Vendor";
         Dialog = "\c[white]Welcome, Binder. Are you short on ammunition? Or do you need some serious firpower? I've got some Maulers, Mini-Missile Launchers and Flamers here.";
         Goodbye = "\c[red]Goodbye";
 		Choice {

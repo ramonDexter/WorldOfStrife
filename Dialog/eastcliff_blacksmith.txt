@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Worrick, blacksmith"; 
+        Name = "\c[yellow]Worrick, blacksmith"; 
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "EC_blacksmith_opener";
-        Name = "Worrick, blacksmith";
+        Name = "\c[yellow]Worrick, blacksmith";
         Dialog = "\c[white]Hello, master Binder. How may I serve you? If you want to buy something, talk to Becky over there. She's the head of the shop. I'm her father, Worrick. I'm the master blacksmith here, and the owner of the Blacksmith Shop.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "EC_blacksmith_daughter";
-        Name = "Worrick, blacksmith";
+        Name = "\c[yellow]Worrick, blacksmith";
         Dialog = "\c[white]Yeah, I'm proud of her. She's got my genes. I'm teaching her since 5 years. Even as a toddler, she wanetd to help me. And now I'm slowly preparing her to be the master, as I wante to retire soon. I've crafted many things, but it's time to rest. Becky's good blacksmith and great techsmith. I just need to contact the TekGuild and arrange a official examination for her, so she could use the title of the Techsmith.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -47,7 +47,7 @@ Conversation {
     }
     Page {
         pageName = "EC_blacksmith_niceshop";
-        Name = "Worrick, blacksmith";
+        Name = "\c[yellow]Worrick, blacksmith";
         Dialog = "\c[white]Thank you. My father built it, when he came to Eastcliff as a young apprentice of TekGuild. He built his good name with his great skills.And he passed everything he knew to me. But I§m not sure if I'll ever reach his level of skill.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "EC_blacksmith_eastcliff";
-        Name = "Worrick, blacksmith";
+        Name = "\c[yellow]Worrick, blacksmith";
         Dialog = "\c[white]Eastcliff's my home for my whole life. It's a quite village of fishers and farmers. The farms are hidden up on the cliffs, and the waters are full of fish, so the locals pre pretty wealthy. We've got a good pub here, the 'White Cock Inn'. Good kitchen and good beer, right from Ravenrock brewery. Next to the pub is a Shipping Guild office. And on the eastern edge is a Order Temple. We're faithful people, so we visit the temple often.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -79,7 +79,7 @@ Conversation {
     }
     Page {
         pageName = "EC_blacksmith_ravenrockbrewery";
-        Name = "Worrick, blacksmith";
+        Name = "\c[yellow]Worrick, blacksmith";
         Dialog = "\c[white]Yeah, a big one. They brew all types of beer, but the Ale is special one. Dark, sweet and strong. You must pay a visit to the brewery is you visit Ravenrock! I'm kidding. But the beer's good and the brewery supplies the whole Millport area.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

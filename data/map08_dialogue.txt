@@ -12,7 +12,7 @@ Conversation
     ID = 1;
     Page//1
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]Hello binder, welcome to our headqurters. Have you had good journey?";
         Panel = "M_BNDR";
         Choice
@@ -23,7 +23,7 @@ Conversation
     }
     Page//2
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]Yes, I have received message from your superior. Lose of the artifact is bad news. And I have even worse news. The heretics have used the artifact to take control of the Programmer. That means the order forced in this region are under the heretic congtrol. We are the last and only hope to restore Peace and order in this lands. But that will require lot of work.";
         Panel = "M_BNDR";
         Choice
@@ -34,7 +34,7 @@ Conversation
     }
     Page//3
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]My subordinates can handle most of our ordinary work. I have some special work for you. The first is to gain some trust from the local people. Go into the town, introduce yourself to the important people there and help them with their problems. That would be the best way to gain their trust.";
         Panel = "M_BNDR";
         Choice
@@ -45,7 +45,7 @@ Conversation
     }
     Page//4
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]As I have said, the heretics have gained control of the Programmer and started using Order forces to terrorize the locals. So the Order has lost the people's trust. And we need to get it back.";
         Panel = "M_BNDR";
         Choice
@@ -58,7 +58,7 @@ Conversation
     //normal dialogue >> startpoint for questions or quests
     Page//5
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "Do you have any questions? I'm quite busy, but we can talk for a while.";
         Panel = "M_BNDR";
         Choice
@@ -91,7 +91,7 @@ Conversation
     }
     Page//6
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]The Binder Order was established together with the formation with the Order itself. The Binders tsrated to work as peacekeepers and watchers. Our sacred goal is to keep peaece amongst the people, and to pursuse the impure, or anyone who could threaten the Order.\nOur headquarters are here, in Millport.";
         Panel = "M_BNDR";
         Choice
@@ -102,7 +102,7 @@ Conversation
     }
     Page//7
     {
-        Name = "Richter, Binder supreme general";
+        Name = "\c[yellow]Richter, Binder supreme general";
         Dialog = "\c[white]";
         Panel = "M_BNDR";
         Choice
@@ -1032,7 +1032,7 @@ Conversation
     ID = 19;
     Page//1
     {
-        Name = "Tekguild master Engineer";
+        Name = "\c[yellow]Tekguild master Engineer";
         Dialog = "";
         Panel = "";
         choice

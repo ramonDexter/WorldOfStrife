@@ -7,7 +7,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Energy Weapons Vendor";
+        Name = "\c[yellow]Energy Weapons Vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -93,7 +93,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_energyWeaponsVendor_questions";
-        Name = "Energy Weapons Vendor";
+        Name = "\c[yellow]Energy Weapons Vendor";
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -111,7 +111,7 @@ Conversation {
     }
     Page {
         pageName = "SH_energyWeaponsVendor_yourshop";
-        Name = "Energy Weapons Vendor";
+        Name = "\c[yellow]Energy Weapons Vendor";
         Dialog = "\c[white]Yes, it is. My father built this place, and he passed it to me when he passed away. I'm doing good trade here, I'm supplying the local guard here, and also I supply your order. You're good customers, I say.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -121,7 +121,7 @@ Conversation {
     }
     Page {
         pageName = "SH_energyWeaponsVendor_aboutsilenthills";
-        Name = "Energy Weapons Vendor";
+        Name = "\c[yellow]Energy Weapons Vendor";
         Dialog = "\c[white]Well, Silent Hills is my home for my whole life. I've never left this palce, except for small trading trips to surrounding towns. We've got everything here, traders, pubs, and even big public bathhouse.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

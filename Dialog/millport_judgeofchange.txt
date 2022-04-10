@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "mp_judgeofchange_opener";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]Yes, hello? What brings you to my aparment, Binder?";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 
@@ -34,7 +34,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_whoareyou";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]I am Afer Valgus Reberio, and I am the Imperial Judge of change. I'm stationed here as the Imperial herald and prolonged hand of the Emperor's law. I'm here for the formal and civil parts of law, such as heritage and heirloom, divorces and other parts f civil law.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 
@@ -45,7 +45,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_aboutmillport";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]Millport is a jewel of the south. It's the house Tabit's main city and the imperial Governor resides here. Besides that, the TekGuild has moved it's main HQ here not long ago. And also, it's a great place to live. The city offers you everything, including the magnificent Tabitian bath.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 
@@ -56,7 +56,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_aboutsurroundings";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]My duty of the JUdge of change also include the surrounding area and the wider area also. Well, in  the west lays a village by the name of Aeredale. Quiet little village hidden in the forest, the locals are nice and peaceful people. The village Eastcliff suggest it's place on eastern coast. And the northern road leads to village Ravenrock, which is famous for the great brewery.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye.";  
@@ -79,7 +79,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_aboutaeredale";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]As I said, Aeredale is a really small village, hidden in the weastern forest. It's a small farmign community, living from the local rich land. The locals are farmers and hunters. They Are nice people, I like the place.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 
@@ -90,7 +90,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_abouteastcliff";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]Eastcliff is a fishermen's village on the eastern coast. It's nice place to hang around, the water is nice and warm to swim, and the local tavern offers wonderful seafood.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 
@@ -101,7 +101,7 @@ Conversation {
     }
     Page {
         pageName = "mp_judgeofchange_aboutravenrock";
-        Name = "Afer Valgus Reberio";
+        Name = "\c[yellow]Afer Valgus Reberio";
         Dialog = "\c[white]The Ravenrock village is best known for the local brewery, which supplies good beer for the whole region. The brewery is a tourist attraction which brings good wealth to the village economy.";
         Panel = "M_JUDG2";
         Goodbye = "\c[red]Goodbye."; 

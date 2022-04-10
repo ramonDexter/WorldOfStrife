@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Sophia";
+        Name = "\c[yellow]Sophia";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_sophiamother_opener";
-        Name = "Sophia";
+        Name = "\c[yellow]Sophia";
         Dialog = "\c[white]Hello, Binder. Sorry, I'm not in a mood for speaking. I'm happy to meet you, but please, leave now.";
         Goodbye = "\c[red]Goodbye.";
     }

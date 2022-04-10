@@ -258,6 +258,11 @@ class augmentedWeapon : StrifeWeapon {
 				damage *= 10;
 			}
 		}
+		// draw stamina with alt attack //
+		let pawn = binderPlayer(self);
+		pawn.stamin -= 100;
+		
+
 		double angle = angle + random2[JabDagger]() * (5.625 / 256);
 		double pitch = AimLineAttack (angle, 80.);
 		LineAttack (angle, 80., pitch, damage, 'Melee', "StrifeSpark", true, t);

@@ -7,7 +7,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Explosive Guns Vendor";
+        Name = "\c[yellow]Explosive Guns Vendor";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -106,7 +106,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_explosiveGunsVendor_questions";
-        Name = "Explosive Guns Vendor";
+        Name = "\c[yellow]Explosive Guns Vendor";
         Dialog = "\c[white]Oh, you wanted a little chat. What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -124,7 +124,7 @@ Conversation {
     }
     Page {
         pageName = "SH_explosiveGunsVendor_weapons";
-        Name = "Explosive Guns Vendor";
+        Name = "\c[yellow]Explosive Guns Vendor";
         Dialog = "\c[white]Yes, I make all these weapons. I'm specialized in explosive weapons since I left the tekguild school.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -134,7 +134,7 @@ Conversation {
     }
     Page {
         pageName = "SH_explosiveGunsVendor_aboutsilenthills";
-        Name = "Explosive Guns Vendor";
+        Name = "\c[yellow]Explosive Guns Vendor";
         Dialog = "\c[white]Well, our town is quiet nice place. But it wasn't always like that. Back when I was a little brat, it was busy mining town. The miners were low on temper, so the streets wre sometimes dangerous. Especially on teh payday.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

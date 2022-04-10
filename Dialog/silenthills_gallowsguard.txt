@@ -6,7 +6,7 @@ Conversation {
     ID = 32;
     Page {
         pageName = "gallowsGuard_opener";
-        Name = "City Guard";
+        Name = "\c[yellow]City Guard";
         Dialog = "\c[white]Hello Binder, how may I help you.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_CTGRD";
@@ -21,7 +21,7 @@ Conversation {
     }
     Page {
         pageName = "gallowsGuard_whatareyoudoinghere";
-        Name = "City Guard";
+        Name = "\c[yellow]City Guard";
         Dialog = "\c[white]I am guarding the city gallows. An honorable work, I say.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_CTGRD";
@@ -40,7 +40,7 @@ Conversation {
     }
     Page {
         pageName = "gallowsGuard_whyareyouguarding";
-        Name = "City Guard";
+        Name = "\c[yellow]City Guard";
         Dialog = "\c[white]It is pretty simple. I'm guarding the gallows so nobody removes the bodies of the executed. These are meant as an example, so removing them is forbidden until the given time. In this case, the bodies should stay here for two months, so my  duty will be a long one.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_CTGRD";
@@ -55,7 +55,7 @@ Conversation {
     }
     Page {
         pageName = "gallowsGuard_whathappenedhere";
-        Name = "City Guard";
+        Name = "\c[yellow]City Guard";
         Dialog = "\c[white]There was an execution yesterday. A bunch of accused poachers, who has been harrassing people down the river. Their leader has been executed on the guillotine, while his companions has been hanged. I'm guarding their bodies, which are posed here as an example for those who want to break the law.\nAnd the law is sacred.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_CTGRD";

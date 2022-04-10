@@ -6,7 +6,7 @@ Conversation {
     ID = 40;
     Page {
         pageName = "SH_murderGuard_opener";
-        Name = "City Guard";
+        Name = "\c[yellow]City Guard";
         Dialog = "\c[white]Hello, Binder. If you have any questions, speak with the witness here. Name's Ketrick, he discovered the body.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_CTGRD";

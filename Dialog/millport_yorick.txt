@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "mp_yorick_opener";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Hello Binder. Welcome to my workshop. I'm Yorick the Techsmith. Have you come to resupply?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_shop";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]All right. I sell the energy ammunition. Energypods cost 12, Energykits cost 33 and Energypacks cost 55. Then I've got the Rebreather for 38 and the binocular for 130. And I cannot forget the deployable shield for 160. What would you like?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -117,7 +117,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_questions";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]And what did you wanted to know?";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -139,7 +139,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_workshop";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Yes, this is my workshop. I've worked hard to buy this workshop, the previous owner was a greedy swine who wanted more than twice of the normal price.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -149,7 +149,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_aboutcommons";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Well, life's not easy here. Others could say it's nice here, but the lack of natural sunlight is a thing that worries me the most. My head aches from the artificial lighting. Besides that, it's smelly and crowded here.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -163,7 +163,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_movedincommons";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]It was the only free place when I left school! What should I do? Building my own place was even more expensive tha buying this flat here in this stinkhole.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -173,7 +173,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_aboutmillport";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Millport is quite nice place to live, besides the Commons. I like the port, especially at sundusk. And the surrounding are nice, too.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -187,7 +187,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_surroundings";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Well, if you're into nice nature, you can find the western and eastern part pretty interesting. I like to spend my free time in the western part. The Aeredale village is nice place to hang around, they've got a good tavern there. And I cannot forget the Ravenrock brewery, if you're into beer and ale.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -201,7 +201,7 @@ Conversation {
     }
     Page {
         pageName = "mp_yorick_ravenrock";
-        Name = "Yorick, Techsmith";
+        Name = "\c[yellow]Yorick, Techsmith";
         Dialog = "\c[white]Oh yes, it is sure great! Ravenrock is to the north, about fifty clicks from Millport. Just take the northern road, it will lead you there.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

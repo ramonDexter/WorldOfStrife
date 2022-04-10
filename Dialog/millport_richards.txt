@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "MP_richards_opener";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]Hello, welcome to my office. If you're injured, please use the autodoc over there. And I also provide some special services, if you belong to the wealthy clients...";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "MP_richards_shop";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]Oh, yes, certainly. I sell the hyposprays, kombopacks and instaheals. And also I sell the stamina stims.\nHypospray costs 25, Kombopack costs 50 and Instaheal costs 100 gold. Stamina stim costs 25 gold.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -91,7 +91,7 @@ Conversation {
     }
     Page {
         pageName = "MP_richards_special";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]Well, I can provide you cybernetic implants that enhance your accuracy and health. But the price is high. 1500 gold for health implant and 2000 gold for the accuracy implant.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -115,7 +115,7 @@ Conversation {
     }
     Page {
         pageName = "MP_richards_implantAccuracy";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]Great. This will help your aim and booster your skill. The procedure will just take a moment. The price is 2000 gold for accuracy implant.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -138,7 +138,7 @@ Conversation {
     }
     Page {
         pageName = "MP_richards_implantStamina";
-        Name = "Richards";
+        Name = "\c[yellow]Richards";
         Dialog = "\c[white]Good, good. The Stamina implant will improve your overall health. The procedure will just take a moment. The price is 1500 gold for stamina implant.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {

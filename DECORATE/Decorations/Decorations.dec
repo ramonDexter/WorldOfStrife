@@ -1643,7 +1643,7 @@ Actor MM_stuff_08 21082
 	+nogravity
 	tag "kitchen hanger"
 	radius 16
-	height 37
+	height 30
 	
 	States
 	{
@@ -3042,7 +3042,7 @@ actor modelBeefSlab 21163
 	//$Title "BeefSlab (model)"
 	
 	radius 16
-	height 32
+	height 64
 	+Solid
 	+Nogravity
 	tag "beefslab"
@@ -6262,7 +6262,7 @@ actor wosD_dex_hangingChicken 21346 {
 	+DONTTHRUST
 	+SPAWNCEILING
 	Tag "hanging chicken"
-	radius 4
+	radius 8
 	height 32
 	States {
 		Spawn:
@@ -6279,8 +6279,8 @@ actor wosD_dex_hangingPig 21347 {
 	+DONTTHRUST
 	+SPAWNCEILING
 	Tag "hanging pig"
-	radius 4
-	height 32
+	radius 8
+	height 48
 	States {
 		Spawn:
 			DUMM A -1
@@ -8492,9 +8492,10 @@ actor wosD_maleWorner 21479 {
 actor wosD_bucketHandle 21480 {
 	//$Category "Decorations/WoS"
 	//$Title "dx bucket handle"
-	+NOBLOCKMAP
+	-NOBLOCKMAP
 	Tag "wooden bucket"
-	radius 12
+	radius 8
+	height 12
 	States {
 		Spawn:
 			DUMM A -1
@@ -8830,6 +8831,60 @@ actor wosD_powerDeviceStand 21500 {
 		Spawn:
 			DUMM AB 4
 			Loop
+	}
+}
+
+actor wosD_npc_nwMale09 21501 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 09 traveller 2"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "travelling gypsy"
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM09 A -1
+			Stop
+	}
+}
+
+actor wosD_npc_nwMale10 21502 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 09 traveller 3"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "travelling gypsy"
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM10 A -1
+			Stop
+	}
+}
+
+actor wosD_npc_nwMale11 21503 {
+	//$Category "Other NPCs/males"
+	//$Title "nw male 09 traveller 4"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "travelling gypsy"
+	radius 16
+	height 62
+	scale 0.9
+	States {
+		Spawn:
+			NM11 A -1
+			Stop
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1275,7 +1275,7 @@ model MM_stuff_08 {
 	surfaceskin 0 0 "Pan1Tex1.png"
 	surfaceskin 0 1 "tx_mmkitchStuff.png"
 	scale 1.0 1.0 1.0
-	offset 0.0 0.0 37.0
+	offset 0.0 0.0 30.0
 	frameindex MS08 A 0 0
 }
 model MM_stuff_09 {
@@ -1458,7 +1458,7 @@ model dx_koste {
 	model 0 "koste.md3"
 	skin 0 "tx_domaciPotreby.png"
 	scale 5.0 5.0 5.0
-	offset 0.0 0.0 0.0
+	offset 1.5 0.0 0.0
 	frameindex DKST A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -2692,7 +2692,7 @@ model wosD_dex_hangingPig {
 	model 0 "hangingPig.md3"
 	skin 0 "HKHangingPigTex1.png"
 	scale 0.65 0.65 0.65
-	offset 0.0 0.0 32.0
+	offset 0.0 0.0 48.0
 	frameindex DUMM A 0 0
 }
 model wosD_dex_lamp1 {

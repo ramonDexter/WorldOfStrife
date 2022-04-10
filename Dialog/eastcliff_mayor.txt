@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Holden, village mayor"; 
+        Name = "\c[yellow]Holden, village mayor"; 
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "EC_mayor_opener";
-        Name = "Holden, village mayor";
+        Name = "\c[yellow]Holden, village mayor";
         Dialog = "\c[white]Hello, Binder. Welcome to our humble village. I'm Holden, local mayor. How may I be of service?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "EC_mayor_else";
-        Name = "Holden, village mayor";
+        Name = "\c[yellow]Holden, village mayor";
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "EC_mayor_eastcliff";
-        Name = "Holden, village mayor";
+        Name = "\c[yellow]Holden, village mayor";
         Dialog = "\c[white]Our village is a peaceful and faithful place. We have a great Temple here, and a Shipping Guild office. And I can't forget the White Cock Inn. Great kitchen and good beer.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "EC_mayor_locals";
-        Name = "Holden, village mayor";
+        Name = "\c[yellow]Holden, village mayor";
         Dialog = "\c[white]The locals are fishers and farmers. The local water are full of fish, so we have full plate and even lot to sale. And the plateau up on the cliffs has rich soil, so the crops are good too.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -71,7 +71,7 @@ Conversation {
     }
     Page {
         pageName = "EC_mayor_help";
-        Name = "Holden, village mayor";
+        Name = "\c[yellow]Holden, village mayor";
         Dialog = "\c[white]Yes, I would like some help here.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

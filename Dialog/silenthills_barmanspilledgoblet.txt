@@ -25,7 +25,7 @@ Conversation
 		Dialog = "\c[white]I can give you bottle of beer, vine or water. What would you like?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_barkeep1_opener";
 		}
 		Choice {

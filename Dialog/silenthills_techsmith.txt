@@ -60,7 +60,7 @@ Conversation {
 		Name = "Techsmith";
 		Dialog = "\c[white]What would you like? I make and sell the Night-Eye Device, Armor Repair kits and the Swarmers device.";
 		Choice {
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_techSmith1_opener";
 		}
 		Choice {
@@ -117,7 +117,7 @@ Conversation {
         }
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_techSmith1_opener";
 		}
 	}
@@ -150,7 +150,7 @@ Conversation {
             arg0 = 109;
         }
         Choice {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
 			NextPage = "SH_techSmith1_upgrades";
         }
     }

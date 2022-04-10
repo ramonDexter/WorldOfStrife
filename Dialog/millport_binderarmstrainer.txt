@@ -6,7 +6,7 @@ Conversation {
     ID = 4;
     Page {
         pageName = "MP_binderWeaponsTrainer_opener";
-        Name = "Master Fighter";
+        Name = "\c[yellow]Master Fighter";
         Dialog = "\c[white]Welcome, Binder. Are you in need of some training? even skilled warrior has to train himself. I can train you for upgrade tokens, if you have any. Better said, I can provide you a cybernetic implant that will improve your accuracy.";
         Goodbye = "\c[red]Goodbye";
         Choice {

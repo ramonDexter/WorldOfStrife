@@ -5,7 +5,7 @@ Conversation {
     ID = 10;
     Page {
         pageName = "SH_minesForeman_opener";
-        Name = "Foreman";
+        Name = "\c[yellow]Foreman";
         Dialog = "\c[white]Hello, Binder. You wanted something?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -43,7 +43,7 @@ Conversation {
     }
     Page {
         pageName = "SH_minesForeman_whoareyou";
-        Name = "Foreman";
+        Name = "\c[yellow]Foreman";
         Dialog = "\c[white]I'm Worrick, foreman in the mines.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -53,7 +53,7 @@ Conversation {
     }
     Page {
         pageName = "SH_minesForeman_whatareyoudoing";
-        Name = "Foreman";
+        Name = "\c[yellow]Foreman";
         Dialog = "\c[white]I am the Foreman here in the mines. My job is to supervise other workers, as I'm the most skilled here.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -63,7 +63,7 @@ Conversation {
     }
     Page {
         pageName = "SH_minesForeman_hereforore";
-        Name = "Foreman";
+        Name = "\c[yellow]Foreman";
         Dialog = "\c[white]What, again? Yeah, I've got the ore. It's in the mine. No, I don't have time to collect the ore for him. If you want it, you're free to pick it up. Go on.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -77,7 +77,7 @@ Conversation {
     }
     Page {
         pageName = "SH_minesForeman_brokenmachine";
-        Name = "Foreman";
+        Name = "\c[yellow]Foreman";
         Dialog = "\c[white]You are? That's good. It's the one in the lower parts of the mines. And watch for spiders.";
         Goodbye = "\c[red]Goodbye";
         Choice {

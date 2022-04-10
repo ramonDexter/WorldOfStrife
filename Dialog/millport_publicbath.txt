@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -40,7 +40,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -76,7 +76,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -87,7 +87,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -112,7 +112,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -123,7 +123,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -148,7 +148,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -159,7 +159,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -184,7 +184,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -195,7 +195,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -220,7 +220,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -231,7 +231,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {
@@ -256,7 +256,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -267,7 +267,7 @@ Conversation {
     */
     Page {
         pageName = "MP_publicBath_opener";
-        Name = "Public Bath";
+        Name = "\c[yellow]Public Bath";
         Dialog = "\c[white]Welcome to the public bath. Our services are cheap and the facilities are clean and clear. Entrance and one time use costs 3 gold.";
         Goodbye = "\c[red]Leave"; 
         Choice {

@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_barmansquirell_opener";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Hello and welcome to the Smart Squirell Inn. How may I serve you? We have the best kitchen in town, also we sell the local beer and we rent rooms for travellers.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -37,7 +37,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_else";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]How may I serve you? We have the best kitchen in town, also we sell the local beer and we rent rooms for travellers.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -59,7 +59,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_food";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]That could be easily solved! Our kitchen is the best in town. Our burgers are famous. Hmaburger costs 3, cheeseburger costs 4, the bigburger costs 5 and double cheeseburger costs 6 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -117,7 +117,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_drink";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]We have beer and ale. We also got strong Angaran wine. And water for those who don't like alcohol.\nBeer and ale costs 4 gold. Wine costs 5 gold and bottle of water costs 2 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -175,7 +175,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_rentaroom";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Not a problem, mister Binder. We have three nice rooms, and our guests say that the beds are warm and soft. We charge 5 gold per night. Will you stay here? Breakfast's included in the price of the room.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -189,7 +189,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_questions";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Yes, you have questions and I have answers. After all, barman knows everything, isn't it?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -211,7 +211,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_business";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Oh yes, the business is very good. Thanks for asking. The late season was a good one, I could say of the best in the last few years.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -225,7 +225,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_yourpub";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Oh yes, it is. My grand-grand father built this place, almost hundred years ago. From that time, our family inherits this inn and tends to it as family's main treasure.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -235,7 +235,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_guests";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Our guests are travellers passing through our village. Mainly traders and caravaners from the Shipping Guild. Also, tourists like to use our services, when they visit the brewery.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -245,7 +245,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_barmansquirell_aboutravenrock";
-        Name = "Woolson, barman";
+        Name = "\c[yellow]Woolson, barman";
         Dialog = "\c[white]Ravenrock's nice little village. Peaceful place, good for living.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

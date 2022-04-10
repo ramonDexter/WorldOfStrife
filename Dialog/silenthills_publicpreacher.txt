@@ -6,7 +6,7 @@ Conversation {
     ID = 24;
     Page {
         pageName = "SH_publicPreacher_opener";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]Hello child, what brings you to my humble temple? Are you seeking spriritual services, or do you need some information?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -20,7 +20,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_services";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]You can confess your sins to me. Or, if some of your relatives is nearing his end, I can offer the funeral services.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -34,7 +34,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_prayforme";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]Certainly, yes.\nFather, who came from the void,\nplease, watch this Binder's steps\nas he is your most faithful servant.\nAmen.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -44,7 +44,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_information";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]Yes, of course. What information do you need?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -66,7 +66,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_heretics";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]As a honest member of the Order I would report any heretic I encounter. Hopefully I didn't encounter any heretic in the last time. You are doing fine job rooting out heresy here in the city.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -76,7 +76,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_locals";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]The locals are peaceful people. Workers, mostly, with some exceptions, like traders or miners. They are hard working through day and hard rinking during night. Good people.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -86,7 +86,7 @@ Conversation {
     }
     Page {
         pageName = "SH_publicPreacher_aboutcity";
-        Name = "Preacher";
+        Name = "\c[yellow]Preacher";
         Dialog = "\c[white]Silent Hills is a peaceful town on the edge of the Wilderness. The Order is keeping peace here and our work is to keep spiritual peace also.";
         Goodbye = "\c[red]Goodbye";
         Choice {

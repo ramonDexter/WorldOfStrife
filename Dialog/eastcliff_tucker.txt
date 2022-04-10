@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "EC_tucker_opener";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]Hello, Binder. What a blessed beautiful day! How may I help you?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "EC_tucker_doinghere";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]I came here to buy some supplies for my farm, and to exchange my products. The prices are good this year, and I'm making a good trade. Right now, I've stopped here for a small break, before I'll head back to my farm.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -47,7 +47,7 @@ Conversation {
     }
     Page {
         pageName = "EC_tucker_farm";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]Not far from here. About twenty kilometres to the north of Eastcliff, along the road to Kolyma.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -57,7 +57,7 @@ Conversation {
     }
     Page {
         pageName = "EC_tucker_eastcliff";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]Well, I don't know much about the village besides where to sell my produce. I'm a simple farmer, not a scholar. Sorry.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -67,7 +67,7 @@ Conversation {
     }
     Page {
         pageName = "EC_tucker_surroundings";
-        Name = "Tucker, farmer";
+        Name = "\c[yellow]Tucker, farmer";
         Dialog = "\c[white]Well, the northern road limbs up to the cliffs and then heads mostly straight to the hills where lies the city of Kolyma. It's quite peacefule land, as the Imperial Army does good job of controlling the local bands of bandits.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

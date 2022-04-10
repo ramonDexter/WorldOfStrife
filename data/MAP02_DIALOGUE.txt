@@ -848,7 +848,7 @@ Conversation
 		Dialog = "I can give you bottle of beer, vine or water. What would you like?";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = 1;
 		}
 		Choice
@@ -900,7 +900,7 @@ Conversation
 		Dialog = "What do you want to know? I know little bit of everything. And also, because I'm a barkeeper, I know everybody here in town.";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = 1;
 		}
 	}
@@ -1014,7 +1014,7 @@ Conversation
 		Dialog = "What would you like?";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = 1;
 		}
 		Choice
@@ -1083,7 +1083,7 @@ Conversation
 		Dialog = "I can upgrade you gizmos. Just bring me the blueprints.";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = 1;
 		}
 	}
@@ -1346,7 +1346,7 @@ Conversation
     }
     Page//4
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Hello Binder, I see that you are back. Have you found the poachers?";
 		Panel = "M_PEAS1";
         Choice
@@ -1357,7 +1357,7 @@ Conversation
     }
     Page//5
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Yes, I know. As my informants told me, they fled just before you entered the waste treatment plant. Al least you got rid of the spiders gang. Good job. Here's something for the hard work and the key to the mines.\nYou should head to the mines now. The poachers are hiding somwhere there. Find them and deal with them and bring back the power coupling, so we can fix the powerplant.";
 		Panel = "M_PEAS1";
         Choice
@@ -1378,7 +1378,7 @@ Conversation
             item = "powerPlant_powerCoupling";
             amount = 1;
         }
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Have you found the power coupling?";
 		Panel = "M_PEAS1";
         Choice
@@ -1391,7 +1391,7 @@ Conversation
     }
     Page//7
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Have you found the power coupling?";
 		Panel = "M_PEAS1";
         Choice
@@ -1403,7 +1403,7 @@ Conversation
     }
     Page//8
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Oh, don't give it to me. I'm not the one who will fix the powerplant. Just head there, the technicians will tell you what to do. Also, here's some gold to cover your expenses. And the powerplant key.";
 		Panel = "M_PEAS1";
         Choice
@@ -1426,7 +1426,7 @@ Conversation
             item = "twn_quest03_powerPlantFixed";
             amount = 1;
         }
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Hello, I see you are back. But the gate's controls are not working yet. Have you fixed the powerplant?";
 		Panel = "M_PEAS1";
         Choice
@@ -1439,7 +1439,7 @@ Conversation
     }
     Page//10
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Hello, I see you are back and the gate's controls are online now. Good job. Here some extra cash for the good work. Also, I'm opening the town's gates, if you need to leave. Or, if you want, we can speak.";
 		Panel = "M_PEAS1";
         Choice
@@ -1457,7 +1457,7 @@ Conversation
     }
     Page//11
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Hello, what do you need?";
 		Panel = "M_PEAS1";
         Choice
@@ -1468,12 +1468,12 @@ Conversation
     }
     Page//12
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Hello, what do you need?";
 		Panel = "M_PEAS1";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 11;
         }
         Choice
@@ -1494,36 +1494,36 @@ Conversation
     }
     Page//13
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "Our city's called Silent Hills, as you already know. It was founded after the comet hit the earth. The Order came here and helped the locals to rebuilt their homes, so the locals started following this new faith. The Order is just, but righteous overseer. We have minimal criminality and none of us starves.\nOur city has many shops, hospital and even a city bath, built on old roman plan.";
 		Panel = "M_PEAS1";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 12;
         }
 
     }
     Page//14
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "I don't know about any. The Inquisition is doing good job, so we can sleep peacefully.";
 		Panel = "M_PEAS1";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 12;
         }
 
     }
     Page//15
     {
-        Name = "Governor";
+        Name = "\c[yellow]Governor";
 		Dialog = "My name's Mervin Hart. I've been proposed to this function two years ago, when the last governor retired. Before that, I was in charge of town powerplant. I'm an engineer, not a politician, and this work is pretty rough for me. You know,working withmachines is easier than working with people. The amchines do exactly what you tell them to do. But people?";
 		Panel = "M_PEAS1";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 12;
         }
 
@@ -1545,7 +1545,7 @@ Conversation
 			amount = 1;
 		}
 		//-------------------
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]The superior has a task for you.\n\nYou should visit him at the command center.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
@@ -1560,7 +1560,7 @@ Conversation
     }
     Page//2
     {
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]- Personal notes\n- Information";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
@@ -1585,13 +1585,13 @@ Conversation
     }
     Page//3
     {
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[white]Personal notes";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 2;
         }
         Choice
@@ -1612,49 +1612,49 @@ Conversation
     }
     Page//4
     {
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[yellow]NOTE #1\n\c[green]==-----------==\n\c[white]The trainig's hard, but I'm making progress. Maybe some day I'll be promoted full ranking Binder.\nI hope so. I don't want do dissappoint my parents, and all the ancestors.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 3;
         }
     }
     Page//5
     {
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[yellow]NOTE #2\n\c[green]==-----------==\n\c[white]That bastard Jax stole my shoes. I'll beat shit out of him.\n\nOr maybe not. Maybe I should take his badge and hide it somewhere. That would bring him into trouble. Yeah, that's what he deserves.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 3;
         }
     }
     Page//6
     {
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[yellow]NOTE #3\n\c[green]==-----------==\n\c[white]All my hard work has reached it's succesfull end. I'll be promoted full ranking Binder, but only after I'll finish my last task as an Cadet.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 3;
         }
     }
 	Page//7
 	{
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "\c[yellow][ GAME INFO ]\n\c[green]==-----------==\n\c[white]- rpg system \n- weapons\n- items\n- backstory";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
         Choice
         {
-            Text = "\c[yellow][ << BACK ]";
+            Text = "\c[yellow]<< BACK";
             Nextpage = 2;
         }
 		Choice
@@ -1681,52 +1681,52 @@ Conversation
 	}
 	Page//8
 	{
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "INFO_RPG_SYSTEM";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = 7;
 		}
 
 	}
 	Page//9
 	{
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "$M01_PC_WEAPONS";
 		Panel = "M_WPNS";
         Goodbye = "\c[red][ EXIT ]";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = 7;
 		}
 
 	}
 	Page//10
 	{
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "INFO_ITEMS";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = 7;
 		}
 
 	}
 	Page//11
 	{
-        Name = "[ Personal Computer ]";
+        Name = "\c[yellow][ Personal Computer ]";
         Dialog = "INFO_BACKSTORY";
 		Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice
 		{
-			Text = "\c[yellow][ << BACK ]";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = 7;
 		}
 

@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Randolf, Medic";
+        Name = "\c[yellow]Randolf, Medic";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_randolf_opener";
-        Name = "Randolf, Medic";
+        Name = "\c[yellow]Randolf, Medic";
         Dialog = "\c[white]Hello, welcome to my office. If you are in need of immediate medical attention, please use the autodoc over there. And is you need to restock on supplies, I sell all types of medical stuff with fair prices.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -29,7 +29,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_randolf_else";
-        Name = "Randolf, Medic";
+        Name = "\c[yellow]Randolf, Medic";
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -43,7 +43,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_randolf_shop";
-        Name = "Randolf, Medic";
+        Name = "\c[yellow]Randolf, Medic";
         Dialog = "\c[white]So, the Hyspray costs 27, the Kombopack costs 55 and the Instaheal is for 125 gold. Then, the Medpatches are for 12, the Medical Kits are for 27 and the Surgery Kit costs 125 gold. Then I've got some stamina stims, these cost 28 gold. What will it be?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -137,7 +137,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_randolf_questions";
-        Name = "Randolf, Medic";
+        Name = "\c[yellow]Randolf, Medic";
         Dialog = "\c[white]Sorry, I've got some work to finish here. Maybe later.";
         Goodbye = "\c[red]Goodbye.";
         Choice {

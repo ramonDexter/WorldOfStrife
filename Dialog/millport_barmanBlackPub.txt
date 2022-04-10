@@ -82,7 +82,7 @@ Conversation  {
 			NextPage = "MP_blackPubBarkeep_aboutcity";
 		}
 		Choice {
-			Text = "\c[yellow][<< BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_blackPubBarkeep_opener";
 		}
 	}
@@ -93,7 +93,7 @@ Conversation  {
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "\c[yellow][<< BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_blackPubBarkeep_questions";
 		}
 	}
@@ -104,7 +104,7 @@ Conversation  {
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "\c[yellow][<< BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_blackPubBarkeep_questions";
 		}
 	}
@@ -115,7 +115,7 @@ Conversation  {
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "\c[yellow][<< BACK ]";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_blackPubBarkeep_questions";
 		}
 	}

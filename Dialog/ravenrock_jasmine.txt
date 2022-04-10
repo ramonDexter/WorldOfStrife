@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,7 +15,7 @@ Conversation {
     */
     Page {
         pageName = "ravenrock_jasmine_opener";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]Oh, hello Binder. What brings you here? I'm Jasmine.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -33,7 +33,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_jasmine_else";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]Ok?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -51,7 +51,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_jasmine_doinghere";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]Oh, I'm just doing some job my father assigned me. I'm helping him as a nurse, you know.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -61,7 +61,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_jasmine_aboutravenrock";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]Well, if you ask my mother, you could think that our village is boring. No, that's not true. Ravenrock is wonderful place, it just needs little bit of imagination. Did you know that ravenrock looks beatiful, when you're looking at night from the brewery's roof?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -71,7 +71,7 @@ Conversation {
     }
     Page {
         pageName = "ravenrock_jasmine_aboutsurroundings";
-        Name = "Jasmine";
+        Name = "\c[yellow]Jasmine";
         Dialog = "\c[white]Sure! The southern road leads to Millport. About halfway there is a river bridge, pretty nice place. The western road leads to Narfolk, but that's pretty far away, I've never been there. But there are many exciting things around the western road, like the old ruins, or the old cemetery! And the eastern roads leads to the Plateau, where te carnivorous plants live. Dangerous place, but if you're smart, you can easily outrun them. Ha!";
         Goodbye = "\c[red]Goodbye.";
         Choice {

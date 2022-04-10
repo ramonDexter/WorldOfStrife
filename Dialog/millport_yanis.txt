@@ -6,7 +6,7 @@ Conversation {
     ID = 27;
     Page {
         pageName = "MP_commonerCookForHire_opener";
-        Name = "Yanis";
+        Name = "\c[yellow]Yanis";
         Dialog = "\c[white]Hello. Better said, welcome. What an honorable visitor, a Binder. What my honorable visitor wishes?";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -44,7 +44,7 @@ Conversation {
     }
     Page {
         pageName = "MP_commonerCookForHire_whoareyou";
-        Name = "Yanis";
+        Name = "\c[yellow]Yanis";
         Dialog = "\c[white]I am Yanis. I am a cook. I was working for the TekGuild, but the bureacrats fired me! What assholes! So, right now I'm looking for a job.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -54,7 +54,7 @@ Conversation {
     }
     Page {
         pageName = "MP_commonerCookForHire_whoareyou_hiredinCC";
-        Name = "Yanis";
+        Name = "\c[yellow]Yanis";
         Dialog = "\c[white]I am Yanis. I am a cook. And thanks to you I got this wonderful job. Mister Walter is such an gentleman, and he pays more than I expected. I must say I'm more than happy. Thank you.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -64,7 +64,7 @@ Conversation {
     }
     Page {
         pageName = "MP_commonerCookForHire_aboutcity";
-        Name = "Yanis";
+        Name = "\c[yellow]Yanis";
         Dialog = "\c[white]Well, Millport's a pretty nice town, I think. I like the local shops, and walks around the coastline. What a pity the harbor's locked down.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -74,7 +74,7 @@ Conversation {
     }
     Page {
         pageName = "MP_commonerCookForHire_Q_CC_lookingforcook";
-        Name = "Yanis";
+        Name = "\c[yellow]Yanis";
         Dialog = "\c[white]Oh, really? I'm actually looking for a job, so yes, I accept your offer. I'll head to the Council Club right now.";
         Goodbye = "\c[red]Goodbye";
         Choice {

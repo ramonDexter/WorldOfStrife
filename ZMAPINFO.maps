@@ -92,7 +92,9 @@ map MAP07 "Ancient Temple" {
 	NoInfighting
 }
 map MAP08 "Millport" {
-	sky1 = "SKYSNDS"
+	sky1 = "SKYRGGR"
+	//sky1 = "SKYREDD"
+	//sky1 = "SKYORNG"
 	//sky2 = SKYSNDS
 	music = "DM2TRK09"//"D_TAVERN"
 	outsidefogdensity = 255

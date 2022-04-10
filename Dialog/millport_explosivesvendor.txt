@@ -5,7 +5,7 @@ Conversation
 	ID = 15;
 	Page//1
 	{
-		Name = "Gadwin, explosives vendor";
+		Name = "\c[yellow]Gadwin, explosives vendor";
 		Dialog = "\c[white]Hello my good fellow. Would you like to blow something up? I have everything you would need when you want to blow something up - Rockets, Grenades and Hand Grenades.";
 		Panel = "M_GDWN";
         Goodbye = "\c[red]Goodbye";

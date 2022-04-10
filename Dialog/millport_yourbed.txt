@@ -5,7 +5,7 @@ Conversation
 	Id = 703;
 	Page//1
 	{
-		Name = "[ YOUR BED ]";
+		Name = "\c[yellow][ YOUR BED ]";
 		Dialog = "\c[white]Your bed. Looks comfortable.";
 		Goodbye = "\c[red][ LEAVE ]";
 		Choice

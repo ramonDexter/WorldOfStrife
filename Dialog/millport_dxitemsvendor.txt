@@ -6,7 +6,7 @@ Conversation {
 	ID = 14;
 	Page {
         pageName = "MP_gregoryTechsmith_opener";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]Hello Binder, welcome to my shop.\nI sell special items. I have the Deployable Shields, Shadow Armor, Flame Turret, Armor Repair Kits and Swarmer grenades.";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
@@ -77,7 +77,7 @@ Conversation {
 	}
     Page {
         pageName = "MP_gregoryTechsmith_questions";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]And what did you wanted to know?";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
@@ -96,7 +96,7 @@ Conversation {
     }
     Page {
         pageName = "MP_gregoryTechsmith_aboutyourself";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]Name's Gregory. I'm a techSmith, as you already know. I make the advanced stuff, like the deployable shield, flame turret, flight harness or my specialty, the Swarmer Grenade. All my stuff is high grade, as I use the best materials and tools.";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
@@ -111,7 +111,7 @@ Conversation {
     }
     Page {
         pageName = "MP_gregoryTechsmith_aboutswarmer";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]The Swarmer Grenade is a small drone used as a thrown weapon. When thrown, it releases a swarm of smaller drones equipped with razor sharp blades. This swarm surrounds its target and slices it into bloody pieces. Pretty rough weapon.";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
@@ -122,7 +122,7 @@ Conversation {
     }
     Page {
         pageName = "MP_gregoryTechsmith_aboutcity";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]Well, I came here only five years ago, so I don't know the city as much as other locals. Millport's a harbor city. Looks like it's controlled by the TekGuild, but don't get fooled. All of the city trades is in Baron's hands.";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";
@@ -137,7 +137,7 @@ Conversation {
     }
     Page {
         pageName = "MP_gregoryTechsmith_whoisbaron";
-		Name = "Gregory, techSmith";
+		Name = "\c[yellow]Gregory, techSmith";
 		Dialog = "\c[white]Baron is the local noble, who controls most of the city trades. He acts as true and faithful servant of the Order, but truth is that he is the main local crimelord. You don't want to get in his way, really.";
 		Panel = "M_GREG";
         Goodbye = "\c[red]Goodbye";

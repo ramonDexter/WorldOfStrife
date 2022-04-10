@@ -6,7 +6,7 @@ Conversation {
 	ID = 9;
 	Page {
         pageName = "SH_techSmith1_opener";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]Hello, I sell all kinds of tech gizmos. Also, I can upgrade your stuff.";
 		Goodbye = "\c[red]Goodbye";
         Choice {
@@ -44,7 +44,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_techSmith1_detonator";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]Yes, ok, easy. I'll cooperate. This detonator was used to detonate a specialty nanotechnological bomb, that has been order by a wealthy customer by a name of Montick. Paid almost 3000 coins for that. He lives on the west bank, next to the governor's mansion. Go speak with him.";
 		Goodbye = "\c[red]Goodbye";
         Choice {
@@ -57,7 +57,7 @@ Conversation {
     }
 	Page {
         pageName = "SH_techSmith1_shop";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]What would you like? I make and sell the Night-Eye Device, Armor Repair kits and the Swarmers device.";
 		Choice {
 			Text = "\c[yellow]<< BACK";
@@ -104,7 +104,7 @@ Conversation {
 	}
 	Page {
         pageName = "SH_techSmith1_upgrades";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]I can upgrade your gizmos. What you got?";
 		Goodbye = "\c[red]Goodbye";
         Choice {
@@ -123,7 +123,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_techSmith1_upgrades_binderArmor";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]Yes, the Binder Armor. Valuable thing, good protection. I can upgrade this piece of armor for, lets say, 500 gold. Do you agree?";
 		Goodbye = "\c[red]Goodbye";
         Choice {
@@ -156,7 +156,7 @@ Conversation {
     }
     Page {
         pageName = "SH_techSmith1_newairfilter";
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]Oh, you're looking for the old air filters? No problem, I got a stockpile here, that I wanted to dump anyways as a useless crap. Looks like this crap will help someone at last. Here, take one and no, I don't want anything for it. By taking it you're actually doing me a good job.";
 		Goodbye = "\c[red]Goodbye";
         Choice {

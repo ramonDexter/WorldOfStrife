@@ -18,7 +18,7 @@ Conversation {
     */
 	Page {
         pageName = "SH_energyWeaponsVendor_opener";
-		Name = "Energy Weapons Vendor";
+		Name = "\c[yellow]Energy Weapons Vendor";
 		Dialog = "\c[white]Welcome, how may I serve you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

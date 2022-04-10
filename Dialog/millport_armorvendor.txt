@@ -6,7 +6,7 @@ Conversation {
 	ID = 17;
 	Page {
         pageName = "MP_loxleyArmorVendor_opener";
-		Name = "Loxley, armor vendor";
+		Name = "\c[yellow]Loxley, armor vendor";
 		Dialog = "\c[white]Hello binder, are you ooking for some protection? I got the leather and metal armor, as well as the superior cybernetic armor. Also, I got Armor Bits to repair your damaged armor.";
 		Panel = "M_LXLY";
         Goodbye = "\c[red]Goodbye";
@@ -77,7 +77,7 @@ Conversation {
 	}
     Page {
         pageName = "MP_loxleyArmorVendor_questions";
-		Name = "Loxley, armor vendor";
+		Name = "\c[yellow]Loxley, armor vendor";
 		Dialog = "\c[white]Yes? What did you wanted to know?";
 		Panel = "M_LXLY";
         Goodbye = "\c[red]Goodbye";
@@ -96,7 +96,7 @@ Conversation {
     }
     Page {
         pageName = "MP_loxleyArmorVendor_whoareyou";
-		Name = "Loxley, armor vendor";
+		Name = "\c[yellow]Loxley, armor vendor";
 		Dialog = "\c[white]I'm Loxley. I'm techSmith, as you see. I make armors. The finest ones. I graduated in the Sanctuary TekGuild College, and came here year later.";
 		Panel = "M_LXLY";
         Goodbye = "\c[red]Goodbye";
@@ -107,7 +107,7 @@ Conversation {
     }
     Page {
         pageName = "MP_loxleyArmorVendor_aboutcity";
-		Name = "Loxley, armor vendor";
+		Name = "\c[yellow]Loxley, armor vendor";
 		Dialog = "\c[white]Well, Millport's my home for my whole life. We've got a harbor here, many shops and taverns, prison and even a TekGuild University! Would you believe that? Also, we've got a prison here. You want to avoid this place, believe me.";
 		Panel = "M_LXLY";
         Goodbye = "\c[red]Goodbye";

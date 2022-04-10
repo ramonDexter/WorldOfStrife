@@ -6,7 +6,7 @@ Conversation  {
 	ID = 18;
 	Page {
         pageName = "MP_blackPubBarkeep_opener";
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Hello, what may I serve you? I got good cold beer, some red wine and...water. So, what would you like to drink? Or do you want something to eat? I'm sorry, but I've got only food rations. The cook has run away. Or do you want to talk? I could get some rest talking, if you want.";
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
@@ -65,7 +65,7 @@ Conversation  {
 	}
 	Page {
         pageName = "MP_blackPubBarkeep_questions";
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Well, what do you want to know?";
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
@@ -88,7 +88,7 @@ Conversation  {
 	}
 	Page {
         pageName = "MP_blackPubBarkeep_aboutguests";
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]The locals are peaceful peple. Hard working, and hard drinking. But no problems, they are just nice. But I heard something about some uprising in Northern Prison. You should check it out.";
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
@@ -99,7 +99,7 @@ Conversation  {
 	}
 	Page {
         pageName = "MP_blackPubBarkeep_aboutpub";
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Some days I don't stop. And some days the pub is empty. But I can make living here, so I can say my pub is successfull.";
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";
@@ -110,7 +110,7 @@ Conversation  {
 	}
 	Page {
         pageName = "MP_blackPubBarkeep_aboutcity";
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Well, there is the harbor with the Commons. Dangerous place, but I like it. You can find good tavern there. Caroline makes good burgers, be sure to visit her if you step there.";
 		Panel = "M_JHNSN";
 		Goodbye = "\c[red]Goodbye.";

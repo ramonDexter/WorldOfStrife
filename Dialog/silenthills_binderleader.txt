@@ -11,7 +11,7 @@ Conversation {
 			item = "leaderskull";
 			amount = 1;
 		}
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Hello, acolyte Zeno, I have a task for you. A group of rebels has established their base in the city's vicinity. I order you to clear the heretic's lair and return peace to the land. If you'll succeed, you will be promoted a full ranking Binder.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -30,7 +30,7 @@ Conversation {
 			item = "leaderskull";
 			amount = 1;
 		}
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Do you have any questions?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -41,7 +41,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_hereticLairLocation";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]The rebel base was found in the old chapel, not far from the city's borders. Exit the city via the main base and head north, it's not far away. Our VTOL will deliver you right to the place.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -54,7 +54,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_hereticsDead";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]You have returned. Are those heretics dead?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -68,7 +68,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_nowpromotion";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Good. Now I can promote you.\nNow, the promotion ceremony will be held.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -83,7 +83,7 @@ Conversation {
 	//normal conversation
 	Page {
         pageName = "binderLeader_badgeopener";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Hello Binder, how may I be of service? If you have some questions, we can talk.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -112,7 +112,7 @@ Conversation {
 	Page {
         //Tell me about the Binder Order.
         pageName = "binderLeader_aboutbinderorder";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]The Binder Order is the sacred force of the Order. We are sworn to protect the Order and wipe out the heresy that could thrat peace in our lands.\nYou are Binder now. That means you are allowed to execute the law. Your authority is always superior, and you answer only to the Binder Supremes.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -124,7 +124,7 @@ Conversation {
 	Page {
         //Tell me about yourself.
         pageName = "binderLeader_aboutyourself";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]I am Binder Supreme. Tiberius Petrovich Tusk is my personal name. I am 59 years old, and I serve the Binder Order all my life. I dont have any family, all my life is devoted to the duty, but I have brother. He lives in Tarnhill. That's city far from here, on the western coast.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -137,7 +137,7 @@ Conversation {
 	Page {
         //I am here for the information. >> start main quest 02
         pageName = "binderLeader_here4info";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]As I said, the scientist have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands. You should head there as soon as possible. Get the artifact and return it back here. We will secure and study it.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -157,7 +157,7 @@ Conversation {
 			item = "quest02_artifact_stolen";
 			amount = 1;
 		}
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]You are back. Do you have the artifact?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -182,7 +182,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_youareback";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]You are back. Do you have the artifact?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -195,7 +195,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_thatsbad";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]That's bad. Very bad. Our superiors will be very dissapointed.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -206,7 +206,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_goodnews";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Really, yes? Where they've taken them?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -219,7 +219,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_resupplyandheadoout";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Yes, hmm. So they've taken it to their base, which is somewhere in the southern lands.\nYou should then head to the southern lands. You no need to hurry. Here are some things to resupply. Finish all the deeds you have and then use the town teleporter and head to the Southern Territorry. The VTOL will take you to the city of Millport. You can find it outside city's eastern gate. Report to local Binder superior, he will take care of you there. Here, give him this disk. It contains all the information about our case. Good luck, Tobias.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -233,7 +233,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_gonow";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]\c[white]Go now. You have serious case to do.";
 	}
 }
@@ -243,7 +243,7 @@ Conversation {
 	ID = 66;
 	Page {
         pageName = "binderLeader_ceremony_1";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]You have finished all the trials. Arius Augurius Zeno, do you pledge yourself to the Binder Order?";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -254,7 +254,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_ceremony_2";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]You are now promoted Binder!\nFrom now on, your duty will be to purge the heresy from our sacred lands.\nHere is your Badge of the Binder. It will give you the right to execute justice on your own.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
@@ -268,7 +268,7 @@ Conversation {
 	}
 	Page {
 		pagename = "binderLeader_ceremony_2_1";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Here is the ShoulderGun and ShoulderGun Charger. This weapon will give you you an off-hand advantage over your opponents. It is an shoulder mounted mauler cannon, capable of shooting sprays of mauler energy. The charger is used to replenish ShoulderGun's ammo reserve from your EnergyPod ammo pool. Use it wisely.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye.";
@@ -281,7 +281,7 @@ Conversation {
 	}
 	Page {
         pageName = "binderLeader_ceremony_3";
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Now, you will head to the Eastern Highlands. There you will retrieve ancient artifact that's been stolen lately by the heretics. Find me in my office, I'll tell you more there.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";

@@ -5,7 +5,7 @@ namespace = "GZDoom";
 Conversation {
 	ID = 20;
 	Page {
-		Name = "Librarian";
+		Name = "\c[yellow]Librarian";
 		Dialog = "\c[white]What? .. Umm, Do you need something? ... Sorry, I'm busy to talk. Maybe later.";
 		Goodbye = "\c[red]Goodbye";
 	}

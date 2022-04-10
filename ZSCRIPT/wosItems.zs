@@ -100,7 +100,56 @@ class upgradeToken : CustomInventory {
 			Stop;
 		Use:
 			TNT1 A 0;
+			Fail;
+	}
+}
+// upgrade implants ///
+class wosi_implant_accuracy : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Accuracy Implant"
+				
+		+INVENTORY.INVBAR
+		Tag "Accuracy Implant";
+		Inventory.Icon "I_UPAC";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;		
+		Inventory.PickupMessage "Accuracy Implant Acquired!";
+		Inventory.PickupSound "misc/p_pkup";
+		Mass 0;
+	}
+	States {
+		Spawn:
+			UPAC A -1;
 			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosi_implant_stamina : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Stamina Implant"
+				
+		+INVENTORY.INVBAR
+		Tag "Stamina Implant";
+		Inventory.Icon "I_UPST";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;		
+		Inventory.PickupMessage "Stamina Implant Acquired!";
+		Inventory.PickupSound "misc/p_pkup";
+		Mass 0;
+	}
+	States {
+		Spawn:
+			UPST A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

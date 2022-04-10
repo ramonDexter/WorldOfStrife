@@ -6,7 +6,7 @@ Conversation {
 	ID = 16;
 	Page {
         pageName = "SH_grenadesVendor_opener";
-		Name = "Grenades vendor";
+		Name = "\c[yellow]Grenades vendor";
 		Dialog = "\c[white]Welcome, how may I serve you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

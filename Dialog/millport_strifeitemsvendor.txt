@@ -7,7 +7,7 @@ Conversation {
 
 	Page {
         pageName = "MP_strifeItemsVendor_opener";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]Hello, welcome to my humble shop.\nI sell support items - Environmental suit, Scanner, Portable Map, Targeter and Shadow Armor. What will be your choice?";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
@@ -78,7 +78,7 @@ Conversation {
 	}
     Page {
         pageName = "MP_strifeItemsVendor_questions";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]And what is it you wanted to know?";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
@@ -97,7 +97,7 @@ Conversation {
     }
     Page {
         pageName = "MP_strifeItemsVendor_aboutyourself";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 	    Dialog = "\c[white]I am Derwin, techSmith. I make and sell the support equipment. If you're looking for a protective suit, targetter or maybe a shadow armor, ask me. I've got the best stuff in the town.";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
@@ -108,7 +108,7 @@ Conversation {
     }
     Page {
         pageName = "MP_strifeItemsVendor_aboutcity";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]Well, Millport's my home for most of my life. I came here right after graduating in Silent Hills TekGuild. Well, what could I say about Millport...it looks nice on the surface, but it's rotten inside. Have you heard about the Baron? You don't want to deal with him, trust me. He controls everything here. Every shop owner must pay special monthly tax to him. That's fot the local relationships.\nIf you're tourist type, you can visit the port or the Commons. But, visiting the port isn't that easy.";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
@@ -127,7 +127,7 @@ Conversation {
     }
     Page {
         pageName = "MP_strifeItemsVendor_visitingport";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 	    Dialog = "\c[white]Well, the port's under control of the Port Authority. The port area is overrun by long fence with locked gates. You need an authorization from the Port Authority, which is not cheap. They are keeping the scum away by using these measures.";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";
@@ -138,7 +138,7 @@ Conversation {
     }
     Page {
         pageName = "MP_strifeItemsVendor_commons";
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 	    Dialog = "\c[white]'The Commons' is the name of local residential comples. It's located on the eastern edge of the city, better said it's the eastern edge of the city. It's the housing for most of the local people. It was originally built for the dock workers, but it has grown since that times.";
 		Panel = "M_DRWN";
         Goodbye = "\c[red]Goodbye";

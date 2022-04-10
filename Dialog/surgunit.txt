@@ -11,31 +11,46 @@ Conversation {
             amount = 1;
         }
         pageName = "surgUnit_opener1";
-		Name = "[ Surgical unit ]";
+		Name = "\c[yellow][ Surgical unit ]";
 		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 50 coins.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
-			Text = "Use surgical unit";
+			Text = "Use surgical unit to install accuracy implant";
 			NextPage = "surgUnit_opener1";
 			CloseDialog = true;
-			DisplayCost = true;
-			YesMessage = "[ Healing completed! ]";
-			NoMessage = "Not enough gold!";
-			Cost {
-				item = "coin";
-				amount = 50;
-			}
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
 			Special = 80;
-			arg0 = 701;
+			arg0 = 1802;
+			Cost {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
 		}
-	}
-    Page {
-        pageName = "surgUnit_opener2";
-		Name = "[ Surgical unit ]";
-		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 25 coins.";
-		Panel = "M_BLNK";
-		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Use surgical unit to install stamina implant";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
+			Special = 80;
+			arg0 = 1801;
+			Cost {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+		}
 		Choice {
 			Text = "Use surgical unit";
 			NextPage = "surgUnit_opener1";
@@ -43,12 +58,69 @@ Conversation {
 			DisplayCost = true;
 			YesMessage = "[ Healing completed! ]";
 			NoMessage = "Not enough gold!";
-			Cost {
-				item = "coin";
-				amount = 25;
-			}
 			Special = 80;
 			arg0 = 701;
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+	}
+    Page {
+        pageName = "surgUnit_opener2";
+		Name = "\c[yellow][ Surgical unit ]";
+		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 25 coins.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Use surgical unit to install accuracy implant";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
+			Special = 80;
+			arg0 = 1802;
+			Cost {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Use surgical unit to install stamina implant";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
+			Special = 80;
+			arg0 = 1801;
+			Cost {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Use surgical unit";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "[ Healing completed! ]";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 701;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
 		}
     }
 }
@@ -56,10 +128,46 @@ Conversation {
     ID = 702;
 	Page {
         pageName = "binderSurgUnit_opener";
-		Name = "[ Surgical unit ]";
+		Name = "\c[yellow][ Surgical unit ]";
 		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 10 coins.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Use surgical unit to install accuracy implant";
+			NextPage = "binderSurgUnit_opener";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
+			Special = 80;
+			arg0 = 1802;
+			Cost {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_accuracy";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Use surgical unit to install stamina implant";
+			NextPage = "binderSurgUnit_opener";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "\c[green][ Sequence started! ]";
+			NoMessage = "\c[red][ You don't have the implant! ]";
+			Special = 80;
+			arg0 = 1801;
+			Cost {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+			Require {
+				item = "wosi_implant_stamina";
+				amount = 1;
+			}
+		}
 		Choice {
 			Text = "Use surgical unit";
 			NextPage = "binderSurgUnit_opener";
@@ -67,12 +175,12 @@ Conversation {
 			DisplayCost = true;
 			YesMessage = "[ Healing completed! ]";
 			NoMessage = "Not enough gold!";
-			Cost {
-				item = "coin";
-				amount = 10;
-			}
 			Special = 80;
 			arg0 = 701;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
 		}
 	}
 }

@@ -11,7 +11,7 @@ Conversation {
 			item = "twn_quest03_finished";
 			amount = 1;
 		}
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "\c[white]If you need to pass the gate, talk to the governor.";
 		Goodbye = "\c[red]Goodbye";
 		Panel = "M_CTGRD";
@@ -29,7 +29,7 @@ Conversation {
 			item = "twn_quest03_finished";
 			amount = 1;
 		}
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "\c[white]He's living in Town Hall, next to the bridge over the river. Here, I marked it on your map.";
 		Goodbye = "\c[red]Goodbye";
 		Panel = "M_CTGRD";
@@ -37,7 +37,7 @@ Conversation {
 	}
 	Page {
         pageName = "SH_westernGateGuard_notimetochat";
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "\c[white]I don't have time to chit-chat.";
 		Goodbye = "\c[red]Goodbye";
 		Panel = "M_CTGRD";

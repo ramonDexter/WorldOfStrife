@@ -80,7 +80,7 @@ maps
 					
 					prefab1
 					{
-						name = "[Previous]";
+						Name = "\c[yellow][Previous]";
 						numberofsectors = 18;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;

@@ -7,7 +7,7 @@ Conversation
 	ID = 16;
 	Page {
         pageName = "MP_henryMedic_opener";
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]Hello binder, are you in need of medical services? If so, please use on of the autoDocs behind you. If you need some medical supplies, you can buy what I got in stock. And for the last, I can install you cybernetic implants that will raise your health.";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";
@@ -94,7 +94,7 @@ Conversation
 	}
     Page {
         pageName = "MP_henryMedic_implants";
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]Yes, it does so. These implants will permanently raise you health. But, I need upgrade tokens to install the implant. Say, have you got any upgrade tokens?";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";
@@ -121,7 +121,7 @@ Conversation
     }
     Page {
         pageName = "MP_henryMedic_questions";
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]And what did you wanted to know?";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";
@@ -140,7 +140,7 @@ Conversation
     }
     Page {
         pageName = "MP_henryMedic_aboutyourself";
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]I am doctor Henry. I'm in charge of the local clinic, as you see. Usually, I'm pretty busy, but I've got lot of free time lately. Hard to say why is that.";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";
@@ -151,7 +151,7 @@ Conversation
     }
     Page {
         pageName = "MP_henryMedic_aboutcity";
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]Well, I don't know much, as most of the time in pinned here on the clinic. But yeah, I was born here, so I know a lot about the city. We've got a port here. It gave the city it's name. Millport's a trading city. But most of the trading is controlled by the Port Authority, which means strong taxation and control over goods. You cannot trade anything here, as some substances are declared illegal. It makes my work hard, sometimes. But besides that, the city is pretty nice. Especially the Commons and the countryside. Also, I cannot forget the City prison. It's next to the clinic, on the northern edge of the city.";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";

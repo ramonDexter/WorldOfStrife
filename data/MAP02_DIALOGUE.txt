@@ -12,7 +12,7 @@ Conversation
 	ID = 1;
 	Page
 	{
-		Name = "$M01_FORGEMASTER"; //Forgemaster
+		Name = "\c[yellow]$M01_FORGEMASTER"; //Forgemaster
 		Dialog = "$M01_FORGEMASTER_P01"; //Hello, what may I get you?
 		Choice
 		{
@@ -73,7 +73,7 @@ Conversation
 	}
 	Page//2
 	{
-		Name = "$M01_FORGEMASTER";
+		Name = "\c[yellow]$M01_FORGEMASTER";
 		Dialog = "$M01_FORGEMASTER_P02"; //\c[white]Of course. I can upgrade your staff, if you want.\nJust give me your staff, I'll install the upgrade right here and now.\nAlso, I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade.
 		Choice
 		{
@@ -118,13 +118,13 @@ Conversation
 			item = "binderBadge";
 			amount = 1;
 		}
-		Name = "$M01_INQSURGEON";
+		Name = "\c[yellow]$M01_INQSURGEON";
 		Dialog = "$M01_INQSURGEON_P01"; //Hello, how can I help you?
 		Panel = "M_DCTR";
 	}
 	Page//2
 	{
-		Name = "$M01_INQSURGEON"; //Surgeon
+		Name = "\c[yellow]$M01_INQSURGEON"; //Surgeon
 		Dialog = "$M01_INQSURGEON_P02"; //Hello Inquisitor, how may I be of service?
 		Panel = "M_DCTR";
 		Choice
@@ -140,7 +140,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "$M01_INQSURGEON";
+		Name = "\c[yellow]$M01_INQSURGEON";
 		Dialog = "$M01_INQSURGEON_P03"; //I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff.
 		Panel = "M_DCTR";
 		Choice
@@ -217,7 +217,7 @@ Conversation
 	}
 	Page//4
 	{
-		Name = "$M01_INQSURGEON";
+		Name = "\c[yellow]$M01_INQSURGEON";
 		Dialog = "$M01_INQSURGEON_P04"; //Well, I can take a little break for a small talk. What are you interested in?
 		Panel = "M_DCTR";
 		Choice
@@ -239,7 +239,7 @@ Conversation
 	}
 	Page//5
 	{
-		Name = "$M01_INQSURGEON";
+		Name = "\c[yellow]$M01_INQSURGEON";
 		Dialog = "$M01_INQSURGEON_P05"; //My name is Gregor. I'm the Inquisition surgeon, as you know. I've come here when the local base was grounded, fifteen years ago. it were hars times, but I was young. How, when I'm older, I want to settle down, marry and have a family. Maybe.
 		Panel = "M_DCTR";
 		Choice
@@ -251,7 +251,7 @@ Conversation
 	}
 	Page//6
 	{
-		Name = "$M01_INQSURGEON";
+		Name = "\c[yellow]$M01_INQSURGEON";
 		Dialog = "$M01_INQSURGEON_P06"; //Well, Silent Hills is a sleepy hollow. Not, really, it's a small trading community on a big river. Two pubs, lots of shops, bathouse and a port with a market.
 		Panel = "M_DCTR";
 		Choice
@@ -272,7 +272,7 @@ Conversation
 	ID = 3;
 	Page
 	{
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]Hello, how may I serve you?";
 		Panel = "M_FALSP2";
 		Choice
@@ -342,7 +342,7 @@ Conversation
 	ID = 4;
 	Page
 	{
-		Name = "Chemist";
+		Name = "\c[yellow]Chemist";
 		Dialog = "\c[white]Welcome, what can I get you?";
 		PANEL = "M_QUINCY";
 		Choice
@@ -443,7 +443,7 @@ Conversation
 	ID = 5;
 	Page
 	{
-		Name = "Weaponsmith";
+		Name = "\c[yellow]Weaponsmith";
 		Dialog = "\c[white]Hello, what can I offer you?";
 		Choice
 		{
@@ -547,7 +547,7 @@ Conversation
 	ID = 6;
 	Page//1
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Hello, acolyte Theo, I have a task for you. A group of rebels has established their base in the city's vicinity. I order you to clear the heretic's lair and return peace to the land. If you'll succeed, you will be promoted a full ranking Binder.";
 		Panel = "M_LEDR";
 		Choice
@@ -567,7 +567,7 @@ Conversation
 			item = "leaderskull";
 			amount = 1;
 		}
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Do you have any questions?";
 		Panel = "M_LEDR";
 		Choice
@@ -578,7 +578,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]The rebel base was found in the old chapel, not far from the city's borders. Exit the city via the main base and head north, it's not far away.";
 		Panel = "M_LEDR";
 		Choice
@@ -591,7 +591,7 @@ Conversation
 	}
 	Page//4
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]You have returned. Are those heretics dead?";
 		Panel = "M_LEDR";
 		Choice
@@ -605,7 +605,7 @@ Conversation
 	}
 	Page//5
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Good. Now I can promote you.\nNow, the promotion ceremony will be held.";
 		Panel = "M_LEDR";
 		Choice
@@ -620,7 +620,7 @@ Conversation
 	//normal conversation
 	Page//6
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Hello Binder, how may I be of service? If you have some questions, we can talk.";
 		Panel = "M_LEDR";
 		Choice
@@ -652,7 +652,7 @@ Conversation
 	}
 	Page//7
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]The Inquisition is the sacred force of the Order. We are sworn to protect the Order and wipe out the heresy that could thrat peace in our lands.\nYou are Binder now. That means you are allowed to execute the law. Your authority is always superior, and you answer only to the Binder Supremes.";
 		Panel = "M_LEDR";
 		Choice
@@ -665,7 +665,7 @@ Conversation
 	}
 	Page//8
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]I am Binder Supreme. Tiberius Petrovich Tusk is my personal name. I am 59 years old, and I serve the Binder Order all my life. I dont have any family, all my life is devoted to the duty, but I have brother. He lives in Tarnhill. That's city far from here, on the western coast.";
 		Panel = "M_LEDR";
 		Choice
@@ -677,7 +677,7 @@ Conversation
 	}
 	Page//9
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]As I said, the scientist have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands. You should head there as soon as possible. Get the artifact and return it back here. We will secure and study it.";
 		Panel = "M_LEDR";
 		Choice
@@ -698,7 +698,7 @@ Conversation
 			item = "quest02_artifact_stolen";
 			amount = 1;
 		}
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]You are back. Do you have the artifact?";
 		Panel = "M_LEDR";
 		Choice
@@ -713,7 +713,7 @@ Conversation
 	}
 	Page//11
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]You are back. Do you have the artifact?";
 		Panel = "M_LEDR";
 		Choice
@@ -728,7 +728,7 @@ Conversation
 	}
 	Page//12
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]That's bad. Very bad. Our superiors will be very dissapointed.";
 		Panel = "M_LEDR";
 		Choice
@@ -740,7 +740,7 @@ Conversation
 	}
 	Page//13
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Really, yes? Where they've taken them?";
 		Panel = "M_LEDR";
 		Choice
@@ -754,7 +754,7 @@ Conversation
 	}
 	Page//14
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Yes, hmm. So they've taken it to their base, which is somewhere in the southern lands.\nYou should then head to the southern lands. You no need to hurry. Here are some things to resupply. Finish all the deeds you have and then take use the town teleporter and head to the Southern Territorry. The VTOL will take you to the city of Millport. You can find it outside city's eastern gate. Report to local Binder superior, he will take care of you there. Here, give him this disk. It contains all the information about our case. Good luck, Tobias.";
 		Panel = "M_LEDR";
 		Choice
@@ -769,7 +769,7 @@ Conversation
 	}
 	Page//15
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "\c[white]Go now. You have serious case to do.";
 
 	}
@@ -781,7 +781,7 @@ Conversation
 	ID = 66;
 	Page//1
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "You have finished all the trials. Do you pledge yourself to the Binder Order?";
 		Panel = "M_LEDR";
 		Choice
@@ -793,7 +793,7 @@ Conversation
 	}
 	Page//2
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "You are now promoted Binder!\nFrom now on, your duty will be to purge the heresy from our sacred lands.\nHere is your Badge of the Binder. It will give you the right to execute justice on your own.";
 		Panel = "M_LEDR";
 		Choice
@@ -806,7 +806,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Tiberius, Binder Superior";
+		Name = "\c[yellow]Tiberius, Binder Superior";
 		Dialog = "Now, you will head to the Eastern Highlands. There you will retrieve ancient artifact that's been discovered lately by the scientists. Find me in my office, I'll tell you more there.";
 		Panel = "M_LEDR";
 		Choice
@@ -829,7 +829,7 @@ Conversation
 	ID = 7;
 	Page//1
 	{
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "Welcome to The Spilled Goblet, would you like some drink? Or do you want some talks?";
 		Choice
 		{
@@ -844,7 +844,7 @@ Conversation
 	}
 	Page//2 - drinks
 	{
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "I can give you bottle of beer, vine or water. What would you like?";
 		Choice
 		{
@@ -896,7 +896,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "What do you want to know? I know little bit of everything. And also, because I'm a barkeeper, I know everybody here in town.";
 		Choice
 		{
@@ -913,7 +913,7 @@ Conversation
 	ID = 8;
 	Page
 	{
-		Name = "Vendor";
+		Name = "\c[yellow]Vendor";
 		Dialog = "Hello, how may I serve you?";
 		Choice
 		{
@@ -995,7 +995,7 @@ Conversation
 	ID = 9;
 	Page//1
 	{
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "Hello, I sell all kinds of tech gizmos. Also, I can upgrade your stuff.";
 		Choice
 		{
@@ -1010,7 +1010,7 @@ Conversation
 	}
 	Page//2
 	{
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "What would you like?";
 		Choice
 		{
@@ -1079,7 +1079,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Techsmith";
+		Name = "\c[yellow]Techsmith";
 		Dialog = "I can upgrade you gizmos. Just bring me the blueprints.";
 		Choice
 		{
@@ -1095,7 +1095,7 @@ Conversation
 	ID = 10;
 	Page
 	{
-		Name = "Gatekeeper";
+		Name = "\c[yellow]Gatekeeper";
 		Dialog = "Hello, Do you want to enter the baths? Entrance costs 10 coins.";
 		Choice
 		{
@@ -1123,7 +1123,7 @@ Conversation
 	ID = 11;
 	Page
 	{
-		Name = "Explosive Guns Vendor";
+		Name = "\c[yellow]Explosive Guns Vendor";
 		Dialog = "Hello, what can I get you?";
 		Choice
 		{
@@ -1219,7 +1219,7 @@ Conversation
 	ID = 12;
 	Page
 	{
-		Name = "Energy Weapons Vendor";
+		Name = "\c[yellow]Energy Weapons Vendor";
 		Dialog = "Welcome, how may I serve you?";
 		Choice
 		{
@@ -1300,7 +1300,7 @@ Conversation
 	ID = 13;
 	Page//1
 	{
-		Name = "Governor";
+		Name = "\c[yellow]Governor";
 		Dialog = "Hello Binder, what do you need? The gate's closed for a reason. The powerplant's been damaged, the poachers stole the power coupling, so I cannot open the gate. But I know you are a man of cunning, so I'm asking for your help.";
 		Panel = "M_PEAS1";
 		Choice
@@ -1313,7 +1313,7 @@ Conversation
 	}
     Page//2
     {
-		Name = "Governor";
+		Name = "\c[yellow]Governor";
 		Dialog = "Well, I need you to go to the waste treatment plant. My infomrants told me that the poachers are hiding there, somewhere. You have to search the place. And while you're in, clean the places from the spiders.";
 		Panel = "M_PEAS1";
         Choice
@@ -1333,7 +1333,7 @@ Conversation
             item = "twn_quest01_cacheFound";
             amount = 1;
         }
-		Name = "Governor";
+		Name = "\c[yellow]Governor";
 		Dialog = "Hello Binder, I see that you are back. Have you found the poachers?";
 		Panel = "M_PEAS1";
         Choice
@@ -1738,7 +1738,7 @@ Conversation
 	ID = 15;
 	Page//1
 	{
-		Name = "Specialities Vendor";
+		Name = "\c[yellow]Specialities Vendor";
 		Dialog = "Hello, what can I get you?";
 		Choice
 		{
@@ -1832,7 +1832,7 @@ Conversation
 	ID = 16;
 	Page
 	{
-		Name = "Grenades vendor";
+		Name = "\c[yellow]Grenades vendor";
 		Dialog = "Welcome, how may I serve you?";
 		Choice
 		{
@@ -1871,7 +1871,7 @@ Conversation
 	ID = 17;
 	Page
 	{
-		Name = "Armor vendor";
+		Name = "\c[yellow]Armor vendor";
 		Dialog = "Hello, what can I get for you?";
 		Choice
 		{
@@ -1929,7 +1929,7 @@ Conversation
 			item = "twn_quest03_finished";
 			amount = 1;
 		}
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "If you need to pass the gate, talk to the governor.";
 		Choice
 		{
@@ -1941,13 +1941,13 @@ Conversation
 	}
 	Page
 	{
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "He's living in Town Hall, next to the bridge over the river. Here, I marked it on your map.";
 
 	}
 	Page
 	{
-		Name = "Gate Guard";
+		Name = "\c[yellow]Gate Guard";
 		Dialog = "I don't have time to chit-chat.";
 	}
 
@@ -1960,7 +1960,7 @@ Conversation
 
 	Page//1
 	{
-		Name = "Combat Tutor";
+		Name = "\c[yellow]Combat Tutor";
 		Dialog = "Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens.";
 		Choice
 		{
@@ -1992,7 +1992,7 @@ Conversation
 
 	Page//1
 	{
-		Name = "Librarian";
+		Name = "\c[yellow]Librarian";
 		Dialog = "What? .. Umm, Do you need something? ... Sorry, I'm busy to talk. Maybe later.";
 	}
 }
@@ -2005,7 +2005,7 @@ Conversation
 
 	Page//1
 	{
-		Name = "$N_COMMONER";
+		Name = "\c[yellow]$N_COMMONER";
 		Dialog = "RANDOM_SILENTHILLS_COMMONER";
 	}
 }

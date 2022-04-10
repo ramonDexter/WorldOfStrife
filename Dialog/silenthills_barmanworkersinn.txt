@@ -148,7 +148,7 @@ Conversation {
     }
 	Page {
 		pageName = "SH_workersinnkeeper_rebelsintown";
-		Name = "Innkeeper";
+		Name = "\c[yellow]Innkeeper";
 		Dialog = "\c[white]Well, you didn't heard that from me, but you should check the southwestern houseblock. If you're looking for a rebel, I bet you'll find one down there.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

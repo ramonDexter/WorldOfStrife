@@ -7,7 +7,7 @@ Conversation {
 
 	Page {
         pageName = "MP_energyAmmoVendor_opener";
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]Hello Binder. Welcome to my shop. I sell energy weapons ammo. EnergyPods, EnergyKits and EnergyPacks. Also, I sell energyCells to power powerups.";
 		Panel = "M_ENVND";
         Goodbye = "\c[red]Goodbye";
@@ -56,7 +56,7 @@ Conversation {
 	}
 	Page {
         pageName = "MP_energyAmmoVendor_questions";
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]What do you wanted to ask? I'm not involved in any heresy.";
 		Panel = "M_ENVND";
         Goodbye = "\c[red]Goodbye";
@@ -75,7 +75,7 @@ Conversation {
 	}
 	Page {
         pageName = "MP_energyAmmoVendor_aboutyourself";
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]My name's Quincy. I'm techsmith, my specialization is ammo crafting. I craft energy weapons ammo. I spend most of the time in mys workshop, it's my main source of income. And when I want to rest, I read a book or go to the riverside fishing.";
 		Panel = "M_ENVND";
         Goodbye = "\c[red]Goodbye";
@@ -87,7 +87,7 @@ Conversation {
 	}
 	Page {
         pageName = "MP_energyAmmoVendor_aboutcity";
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]Millport's peaceful town. I like this place. I came here twenty years ago, when I was just a journeyman. The Binder presence in town keeps any criminal scum away. I like the local pub. Good choice of drinks.";
 		Panel = "M_ENVND";
         Goodbye = "\c[red]Goodbye";

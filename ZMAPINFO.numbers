@@ -246,8 +246,8 @@ DoomEdNums {
 	20241 = wosfbMeat1
 	20242 = wosfbMeat2
 	20243 = wosfbMeat3
-	20244 = m8f_hn_AreaNameMarker_SH_BH_latrine
-	20245 = m8f_hn_AreaNameMarker_SH_BH_supervisorOffice
+	20244 = wosi_implant_accuracy
+	20245 = wosi_implant_stamina
 	20246 = m8f_hn_AreaNameMarker_SH_BH_hipBaths
 	20247 = m8f_hn_AreaNameMarker_SH_BH_technical
 	20248 = m8f_hn_AreaNameMarker_SH_BH_palaestra

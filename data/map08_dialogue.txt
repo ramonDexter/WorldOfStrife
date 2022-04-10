@@ -133,7 +133,7 @@ Conversation
 
 	Page//1
 	{
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]Hello Binder. Welcome to my shop. I sell energy weapons ammo. EnergyPods, EnergyKits and EnergyPacks. Also, I sell energyCells to power powerups.";
 		Panel = "M_ENVND";
 		Choice
@@ -187,7 +187,7 @@ Conversation
 	}
 	Page//2
 	{
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "What do you wanted to ask? I'm not involved in any heresy.";
 		Panel = "M_ENVND";
 		Choice
@@ -208,7 +208,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]My name's Quincy. I'm techsmith, my specialization is ammo crafting. I craft energy weapons ammo. I spend most of the time in mys workshop, it's my main source of income. And when I want to rest, I read a book or go to the riverside fishing.";
 		Panel = "M_ENVND";
 		Choice
@@ -220,7 +220,7 @@ Conversation
 	}
 	Page//4
 	{
-		Name = "Energy Ammo Vendor";
+		Name = "\c[yellow]Energy Ammo Vendor";
 		Dialog = "\c[white]Millport's peaceful town. I like this place. I came here twenty years ago, when I was just a journeyman. The Binder presence in town keeps any criminal scum away. I like the local pub. Good choice of drinks.";
 		Panel = "M_ENVND";
 		Choice
@@ -239,7 +239,7 @@ Conversation
 	ID = 11;
 	Page//1
 	{
-		Name = "Jony, weapons vendor";
+		Name = "\c[yellow]Jony, weapons vendor";
 		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistol, Crossbow and Assault Gun. You hsould visit my twin brother Tony, he sells heavy weapons.";
 		Panel = "M_JONY";
 		Choice
@@ -335,7 +335,7 @@ Conversation
 	ID = 12;
 	Page//1
 	{
-		Name = "Tony, weapons vendor";
+		Name = "\c[yellow]Tony, weapons vendor";
 		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on heavy weapons. I sell Flamethrower, Mini-Missile Launcher and Mauler. You hsould visit my twin brother Jony, he sells light weapons.";
 		Panel = "M_TONY";
 		Choice
@@ -433,7 +433,7 @@ Conversation
 
 	Page//1
 	{
-		Name = "Derwin, techsmith";
+		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]Hello, welcome to my humble shop.\nI sell support items - Environmental suit, Scanner, Portable Map, Targeter and Shadow Armor. What will be your choice?";
 		Panel = "M_DRWN";
 		Choice
@@ -514,7 +514,7 @@ Conversation
 	ID = 14;
 	Page//1
 	{
-		Name = "Gregory, techsmith ";
+		Name = "\c[yellow]Gregory, techsmith ";
 		Dialog = "\c[white]Hello Binder, welcome to my shop.\nI sell special items. I have the Personal and Deployable Shields, Flight Harness, Flame Turret, Flares and Swarmer grenade.";
 		Panel = "M_GREG";
 		Choice
@@ -610,7 +610,7 @@ Conversation
 	ID = 15;
 	Page//1
 	{
-		Name = "Gadwin, explosives vendor";
+		Name = "\c[yellow]Gadwin, explosives vendor";
 		Dialog = "\c[white]Hello my good fellow. Would you like to blow something up? I have everything you would need when you want to blow something up - Rockets, Grenades and Hand Grenades.";
 		Panel = "M_GDWN";
 		Choice
@@ -719,7 +719,7 @@ Conversation
 	ID = 16;
 	Page//1
 	{
-		Name = "Henry, medical specialist";
+		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]Hello binder, are you in need of medical services? If so, please use on of the autoDocs behind you. If you need some medical supplies, you can buy what I got in stock. And for the last, I can install you cybernetic implants that will raise your health.";
 		Panel = "M_DCTR";
 		Choice
@@ -815,7 +815,7 @@ Conversation
 	ID = 17;
 	Page//1
 	{
-		Name = "Loxley, armor vendor";
+		Name = "\c[yellow]Loxley, armor vendor";
 		Dialog = "\c[white]Hello binder, are you ooking for some protection? I got the leather and metal armor, as well as the superior cybernetic armor. Also, I got Armor Bits to repair your damaged armor.";
 		Panel = "M_LXLY";
 		Choice
@@ -897,7 +897,7 @@ Conversation
 	ID = 18;
 	Page//1
 	{
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Hello, what may I serve you? I got good cold beer, some red wine and...water. So, what would you like to drink?Or do you want something to eat? I'm sorry, but I got only food rations. The cook has run away. Or do you want to talk? I could get some rest talking, if you want.";
 		Panel = "M_JHNSN";
 		Choice
@@ -965,7 +965,7 @@ Conversation
 	}
 	Page//2
 	{
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Well, what do you want to know?";
 		Panel = "M_JHNSN";
 		Choice
@@ -992,7 +992,7 @@ Conversation
 	}
 	Page//3
 	{
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]The locals are peaceful peple. Hard working, and hard drinking. But no problems, they are just nice. But I heard something about some uprising in Northern Prison. You should check it out.";
 		Panel = "M_JHNSN";
 		Choice
@@ -1004,7 +1004,7 @@ Conversation
 	}
 	Page//4
 	{
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Some days I dont stop. And some days the pub is empty. But I can make living here, so I can say my pub is successfull.";
 		Panel = "M_JHNSN";
 		Choice
@@ -1015,7 +1015,7 @@ Conversation
 	}
 	Page//5
 	{
-		Name = "Johnson, Barkeeper";
+		Name = "\c[yellow]Johnson, Barkeeper";
 		Dialog = "\c[white]Well, there is the airport and city Port with the Slums. Dangerous place, but I like it. ";
 		Panel = "M_JHNSN";
 		Choice
@@ -1050,7 +1050,7 @@ Conversation
 	Id = 703;
 	Page//1
 	{
-		Name = "[ YOUR BED ]";
+		Name = "\c[yellow][ YOUR BED ]";
 		Dialog = "\c[white]Your bed. Looks comfortable.";
 		Goodbye = "\c[red][ LEAVE ]";
 		Choice

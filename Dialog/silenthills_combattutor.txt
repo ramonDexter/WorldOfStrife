@@ -6,7 +6,7 @@ Conversation {
 	ID = 19;
 	Page {
         pageName = "SH_combatTutor_opener";
-		Name = "Combat Tutor";
+		Name = "\c[yellow]Combat Tutor";
 		Dialog = "\c[white]Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens. And I can sell you upgrade tokens in exchange for beer. Ten bottles for one token. What do you say?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

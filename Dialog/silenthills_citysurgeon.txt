@@ -19,7 +19,7 @@ Conversation {
     */
 	Page {
 		pageName = "SH_citySurgeon_opener";
-		Name = "Medic";
+		Name = "\c[yellow]Medic";
 		Dialog = "\c[white]Hello binder, are you injured? Fell free to use the autodoc, I've just cleaned it and it's ready to use.";
 		Goodbye = "\c[red]Goodbye";
         Choice {

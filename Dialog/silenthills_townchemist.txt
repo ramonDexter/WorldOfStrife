@@ -4,7 +4,7 @@ Conversation {
 	ID = 4;
 	Page {
         pageName = "SH_townChemist_opener";
-		Name = "Chemist";
+		Name = "\c[yellow]Chemist";
 		Dialog = "\c[white]\c[white]Welcome, what can I get you?";
 		PANEL = "M_QUINCY";
 		Goodbye = "\c[red]Goodbye";

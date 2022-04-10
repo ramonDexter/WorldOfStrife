@@ -6,7 +6,7 @@ Conversation {
 	ID = 777;
 	Page {
         pageName = "journal_opener";
-		Name = "::[   J O U R N A L   ]::";
+		Name = "\c[yellow]::[   J O U R N A L   ]::";
 		Dialog = "\c[white]Active quests will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -240,7 +240,7 @@ Conversation {
 			item = "leaderskull";
 			amount = 1;
 		}
-		Name = "::[   J O U R N A L   ]::";
+		Name = "\c[yellow]::[   J O U R N A L   ]::";
 		Dialog = "\c[yellow]Quest #01 - Destroy Rebel Base\n\c[green]==---------------------==\n\c[white]Inquisitor surveilance has found hidden rebel base not far from the Sanctuary. The heretics have settled in old deserted castle.\nFind them and banish all of them.\nBring the skull of their leader as a proof.\n\n[ ] Kill the heretic leader";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -251,7 +251,7 @@ Conversation {
 	}
 	Page {
         pageName = "journal_mainQuest_01_finished";
-		Name = "::[   J O U R N A L   ]::";
+		Name = "\c[yellow]::[   J O U R N A L   ]::";
 		Dialog = "\c[yellow]Quest #01 - Destroy Rebel Base\n\c[green]==---------------------==\n\c[white]Inquisitor surveilance has found hidden rebel base not far from the Sanctuary. The heretics have settled in old deserted castle.\nFind them and banish all of them.\nBring the skull of their leader as a proof.\n\n[X] Kill the heretic leader";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
@@ -271,7 +271,7 @@ Conversation {
             item = "twn_quest01_spidersKilled";
             amount = 1;
         }
-		Name = "::[   J O U R N A L   ]::";
+		Name = "\c[yellow]::[   J O U R N A L   ]::";
         Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[ ] Kill all spiders\n[ ] Find the poachers";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";

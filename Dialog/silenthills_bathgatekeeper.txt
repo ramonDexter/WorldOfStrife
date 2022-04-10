@@ -6,7 +6,7 @@ Conversation {
 	ID = 10;
 	Page {
         pageName = "SH_bathGatekeeper_opener";
-		Name = "Gatekeeper";
+		Name = "\c[yellow]Gatekeeper";
 		Dialog = "\c[white]\c[white]Hello, Do you want to enter the baths? Entrance costs 10 coins.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -37,7 +37,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_bathGatekeeper_murder";
-		Name = "Gatekeeper";
+		Name = "\c[yellow]Gatekeeper";
 		Dialog = "\c[white]\c[white]Well, I haven't seen much, because we had an unexpected power shortage. But I have seen a guy quickly leaving the place after the shortage. I saw on the video that he left the locker open. You should check this.";
 		Goodbye = "\c[red]Goodbye";
         Choice {

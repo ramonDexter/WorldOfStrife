@@ -7,7 +7,7 @@ Conversation
 	ID = 7;
 	Page {
         pageName = "SH_barkeep1_opener";
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "\c[white]Welcome to The Spilled Goblet, would you like some drink? Or do you want some talks?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -21,7 +21,7 @@ Conversation
 	}
 	Page {
         pageName = "SH_barkeep1_drinks";
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "\c[white]I can give you bottle of beer, vine or water. What would you like?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -67,7 +67,7 @@ Conversation
 	}
 	Page {
         pageName = "SH_barkeep1_questions";
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "\c[white]What do you want to know? I know little bit of everything. And also, because I'm a barkeeper, I know everybody here in town.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -89,7 +89,7 @@ Conversation
 	}
 	Page {
 		pageName = "SH_barkeep1_questions_rebelsintown";
-		Name = "Barkeeper";
+		Name = "\c[yellow]Barkeeper";
 		Dialog = "\c[white]You should look on the western bank in the residential quarter. I cannot tell you more, I've heard just that the rebel lives on the western bank.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

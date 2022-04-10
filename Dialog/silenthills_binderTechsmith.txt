@@ -6,7 +6,7 @@ Conversation {
 	ID = 3;
 	Page {
         pageName = "SH_energyAmmoVendor_opener";
-		Name = "Technician";
+		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]\c[white]Hello, how may I serve you?";
 		Panel = "M_FALSP2";
 		Goodbye = "\c[red]Goodbye";

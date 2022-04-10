@@ -18,7 +18,7 @@ Conversation {
     */
 	Page {
         pageName = "SH_townWeaponsmith_opener";
-		Name = "Weaponsmith";
+		Name = "\c[yellow]Weaponsmith";
 		Dialog = "\c[white]\c[white]Hello, what can I offer you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {

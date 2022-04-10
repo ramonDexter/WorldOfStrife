@@ -51,7 +51,33 @@ class medicalApply : weapon {
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-
+// surgical unit healing ///////////////////////////////////////////////////////
+class surgUnitHealth : Health {
+	Default {
+		Inventory.Amount -100;
+	}
+}
+class surgUnitHealing : CustomInventory {
+	Default {
+		-INVENTORY.INVBAR
+		Inventory.PickupSound "sounds/med";
+		inventory.amount 1;
+		Mass 0;
+	}
+	States {
+		Spawn:
+			TNT1 A -1;
+			Stop;
+		Pickup:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
+				pawn.bleedlevel = 0;
+				A_GiveInventory("surgUnitHealth", 1);
+			}
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Hyposprej  /////////////////////////////////////////////////////////////////
@@ -311,7 +337,7 @@ class Kombopack_apply : medicalApply {
 class InstaLek_heal : Health {
 	Default {
 		//Health -100;
-		Inventory.Amount 100;
+		Inventory.Amount -100;
 	}
 }
 class wosInstaLek : wosPickup {

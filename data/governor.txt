@@ -4,7 +4,7 @@ Conversation
 	ID = 13;
 	Page//1
 	{
-		Name = "";
+		Name = "\c[yellow]";
 		Dialog = "";
 		Panel = "";
 		Choice

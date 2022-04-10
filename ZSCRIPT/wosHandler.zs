@@ -257,6 +257,8 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("UpgradeStamina", 40);
 		} else if ( e.Name == "log_pawnmaxhealth" ) {
 			pawn.A_logInt(pawn.GetMaxHealth(true));
+		} else if ( e.Name == "heal_Player" ) {
+			pawn.A_GiveInventory("surgUnitHealing", 1);
 		}
 		// ACS script support //
 		else if ( e.Name == "selectDagger" ) {

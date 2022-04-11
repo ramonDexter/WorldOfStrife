@@ -49,6 +49,8 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 				let pawn = binderplayer(self);
 				if ( pawn.stamin <= 0 ) {
 					return resolveState("Ready");
+				} else if ( pawn.stamin > 0 && pawn.stamin < 100 ) {
+					return resolveState("Ready");
 				}
 				return resolveState(null);
 			}

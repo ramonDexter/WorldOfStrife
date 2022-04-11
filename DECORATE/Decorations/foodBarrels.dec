@@ -207,7 +207,7 @@ Actor MeatBarrel 25106
 {
 	//$Category "Decorations/food barrels"
 	//$Title "meat barrel"
-  tag "c"
+  tag "meat barrel"
   Radius 16
   Height 30
   Health 20

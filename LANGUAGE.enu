@@ -82,7 +82,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"F_NAT02:FCARP01:F_CARP1:KBEDB:"
 			"SBEDR01:RCRPT01:RCRPT02:RCRPT03:"
 			"RCRPT04:RCRPT05:RCRPT06:F_ELTOP2:"
-			"";
+			"SUPWOD01:SUPWOD02:MGWDH2:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -381,6 +381,9 @@ STEP_F_PLYWOD = "step/wood";
 STEP_F_WOOD01 = "step/wood";
 STEP_F_CRATE = "step/wood";
 STEP_WOOD08 = "step/wood";
+STEP_SUPWOD01 = "step/wood";
+STEP_SUPWOD02 = "step/wood";
+STEP_MGWDH2 = "step/wood";
 
 
 

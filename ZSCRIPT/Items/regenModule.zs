@@ -103,6 +103,22 @@ class wosPowerRegenModule : PowerRegeneration {
 		inventory.icon "";
 	}
 }
+class wosD_RegenModule : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "deco regenmodule"
+		+SOLID
+		-NOBLOCKMAP
+		Tag "$T_RGNMDL";
+		radius 8;
+		height 8;
+	}
+	States {
+		Spawn:
+			DUMM ABCD 6;
+			Loop;
+	}
+}
 ////////////////////////////////////////////////////////////////////////////////
 /*class regenModule_Item : wosPickup
 {

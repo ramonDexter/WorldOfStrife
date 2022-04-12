@@ -163,9 +163,7 @@ class binderPlayer : StrifePlayer {
 		If ( pawnmaxhealth >= 160 && pawnmaxhealth < 180 ) { maxstamin = 600; }
 		If ( pawnmaxhealth >= 180 && pawnmaxhealth < 200 ) { maxstamin = 700; }
 		If ( pawnmaxhealth == 200 ) { maxstamin = 800; }
-		////////////////////////////////////////////////////////////////////////////////////////////
-		If (player.cheats&(CF_GODMODE|CF_GODMODE2)) {stamin=maxstamin;}
-		//else 
+		If ( player.cheats&(CF_GODMODE|CF_GODMODE2) ) { stamin = maxstamin; }		
 		If(sprinting==0) {
 			If(stamin>10&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) {
 				//A_Print("speeding up!", 1.0);

@@ -1489,7 +1489,7 @@ Actor MM_shrubbery 21074
 	//$Title "shrubbery"
 	
 	+Solid
-	
+	tag "shrub in pot"
 	radius 16
 	height 55
 	
@@ -8953,6 +8953,20 @@ actor wosD_npc_female18 21507 {
 	States {
 		Spawn:
 			HS04 A -1
+			Stop
+	}
+}
+
+actor wosD_RebelBoots : RebelBoots replaces RebelBoots 21508 {
+	//$Category "Decorations/WoS"
+	//$Title "dx rebel boots"
+	-NOBLOCKMAP
+	tag "black boots"
+	radius 8
+	height 16
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

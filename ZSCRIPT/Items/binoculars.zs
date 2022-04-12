@@ -35,7 +35,7 @@ class wosBinocular : wosPickup {
     }
     Default {
 		//$Category "Powerups/WoS"
-		//$Title "Binoculars"		
+		//$Title "Binocular"		
 		+INVENTORY.INVBAR
 		Tag "$T_Binocular";
 		Inventory.Icon "I_BNCL";
@@ -101,9 +101,8 @@ class binoc_weapon : weapon {
 }
 class dummy_binoc : actor {
 	Default {
-		//$Category "SoA/items/Dummies"
-		//$Color 1
-		//$Title "dummy dalekohled"
+		//$Category "Decorations/WoS"
+		//$Title "dummy binocular"
 		-SOLID
 		+SHOOTABLE
 		+NODAMAGE

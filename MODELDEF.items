@@ -1202,17 +1202,27 @@ model wosRegenModule {
 	path "models/items/regenmod/"
 	model 0 "regenModule.md3"
 	scale 3.0 3.0 3.0
-	offset 0.0 0.0 0.0
-	
+	offset 0.0 0.0 0.0	
 	skin 0 "tx_regenModule1.png"
-	frameindex DUMM A 0 0
-	
+	frameindex DUMM A 0 0	
 	skin 0 "tx_regenModule2.png"
-	frameindex DUMM B 0 0
-	
+	frameindex DUMM B 0 0	
 	skin 0 "tx_regenModule3.png"
-	frameindex DUMM C 0 0
-	
+	frameindex DUMM C 0 0	
+	skin 0 "tx_regenModule4.png"
+	frameindex DUMM D 0 0
+}
+model wosD_RegenModule {
+	path "models/items/regenmod/"
+	model 0 "regenModule.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0	
+	skin 0 "tx_regenModule1.png"
+	frameindex DUMM A 0 0	
+	skin 0 "tx_regenModule2.png"
+	frameindex DUMM B 0 0	
+	skin 0 "tx_regenModule3.png"
+	frameindex DUMM C 0 0	
 	skin 0 "tx_regenModule4.png"
 	frameindex DUMM D 0 0
 }
@@ -1299,6 +1309,14 @@ model scannerDummy {
 //  nightEyeDevice  ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model wosNightEyeDevice {
+	path "models/items/nighteyedev/"
+	model 0 "dx_nedev.md3"
+	skin 0 "tx_nedev.png"
+	scale 2.5 2.5 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_NightEyeDevice {
 	path "models/items/nighteyedev/"
 	model 0 "dx_nedev.md3"
 	skin 0 "tx_nedev.png"
@@ -1510,6 +1528,14 @@ model wosfoodRation3 {
 //  rebreather  ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model wosRebreather {
+	path "models/items/rebreather/"
+	model 0 "dx_rebreather.md3"
+	skin 0 "tx_rebreather.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex RBRT A 0 0
+}
+model wosD_Rebreather {
 	path "models/items/rebreather/"
 	model 0 "dx_rebreather.md3"
 	skin 0 "tx_rebreather.png"

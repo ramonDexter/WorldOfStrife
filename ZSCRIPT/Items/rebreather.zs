@@ -101,6 +101,22 @@ class wosPowerRebreather : PowerIronFeet {
 		Inventory.Icon "";
 	}
 }
+class wosD_Rebreather : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "deco Rebreather"
+		+SOLID
+		-NOBLOCKMAP
+		Tag "$T_REBREATHER";
+		radius 8;
+		height 16;
+	}
+	States {
+		Spawn:
+			RBRT A -1;
+			Stop;
+	}
+}
 ////////////////////////////////////////////////////////////////////////////////
 /*class rebreather_item : wosPickup
 {

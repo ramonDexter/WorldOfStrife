@@ -248,10 +248,10 @@ DoomEdNums {
 	20243 = wosfbMeat3
 	20244 = wosi_implant_accuracy
 	20245 = wosi_implant_stamina
-	20246 = m8f_hn_AreaNameMarker_SH_BH_hipBaths
-	20247 = m8f_hn_AreaNameMarker_SH_BH_technical
-	20248 = m8f_hn_AreaNameMarker_SH_BH_palaestra
-	20249 = m8f_hn_AreaNameMarker_SH_residential
+	20246 = wosD_NightEyeDevice
+	20247 = dummy_binoc
+	20248 = wosD_Rebreather
+	20249 = wosD_RegenModule
 	20250 = m8f_hn_AreaNameMarker_SH_historian
 	20251 = m8f_hn_AreaNameMarker_MP_binderBase
 	20252 = m8f_hn_AreaNameMarker_MP_binderBase_yourFlat

@@ -2455,6 +2455,14 @@ model RebelBoots {
 	offset 0.0 0.0 0.0
 	frameindex BOTR A 0 0
 }
+model wosD_RebelBoots {
+	path "models/props/clothing/"
+	model 0 "boots.md3"
+	skin 0 "tx_boots.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model leather_boots {
 	path "models/props/clothing/"
 	model 0 "boots.md3"

@@ -48,8 +48,8 @@ Conversation {
 			Text = "\c[yellow]Buy Hypospray";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "wosHyposprej";
-			YesMessage = "Here is one Hypospray!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one Hypospray!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -60,8 +60,8 @@ Conversation {
 			Text = "\c[yellow]Buy Combopack";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "wosKombopack";
-			YesMessage = "Here is one Combopack!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one Combopack!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -72,8 +72,8 @@ Conversation {
 			Text = "\c[yellow]Buy Instaheal";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "wosInstaLek";
-			YesMessage = "Here is one Instaheal!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one Instaheal!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -84,8 +84,8 @@ Conversation {
 			Text = "\c[yellow]Buy MedPatch";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "zscMedPatch";
-			YesMessage = "Here is one MedPatch!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one MedPatch!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -96,8 +96,8 @@ Conversation {
 			Text = "\c[yellow]Buy Medical Kit";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "zscMedPatch";
-			YesMessage = "Here is one Medical Kit!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one Medical Kit!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -108,8 +108,8 @@ Conversation {
 			Text = "\c[yellow]Buy Surgery Kit";
 			NextPage = "MP_binderSurgeon_shop";
 			GiveItem = "zscMedPatch";
-			YesMessage = "Here is one Surgery Kit!";
-			NoMessage = "Not enough coins!";
+			YesMessage = "\c[white]Here is one Surgery Kit!";
+			NoMessage = "\c[white]Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
@@ -124,16 +124,20 @@ Conversation {
     Page {
         pageName = "MP_binderSurgeon_upgrade";
         Name = "\c[yellow]Binder Surgeon";
-        Dialog = "\c[white]Just give me the upgrade token and I'll install you the stamina implant. Not a big deal, just hold still, it will take just a few minutes.";
+        Dialog = "\c[white]Just give me the upgrade token and I'll give you the stamina implant. Then use the autodoc to install it. Not a big deal, just hold still, it will take just a few minutes.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_DCTR";
         Choice {
             Text = "Here is the upgrade token.";
             Nextpage = "MP_binderSurgeon_opener";
             CloseDialog = true;
-            YesMessage = "Just hold still.";
-            Special = 80;
-            arg0 = 1801;
+            YesMessage = "\c[white]Here you go. Use the surgical unit to install the implant.";
+			NoMessage = "\c[white]You don't have the upgrade token!";
+            GiveItem = "wosi_implant_stamina";
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
         }
         Choice {
             Text = "\c[yellow]<< BACK";

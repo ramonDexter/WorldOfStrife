@@ -34,8 +34,8 @@ Conversation {
 			NextPage = "binderSurgeon_opener";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "zscmedpatch";
 			Cost {
 				item = "goldCoin";
@@ -47,8 +47,8 @@ Conversation {
 			NextPage = "binderSurgeon_opener";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "zscMedicalKit";
 			Cost {
 				item = "goldCoin";
@@ -60,8 +60,8 @@ Conversation {
 			NextPage = "binderSurgeon_opener";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "zscSurgeryKit";
 			Cost {
 				item = "goldCoin";
@@ -103,8 +103,8 @@ Conversation {
 			NextPage = "binderSurgeon_badgetrading";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "wosHyposprej";
 			Cost {
 				item = "goldCoin";
@@ -116,8 +116,8 @@ Conversation {
 			NextPage = "binderSurgeon_badgetrading";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "wosKombopack";
 			Cost {
 				item = "goldCoin";
@@ -129,8 +129,8 @@ Conversation {
 			NextPage = "binderSurgeon_badgetrading";
 			CloseDialog = true;
 			DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
 			GiveItem = "wosInstaLek";
 			Cost {
 				item = "goldCoin";
@@ -156,8 +156,8 @@ Conversation {
 			Text = "$M01_INQSURGEON_P03_CH02"; //Buy the cybernetic implant.
 			NextPage = "binderSurgeon_badgetrading";
 			CloseDialog = true;
-			YesMessage = "Here you go. Use the surgical unit to install the implant."; //Here you go. Just stand still and everything will be okay.
-			NoMessage = "You don't have the upgrade token!"; //You don't have the upgrade token!
+			YesMessage = "\c[white]Here you go. Use the surgical unit to install the implant."; //Here you go. Just stand still and everything will be okay.
+			NoMessage = "\c[white]You don't have the upgrade token!"; //You don't have the upgrade token!
 			GiveItem = "wosi_implant_stamina";			
 			Cost {
 				item = "upgradeToken";

@@ -8887,6 +8887,75 @@ actor wosD_npc_nwMale11 21503 {
 			Stop
 	}
 }
+
+actor wosD_npc_female15 21504 {
+	//$Category "Other NPCs/females"
+	//$Title "naked hostess 01"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "naked hostess"
+	radius 16
+	height 53
+	scale 0.9
+	States {
+		Spawn:
+			HS01 A -1
+			Stop
+	}
+}
+actor wosD_npc_female16 21505 {
+	//$Category "Other NPCs/females"
+	//$Title "naked hostess 02"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "naked hostess"
+	radius 16
+	height 44
+	scale 0.9
+	States {
+		Spawn:
+			HS02 A -1
+			Stop
+	}
+}
+actor wosD_npc_female17 21506 {
+	//$Category "Other NPCs/females"
+	//$Title "naked hostess 03"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "naked hostess"
+	radius 16
+	height 56
+	scale 0.9
+	States {
+		Spawn:
+			HS03 A -1
+			Stop
+	}
+}
+actor wosD_npc_female18 21507 {
+	//$Category "Other NPCs/females"
+	//$Title "naked hostess 04"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	tag "naked hostess"
+	radius 16
+	height 56
+	scale 0.9
+	States {
+		Spawn:
+			HS04 A -1
+			Stop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

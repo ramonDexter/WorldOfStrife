@@ -21,6 +21,8 @@ class wosSquirrel : CritterBase {
 		Mass 100;
 		Scale 1;
 		PainChance 255;
+		+FRIGHTENED 
+		+FRIENDLY 
 		ActiveSound "SquirrelSpawn/Sight";
         //$Category "Other NPCs/WoS-critters"
 		//$Title "Squirrel - veverka"
@@ -380,6 +382,7 @@ class wosCrab : CritterBase {
 		+NOTARGET;
 		+NOINFIGHTING;
 		+FRIGHTENED;
+		+FRIENDLY 
 		meleedamage 1;
 		meleerange 32;
 		meleesound "";
@@ -430,6 +433,7 @@ class wosDragonFly : CritterBase {
 		+NOGRAVITY
 		+SPAWNFLOAT
 		+FLOATBOB
+		+FRIENDLY 
         //$Category "Other NPCs/WoS-critters"
 		//$Title "Dragonfly - vazka"
 	}
@@ -464,6 +468,7 @@ class wosFireFly : CritterBase {
 		+NOGRAVITY
 		+SPAWNFLOAT
 		+FLOATBOB
+		+FRIENDLY 
         //$Category "Other NPCs/WoS-critters"
 		//$Title "Firefly - svetluska"
 	}

@@ -384,6 +384,17 @@ model wosEnergyPod {
 	skin 0 "tx_energyPod_1.png"	
 	frameIndex DUMM B 0 1
 }
+model wosD_energypod {
+	path "models/items/ammo/"
+	model 0 "energyPod.md3"
+	skin 0 "tx_energyPod_2.png"
+	scale 1.85 1.85 1.85
+	offset 0.0 0.0 0.0	
+	frameIndex DUMM A 0 1
+	
+	skin 0 "tx_energyPod_1.png"	
+	frameIndex DUMM B 0 1
+}
 model EnergyPack {
 	path "models/items/ammo/"
 	model 0 "energyPack.md3"

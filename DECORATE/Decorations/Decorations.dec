@@ -4964,6 +4964,7 @@ actor dummy_executorRifle_ground01 21268 {
 	+Nogravity
 	+useSpecial
 	+DONTTHRUST
+	tag "long rifle"
 	
 	States {
 		Spawn:
@@ -4980,6 +4981,7 @@ actor dummy_executorRifle_ground02 21269 {
 	+Nogravity
 	+useSpecial
 	+DONTTHRUST
+	tag "long rifle"
 	
 	States {
 		Spawn:
@@ -4996,6 +4998,7 @@ actor dummy_executorRifle_standing 21270 {
 	+Nogravity
 	+useSpecial
 	+DONTTHRUST
+	tag "long rifle"
 	
 	States {
 		Spawn:
@@ -8968,6 +8971,20 @@ actor wosD_RebelBoots : RebelBoots replaces RebelBoots 21508 {
 		Spawn:
 			DUMM A -1
 			Stop
+	}
+}
+
+actor wosD_energypod 21509 {
+	//$Category "Decorations/WoS"
+	//$Title "deco energypod"
+	-NOBLOCKMAP
+	tag "$T_ENERGYPOD"
+	radius 8
+	height 16
+	States {
+		Spawn:
+			DUMM AAABB 6
+			Loop
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

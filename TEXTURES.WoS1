@@ -3735,4 +3735,43 @@ Texture "TEKPIL03", 32, 128
 	Patch "DORTKL02", 0, 0
 }
 
+Texture "WEBB1L", 32, 34
+{
+	Patch "WEB1", 0, 0
+}
+
+Texture "WEBB1R", 32, 34
+{
+	Patch "WEB1", 0, 0
+	{
+		FlipX
+	}
+}
+
+Texture "WEBB2L", 32, 38
+{
+	Patch "WEB3", 0, 0
+}
+
+Texture "WEBB2R", 32, 38
+{
+	Patch "WEB3", 0, 0
+	{
+		FlipX
+	}
+}
+
+Texture "WEBB3L", 32, 26
+{
+	Patch "WEB2_R", 0, 0
+}
+
+Texture "WEBB3R", 32, 26
+{
+	Patch "WEB2_R", 0, 0
+	{
+		FlipX
+	}
+}
+
 // End of texture definitions

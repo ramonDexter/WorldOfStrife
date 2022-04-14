@@ -197,7 +197,7 @@ class mauler_dummy : actor {
 		+SOLID
 		+USESPECIAL
 		+NOGRAVITY
-		
+		Tag "$T_MAULER";
 		radius 12;
 		height 20;
 		scale 0.8;

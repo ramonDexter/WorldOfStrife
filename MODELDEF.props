@@ -767,9 +767,16 @@ model TechLampBrass {
 	model 0 "TechLampBrass.md3"
 	skin 0 "tx_TechLampBrass.png"
 	scale 5.0 5.0 10.0
-	offset 0.0 0.0 0.0
-	
+	offset 0.0 0.0 0.0	
 	frameindex TECH B 0 0
+}
+model wosD_techLampBrass {
+	path "models/props/lanterns/"
+	model 0 "TechLampBrass.md3"
+	skin 0 "tx_TechLampBrass.png"
+	scale 5.0 5.0 10.0
+	offset 0.0 0.0 0.0	
+	frameindex DUMM A 0 0
 }
 model wos_bright_techlampbrass {
 	path "models/props/lanterns/"
@@ -2780,7 +2787,7 @@ model wosD_dex_toilet2 {
 	model 0 "toilet2.md3"
 	skin 0 "Toilet2Tex1.png"
 	scale 0.55 0.55 0.55
-	offset 1.5 0.0 0.0
+	offset 1.5 0.0 4.0
 	frameindex DUMM A 0 0
 }
 model wosD_dex_trashcan2 {

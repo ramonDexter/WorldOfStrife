@@ -4183,8 +4183,8 @@ actor dxTablet01 21223 {
 	//+nogravity
 	+DontThrust
 	Tag "tablet"
-	height 8
-	radius 8
+	height 4
+	radius 4
 	
 	States {
 		Spawn:
@@ -4250,8 +4250,8 @@ actor dxTablet02 21227 {
 	+DontThrust
 	
 	Tag "tablet"
-	height 8
-	radius 8
+	height 4
+	radius 4
 	
 	States {
 		Spawn:
@@ -6444,7 +6444,7 @@ actor wosD_dex_toilet2 21357 {
 	+DONTTHRUST
 	Tag "pissoir"
 	radius 4
-	height 36
+	height 40
 	States {
 		Spawn:
 			DUMM A -1
@@ -8515,8 +8515,8 @@ actor wosD_dxTablet03 21481 {
 	//+nogravity
 	+DontThrust
 	
-	height 8
-	radius 8
+	height 4
+	radius 4
 
 	States {
 		Spawn:
@@ -8533,8 +8533,8 @@ actor wosD_dxTablet04 21482 {
 	+DontThrust
 	
 	Tag "tablet"
-	height 8
-	radius 8
+	height 4
+	radius 4
 
 	States {
 		Spawn:
@@ -8985,6 +8985,20 @@ actor wosD_energypod 21509 {
 		Spawn:
 			DUMM AAABB 6
 			Loop
+	}
+}
+
+actor wosD_techLampBrass 21510 {
+	//$Category "Light sources/WoS"
+	//$Title "dx Brass Tech Lamp"
+	tag "Brass Tech Lamp"
+	Radius 8
+  	Height 64
+  	+SOLID
+	States {
+		Spawn:
+			DUMM A -1 Bright light("mildLight6448")
+			Stop
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

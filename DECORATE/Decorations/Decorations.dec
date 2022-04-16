@@ -563,7 +563,7 @@ actor voxStojanovaBruska 21028
 actor voxChicken 21029
 {
 	//$Category "Decorations/WoS"
-	//$Title "Chicken"
+	//$Title "deco Chicken"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -3968,7 +3968,7 @@ actor male02_fatNoble 21217 {
 actor voxChicken2 21218
 {
 	//$Category "Decorations/WoS"
-	//$Title "Chicken 2"
+	//$Title "deco Chicken 2"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -8998,6 +8998,99 @@ actor wosD_techLampBrass 21510 {
 	States {
 		Spawn:
 			DUMM A -1 Bright light("mildLight6448")
+			Stop
+	}
+}
+
+actor wosD_dex_datacube 21511 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex datacube"
+	-NOBLOCKMAP
+	tag "datacube"
+	radius 4
+	height 4
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+
+actor wosD_dex_pan1 21512 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex pan1"
+	-NOBLOCKMAP
+	tag "metal pan"
+	radius 8
+	height 4
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_pan3 21513 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex pan3"
+	-NOBLOCKMAP
+	tag "metal pan"
+	radius 8
+	height 8
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_pan4 21514 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex pan4"
+	-NOBLOCKMAP
+	tag "metal pan"
+	radius 8
+	height 8
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_soyFood 21515 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex soy food"
+	-NOBLOCKMAP
+	tag "soy food"
+	radius 4
+	height 4
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_roadBlock 21516 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex road block"
+	-NOBLOCKMAP
+	tag "road block"
+	radius 16
+	height 48
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_lifeSupportBase 21517 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex life support base"
+	-NOBLOCKMAP
+	tag "life support base"
+	radius 32
+	height 64
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

@@ -425,7 +425,7 @@ class wosGrilledChicken : wosPickup {
 	}
 	States {
 		Spawn:
-			CHKN V -1;
+			CHKN W -1;
 			Stop;
 		Use:
 			TNT1 A 0 A_GiveInventory("wosGrilledChicken_Heal", 1);

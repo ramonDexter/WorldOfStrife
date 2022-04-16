@@ -1540,16 +1540,16 @@ model wosfoodRation3 {
 ////////////////////////////////////////////////////////////////////////////////
 model wosRebreather {
 	path "models/items/rebreather/"
-	model 0 "dx_rebreather.md3"
-	skin 0 "tx_rebreather.png"
+	model 0 "dex_rebreather.md3"
+	skin 0 "RebreatherTex1.png"
 	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex RBRT A 0 0
 }
 model wosD_Rebreather {
 	path "models/items/rebreather/"
-	model 0 "dx_rebreather.md3"
-	skin 0 "tx_rebreather.png"
+	model 0 "dex_rebreather.md3"
+	skin 0 "RebreatherTex1.png"
 	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex RBRT A 0 0

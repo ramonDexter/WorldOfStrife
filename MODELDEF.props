@@ -2830,6 +2830,63 @@ model wosD_dex_smallBoat {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+// datacube //
+model wosD_dex_datacube {
+	path "models/props/deusex/"
+	model 0 "dex_datacube.md3"
+	skin 0 "DataCubeTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_pan1 {
+	path "models/props/deusex/"
+	model 0 "dex_pan1.md3"
+	skin 0 "Pan1Tex1.png"
+	scale 1.0 1.0 1.0
+	offset 4.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_dex_pan3 {
+	path "models/props/deusex/"
+	model 0 "dex_pan3.md3"
+	skin 0 "Pan2Tex1.png"
+	scale 1.0 1.0 1.0
+	offset -4.0 0.0 0.15
+	frameindex DUMM A 0 0
+} 
+model wosD_dex_pan4 {
+	path "models/props/deusex/"
+	model 0 "dex_pan4.md3"
+	skin 0 "Pan4Tex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_dex_soyFood {
+	path "models/props/deusex/"
+	model 0 "dex_soyFood.md3"
+	skin 0 "SoyFoodTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_roadBlock {
+	path "models/props/deusex/"
+	model 0 "dex_roadBlock.md3"
+	skin 0 "RoadBlockTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dex_lifeSupportBase {
+	path "models/props/deusex/"
+	model 0 "dex_lifeSupportBase.md3"
+	skin 0 "LifeSupportBaseTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  picnic table  //////////////////////////////////////////////////////////////
@@ -3032,6 +3089,9 @@ model wosD_powerDeviceStand {
 	frameindex DUMM B 0 0
 }
 
+
+
+// deus ex pans
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

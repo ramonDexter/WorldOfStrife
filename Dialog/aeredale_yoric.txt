@@ -1,0 +1,183 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 10;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "aeredale_yoric_opener";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]Hello, Binder. What bring you to my office? Are you in need of medical services?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I'm injured.";
+            Nextpage = "aeredale_yoric_injured";
+        } 
+        Choice {
+            Text = "I need to resupply.";
+            Nextpage = "aeredale_yoric_shop";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "aeredale_yoric_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_yoric_injured";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]Okay. Looks like it's not that serious. You came here on your own, after all. Sorry, I'm little bit busy here, so use the autodoc over there.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Okay.";
+            Nextpage = "aeredale_yoric_opener";
+        }
+    }
+    Page {
+        pageName = "aeredale_yoric_shop";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]I sell all the medical resources. They come in handy, especially here with all the clumsy farmers around.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yoric_opener";
+        } 
+        Choice {
+            Text = "\c[gold]Buy hypospray";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosHyposprej";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy combopack";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosKombopack";
+            Cost {
+                item = "goldCoin";
+                amount = 50;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy instaheal";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosInstaLek";
+            Cost {
+                item = "goldCoin";
+                amount = 100;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy medical patch";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "zscMedPatch";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy medical kit";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "zscMedicalKit";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy surgery kit";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "zscSurgeryKit";
+            Cost {
+                item = "goldCoin";
+                amount = 100;
+            }
+        } 
+        Choice {
+            Text = "\c[gold]Buy stamina stim";
+            Nextpage = "aeredale_yoric_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosi_StimDevice";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yoric_questions";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]What would you like to know?";
+        Goodbye = "\c[red]Goodbye.";  
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yoric_opener";
+        }
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "aeredale_yoric_whoareyou";
+        }
+        Choice {
+            Text = "Could you tell me about your village?";
+            Nextpage = "aeredale_yoric_aboutaeredale";
+        }
+    }
+    Page {
+        pageName = "aeredale_yoric_whoareyou";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]My name's Yoric. I'm the local medic. You wouldn't think how much work do I have here. Especially during the harvest, I don't stop for the whole day.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yoric_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_yoric_aboutaeredale";
+        Name = "\c[yellow]Yoric, Medic";
+        Dialog = "\c[white]Well, Aeredale is a village of farmers. The soil around the village is rich and gives good harvest. The locals are friendly and happy people.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yoric_questions";
+        }
+    }
+}

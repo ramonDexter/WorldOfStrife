@@ -82,7 +82,10 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"F_NAT02:FCARP01:F_CARP1:KBEDB:"
 			"SBEDR01:RCRPT01:RCRPT02:RCRPT03:"
 			"RCRPT04:RCRPT05:RCRPT06:F_ELTOP2:"
-			"SUPWOD01:SUPWOD02:MGWDH2:";
+			"SUPWOD01:SUPWOD02:MGWDH2:X_001:"
+			"X_002:X_003:X_004:X_005:"
+			"X_006:X_007:X_008:X_009:"
+			"X_010:X_011:F_NAT00:F_NAT01:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -144,6 +147,10 @@ STEP_CWATR21 = "step/water";
 STEP_CWATR22 = "step/water";
 STEP_CWATR23 = "step/water";
 STEP_CWATR24 = "step/water";
+STEP_X_005 = "step/water";
+STEP_X_006 = "step/water";
+STEP_X_007 = "step/water";
+STEP_X_008 = "step/water";
 
 // Ground //////////////////////////////////////////////////////////////////////
 STEP_FLOOR0_1 = "step/default";
@@ -228,6 +235,8 @@ STEP_BGRAS3 = "step/dirt";
 STEP_F_GRASS = "step/dirt";
 STEP_F_DIRT01 = "step/dirt";
 STEP_F_CAVE02 = "step/dirt";
+STEP_F_NAT00 = "step/dirt";
+STEP_F_NAT01 = "step/dirt";
 
 
 // Gravel //////////////////////////////////////////////////////////////////////
@@ -401,6 +410,9 @@ STEP_SLIME05 = "step/slime";
 STEP_SLIME06 = "step/slime";
 STEP_SLIME07 = "step/slime";
 STEP_SLIME08 = "step/slime";
+STEP_X_009 = "step/slime";
+STEP_X_010 = "step/slime";
+STEP_X_011 = "step/slime";
 
 // Slimy ///////////////////////////////////////////////////////////////////////
 STEP_SFLR6_1 = "step/slimy";
@@ -413,6 +425,10 @@ STEP_LAVA1 = "step/lava";
 STEP_LAVA2 = "step/lava";
 STEP_LAVA3 = "step/lava";
 STEP_LAVA4 = "step/lava";
+STEP_X_001 = "step/lava";
+STEP_X_002 = "step/lava";
+STEP_X_003 = "step/lava";
+STEP_X_004 = "step/lava";
 
 // None ////////////////////////////////////////////////////////////////////////
 STEP_F_SKY1 = "";

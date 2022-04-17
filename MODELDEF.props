@@ -2900,6 +2900,8 @@ model wosD_dex_bioCell {
 	frameindex DUMM C 0 0
 	skin 0 "BioCellTex4.png"
 	frameindex DUMM D 0 0
+	skin 0 "BioCellTex5.png"
+	frameindex DUMM E 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
 

@@ -9103,7 +9103,7 @@ actor wosD_dex_bioCell 21518 {
 	height 4
 	States {
 		Spawn:
-			DUMM ABCD 6
+			DUMM ABCDEDCB 6
 			Loop
 	}
 }

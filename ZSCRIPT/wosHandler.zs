@@ -217,6 +217,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosHyposprej", 20);
 			pawn.A_GiveInventory("wosKombopack", 5);
 			pawn.A_GiveInventory("wosInstaLek", 2);
+			pawn.A_GiveInventory("wosKombopack", 5);
 			// grenades
 			pawn.A_GiveInventory("wosGrenadeE", 5);
 			pawn.A_GiveInventory("wosGrenadeF", 5);

@@ -576,8 +576,9 @@ class spikerTrap : actor {
 		-FRIENDLY
 		+FLOORCLIP
 		
+		Tag "$TAG_spikerTrap";
 		Radius 8;
-		Height 8;
+		Height 12;
 		Monster;
 		Speed 0;
 		Health 256;
@@ -607,6 +608,13 @@ class spikerTrap : actor {
 		Death:
 			TRAP A -1;
 			Stop;
+	}
+}
+class spikerTrapFriendly : spikerTrap {
+	Default {
+		//$Category "Monsters/WoS"
+		//$Title "Spiker Trap friendly"
+		+FRIENDLY
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

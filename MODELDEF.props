@@ -2887,6 +2887,20 @@ model wosD_dex_lifeSupportBase {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+model wosD_dex_bioCell {
+	path "models/props/deusex/"
+	model 0 "dex_bioCell.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	skin 0 "BioCellTex1.png"
+	frameindex DUMM A 0 0
+	skin 0 "BioCellTex2.png"
+	frameindex DUMM B 0 0
+	skin 0 "BioCellTex3.png"
+	frameindex DUMM C 0 0
+	skin 0 "BioCellTex4.png"
+	frameindex DUMM D 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  picnic table  //////////////////////////////////////////////////////////////

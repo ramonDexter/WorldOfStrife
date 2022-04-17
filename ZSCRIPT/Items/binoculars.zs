@@ -111,13 +111,13 @@ class dummy_binoc : actor {
 		+USESPECIAL
 		+NOGRAVITY
 		
-		Scale 0.4;
+		Tag "$T_Binocular";
 		height 8;
 		radius 8;
 	}
 	States {
 		Spawn:
-            BNCL S  -1;
+            DUMM A -1;
             Stop;
 	}
 }

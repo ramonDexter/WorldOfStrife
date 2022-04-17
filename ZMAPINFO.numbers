@@ -252,7 +252,7 @@ DoomEdNums {
 	20247 = dummy_binoc
 	20248 = wosD_Rebreather
 	20249 = wosD_RegenModule
-	20250 = m8f_hn_AreaNameMarker_SH_historian
+	20250 = spikerTrapFriendly
 	20251 = m8f_hn_AreaNameMarker_MP_binderBase
 	20252 = m8f_hn_AreaNameMarker_MP_binderBase_yourFlat
 	20253 = m8f_hn_AreaNameMarker_MP_binderBase_mainCommand

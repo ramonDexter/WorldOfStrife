@@ -28,6 +28,8 @@ class binderPlayer : StrifePlayer {
 	int maxstamin; //to allow handling of var in statusbar
 	Actor backplaye;
 	bool nightEyeGrainEnable;
+
+	
 	
 	////////////////////////////////////////////////////////////////////////////
 	
@@ -100,7 +102,7 @@ class binderPlayer : StrifePlayer {
 		HealthShake();
         SprintSpeed();
         HealthSlow();
-		
+		LedgeClimb();
     }
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
@@ -210,7 +212,7 @@ class binderPlayer : StrifePlayer {
 			DamageMobj(null,null,-damage,"Falling");
 		}
 	}
-	//damageMObj()
+	// damageMObj() ////////////////////////////////////////////////////////////
 	Override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle) {
 		int newdamage;
 		
@@ -241,9 +243,65 @@ class binderPlayer : StrifePlayer {
 		Return Super.DamageMobj(inflictor,source,damage,mod);
 	}
 	////////////////////////////////////////////////////////////////////////////
+
+	// broken lands ledge climbing /////////////////////////////////////////////	
+	double speedbase; property BaseSpeed : speedbase;
+
+	void LedgeClimb()
+	{
+		If((player.readyweapon is "zscPunchDagger")&&player.cmd.buttons&BT_JUMP) //||running
+		{
+			FLineTraceData h, i, j;
+			LineTrace(angle,24,0,TRF_THRUSPECIES,height+8,data: i);
+			LineTrace(angle,24,0,TRF_THRUSPECIES,height-4,data: j);
+			If(i.HitType==TRACE_HitNone)
+			{
+				For(int tall=16; tall<=height; tall+=8)
+				{
+					LineTrace(angle,24,0,TRF_THRUSPECIES,tall,data: h);
+					If(h.HitType==TRACE_HitWall)
+					{
+						int zspd = 0;
+						If(j.HitType==TRACE_HitWall||player.cmd.buttons&BT_FORWARD){zspd=2;}
+						Else{ViewBob=0;}
+						vel.z=zspd;
+						player.jumpTics=-1;
+					}
+				}
+			}
+		}
+	}
+	// broken lands ledge climbing /////////////////////////////////////////////
+	Override void CheckJump() {
+		If(player.readyweapon is "zscPunchDagger"){Super.CheckJump();}
+		Else If(player.cmd.buttons & BT_JUMP)
+		{
+			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35)
+			{
+				double rollbase = speedbase*6.0;
+				double rollbonus = 3.0;
+				If(rollbonus<0.5){rollbonus=0.5;}
+				//rolldown=35;
+				reactiontime=18;
+				player.deltaviewheight=-8;
+				stamin-=35;
+				A_StartSound("weapons/swing",CHAN_BODY);
+				bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
+				If(player.cmd.buttons & BT_FORWARD)
+				{Thrust(rollbase*rollbonus,angle);}
+				Else If(player.cmd.buttons & BT_BACK)
+				{Thrust(rollbase*rollbonus,angle-180);}
+				If(player.cmd.buttons & BT_MOVELEFT)
+				{Thrust(rollbase*rollbonus,angle-270);}
+				Else If(player.cmd.buttons & BT_MOVERIGHT)
+				{Thrust(rollbase*rollbonus,angle-90);}
+			}
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
 	
 	//  climbing code by Dodopod  //////////////////////////////////////////////
-	const climbReach = 8;
+	/*const climbReach = 8;
     const thrustSpeed = 4;
     bool climbing;
     int maxLedgeHeight;
@@ -268,7 +326,8 @@ class binderPlayer : StrifePlayer {
 
         // Start/stop climbing
         if (!climbing) {
-            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight) {
+			// allow climbing only with dagger in hand /////////////////////////
+            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight && player.readyweapon is "zscPunchDagger") {
                 climbing = true;
                 A_StartSound("*Climb", CHAN_BODY);
                 viewBob = 0.0;
@@ -317,7 +376,82 @@ class binderPlayer : StrifePlayer {
         }
 		
         Super.CheckJump();
-    }
+    }*/
+	////////////////////////////////////////////////////////////////////////////
+
+	// CheatGive() new commands ////////////////////////////////////////////////
+	override void CheatGive( String name, int amount ) {
+		if ( name ~== "accuracy" ) {
+			A_GiveInventory("upgradeAccuracy", 1);
+		} 
+		else if ( name ~== "stamina" ) {
+			A_GiveInventory("UpgradeStamina", 10);
+		} 
+		else if ( name ~== "medicals" ) {
+			if (!amount) {
+				A_GiveInventory("wosHyposprej", 10);
+				A_GiveInventory("wosKombopack", 5);
+				A_GiveInventory("wosInstaLek", 2);
+				A_GiveInventory("wosi_StimDevice", 5);
+			} else {
+				A_GiveInventory("wosHyposprej", amount);
+				A_GiveInventory("wosKombopack", amount);
+				A_GiveInventory("wosInstaLek", amount);
+				A_GiveInventory("wosi_StimDevice", amount);
+			}
+		} 
+		else if ( name ~== "notes" ) {
+			A_GiveInventory("notePrayers", 1);
+			A_GiveInventory("noteSHmedical", 1);
+			A_GiveInventory("noteSHshouldergun", 1);
+			A_GiveInventory("noteSHbinderStavesTechnical", 1);
+			A_GiveInventory("noteSHbinderNote01", 1);
+			A_GiveInventory("noteSHsilentHillsTouristGuide", 1);
+			A_GiveInventory("noteSHminesReport", 1);
+			A_GiveInventory("noteSHbindersOath", 1);
+			A_GiveInventory("noteCommonDogmas", 1);
+			A_GiveInventory("noteTheGreatHouses", 1);
+			A_GiveInventory("noteTekGuildNotes", 1);
+			A_GiveInventory("noteMillport", 1);
+			A_GiveInventory("noteEmperorsList", 1);
+			A_GiveInventory("noteEastcliff", 1);
+			A_GiveInventory("noteTekGuild", 1);
+			A_GiveInventory("noteLustyKolymanMaid1", 1);
+			A_GiveInventory("noteLustyKolymanMaid2", 1);
+			A_GiveInventory("noteLustyKolymanMaid3", 1);
+			//A_GiveInventory("", 1);
+		} 
+		else if ( name ~== "weapons" ) {
+			//A_GiveInventory("", 1);
+			A_GiveInventory("StormPistol", 1);
+			A_GiveInventory("laserPistol", 1);
+			A_GiveInventory("zscStrifeCrossbow", 1);
+			A_GiveInventory("zscAssaultGun", 1);
+			A_GiveInventory("staffBlaster", 1);
+			A_GiveInventory("zscMiniMissileLauncher", 1);
+			A_GiveInventory("zscStrifeGrenadeLauncher", 1);
+			A_GiveInventory("zscFlameThrower", 1);
+			A_GiveInventory("zscMauler", 1);
+		} 
+		else if ( name ~== "items" ) {			
+			if ( !amount ) {
+				//A_GiveInventory("", 1);
+			} else {
+				//A_GiveInventory("", amount);
+			}
+		} 
+		else if ( name ~== "armor" ) {
+			A_GiveInventory("wosLeatherArmor", 1);
+			A_GiveInventory("wosMetalArmor", 1);
+			A_GiveInventory("wosBinderArmorBasic", 1);
+			A_GiveInventory("wosBinderArmorAdvanced", 1);
+			A_GiveInventory("wosKineticArmor", 1);
+			//A_GiveInventory("", 1);
+		}
+		else {
+			Super.CheatGive(name,amount);
+		}
+	}
 	////////////////////////////////////////////////////////////////////////////
 
 	Default {	
@@ -329,6 +463,7 @@ class binderPlayer : StrifePlayer {
 		Player.AirCapacity 2.0;
 		player.viewheight 48;
 		player.attackzoffset 11;
+		Player.jumpZ 6.0;
 		Player.DisplayName "Binder";
 		Player.CrouchSprite "BNDP";
 		Species "binderPlayer";
@@ -364,8 +499,14 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "PDAReader", 1;
 		//Player.StartItem "wosi_scanner", 1;
 		//  custom properties  /////////////////////////////////////////////////
-		binderPlayer.MaxLedgeHeight 56;
-		binderPlayer.ClimbSpeed 2;	
+		// dodopod ledge climbing //
+		//binderPlayer.MaxLedgeHeight 56;
+		//binderPlayer.ClimbSpeed 2;
+		////////////////////////////
+
+		// brokenLands jump&ledge climbing //	
+		binderPlayer.BaseSpeed 2;
+		/////////////////////////////////////
 	}
 	
 	States {

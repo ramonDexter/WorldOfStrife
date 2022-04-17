@@ -562,9 +562,9 @@ class wosi_StimDevice : wosPickup {
 		Use:
 			TNT1 A 0 {
 				let pawn = binderPlayer(self);				
-				if ( pawn.stamin > 340 ) {
+				if ( pawn.stamin > 390 ) {
 					return resolveState("UseNot");
-				} else if ( pawn.stamin < 340 ) {
+				} else if ( pawn.stamin < 390 ) {
 					return resolveState("UseYes");
 				}
 				return resolveState(null);

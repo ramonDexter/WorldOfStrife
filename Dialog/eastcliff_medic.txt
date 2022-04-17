@@ -63,7 +63,7 @@ Conversation {
             }
         }
         Choice {
-            Text = "Give me the Kombopack. (pay 50 gold)";
+            Text = "Give me the Combopack. (pay 50 gold)";
             Nextpage = "EC_medic_shop";
             CloseDialog = true;
             YesMessage = "Here it is!";

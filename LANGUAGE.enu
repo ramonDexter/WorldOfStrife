@@ -975,7 +975,7 @@ TAG_binderNPC = "Binder";
 TAG_shootingStalker = "Advanced Stalker";
 T_NUCLEARMUTANT = "Nuclear Mutant";
 T_wosLiquidator = "Liquidator";
-
+TAG_spikerTrap = "Spiker Trap";
 ////////////////////////////////////////////////////////////////////////////////
 
 	

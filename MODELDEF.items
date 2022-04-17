@@ -366,7 +366,7 @@ model EnergyPod {
 	path "models/items/ammo/"
 	model 0 "energyPod.md3"
 	skin 0 "tx_energyPod_1.png"
-	scale 1.85 1.85 1.85
+	scale 1.5 1.5 1.85
 	offset 0.0 0.0 0.0	
 	frameIndex BRY1 A 0 1
 	
@@ -377,7 +377,7 @@ model wosEnergyPod {
 	path "models/items/ammo/"
 	model 0 "energyPod.md3"
 	skin 0 "tx_energyPod_2.png"
-	scale 1.85 1.85 1.85
+	scale 1.5 1.5 1.85
 	offset 0.0 0.0 0.0	
 	frameIndex DUMM A 0 1
 	
@@ -388,7 +388,7 @@ model wosD_energypod {
 	path "models/items/ammo/"
 	model 0 "energyPod.md3"
 	skin 0 "tx_energyPod_2.png"
-	scale 1.85 1.85 1.85
+	scale 1.5 1.5 1.85
 	offset 0.0 0.0 0.0	
 	frameIndex DUMM A 0 1
 	
@@ -405,6 +405,28 @@ model EnergyPack {
 	
 	skin 0 "tx_energyPack_1.png"
 	frameindex CPAC B 0 1
+}
+model wosEnergyKit {
+	path "models/items/ammo/"
+	model 0 "energyKit.md3"
+	skin 0 "tx_energyKit_2.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyKit_1.png"
+	frameindex DUMM B 0 1
+}
+model wosD_energyKit {
+	path "models/items/ammo/"
+	model 0 "energyKit.md3"
+	skin 0 "tx_energyKit_2.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	
+	skin 0 "tx_energyKit_1.png"
+	frameindex DUMM B 0 1
 }
 model wosEnergyPack {
 	path "models/items/ammo/"
@@ -426,28 +448,6 @@ model wosD_energyPack {
 	frameindex DUMM A 0 1
 	
 	skin 0 "tx_energyPack_1.png"
-	frameindex DUMM B 0 1
-}
-model wosEnergyKit {
-	path "models/items/ammo/"
-	model 0 "energyKit.md3"
-	skin 0 "tx_energyKit_2.png"
-	scale 1.35 1.35 1.35
-	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 1
-	
-	skin 0 "tx_energyKit_1.png"
-	frameindex DUMM B 0 1
-}
-model wosD_energyKit {
-	path "models/items/ammo/"
-	model 0 "energyKit.md3"
-	skin 0 "tx_energyKit_2.png"
-	scale 1.35 1.35 1.35
-	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 1
-	
-	skin 0 "tx_energyKit_1.png"
 	frameindex DUMM B 0 1
 }
 model ClipOfBullets {
@@ -1660,6 +1660,14 @@ model wosShadowArmor {
 // binocular ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model wosBinocular {
+	path "models/items/binocular/"
+	model 0 "dx_binocular.md3"
+	skin 0 "tx_binocular.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model dummy_binoc {
 	path "models/items/binocular/"
 	model 0 "dx_binocular.md3"
 	skin 0 "tx_binocular.png"

@@ -150,7 +150,7 @@ class shoulderGun1_dummy : actor {
 		
 		radius 10;
 		height 10;
-		//scale 0.35;
+		Tag "$TAG_shoulderGun";
 	}
 	
 	States {
@@ -168,7 +168,7 @@ class shoulderGun2_dummy : actor {
 		
 		radius 10;
 		height 10;
-		//scale 0.35;
+		Tag "$TAG_shoulderGun";
 	}
 	States {
 		Spawn:
@@ -185,7 +185,7 @@ class shoulderGun3_dummy : actor {
 		
 		radius 10;
 		height 10;
-		//scale 0.35;
+		Tag "$TAG_shoulderGun";
 	}
 	States {
 		Spawn:

@@ -107,7 +107,7 @@ weapons/poof1  "sounds/toxincloud/dspoof1.wav"
 sounds/spyDroneAct  "sounds/deusex/spyDroneActive.wav"
 $volume sounds/spyDroneAct 1.5
 sounds/clrBotAct  "sounds/deusex/cleanerBotActive.wav"
-$volume sounds/clrBotAct 0.5
+$volume sounds/clrBotAct 0.35
 sounds/medicalHiss  "sounds/deusex/medicalHiss.wav"
 ////////////////////////////////////////////////////////////////////////////////
 

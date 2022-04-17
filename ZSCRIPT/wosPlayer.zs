@@ -29,7 +29,8 @@ class binderPlayer : StrifePlayer {
 	Actor backplaye;
 	bool nightEyeGrainEnable;
 
-	
+	// broken lands ledge climbing /////////////////////////////////////////////	
+	double speedbase; property BaseSpeed : speedbase;
 	
 	////////////////////////////////////////////////////////////////////////////
 	
@@ -102,6 +103,7 @@ class binderPlayer : StrifePlayer {
 		HealthShake();
         SprintSpeed();
         HealthSlow();
+		LedgeClimb();
     }
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
@@ -242,9 +244,65 @@ class binderPlayer : StrifePlayer {
 		Return Super.DamageMobj(inflictor,source,damage,mod);
 	}
 	////////////////////////////////////////////////////////////////////////////
+
+	// broken lands ledge climbing /////////////////////////////////////////////	
+	//double speedbase; property BaseSpeed : speedbase; //moved up
+
+	void LedgeClimb()
+	{
+		If((player.readyweapon is "zscPunchDagger")&&player.cmd.buttons&BT_JUMP) //||running
+		{
+			FLineTraceData h, i, j;
+			LineTrace(angle,24,0,TRF_THRUSPECIES,height+8,data: i);
+			LineTrace(angle,24,0,TRF_THRUSPECIES,height-4,data: j);
+			If(i.HitType==TRACE_HitNone)
+			{
+				For(int tall=16; tall<=height; tall+=8)
+				{
+					LineTrace(angle,24,0,TRF_THRUSPECIES,tall,data: h);
+					If(h.HitType==TRACE_HitWall)
+					{
+						int zspd = 0;
+						If(j.HitType==TRACE_HitWall||player.cmd.buttons&BT_FORWARD){zspd=2;}
+						Else{ViewBob=0;}
+						vel.z=zspd;
+						player.jumpTics=-1;
+					}
+				}
+			}
+		}
+	}
+	// broken lands ledge climbing /////////////////////////////////////////////
+	Override void CheckJump() {
+		If(player.readyweapon is "zscPunchDagger"){Super.CheckJump();}
+		Else If(player.cmd.buttons & BT_JUMP)
+		{
+			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35)
+			{
+				double rollbase = speedbase*6.0;
+				double rollbonus = 3.0;
+				If(rollbonus<0.5){rollbonus=0.5;}
+				//rolldown=35;
+				reactiontime=18;
+				player.deltaviewheight=-8;
+				stamin-=35;
+				A_StartSound("weapons/swing",CHAN_BODY);
+				bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
+				If(player.cmd.buttons & BT_FORWARD)
+				{Thrust(rollbase*rollbonus,angle);}
+				Else If(player.cmd.buttons & BT_BACK)
+				{Thrust(rollbase*rollbonus,angle-180);}
+				If(player.cmd.buttons & BT_MOVELEFT)
+				{Thrust(rollbase*rollbonus,angle-270);}
+				Else If(player.cmd.buttons & BT_MOVERIGHT)
+				{Thrust(rollbase*rollbonus,angle-90);}
+			}
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
 	
 	//  climbing code by Dodopod  //////////////////////////////////////////////
-	const climbReach = 8;
+	/*const climbReach = 8;
     const thrustSpeed = 4;
     bool climbing;
     int maxLedgeHeight;
@@ -319,7 +377,7 @@ class binderPlayer : StrifePlayer {
         }
 		
         Super.CheckJump();
-    }
+    }*/
 	////////////////////////////////////////////////////////////////////////////
 
 	// CheatGive() new commands ////////////////////////////////////////////////
@@ -443,10 +501,13 @@ class binderPlayer : StrifePlayer {
 		//Player.StartItem "wosi_scanner", 1;
 		//  custom properties  /////////////////////////////////////////////////
 		// dodopod ledge climbing //
-		binderPlayer.MaxLedgeHeight 56;
-		binderPlayer.ClimbSpeed 2;
+		//binderPlayer.MaxLedgeHeight 56;
+		//binderPlayer.ClimbSpeed 2;
 		////////////////////////////
 
+		// brokenLands jump&ledge climbing //	
+		binderPlayer.BaseSpeed 2;
+		/////////////////////////////////////
 	}
 	
 	States {

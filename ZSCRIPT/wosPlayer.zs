@@ -13,6 +13,7 @@ class binderPlayer : StrifePlayer {
 	bool sprinting;
     bool bracing;
     int stamin;
+	int maxstamin; //to allow handling of var in statusbar
 	int bleedlevel;
 	int bleedtimer;
 	double pvel;
@@ -25,15 +26,69 @@ class binderPlayer : StrifePlayer {
 	int armoramount;
 	int armorpower;
 	int SpeedUpgrade;
-	int maxstamin; //to allow handling of var in statusbar
 	Actor backplaye;
 	bool nightEyeGrainEnable;
 
 	// broken lands ledge climbing /////////////////////////////////////////////	
 	double speedbase; property BaseSpeed : speedbase;
+	bool running;
 	
-	////////////////////////////////////////////////////////////////////////////
-	
+	////////////////////////////////////////////////////////////////////////////	
+	Default {	
+		+FLOORCLIP
+		
+		//  various player properties  /////////////////////////////////////////
+		Player.ForwardMove 0.75, 0.75;
+		Player.SideMove 0.75, 0.75;
+		Player.AirCapacity 2.0;
+		player.viewheight 48;
+		player.attackzoffset 11;
+		Player.jumpZ 8.0;
+		Player.DisplayName "Binder";
+		Player.CrouchSprite "BNDP";
+		Species "binderPlayer";
+		Health 100;
+		Radius 16;
+		Height 56;
+		Mass 100;
+		PainChance 255;
+		MaxStepHeight 20;
+		Player.MaxHealth 100;
+		//  weaponslots  ///////////////////////////////////////////////////////
+		Player.WeaponSlot 1, "zscPunchDagger";
+		Player.WeaponSlot 2, "zscStrifeCrossbow", "StormPistol", "laserPistol";
+		Player.WeaponSlot 3, "zscAssaultGun", "staffBlaster";
+		Player.WeaponSlot 4, "zscMiniMissileLauncher";
+		Player.WeaponSlot 5, "zscStrifeGrenadeLauncher";
+		Player.WeaponSlot 6, "zscFlameThrower";
+		Player.WeaponSlot 7, "zscMauler";		
+		//Player.WeaponSlot 8, "Sigil";
+		//Player.WeaponSlot 9, "hookShotWeapon";		
+		//  start items  ///////////////////////////////////////////////////////
+		//Player.StartItem "zscFist", 1;	
+		Player.StartItem "zscPunchDagger", 1;	
+		Player.StartItem "zAssaultGunMag", 32;
+		Player.StartItem "hookShot_magazine", 20;
+		Player.StartItem "laserPistolCharge", 32;
+		Player.StartItem "shldrGunMag", 32;
+		Player.StartItem "Staffmagazine", 48;
+		Player.StartItem "missileLauncherMag", 8;
+		Player.StartItem "stormPistol_magazine", 12;
+		Player.StartItem "notePlayerPersonal", 1;
+		Player.StartItem "journalitem", 1;
+		Player.StartItem "PDAReader", 1;
+		//Player.StartItem "wosi_scanner", 1;
+		// custom properties ///////////////////////////////////////////////////
+		// brokenLands jump&ledge climbing //	
+		binderPlayer.BaseSpeed 2;
+		/////////////////////////////////////
+
+		// dodopod ledge climbing //
+		//binderPlayer.MaxLedgeHeight 56;
+		//binderPlayer.ClimbSpeed 2;
+		////////////////////////////
+	}
+
 	//  overall override  //////////////////////////////////////////////////////
 	override void Tick() {
 		pvel=vel.z;
@@ -103,7 +158,13 @@ class binderPlayer : StrifePlayer {
 		HealthShake();
         SprintSpeed();
         HealthSlow();
+
+		// broken lands code ///////////////////////////////////////////////////
 		LedgeClimb();
+		HandleSpeed();
+		CheckSprint();
+
+		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
     }
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
@@ -171,7 +232,7 @@ class binderPlayer : StrifePlayer {
 			If(stamin>10&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) {
 				//A_Print("speeding up!", 1.0);
 				selectedWeapon=Weapon(player.readyweapon);
-				sprinting=1;
+				//sprinting=1;
 				bracing=1;
 				If(!CountInv("wos_sprintWeap")){
 					A_GiveInventory("wos_sprintWeap",1);
@@ -194,7 +255,7 @@ class binderPlayer : StrifePlayer {
 			If(stamin>0&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED){ }
 			Else {
 				//A_Print("slowing down!", 1.0);
-				sprinting=0;
+				//sprinting=0;
 				bracing=0;
 				let sprwep = Weapon(player.readyweapon);
 				If(player.readyweapon is "wos_sprintWeap"){Player.SetPSprite(PSP_WEAPON,sprwep.FindState("Nope"));}
@@ -245,8 +306,38 @@ class binderPlayer : StrifePlayer {
 	}
 	////////////////////////////////////////////////////////////////////////////
 
-	// broken lands ledge climbing /////////////////////////////////////////////	
+	// broken lands adopted code ///////////////////////////////////////////////
 	//double speedbase; property BaseSpeed : speedbase; //moved up
+	void HandleSpeed() {
+		double hpeed = speedbase;
+		bool dont;
+		/*If(GetFriction()>0.91)
+		{
+			If(self is "jwPlayerWalrus"){hpeed*=2.5;}
+			Else{dont=1;}
+		}*/
+		If(!dont/*&&!reactiontime&&slowed!=3*/&&player.health){vel.x*=0.8; vel.y*=0.8; ViewBob=0.4;}
+		If(hpeed<0.5){hpeed=0.5;}
+		If(running&&!waterlevel)
+		{
+			hpeed*=3.0;
+			If(player.cmd.buttons&BT_RUN){hpeed/=2.0;}
+		}
+		//If(slowed==1){hpeed*=0.5; ViewBob*=0.5;}
+		//Else If(slowed>=2){hpeed=0; ViewBob=0;}
+		speed=hpeed;
+	}
+	void CheckSprint()
+	{
+		If (player.cmd.buttons&BT_SPEED/*&&!slowed*/) {
+			running = 1;
+			sprinting = 1;
+		}
+		Else {
+			running = 0;
+			sprinting = 0;
+		}
+	}
 
 	void LedgeClimb()
 	{
@@ -274,11 +365,11 @@ class binderPlayer : StrifePlayer {
 	}
 	// broken lands ledge climbing /////////////////////////////////////////////
 	Override void CheckJump() {
-		If(player.readyweapon is "zscPunchDagger"){Super.CheckJump();}
-		Else If(player.cmd.buttons & BT_JUMP)
-		{
-			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35)
-			{
+		If (player.readyweapon is "zscPunchDagger" || player.readyweapon is "wos_sprintWeap") {
+			Super.CheckJump();
+		}
+		Else If(player.cmd.buttons & BT_JUMP) {
+			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35) {
 				double rollbase = speedbase*6.0;
 				double rollbonus = 3.0;
 				If(rollbonus<0.5){rollbonus=0.5;}
@@ -288,14 +379,18 @@ class binderPlayer : StrifePlayer {
 				stamin-=35;
 				A_StartSound("weapons/swing",CHAN_BODY);
 				bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
-				If(player.cmd.buttons & BT_FORWARD)
-				{Thrust(rollbase*rollbonus,angle);}
-				Else If(player.cmd.buttons & BT_BACK)
-				{Thrust(rollbase*rollbonus,angle-180);}
-				If(player.cmd.buttons & BT_MOVELEFT)
-				{Thrust(rollbase*rollbonus,angle-270);}
-				Else If(player.cmd.buttons & BT_MOVERIGHT)
-				{Thrust(rollbase*rollbonus,angle-90);}
+				If (player.cmd.buttons & BT_FORWARD) {
+					Thrust(rollbase*rollbonus,angle);
+				}
+				Else If (player.cmd.buttons & BT_BACK) {
+					Thrust(rollbase*rollbonus,angle-180);
+				}
+				If (player.cmd.buttons & BT_MOVELEFT) {
+					Thrust(rollbase*rollbonus,angle-270);
+				}
+				Else If (player.cmd.buttons & BT_MOVERIGHT) {
+					Thrust(rollbase*rollbonus,angle-90);
+				}
 			}
 		}
 	}
@@ -455,60 +550,7 @@ class binderPlayer : StrifePlayer {
 	}
 	////////////////////////////////////////////////////////////////////////////
 
-	Default {	
-		+FLOORCLIP
-		
-		//  various player properties  /////////////////////////////////////////
-		Player.ForwardMove 0.75, 0.75;
-		Player.SideMove 0.75, 0.75;
-		Player.AirCapacity 2.0;
-		player.viewheight 48;
-		player.attackzoffset 11;
-		Player.jumpZ 6.0;
-		Player.DisplayName "Binder";
-		Player.CrouchSprite "BNDP";
-		Species "binderPlayer";
-		Health 100;
-		Radius 16;
-		Height 56;
-		Mass 100;
-		PainChance 255;
-		MaxStepHeight 20;
-		Player.MaxHealth 100;
-		//  weaponslots  ///////////////////////////////////////////////////////
-		Player.WeaponSlot 1, "zscPunchDagger";
-		Player.WeaponSlot 2, "zscStrifeCrossbow", "StormPistol", "laserPistol";
-		Player.WeaponSlot 3, "zscAssaultGun", "staffBlaster";
-		Player.WeaponSlot 4, "zscMiniMissileLauncher";
-		Player.WeaponSlot 5, "zscStrifeGrenadeLauncher";
-		Player.WeaponSlot 6, "zscFlameThrower";
-		Player.WeaponSlot 7, "zscMauler";		
-		//Player.WeaponSlot 8, "Sigil";
-		//Player.WeaponSlot 9, "hookShotWeapon";		
-		//  start items  ///////////////////////////////////////////////////////
-		//Player.StartItem "zscFist", 1;	
-		Player.StartItem "zscPunchDagger", 1;	
-		Player.StartItem "zAssaultGunMag", 32;
-		Player.StartItem "hookShot_magazine", 20;
-		Player.StartItem "laserPistolCharge", 32;
-		Player.StartItem "shldrGunMag", 32;
-		Player.StartItem "Staffmagazine", 48;
-		Player.StartItem "missileLauncherMag", 8;
-		Player.StartItem "stormPistol_magazine", 12;
-		Player.StartItem "notePlayerPersonal", 1;
-		Player.StartItem "journalitem", 1;
-		Player.StartItem "PDAReader", 1;
-		//Player.StartItem "wosi_scanner", 1;
-		//  custom properties  /////////////////////////////////////////////////
-		// dodopod ledge climbing //
-		//binderPlayer.MaxLedgeHeight 56;
-		//binderPlayer.ClimbSpeed 2;
-		////////////////////////////
-
-		// brokenLands jump&ledge climbing //	
-		binderPlayer.BaseSpeed 2;
-		/////////////////////////////////////
-	}
+	
 	
 	States {
 		Spawn:
@@ -538,20 +580,8 @@ class binderPlayer : StrifePlayer {
 			Stop;
 		XDeath:
 			BNDP O 0 A_PlayerSkinCheck("AltSkinXDeath");
-		XDeath1:
-		/*
-			BNDP O 5 A_StartSound("Special/Gibdeath",CHAN_VOICE);
-			BNDP OOOO 0 A_SpawnDebris("FlyingBlood",1);
-			BNDP P 5 A_SpawnDebris("FlyingGibOffal",1);
-			BNDP PPPP 0 A_SpawnDebris("FlyingBlood",1);
-			BNDP P 0 A_SpawnDebris("FlyingGibOffal",1);
-			BNDP P 0 A_SpawnDebris("FlyingGibEntrails",1);
-			BNDP P 0 A_SpawnDebris("FlyingGibOffal",1);
-			BNDP Q 4 A_NoBlocking();
-			BNDP QQQ 0 A_SpawnDebris("FlyingBlood",1);
-			*/
-			BNDP RSTU 4;
-			
+		XDeath1:						
+			BNDP RSTU 4;			
 			BNDP W -1;
 			Stop;
 		AltSkinDeath:

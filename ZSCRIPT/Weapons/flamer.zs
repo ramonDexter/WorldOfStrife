@@ -20,7 +20,16 @@ class wosFlamethrower : wosWeapon replaces FlameThrower {
 		Spawn:
 			DUMM A -1;
 			Stop;			
-	
+			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+			
 		Ready:
 			FLMT A 3 A_WeaponReady(WRF_ALLOWUSER1);
 			FLMT B 3 A_WeaponReady(WRF_ALLOWUSER1);

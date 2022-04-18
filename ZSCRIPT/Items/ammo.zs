@@ -3,9 +3,9 @@ const elBoltsQwWeight = 24;
 const posBoltsQwWeight = 12;
 const elBoltsBndlWeight = 10;
 const posBoltsBndlWeight = 5;
-const energyPodWeight = 5;
-const energyKitWeight = 10;
-const energyPackWeight = 20;
+const energyPodWeight = 3;
+const energyKitWeight = 8;
+const energyPackWeight = 15;
 const boxOfBulletsWeight = 20;
 const bulletCartridgeWeight = 5;
 const miniMissileBndlWeight = 25;
@@ -13,6 +13,7 @@ const heGRboxWeight = 35;
 const fireGRboxWeight = 35;
 const ammoSatchelWeight = 50;
 const ammoBandolierWeight = 50;
+const wosEnergyCellWeight = 5;
 ////////////////////////////////////////////////////////////////////////////////
 
 /*class wosAmmo : Ammo {
@@ -258,57 +259,25 @@ class wosEnergyPod : wosPickup {
 			Stop;	
 	}
 }
-/*
-class energyPodPack_item : wosPickup
-{
-	Default
-	{
-		//$Category "Ammunition"
-		//$Title "Energy Pod pack"
-		+INVENTORY.INVBAR
-		+DONTINTERPOLATE
-		scale 0.6;
-		radius 10;
-		height 16;
-		Tag "$T_ENERGYPODPACK";
-		inventory.icon "I_EPPK";
-		inventory.amount 1;
-		Inventory.MaxAmount 10;
-		inventory.interhubamount 10;
-		Inventory.PickupMessage "$F_ENERGYPODPACK";	
-	
-	}
-	
-	States
-	{
-		Spawn:
-			EPPK AAAAAABBBBBB 1 BRIGHT;
-			Loop;
-			
-		Use:
-			TNT1 A 0 A_GiveInventory("EnergyPod", 60);
-			Stop;
-	}
-}
-*/
-class wosEnergyPack : wosPickup {
+class wosEnergyCell : wosPickup {
 	Default {
 		//$Category "Ammunition/WoS"
-		//$Title "Energy Pack (item)"
+		//$Title "Energy Cell (item)"
+		
 		+INVENTORY.INVBAR
 		
-		Tag "$T_ENERGYPACK";
-		inventory.icon "I_CPAX";	
-		Inventory.PickupMessage "$F_ENERGYPACK";		
-		Mass energyPackWeight;
+		Tag "Energy Cell";
+		Inventory.Icon "I_ENCL";
+		Inventory.PickupMessage "You picked up the energy cell.";
+		Mass wosEnergyCellWeight;
 	}
-	
 	States {
 		Spawn:
-			DUMM AAABB 6 Bright;
+			DUMM AAAAA 6 Bright;
+			DUMM BCDEEDCB 6;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("EnergyPod", 120);
+			TNT1 A 0 A_GiveInventory("energyPod", 45);
 			Stop;
 	}
 }
@@ -342,6 +311,60 @@ class wosEnergyKit : wosPickup {
 			Stop;
 	}
 }
+class wosEnergyPack : wosPickup {
+	Default {
+		//$Category "Ammunition/WoS"
+		//$Title "Energy Pack (item)"
+		+INVENTORY.INVBAR
+		
+		Tag "$T_ENERGYPACK";
+		inventory.icon "I_CPAX";	
+		Inventory.PickupMessage "$F_ENERGYPACK";		
+		Mass energyPackWeight;
+	}
+	
+	States {
+		Spawn:
+			DUMM AAABB 6 Bright;
+			Loop;
+		Use:
+			TNT1 A 0 A_GiveInventory("EnergyPod", 120);
+			Stop;
+	}
+}
+/*
+class energyPodPack_item : wosPickup
+{
+	Default
+	{
+		//$Category "Ammunition"
+		//$Title "Energy Pod pack"
+		+INVENTORY.INVBAR
+		+DONTINTERPOLATE
+		scale 0.6;
+		radius 10;
+		height 16;
+		Tag "$T_ENERGYPODPACK";
+		inventory.icon "I_EPPK";
+		inventory.amount 1;
+		Inventory.MaxAmount 10;
+		inventory.interhubamount 10;
+		Inventory.PickupMessage "$F_ENERGYPODPACK";	
+	
+	}
+	
+	States
+	{
+		Spawn:
+			EPPK AAAAAABBBBBB 1 BRIGHT;
+			Loop;
+			
+		Use:
+			TNT1 A 0 A_GiveInventory("EnergyPod", 60);
+			Stop;
+	}
+}
+*/
 
 
 /*

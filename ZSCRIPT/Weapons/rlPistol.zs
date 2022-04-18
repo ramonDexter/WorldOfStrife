@@ -47,8 +47,16 @@ class StormPistol : wosWeapon
 			DUMM R -1;
 			Stop;
 			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
 		Ready:
-			DUMM A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			DUMM A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 		
 		Deselect:

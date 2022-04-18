@@ -21,7 +21,7 @@ class wosPunchDagger : wosWeapon replaces PunchDagger {
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
 		Ready:
-			PUND A 1 A_WeaponReady(WRF_ALLOWUSER1);
+			PUND A 1 A_WeaponReady(WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 			
 		Deselect:

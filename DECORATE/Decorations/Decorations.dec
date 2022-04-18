@@ -9103,7 +9103,8 @@ actor wosD_dex_bioCell 21518 {
 	height 4
 	States {
 		Spawn:
-			DUMM ABCDEDCB 6
+			DUMM AAAAA 6 Bright
+			DUMM BCDEDCB 6
 			Loop
 	}
 }
@@ -9115,6 +9116,19 @@ actor wosDialogDummy 21519 {
 	States {
 		Spawn:
 			COMM A -1
+			Stop
+	}
+}
+actor wosD_dex_multiTool 21520 {
+	//$Category "Decorations/deusEx"
+	//$Title "dex multitool"
+	-NOBLOCKMAP
+	tag "multitool"
+	radius 4
+	height 4
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

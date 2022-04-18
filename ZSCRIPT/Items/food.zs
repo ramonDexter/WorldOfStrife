@@ -9,6 +9,17 @@ const donutsWeight = 4;
 const foodBoxWeight = 5;
 const foodRationWeight = 10;
 const grilledChickenWeight = 10;
+const wosVegieWeight = 1;
+const wosfbMeat1Weight = 2;
+const wosfbMeat2Weight = 1;
+const wosfbMeat3Weight = 1;
+const wosSoyFoodWeight = 2;
+const wosSodaCanWeight = 3;
+const wosCandyBarWeight = 1;
+////////////////////////////////////////////////////////////////////////////////
+
+// food dispensers, vanding machines ///////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////
 
 class waterBottle_heal : Health {
@@ -449,6 +460,7 @@ class wosVegie1 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosVegieWeight;
 	}
 	States {
 		Spawn:
@@ -475,6 +487,7 @@ class wosVegie2 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosVegieWeight;
 	}
 	States {
 		Spawn:
@@ -501,6 +514,7 @@ class wosVegie3 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosVegieWeight;
 	}
 	States {
 		Spawn:
@@ -527,6 +541,7 @@ class wosVegie4 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosVegieWeight;
 	}
 	States {
 		Spawn:
@@ -553,6 +568,7 @@ class wosVegie5 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosVegieWeight;
 	}
 	States {
 		Spawn:
@@ -579,6 +595,7 @@ class wosfbMeat1 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosfbMeat1Weight;
 	}
 	States {
 		Spawn:
@@ -605,6 +622,7 @@ class wosfbMeat2 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosfbMeat2Weight;
 	}
 	States {
 		Spawn:
@@ -631,6 +649,7 @@ class wosfbMeat3 : wosPickup {
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
+		Mass wosfbMeat3Weight;
 	}
 	States {
 		Spawn:
@@ -638,6 +657,84 @@ class wosfbMeat3 : wosPickup {
 			Stop;
 		Use:
 			TNT1 A 0 A_GiveInventory("fbMeat3", 1);
+			Stop;
+	}
+}
+
+class soyFoodHeal : Health {
+	Default { 
+		inventory.Amount 20; 
+	}
+}
+class wosSoyFood : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "Soy Food"
+		
+		Tag "Soy Food";
+		inventory.icon "I_SYFD";
+		Inventory.PickupMessage "You picked up the Soy Food!";
+		inventory.usesound "sounds/eat";
+		Mass wosSoyFoodWeight;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("soyFoodHeal", 1);
+			Stop;
+	}
+}
+
+class sodaCanHeal : Health {
+	Default {
+		inventory.Amount 10;
+	}
+}
+class wosSodaCan : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "soda can"
+		
+		Tag "NRG Soda";
+		inventory.icon "I_SDCN";
+		Inventory.PickupMessage "You picked up the NRG Soda!";
+		inventory.usesound "sounds/eat";
+		Mass wosSodaCanWeight;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("sodaCanHeal", 1);
+			Stop;
+	}
+}
+
+class candyBarHeal : Health {
+	Default {
+		inventory.Amount 15;
+	}
+}
+class wosCandyBar : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "candy bar"
+		
+		Tag "Chocolate Candybar";
+		inventory.icon "I_CDBR";
+		Inventory.PickupMessage "You picked up the Chocolate Candybar!";
+		inventory.usesound "sounds/eat";
+		Mass wosCandyBarWeight;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_GiveInventory("candyBarHeal", 1);
 			Stop;
 	}
 }

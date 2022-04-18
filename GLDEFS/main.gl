@@ -113,16 +113,31 @@ pointlight EnergyKitLight {
 	color 0.0 0.8 0.2
     size 16
 }
+pointlight energycellLight {
+	color 0.0 0.8 0.2
+	size 8
+	offset 0 4 0
+}
 
 object wosEnergyKit {
-	Frame MENKB { Light EnergyKitLight }
+	Frame DUMMA { Light EnergyKitLight }
 }
 object wosEnergyPack {
-	frame CPACB { light EnergyKitLight }
+	frame DUMMA { light EnergyKitLight }
 }
 object wosenergypod {
-	frame BRY1B { light EnergyKitLight }
+	frame DUMMA { light EnergyKitLight }
 }
+object wosD_energypod {
+	frame DUMMA { light EnergyKitLight }
+}
+object wosEnergyCell {
+	frame DUMMA { light energycellLight }
+}
+object wosD_dex_bioCell {
+	frame DUMMA { light energycellLight }
+}
+
 object MM_ammoCrate_01 {
 	frame DUMMB { light EnergyKitLight }
 }

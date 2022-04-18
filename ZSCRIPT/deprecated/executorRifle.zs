@@ -39,7 +39,7 @@ class executorRifle : wosWeapon {
             Loop;
 
         Ready:
-            ERMD B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+            ERMD B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
             Loop;
 
         Fire:

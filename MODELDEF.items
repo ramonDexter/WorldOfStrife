@@ -384,6 +384,22 @@ model wosEnergyPod {
 	skin 0 "tx_energyPod_1.png"	
 	frameIndex DUMM B 0 1
 }
+model wosEnergyCell {
+	path "models/props/deusex/"
+	model 0 "dex_bioCell.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	skin 0 "BioCellTex1.png"
+	frameindex DUMM A 0 0
+	skin 0 "BioCellTex2.png"
+	frameindex DUMM B 0 0
+	skin 0 "BioCellTex3.png"
+	frameindex DUMM C 0 0
+	skin 0 "BioCellTex4.png"
+	frameindex DUMM D 0 0
+	skin 0 "BioCellTex5.png"
+	frameindex DUMM E 0 0
+}
 model wosD_energypod {
 	path "models/items/ammo/"
 	model 0 "energyPod.md3"
@@ -1530,6 +1546,30 @@ model wosfoodRation3 {
 	model 0 "foodBox.md3"
 	skin 0 "tx_foodbox3.png"
 	scale 4.0 4.0 4.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosSoyFood {
+	path "models/props/deusex/"
+	model 0 "dex_soyFood.md3"
+	skin 0 "SoyFoodTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosSodaCan {
+	path "models/props/deusex/"
+	model 0 "dex_sodaCan.md3"
+	skin 0 "SodacanTex1.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosCandyBar {
+	path "models/props/deusex/"
+	model 0 "dex_candybar.md3"
+	skin 0 "CandybarTex1.png"
+	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

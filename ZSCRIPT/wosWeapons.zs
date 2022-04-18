@@ -383,6 +383,12 @@ class wosWeapon : StrifeWeapon {
 	
 	
 	// reload actions //////////////////////////////////////////////////////////
+	action void W_checkAmmo(int much = 1) {
+		If ( CountInv(invoker.ammoType1) < much || CountInv(invoker.ammoType2) < much) {
+			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
+		}
+	}
+
 	action void W_Reload() {
 		if ( player == null ) {
 			return;
@@ -406,9 +412,11 @@ class wosWeapon : StrifeWeapon {
 		if ( player == null ) {
 			return;
 		}
-		if ( CountInv(invoker.ammoType2) == 0 ) {
+		if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) == 0 ) {
 			A_Log("\c[red]Ammo depleted!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
 			A_SelectWeapon("wospunchdagger");
+			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
 			return;
 		} else {
 			if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) > 0 ) {
@@ -484,7 +492,7 @@ class wosWeapon : StrifeWeapon {
 		// - just add WRF_ALLOWUSER1 flag to A_WeaponReady()
 		//----------------------------------------------------------------------
 		
-		User1: 
+		User4: 
 			"----" A 1 Offset(0,35);
 			//"----" A 1 Offset(0,38);
 			"----" A 1 Offset(0,44);
@@ -494,7 +502,7 @@ class wosWeapon : StrifeWeapon {
 			"----" A 1 Offset(0,82);
 			KICK ABCD 2;
 			KICK EFG 1;
-			KICK H 2 A_Kicking("StaffBlasterPuff");//A_KnifeSlash();
+			KICK H 2 W_Kicking("StaffBlasterPuff");//A_KnifeSlash();
 			KICK GFED 1;
 			KICK CBA 2;
 			TNT1 A 0 {

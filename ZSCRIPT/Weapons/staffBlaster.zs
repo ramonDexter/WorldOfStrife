@@ -49,9 +49,19 @@ class staffBlaster : wosWeapon {
 	States {
 		Spawn:
 			DUMM A -1;
-			Stop;		
+			Stop;
+				
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+					
 		Ready:				
-			ASTF J 2 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			ASTF J 2 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;		
 		Deselect:
 			ASTF J 0 A_Lower();
@@ -63,7 +73,7 @@ class staffBlaster : wosWeapon {
 			Loop;		
 		Fire:
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
-			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1);
+			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		
 		RealFire:
 			ASTF A 0 A_JumpIfNoAmmo("Reload");
@@ -74,8 +84,8 @@ class staffBlaster : wosWeapon {
 			ASTF E 1; 
 			ASTF F 3;
 			ASTF G 5 A_Refire("RealFire");
-			ASTF G 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);				
-			ASTF HIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_NOFIRE|WRF_NOSWITCH);
+			ASTF G 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);				
+			ASTF HIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4|WRF_NOFIRE|WRF_NOSWITCH);
 			TNT1 A 0 { invoker.staffIsFiring = 0; } //hul se muze vratit na stranu
 			Goto Ready;
 			

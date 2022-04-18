@@ -90,7 +90,7 @@ DoomEdNums {
 	20085 = wosCheeseburgerDouble
 	20086 = questMarker
 	20087 = spider_leader
-	//20088 = jetPack_item
+	20088 = wosEnergyCell
 	20089 = wosSwarmers
 	20090 = hereticDatapad1
 	20091 = wosBundlePoison
@@ -253,9 +253,9 @@ DoomEdNums {
 	20248 = wosD_Rebreather
 	20249 = wosD_RegenModule
 	20250 = spikerTrapFriendly
-	20251 = m8f_hn_AreaNameMarker_MP_binderBase
-	20252 = m8f_hn_AreaNameMarker_MP_binderBase_yourFlat
-	20253 = m8f_hn_AreaNameMarker_MP_binderBase_mainCommand
+	20251 = wosSoyFood
+	20252 = wosSodaCan
+	20253 = wosCandyBar
 	20254 = m8f_hn_AreaNameMarker_MP_millport
 	20255 = m8f_hn_AreaNameMarker_MP_techsmith
 	20256 = m8f_hn_AreaNameMarker_MP_blackPub

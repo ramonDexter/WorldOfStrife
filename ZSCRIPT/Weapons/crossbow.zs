@@ -36,7 +36,16 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
         Spawn:
             DUMM A -1;
             Stop;
-
+	
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+			
         Ready:
 			TNT1 A 0
 			{
@@ -46,12 +55,12 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 			}
         ElectricReady:
 			XBOW A 0;
-            XBOW A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+            XBOW A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
             Loop;
 			
         PoisonReady:
 			XBOW A 0;
-            XBOW H 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+            XBOW H 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
             Loop;
 			
         AltFire:

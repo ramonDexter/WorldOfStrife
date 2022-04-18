@@ -47,6 +47,15 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			DUMM A -1;
 			Stop;
 			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+
 		Select:
 			RIFG A 1 A_Raise();
 			RIFG A 0 A_Raise();
@@ -58,12 +67,12 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			Loop;
 			
 		Ready:
-			RIFG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			RIFG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 			
 		Fire:
 			TNT1 A 0 A_JumpIf(invoker.assaultGun_isFiring == 1, "RealFire");
-			RIFG AEH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);			
+			RIFG AEH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);			
 			TNT1 A 0
 			{
 				invoker.assaultGun_isFiring = 1;				
@@ -79,8 +88,8 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
 			RIFF A 0 A_Refire("RealFire");
-			RIFG H 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
-			RIFG GFEDCBA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			RIFG H 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
+			RIFG GFEDCBA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			TNT1 A 0
 			{
 				invoker.assaultGun_isFiring = 0;

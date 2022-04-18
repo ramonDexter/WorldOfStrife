@@ -56,7 +56,16 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		Spawn:
 			DUMM A -1;
 			Stop;
-		
+			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+			
 		Ready:
 			TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) { return ResolveState("ReadyPrimary");}
@@ -64,10 +73,10 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 				return ResolveState(null);
 			}		
 		ReadyPrimary:			
-			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 		ReadyAlt:
-			MMIS T 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+			MMIS T 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 			
 		//AltFire:

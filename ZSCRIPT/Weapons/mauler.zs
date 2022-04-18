@@ -47,6 +47,15 @@ class wosMauler : wosWeapon replaces Mauler {
 			DUMM A -1;
 			Stop;
 			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
+
 		Ready:
 			TNT1 A 0 {
 				if(invoker.maulerSwitch == 1) { return resolveState("mauler2ready"); }

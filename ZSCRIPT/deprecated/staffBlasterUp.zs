@@ -56,7 +56,7 @@ class StaffBlasterUpgr : wosWeapon
 		Ready:
 			USTF J 2 
 			{
-				A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
+				A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 				A_WeaponOffset(CallACS("Script_GetGunOffsetX"));
 			}	
 			Loop;
@@ -92,7 +92,7 @@ class StaffBlasterUpgr : wosWeapon
 			}
 			//intentional fallthrough
 		setFire2:
-			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1);
+			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			USSW A 4;
 			USSW B 3;
 			USSW C 3;
@@ -113,7 +113,7 @@ class StaffBlasterUpgr : wosWeapon
 			USTF HIJ 3;
 			goto Ready;
 		setFire1:
-			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1);
+			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			USSW A 4;
 			USSW B 3;
 			USSW C 3;
@@ -150,7 +150,7 @@ class StaffBlasterUpgr : wosWeapon
 			//intentional fallthrough
 		Fire1:
 			TNT1 A 0 A_JumpIf(invoker.Fire1 == 1, "RealFire1");
-			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1);
+			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE | WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			USTF A 1 //takze hul zustane ve stredu obrazu
 			{
 				invoker.Fire1 = 1;
@@ -168,8 +168,8 @@ class StaffBlasterUpgr : wosWeapon
 			USTF E 1;
 			USTF F 3;
 			USTF A 5 A_Refire("RealFire1"); //umoznuje rychlou strelbu
-			USTF A 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
-			USTF GHIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1);
+			USTF A 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
+			USTF GHIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			TNT1 A 0
 			{
 				invoker.Fire1 = 0;
@@ -178,7 +178,7 @@ class StaffBlasterUpgr : wosWeapon
 		
 		Fire2:
 			TNT1 A 0 A_JumpIf(invoker.Fire2 == 1, "RealFire2");
-			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1);
+			USTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			USTF A 1 //takze hul zustane ve stredu obrazu
 			{
 				invoker.Fire2 = 1;
@@ -215,8 +215,8 @@ class StaffBlasterUpgr : wosWeapon
             USTG C 1 bright Offset(0,33);
             USTG B 1 bright Offset(0,32);
             USTG A 5 A_ReFire("RealFire2");
-            USTF A 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1);
-			USTF GHIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1);
+            USTF A 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
+			USTF GHIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			TNT1 A 0
 			{
 				invoker.Fire2 = 0;

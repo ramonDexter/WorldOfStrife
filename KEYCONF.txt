@@ -11,6 +11,8 @@ AddMenuKey "ShoulderGun" shoulderGun_bind
 alias shoulderGun_bind "use shoulderGun"
 defaultbind "F" shoulderGun_bind
 
+//AddMenuKey "Kick" +User4
+
 addmenukey "Toggle Flashlight" toggleflashlight_bind 
 alias toggleflashlight_bind "pukename toggleflashlight"  
 defaultbind "G" toggleflashlight_bind
@@ -24,7 +26,6 @@ defaultbind Q +look
 alias +look "netevent mwr_lookcursor_on"
 alias -look "netevent mwr_lookcursor_off"
 
-//AddMenuKey "Kick" +User1
 
 //addMenuKey "Throw explosive grenade" throwExplosiveGrenade
 //alias throwExplosiveGrenade "use GrenadeExplosive"

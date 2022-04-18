@@ -1,6 +1,6 @@
 const CrossbowBaseWeight = 85;
 
-class zscStrifeCrossbow : augmentedWeapon replaces StrifeCrossbow
+class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 {
     bool xbowSwitch;
 
@@ -173,7 +173,7 @@ class zscStrifeCrossbow : augmentedWeapon replaces StrifeCrossbow
 			Stop;
 			
 		AmmoDepleted:
-			TNT1 A 0 A_SelectWeapon("zscPunchDagger");
+			TNT1 A 0 A_SelectWeapon("wosPunchDagger");
 			Stop;
 			
 		
@@ -247,7 +247,7 @@ class zscPoisonBolt : Actor {
 	}
 }
 
-class zscStrifeCrossbow2 : StrifeCrossbow2 replaces StrifeCrossbow2 {
+class wosStrifeXbow2 : StrifeCrossbow2 replaces StrifeCrossbow2 {
 	Default {
 		+WEAPON.CHEATNOTWEAPON			
 	}

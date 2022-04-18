@@ -1,13 +1,14 @@
 const assaultGunBaseWeight = 150;
 
-class zAssaultGunMag : Ammo {
-	Default {		
+class magazine_wosAssaultGun : ammo {
+	Default {
 		+Inventory.IgnoreSkill;		
 		Inventory.MaxAmount 32;
+		Mass 0;
 	}
 }
 
-class zscAssaultGun : augmentedWeapon replaces AssaultGun {
+class wosAssaultGun : wosWeapon replaces AssaultGun {
 	bool assaultGun_isFiring;
 	
 	Default {
@@ -28,7 +29,7 @@ class zscAssaultGun : augmentedWeapon replaces AssaultGun {
 		Weapon.SlotNumber 3;
 		Weapon.SlotPriority 1;
 		Weapon.Kickback 40;
-		Weapon.AmmoType1 "zAssaultGunMag";
+		Weapon.AmmoType1 "magazine_wosAssaultGun";
 		Weapon.AmmoUse1 1;	
 		Weapon.AmmoGive1 0;	
 		Weapon.AmmoType2 "ClipOfBullets";
@@ -89,6 +90,9 @@ class zscAssaultGun : augmentedWeapon replaces AssaultGun {
 		
 		Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
+			//TNT1 A 0 W_reloadCheck();
 			RIFG ABCDEFG 1;
 			RIFR A 2;
 			RIFR B 3;
@@ -112,11 +116,11 @@ class zscAssaultGun : augmentedWeapon replaces AssaultGun {
 	}
 }
 
-class zscAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
+class wosAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 	Default {
 		//$Category "Weapons"
 		//$Title "zsc Assault Gun - standing"
-		DropItem "zscAssaultGun";
+		DropItem "wosAssaultGun";
 		Inventory.PickupMessage "$TXT_ASSAULTGUN";
 		radius 12;
 		height 32;

@@ -1,20 +1,20 @@
 const maulerBaseWeight = 300;
 
-class zscMaulerFire1token : inventory {
+class wosMaulerFire1token : inventory {
 	Default {
 		inventory.amount 1;
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 	}
 }
-class zscMaulerFire2token : inventory {
+class wosMaulerFire2token : inventory {
 	Default {
 		inventory.amount 1;
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 	}
 }
-class zscMauler : augmentedWeapon replaces Mauler {
+class wosMauler : wosWeapon replaces Mauler {
 
 	int maulerSwitch;
 	
@@ -27,7 +27,7 @@ class zscMauler : augmentedWeapon replaces Mauler {
 		Tag "$T_MAULER";
 		Inventory.PickupMessage "$F_MAULER";
 		inventory.icon "H_MAUL";
-		//Weapon.SisterWeapon "zscMauler2";
+		//Weapon.SisterWeapon "wosMauler2";
 		Weapon.AmmoUse1 0;
         Weapon.AmmoGive1 100;
         Weapon.AmmoType1 "energyPod";
@@ -76,8 +76,8 @@ class zscMauler : augmentedWeapon replaces Mauler {
 		setMauler1:
 			TNT1 A 0 {
 				invoker.maulerSwitch = 0;
-				self.giveinventory("zscMaulerFire1token", 1);
-				self.takeinventory("zscMaulerFire2token", 1);
+				self.giveinventory("wosMaulerFire1token", 1);
+				self.takeinventory("wosMaulerFire2token", 1);
 			}
 			MAUL FG 6;
 			MAUL HA 6;
@@ -85,8 +85,8 @@ class zscMauler : augmentedWeapon replaces Mauler {
 		setMauler2:
 			TNT1 A 0 {
 				invoker.maulerSwitch = 1;
-				self.giveinventory("zscMaulerFire2token", 1);
-				self.takeinventory("zscMaulerFire1token", 1);
+				self.giveinventory("wosMaulerFire2token", 1);
+				self.takeinventory("wosMaulerFire1token", 1);
 			}
 			MAUL IJKL 7;
 			goto mauler2ready;
@@ -100,7 +100,7 @@ class zscMauler : augmentedWeapon replaces Mauler {
 			
 		mauler1fire:
 			BLSF A 5 Bright {
-				W_FireZSCMauler1();
+				W_FirewosMauler1();
 				A_TakeInventory("energyPod", 15);
 			}
 			MAUL B 3 Bright A_Light1();
@@ -112,10 +112,10 @@ class zscMauler : augmentedWeapon replaces Mauler {
 			goto mauler1ready;
 		
 		mauler2fire:
-			MAUL I 20 W_FireZSCMauler2Pre();
+			MAUL I 20 W_FirewosMauler2Pre();
 			MAUL J 10 A_Light1;
 			BLSF A 10 Bright {
-				W_FireZSCMauler2();
+				W_FirewosMauler2();
 				A_TakeInventory("energyPod", 30);			
 			}
 			MAUL B 10 Bright A_Light2();
@@ -165,26 +165,26 @@ class zscMauler : augmentedWeapon replaces Mauler {
 		mauler1user1:
 			TNT1 A 0 
 			{
-				A_GiveInventory("zscMauler_knife", 1);
-				A_selectWeapon("zscMauler_knife");
+				A_GiveInventory("wosMauler_knife", 1);
+				A_selectWeapon("wosMauler_knife");
 			}
 			Goto Ready;	
 		mauler2user1:
 			TNT1 A 0 
 			{
-				A_GiveInventory("zscMauler_knife", 1);
-				A_selectWeapon("zscMauler_knife");
+				A_GiveInventory("wosMauler_knife", 1);
+				A_selectWeapon("wosMauler_knife");
 			}
 			Goto Ready;	*/
 	}	
 }
 
-class zscMauler2 : Mauler2 replaces Mauler2 {
+class wosMauler2 : Mauler2 replaces Mauler2 {
 	Default {
 		+WEAPON.CHEATNOTWEAPON
 		
 		//inventory.icon "I_MAUL";
-		//Weapon.SisterWeapon "zscMauler";
+		//Weapon.SisterWeapon "wosMauler";
 	}	
 }
 
@@ -211,7 +211,7 @@ class mauler_dummy : actor {
 	}
 }
 
-class zscMaulerTorpedo : MaulerTorpedo {
+class wosMaulerTorpedo : MaulerTorpedo {
 	Default {
 		+THRUGHOST		
 	}

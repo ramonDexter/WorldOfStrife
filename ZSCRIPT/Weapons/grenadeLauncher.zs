@@ -14,7 +14,7 @@ class grenadeLauncherFire2token : inventory {
 		inventory.interhubamount 1;
 	}
 }
-class zscStrifeGrenadeLauncher : augmentedWeapon replaces StrifeGrenadeLauncher {
+class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 	int grnlSwitch;
 	
 	Default {
@@ -29,7 +29,7 @@ class zscStrifeGrenadeLauncher : augmentedWeapon replaces StrifeGrenadeLauncher 
 		Tag "$T_GRENADELAUNCHER";
 		Inventory.PickupMessage "$F_GRENADELAUNCHER";
 		inventory.icon "H_GRND";
-		//weapon.sisterweapon "zscStrifeGrenadeLauncher2";
+		//weapon.sisterweapon "wosGrenadeLauncher2";
 		Weapon.AmmoUse1 0;
 		Weapon.AmmoGive1 24;
 		Weapon.AmmoType1 "HEGrenadeRounds";
@@ -169,10 +169,10 @@ class zscPhosphorousGrenade : PhosphorousGrenade {
 	}
 }
 
-class zscStrifeGrenadeLauncher2 : StrifeGrenadeLauncher2 replaces StrifeGrenadeLauncher2 {
+class wosGrenadeLauncher2 : StrifeGrenadeLauncher2 replaces StrifeGrenadeLauncher2 {
 	Default {
 		+WEAPON.CHEATNOTWEAPON	
 		//inventory.icon "I_GRND";
-		//weapon.sisterweapon "zscStrifeGrenadeLauncher";
+		//weapon.sisterweapon "wosGrenadeLauncher";
 	}
 }

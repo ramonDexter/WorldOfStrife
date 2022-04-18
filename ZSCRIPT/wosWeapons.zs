@@ -3,10 +3,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 //  weapon base class  /////////////////////////////////////////////////////////
-class augmentedWeapon : StrifeWeapon {
+class wosWeapon : StrifeWeapon {
 	//  vars&properties
-	//int magazine; 
-	//property Magazine : magazine;	
+	//int weaponmag; 
+	//property Magazine : weaponmag;
+    //class<wosAmmo> magType;
+    //property magazineType : magType;	
 	
 	//  staffBlaster actions  //////////////////////////////////////////////////
 	action void W_FireStaffBlaster(string projectileType, string flashType, bool alertMonsters) {
@@ -22,7 +24,7 @@ class augmentedWeapon : StrifeWeapon {
 		//player.mo.PlayAttacking2 ();
 		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
 		A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
-		//ownr.takeInventory("Staffmagazine", 1);
+		//ownr.takeInventory("magazine_blasterStaff", 1);
 		A_StartSound("weapons/staffShoot", 0);
 		A_SpawnItemEx(flashType, 8, 0, 16, 0);	
 		if ( alertMonsters ) {
@@ -98,7 +100,7 @@ class augmentedWeapon : StrifeWeapon {
 		//player.mo.PlayAttacking2 ();
 		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
 		A_FireProjectile (projectileType, angl, false, 7, 5, FPF_NOAUTOAIM);	
-		//ownr.takeInventory("Staffmagazine", 1);
+		//ownr.takeInventory("magazine_blasterStaff", 1);
 		A_StartSound("weapons/staffShoot", 0);
 		A_SpawnItemEx(flashType, 8, 0, 16, 0);		
 	}
@@ -146,7 +148,7 @@ class augmentedWeapon : StrifeWeapon {
 		//player.mo.PlayAttacking2 ();
 		double angl = Random2[miniMissileType]() * (7.625 / 256) * AccuracyFactor();
 		A_FireProjectile (miniMissileType, angl, false, 5, 0, FPF_NOAUTOAIM);
-		//ownr.takeInventory("missileLauncherMag", 1);
+		//ownr.takeInventory("magazine_missileLauncher", 1);
 		//angle = savedangle;
 	}
 	////////////////////////////////////////////////////////////////////////////
@@ -154,7 +156,7 @@ class augmentedWeapon : StrifeWeapon {
 	////////////////////////////////////////////////////////////////////////////
 	// credits: gzdoom.pk3 /////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
-	action void W_FireZSCMauler1() {
+	action void W_FirewosMauler1() {
 		if (player == null) {
 			return;
 		}
@@ -182,7 +184,7 @@ class augmentedWeapon : StrifeWeapon {
 	// A_FireMauler2Pre ////////////////////////////////////////////////////////
 	// credits: gzdoom.pk3 /////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
-	action void W_FireZSCMauler2Pre() {
+	action void W_FirewosMauler2Pre() {
 		A_StartSound ("weapons/mauler2charge", CHAN_WEAPON);
 		if (player != null) {
 			PSprite psp = player.GetPSprite(PSP_WEAPON);
@@ -196,7 +198,7 @@ class augmentedWeapon : StrifeWeapon {
 	// A_FireMauler2Pre ////////////////////////////////////////////////////////
 	// credits: gzdoom.pk3 /////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
-	action void W_FireZSCMauler2 () {
+	action void W_FirewosMauler2 () {
 		if (player == null) {
 			return;
 		}
@@ -206,7 +208,7 @@ class augmentedWeapon : StrifeWeapon {
 				return;
 		}
 		player.mo.PlayAttacking2 ();		
-		SpawnPlayerMissile ("zscMaulerTorpedo");
+		SpawnPlayerMissile ("wosMaulerTorpedo");
 		DamageMobj (self, null, 15, 'Disintegrate');
 		Thrust(7.8125, Angle+180.);
 	}
@@ -390,24 +392,34 @@ class augmentedWeapon : StrifeWeapon {
 			//return ResolveState("Ready");
 			A_Print("Not enough ammo!");
 		} 
-		int ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
+		//ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
+		int ammoAmount = FindInventory(invoker.ammoType1).maxAmount - CountInv(invoker.ammoType1);
 		if (ammoAmount <= 0) { 
-			//return ResolveState("Ready");
-			A_Print("Ammo full!");
+		//do nothing
 		} else { 
 			GiveInventory (invoker.ammoType1, ammoAmount);
 			TakeInventory (invoker.ammoType2, ammoAmount);
 		}
-				//return ResolveState ("ReloadFinish");
+		//return ResolveState ("ReloadFinish");
 	} 
 	action void W_reloadCheck() {
 		if ( player == null ) {
 			return;
 		}
-		//konotroluje jestli ma hrac plny zasobnik a ..
-		if (CheckInventory(invoker.ammoType1, FindInventory(invoker.ammoType1).maxAmount)) {
-			//.. vrati se do 'ready'
-			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
+		if ( CountInv(invoker.ammoType2) == 0 ) {
+			A_Log("\c[red]Ammo depleted!");
+			A_SelectWeapon("wospunchdagger");
+			return;
+		} else {
+			if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) > 0 ) {
+				Player.SetPSprite(PSP_WEAPON,invoker.FindState("DoReload"));
+			} else {
+				if (CheckInventory(invoker.ammoType1, FindInventory(invoker.ammoType1).maxAmount)) {
+					//.. vrati se do 'ready'
+					A_Log("\c[green]Ammo full!");
+					Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
+				}
+			}
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////

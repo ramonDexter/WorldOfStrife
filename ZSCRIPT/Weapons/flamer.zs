@@ -1,7 +1,7 @@
 //new flamethrower with projectile powered by flamethrower library by Boondorl
 const flamerBaseWeight = 240;
 
-class zscFlameThrower : augmentedWeapon replaces FlameThrower {
+class wosFlamethrower : wosWeapon replaces FlameThrower {
 	Default {
 		//$Category "Weapons/WoS"
 		//$Title "zsc Flamethrower"
@@ -191,7 +191,7 @@ class GroundFireFlame : Actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 /*
-class zscFlameThrower : FlameThrower replaces FlameThrower
+class wosFlamethrower : FlameThrower replaces FlameThrower
 {
 	Default
 	{

@@ -6648,7 +6648,7 @@ actor wosD_assaultGunStanding 21369 {
 			Stop
 	}
 }
-actor wosD_zscFlameThrower 21370 {
+actor wosD_wosFlamethrower 21370 {
 	//$Category "Weapons/dummy"
 	//$Title "dummy flamer"
 	radius 8
@@ -6664,7 +6664,7 @@ actor wosD_zscFlameThrower 21370 {
 			Stop
 	}
 }
-actor wosD_zscStrifeGrenadeLauncher 21371 {
+actor wosD_wosGrenadeLauncher 21371 {
 	//$Category "Weapons/dummy"
 	//$Title "dummy grenade launcher"
 	radius 8
@@ -6696,7 +6696,7 @@ actor wosD_xbow 21372 {
 			Stop
 	}
 }
-actor wosD_zscMiniMissileLauncher 21373 {
+actor wosD_wosMinimissileLauncher 21373 {
 	//$Category "Weapons/dummy"
 	//$Title "dummy missile launcher"
 	radius 8

@@ -28,7 +28,7 @@ Conversation {
 			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscStrifeCrossbow";
+			GiveItem = "wosStrifeXbow";
 			Cost {
 				Item = "goldCoin";
 				Amount = 150;
@@ -67,7 +67,7 @@ Conversation {
 			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscAssaultGun";
+			GiveItem = "wosAssaultGun";
 			Cost {
 				Item = "goldCoin";
 				Amount = 250;

@@ -3,8 +3,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 const blasterStaffBaseWeight = 100;
 
+//  staffBlaster.reload magazine  //////////////////////////////////////////////  
+class magazine_blasterStaff : ammo {
+	Default {
+		+Inventory.IgnoreSkill;		
+		Inventory.MaxAmount 48;
+	}
+}
 //  staffBlaster.weapon  ///////////////////////////////////////////////////////
-class staffBlaster : augmentedWeapon {
+class staffBlaster : wosWeapon {
 	bool staffIsFiring;
 	
 	Default {		
@@ -29,7 +36,7 @@ class staffBlaster : augmentedWeapon {
 		Weapon.SlotNumber 3;
 		Weapon.SlotPriority 3;		
 		Weapon.kickback 40;
-		Weapon.AmmoType1 "Staffmagazine";
+		Weapon.AmmoType1 "magazine_blasterStaff";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoType2 "EnergyPod";
 		Weapon.AmmoUse2 0;
@@ -90,6 +97,8 @@ class staffBlaster : augmentedWeapon {
 		
 		Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
 			ASTU A 3;
 			ASTU B 2;
 			ASTU C 1 A_StartSound("weapons/staffOpen", 0);
@@ -126,13 +135,6 @@ class staffBlaster : augmentedWeapon {
 			ASTL A 3;
 			ASTL A 3;
 			Goto Ready;		
-	}
-}
-//  staffBlaster.reload magazine  //////////////////////////////////////////////  
-class Staffmagazine : ammo {
-	Default {
-		+Inventory.IgnoreSkill;		
-		Inventory.MaxAmount 48;
 	}
 }
 //  staffBlaster.mellee puff  //////////////////////////////////////////////////

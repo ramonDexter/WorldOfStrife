@@ -6,7 +6,7 @@ class staffBlasterUpgrSelected : inventory {
 		inventory.interhubamount 1;
 	}
 }
-class StaffBlasterUpgr : augmentedWeapon
+class StaffBlasterUpgr : wosWeapon
 {
 	int Fire1;
 	int Fire2;

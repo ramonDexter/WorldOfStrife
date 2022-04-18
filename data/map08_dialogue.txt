@@ -274,7 +274,7 @@ Conversation
 		{
 			Text = "\c[yellow]Buy Crossbow";
 			NextPage = 1;
-			GiveItem = "zscStrifeCrossbow";
+			GiveItem = "wosStrifeXbow";
 			YesMessage = "Here is one Crossbow!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -302,7 +302,7 @@ Conversation
 		{
 			Text = "\c[yellow]Buy Assault Gun";
 			NextPage = 1;
-			GiveItem = "zscAssaultGun";
+			GiveItem = "wosAssaultGun";
 			YesMessage = "Here is one Assault Gun!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -342,7 +342,7 @@ Conversation
 		{
 			Text = "\c[yellow]Buy Flamethrower";
 			NextPage = 1;
-			GiveItem = "zscFlameThrower";
+			GiveItem = "wosFlamethrower";
 			YesMessage = "Here is one Flamethrower!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -370,7 +370,7 @@ Conversation
 		{
 			Text = "\c[yellow]Buy Mini-Missile Launcher";
 			NextPage = 1;
-			GiveItem = "zscMiniMissileLauncher";
+			GiveItem = "wosMinimissileLauncher";
 			YesMessage = "Here is one Mini-Missile Launcher!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -398,7 +398,7 @@ Conversation
 		{
 			Text = "\c[yellow]Buy Mauler";
 			NextPage = 1;
-			GiveItem = "zscMauler";
+			GiveItem = "wosMauler";
 			YesMessage = "Here is one Mauler!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;

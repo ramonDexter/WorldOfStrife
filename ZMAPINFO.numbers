@@ -10,9 +10,9 @@ DoomEdNums {
 	20005 = StormPistol
 	20006 = wosNightEyeDevice
 	20007 = laserPistol
-	20008 = zscMiniMissileLauncher
+	20008 = wosMinimissileLauncher
 	20009 = wosFlameTurret
-	20010 = zscAssaultGun_standing
+	20010 = wosAssaultGun_standing
 	20011 = hackedSentinel
 	20012 = wosGrenadeE
 	20013 = wosGrenadeF
@@ -39,7 +39,7 @@ DoomEdNums {
 	20034 = wosVineBottle
 	20035 = ZFIRE
 	20036 = ZFIRE2
-	20037 = zscAssaultGun
+	20037 = wosAssaultGun
 	20038 = wosHamburger
 	20039 = wosCheeseburger
 	20040 = wosBigburger
@@ -83,9 +83,9 @@ DoomEdNums {
 	20078 = vendor_green
 	20079 = vendor_gray
 	20080 = vendor_red	
-	20081 = zscFlameThrower
-	20082 = zscMauler
-	20083 = zscStrifeGrenadeLauncher
+	20081 = wosFlamethrower
+	20082 = wosMauler
+	20083 = wosGrenadeLauncher
 	20084 = spikerTrap 
 	20085 = wosCheeseburgerDouble
 	20086 = questMarker
@@ -106,7 +106,7 @@ DoomEdNums {
 	20101 = ZombieFodder
 	20102 = fodderGhoul
 	20103 = mauler_dummy
-	20104 = zscStrifeCrossbow
+	20104 = wosStrifeXbow
 	20105 = wosPortableMap
 	20106 = AvalonSpider
 	20107 = BloodSpider

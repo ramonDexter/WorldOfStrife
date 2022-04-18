@@ -1,20 +1,33 @@
-class BHimpossibleKey : StrifeKey {
+////////////////////////////////////////////////////////////////////////////////
+// World of Strife keys definition /////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// base parent class ///////////////////////////////////////////////////////////
+class wosKey : StrifeKey {
 	Default {
-		//$Category "Keys/WoS"		
+		//$Category "Keys/WoS"
+		Mass 0;
+		-INVENTORY.INVBAR
 	}
-	
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// to show 'impossible!' message ///////////////////////////////////////////////
+class BHimpossibleKey : StrifeKey {
+	Default {}	
 	States {
 		Spawn:
 			TNT1 A -1;
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+
 // universal key ///////////////////////////////////////////////////////////////
-class skeletonKey : StrifeKey {
+class skeletonKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		+INVENTORY.INVBAR
-		inventory.icon "I_SKLK";
+		//+INVENTORY.INVBAR
+		inventory.icon "K_SKLK";//I_SKLK
 		Tag "Skeleton Key";
 	}
 	
@@ -24,13 +37,13 @@ class skeletonKey : StrifeKey {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
 
 //MAP02 KEYS
 //------------------------------------------------------------------------------
-class BHWasteCatacombKey : StrifeKey {
+class BHWasteCatacombKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.Icon "I_TUNL";
+		Inventory.Icon "K_TUNL";//I_TUNL
 		Tag "Catacombs Key";
 		Inventory.PickupMessage "You picked up the Catacomb Key.";
 	}
@@ -42,10 +55,9 @@ class BHWasteCatacombKey : StrifeKey {
 	}
 }
 
-class BHWasteKey : StrifeKey {
+class BHWasteKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.Icon "I_TUNL";
+		Inventory.Icon "K_TUNL";//I_TUNL
 		Tag "Waste Treatment Key";
 		Inventory.PickupMessage "You picked up the Waste Treatment Key.";	
 	}
@@ -57,10 +69,9 @@ class BHWasteKey : StrifeKey {
 	}
 }
 
-class BHminesKey : StrifeKey {
+class BHminesKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.Icon "I_MINE";
+		Inventory.Icon "K_MINE";//I_MINE
 		Tag "Mines key";
 		Inventory.PickupMessage "You picked up the Mine Key.";
 	}
@@ -72,11 +83,10 @@ class BHminesKey : StrifeKey {
 	}
 }
 
-class BHbathKey : StrifeKey {
-	Default {
-		//$Category "Keys/WoS"		
-		Tag "Bath entrance pass";
-		inventory.icon "I_BATH";
+class BHbathKey : wosKey {
+	Default {		
+		Tag "Silent Hills\nBath entrance pass";
+		inventory.icon "K_BATH";//I_BATH
 	}
 	
 	States {
@@ -89,11 +99,10 @@ class BHbathKey : StrifeKey {
 
 //MAP04 keys
 //------------------------------------------------------------------------------
-class BHpowerPlantKey : StrifeKey {
+class BHpowerPlantKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.Icon "I_PWR1";
-		Tag "Powerplant Key";
+		Inventory.Icon "K_PWR1";//I_PWR1
+		Tag "PWPLNT Key";
 		Inventory.PickupMessage "You picked up the Powerplant Key.";
 	}
 	
@@ -104,11 +113,10 @@ class BHpowerPlantKey : StrifeKey {
 	}
 }
 
-class BHpowerPlantKey2 : StrifeKey {
+class BHpowerPlantKey2 : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.icon "I_PWR2";
-		Tag "Powerplant Security card";
+		Inventory.icon "K_PWR2";//I_PWR2
+		Tag "PWPLNT Security card";
 		Inventory.PickupMessage "You picked up the Powerplant Security card.";
 	}
 	
@@ -119,12 +127,10 @@ class BHpowerPlantKey2 : StrifeKey {
 	}
 }
 
-class BHpowerPlantReactorKey : StrifeKey {
+class BHpowerPlantReactorKey : wosKey {
 	Default {
-		//$category "Keys/WoS"
-		
-		Inventory.icon "I_ORAC";
-		Tag "Powerplant Reactor key";
+		Inventory.icon "K_ORAC";//I_ORAC
+		Tag "PWPLNT Reactor key";
 		Inventory.PickupMessage "You picked up the Powerplant Reactor key.";
 	}
 	
@@ -138,11 +144,9 @@ class BHpowerPlantReactorKey : StrifeKey {
 
 // MAP06 Keys //////////////////////////////////////////////////////////////////
 //------------------------------------------------------------------------------
-class BHfactoryKey : StrifeKey {
+class BHfactoryKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		
-		Inventory.icon "I_FCTR";
+		Inventory.icon "K_FCTR";//I_FCTR
 		Tag "Factory ID card";
 		Inventory.PickupMessage "You picked up the Factory ID card.";
 	}
@@ -155,11 +159,10 @@ class BHfactoryKey : StrifeKey {
 }
 //------------------------------------------------------------------------------
 
-class SHtgPowerplantKey : StrifeKey {
+class SHtgPowerplantKey : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.icon "I_TGPP";
-		Tag "TekGuild Powerplant ID card";
+		Inventory.icon "K_TGPP";//I_TGPP
+		Tag "TekGuild Powerplant\nID card";
 		Inventory.PickupMessage "You picked up the TekGuild Powerplant ID card.";
 	}
 	States {
@@ -199,11 +202,10 @@ class m10k_acolyteBase_secondKey : StrifeKey {
 	}
 }*/
 // map08 keys //////////////////////////////////////////////////////////////////
-class m08k_BP_pokladnice : StrifeKey {
+class m08k_BP_pokladnice : wosKey {
 	Default {
-		//$Category "Keys/WoS"
-		Inventory.Icon "I_AB1K";
-		Tag "Baron's Treasury Key";
+		Inventory.Icon "K_AB1K";//I_AB1K
+		Tag "Baron's\nTreasury Key";
 		Inventory.PickupMessage "You picked up the Baron's Treasury Key!";
 	}
 	States {
@@ -213,3 +215,7 @@ class m08k_BP_pokladnice : StrifeKey {
 	}
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

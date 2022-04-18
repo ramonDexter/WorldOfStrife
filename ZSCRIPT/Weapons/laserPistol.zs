@@ -1,13 +1,14 @@
 const laserPistolBaseWeight = 70;
 
-class laserPistolCharge : ammo {
+class magazine_pistolLaser : ammo {
 	Default {
 		+Inventory.IgnoreSkill
-		
+		Mass 0;
 		inventory.maxAmount 32;
 	}
 }
-class laserPistol : augmentedWeapon {
+
+class laserPistol : wosWeapon {
 	bool laserPistolIsFiring;
 	
 	Default {
@@ -29,7 +30,7 @@ class laserPistol : augmentedWeapon {
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 2;
 		Weapon.SlotPriority 3;
-		Weapon.AmmoType1 "laserPistolCharge";
+		Weapon.AmmoType1 "magazine_pistolLaser";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoType2 "EnergyPod";
 		Weapon.AmmoUse2 0;
@@ -79,6 +80,9 @@ class laserPistol : augmentedWeapon {
 			Goto Ready;
 		Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
+			//TNT1 A 0 W_reloadCheck();
 			LSPR A 2;
 			LSPR B 2;
 			LSPR C 2;

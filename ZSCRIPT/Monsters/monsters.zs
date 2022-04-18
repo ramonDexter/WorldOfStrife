@@ -55,7 +55,7 @@ class rebelEnemy : Rebel replaces Rebel {
 						lootmoney--;
 					}
 				}
-				If( lootgun == 1 ){ Actor gun = A_DropItem("zscAssaultGun"); }
+				If( lootgun == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
 				Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
 				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
 				searched = 1;
@@ -1300,7 +1300,7 @@ class wosAcolyte : Acolyte replaces Acolyte {
 						lootmoney--;
 					}
 				}
-				If( lootgun == 1 ){ Actor gun = A_DropItem("zscAssaultGun"); }
+				If( lootgun == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
 				Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
 				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
 				searched = 1;

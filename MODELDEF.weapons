@@ -462,7 +462,7 @@ model StaffBlasterUpgr {
 ////////////////////////////////////////////////////////////////////////////////
 //  crossbow  //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscStrifeCrossbow {
+model wosStrifeXbow {
 	NOINTERPOLATION
 	path "models/weapons/xbow/"
 	model 0 "crossbowPX.md3"
@@ -479,7 +479,7 @@ model zscStrifeCrossbow {
 	frameIndex XBOW E 0 9
 	
 }
-model zscStrifeCrossbow {
+model wosStrifeXbow {
 	NOINTERPOLATION
 	path "models/weapons/xbow/"
 	model 0 "crossbowPX.md3"
@@ -493,7 +493,7 @@ model zscStrifeCrossbow {
 	frameIndex XBOW I 0 16
 	frameIndex XBOW J 0 18
 }
-model zscStrifeCrossbow {
+model wosStrifeXbow {
 	path "models/weapons/xbow/"
 	model 0 "p_crossbow.md3"
 	skin 0 "tx_xbowPX.png"
@@ -552,7 +552,7 @@ model zscPoisonBolt {
 ////////////////////////////////////////////////////////////////////////////////
 //  assaultgun  ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscAssaultGun {
+model wosAssaultGun {
 	path "models/weapons/assaultRifle/"
 	model 0 "p_assaultGun.md3"
 	skin 0 "tx_assaultGun.png"
@@ -568,7 +568,7 @@ model wosD_assaultGunGround {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-model zscAssaultGun_standing {
+model wosAssaultGun_standing {
 	path "models/weapons/assaultRifle/"
 	model 0 "p_assaultGun.md3"
 	skin 0 "tx_assaultGun.png"
@@ -584,7 +584,7 @@ model wosD_assaultGunStanding {
 	offset 0.0 0.0 0.0
 	frameindex DUMM B 0 2
 }
-model zscAssaultGun {
+model wosAssaultGun {
 	path "models/weapons/assaultRifle/"
 	model 0 "assaultGun.md3"
 	//skin 0 "tx_assaultGun.png"
@@ -645,7 +645,7 @@ model zscAssaultGun {
 	frameIndex RIFR P 0 17
 	
 }
-model zscAssaultGun {
+model wosAssaultGun {
 	path "models/weapons/assaultRifle/"
 	model 0 "assaultGun.md3"
 	//skin 0 "tx_assaultGun.png"
@@ -695,7 +695,7 @@ model zscAssaultGun {
 ////////////////////////////////////////////////////////////////////////////////
 //  minimissile launcher  //////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscMiniMissileLauncher {
+model wosMinimissileLauncher {
 	path "models/weapons/missileLauncher/"
 	model 0 "missileLauncherPX.md3"
 	skin 0 "tx_missileLauncher2.png"
@@ -756,7 +756,7 @@ model zscMiniMissile {
 	offset 0.0 0.0 0.0
 	frameindex MICR A 0 0
 }
-model wosD_zscMiniMissileLauncher {
+model wosD_wosMinimissileLauncher {
 	//pickup model
 	path "models/weapons/missileLauncher/"
 	model 0 "p_missileLauncherPX.md3"
@@ -772,7 +772,7 @@ model wosD_zscMiniMissileLauncher {
 ////////////////////////////////////////////////////////////////////////////////
 //  flamethrower  //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscFlameThrower {
+model wosFlamethrower {
 	path "models/weapons/flamethrower/"
 	model 0 "flamerPX_hand.md3"	
 	surfaceskin 0 0 "tx_flamerPX.png"
@@ -802,7 +802,7 @@ model zscFlameThrower {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-model wosD_zscFlameThrower {
+model wosD_wosFlamethrower {
 	//pickup model
 	path "models/weapons/flamethrower/"
 	model 0 "p_flamer.md3"	
@@ -821,7 +821,7 @@ model wosD_zscFlameThrower {
 ////////////////////////////////////////////////////////////////////////////////
 //  grenadelauncher  ///////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscStrifeGrenadeLauncher {
+model wosGrenadeLauncher {
 	path "models/weapons/grenadeLauncher/"
 	model 0 "grenadeLauncherPX_hand.md3"
 	//skin 0 "tx_grndl_px.png"
@@ -886,7 +886,7 @@ model zscStrifeGrenadeLauncher {
 	
 	frameindex DUMM A 0 1
 }
-model wosD_zscStrifeGrenadeLauncher {
+model wosD_wosGrenadeLauncher {
 	//pickup model
 	path "models/weapons/grenadeLauncher/"
 	model 0 "p_grenadeLauncherPX.md3"
@@ -937,7 +937,7 @@ model PhosphorusGrenadeRounds {
 ////////////////////////////////////////////////////////////////////////////////
 //  mauler  ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model zscMauler {
+model wosMauler {
 	path "models/weapons/mauler/"
 	model 0 "maulerPX_hand.md3"//model 0 "maulerPX.md3"
 	//skin 0 "tx_maulerPX.png"
@@ -1005,20 +1005,20 @@ model mauler_dummy {
 //  rlPistol  //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model StormPistol {
-	path "models/weapons/stormPistol/"
-	model 0 "w_stormPistol2.md3"
-	surfaceskin 0 0 "tx_stromPistol.png"
-	surfaceskin 0 1 "tx_stromPistol.png"
-	surfaceskin 0 2 "tx_stromPistol.png"
-	surfaceskin 0 3 "tx_stromPistol.png"
-	surfaceskin 0 4 "tx_stromPistol.png"
-	surfaceskin 0 5 "tx_stromPistol.png"
-	surfaceskin 0 6 "tx_stromPistol.png"
-	surfaceskin 0 7 "tx_stromPistol.png"
-	surfaceskin 0 8 "tx_stromPistol.png"
-	surfaceskin 0 9 "tx_stromPistol.png"
-	surfaceskin 0 10 "tx_stromPistol.png"
-	surfaceskin 0 11 "tx_stromPistol.png"
+	path "models/weapons/pistol/"
+	model 0 "w_pistol2.md3"
+	surfaceskin 0 0 "tx_pistol2.png"
+	surfaceskin 0 1 "tx_pistol2.png"
+	surfaceskin 0 2 "tx_pistol2.png"
+	surfaceskin 0 3 "tx_pistol2.png"
+	surfaceskin 0 4 "tx_pistol2.png"
+	surfaceskin 0 5 "tx_pistol2.png"
+	surfaceskin 0 6 "tx_pistol2.png"
+	surfaceskin 0 7 "tx_pistol2.png"
+	surfaceskin 0 8 "tx_pistol2.png"
+	surfaceskin 0 9 "tx_pistol2.png"
+	surfaceskin 0 10 "tx_pistol2.png"
+	surfaceskin 0 11 "tx_pistol2.png"
 	surfaceskin 0 12 "tx_handgrenade.png"
 	surfaceskin 0 13 "tx_handgrenade.png"
 	scale -1.5 1.5 1.5
@@ -1055,33 +1055,33 @@ model StormPistol {
 	frameindex DUMM X 0 5 
 }
 model stormPistol {
-	path "models/weapons/stormPistol/"
-	model 0 "p_stormPistol2.md3"
-	skin 0 "tx_stromPistol.png"
+	path "models/weapons/pistol/"
+	model 0 "p_pistol2.md3"
+	skin 0 "tx_pistol2.png"
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM R 0 2
 }
 model dummy_stormPistol_0 {
-	path "models/weapons/stormPistol/"
-	model 0 "p_stormPistol2.md3"
-	skin 0 "tx_stromPistol.png"
+	path "models/weapons/pistol/"
+	model 0 "p_pistol2.md3"
+	skin 0 "tx_pistol2.png"
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model dummy_stormPistol_1 {
-	path "models/weapons/stormPistol/"
-	model 0 "p_stormPistol2.md3"
-	skin 0 "tx_stromPistol.png"
+	path "models/weapons/pistol/"
+	model 0 "p_pistol2.md3"
+	skin 0 "tx_pistol2.png"
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 1
 }
 model dummy_stormPistol_2 {
-	path "models/weapons/stormPistol/"
-	model 0 "p_stormPistol2.md3"
-	skin 0 "tx_stromPistol.png"
+	path "models/weapons/pistol/"
+	model 0 "p_pistol2.md3"
+	skin 0 "tx_pistol2.png"
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 2
@@ -1208,7 +1208,7 @@ model dummy_executorRifle_standing {
 ////////////////////////////////////////////////////////////////////////////////
 
 //  punch dagger  //////////////////////////////////////////////////////////////
-model zscPunchDagger {
+model wosPunchDagger {
 	path "models/weapons/punchdagger/"
 	model 0 "punchDagger.md3"
 	surfaceskin 0 0 "tx_handgrenade.png"
@@ -1246,13 +1246,13 @@ model zscPunchDagger {
 
 //  laser pistol.weapon  ///////////////////////////////////////////////////////
 model laserPistol {
-	path "models/weapons/laserpistol/"
-	model 0 "w_laserPistolHand.md3"
-	surfaceskin 0 0 "tx_laserpistol2.png"
-	surfaceskin 0 1 "tx_laserpistol2.png"
-	surfaceskin 0 2 "tx_laserpistol2.png"
-	surfaceskin 0 3 "tx_laserpistol2.png"
-	surfaceskin 0 4 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "w_pistolLaserHand.md3"
+	surfaceskin 0 0 "tx_pistollaser2.png"
+	surfaceskin 0 1 "tx_pistollaser2.png"
+	surfaceskin 0 2 "tx_pistollaser2.png"
+	surfaceskin 0 3 "tx_pistollaser2.png"
+	surfaceskin 0 4 "tx_pistollaser2.png"
 	surfaceskin 0 5 "tx_handgrenade.png"
 	surfaceskin 0 6 "tx_handgrenade.png"
 	surfaceskin 0 7 "tx_energyPod_1.png"
@@ -1261,50 +1261,50 @@ model laserPistol {
 	offset 8.0 -25.0 -10.0
 	
 	//  idle
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	frameindex LSPI A 0 23
 	frameindex LSPI B 0 24
 	frameindex LSPI C 0 25
 	//  idle animation
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	frameindex LSPI D 0 25
-	surfaceskin 0 0 "tx_laserpistol3.png"
+	surfaceskin 0 0 "tx_pistollaser3.png"
 	frameindex LSPI E 0 25
-	surfaceskin 0 0 "tx_laserpistol4.png"
+	surfaceskin 0 0 "tx_pistollaser4.png"
 	frameindex LSPI F 0 25
-	surfaceskin 0 0 "tx_laserpistol5.png"
+	surfaceskin 0 0 "tx_pistollaser5.png"
 	frameindex LSPI G 0 25
-	surfaceskin 0 0 "tx_laserpistol6.png"
+	surfaceskin 0 0 "tx_pistollaser6.png"
 	frameindex LSPI H 0 25
-	surfaceskin 0 0 "tx_laserpistol7.png"
+	surfaceskin 0 0 "tx_pistollaser7.png"
 	frameindex LSPI I 0 25
 	//////////////
 	
 	//  reset skin
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	//////////////
 	//  shoot
 	//  animation
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	frameindex LSPS A 0 5
-	surfaceskin 0 0 "tx_laserpistol3.png"
+	surfaceskin 0 0 "tx_pistollaser3.png"
 	frameindex LSPS B 0 5
-	surfaceskin 0 0 "tx_laserpistol4.png"
+	surfaceskin 0 0 "tx_pistollaser4.png"
 	frameindex LSPS C 0 5
-	surfaceskin 0 0 "tx_laserpistol5.png"
+	surfaceskin 0 0 "tx_pistollaser5.png"
 	frameindex LSPS D 0 5
-	surfaceskin 0 0 "tx_laserpistol6.png"
+	surfaceskin 0 0 "tx_pistollaser6.png"
 	frameindex LSPS E 0 5
-	surfaceskin 0 0 "tx_laserpistol7.png"
+	surfaceskin 0 0 "tx_pistollaser7.png"
 	frameindex LSPS F 0 5
 	//  fire
-	surfaceskin 0 0 "tx_laserpistol8.png"
+	surfaceskin 0 0 "tx_pistollaser8.png"
 	offset 8.0 -23.0 -10.0
 	frameindex LSPS G 0 6
-	surfaceskin 0 0 "tx_laserpistol8.png"
+	surfaceskin 0 0 "tx_pistollaser8.png"
 	offset 8.0 -24.0 -10.0
 	frameindex LSPS H 0 7
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	offset 8.0 -25.0 -10.0
 	frameindex LSPS I 0 8	
 	//////////////
@@ -1318,19 +1318,19 @@ model laserPistol {
 	frameindex LSPR E 0 13
 	frameindex LSPR F 0 14
 	frameindex LSPR G 0 15
-	surfaceskin 0 0 "tx_laserpistol3.png"
+	surfaceskin 0 0 "tx_pistollaser3.png"
 	frameindex LSPR H 0 16 //zacatek nabijeni
-	surfaceskin 0 0 "tx_laserpistol4.png"
+	surfaceskin 0 0 "tx_pistollaser4.png"
 	frameindex LSPR I 0 16
-	surfaceskin 0 0 "tx_laserpistol5.png"
+	surfaceskin 0 0 "tx_pistollaser5.png"
 	frameindex LSPR J 0 16
-	surfaceskin 0 0 "tx_laserpistol6.png"
+	surfaceskin 0 0 "tx_pistollaser6.png"
 	frameindex LSPR K 0 16
-	surfaceskin 0 0 "tx_laserpistol7.png"
+	surfaceskin 0 0 "tx_pistollaser7.png"
 	frameindex LSPR L 0 16
-	surfaceskin 0 0 "tx_laserpistol8.png"
+	surfaceskin 0 0 "tx_pistollaser8.png"
 	frameindex LSPR M 0 17 //konec nabijeni
-	surfaceskin 0 0 "tx_laserpistol2.png"
+	surfaceskin 0 0 "tx_pistollaser2.png"
 	frameindex LSPR N 0 18
 	frameindex LSPR O 0 19
 	frameindex LSPR P 0 20
@@ -1343,108 +1343,108 @@ model laserTracer {
 	USEACTORPITCH
 	USEACTORROLL
 	PITCHFROMMOMENTUM
-	path "models/weapons/laserpistol/"
+	path "models/weapons/laser_pistol/"
 	model 0 "laserTracer.md3"
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
 	frameindex LSTR A 0 0
 } //LSTR A
 //  laser pistol.pickup  ///////////////////////////////////////////////////////
 model laserPistol {
-	path "models/weapons/laserpistol/"
-	model 0 "p_laserPistol.md3"
-	//skin 0 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "p_pistolLaser.md3"
+	//skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	frameindex DUMM A 0 3
-	skin 0 "tx_laserpistol3.png"
+	skin 0 "tx_pistollaser3.png"
 	frameindex DUMM B 0 3
-	skin 0 "tx_laserpistol4.png"
+	skin 0 "tx_pistollaser4.png"
 	frameindex DUMM C 0 3
-	skin 0 "tx_laserpistol5.png"
+	skin 0 "tx_pistollaser5.png"
 	frameindex DUMM D 0 3
-	skin 0 "tx_laserpistol6.png"
+	skin 0 "tx_pistollaser6.png"
 	frameindex DUMM E 0 3
-	skin 0 "tx_laserpistol7.png"
+	skin 0 "tx_pistollaser7.png"
 	frameindex DUMM F 0 3
 }
 //  laser pistol.dummy decoration  /////////////////////////////////////////////
 model dummy_laserPistol00 {
-	path "models/weapons/laserpistol/"
-	model 0 "p_laserPistol.md3"
-	//skin 0 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "p_pistolLaser.md3"
+	//skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	frameindex DUMM A 0 0
-	skin 0 "tx_laserpistol3.png"
+	skin 0 "tx_pistollaser3.png"
 	frameindex DUMM B 0 0
-	skin 0 "tx_laserpistol4.png"
+	skin 0 "tx_pistollaser4.png"
 	frameindex DUMM C 0 0
-	skin 0 "tx_laserpistol5.png"
+	skin 0 "tx_pistollaser5.png"
 	frameindex DUMM D 0 0
-	skin 0 "tx_laserpistol6.png"
+	skin 0 "tx_pistollaser6.png"
 	frameindex DUMM E 0 0
-	skin 0 "tx_laserpistol7.png"
+	skin 0 "tx_pistollaser7.png"
 	frameindex DUMM F 0 0
 }
 model dummy_laserPistol01 {
-	path "models/weapons/laserpistol/"
-	model 0 "p_laserPistol.md3"
-	//skin 0 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "p_pistolLaser.md3"
+	//skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	frameindex DUMM A 0 1
-	skin 0 "tx_laserpistol3.png"
+	skin 0 "tx_pistollaser3.png"
 	frameindex DUMM B 0 1
-	skin 0 "tx_laserpistol4.png"
+	skin 0 "tx_pistollaser4.png"
 	frameindex DUMM C 0 1
-	skin 0 "tx_laserpistol5.png"
+	skin 0 "tx_pistollaser5.png"
 	frameindex DUMM D 0 1
-	skin 0 "tx_laserpistol6.png"
+	skin 0 "tx_pistollaser6.png"
 	frameindex DUMM E 0 1
-	skin 0 "tx_laserpistol7.png"
+	skin 0 "tx_pistollaser7.png"
 	frameindex DUMM F 0 1
 }
 model dummy_laserPistol02 {
-	path "models/weapons/laserpistol/"
-	model 0 "p_laserPistol.md3"
-	//skin 0 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "p_pistolLaser.md3"
+	//skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	frameindex DUMM A 0 2
-	skin 0 "tx_laserpistol3.png"
+	skin 0 "tx_pistollaser3.png"
 	frameindex DUMM B 0 2
-	skin 0 "tx_laserpistol4.png"
+	skin 0 "tx_pistollaser4.png"
 	frameindex DUMM C 0 2
-	skin 0 "tx_laserpistol5.png"
+	skin 0 "tx_pistollaser5.png"
 	frameindex DUMM D 0 2
-	skin 0 "tx_laserpistol6.png"
+	skin 0 "tx_pistollaser6.png"
 	frameindex DUMM E 0 2
-	skin 0 "tx_laserpistol7.png"
+	skin 0 "tx_pistollaser7.png"
 	frameindex DUMM F 0 2
 }
 model dummy_laserPistol03 {
-	path "models/weapons/laserpistol/"
-	model 0 "p_laserPistol.md3"
-	//skin 0 "tx_laserpistol2.png"
+	path "models/weapons/laser_pistol/"
+	model 0 "p_pistolLaser.md3"
+	//skin 0 "tx_pistollaser2.png"
 	scale 1.5 1.5 1.5
 	offset 0.0 0.0 0.0
-	skin 0 "tx_laserpistol2.png"
+	skin 0 "tx_pistollaser2.png"
 	frameindex DUMM A 0 3
-	skin 0 "tx_laserpistol3.png"
+	skin 0 "tx_pistollaser3.png"
 	frameindex DUMM B 0 3
-	skin 0 "tx_laserpistol4.png"
+	skin 0 "tx_pistollaser4.png"
 	frameindex DUMM C 0 3
-	skin 0 "tx_laserpistol5.png"
+	skin 0 "tx_pistollaser5.png"
 	frameindex DUMM D 0 3
-	skin 0 "tx_laserpistol6.png"
+	skin 0 "tx_pistollaser6.png"
 	frameindex DUMM E 0 3
-	skin 0 "tx_laserpistol7.png"
+	skin 0 "tx_pistollaser7.png"
 	frameindex DUMM F 0 3
 }
 ////////////////////////////////////////////////////////////////////////////////

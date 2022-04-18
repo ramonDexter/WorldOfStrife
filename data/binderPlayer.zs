@@ -328,25 +328,25 @@ class binderPlayer : StrifePlayer {
 		PainChance 255;
 		MaxStepHeight 20;
 		//  weaponslots  ///////////////////////////////////////////////////////
-		Player.WeaponSlot 1, "zscPunchDagger";
-		Player.WeaponSlot 2, "zscStrifeCrossbow", "StormPistol", "laserPistol";
-		Player.WeaponSlot 3, "zscAssaultGun", "staffBlaster";
-		Player.WeaponSlot 4, "zscMiniMissileLauncher";
-		Player.WeaponSlot 5, "zscStrifeGrenadeLauncher";
-		Player.WeaponSlot 6, "zscFlameThrower";
-		Player.WeaponSlot 7, "zscMauler";		
+		Player.WeaponSlot 1, "wosPunchDagger";
+		Player.WeaponSlot 2, "wosStrifeXbow", "StormPistol", "laserPistol";
+		Player.WeaponSlot 3, "wosAssaultGun", "staffBlaster";
+		Player.WeaponSlot 4, "wosMinimissileLauncher";
+		Player.WeaponSlot 5, "wosGrenadeLauncher";
+		Player.WeaponSlot 6, "wosFlamethrower";
+		Player.WeaponSlot 7, "wosMauler";		
 		//Player.WeaponSlot 8, "Sigil";
 		//Player.WeaponSlot 9, "hookShotWeapon";		
 		//  start items  ///////////////////////////////////////////////////////
 		//Player.StartItem "zscFist", 1;	
-		Player.StartItem "zscPunchDagger", 1;	
-		Player.StartItem "zAssaultGunMag", 32;
+		Player.StartItem "wosPunchDagger", 1;	
+		Player.StartItem "magazine_wosAssaultGun", 32;
 		Player.StartItem "hookShot_magazine", 20;
 		Player.StartItem "laserPistolCharge", 32;
 		Player.StartItem "shldrGunMag", 32;
-		Player.StartItem "Staffmagazine", 32;
-		Player.StartItem "missileLauncherMag", 8;
-		Player.StartItem "stormPistol_magazine", 12;
+		Player.StartItem "magazine_blasterStaff", 32;
+		Player.StartItem "magazine_missileLauncher", 8;
+		Player.StartItem "stormmagazine_pistol", 12;
 		Player.StartItem "executorRifleMagazine", 24;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
@@ -416,7 +416,7 @@ class binderPlayer : StrifePlayer {
 			Stop;
 	}
 }
-class wos_sprintWeap : augmentedWeapon {
+class wos_sprintWeap : wosWeapon {
     Default {
         weapon.selectionOrder 4000;
         Tag "Sprinting";

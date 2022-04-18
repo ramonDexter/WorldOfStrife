@@ -81,7 +81,7 @@ script 909 (void)
     GiveInventory("EnergyPack_item",5);
     GiveInventory("clipofbullets",200); 
     GiveInventory("hookshotWeapon", 1);	
-    GiveInventory("zscassaultgun", 1);
+    GiveInventory("wosAssaultGun", 1);
     GiveInventory("rangerArmor2", 1);
     GiveInventory("coin", 65536);
 	GiveInventory("binderBadge",1);

@@ -559,7 +559,7 @@ class wosStatusBar : BaseStatusBar {
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true,
 						left + 248*xscale,
-						top + 82*yscale,
+						top + 75*yscale,
 						DTA_CleanNoMove, true);
 				}
 				
@@ -567,25 +567,28 @@ class wosStatusBar : BaseStatusBar {
 				item = CPlayer.mo.FindInventory ("shoulderGun");
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true, 
-						left + 211*xscale,
-						top + 73*yscale,
+						left + 107*xscale,
+						top + 74*yscale,
 						DTA_CleanNoMove, true);
-					item = CPlayer.mo.FindInventory("shoulderGunMag_item");
+					/*item = CPlayer.mo.FindInventory("shoulderGunMag_item");
 					if (item != NULL) {
 						DrINumber2 (item.Amount*32, left+249*xscale, top+91*yscale, 7*xscale, imgSTFON0);
-					}
+					}*/
 				}
 
 				//  Does the player have coins?  ///////////////////////////////
 				item = CPlayer.mo.FindInventory("goldCoin");
 				if ( item != NULL ) {
-					DrINumber2 (item.Amount, left+284*xscale, top+45 * yscale, 7*xscale, imgSTFON0);
+					DrINumber2 (item.Amount, left+284*xscale, top+49 * yscale, 7*xscale, imgSTFON0);
 				}
 				
 				//  Display weight of owned items  /////////////////////////////
 				let wght = binderPlayer(CPlayer.mo);
 				if ( wght != NULL ) {
-					DrINumber2 (wght.encumbrance, left+284*xscale, top+64 * yscale, 7*xscale, imgSTFON0);				
+					// current weight
+					DrINumber2 (wght.encumbrance, left+197*xscale, top+87 * yscale, 7*xscale, imgSTFON0);
+					//maximal weight
+					DrINumber2 (wght.weightmax, left+237*xscale, top+87 * yscale, 7*xscale, imgSTFON0);			
 				}
 				
 				//  How much ammo does the player have?  ///////////////////////
@@ -617,16 +620,16 @@ class wosStatusBar : BaseStatusBar {
 				//  What weapons does the player have?  ////////////////////////
 				static const class<Weapon> WeaponList[] = {
 					"laserPistol",
-					"zscStrifeCrossbow",
-					"zscAssaultGun",
+					"wosStrifeXbow",
+					"wosAssaultGun",
 					"staffBlaster",
-					"zscMiniMissileLauncher",
-					"zscFlameThrower",
-					"zscStrifeGrenadeLauncher",
-					"zscMauler",
+					"wosMinimissileLauncher",
+					"wosFlamethrower",
+					"wosGrenadeLauncher",
+					"wosMauler",
 					"StormPistol"
 				};
-				static const int WeaponX[] = {64, 23, 57, 24, 59, 20, 54, 22, 77};
+				static const int WeaponX[] = {64, 23, 57, 24, 59, 20, 54, 22, 78};
 				static const int WeaponY[] = {0, 7, 17, 25, 39, 50, 60, 77, 83};
 
 				for (i = 0; i < 9; ++i) {
@@ -647,8 +650,8 @@ class wosStatusBar : BaseStatusBar {
 				//  show backrground & foreground text&border  /////////////////	
 				TextureID idPOPSTBKLog = TexMan.CheckForTexture("IPOPB", 0, 0);
 				TextureID idPOPSTATLog = TexMan.CheckForTexture("IPOPF", 0, 0);
-				screen.DrawTexture (idPOPSTBKLog, true, left, top, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
-				screen.DrawTexture (idPOPSTATLog, true, left, top, DTA_CleanNoMove, true);
+				screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+				screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true);
 				/*
 				// Draw the latest log message.
 				screen.DrawText(SmallFont2, Font.CR_UNTRANSLATED, left + 210 * xscale, top + 8 * yscale, Level.TimeFormatted(),
@@ -668,8 +671,8 @@ class wosStatusBar : BaseStatusBar {
 			//  show backrground & foreground text&border  /////////////////////					
 			TextureID idPOPSTBKkeys = TexMan.CheckForTexture("IPOPB", 0, 0);
 			TextureID idPOPSTATkeys = TexMan.CheckForTexture("IPOPF", 0, 0);
-			screen.DrawTexture (idPOPSTBKkeys, true, left, top, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
-			screen.DrawTexture (idPOPSTATkeys, true, left, top, DTA_CleanNoMove, true);
+			screen.DrawTexture (idPOPSTBKkeys, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+			screen.DrawTexture (idPOPSTATkeys, true, left, top-50, DTA_CleanNoMove, true);
 			// List the keys the player has.
 			int pos, endpos, leftcol;
 			int clipleft, clipright;
@@ -698,17 +701,17 @@ class wosStatusBar : BaseStatusBar {
 				label = item.GetTag();
 
 				int colnum = ((i-pos) / 5) & (KeyPopScroll > 0 ? 3 : 1);
-				int rownum = (i % 5) * 18;
+				int rownum = (i % 6) * 18;
 
 				screen.DrawTexture (item.Icon, true,
 					left + (colnum * 140 + leftcol)*xscale,
-					top + (6 + rownum)*yscale,
+					(top-50) + (6 + rownum)*yscale,
 					DTA_CleanNoMove, true,
 					DTA_ClipLeft, clipleft,
 					DTA_ClipRight, clipright);
-				screen.DrawText (SmallFont2, Font.CR_UNTRANSLATED,
+				screen.DrawText (SmallFont, Font.CR_UNTRANSLATED,
 					left + (colnum * 140 + leftcol + 17)*xscale,
-					top + (11 + rownum)*yscale,
+					(top-50) + (11 + rownum)*yscale,
 					label,
 					DTA_CleanNoMove, true,
 					DTA_ClipLeft, clipleft,

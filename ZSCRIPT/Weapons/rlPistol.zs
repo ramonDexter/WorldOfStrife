@@ -1,7 +1,15 @@
 //=--RL PISTOL----------------------------------------------------------------==
 const stormPistolBaseWeight = 50;
 
-class StormPistol : augmentedWeapon 
+class magazine_pistol : ammo {
+	Default {
+		Inventory.MaxAmount 12;
+		+Inventory.IGNORESKILL;
+		Mass 0;
+	}
+}
+
+class StormPistol : wosWeapon 
 {
 	Default
 	{
@@ -26,7 +34,7 @@ class StormPistol : augmentedWeapon
 		Weapon.SlotPriority 0.1;
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;
-		Weapon.AmmoType1 "stormPistol_magazine";
+		Weapon.AmmoType1 "magazine_pistol";
 		Weapon.AmmoGive2 0;
 		Weapon.AmmoType2 "ClipOfBullets";
 		//Decal "SVEbulletScorch";
@@ -55,18 +63,18 @@ class StormPistol : augmentedWeapon
 		
 		Fire:
 			DUMM A 0 A_JumpIfNoAmmo("Reload");
-			DUMM A 4;
+			DUMM A 2;
 			DUMM B 1 {
 				A_GunFlash();				
 				W_ShootFirearm(3, "weapons/rlPistolShoot");
 				A_SpawnItemEx("gunFlash", 8, 0, 16, 0);
 			}				
-			DUMM C 2;
+			DUMM C 1;
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_FireProjectile("pistolCasingSpawner",-10,0,15,0);
 			//TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32), random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
-			DUMM DE 3;
-			DUMM F 4 A_ReFire();
+			DUMM DE 2;
+			DUMM F 2 A_ReFire();
 			Goto Ready;
 		/*
 		Flash:
@@ -81,7 +89,7 @@ class StormPistol : augmentedWeapon
 				A_GunFlash();				
 				A_ShootFirearm(3, "weapons/rlPistolShoot");
 				A_SpawnItemEx("gunFlash", 8, 0, 16, 0);
-				A_TakeInventory("stormPistol_magazine", 1);
+				A_TakeInventory("magazine_pistol", 1);
 			}				
 			DUMM C 2;
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
@@ -90,7 +98,7 @@ class StormPistol : augmentedWeapon
 				A_GunFlash();				
 				A_ShootFirearm(3, "weapons/rlPistolShoot");
 				A_SpawnItemEx("gunFlash", 8, 0, 16, 0);
-				A_TakeInventory("stormPistol_magazine", 1);
+				A_TakeInventory("magazine_pistol", 1);
 			}				
 			DUMM C 2;
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
@@ -99,7 +107,7 @@ class StormPistol : augmentedWeapon
 				A_GunFlash();				
 				A_ShootFirearm(3, "weapons/rlPistolShoot");
 				A_SpawnItemEx("gunFlash", 8, 0, 16, 0);
-				A_TakeInventory("stormPistol_magazine", 1);
+				A_TakeInventory("magazine_pistol", 1);
 			}				
 			DUMM C 2;
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
@@ -112,6 +120,8 @@ class StormPistol : augmentedWeapon
 			
 		Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
 			DUMM G 3;
 			DUMM HI 2;
 			DUMM JKL 3 A_StartSound("weapons/RLpistolRLout", 1);
@@ -131,14 +141,8 @@ class StormPistol : augmentedWeapon
 	}
 }
 
-class stormPistol_magazine : Ammo //actor for reloading weapon - actually ammo in magazine
-{
-	Default
-	{
-		 Inventory.MaxAmount 12;
-		 +Inventory.IGNORESKILL;
-	}
-}
+
+
 
 
 //==--------------------------------------------------------------------------==

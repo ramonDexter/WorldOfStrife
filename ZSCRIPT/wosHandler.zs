@@ -231,15 +231,15 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosBinderArmorAdvanced", 1);
 			pawn.A_GiveInventory("wosKineticArmor", 1);
 		} else if ( e.Name == "give_allweapons" ) {
-			pawn.A_GiveInventory("zscStrifeCrossbow", 1);
+			pawn.A_GiveInventory("wosStrifeXbow", 1);
 			pawn.A_GiveInventory("StormPistol", 1);
 			pawn.A_GiveInventory("laserPistol", 1);
-			pawn.A_GiveInventory("zscAssaultGun", 1);
+			pawn.A_GiveInventory("wosAssaultGun", 1);
 			pawn.A_GiveInventory("staffBlaster", 1);
-			pawn.A_GiveInventory("zscMiniMissileLauncher", 1);
-			pawn.A_GiveInventory("zscFlameThrower", 1);
-			pawn.A_GiveInventory("zscStrifeGrenadeLauncher", 1);
-			pawn.A_GiveInventory("zscMauler", 1);
+			pawn.A_GiveInventory("wosMinimissileLauncher", 1);
+			pawn.A_GiveInventory("wosFlamethrower", 1);
+			pawn.A_GiveInventory("wosGrenadeLauncher", 1);
+			pawn.A_GiveInventory("wosMauler", 1);
 		} else if ( e.Name == "give_shouldergun" ) {
 			pawn.A_GiveInventory("shoulderGun", 1);
 			pawn.A_GiveInventory("shldrGunMag", 32);
@@ -267,7 +267,7 @@ class wosEventHandler : EventHandler {
 		}
 		// ACS script support //
 		else if ( e.Name == "selectDagger" ) {
-			pawn.A_SelectWeapon("zscPunchDagger");
+			pawn.A_SelectWeapon("wosPunchDagger");
 		}
     }
 	////////////////////////////////////////////////////////////////////////////

@@ -60,6 +60,7 @@ class shoulderGun : wosPickup {
 		Inventory.PickupMessage "$PICKUP_shoulderGun";
 		Decal "BulletChip";
 		Mass shoulderGunWeight;
+		
 	}
 	
 	States {
@@ -208,6 +209,7 @@ class shldrGunMag : CustomInventory {
 		Inventory.MaxAmount 32;
 		inventory.interhubamount 32;
 		Inventory.PickupMessage "$PICKUP_shldrGunMag";
+		Mass 0;
 	}
 	
 	States {

@@ -1,6 +1,6 @@
 const missileLauncherBaseWeight = 220;
 
-class missileLauncherMag : Ammo {
+class magazine_missileLauncher : Ammo {
 	Default {		
 		+Inventory.IgnoreSkill;		
 		Inventory.MaxAmount 8;
@@ -21,7 +21,7 @@ class missileLauncherFire2token : inventory {
 		inventory.interhubamount 1;
 	}
 }
-class zscMiniMissileLauncher : augmentedWeapon replaces MiniMissileLauncher {
+class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 	int miniMissile_Switch;
 
 	Default {	
@@ -44,7 +44,7 @@ class zscMiniMissileLauncher : augmentedWeapon replaces MiniMissileLauncher {
 		Weapon.SlotNumber 4;
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;
-		Weapon.AmmoType1 "missileLauncherMag";
+		Weapon.AmmoType1 "magazine_missileLauncher";
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 8;
 		Weapon.AmmoType2 "MiniMissiles";
@@ -169,6 +169,8 @@ class zscMiniMissileLauncher : augmentedWeapon replaces MiniMissileLauncher {
 		
 		Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
 			MMIS A 1 Offset(0,35);
 			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLout", 1);
 			MMIS A 1 Offset(0,44);

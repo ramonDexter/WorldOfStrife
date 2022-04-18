@@ -1,4 +1,4 @@
-class zscPunchDagger : augmentedWeapon replaces PunchDagger {
+class wosPunchDagger : wosWeapon replaces PunchDagger {
 	int altCounter;
 	
 	Default {	
@@ -73,7 +73,7 @@ class zscPunchDagger : augmentedWeapon replaces PunchDagger {
 			goto Nope;
 	}
 }
-class zscFist : augmentedWeapon {
+class zscFist : wosWeapon {
 	Default {
 		+WEAPON.MELEEWEAPON
 		+WEAPON.NOALERT

@@ -112,15 +112,15 @@ script 4204 (int itemAmount) {
 }*/
 /*script 4208 (void) {
 	//ScriptCall("wosDebugCommands", "dbg_GiveAllWeapons");
-	GiveInventory("zscStrifeCrossbow", 1);
+	GiveInventory("wosStrifeXbow", 1);
 	GiveInventory("StormPistol", 1);
 	GiveInventory("laserPistol", 1);
-	GiveInventory("zscAssaultGun", 1);
+	GiveInventory("wosAssaultGun", 1);
 	GiveInventory("staffBlaster", 1);
-	GiveInventory("zscMiniMissileLauncher", 1);
-	GiveInventory("zscFlameThrower", 1);
-	GiveInventory("zscStrifeGrenadeLauncher", 1);
-	GiveInventory("zscMauler", 1);
+	GiveInventory("wosMinimissileLauncher", 1);
+	GiveInventory("wosFlamethrower", 1);
+	GiveInventory("wosGrenadeLauncher", 1);
+	GiveInventory("wosMauler", 1);
 }*/
 
 script 4209 (void) {

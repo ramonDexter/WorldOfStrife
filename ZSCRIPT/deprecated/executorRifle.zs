@@ -1,4 +1,4 @@
-class executorRifle : augmentedWeapon {
+class executorRifle : wosWeapon {
 
     Default {
 		//$Category "weapons"

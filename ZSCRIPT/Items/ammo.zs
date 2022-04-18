@@ -15,6 +15,94 @@ const ammoSatchelWeight = 50;
 const ammoBandolierWeight = 50;
 ////////////////////////////////////////////////////////////////////////////////
 
+/*class wosAmmo : Ammo {
+	int magStack;
+	property magazineAmount : magStack;
+
+	Default {
+		Inventory.Amount 1;
+		Inventory.MaxAmount 9999;
+		Mass 0;
+		-INVENTORY.INVBAR;
+		-INVENTORY.KEEPDEPLETED;
+	}
+
+	override void AttachToOwner (Actor other) {
+        super.AttachToOwner(other);
+        let pawn = binderPlayer(owner);
+        pawn.encumbrance+=self.mass;
+    }
+    override void DoEffect() {
+        super.DoEffect();
+        let pawn = binderPlayer(owner);
+        if (onlyone==0) {
+            pawn.encumbrance+=self.mass*self.amount;
+        }
+        else {
+            pawn.encumbrance+=self.mass;
+        }
+    }
+    override void OnDrop (Actor dropper) {
+        if (self.stack>0) {
+            let whatto = self.GetClassName();
+            int todrop = dropper.CountInv(whatto);
+            if (todrop>self.stack-1) {
+                todrop = self.stack - 1;
+            }
+            dropper.takeInventory(self.GetClassName(), todrop);
+            self.amount = todrop + 1;
+            super.OnDrop(dropper);
+        }
+    }
+	Override Class<Ammo> GetParentAmmo()
+	{
+		class<Object> type = GetClass();
+
+		while (type.GetParentClass() != "wosAmmo" && type.GetParentClass() != NULL)
+		{
+			type = type.GetParentClass();
+		}
+		return (class<wosAmmo>)(type);
+	}
+	Override bool HandlePickup(Inventory item)
+	{
+		let ammoitem = wosAmmo(item);
+		if (ammoitem != null && ammoitem.GetParentAmmo() == GetClass())
+		{
+			if (Amount < MaxAmount || sv_unlimited_pickup)
+			{
+				int receiving = item.Amount;
+
+				if (!item.bIgnoreSkill)
+				{
+					receiving = int(receiving * G_SkillPropertyFloat(SKILLP_AmmoFactor));
+				}
+				int oldamount = Amount;
+
+				if (Amount > 0 && Amount + receiving < 0)
+				{
+					Amount = 0x7fffffff;
+				}
+				else
+				{
+					Amount += receiving;
+				}
+				if (Amount > MaxAmount && !sv_unlimited_pickup)
+				{
+					Amount = MaxAmount;
+				}
+				item.bPickupGood = true;
+				if (oldamount == 0 && Owner != null && Owner.player != null)
+				{
+					PlayerPawn(Owner).CheckWeaponSwitch(GetClass());
+				}
+			}
+			return true;
+		}
+		return false;
+	}
+}*/
+
 class wosBoltsElectric : wosPickup {
 	Default {
 		//$Category "Ammunition/WoS"

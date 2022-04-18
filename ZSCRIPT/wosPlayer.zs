@@ -38,7 +38,8 @@ class binderPlayer : StrifePlayer {
 		+FLOORCLIP
 		
 		//  various player properties  /////////////////////////////////////////
-		Player.ForwardMove 0.75, 0.75;
+		//Player.ForwardMove 0.75, 0.75;
+		Player.ForwardMove 1.0, 1.0;
 		Player.SideMove 0.75, 0.75;
 		Player.AirCapacity 2.0;
 		player.viewheight 48;
@@ -55,28 +56,28 @@ class binderPlayer : StrifePlayer {
 		MaxStepHeight 20;
 		Player.MaxHealth 100;
 		//  weaponslots  ///////////////////////////////////////////////////////
-		Player.WeaponSlot 1, "zscPunchDagger";
-		Player.WeaponSlot 2, "zscStrifeCrossbow", "StormPistol", "laserPistol";
-		Player.WeaponSlot 3, "zscAssaultGun", "staffBlaster";
-		Player.WeaponSlot 4, "zscMiniMissileLauncher";
-		Player.WeaponSlot 5, "zscStrifeGrenadeLauncher";
-		Player.WeaponSlot 6, "zscFlameThrower";
-		Player.WeaponSlot 7, "zscMauler";		
+		Player.WeaponSlot 1, "wosPunchDagger";
+		Player.WeaponSlot 2, "wosStrifeXbow", "StormPistol", "laserPistol";
+		Player.WeaponSlot 3, "wosAssaultGun", "staffBlaster";
+		Player.WeaponSlot 4, "wosMinimissileLauncher";
+		Player.WeaponSlot 5, "wosGrenadeLauncher";
+		Player.WeaponSlot 6, "wosFlamethrower";
+		Player.WeaponSlot 7, "wosMauler";		
 		//Player.WeaponSlot 8, "Sigil";
 		//Player.WeaponSlot 9, "hookShotWeapon";		
 		//  start items  ///////////////////////////////////////////////////////
 		//Player.StartItem "zscFist", 1;	
-		Player.StartItem "zscPunchDagger", 1;	
-		Player.StartItem "zAssaultGunMag", 32;
-		Player.StartItem "hookShot_magazine", 20;
-		Player.StartItem "laserPistolCharge", 32;
+		Player.StartItem "wosPunchDagger", 1;	
+		Player.StartItem "magazine_wosAssaultGun", 32;
+		Player.StartItem "magazine_pistolLaser", 32;
+		Player.StartItem "magazine_blasterStaff", 48;
+		Player.StartItem "magazine_missileLauncher", 8;
+		Player.StartItem "magazine_pistol", 12;
 		Player.StartItem "shldrGunMag", 32;
-		Player.StartItem "Staffmagazine", 48;
-		Player.StartItem "missileLauncherMag", 8;
-		Player.StartItem "stormPistol_magazine", 12;
 		Player.StartItem "notePlayerPersonal", 1;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
+		//Player.StartItem "hookShot_magazine", 20;
 		//Player.StartItem "wosi_scanner", 1;
 		// custom properties ///////////////////////////////////////////////////
 		// brokenLands jump&ledge climbing //	
@@ -96,14 +97,14 @@ class binderPlayer : StrifePlayer {
 		encumbrance=0; //Before ticking, reset the encumbrance
         Super.Tick();
 		// LF encumberance code ////////////////////////////////////////////////
-		weightmax=2500; //Set the default
+		weightmax=2500; //Set the default		
         //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
         //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
-        If(CountInv("AmmoSatchel")){weightmax*=2;} //Double with the backpack
+        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
 		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
         If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000) 
 		// armor ///////////////////////////////////////////////////////////////
-		If (armoramount<1) {
+		If (armoramount < 1) {
 			currentarmor=0; 
             armorpower=0;
         }		
@@ -111,31 +112,56 @@ class binderPlayer : StrifePlayer {
             encumbrance+=LeatherWeight/5; 
             mass=300; 
             bNOBLOOD=0;
-        }
-		Else If (currentarmor==2) {
+        } Else If (currentarmor==2) {
             encumbrance+=MetalWeight/5; 
             mass=400; 
             bNOBLOOD=1;
-        }
-		Else If (currentarmor==3) {
+        } Else If (currentarmor==3) {
             encumbrance+=BinderBasicWeight/7; 
             mass=350; 
             bNOBLOOD=0;
-        }
-        Else If (currentarmor==4) {
+        } Else If (currentarmor==4) {
             encumbrance+=BinderBasicWeight/7; 
             mass=350; 
             bNOBLOOD=1;
-        }
-		Else {
+        } Else {
 			mass=100; 
 			bNOBLOOD=0; 
 			PainChance=255;
 		}
+		// custom functions ////////////////////////////////////////////////////
+		HandleWeight();
+		HandleBleed();
+		HandlePlayerBody();
+		HealthShake();
+        HandleStamina();
+		LedgeClimb();
+		HandleSpeed();
+		// obsolete functions //////////////////////////////////////////////////
+		//CheckSprint();
+		//FallDamage();
+        //HealthSlow();
 
+		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
+    }
 
-		//  LF bleeding code  //////////////////////////////////////////////////
-		If (bleedlevel>0) {
+	override void PostBeginPlay() {
+        Super.PostBeginPlay();
+		// LF sprinting code //
+        stamin = 400;
+		////////
+    }	
+
+	void HandlePlayerBody() {
+		If(backplaye==null) {
+			bool spawn1; 
+            Actor spawn2;
+			[spawn1, spawn2] = A_SpawnItemEx("binderPlayerBody",flags: SXF_SETMASTER);
+			backplaye=spawn2;
+		}
+	}
+	void HandleBleed() {
+		If ( bleedlevel > 0 ) {
             If( bleedtimer >= ( 70 / bleedlevel )) {
 				//A_Print("bleedDamage!");
                 BleedDamage();
@@ -145,34 +171,15 @@ class binderPlayer : StrifePlayer {
 				bleedtimer++;
 			}
 		}
-		//  LF 1st person player body code  ////////////////////////////////////
-		If(backplaye==null) {
-			bool spawn1; 
-            Actor spawn2;
-			[spawn1, spawn2] = A_SpawnItemEx("binderPlayerBody",flags: SXF_SETMASTER);
-			backplaye=spawn2;
-		}
-		
-		//  LF movement inspired code  /////////////////////////////////////////
-		//FallDamage();
-		HealthShake();
-        SprintSpeed();
-        HealthSlow();
-
-		// broken lands code ///////////////////////////////////////////////////
-		LedgeClimb();
-		HandleSpeed();
-		CheckSprint();
-
-		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
-    }
-	override void PostBeginPlay() {
-        Super.PostBeginPlay();
-		// LF sprinting code //
-        stamin = 400;
-		////////
-    }	
-	//  Lost Frontier adapted code  ////////////////////////////////////////////
+	}
+	void HandleWeight() {
+		if ( maxstamin == 440 ) { weightmax = 2750; }
+		if ( maxstamin == 520 ) { weightmax = 3250; }
+		if ( maxstamin == 600 ) { weightmax = 3750; }
+		if ( maxstamin == 700 ) { weightmax = 4375; }
+		if ( maxstamin == 800 ) { weightmax = 5000; }
+	}
+	// jarewill's adopted code /////////////////////////////////////////////////
 	//  code by Jarewill
     void BleedDamage() {
 		If(health>0) {
@@ -183,7 +190,72 @@ class binderPlayer : StrifePlayer {
 			bleedtimer=0;
 		}
 	}		
-    void HealthSlow() {
+    
+	void HealthShake() {
+		double shake = 0.2 - health*0.002;
+		double stamshak = 0.001 * (400 - stamin);
+		If(stamshak>0){shake+=stamshak;}
+		If(shake<0){shake=0;}
+		If(health<1){shake=0;}
+		angle+=frandom(-shake,shake);
+		pitch+=frandom(-shake,shake);
+	}
+	
+	void HandleStamina() {
+		// modified working stamina raise according to player's health modified by UpgradeStamina //
+        maxstamin = 400;
+		int pawnmaxhealth = GetMaxHealth(true);
+		If ( pawnmaxhealth >= 120 && pawnmaxhealth < 140 ) { maxstamin = 440; }
+		If ( pawnmaxhealth >= 140 && pawnmaxhealth < 160 ) { maxstamin = 520; }
+		If ( pawnmaxhealth >= 160 && pawnmaxhealth < 180 ) { maxstamin = 600; }
+		If ( pawnmaxhealth >= 180 && pawnmaxhealth < 200 ) { maxstamin = 700; }
+		If ( pawnmaxhealth == 200 ) { maxstamin = 800; }
+		If ( player.cheats&(CF_GODMODE|CF_GODMODE2) ) { stamin = maxstamin; }		
+		If( sprinting == 0 ) {
+			If( stamin > 10 && GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED ) {
+				//A_Print("speeding up!", 1.0);
+				selectedWeapon=Weapon(player.readyweapon);
+				sprinting=1;
+				bracing=1;
+				If(!CountInv("wos_sprintWeap")) {
+					A_GiveInventory("wos_sprintWeap",1);
+				}
+				A_SelectWeapon("wos_sprintWeap");
+			}
+			Else If( stamin<maxstamin && !(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) && ( !(GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)) || vel.length()<2 ) ) {
+				stamin++;				
+			}
+			If( player.readyweapon is "wos_sprintWeap" ) {
+				Player.SetPSprite(PSP_WEAPON,player.readyweapon.FindState("Nope"));
+				A_SelectWeapon(selectedWeapon.GetClassName());
+			}
+		}
+		Else {
+			bracing=1;
+			If( GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT) ){ If( stamin > 0 ) { stamin--; } }
+			If( stamin > 0 && GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED ){ }
+			Else {
+				//A_Print("slowing down!", 1.0);
+				sprinting=0;
+				bracing=0;
+				let sprwep = Weapon(player.readyweapon);
+				If(player.readyweapon is "wos_sprintWeap"){Player.SetPSprite(PSP_WEAPON,sprwep.FindState("Nope"));}
+				A_SelectWeapon(selectedWeapon.GetClassName());
+			}
+		}
+    }
+	/*void FallDamage() {
+		double cvel = vel.z;
+		int damage;
+		If(pvel<cvel) {
+			If(pvel<=-32){damage=(int)(pvel)*2;}
+			Else If(pvel<=-23){damage=(int)(pvel);}
+			Else If(pvel<=-16&&bracing==0){damage=(int)(pvel)/4;}
+			If(bracing==1){damage/=2;}
+			DamageMobj(null,null,-damage,"Falling");
+		}
+	}*/
+	/*void HealthSlow() {
 		double hpeed = 1.0; //health*0.01;
 		double stmed = 0.01 * (175 - stamin);
 		If(stmed<0){stmed=0;}
@@ -196,7 +268,7 @@ class binderPlayer : StrifePlayer {
 		//	Else If(SpeedUpgrade==1){hpeed*=1.2;}
 		//}
 		If(sprinting==1){
-			hpeed*=2.5;
+			hpeed*=3.0;
             If(GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN){hpeed/=2;}			
 		} else if ( sprinting == 0 ) {
 			hpeed = 0.55;
@@ -205,75 +277,9 @@ class binderPlayer : StrifePlayer {
 		If(overweight==1){ hpeed*=0.5; } //Halve speed when true
         If(overweight2==1){ hpeed*=0.01; } //Set it to veery slow when true
 		//If(surgery==1||repairing==1){hpeed=0;}
-		ViewBob=1.1*hpeed;
-		speed=hpeed;
-	}
-	void HealthShake() {
-		double shake = 0.2 - health*0.002;
-		double stamshak = 0.001 * (400 - stamin);
-		If(stamshak>0){shake+=stamshak;}
-		If(shake<0){shake=0;}
-		If(health<1){shake=0;}
-		angle+=frandom(-shake,shake);
-		pitch+=frandom(-shake,shake);
-	}
-	
-	void SprintSpeed() {
-		// modified working stamina raise according to player's health modified by UpgradeStamina //
-        maxstamin = 400;
-		int pawnmaxhealth = GetMaxHealth(true);
-		If ( pawnmaxhealth >= 120 && pawnmaxhealth < 140 ) { maxstamin = 440; }
-		If ( pawnmaxhealth >= 140 && pawnmaxhealth < 160 ) { maxstamin = 520; }
-		If ( pawnmaxhealth >= 160 && pawnmaxhealth < 180 ) { maxstamin = 600; }
-		If ( pawnmaxhealth >= 180 && pawnmaxhealth < 200 ) { maxstamin = 700; }
-		If ( pawnmaxhealth == 200 ) { maxstamin = 800; }
-		If ( player.cheats&(CF_GODMODE|CF_GODMODE2) ) { stamin = maxstamin; }		
-		If(sprinting==0) {
-			If(stamin>10&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) {
-				//A_Print("speeding up!", 1.0);
-				selectedWeapon=Weapon(player.readyweapon);
-				//sprinting=1;
-				bracing=1;
-				If(!CountInv("wos_sprintWeap")){
-					A_GiveInventory("wos_sprintWeap",1);
-				}
-				A_SelectWeapon("wos_sprintWeap");
-			}
-			Else If( stamin<maxstamin && !(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) && ( !(GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)) || vel.length()<2 ) )
-			/*else if ( stamin<maxstamin && !(GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED) )*/
-			{
-				stamin++;				
-			}
-			If(player.readyweapon is "wos_sprintWeap") {
-				Player.SetPSprite(PSP_WEAPON,player.readyweapon.FindState("Nope"));
-				A_SelectWeapon(selectedWeapon.GetClassName());
-			}
-		}
-		Else {
-			bracing=1;
-			If(GetPlayerInput(MODINPUT_BUTTONS)&(BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)){If(stamin>0){stamin--;}}
-			If(stamin>0&&GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED){ }
-			Else {
-				//A_Print("slowing down!", 1.0);
-				//sprinting=0;
-				bracing=0;
-				let sprwep = Weapon(player.readyweapon);
-				If(player.readyweapon is "wos_sprintWeap"){Player.SetPSprite(PSP_WEAPON,sprwep.FindState("Nope"));}
-				A_SelectWeapon(selectedWeapon.GetClassName());
-			}
-		}
-    }
-	void FallDamage() {
-		double cvel = vel.z;
-		int damage;
-		If(pvel<cvel) {
-			If(pvel<=-32){damage=(int)(pvel)*2;}
-			Else If(pvel<=-23){damage=(int)(pvel);}
-			Else If(pvel<=-16&&bracing==0){damage=(int)(pvel)/4;}
-			If(bracing==1){damage/=2;}
-			DamageMobj(null,null,-damage,"Falling");
-		}
-	}
+		ViewBob = 1.1*hpeed;
+		speed = hpeed;
+	}*/
 	// damageMObj() ////////////////////////////////////////////////////////////
 	Override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle) {
 		int newdamage;
@@ -306,53 +312,44 @@ class binderPlayer : StrifePlayer {
 	}
 	////////////////////////////////////////////////////////////////////////////
 
-	// broken lands adopted code ///////////////////////////////////////////////
+	
 	//double speedbase; property BaseSpeed : speedbase; //moved up
 	void HandleSpeed() {
-		double hpeed = speedbase;
+        double hpeed = speedbase;
 		bool dont;
-		/*If(GetFriction()>0.91)
-		{
-			If(self is "jwPlayerWalrus"){hpeed*=2.5;}
-			Else{dont=1;}
-		}*/
-		If(!dont/*&&!reactiontime&&slowed!=3*/&&player.health){vel.x*=0.8; vel.y*=0.8; ViewBob=0.4;}
-		If(hpeed<0.5){hpeed=0.5;}
-		If(running&&!waterlevel)
-		{
-			hpeed*=3.0;
-			If(player.cmd.buttons&BT_RUN){hpeed/=2.0;}
-		}
-		//If(slowed==1){hpeed*=0.5; ViewBob*=0.5;}
-		//Else If(slowed>=2){hpeed=0; ViewBob=0;}
-		speed=hpeed;
-	}
-	void CheckSprint()
-	{
-		If (player.cmd.buttons&BT_SPEED/*&&!slowed*/) {
-			running = 1;
-			sprinting = 1;
-		}
-		Else {
-			running = 0;
-			sprinting = 0;
-		}
-	}
+		double stmed = 0.01 * (175 - stamin);
 
-	void LedgeClimb()
-	{
-		If((player.readyweapon is "zscPunchDagger")&&player.cmd.buttons&BT_JUMP) //||running
-		{
+        If ( !dont && !reactiontime && player.health ) {vel.x*=0.8; vel.y*=0.8; ViewBob=0.6*hpeed;}
+		If ( hpeed < 0.5 ) {hpeed=0.5;}
+
+        If ( stmed < 0 ) {stmed=0;}
+		hpeed -= stmed;
+		If ( hpeed < 0.1 ) {hpeed=0.1;}
+		If ( hpeed > 1.0 ) {hpeed=1.0;}
+
+        If( sprinting == 1 ) {
+			hpeed*=3.0;
+            If( GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN ){ hpeed /= 2;}			
+		} else if ( sprinting == 0 ) {
+			hpeed = 0.8;
+		}
+		If( currentarmor == 2 ){ hpeed*=0.8; }
+		If( overweight == 1 ){ hpeed*=0.5; } //Halve speed when true
+        If( overweight2 == 1 ){ hpeed*=0.01; } //Set it to veery slow when true
+		//If(surgery==1||repairing==1){hpeed=0;}
+		ViewBob = 0.6*hpeed; //lower the viewBob
+		speed = hpeed;
+    }
+
+	void LedgeClimb() {
+		If((player.readyweapon is "wosPunchDagger")&&player.cmd.buttons&BT_JUMP) {
 			FLineTraceData h, i, j;
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height+8,data: i);
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height-4,data: j);
-			If(i.HitType==TRACE_HitNone)
-			{
-				For(int tall=16; tall<=height; tall+=8)
-				{
+			If(i.HitType==TRACE_HitNone) {
+				For(int tall=16; tall<=height; tall+=8) {
 					LineTrace(angle,24,0,TRF_THRUSPECIES,tall,data: h);
-					If(h.HitType==TRACE_HitWall)
-					{
+					If(h.HitType==TRACE_HitWall) {
 						int zspd = 0;
 						If(j.HitType==TRACE_HitWall||player.cmd.buttons&BT_FORWARD){zspd=2;}
 						Else{ViewBob=0;}
@@ -363,14 +360,14 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 	}
-	// broken lands ledge climbing /////////////////////////////////////////////
+	
 	Override void CheckJump() {
-		If (player.readyweapon is "zscPunchDagger" || player.readyweapon is "wos_sprintWeap") {
+		If (player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap") {
 			Super.CheckJump();
 		}
 		Else If(player.cmd.buttons & BT_JUMP) {
 			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35) {
-				double rollbase = speedbase*6.0;
+				double rollbase = speedbase*4.0;
 				double rollbonus = 3.0;
 				If(rollbonus<0.5){rollbonus=0.5;}
 				//rolldown=35;
@@ -394,6 +391,18 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 	}
+	
+	/*void CheckSprint()
+	{
+		If (player.cmd.buttons&BT_SPEED&&!slowed) {
+			running = 1;
+			//sprinting = 1;
+		}
+		Else {
+			running = 0;
+			//sprinting = 0;
+		}
+	}*/
 	////////////////////////////////////////////////////////////////////////////
 	
 	//  climbing code by Dodopod  //////////////////////////////////////////////
@@ -423,7 +432,7 @@ class binderPlayer : StrifePlayer {
         // Start/stop climbing
         if (!climbing) {
 			// allow climbing only with dagger in hand /////////////////////////
-            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight && player.readyweapon is "zscPunchDagger") {
+            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight && player.readyweapon is "wosPunchDagger") {
                 climbing = true;
                 A_StartSound("*Climb", CHAN_BODY);
                 viewBob = 0.0;
@@ -477,13 +486,21 @@ class binderPlayer : StrifePlayer {
 
 	// CheatGive() new commands ////////////////////////////////////////////////
 	override void CheatGive( String name, int amount ) {
-		if ( name ~== "accuracy" ) {
-			A_GiveInventory("upgradeAccuracy", 1);
+		if ( name ~== "accuracy" ) {			
+			if ( !amount ) { 
+				A_GiveInventory("upgradeAccuracy", 1);
+			} else {
+				A_GiveInventory("upgradeAccuracy", amount);
+			}
 		} 
-		else if ( name ~== "stamina" ) {
-			A_GiveInventory("UpgradeStamina", 10);
+		else if ( name ~== "stamina" ) {			
+			if ( !amount ) {
+				A_GiveInventory("UpgradeStamina", 10);
+			} else {
+				A_GiveInventory("UpgradeStamina", amount*10);
+			}
 		} 
-		else if ( name ~== "medicals" ) {
+		else if ( name ~== "meds" ) {
 			if (!amount) {
 				A_GiveInventory("wosHyposprej", 10);
 				A_GiveInventory("wosKombopack", 5);
@@ -521,13 +538,13 @@ class binderPlayer : StrifePlayer {
 			//A_GiveInventory("", 1);
 			A_GiveInventory("StormPistol", 1);
 			A_GiveInventory("laserPistol", 1);
-			A_GiveInventory("zscStrifeCrossbow", 1);
-			A_GiveInventory("zscAssaultGun", 1);
+			A_GiveInventory("wosStrifeXbow", 1);
+			A_GiveInventory("wosAssaultGun", 1);
 			A_GiveInventory("staffBlaster", 1);
-			A_GiveInventory("zscMiniMissileLauncher", 1);
-			A_GiveInventory("zscStrifeGrenadeLauncher", 1);
-			A_GiveInventory("zscFlameThrower", 1);
-			A_GiveInventory("zscMauler", 1);
+			A_GiveInventory("wosMinimissileLauncher", 1);
+			A_GiveInventory("wosGrenadeLauncher", 1);
+			A_GiveInventory("wosFlamethrower", 1);
+			A_GiveInventory("wosMauler", 1);
 		} 
 		else if ( name ~== "items" ) {			
 			if ( !amount ) {
@@ -542,6 +559,35 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosBinderArmorBasic", 1);
 			A_GiveInventory("wosBinderArmorAdvanced", 1);
 			A_GiveInventory("wosKineticArmor", 1);
+			//A_GiveInventory("", 1);
+		}
+		else if ( name ~== "shouldergun" ) {
+			A_GiveInventory("shoulderGun", 1);
+			A_GiveInventory("shldrGunMag", 32);
+			A_GiveInventory("shoulderGunCharger", 1);
+		}
+		else if ( name ~== "gold" || name ~=="money" ) {
+			if ( !amount ) {
+				A_GiveInventory("goldCoin", 1);
+			} else {
+				A_GiveInventory("goldCoin", amount);
+			}
+		}
+		else if ( name ~== "all" || name ~== "everything" ) {
+			A_Log("\c[red]Cheat blocked. Use other cheats if you are in need of assistance.");
+		}
+		else if ( name ~== "keys" ) {
+			A_GiveInventory("skeletonKey", 1);
+			A_GiveInventory("BHWasteCatacombKey", 1);
+			A_GiveInventory("BHWasteKey", 1);
+			A_GiveInventory("BHminesKey", 1);
+			A_GiveInventory("BHbathKey", 1);
+			A_GiveInventory("BHpowerPlantKey", 1);
+			A_GiveInventory("BHpowerPlantKey2", 1);
+			A_GiveInventory("BHpowerPlantReactorKey", 1);
+			A_GiveInventory("BHfactoryKey", 1);
+			A_GiveInventory("SHtgPowerplantKey", 1);
+			A_GiveInventory("m08k_BP_pokladnice", 1);
 			//A_GiveInventory("", 1);
 		}
 		else {
@@ -601,7 +647,7 @@ class binderPlayer : StrifePlayer {
 			Stop;
 	}
 }
-class wos_sprintWeap : augmentedWeapon {
+class wos_sprintWeap : wosWeapon {
     Default {
         weapon.selectionOrder 4000;
         Tag "Sprinting";

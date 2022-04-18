@@ -25,7 +25,7 @@ Conversation {
 			Text = "\c[gold]Buy Grenade Launcher";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscStrifeGrenadeLauncher";
+			GiveItem = "wosGrenadeLauncher";
 			NextPage = "SH_explosiveGunsVendor_opener";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -64,7 +64,7 @@ Conversation {
 			Text = "\c[gold]Buy Mini-missile Launcher";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscMiniMissileLauncher";
+			GiveItem = "wosMinimissileLauncher";
 			NextPage = "SH_explosiveGunsVendor_opener";
 			CloseDialog = false;
 			DisplayCost = true;

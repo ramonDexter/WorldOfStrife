@@ -25,7 +25,7 @@ Conversation {
 			Text = "\c[gold]Buy Mauler";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscMauler";
+			GiveItem = "wosMauler";
 			NextPage = "SH_energyWeaponsVendor_opener";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -77,7 +77,7 @@ Conversation {
 			Text = "\c[gold]Buy Flamethrower";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
-			GiveItem = "zscFlameThrower";
+			GiveItem = "wosFlamethrower";
 			NextPage = "SH_energyWeaponsVendor_opener";
 			CloseDialog = false;
 			DisplayCost = true;

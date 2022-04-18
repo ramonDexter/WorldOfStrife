@@ -62,7 +62,7 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]Buy Assault Gun";
 			NextPage = "MP_jonyWeaponsVendor_opener";
-			GiveItem = "zscAssaultGun";
+			GiveItem = "wosAssaultGun";
 			YesMessage = "Here is one Assault Gun!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -144,7 +144,7 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]Buy Flamethrower";
 			NextPage = "MP_tonyWeaponsVendor_opener";
-			GiveItem = "zscFlameThrower";
+			GiveItem = "wosFlamethrower";
 			YesMessage = "Here is one Flamethrower!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -168,7 +168,7 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]Buy Mini-Missile Launcher";
 			NextPage = "MP_tonyWeaponsVendor_opener";
-			GiveItem = "zscMiniMissileLauncher";
+			GiveItem = "wosMinimissileLauncher";
 			YesMessage = "Here is one Mini-Missile Launcher!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
@@ -192,7 +192,7 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]Buy Mauler";
 			NextPage = "MP_tonyWeaponsVendor_opener";
-			GiveItem = "zscMauler";
+			GiveItem = "wosMauler";
 			YesMessage = "Here is one Mauler!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;

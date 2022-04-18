@@ -15,7 +15,7 @@ ammo: hookShot_Ammo
 //==----------------------------------------------------------
 //weapon
 //==----------------------------------------------------------
-class hookShotWeapon : augmentedWeapon 
+class hookShotWeapon : wosWeapon 
 {
 
     int hookLoaded;

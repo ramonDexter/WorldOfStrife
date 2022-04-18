@@ -419,7 +419,7 @@ class wosWeapon : StrifeWeapon {
 			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
 			return;
 		} else {
-			if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) > 0 ) {
+			if ( CountInv(invoker.ammoType2) > 0 && CountInv(invoker.ammoType1) < FindInventory (invoker.ammoType1).maxAmount ) {
 				Player.SetPSprite(PSP_WEAPON,invoker.FindState("DoReload"));
 			} else {
 				if (CheckInventory(invoker.ammoType1, FindInventory(invoker.ammoType1).maxAmount)) {

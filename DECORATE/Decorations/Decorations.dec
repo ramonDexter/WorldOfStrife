@@ -9104,7 +9104,7 @@ actor wosD_dex_bioCell 21518 {
 	States {
 		Spawn:
 			DUMM AAAAA 6 Bright
-			DUMM BCDEDCB 6
+			DUMM BCDEDCB 6 Bright
 			Loop
 	}
 }

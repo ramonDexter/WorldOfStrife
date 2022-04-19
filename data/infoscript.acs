@@ -1,0 +1,22 @@
+Script "tutorialInfo" (int which) {
+	//interdone=1;
+	If(which==5) {
+		HudMessage(s:"You can climb up ledges by holding the ", k:"+jump", s:" key while moving towards the ledge.
+			\nThe ledge needs to be around the size of your character to be climbable.
+			\nYou also cannot climb ledges with your weapons drawn. You can only climb ledges with punchdagger in hand.";
+			HUDMSG_FADEINOUT,10,CR_UNTRANSLATED,0.5,0.25,10.0,0.5,0.5);
+	} Else If(which==6) {
+		HudMessage(s:"Holding the ", k:"+speed", s:" key will make you sprint.
+			\nYou can cover more distance by sprinting before jumping.";
+			HUDMSG_FADEINOUT,10,CR_UNTRANSLATED,0.5,0.25,10.0,0.5,0.5);
+	} Else If(which==7) {
+		HudMessage(s:"You have complete control over your character in air.
+			\nUse it to manouver around this corner.";
+			HUDMSG_FADEINOUT,10,CR_UNTRANSLATED,0.5,0.25,10.0,0.5,0.5);
+	} Else If(which==8) {
+		HudMessage(s:"The dark hole on the wall can be used to get to the other side.
+			\nTo use it, look towards the hole and hold the ", k:"+jump", s:" key and hold the direction you want to go in.
+			\nHolding forwards is not needed for this.";
+			HUDMSG_FADEINOUT,10,CR_UNTRANSLATED,0.5,0.25,10.0,0.5,0.5);
+	}	
+}

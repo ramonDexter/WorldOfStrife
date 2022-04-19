@@ -5,6 +5,24 @@ namespace = "GZDoom";
 Conversation
 {
 	ID = 14;
+    Page {
+        pageName = "SH_playerPC_tutorial";
+        Name = "\c[yellow][ Personal Computer ]";
+        Dialog = "\c[white]\c[white]Tutorial will teach you basics of movement in WoS. Starting tutorial is strongly advised for beginners!";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+        Choice {
+            Text = "\c[yellow][ START ]";
+            NextPage = "SH_playerPC_tempOpener";
+        }
+        Choice {
+            Text = "\c[yellow][ START TUTORIAL ]";
+            NextPage = "SH_playerPC_tempOpener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 667;
+        }
+    }
 	Page {
         pageName = "SH_playerPC_tempOpener";
 		//makes the message temporary
@@ -25,6 +43,7 @@ Conversation
 			Special = 80;
 			arg0 = 159;
         }
+        
     }
     Page {
         pageName = "SH_playerPC_trueOpener";
@@ -39,6 +58,13 @@ Conversation
         Choice {
             Text = "[ Information ]";
             Nextpage = "SH_playerPC_information";
+        }
+        Choice {
+            Text = "\c[yellow][ START TUTORIAL ]";
+            NextPage = "SH_playerPC_trueOpener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 667;
         }
 		Choice {
 			Text = "\c[yellow]<<GOTO TESTSITE>>";

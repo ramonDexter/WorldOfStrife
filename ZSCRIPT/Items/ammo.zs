@@ -274,7 +274,7 @@ class wosEnergyCell : wosPickup {
 	States {
 		Spawn:
 			DUMM AAAAA 6 Bright;
-			DUMM BCDEEDCB 6 Bright;
+			DUMM BCDEEDCB 6;
 			Loop;
 		Use:
 			TNT1 A 0 A_GiveInventory("energyPod", 45);

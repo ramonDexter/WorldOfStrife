@@ -189,18 +189,26 @@ model wosD_zscMedPatch {
 	frameindex DUMM A 0 1
 }
 model zscMedicalKit {
-	path "models/items/med/"
-	model 0 "medicalKit.md3"
-	skin 0 "tx_medikit.png"
-	scale 4.0 4.0 4.0
+	//path "models/items/med/"
+	//model 0 "medicalKit.md3"
+	//skin 0 "tx_medikit.png"
+	//scale 4.0 4.0 4.0
+	path "models/props/deusex/"
+	model 0 "dex_medikit.md3"
+	skin 0 "MedKitTex1.png"
+	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_zscMedicalKit {
-	path "models/items/med/"
-	model 0 "medicalKit.md3"
-	skin 0 "tx_medikit.png"
-	scale 4.0 4.0 4.0
+	//path "models/items/med/"
+	//model 0 "medicalKit.md3"
+	//skin 0 "tx_medikit.png"
+	//scale 4.0 4.0 4.0
+	path "models/props/deusex/"
+	model 0 "dex_medikit.md3"
+	skin 0 "MedKitTex1.png"
+	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

@@ -331,7 +331,7 @@ class binderPlayer : StrifePlayer {
 			hpeed*=3.0;
             If( GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN ){ hpeed /= 2;}			
 		} else if ( sprinting == 0 ) {
-			hpeed = 0.8;
+			hpeed *= 0.9;
 		}
 		If( currentarmor == 2 ){ hpeed*=0.8; }
 		If( overweight == 1 ){ hpeed*=0.5; } //Halve speed when true

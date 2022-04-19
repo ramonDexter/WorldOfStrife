@@ -81,7 +81,7 @@ class binderPlayer : StrifePlayer {
 		//Player.StartItem "wosi_scanner", 1;
 		// custom properties ///////////////////////////////////////////////////
 		// brokenLands jump&ledge climbing //	
-		binderPlayer.BaseSpeed 2;
+		binderPlayer.BaseSpeed 2.0;
 		/////////////////////////////////////
 
 		// dodopod ledge climbing //
@@ -319,7 +319,7 @@ class binderPlayer : StrifePlayer {
 		bool dont;
 		double stmed = 0.01 * (175 - stamin);
 
-        If ( !dont && !reactiontime && player.health ) {vel.x*=0.8; vel.y*=0.8; ViewBob=0.6*hpeed;}
+        If ( !dont && !reactiontime && player.health ) {vel.x*=0.9; vel.y*=0.9; ViewBob=0.6*hpeed;}
 		If ( hpeed < 0.5 ) {hpeed=0.5;}
 
         If ( stmed < 0 ) {stmed=0;}

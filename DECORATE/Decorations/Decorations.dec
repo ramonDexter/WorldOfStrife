@@ -1740,6 +1740,8 @@ Actor leather_boots : RebelBoots 21087
 	//$Title "boots leather"
 	+NOGRAVITY
 	-NOBLOCKMAP
+	radius 8
+	height 16
 	tag "leather boots"
 	Translation "16:31=206:220"
 }
@@ -1751,6 +1753,8 @@ Actor green_boots : RebelBoots 21088
 	//$Title "boots green"
 	+NOGRAVITY
 	-NOBLOCKMAP
+	radius 8
+	height 16
 	tag "leather boots" 
 	Translation "16:31=48:63"
 }
@@ -1762,6 +1766,8 @@ Actor bronze_boots : RebelBoots 21089
 	//$Title "boots bronze"
 	+NOGRAVITY
 	-NOBLOCKMAP
+	radius 8
+	height 16
 	tag "leather boots"
 	Translation "16:31=80:95"
 }

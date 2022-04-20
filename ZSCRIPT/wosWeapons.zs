@@ -17,6 +17,7 @@ class wosWeapon : StrifeWeapon {
 		}
 		Weapon weapon = player.ReadyWeapon;
 		if (weapon != null) {
+			// tahle cast odebira naboje; pokud vykomentuju, nebere naboje
 			if (!weapon.DepleteAmmo (weapon.bAltFire))
 				return;
 		}
@@ -382,21 +383,41 @@ class wosWeapon : StrifeWeapon {
 	////////////////////////////////////////////////////////////////////////////
 	
 	
-	// reload actions //////////////////////////////////////////////////////////
-	action void W_checkAmmo(int much = 1) {
-		If ( CountInv(invoker.ammoType1) < much || CountInv(invoker.ammoType2) < much) {
-			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
-		}
-	}
-
-	action void W_Reload() {
+	// reload actions //////////////////////////////////////////////////////////	 
+	action void W_reloadCheck() {
 		if ( player == null ) {
 			return;
 		}
-	
+		// check if no ammo and default to dagger
+		if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) == 0 ) {
+			A_Log("\c[red]Ammo depleted!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+			A_SelectWeapon("wospunchdagger");
+			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
+			return;
+		} else {
+			// check if magazine is full or not && if player has ammo to reload
+			if ( CountInv(invoker.ammoType2) > 0 && CountInv(invoker.ammoType1) < FindInventory (invoker.ammoType1).maxAmount ) {
+				Player.SetPSprite(PSP_WEAPON,invoker.FindState("DoReload"));
+			} else {
+				// if magazine is full, return to ready
+				if (CheckInventory(invoker.ammoType1, FindInventory(invoker.ammoType1).maxAmount)) {
+					//.. vrati se do 'ready'
+					A_Log("\c[green]Ammo full!");
+					Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
+				}
+			}
+		}
+	}
+	action void W_Reload() {
+		if ( player == null ) {
+			return;
+		}	
 		if ( CheckInventory (invoker.ammoType1, 0) || !CheckInventory (invoker.ammoType2, 1) ) {
 			//return ResolveState("Ready");
-			A_Print("Not enough ammo!");
+			A_Log("\c[red]Not enough ammo!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+			A_SelectWeapon("wospunchdagger");
 		} 
 		//ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
 		int ammoAmount = FindInventory(invoker.ammoType1).maxAmount - CountInv(invoker.ammoType1);
@@ -407,28 +428,6 @@ class wosWeapon : StrifeWeapon {
 			TakeInventory (invoker.ammoType2, ammoAmount);
 		}
 		//return ResolveState ("ReloadFinish");
-	} 
-	action void W_reloadCheck() {
-		if ( player == null ) {
-			return;
-		}
-		if ( CountInv(invoker.ammoType1) == 0 && CountInv(invoker.ammoType2) == 0 ) {
-			A_Log("\c[red]Ammo depleted!");
-			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
-			A_SelectWeapon("wospunchdagger");
-			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
-			return;
-		} else {
-			if ( CountInv(invoker.ammoType2) > 0 && CountInv(invoker.ammoType1) < FindInventory (invoker.ammoType1).maxAmount ) {
-				Player.SetPSprite(PSP_WEAPON,invoker.FindState("DoReload"));
-			} else {
-				if (CheckInventory(invoker.ammoType1, FindInventory(invoker.ammoType1).maxAmount)) {
-					//.. vrati se do 'ready'
-					A_Log("\c[green]Ammo full!");
-					Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
-				}
-			}
-		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 	

@@ -28,6 +28,10 @@ class binderPlayer : StrifePlayer {
 	int SpeedUpgrade;
 	Actor backplaye;
 	bool nightEyeGrainEnable;
+	
+	// RPG system - new player stats
+	int mindValue;
+	property mind : mindValue;
 
 	// broken lands ledge climbing /////////////////////////////////////////////	
 	double speedbase; property BaseSpeed : speedbase;
@@ -82,6 +86,7 @@ class binderPlayer : StrifePlayer {
 		// custom properties ///////////////////////////////////////////////////
 		// brokenLands jump&ledge climbing //	
 		binderPlayer.BaseSpeed 2.0;
+		binderPlayer.mind 0;
 		/////////////////////////////////////
 
 		// dodopod ledge climbing //
@@ -151,6 +156,8 @@ class binderPlayer : StrifePlayer {
         stamin = 400;
 		////////
     }	
+
+	
 
 	void HandlePlayerBody() {
 		If(backplaye==null) {
@@ -490,7 +497,83 @@ class binderPlayer : StrifePlayer {
 			if ( !amount ) { 
 				A_GiveInventory("upgradeAccuracy", 1);
 			} else {
-				A_GiveInventory("upgradeAccuracy", amount);
+				switch(amount) {
+					case 1:
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 2:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 3:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 4:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 5:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 6:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 7:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 8:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 9:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+					case 10:
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+						A_GiveInventory("upgradeAccuracy", 1);
+					break;
+				}
 			}
 		} 
 		else if ( name ~== "stamina" ) {			
@@ -500,6 +583,89 @@ class binderPlayer : StrifePlayer {
 				A_GiveInventory("UpgradeStamina", amount*10);
 			}
 		} 
+		else if ( name ~== "mind" ) {
+			if ( !amount ) {
+				A_GiveInventory("upgradeMind", 1);
+			} else {
+				switch(amount) {
+					case 1:
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 2:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 3:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 4:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 5:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 6:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 7:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 8:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 9:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+					case 10:
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+						A_GiveInventory("upgradeMind", 1);
+					break;
+				}
+			}
+		}
 		else if ( name ~== "meds" ) {
 			if (!amount) {
 				A_GiveInventory("wosHyposprej", 10);

@@ -294,7 +294,9 @@ class wosStatusBar : BaseStatusBar {
 		//  zobrazit statusbar jenom pokud ma hrac helmu  //////////////////////
         item = CPlayer.mo.FindInventory('binder_helmet');
         if (item != null ) {     
-		
+			// cast player to access his vars //
+			let pawn = binderPlayer(CPlayer.mo);
+
             //  draw statusbar frame  //////////////////////////////////////////
             drawImage ("HUDfrmT", (-54, 0), DI_ITEM_OFFSETS);
             drawImage ("HUDiB", (-54, 0), DI_ITEM_OFFSETS, 0.5);
@@ -311,19 +313,19 @@ class wosStatusBar : BaseStatusBar {
             DrawHealthBar (points, 339, 8);
 
 			// stamina bar /////////////////////////////////////////////////////
-			let pawn = binderPlayer(CPlayer.mo);
+			//let pawn = binderPlayer(CPlayer.mo);
 			DrawBar("stamBar", "stamBck", pawn.stamin, pawn.maxstamin, (369, 97), 0, 3);
 			//DrawString(mGrnFont, FormatNumber(pawn.stamin, 3, 19), (359, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 
             //  Armor  /////////////////////////////////////////////////////////			
-			let armo = binderPlayer(CPlayer.mo);
-			If(armo.currentarmor > 0 && armo.armoramount > 0) {
+			//let pawn = binderPlayer(CPlayer.mo);
+			If(pawn.currentarmor > 0 && pawn.armoramount > 0) {
 				string armortype;
-				If(armo.currentarmor==1){armortype="I_ARM2";}Else If(armo.currentarmor==2){armortype="I_ARM1";}Else If(armo.currentarmor==3){armortype="I_RGA1";}Else If(armo.currentarmor==4){armortype="I_RGA2";}Else If(armo.currentarmor==5){armortype="I_SHLD";}
+				If(pawn.currentarmor==1){armortype="I_ARM2";}Else If(pawn.currentarmor==2){armortype="I_ARM1";}Else If(pawn.currentarmor==3){armortype="I_RGA1";}Else If(pawn.currentarmor==4){armortype="I_RGA2";}Else If(pawn.currentarmor==5){armortype="I_SHLD";}
 				DrawImage(armortype,(-56, 0),DI_ITEM_OFFSETS);
 				//DrawString(mYelFont, FormatNumber(item.Amount, 3, 5), (362, 19), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
 				//DrawInventoryIcon(armortype, (120, 177), DI_ITEM_OFFSETS);
-				If(armo.currentarmor!=6){DrawString(mYelFont, FormatNumber(armo.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
+				If(pawn.currentarmor!=6){DrawString(mYelFont, FormatNumber(pawn.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
 			}
 
             //  Ammo  //////////////////////////////////////////////////////////		
@@ -380,9 +382,9 @@ class wosStatusBar : BaseStatusBar {
                 //CPlayer.inventorytics = 0;
 				CPlayer.mo.InvFirst = ValidateInvFirst (7);
 				// display all items overall weight in open inventory //////////
-				let wght = binderPlayer(CPlayer.mo);
-				if ( wght != NULL ) {
-					DrawString (mESfont, FormatNumber(wght.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
+				let pawn = binderPlayer(CPlayer.mo);
+				if ( pawn != NULL ) {
+					DrawString (mESfont, FormatNumber(pawn.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
 				}
 				////////////////////////////////////////////////////////////////
 				
@@ -526,6 +528,7 @@ class wosStatusBar : BaseStatusBar {
 		switch (CurrentPop) {
 		
 			case POP_Status:
+				let pawn = binderPlayer(CPlayer.mo);
 				// STATUS popup ////////////////////////////////////////////////
 				//  Show miscellaneous status items.  //////////////////////////
 				
@@ -540,7 +543,8 @@ class wosStatusBar : BaseStatusBar {
 				DrINumber2 (CPlayer.mo.accuracy, left+266*xscale, top+9*yscale, 7*xscale, imgSTFON0);
 				//  stamina
 				DrINumber2 (CPlayer.mo.stamina, left+266*xscale, top+27*yscale, 7*xscale, imgSTFON0);
-
+				//mind
+				DrINumber2 (pawn.mindValue, left+266*xscale, top+45*yscale, 7*xscale, imgSTFON0);
 				// How many keys does the player have?
 				/*
 				i = 0;
@@ -559,7 +563,7 @@ class wosStatusBar : BaseStatusBar {
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true,
 						left + 248*xscale,
-						top + 75*yscale,
+						top + 83*yscale,
 						DTA_CleanNoMove, true);
 				}
 				
@@ -579,16 +583,15 @@ class wosStatusBar : BaseStatusBar {
 				//  Does the player have coins?  ///////////////////////////////
 				item = CPlayer.mo.FindInventory("goldCoin");
 				if ( item != NULL ) {
-					DrINumber2 (item.Amount, left+284*xscale, top+49 * yscale, 7*xscale, imgSTFON0);
+					DrINumber2 (item.Amount, left+284*xscale, top+64 * yscale, 7*xscale, imgSTFON0);
 				}
 				
-				//  Display weight of owned items  /////////////////////////////
-				let wght = binderPlayer(CPlayer.mo);
-				if ( wght != NULL ) {
+				//  Display weight of owned items  /////////////////////////////				
+				if ( pawn != NULL ) {
 					// current weight
-					DrINumber2 (wght.encumbrance, left+197*xscale, top+87 * yscale, 7*xscale, imgSTFON0);
+					DrINumber2 (pawn.encumbrance, left+197*xscale, top+87 * yscale, 7*xscale, imgSTFON0);
 					//maximal weight
-					DrINumber2 (wght.weightmax, left+237*xscale, top+87 * yscale, 7*xscale, imgSTFON0);			
+					DrINumber2 (pawn.weightmax, left+237*xscale, top+87 * yscale, 7*xscale, imgSTFON0);			
 				}
 				
 				//  How much ammo does the player have?  ///////////////////////

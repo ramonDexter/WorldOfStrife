@@ -248,11 +248,16 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 		} else if ( e.Name == "give_10Stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 10);
+		} else if ( e.Name == "give_10Mind" ) {
+			pawn.A_GiveInventory("upgradeMind", 1);
 		} else if ( e.Name == "give_20Accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 		} else if ( e.Name == "give_20Stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 20);
+		} else if ( e.Name == "give_20Mind" ) {
+			pawn.A_GiveInventory("upgradeMind", 1);
+			pawn.A_GiveInventory("upgradeMind", 1);
 		} else if ( e.Name == "give_40accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
@@ -260,6 +265,11 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 		} else if ( e.Name == "give_40stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 40);
+		} else if ( e.Name == "give_40Mind" ) {
+			pawn.A_GiveInventory("upgradeMind", 1);
+			pawn.A_GiveInventory("upgradeMind", 1);
+			pawn.A_GiveInventory("upgradeMind", 1);
+			pawn.A_GiveInventory("upgradeMind", 1);
 		} else if ( e.Name == "log_pawnmaxhealth" ) {
 			pawn.A_logInt(pawn.GetMaxHealth(true));
 		} else if ( e.Name == "heal_Player" ) {

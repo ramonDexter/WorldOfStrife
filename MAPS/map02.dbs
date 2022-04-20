@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 2397.555f;
+		viewpositionx = 346.2366f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = -836.3173f;
+		viewpositiony = 1046.636f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 6.528399f;
+		viewscale = 0.04465632f;
 		
 		plugins
 		{
@@ -83,51 +83,40 @@ maps
 			}
 		}
 		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
 		fieldtypes
 		{
 			
-			linedef
-			{
-				arg0str = 2;
-				alpha = 1;
-			}
-			
-			sidedef
-			{
-				offsety_mid = 1;
-				offsetx_mid = 1;
-				offsety_top = 1;
-				offsety_bottom = 1;
-				offsetx_top = 1;
-				offsetx_bottom = 1;
-				scalex_mid = 1;
-				scaley_mid = 1;
-				scaley_bottom = 1;
-				scalex_top = 1;
-				scalex_bottom = 1;
-				scaley_top = 1;
-			}
-			
 			sector
 			{
-				rotationceiling = 1;
-				rotationfloor = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				xpanningceiling = 1;
-				ypanningceiling = 1;
-				xpanningfloor = 1;
-				ypanningfloor = 1;
 				user_managed_3d_floor = 3;
-			}
-			
-			thing
-			{
-				conversation = 0;
-				arg0str = 2;
-				health = 0;
 			}
 		}
 		
@@ -142,7 +131,7 @@ maps
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 740;
-				firstvisibleline = 107;
+				firstvisibleline = 141;
 			}
 			
 			document1
@@ -152,8 +141,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 30237;
-				firstvisibleline = 921;
+				caretposition = 55631;
+				firstvisibleline = 1594;
 				activetab = true;
 			}
 		}

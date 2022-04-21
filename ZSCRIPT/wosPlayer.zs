@@ -157,7 +157,14 @@ class binderPlayer : StrifePlayer {
 		////////
     }	
 
-	
+	static int getplayerMind(actor activator) {
+		let pawn = binderplayer(activator);
+
+		if ( pawn && pawn.player ) {
+			return pawn.MindValue;
+		}
+		return 0;
+	}
 
 	void HandlePlayerBody() {
 		If(backplaye==null) {

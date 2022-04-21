@@ -19,7 +19,7 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -114,9 +114,48 @@ maps
 		fieldtypes
 		{
 			
+			linedef
+			{
+				arg0str = 2;
+				alpha = 1;
+			}
+			
+			sidedef
+			{
+				offsety_mid = 1;
+				offsetx_mid = 1;
+				offsety_top = 1;
+				offsety_bottom = 1;
+				offsetx_top = 1;
+				offsetx_bottom = 1;
+				scalex_mid = 1;
+				scaley_mid = 1;
+				scaley_bottom = 1;
+				scalex_top = 1;
+				scalex_bottom = 1;
+				scaley_top = 1;
+			}
+			
 			sector
 			{
+				rotationceiling = 1;
+				rotationfloor = 1;
+				xscalefloor = 1;
+				yscalefloor = 1;
+				xscaleceiling = 1;
+				yscaleceiling = 1;
+				xpanningceiling = 1;
+				ypanningceiling = 1;
+				xpanningfloor = 1;
+				ypanningfloor = 1;
 				user_managed_3d_floor = 3;
+			}
+			
+			thing
+			{
+				conversation = 0;
+				arg0str = 2;
+				health = 0;
 			}
 		}
 		

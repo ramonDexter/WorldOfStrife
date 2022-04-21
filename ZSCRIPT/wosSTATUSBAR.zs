@@ -622,6 +622,7 @@ class wosStatusBar : BaseStatusBar {
 
 				//  What weapons does the player have?  ////////////////////////
 				static const class<Weapon> WeaponList[] = {
+					"StormPistol",
 					"laserPistol",
 					"wosStrifeXbow",
 					"wosAssaultGun",
@@ -629,11 +630,10 @@ class wosStatusBar : BaseStatusBar {
 					"wosMinimissileLauncher",
 					"wosFlamethrower",
 					"wosGrenadeLauncher",
-					"wosMauler",
-					"StormPistol"
+					"wosMauler"
 				};
-				static const int WeaponX[] = {64, 23, 57, 24, 59, 20, 54, 22, 78};
-				static const int WeaponY[] = {0, 7, 17, 25, 39, 50, 60, 77, 83};
+				static const int WeaponX[] = {24, 48, 67, 61, 19, 19, 55, 19, 49};
+				static const int WeaponY[] = {0, 0, 16, 29, 18, 35, 49, 61, 80};
 
 				for (i = 0; i < 9; ++i) {
 					item = CPlayer.mo.FindInventory (WeaponList[i]);

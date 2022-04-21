@@ -153,9 +153,9 @@ class wosEventHandler : EventHandler {
 		}
 		//END VSO
 		
-		// to prevent reattaching footsteps actor is player returns to map in a hub
-		if (e.IsReturn) return;
-		// to prevent reattaching footsteps actor is player returns to map in a hub
+		// to prevent reattaching footsteps actor if player returns to map in a hub
+		if ( e.IsReturn ) return;
+		// to prevent reattaching footsteps actor if player returns to map in a hub
 
         //VSO: Attach footsteps to player:
 		Footsteps fsteps = Footsteps(Actor.Spawn("Footsteps",player.pos));

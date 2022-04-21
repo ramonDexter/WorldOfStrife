@@ -29,7 +29,7 @@ class binderPlayer : StrifePlayer {
 	Actor backplaye;
 	bool nightEyeGrainEnable;
 	
-	// RPG system - new player stats
+	// RPG system - new player stats ///////////////////////////////////////////
 	int mindValue;
 	property mind : mindValue;
 
@@ -37,7 +37,7 @@ class binderPlayer : StrifePlayer {
 	double speedbase; property BaseSpeed : speedbase;
 	bool running;
 	
-	////////////////////////////////////////////////////////////////////////////	
+	// main player def /////////////////////////////////////////////////////////
 	Default {	
 		+FLOORCLIP
 		
@@ -84,7 +84,6 @@ class binderPlayer : StrifePlayer {
 		//Player.StartItem "hookShot_magazine", 20;
 		//Player.StartItem "wosi_scanner", 1;
 		// custom properties ///////////////////////////////////////////////////
-		// brokenLands jump&ledge climbing //	
 		binderPlayer.BaseSpeed 2.0;
 		binderPlayer.mind 0;
 		/////////////////////////////////////
@@ -94,6 +93,7 @@ class binderPlayer : StrifePlayer {
 		//binderPlayer.ClimbSpeed 2;
 		////////////////////////////
 	}
+	////////////////////////////////////////////////////////////////////////////
 
 	//  overall override  //////////////////////////////////////////////////////
 	override void Tick() {
@@ -157,14 +157,29 @@ class binderPlayer : StrifePlayer {
 		////////
     }	
 
+	// ACS support - functions to return values to ACS scripts /////////////////
+	static int getplayerAccuracy(actor activator) {
+		let pawn = binderplayer(activator);
+		if ( pawn && pawn.player ) {
+			return pawn.accuracy;
+		}
+		return 0;
+	}
+	static int getplayerStamina(actor activator) {
+		let pawn = binderplayer(activator);
+		if ( pawn && pawn.player ) {
+			return pawn.stamina;
+		}
+		return 0;
+	}
 	static int getplayerMind(actor activator) {
 		let pawn = binderplayer(activator);
-
 		if ( pawn && pawn.player ) {
 			return pawn.MindValue;
 		}
 		return 0;
 	}
+	////////////////////////////////////////////////////////////////////////////
 
 	void HandlePlayerBody() {
 		If(backplaye==null) {
@@ -673,7 +688,7 @@ class binderPlayer : StrifePlayer {
 				}
 			}
 		}
-		else if ( name ~== "meds" ) {
+		else if ( name ~== "meds" || name ~== "medicals" ) {
 			if (!amount) {
 				A_GiveInventory("wosHyposprej", 10);
 				A_GiveInventory("wosKombopack", 5);

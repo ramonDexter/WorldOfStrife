@@ -1,0 +1,211 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 40;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_boldric_opener";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Hello, welcome to the promenade tavern. We got tasty food, refreshing drinks and good talk. What would you like?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I want something to eat.";
+            Nextpage = "mp_boldric_food";
+        } 
+        Choice {
+            Text = "I want something to drink.";
+            Nextpage = "mp_boldric_drinks";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "mp_boldric_questions";
+        }
+    }
+    Page {
+        pageName = "mp_boldric_food";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Okay, I got some hotdogs, some burgers and grilled chickens. Hotdog costs 3 gold, cheeseburger is for 5 gold and the chicken costs 20 gold. What would you like?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_boldric_opener";
+        }
+        Choice {
+            Text = "\c[gold]Buy hotdog";
+			NextPage = "mp_boldric_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHotdog01";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "\c[gold]Buy cheeseburger";
+			NextPage = "mp_boldric_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "\c[gold]Buy grilled chicken";
+			NextPage = "mp_boldric_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "goldCoin";
+				amount = 20;
+			}
+        }
+    }
+    Page {
+        pageName = "mp_boldric_drinks";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]All right, some refreshing drink, eh?\nI got soda, water, beer and ale. All kept cold and fresh. The soda costs 5, water is for 2, beer and ale costs 3 gold. What would you like?";
+        Goodbye = "\c[red]Goodbye.";  
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_boldric_opener";
+        }
+        Choice {
+            Text = "\c[gold]Buy soda can";
+			NextPage = "mp_boldric_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSodaCan";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        }
+        Choice {
+            Text = "\c[gold]Buy water bottle";
+			NextPage = "mp_boldric_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 2;
+			}
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of beer";
+			NextPage = "mp_boldric_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of ale";
+			NextPage = "mp_boldric_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 3;
+			}
+        }
+    }
+    Page {
+        pageName = "mp_boldric_questions";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Good, good. I've always got time for a good talk. What wou you like to know?";
+        Goodbye = "\c[red]Goodbye.";   
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_boldric_opener";
+        }
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "mp_boldric_whoareyou";
+        }
+        Choice {
+            Text = "Is the trade good?";
+            Nextpage = "mp_boldric_trade";
+        }
+        Choice {
+            Text = "Could you tell me about Millport?";
+            Nextpage = "mp_boldric_aboutmillport";
+        }
+    }
+    Page {
+        pageName = "mp_boldric_whoareyou";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Name's Boldric. I'm the cook here and the only owner of this tavern.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Nice to meet you, Boldric. I wanted aomething else.";
+            Nextpage = "mp_boldric_questions";
+        }
+    }
+    Page {
+        pageName = "mp_boldric_trade";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Oh yeah, it's okay. I had better times, but I can pay my bills, so everythings good.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted aomething else.";
+            Nextpage = "mp_boldric_questions";
+        }
+    }
+    Page {
+        pageName = "mp_boldric_aboutmillport";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]Oh yeah, Millport's nice city to live in. I like it. It get busy, especially when the trader ships arrive. But we also have our peace. I like the dusks here, the suns draws nice colors when it gets down. The city offers all kinds of services, from m=numerous technicians, to medics and clinics. We got even city bath here! Great place, good for relaxation. I like the local staff.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "What's special about the staff in the bath?";
+            Nextpage = "mp_boldric_bathstaff";
+        } 
+        Choice {
+            Text = "I wanted aomething else.";
+            Nextpage = "mp_boldric_questions";
+        }
+    }
+    Page {
+        pageName = "mp_boldric_bathstaff";
+        Name = "\c[yellow]Boldric";
+        Dialog = "\c[white]You better go and meet the nice ladies yourself. I'm sure they will be happy to meet you too.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I wanted aomething else.";
+            Nextpage = "mp_boldric_questions";
+        }
+    }
+}

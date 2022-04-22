@@ -571,8 +571,8 @@ class wosStatusBar : BaseStatusBar {
 				item = CPlayer.mo.FindInventory ("shoulderGun");
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true, 
-						left + 107*xscale,
-						top + 74*yscale,
+						left + 64*xscale,
+						top - 5*yscale,
 						DTA_CleanNoMove, true);
 					/*item = CPlayer.mo.FindInventory("shoulderGunMag_item");
 					if (item != NULL) {
@@ -632,8 +632,8 @@ class wosStatusBar : BaseStatusBar {
 					"wosGrenadeLauncher",
 					"wosMauler"
 				};
-				static const int WeaponX[] = {24, 48, 67, 61, 19, 19, 55, 19, 49};
-				static const int WeaponY[] = {0, 0, 16, 29, 18, 35, 49, 61, 80};
+				static const int WeaponX[] = {46, 19, 67, 61, 19, 19, 55, 19, 48};
+				static const int WeaponY[] = {11, 0, 24, 36, 25, 42, 55, 66, 83};
 
 				for (i = 0; i < 9; ++i) {
 					item = CPlayer.mo.FindInventory (WeaponList[i]);
@@ -653,7 +653,16 @@ class wosStatusBar : BaseStatusBar {
 				//  show backrground & foreground text&border  /////////////////	
 				TextureID idPOPSTBKLog = TexMan.CheckForTexture("IPOPB", 0, 0);
 				TextureID idPOPSTATLog = TexMan.CheckForTexture("IPOPF", 0, 0);
-				screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+				// map textures //
+				TextureID idPOPMAP8 = TexMan.CheckForTexture("IPOPM8", 0, 0);
+				//screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+				if ( level.mapname == "MAP08") {
+					screen.DrawTexture (idPOPMAP8, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+					screen.DrawText(SmallFont, Font.CR_UNTRANSLATED, left + 22 * xscale, top - 8 * yscale, "LOCATION: "..level.FormatMapName(2), DTA_CleanNoMove, true);
+				} else {
+					screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+				}
+				
 				screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true);
 				/*
 				// Draw the latest log message.

@@ -7517,7 +7517,7 @@ actor wosD_dexComputerPublick 21424 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "Public computer"
-	radius 12
+	radius 8
 	height 64
 	States {
 		Spawn:

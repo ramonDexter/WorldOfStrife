@@ -356,7 +356,7 @@ model wosD_dexComputerPublick {
 	model 0 "dex_computerPublic.md3"
 	skin 0 "ComputerPublicTex1.png"
 	scale 0.75 0.75 0.75
-	offset 0.0 0.0 0.0
+	offset -6.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 

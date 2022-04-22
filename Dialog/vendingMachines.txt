@@ -1,0 +1,177 @@
+///////////////////////////////////////////////////////////////////////////////
+// vending machines ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+namespace = "GZDoom";
+// drinks /////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 601;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Vending machine";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "vendingMachine1_drinks";
+        Name = "\c[yellow]Vending machine";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "\c[gold]Buy soda";
+			NextPage = "vendingMachine1_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSodaCan";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy water";
+			NextPage = "vendingMachine1_drinks";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 2;
+			}
+        }
+    }
+}
+// food ///////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 602;
+    Page {
+        pageName = "vendingMachine2_food";
+        Name = "\c[yellow]Vending machine";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "\c[gold]Buy foodbox";
+			NextPage = "vendingMachine2_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodBox";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy soyfood";
+			NextPage = "vendingMachine2_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "goldCoin";
+				amount = 13;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy candybar";
+			NextPage = "vendingMachine2_food";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCandyBar";
+			Cost {
+				item = "goldCoin";
+				amount = 7;
+			}
+        }
+    }
+}
+// food&drink /////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 603;
+    Page {
+        pageName = "vendingMachine3_drinkfood";
+        Name = "\c[yellow]Vending machine";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "\c[gold]Buy soda";
+			NextPage = "vendingMachine3_drinkfood";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSodaCan";
+			Cost {
+				item = "goldCoin";
+				amount = 4;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy water";
+			NextPage = "vendingMachine3_drinkfood";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "goldCoin";
+				amount = 2;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy foodbox";
+			NextPage = "vendingMachine3_drinkfood";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodBox";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy soyfood";
+			NextPage = "vendingMachine3_drinkfood";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "goldCoin";
+				amount = 13;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy candybar";
+			NextPage = "vendingMachine3_drinkfood";
+			CloseDialog = true;
+            DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCandyBar";
+			Cost {
+				item = "goldCoin";
+				amount = 7;
+			}
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////

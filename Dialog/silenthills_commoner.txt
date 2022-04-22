@@ -6,7 +6,7 @@ Conversation {
 	ID = 21;
 	Page//1
 	{
-		Name = "\c[yellow]$N_COMMONER";
+		Name = "\c[yellow]Commoner";
 		Dialog = "RANDOM_SILENTHILLS_COMMONER";
 		Goodbye = "\c[red]Goodbye";
 	}

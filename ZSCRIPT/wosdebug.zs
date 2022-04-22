@@ -17,3 +17,4 @@ class wosZSC2ACS {
         wosEventHandler.SendNetworkEvent("heal_Player");
     }
 }
+

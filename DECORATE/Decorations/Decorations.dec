@@ -6659,7 +6659,7 @@ actor wosD_wosFlamethrower 21370 {
 	//$Title "dummy flamer"
 	radius 8
 	height 8
-	Tag "$TAG_FLAMER"
+	Tag "$T_FLAMER"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -9104,7 +9104,7 @@ actor wosD_dex_bioCell 21518 {
 	//$Category "Decorations/deusEx"
 	//$Title "dex biocell"
 	-NOBLOCKMAP
-	tag "biocell"
+	tag "Energy Cell"
 	radius 4
 	height 4
 	States {

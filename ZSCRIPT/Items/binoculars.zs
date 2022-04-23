@@ -104,7 +104,7 @@ class dummy_binoc : actor {
 		//$Category "Decorations/WoS"
 		//$Title "dummy binocular"
 		-SOLID
-		+SHOOTABLE
+		//+SHOOTABLE
 		+NODAMAGE
 		+NOBLOOD
 		+CANPASS

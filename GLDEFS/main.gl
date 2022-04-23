@@ -120,16 +120,22 @@ pointlight energycellLight {
 }
 
 object wosEnergyKit {
-	Frame DUMMA { Light EnergyKitLight }
+	Frame DUMMB { Light EnergyKitLight }
+}
+object wosD_energyKit {
+	Frame DUMMB { Light EnergyKitLight }
 }
 object wosEnergyPack {
-	frame DUMMA { light EnergyKitLight }
+	frame DUMMB { light EnergyKitLight }
+}
+object wosD_energyPack {
+	frame DUMMB { light EnergyKitLight }
 }
 object wosenergypod {
-	frame DUMMA { light EnergyKitLight }
+	frame DUMMB { light EnergyKitLight }
 }
 object wosD_energypod {
-	frame DUMMA { light EnergyKitLight }
+	frame DUMMB { light EnergyKitLight }
 }
 object wosEnergyCell {
 	frame DUMMA { light energycellLight }

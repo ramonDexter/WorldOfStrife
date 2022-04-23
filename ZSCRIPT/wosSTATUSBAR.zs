@@ -655,15 +655,18 @@ class wosStatusBar : BaseStatusBar {
 				TextureID idPOPSTATLog = TexMan.CheckForTexture("IPOPF", 0, 0);
 				// map textures //
 				TextureID idPOPMAP8 = TexMan.CheckForTexture("IPOPM8", 0, 0);
-				//screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
-				if ( level.mapname == "MAP08") {
+				screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+				screen.DrawText(SmallFont, Font.CR_UNTRANSLATED, left + 22 * xscale, top - 8 * yscale, "LOCATION: "..level.FormatMapName(2), DTA_CleanNoMove, true);
+				screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true);
+				/*if ( level.mapname ~== "map08") {
 					screen.DrawTexture (idPOPMAP8, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
 					screen.DrawText(SmallFont, Font.CR_UNTRANSLATED, left + 22 * xscale, top - 8 * yscale, "LOCATION: "..level.FormatMapName(2), DTA_CleanNoMove, true);
 				} else {
-					screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
-				}
+					screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
+					screen.DrawText(SmallFont, Font.CR_UNTRANSLATED, left + 22 * xscale, top - 8 * yscale, "LOCATION: "..level.FormatMapName(2), DTA_CleanNoMove, true);
+				}*/
 				
-				screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true);
+				
 				/*
 				// Draw the latest log message.
 				screen.DrawText(SmallFont2, Font.CR_UNTRANSLATED, left + 210 * xscale, top + 8 * yscale, Level.TimeFormatted(),

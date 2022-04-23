@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -9580.108f;
+		viewpositionx = -9138.523f;
 		defaulttoptexture = "MRKVBR";
 		overrideceilheight = false;
-		viewpositiony = -1825.489f;
+		viewpositiony = -1289.12f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 2.971504f;
+		viewscale = 0.4735597f;
 		
 		plugins
 		{
@@ -84,50 +84,40 @@ maps
 			}
 		}
 		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
 		fieldtypes
 		{
 			
-			linedef
-			{
-				arg0str = 2;
-				alpha = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				offsetx_bottom = 1;
-				offsetx_top = 1;
-				offsety_bottom = 1;
-				offsety_top = 1;
-				scalex_mid = 1;
-				scaley_mid = 1;
-				scalex_bottom = 1;
-				scaley_bottom = 1;
-				scaley_top = 1;
-				light = 0;
-				scalex_top = 1;
-			}
-			
 			sector
 			{
-				xpanningceiling = 1;
-				ypanningceiling = 1;
-				rotationceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				xpanningfloor = 1;
-				ypanningfloor = 1;
-				rotationfloor = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
 				user_managed_3d_floor = 3;
-			}
-			
-			thing
-			{
-				conversation = 0;
 			}
 		}
 		

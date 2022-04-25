@@ -1179,7 +1179,7 @@ model executorRifle_standing {
 	offset 0.0 0.0 0.0
 	frameindex ERMP C 0 2
 }
-*/
+
 
 model dummy_executorRifle_ground01 {
 	path "models/weapons/executorRifle/"
@@ -1204,7 +1204,7 @@ model dummy_executorRifle_standing {
 	scale 4.0 4.0 4.0
 	offset 0.0 0.0 0.0
 	frameindex ERMP C 0 2
-}
+}*/
 ////////////////////////////////////////////////////////////////////////////////
 
 //  punch dagger  //////////////////////////////////////////////////////////////
@@ -1450,7 +1450,16 @@ model dummy_laserPistol03 {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-
+model test_ar15 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/executorRifle/"
+	model 0 "ar15.md3"
+	skin 0 "ar15tex.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 
 
 

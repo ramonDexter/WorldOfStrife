@@ -6914,7 +6914,8 @@ actor wosD_energyKit 21385 {
 	height 16
 	States {
 		Spawn:
-			DUMM AAAABB 6 Bright
+			DUMM AAAA 6
+			DUMM BB 6 Bright
 			Loop
 	}
 }
@@ -6930,7 +6931,8 @@ actor wosD_energyPack 21386 {
 	height 16
 	States {
 		Spawn:
-			DUMM AAABB 6 Bright
+			DUMM AAAA 6
+			DUMM BB 6 Bright
 			Loop
 	}
 }
@@ -8989,7 +8991,8 @@ actor wosD_energypod 21509 {
 	height 16
 	States {
 		Spawn:
-			DUMM AAABB 6
+			DUMM AAAA 6
+			DUMM BB 6 Bright
 			Loop
 	}
 }
@@ -9074,13 +9077,14 @@ actor wosD_dex_soyFood 21515 {
 			Stop
 	}
 }
+
 actor wosD_dex_roadBlock 21516 {
 	//$Category "Decorations/deusEx"
 	//$Title "dex road block"
 	-NOBLOCKMAP
 	tag "road block"
 	radius 16
-	height 48
+	height 40
 	States {
 		Spawn:
 			DUMM A -1
@@ -9149,6 +9153,25 @@ actor wosD_infoSign 21521 {
 	States {
 		Spawn:
 			ISGN A -1
+			Stop
+	}
+}
+actor wos_roadBlockBridge : InvisibleBridge32 21522 {
+	height 40
+	radius 16
+}
+actor test_ar15 21523 {
+	//$Category "Decorations/Wos"
+	//$Title "ar15"
+	-NOBLOCKMAP
+	+NOGRAVITY
+	+USESPECIAL
+	Tag "Assault Rifle"
+	height 16
+	radius 8
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

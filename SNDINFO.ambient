@@ -4,6 +4,7 @@
 
 //  fire sound  ////////////////////////////////////////////////////////////////
 world/smallfire "sounds/fire/FIRE09.wav"
+$Volume world/smallfire 0.5
 $alias AmbSmallFire world/smallfire
 $ambient 01 AmbSmallFire continuous 0.5
 

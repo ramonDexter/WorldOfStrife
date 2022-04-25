@@ -142,6 +142,7 @@ class binderPlayer : StrifePlayer {
         HandleStamina();
 		LedgeClimb();
 		HandleSpeed();
+		
 		// obsolete functions //////////////////////////////////////////////////
 		//CheckSprint();
 		//FallDamage();
@@ -157,7 +158,8 @@ class binderPlayer : StrifePlayer {
 		////////
     }	
 
-	// ACS support - functions to return values to ACS scripts /////////////////
+	
+ 	// ACS support - functions to return values to ACS scripts /////////////////
 	static int getplayerAccuracy(actor activator) {
 		let pawn = binderplayer(activator);
 		if ( pawn && pawn.player ) {

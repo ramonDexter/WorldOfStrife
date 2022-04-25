@@ -1,0 +1,79 @@
+#define MAX_locked_doors 1000
+bool lockedDoor[MAX_locked_doors];
+script "universalLockeDoor" (int poly, int right1left2, int stats) {
+    if ( !lockedDoor[poly] ) {
+        bool exit = false;
+        int buttons;
+        int selection = 1;
+        int indicatorX = 0.4;
+        int opt1Y = 0.35;
+        int UIid = 1;
+        //draw basic menu UI - header, text, selections
+        drawUIheader("= LOCKED DOOR =", UIid, CR_DARKRED, 0.5, 0.4); //header
+        drawUItext("Use USER_1 to select an option. Use arrows to move the selector.", UIid+1, CR_GOLD, 0.5, 0.45); //text
+        drawUItext("[ Unlock the door ]", UIid+2, CR_WHITE, 0.5, opt1Y); //option 1
+        drawUItext("[ Break the door ]", UIid+3, CR_WHITE, 0.5, opt1Y + 0.05); //option 2
+        drawUItext("[ EXIT ]", UIid+4, CR_DARKRED, 0.5, opt1Y + 0.1); //exit
+        drawUIindicator(UIid+5, CR_RED, indicatorX, opt1Y); //initialize indicator
+        SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player while menu is active
+        while(!exit) {
+            //get input
+            buttons = getPlayerInput(0, buttons);
+            if(buttons & BT_FORWARD) { //indicator UP (forward button)
+                selection = selection - 1;
+                if(selection < 1) {
+                    selection = 3;
+                }
+            }
+            if(buttons & BT_BACK) { //indicator DOWN (backward button)
+                selection = selection + 1;
+                if (selection > 3) {
+                    selection = 1;
+                }
+            }
+            if(buttons & BT_USER1) { //selections - options and actions
+                if(selection == 1) {
+                    //Print(l:"OPTION#01");
+                    int playerAccuracy = ScriptCall("binderPlayer", "getplayerAccuracy");
+                    int desiredAccuracy = stats*10;
+                    if ( playerAccuracy >= desiredAccuracy ) {
+                        ACS_NamedExecute("universalPolyDoor", 0, poly, 16, right1left2);
+                        lockedDoor[poly] = true;
+                    } else {
+                        Print(s:"Required ", i:desiredAccuracy, s:" accuracy to unlock the door!");
+                    }                
+                    exit = true;
+                }
+                else if (selection == 2) {
+                    //Print(l:"OPTION#02");
+                    int playerStamina = ScriptCall("binderPlayer", "getplayerStamina");
+                    int desiredStamina = stats*10;
+                    if ( playerStamina >= desiredStamina ) {
+                        ACS_NamedExecute("universalPolyDoor", 0, poly, 16, right1left2);
+                        lockedDoor[poly] = true;
+                    } else {
+                        Print(s:"Required ", i:desiredStamina, s:" stamina to unlock the door!");
+                    }
+                    exit = true;
+                }
+                else if (selection == 3) {
+                    exit = true;
+                }
+            }
+            //move indicator
+            if (selection == 1) { drawUIindicator(6, CR_RED, indicatorX, opt1Y); }
+            else if (selection == 2) { drawUIindicator(6, CR_RED, indicatorX, opt1Y + 0.05); }
+            else if (selection == 3) { drawUIindicator(6, CR_RED, indicatorX, opt1Y + 0.1); }
+                else {}
+            delay(2);
+        }
+        //erase all HUD elements
+        for (int i = 0; i < UIid+6; i++) {
+            clearUI(i);
+        }
+        //unfreeze player
+        SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);
+    } else {
+        ACS_NamedExecute("universalPolyDoor", 0, poly, 16, right1left2);
+    }
+}

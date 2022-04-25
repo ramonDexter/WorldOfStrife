@@ -29,6 +29,15 @@ class executorRifle : wosWeapon {
         Spawn:
             ERMP A -1;
             Stop;
+			
+		Nope:
+			TNT1 A 1 {
+				A_WeaponReady(WRF_NOFIRE); 
+				A_ZoomFactor(1.0);
+			}
+			//TNT1 A 0 B_NoReFire();
+			TNT1 A 0 A_ClearReFire();
+			Goto Ready;
 
         Select:
             ERMD B 1 A_Raise();
@@ -43,7 +52,7 @@ class executorRifle : wosWeapon {
             Loop;
 
         Fire:
-            ERMD B 1 A_JumpIfNoAmmo("Reload");
+            ERMD B 1 A_JumpIfNoAmmo("DoReload");
             ERMD C 5 W_ShootFireArm(8, "weapons/execRiflShoot");		
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
@@ -53,6 +62,8 @@ class executorRifle : wosWeapon {
 
         Reload:
 			TNT1 A 0 W_reloadCheck();
+			goto Ready;
+		DoReload:
             ERMD E 5;
             ERMD F 2;
             ERMD G 2;

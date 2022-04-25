@@ -33,9 +33,9 @@ The Rescue project begins, the aim of which was to build a network of shelters a
 
 0 (2094)
 // csy // 
-Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života na Zemi.
+Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života.
 // enu //
-The impact of an asteroid torn down by a stray comet. Almost complete extinction of life on Earth.
+The impact of an asteroid torn down by a stray comet. Almost complete extinction of life.
 
 128
 // csy //

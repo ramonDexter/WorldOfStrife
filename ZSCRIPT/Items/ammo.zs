@@ -252,7 +252,8 @@ class wosEnergyPod : wosPickup {
 	
 	States {
 		Spawn:
-			DUMM AAABB 6;
+			DUMM AAAA 6;
+			DUMM BB 6 Bright;
 			Loop;
 		Use:
 			TNT1 A 0 A_GiveInventory("EnergyPod", 20);
@@ -304,7 +305,8 @@ class wosEnergyKit : wosPickup {
 	
 	States {
 		Spawn:
-			DUMM AAAABB 6 Bright;
+			DUMM AAAA 6;
+			DUMM BB 6 Bright;
 			Loop;
 		Use:
 			TNT1 A 0 A_GiveInventory("energyPod", 60);
@@ -325,7 +327,8 @@ class wosEnergyPack : wosPickup {
 	
 	States {
 		Spawn:
-			DUMM AAABB 6 Bright;
+			DUMM AAAA 6;
+			DUMM BB 6 Bright;
 			Loop;
 		Use:
 			TNT1 A 0 A_GiveInventory("EnergyPod", 120);

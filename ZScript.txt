@@ -85,6 +85,7 @@ version "4.6.0"
 #include "zscript/weapons/punchdagger.zs"
 #include "zscript/weapons/grenadeLauncher.zs"
 #include "zscript/weapons/laserpistol.zs"
+//#include "zscript/weapons/executorRifle.zs"
 //#include "zscript/weapons/staffBlasterUp.zs"
 ////////////////////////////////////////////////////////////////////////////////
 

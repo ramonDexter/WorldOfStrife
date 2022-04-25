@@ -187,7 +187,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS A 1 Offset(0,62);
 			MMIS A 1 Offset(0,72);
 			MMIS A 1 Offset(0,82);
-			TNT1 A 16 Offset(0,82); //middle
+			TNT1 A 16 W_Reload(); //middle
 			MMIS A 1 Offset(0,82);
 			MMIS A 1 Offset(0,72);
 			MMIS A 1 Offset(0,62);

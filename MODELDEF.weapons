@@ -1107,7 +1107,7 @@ model CasingStaff {
 ////////////////////////////////////////////////////////////////////////////////
 
 //  executor rifle  ////////////////////////////////////////////////////////////
-/*
+
 model executorRifle {
 	//pickup model
 	path "models/weapons/executorRifle/"
@@ -1119,9 +1119,16 @@ model executorRifle {
 }
 model executorRifle {
 	path "models/weapons/executorRifle/"
-	model 0 "executorRifle_h.md3"
-	//skin 0 "tx_executorRifle.png"
-	surfaceskin 0 0 "tx_executorRifle.png"
+	model 0 "ar15_hud.md3"
+	//skin 0 "ar15tex.png"
+	surfaceskin 0 0 "ar15tex.png"
+	surfaceskin 0 1 "ar15tex.png"
+	surfaceskin 0 2 "ar15tex.png"
+	surfaceskin 0 3 "ar15tex.png"
+	surfaceskin 0 4 "tx_handgrenade.png"
+	surfaceskin 0 5 "tx_handgrenade.png"
+	surfaceskin 0 6 "tx_pxStaffBlaster.png"
+	/*surfaceskin 0 0 "tx_executorRifle.png"
 	surfaceskin 0 1 "tx_executorRifle.png"
 	surfaceskin 0 2 "tx_executorRifle.png"
 	surfaceskin 0 3 "tx_executorRifle.png"
@@ -1129,31 +1136,28 @@ model executorRifle {
 	surfaceskin 0 5 "tx_handgrenade.png"
 	surfaceskin 0 6 "tx_handgrenade.png"
 	surfaceskin 0 7 "tx_handgrenade.png"
-	surfaceskin 0 8 "tx_pxStaffBlaster.png"
-	scale -4.0 4.0 4.0
-	offset 4.0 -6.0 -5.0	
+	surfaceskin 0 8 "tx_pxStaffBlaster.png"*/
+	scale -1.5 1.5 1.5
+	offset 10.0 -25.0 -10.0	
 	//idle
+	//NOINTERPOLATION
 	frameindex ERMD B 0 0
 	//shoot
-	offset 4.0 -4.0 -5.0
-	frameindex ERMD C 0 2
-	offset 4.0 -5.0 -5.0
-	frameindex ERMD D 0 4
+	offset 10.0 -24.0 -10.0
+	frameindex ERMD C 0 1
+	offset 10.0 -24.5 -10.0
+	frameindex ERMD D 0 2
 	//idle
-	offset 4.0 -6.0 -5.0	
-	frameindex ERMD E 0 8
+	offset 10.0 -25.0 -10.0	
+	frameindex ERMD E 0 3
 	//reload
-	frameindex ERMD F 0 10
-	frameindex ERMD G 0 11
-	frameindex ERMD H 0 12
-	frameindex ERMD I 0 13
-	frameindex ERMD J 0 14
-	frameindex ERMD K 0 15
-	frameindex ERMD L 0 16
-	frameindex ERMD M 0 17
-	frameindex ERMD N 0 18	
+	frameindex ERMD F 0 4
+	frameindex ERMD G 0 5
+	frameindex ERMD H 0 6
+	frameindex ERMD I 0 7
+	frameindex ERMD J 0 8	
 }
-*/
+
 /*
 model executorRifle_ground01 {
 	path "models/weapons/executorRifle/"

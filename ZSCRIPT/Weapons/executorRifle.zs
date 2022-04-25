@@ -1,7 +1,7 @@
 class executorRifleMagazine : ammo {
     Default {
         +INVENTORY.IGNORESKILL
-        inventory.maxamount 24;
+        inventory.maxamount 32;
     }
 }
 
@@ -60,36 +60,42 @@ class executorRifle : wosWeapon {
 
         Fire:
             ERMD B 1 A_JumpIfNoAmmo("Reload");
-            ERMD C 5 W_ShootFireArm(8, "weapons/execRiflShoot");		
-			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
-			TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
-            ERMD D 3;
-            ERMD E 6 A_Refire();
+            ERMD C 2 W_ShootFireArm(8, "weapons/execRiflShoot");		
+			//TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
+			//TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*8,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
+            ERMD D 2;
+            TNT1 A 0 {
+                ZWL_EjectCasing(
+					"rifleCasing",//class<Actor> casingType
+					false,//bool left
+					-45,//double ejectPitch
+					frandom(4,4.5),//double speed,
+					8,//double accuracy
+					(24, 16, -10)//Vector3 offset
+				);
+            }
+            ERMD E 1 A_Refire();
             goto Ready;
 
         Reload:
 			TNT1 A 0 W_reloadCheck();
 			goto Ready;
 		DoReload:
-            ERMD E 5;
+            ERMD B 2;
+            ERMD E 3;
             ERMD F 2;
-            ERMD G 2;
-            ERMD H 3;
-            ERMD I 4;
-            ERMD J 4 A_StartSound("weapons/RLpistolRLout", 1);
-            ERMD K 5;
-            ERMD L 5;
-            ERMD M 5;
-            ERMD N 5;
-            ERMD M 5;
-            ERMD L 5;
-            ERMD K 5;
-            ERMD J 5 A_StartSound("weapons/RLpistolRLin", 1);
-			TNT1 A 0 W_reload();
-            ERMD I 4;
-            ERMD H 3;
-            ERMD GF 2;
-            ERMD E 5;
+            ERMD G 2 A_StartSound("weapons/RLpistolRLout", 1);
+            ERMD HI 2;
+            ERMD J 8;
+            TNT1 A 16 {
+                //A_StartSound("weapons/RLpistolRLin", 1);
+                W_reload();
+            }
+            ERMD J 8;
+            ERMD IH 2;
+            ERMD G 2 A_StartSound("weapons/RLpistolRLin", 1);
+            ERMD F 3;
+            ERMD B 1;
             goto Ready;
     }
 }

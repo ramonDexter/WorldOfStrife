@@ -62,7 +62,7 @@ class binderPlayer : StrifePlayer {
 		//  weaponslots  ///////////////////////////////////////////////////////
 		Player.WeaponSlot 1, "wosPunchDagger";
 		Player.WeaponSlot 2, "wosStrifeXbow", "StormPistol", "laserPistol";
-		Player.WeaponSlot 3, "wosAssaultGun", "staffBlaster";
+		Player.WeaponSlot 3, "wosAssaultGun", "staffBlaster", "executorRifle";
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
 		Player.WeaponSlot 5, "wosGrenadeLauncher";
 		Player.WeaponSlot 6, "wosFlamethrower";
@@ -81,7 +81,7 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "notePlayerPersonal", 1;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
-		//Player.StartItem "hookShot_magazine", 20;
+		Player.StartItem "magazine_executorRifle", 32;
 		//Player.StartItem "wosi_scanner", 1;
 		// custom properties ///////////////////////////////////////////////////
 		binderPlayer.BaseSpeed 2.0;

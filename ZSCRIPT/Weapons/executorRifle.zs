@@ -1,4 +1,4 @@
-class executorRifleMagazine : ammo {
+class magazine_executorRifle : ammo {
     Default {
         +INVENTORY.IGNORESKILL
         inventory.maxamount 32;
@@ -24,12 +24,12 @@ class executorRifle : wosWeapon {
         weapon.SlotNumber 3;
 		Weapon.SlotPriority 2;
         weapon.kickBack 40;
-        weapon.ammoType1 "executorRifleMagazine";
+        weapon.ammoType1 "magazine_executorRifle";
         weapon.ammoUse1 1;
         weapon.ammoGive1 0;
         weapon.ammoType2 "ClipOfBullets";
         weapon.ammoUse2 0;
-        weapon.ammoGive2 24;
+        weapon.ammoGive2 32;
     }
 	
     States {
@@ -60,9 +60,7 @@ class executorRifle : wosWeapon {
 
         Fire:
             ERMD B 1 A_JumpIfNoAmmo("Reload");
-            ERMD C 2 W_ShootFireArm(8, "weapons/execRiflShoot");		
-			//TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
-			//TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*8,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
+            ERMD C 2 W_ShootFireArm(8, "weapons/execRiflShoot");
             ERMD D 2;
             TNT1 A 0 {
                 ZWL_EjectCasing(

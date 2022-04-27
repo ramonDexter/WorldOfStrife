@@ -9157,6 +9157,7 @@ actor wosD_infoSign 21521 {
 	}
 }
 actor wos_roadBlockBridge : InvisibleBridge32 21522 {
+	tag "road block"
 	height 40
 	radius 16
 }

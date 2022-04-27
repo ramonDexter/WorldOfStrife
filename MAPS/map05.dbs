@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 21919.62f;
+		viewpositionx = 11632.61f;
 		defaulttoptexture = "BRKGRY07";
 		overrideceilheight = false;
-		viewpositiony = 7152.761f;
+		viewpositiony = 3619.736f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 16;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.3028675f;
+		viewscale = 0.3937277f;
 		
 		plugins
 		{
@@ -80,7 +80,7 @@ maps
 					
 					prefab1
 					{
-						Name = "\c[yellow][Previous]";
+						Name = "c[yellow][Previous]";
 						numberofsectors = 18;
 						outervertexmultiplier = 1;
 						innervertexmultiplier = 1;
@@ -128,48 +128,38 @@ maps
 		fieldtypes
 		{
 			
-			linedef
-			{
-				alpha = 1;
-				arg0str = 2;
-			}
-			
-			sidedef
-			{
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				scaley_mid = 1;
-				scalex_mid = 1;
-				offsety_bottom = 1;
-				offsetx_bottom = 1;
-				offsety_top = 1;
-				offsetx_top = 1;
-				scalex_bottom = 1;
-				scaley_bottom = 1;
-				scalex_top = 1;
-				scaley_top = 1;
-			}
-			
 			sector
 			{
-				xpanningceiling = 1;
-				xpanningfloor = 1;
-				ypanningceiling = 1;
-				rotationceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				ypanningfloor = 1;
-				rotationfloor = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
 				user_managed_3d_floor = 3;
 			}
-			
-			thing
-			{
-				arg0str = 2;
-				conversation = 0;
-			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 		
 		scriptdocuments

@@ -1,7 +1,10 @@
+const executorRifleWeight = 150;
+
 class magazine_executorRifle : ammo {
     Default {
         +INVENTORY.IGNORESKILL
         inventory.maxamount 32;
+        Mass 0;
     }
 }
 
@@ -30,6 +33,7 @@ class executorRifle : wosWeapon {
         weapon.ammoType2 "ClipOfBullets";
         weapon.ammoUse2 0;
         weapon.ammoGive2 32;
+        Mass executorRifleWeight;
     }
 	
     States {

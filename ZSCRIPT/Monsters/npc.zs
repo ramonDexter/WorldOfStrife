@@ -1002,6 +1002,77 @@ class beggar_gray : beggarBase
 	}
 }
 
+class beggarEnemy : beggarBase {
+	Default {
+		-FRIENDLY
+	}
+	States {
+		Spawn:
+			BEGR A 10 A_Look();
+			Loop;
+		See:
+			BEGR AABBCC 4 A_Chase();
+			Loop;
+		Melee:
+			BEGR D 8;
+			BEGR D 8 A_CustomMeleeAttack(2*random[PeasantAttack](1,5)+2);
+			BEGR E 1 A_Chase();
+			BEGR D 8 A_SentinelRefire();
+			Loop;
+		Pain:
+			BEGR A 3 A_Pain();
+			BEGR A 3 A_Chase();
+			Goto Melee;
+		Death:
+			BEGR F 4;
+			BEGR G 4 A_Scream();
+			BEGR H 4;
+			BEGR I 4 A_NoBlocking();
+			BEGR JKLM 4;
+			BEGR N -1;
+			Stop;
+		XDeath:
+			BEGR F 5 A_TossGib();
+			GIBS M 5 A_TossGib();
+			GIBS N 5 A_XScream();
+			GIBS O 5 A_NoBlocking();
+			GIBS PQRST 4 A_TossGib();
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
+	}
+}
+class beggarEnemy_darkGreen : beggarEnemy {
+	Default {
+		//$title "beggar foe DG"
+	}	
+}
+class beggarEnemy_bronze : beggarEnemy {
+	Default {
+		//$title "beggar foe bronze"
+	}
+}
+class beggarEnemy_blue : beggarEnemy {
+	Default {
+		//$title "beggar foe blue"
+	}
+}
+class beggarEnemy_brown : beggarEnemy {
+	Default {
+		//$title "beggar foe brown"
+	}
+}
+class beggarEnemy_darkTan : beggarEnemy {
+	Default {
+		//$title "beggar foe darktan"
+	}
+}
+class beggarEnemy_gray : beggarEnemy {
+	Default {
+		//$title "beggar foe gray"
+	}
+}
+
 class medicalBotHealing : Health {
 	Default {
 		Health -100;

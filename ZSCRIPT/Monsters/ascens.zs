@@ -2157,3 +2157,331 @@ class ascSerpentFly : actor {
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// tramp - beggar //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+class ascTramp : actor {
+
+	int gunmag; //
+	int searchtimer; //
+	bool searched; //
+	bool lootmed; //
+	bool lootarm; //
+	int lootarm2; //
+	bool lootgun; //
+	int lootgun2; //
+	int lootmoney; //
+	bool lootrep; //
+	int lootinv;
+	//string looteqip; Property Equipment : looteqip; //
+	//int looteqip2; //
+    
+	Override void PostBeginPlay() {
+		Super.PostBeginPlay();
+		gunmag=30;
+		//If(shielded==1){A_SpawnItemEx("LFAcolyteShield",flags: SXF_SETMASTER);}
+		If(Random(1,3)==1){lootmed=1;} 
+		If(Random(1,8)==1){lootarm=1; lootarm2=Random(15,85);}
+		If(Random(1,6)==1){lootinv=1; lootmed=1;} 
+		If(Random(1,4)==1){lootrep=1;}
+		lootmoney=Random(3,15);
+	}
+
+	Override bool Used(Actor user) {
+		let pawn = binderPlayer(user);
+		If( searched==0 && health<1 && InStateSequence(CurState,ResolveState("Death")) && user is "binderPlayer" && pawn.currentarmor!=7 ) {
+			int tosearch = 6 - (2 * pawn.SpeedUpgrade);
+			If( searchtimer >= tosearch ) {
+				If( lootmed == 1 ){ 
+					Actor med = A_DropItem("wosHyposprej"); 
+				}
+				If( lootarm == 1 ){ 
+					Actor arm = A_DropItem("wosLeatherArmor"); 
+				}
+				//If( looteqip == "TARG" ){ 
+				//	Actor trg = A_DropItem("wosTargeter"); 
+				//}
+				While( lootmoney > 0 ) {
+					If( lootmoney >= 25 ){ 
+						A_DropItem("wosGold25"); 
+						lootmoney-=25; 
+					} Else If( lootmoney >= 10 ){ 
+						A_DropItem("wosGold10"); 
+						lootmoney-=10; 
+					} Else If(lootmoney>=1){
+						A_DropItem("goldCoin"); 
+						lootmoney--;
+					}
+				}
+				//If( lootinv == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
+				//Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
+				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
+				searched = 1;
+			} Else {
+				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				searchtimer++;
+			}
+		}
+		Return Super.Used(user);
+	}
+
+    Default {
+		//$Category "Monsters/WoS"
+        //$Title "tramp"
+        Health 80;
+        Radius 20;
+        Height 56;
+        Mass 100;
+        Speed 12;
+        FastSpeed 24;
+        PainChance 170;
+        Monster;
+        +FLOORCLIP
+        +missilemore
+        +missileevenmore
+        minmissilechance 2;
+        SeeSound "insult";
+        PainSound "getpain";
+        DeathSound "getdead";
+        AttackSound "swordhit";
+        ActiveSound "insult";
+        Obituary "%o was killed by a tramp.";
+    }
+
+    States {
+        Spawn:
+            BEGR A 10 A_Look();
+            Loop;
+        See:
+            BEGR AABBCC 3 A_Chase();
+            Loop;
+        Melee:
+            BEGR DD 4 A_FaceTarget();
+            BEGR D 1 bright A_PlaySound("swordmiss");
+            BEGR E 7 bright A_Custommeleeattack(random(3,8), "swordhit", "swordmiss", "meleeattack", true);
+            BEGR DD 4 A_FaceTarget();
+            BEGR D 1 bright A_PlaySound("swordmiss");
+            //BEGR E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee");
+            BEGR E 7 bright A_Custommeleeattack(random(3,8), "swordhit", "swordmiss", "meleeattack", true);
+            Goto See;
+        FakeMelee:
+            BEGR E 7 bright A_Custommeleeattack(0, "swordhit", "swordmiss", "meleeattack", true);
+            Goto See;
+        Pain:
+            BEGR E 3;
+            BEGR E 3 A_Pain();
+            Goto See;
+        Death:
+            BEGR F 5;
+            BEGR G 5;
+            BEGR H 5;
+            BEGR I 5 A_Scream();
+            BEGR J 5 A_NoBlocking();
+            BEGR KLM 5;
+            //BEGR M 1 ACS_NamedExecuteAlways("ExpGain",0,22,0,0);          //Gain 22 Exp. 
+            BEGR N -1;
+            Stop;
+		Disintegrate:
+			DISR A 5 A_PlaySoundEx("misc/disruptordeath", "Voice");
+			DISR BC 5;
+			DISR D 5 A_NoBlocking();
+			DISR EF 5;
+			DISR GHIJ 4;
+			MEAT D 700;
+			Stop;
+		Burn:
+			BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice");
+			BURN B 3 Bright A_DropFire();
+			BURN C 3 Bright A_Wander();
+			BURN D 3 Bright A_NoBlocking();
+			BURN E 5 Bright A_DropFire();
+			BURN FGH 5 Bright A_Wander();
+			BURN I 5 Bright A_DropFire();
+			BURN JKL 5 Bright A_Wander();
+			BURN M 5 Bright A_DropFire();
+			BURN NOPQPQ 5 Bright;
+			BURN RSTU 7 Bright;
+			BURN V -1;
+			Stop;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// Rogue ///////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+class ascRogue : actor {
+
+	int gunmag; //
+	int searchtimer; //
+	bool searched; //
+	bool lootmed; //
+	bool lootarm; //
+	int lootarm2; //
+	bool lootgun; //
+	int lootgun2; //
+	int lootmoney; //
+	bool lootrep; //
+	int lootinv;
+	//string looteqip; Property Equipment : looteqip; //
+	//int looteqip2; //
+    
+	Override void PostBeginPlay() {
+		Super.PostBeginPlay();
+		gunmag=30;
+		//If(shielded==1){A_SpawnItemEx("LFAcolyteShield",flags: SXF_SETMASTER);}
+		If(Random(1,3)==1){lootmed=1;} 
+		If(Random(1,8)==1){lootarm=1; lootarm2=Random(15,85);}
+		If(Random(1,6)==1){lootinv=1; lootmed=1;} 
+		If(Random(1,4)==1){lootrep=1;}
+		lootmoney=Random(3,15);
+	}
+
+	Override bool Used(Actor user) {
+		let pawn = binderPlayer(user);
+		If( searched==0 && health<1 && InStateSequence(CurState,ResolveState("Death")) && user is "binderPlayer" && pawn.currentarmor!=7 ) {
+			int tosearch = 6 - (2 * pawn.SpeedUpgrade);
+			If( searchtimer >= tosearch ) {
+				If( lootmed == 1 ){ 
+					Actor med = A_DropItem("wosHyposprej"); 
+				}
+				If( lootarm == 1 ){ 
+					Actor arm = A_DropItem("wosLeatherArmor"); 
+				}
+				//If( looteqip == "TARG" ){ 
+				//	Actor trg = A_DropItem("wosTargeter"); 
+				//}
+				While( lootmoney > 0 ) {
+					If( lootmoney >= 25 ){ 
+						A_DropItem("wosGold25"); 
+						lootmoney-=25; 
+					} Else If( lootmoney >= 10 ){ 
+						A_DropItem("wosGold10"); 
+						lootmoney-=10; 
+					} Else If(lootmoney>=1){
+						A_DropItem("goldCoin"); 
+						lootmoney--;
+					}
+				}
+				//If( lootinv == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
+				//Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
+				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
+				searched = 1;
+			} Else {
+				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				searchtimer++;
+			}
+		}
+		Return Super.Used(user);
+	}
+
+    Default {
+		//$Category "Monsters/WoS"
+        //$Title "rogue"
+        Health 150;
+        Radius 20;
+        Height 56;
+        Mass 100;
+        Speed 14;
+        FastSpeed 28;
+        PainChance 150;
+        Monster;
+        +FLOORCLIP
+        +missilemore
+        +missileevenmore
+        minmissilechance 2;
+        MaxTargetRange 812;
+        SeeSound "RogueSee1";
+        PainSound "getroguepain";
+        DeathSound "getroguedead";
+        AttackSound "swordhit";
+        ActiveSound "RogueSee1";
+        Obituary "%o was killed by a rogue.";
+    }
+
+    States {
+		Spawn:
+			DATF A 10 A_Look();
+			Loop;
+		See:
+			DATF AABBCCDD 3 A_Chase();
+			Loop;
+		Melee:
+			DATF EE 4 A_FaceTarget();
+			DATF E 1 bright A_PlaySound("swordmiss");
+			//DATF E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee"); 
+			DATF F 7 bright A_Custommeleeattack(random(6,14), "swordhit", "swordmiss", "meleeattack", true);
+			DATF EE 4 A_FaceTarget();
+			DATF E 1 bright A_PlaySound("swordmiss");
+			//DATF E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee"); 
+			DATF F 7 bright A_Custommeleeattack(random(6,14), "swordhit", "swordmiss", "meleeattack", true);
+			Goto See;
+		FakeMelee:
+			DATF F 7 bright A_Custommeleeattack(0, "swordhit", "swordmiss", "meleeattack", true);
+			Goto See;
+		Missile:
+			DATF H 12 A_FaceTarget();
+			DATF I 3 A_CustomMissile ("Knife_1", 40, 3);
+			DATF I 3;
+			Goto See;
+		Pain:
+			DATF A 3;
+			DATF J 3 A_Pain();
+			Goto See;
+		Death:
+			DATF K 5;
+			DATF L 5 A_Scream();
+			DATF M 5 A_NoBlocking();
+			DATF NOP 5;
+			//DATF P 1 ACS_NamedExecuteAlways("ExpGain",0,72,0,0)          //Gain 72 Exp. 
+			DATF Q -1;
+			Stop;
+		Disintegrate:
+			DISR A 5 A_PlaySoundEx("misc/disruptordeath", "Voice");
+			DISR BC 5;
+			DISR D 5 A_NoBlocking();
+			DISR EF 5;
+			DISR GHIJ 4;
+			MEAT D 700;
+			Stop;
+		Burn:
+			BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice");
+			BURN B 3 Bright A_DropFire();
+			BURN C 3 Bright A_Wander();
+			BURN D 3 Bright A_NoBlocking();
+			BURN E 5 Bright A_DropFire();
+			BURN FGH 5 Bright A_Wander();
+			BURN I 5 Bright A_DropFire();
+			BURN JKL 5 Bright A_Wander();
+			BURN M 5 Bright A_DropFire();
+			BURN NOPQPQ 5 Bright;
+			BURN RSTU 7 Bright;
+			BURN V -1;
+			Stop;
+    }
+}
+// knife projectile ////////////////////////////////////////////////////////////
+class Knife_1 : actor {
+	Default {
+		Speed 20;
+		FastSpeed 40;
+		Radius 8;
+		Height 4;
+		+BLOODSPLATTER
+		Damage 6;
+		SeeSound "flecha";
+		DeathSound "batfam/crash";
+		Projectile;
+	}
+	
+	States {
+		Spawn:
+			KNIF ABCD 5 BRIGHT;
+			Loop;
+		Death:
+			KNIF A 1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

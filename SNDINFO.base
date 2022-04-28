@@ -231,3 +231,66 @@ H2Imp/Death			"sounds/fleshimp/2IMPDEAT.ogg"
 Craw/Splat "sounds/crow/WASPSPLT.wav"
 Craw/Active "sounds/crow/DSCRAW.ogg"
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// ascension tramp && rogue ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//insult
+//getpain
+//getdead
+//swordhit
+//RogueSee1
+//getroguepain
+//getroguedead
+//flecha
+//batfam/crash
+$random swordhit { shit1 shit2 shit3 shit4 shit5 }
+$random insult { i1 i2 i3 i4 i5 i6 i7 }
+$random getdead { d1 d2 d3 d4 d5 d6 d7 d8 d9 }
+$random getpain { p1 p2 p3 p4 p5 p6 p7 }
+d1 "sounds/ascension/die1.ogg"
+d2 "sounds/ascension/die2.ogg"
+d3 "sounds/ascension/die3.ogg"
+d4 "sounds/ascension/die4.ogg"
+d5 "sounds/ascension/die5.ogg"
+d6 "sounds/ascension/die6.ogg"
+d7 "sounds/ascension/die7.ogg"
+d8 "sounds/ascension/die8.ogg"
+d9 "sounds/ascension/die9.ogg"
+
+p1 "sounds/ascension/pain1.ogg"
+p2 "sounds/ascension/pain2.ogg"
+p3 "sounds/ascension/pain3.ogg"
+p4 "sounds/ascension/pain4.ogg"
+p5 "sounds/ascension/pain5.ogg"
+p6 "sounds/ascension/pain6.ogg"
+p7 "sounds/ascension/pain7.ogg"
+
+i1 "sounds/ascension/ins1.ogg"
+i2 "sounds/ascension/ins2.ogg"
+i3 "sounds/ascension/ins3.ogg"
+i4 "sounds/ascension/ins4.ogg"
+i5 "sounds/ascension/ins5.ogg"
+i6 "sounds/ascension/ins6.ogg"
+i7 "sounds/ascension/ins7.ogg"
+
+shit1 "sounds/ascension/shit1.ogg"
+shit2 "sounds/ascension/shit2.ogg"
+shit3 "sounds/ascension/shit3.ogg"
+shit4 "sounds/ascension/shit4.ogg"
+shit5 "sounds/ascension/shit5.ogg"
+
+$random getroguedead { Roguedead1 Roguedead2 }
+$random getroguepain { RoguePain1 RoguePain2 RoguePain3 }
+
+RogueSee1 "sounds/ascension/THFSEE.ogg" 
+
+Roguedead1 "sounds/ascension/THFDED1.ogg"
+Roguedead2 "sounds/ascension/THFDED2.ogg"
+
+RoguePain1 "sounds/ascension/THFOW1.ogg"
+RoguePain2 "sounds/ascension/THFOW2.ogg"
+RoguePain3 "sounds/ascension/THFOW3.ogg"
+
+batfam/crash "sounds/ascension/batcrash.ogg"
+////////////////////////////////////////////////////////////////////////////////

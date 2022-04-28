@@ -256,8 +256,8 @@ DoomEdNums {
 	20251 = wosSoyFood
 	20252 = wosSodaCan
 	20253 = wosCandyBar
-	20254 = m8f_hn_AreaNameMarker_MP_millport
-	20255 = m8f_hn_AreaNameMarker_MP_techsmith
+	20254 = ascTramp
+	20255 = ascRogue
 	20256 = m8f_hn_AreaNameMarker_MP_blackPub
 	20257 = m8f_hn_AreaNameMarker_MP_gunsmith
 	20258 = m8f_hn_AreaNameMarker_MP_hostel

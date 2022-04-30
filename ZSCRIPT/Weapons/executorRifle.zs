@@ -110,11 +110,11 @@ class executorRifle_ground01 : CustomInventory {
 	
 	States {
 		Spawn:
-			ERMP A -1;
+			DUMM A -1;
 			Stop;
 	}
 }
-class executorRifle_ground02 : executorRifle {
+class executorRifle_ground02 : CustomInventory {
 	Default {
 		//$Category "weapons"
 		//$Title "Executor Rifle (ground2)"
@@ -122,11 +122,11 @@ class executorRifle_ground02 : executorRifle {
 	
 	States {
 		Spawn:
-			ERMP B -1;
+			DUMM A -1;
 			Stop;
 	}
 }
-class executorRifle_standing : executorRifle {
+class executorRifle_standing : CustomInventory {
 	Default {
 		//$Category "weapons"
 		//$Title "Executor Rifle (standing)"
@@ -134,10 +134,58 @@ class executorRifle_standing : executorRifle {
 	
 	States {
 		Spawn:
-			ERMP C -1;
+			DUMM A -1;
 			Stop;
 	}
 }
 */
 
 //dummy actors
+class dummy_executorRifle01 : actor {
+    Default {
+        //$Category "Decorations/Wos"
+	    //$Title "deco executor rifle 01"
+        radius 10;
+        height 8;
+        +SOLID
+        +USESPECIAL
+        +NOGRAVITY
+    }
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
+}
+class dummy_executorRifle02 : actor {
+    Default {
+        //$Category "Decorations/Wos"
+	    //$Title "deco executor rifle 02"
+        radius 6;
+        height 32;
+        +SOLID
+        +USESPECIAL
+        +NOGRAVITY
+    }
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
+}
+class dummy_executorRifle03 : actor {
+    Default {
+        //$Category "Decorations/Wos"
+	    //$Title "deco executor rifle 03"
+        radius 10;
+        height 8;
+        +SOLID
+        +USESPECIAL
+        +NOGRAVITY
+    }
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
+}

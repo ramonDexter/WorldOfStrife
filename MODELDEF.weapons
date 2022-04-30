@@ -1158,6 +1158,31 @@ model executorRifle {
 	frameindex ERMD J 0 8	
 }
 
+model dummy_executorRifle01 {
+	path "models/weapons/executorRifle/"
+	model 0 "ar15_ground.md3"
+	skin 0 "ar15tex.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model dummy_executorRifle02 {
+	path "models/weapons/executorRifle/"
+	model 0 "ar15_ground.md3"
+	skin 0 "ar15tex.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 2
+}
+model dummy_executorRifle03 {
+	path "models/weapons/executorRifle/"
+	model 0 "ar15_ground.md3"
+	skin 0 "ar15tex.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 3
+}
+
 /*
 model executorRifle_ground01 {
 	path "models/weapons/executorRifle/"

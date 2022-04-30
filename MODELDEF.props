@@ -833,6 +833,14 @@ model modelMediumTorch {
 	frameindex LTRH C 0 0
 	frameindex LTRH D 0 0
 }
+model wosD_mediumTorchNewFlame {
+	path "models/props/lanterns/"
+	model 0 "mediumTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 1.8 1.8 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model modelHugeTorch {
 	path "models/props/lanterns/"
 	model 0 "HugeTorch.md3"
@@ -840,6 +848,14 @@ model modelHugeTorch {
 	scale 2.0 2.0 2.5
 	offset 0.0 0.0 0.0
 	frameindex LOGS A 0 0
+}
+model wosD_hugeTorchNewFlame {
+	path "models/props/lanterns/"
+	model 0 "HugeTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 2.0 2.0 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model modelLargeTorch {
 	path "models/props/lanterns/"
@@ -849,6 +865,14 @@ model modelLargeTorch {
 	offset 0.0 0.0 0.0
 	frameindex LMPC A 0 0
 }
+model wosD_largeTorchNewFlame {
+	path "models/props/lanterns/"
+	model 0 "LargeTorch.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 2.0 2.0 2.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model modelBurningBowl {
 	path "models/props/lanterns/"
 	model 0 "BurningBowl.md3"
@@ -857,6 +881,14 @@ model modelBurningBowl {
 	offset 0.0 0.0 0.0
 	frameindex BOWL A 0 0
 }
+model wosD_burningBowlNewFlame {
+	path "models/props/lanterns/"
+	model 0 "BurningBowl.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model modelBurningBrazier {
 	path "models/props/lanterns/"
 	model 0 "BurningBrazier.md3"
@@ -864,6 +896,14 @@ model modelBurningBrazier {
 	scale 7.0 7.0 5.5
 	offset 0.0 0.0 0.0
 	frameindex BRAZ A 0 0
+}
+model wosD_burningBrazierNewFlame {
+	path "models/props/lanterns/"
+	model 0 "BurningBrazier.md3"
+	skin 0 "tx_mediumTorch.png"
+	scale 7.0 7.0 5.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 model modelStrifeBurningBarrel {
 	path "models/props/lanterns/"

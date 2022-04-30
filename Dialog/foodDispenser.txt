@@ -1,0 +1,87 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 604;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Food Dispenser";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "foodDispenser_takefood";
+        Name = "\c[yellow]Food Dispenser";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Leave"; 
+        Choice {
+            Text = "\c[gold]Buy foodbox";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodBox";
+			Cost {
+				item = "goldCoin";
+				amount = 12;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy food ration 1";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation1";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy food ration 2";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation2";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy food ration 3";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation3";
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+        } 
+        Choice {
+            Text = "\c[gold]Buy soyfood";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "goldCoin";
+				amount = 13;
+			}
+        }
+    }
+}

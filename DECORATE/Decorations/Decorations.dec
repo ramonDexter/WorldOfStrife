@@ -370,7 +370,6 @@ actor skynetFire1  21019
 	States
 	{
 		Spawn:
-		Active:
 			SKF1 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
@@ -393,7 +392,6 @@ actor skynetFire2  21020
 	States
 	{
 		Spawn:
-		Active:
 			SKF2 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
@@ -416,7 +414,6 @@ actor skynetFire3  21021
 	States
 	{
 		Spawn:
-		Active:
 			SKF3 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
@@ -4961,7 +4958,7 @@ actor dummy_metalArmor 21267 {
 			Stop
 	}
 }
-actor dummy_executorRifle_ground01 21268 {
+/*actor dummy_executorRifle_ground01 21268 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Executor Rifle (ground1)"
 	radius 16
@@ -5011,7 +5008,7 @@ actor dummy_executorRifle_standing 21270 {
 			ERMP C -1
 			Stop
 	}
-}
+}*/
 actor dummy_hamburger 21271 {
 	//$Category "Decorations/WoS"
 	//$Title "deco hamburger"
@@ -9176,6 +9173,143 @@ actor test_ar15 21523 {
 			Stop
 	}
 }
+
+// new torches ////////////////////////////////////////////////////////////////////////////////////////////////
+
+// credits osjclatchford torches //////////////////////////////////////////////////////////////////////////////
+actor newFlameEmbersHuge {
+	+NOCLIP
+   	+NOGRAVITY
+   	+NOBLOCKMAP
+   	RenderStyle "ADD"
+   	Alpha 0.8
+  	scale 0.7
+   	States {
+		Spawn:
+			SPGN abcdefghijklmnopqrstuvwxyz 1 bright
+			loop
+   	}
+}
+actor NewFlameHuge {
+   	-NOCLIP
+   	+NOGRAVITY
+   	-NOBLOCKMAP
+	Radius 16
+	Height 68
+	ProjectilePassHeight -16
+  	//RenderStyle "ADD"
+	RenderStyle "translucent"
+  	Alpha 0.85
+	scale 0.9
+   	States {
+		Spawn:
+			FS02 ABCDEFG 3 bright light("newFlameStandingTorchLight")
+			Loop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor newFlameEmbersLarge : newFlameEmbersHuge {
+	scale 0.55
+}
+actor newFlameLarge : NewFlameHuge {
+	scale 0.6
+}
+actor newFlameEmbersMedium : newFlameEmbersHuge {
+	scale 0.35
+}
+actor newFlameMedium : NewFlameHuge {
+	scale 0.45
+}
+
+actor wosD_hugeTorchNewFlame 21524 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame huge torch"
+	+DONTTHRUST
+	tag "huge torch"
+	radius 10
+	height 80
+	States {
+		Spawn:
+			DUMM A -1 NODELAY { 
+				A_SpawnItemEx("NewFlameHuge", 0, 0, 57); 
+				A_SpawnItemEx("newFlameEmbersHuge", 0, 0, 58);
+			}
+			Stop
+	}
+}
+actor wosD_mediumTorchNewFlame 21525 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame medium torch"
+	+DONTTHRUST
+	+SOLID
+	tag "medium torch"
+	radius 4
+	height 72
+	States {
+		Spawn:
+			DUMM A -1 NODELAY {
+				A_SpawnItemEx("newFlameMedium", 0, 0, 48);
+				A_SpawnItemEx("newFlameEmbersMedium", 0, 0, 48);
+			}
+			Stop
+	}
+}
+actor wosD_largeTorchNewFlame 21526 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame large torch"
+	+DONTTHRUST
+	+SOLID
+	tag "large torch"
+	radius 10
+	height 72
+	ActiveSound "world/smallfire"
+	States {
+		Spawn:
+			DUMM A -1 NODELAY {
+				A_SpawnItemEx("newFlameLarge", 0, 0, 52);
+				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 52);
+			}
+			Stop
+	}
+}
+actor wosD_burningBrazierNewFlame 21527 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame burning brazier"
+	+SOLID
+	+DONTTHRUST
+	radius 16
+	height 32
+	tag "burning brazier"
+	States {
+		Spawn:
+			DUMM A -1 NODELAY {
+				A_SpawnItemEx("NewFlameHuge", 0, 0, 23);
+				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 23);
+			}
+			Stop
+	}
+}
+actor wosD_burningBowlNewFlame 21528 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame burning bowl"
+	+SOLID
+	+DONTTHRUST	
+	radius 16
+	height 16
+	tag "burning bowl"
+	ActiveSound "world/smallfire"
+	States {
+		Spawn:
+			DUMM A -1 NODELAY {
+				A_SpawnItemEx("NewFlameHuge", 0, 0, 5);
+				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 5);
+			}
+			Stop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

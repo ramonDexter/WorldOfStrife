@@ -328,7 +328,7 @@ class binderPlayer : StrifePlayer {
 					If(mod=="Fire"&&currentarmor==6) {newdamage/=2;}
 					If(mod=="Fire"/*&&CountInv("LFPowerMask")>0)||*/&&currentarmor==4){}
 					Else{
-						armoramount -= damage/3; //vykomnetovanim se vypne damage armoru >> armor funguje jako ve falloutu nebo v hexenu
+						armoramount -= damage/10; //vykomnetovanim se vypne damage armoru >> armor funguje jako ve falloutu nebo v hexenu
 					}
 					If(armoramount<=0) {
 						armorpower=0;
@@ -730,6 +730,7 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("laserPistol", 1);
 			A_GiveInventory("wosStrifeXbow", 1);
 			A_GiveInventory("wosAssaultGun", 1);
+			A_GiveInventory("executorRifle", 1);
 			A_GiveInventory("staffBlaster", 1);
 			A_GiveInventory("wosMinimissileLauncher", 1);
 			A_GiveInventory("wosGrenadeLauncher", 1);

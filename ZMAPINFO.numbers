@@ -258,9 +258,9 @@ DoomEdNums {
 	20253 = wosCandyBar
 	20254 = ascTramp
 	20255 = ascRogue
-	20256 = m8f_hn_AreaNameMarker_MP_blackPub
-	20257 = m8f_hn_AreaNameMarker_MP_gunsmith
-	20258 = m8f_hn_AreaNameMarker_MP_hostel
+	20256 = dummy_executorRifle01
+	20257 = dummy_executorRifle02
+	20258 = dummy_executorRifle03
 	20259 = m8f_hn_AreaNameMarker_MP_publicClinic
 	20260 = m8f_hn_AreaNameMarker_MP_commons
 	20261 = m8f_hn_AreaNameMarker_MP_commons_Tavern

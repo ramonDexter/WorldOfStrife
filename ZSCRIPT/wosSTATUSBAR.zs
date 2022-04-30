@@ -322,10 +322,10 @@ class wosStatusBar : BaseStatusBar {
 			If(pawn.currentarmor > 0 && pawn.armoramount > 0) {
 				string armortype;
 				If(pawn.currentarmor==1){armortype="I_ARM2";}Else If(pawn.currentarmor==2){armortype="I_ARM1";}Else If(pawn.currentarmor==3){armortype="I_RGA1";}Else If(pawn.currentarmor==4){armortype="I_RGA2";}Else If(pawn.currentarmor==5){armortype="I_SHLD";}
-				DrawImage(armortype,(-56, 0),DI_ITEM_OFFSETS);
+				DrawImage(armortype,(-56, 2),DI_ITEM_OFFSETS);
 				//DrawString(mYelFont, FormatNumber(item.Amount, 3, 5), (362, 19), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
 				//DrawInventoryIcon(armortype, (120, 177), DI_ITEM_OFFSETS);
-				If(pawn.currentarmor!=6){DrawString(mYelFont, FormatNumber(pawn.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
+				//If(pawn.currentarmor!=6){DrawString(mYelFont, FormatNumber(pawn.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
 			}
 
             //  Ammo  //////////////////////////////////////////////////////////		
@@ -528,23 +528,25 @@ class wosStatusBar : BaseStatusBar {
 		switch (CurrentPop) {
 		
 			case POP_Status:
+				// cast player for various purposes ////////////////////////////
 				let pawn = binderPlayer(CPlayer.mo);
+
 				// STATUS popup ////////////////////////////////////////////////
 				//  Show miscellaneous status items.  //////////////////////////
 				
 				//  show backrground & foreground text&border  /////////////////
 				TextureID idPOPSTBK = TexMan.CheckForTexture("POPSTBK", 0, 0);
 				TextureID idPOPSTAT = TexMan.CheckForTexture("POPSTAT", 0, 0);
-				screen.DrawTexture (idPOPSTBK, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.85);
-				screen.DrawTexture (idPOPSTAT, true, left, top-50, DTA_CleanNoMove, true);
+				screen.DrawTexture (idPOPSTBK, true, left, top-86, DTA_CleanNoMove, true, DTA_Alpha, 0.85);
+				screen.DrawTexture (idPOPSTAT, true, left, top-86, DTA_CleanNoMove, true);
 				
 				//  Print stats  ///////////////////////////////////////////////
 				//  accuracy
-				DrINumber2 (CPlayer.mo.accuracy, left+266*xscale, top+9*yscale, 7*xscale, imgSTFON0);
+				DrINumber2 (CPlayer.mo.accuracy, left+266*xscale, top-3*yscale, 7*xscale, imgSTFON0);
 				//  stamina
-				DrINumber2 (CPlayer.mo.stamina, left+266*xscale, top+27*yscale, 7*xscale, imgSTFON0);
+				DrINumber2 (CPlayer.mo.stamina, left+266*xscale, top+15*yscale, 7*xscale, imgSTFON0);
 				//mind
-				DrINumber2 (pawn.mindValue, left+266*xscale, top+45*yscale, 7*xscale, imgSTFON0);
+				DrINumber2 (pawn.mindValue, left+266*xscale, top+33*yscale, 7*xscale, imgSTFON0);
 				// How many keys does the player have?
 				/*
 				i = 0;
@@ -558,12 +560,33 @@ class wosStatusBar : BaseStatusBar {
 				DrINumber2 (i, left+268*xscale, top+76*yscale, 7*xscale, imgSTFON0);
 				*/
 
+				// display worn armor //////////////////////////////////////////
+				textureID id_armor01 = TexMan.CheckForTexture("I_ARM2", 0, 0);
+				textureID id_armor02 = TexMan.CheckForTexture("I_ARM1", 0, 0);
+				textureID id_armor03 = TexMan.CheckForTexture("I_RGA1", 0, 0);
+				textureID id_armor04 = TexMan.CheckForTexture("I_RGA2", 0, 0);
+				textureID id_armor05 = TexMan.CheckForTexture("I_SHLD", 0, 0);
+				if ( pawn.currentarmor > 0 && pawn.armoramount > 0 ) {
+					textureID id_holder;
+					if ( pawn.currentarmor == 1 ) { id_holder = id_armor01; } 
+					else if ( pawn.currentarmor == 2 ) { id_holder = id_armor02; } 
+					else if ( pawn.currentarmor == 3 ) { id_holder = id_armor03; } 
+					else if ( pawn.currentarmor == 4 ) { id_holder = id_armor04; } 
+					else if ( pawn.currentarmor == 5 ) { id_holder = id_armor05; }
+					screen.DrawTexture(id_holder, true,
+						left + 252 *xscale,
+						top + 52 *yscale,
+						DTA_CleanNoMove, true
+					);	
+					DrINumber2 (pawn.armoramount, left+ 281 *xscale, top+ 86 *yscale, 7*xscale, imgSTFON0);
+				}
+
 				//  Does the player have a binder badge?  //////////////////////
 				item = CPlayer.mo.FindInventory ("binderBadge");
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true,
-						left + 248*xscale,
-						top + 83*yscale,
+						left + 195*xscale,
+						top + 72*yscale,
 						DTA_CleanNoMove, true);
 				}
 				
@@ -572,7 +595,7 @@ class wosStatusBar : BaseStatusBar {
 				if (item != NULL) {
 					screen.DrawTexture (item.Icon, true, 
 						left + 64*xscale,
-						top - 5*yscale,
+						top - 16*yscale,
 						DTA_CleanNoMove, true);
 					/*item = CPlayer.mo.FindInventory("shoulderGunMag_item");
 					if (item != NULL) {
@@ -583,15 +606,15 @@ class wosStatusBar : BaseStatusBar {
 				//  Does the player have coins?  ///////////////////////////////
 				item = CPlayer.mo.FindInventory("goldCoin");
 				if ( item != NULL ) {
-					DrINumber2 (item.Amount, left+284*xscale, top+64 * yscale, 7*xscale, imgSTFON0);
+					DrINumber2 (item.Amount, left+175*xscale, top+71 * yscale, 7*xscale, imgSTFON0);
 				}
 				
 				//  Display weight of owned items  /////////////////////////////				
 				if ( pawn != NULL ) {
 					// current weight
-					DrINumber2 (pawn.encumbrance, left+197*xscale, top+87 * yscale, 7*xscale, imgSTFON0);
+					DrINumber2 (pawn.encumbrance, left+151*xscale, top+90 * yscale, 7*xscale, imgSTFON0);
 					//maximal weight
-					DrINumber2 (pawn.weightmax, left+237*xscale, top+87 * yscale, 7*xscale, imgSTFON0);			
+					DrINumber2 (pawn.weightmax, left+191*xscale, top+90 * yscale, 7*xscale, imgSTFON0);			
 				}
 				
 				//  How much ammo does the player have?  ///////////////////////
@@ -605,7 +628,7 @@ class wosStatusBar : BaseStatusBar {
 					"EnergyPod"
 				};				
 				//  ammo y coordinate
-				static const int AmmoY[] = {0, 16, 24, 40, 48, 56, 64};
+				static const int AmmoY[] = {-12, 4, 12, 28, 36, 44, 52};
 				
 				for (i = 0; i < 7; ++i) {
 					item = CPlayer.mo.FindInventory (AmmoList[i]);
@@ -626,16 +649,17 @@ class wosStatusBar : BaseStatusBar {
 					"laserPistol",
 					"wosStrifeXbow",
 					"wosAssaultGun",
+					"executorRifle",
 					"staffBlaster",
 					"wosMinimissileLauncher",
 					"wosFlamethrower",
 					"wosGrenadeLauncher",
 					"wosMauler"
 				};
-				static const int WeaponX[] = {46, 19, 67, 61, 19, 19, 55, 19, 48};
-				static const int WeaponY[] = {11, 0, 24, 36, 25, 42, 55, 66, 83};
+				static const int WeaponX[] = {46, 19, 67, 63, 41, 19, 19, 55, 19, 48};
+				static const int WeaponY[] = {0, -11, 13, 43, 26, 13, 44, 56, 66, 83};
 
-				for (i = 0; i < 9; ++i) {
+				for (i = 0; i < 10; ++i) {
 					item = CPlayer.mo.FindInventory (WeaponList[i]);
 					if (item != NULL) {
 						screen.DrawTexture (item.Icon, true,

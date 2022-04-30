@@ -27,7 +27,7 @@ Conversation {
 			NextPage = "vendingMachine1_drinks";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSodaCan";
 			Cost {
@@ -40,7 +40,7 @@ Conversation {
 			NextPage = "vendingMachine1_drinks";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosWaterBottle";
 			Cost {
@@ -63,7 +63,7 @@ Conversation {
 			NextPage = "vendingMachine2_food";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosFoodBox";
 			Cost {
@@ -76,7 +76,7 @@ Conversation {
 			NextPage = "vendingMachine2_food";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSoyFood";
 			Cost {
@@ -89,7 +89,7 @@ Conversation {
 			NextPage = "vendingMachine2_food";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosCandyBar";
 			Cost {
@@ -112,7 +112,7 @@ Conversation {
 			NextPage = "vendingMachine3_drinkfood";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSodaCan";
 			Cost {
@@ -125,7 +125,7 @@ Conversation {
 			NextPage = "vendingMachine3_drinkfood";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosWaterBottle";
 			Cost {
@@ -138,7 +138,7 @@ Conversation {
 			NextPage = "vendingMachine3_drinkfood";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosFoodBox";
 			Cost {
@@ -151,7 +151,7 @@ Conversation {
 			NextPage = "vendingMachine3_drinkfood";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSoyFood";
 			Cost {
@@ -164,7 +164,7 @@ Conversation {
 			NextPage = "vendingMachine3_drinkfood";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			//YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosCandyBar";
 			Cost {

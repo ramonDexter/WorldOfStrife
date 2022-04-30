@@ -1367,7 +1367,20 @@ class ascImpFlesh : actor {
 		FastSpeed 20;
 		DamageFunction (random(4,8));
 		PainChance 144;
-  		+PUSHABLE;
+  		SeeSound "H2Imp/Sight";
+		DeathSound "H2Imp/Death";
+		PainSound "H2Imp/Pain";
+		meleeSound "H2Imp/Melee";
+		Monster;
+		radius 16;
+		height 32;
+		+FloorClip
+		+DontHurtSpecies
+		+Float
+		+NoGravity
+		+NoTrigger
+		+NOTARGETSWITCH
+		+PUSHABLE
 	}  
   	States {
 		Spawn:
@@ -1403,7 +1416,7 @@ class ascImpFlesh : actor {
 		Death:
 			IMP1 H 0 { bFLOATBOB = 0; }
 			IMP1 H 1 A_Scream();
-			IMP1 H -1;
+			IMP1 H 1;
 		Crash:
 			IMP1 H 0 { bFLOATBOB = 0; }
 			IMP1 I 5;

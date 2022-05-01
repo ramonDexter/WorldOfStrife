@@ -1,0 +1,36 @@
+#library "wositm"
+#include "zcommon.acs"
+
+script "drunkKoralka" (void) {
+	SetCVar("sv_movetilt", true);
+	SetCVar("sv_movetiltscalar", 1.5);
+	SetCVar("sv_movetiltangle", 0.450);
+	SetCVar("sv_movetiltspeed", 5.500);
+	Delay(15*35);
+	SetCVar("sv_movetilt", false);
+	SetCVar("sv_movetiltscalar", 0.5);
+	SetCVar("sv_movetiltangle", 0.015);
+	SetCVar("sv_movetiltspeed", 15.000);
+}
+script "drunkVino" (void) {
+	SetCVar("sv_movetilt", true);
+	SetCVar("sv_movetiltscalar", 1.5);
+	SetCVar("sv_movetiltangle", 0.250);
+	SetCVar("sv_movetiltspeed", 5.500);
+	Delay(10*35);
+	SetCVar("sv_movetilt", false);
+	SetCVar("sv_movetiltscalar", 0.5);
+	SetCVar("sv_movetiltangle", 0.015);
+	SetCVar("sv_movetiltspeed", 15.000);
+}
+script "drunkPivo" (void) {
+	SetCVar("sv_movetilt", true);
+	SetCVar("sv_movetiltscalar", 1.2);
+	SetCVar("sv_movetiltangle", 0.200);
+	SetCVar("sv_movetiltspeed", 5.500);
+	Delay(10*35);
+	SetCVar("sv_movetilt", false);
+	SetCVar("sv_movetiltscalar", 0.5);
+	SetCVar("sv_movetiltangle", 0.015);
+	SetCVar("sv_movetiltspeed", 15.000);
+}

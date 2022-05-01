@@ -13,7 +13,7 @@ Conversation {
         pageName = "surgUnit_opener1";
 		Name = "\c[yellow][ Surgical unit ]";
 		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 50 coins.";
-		Panel = "M_BLNK";
+		//Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "Use surgical unit to install accuracy implant";
@@ -70,7 +70,7 @@ Conversation {
         pageName = "surgUnit_opener2";
 		Name = "\c[yellow][ Surgical unit ]";
 		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 25 coins.";
-		Panel = "M_BLNK";
+		//Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "Use surgical unit to install accuracy implant";
@@ -130,7 +130,7 @@ Conversation {
         pageName = "binderSurgUnit_opener";
 		Name = "\c[yellow][ Surgical unit ]";
 		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 10 coins.";
-		Panel = "M_BLNK";
+		//Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "Use surgical unit to install accuracy implant";

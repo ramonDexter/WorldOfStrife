@@ -261,7 +261,7 @@ DoomEdNums {
 	20256 = dummy_executorRifle01
 	20257 = dummy_executorRifle02
 	20258 = dummy_executorRifle03
-	20259 = m8f_hn_AreaNameMarker_MP_publicClinic
+	20259 = wosSpiritsBottle
 	20260 = m8f_hn_AreaNameMarker_MP_commons
 	20261 = m8f_hn_AreaNameMarker_MP_commons_Tavern
 	20262 = m8f_hn_AreaNameMarker_MP_commons_butcher

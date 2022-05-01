@@ -73,7 +73,10 @@ class wosBeerBottle : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("beerBottle_heal", 1);
+			TNT1 A 0 {
+				ACS_NamedExecute("drunkPivo", 0);
+				A_GiveInventory("beerBottle_heal", 1);
+			}
 			Stop;
 	}
 }
@@ -103,7 +106,10 @@ class wosAleBottle : wosPickup
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("aleBottle_heal", 1);
+			TNT1 A 0 {
+				ACS_NamedExecute("drunkPivo", 0);
+				A_GiveInventory("aleBottle_heal", 1);
+			}
 			Stop;
 	}
 }
@@ -130,7 +136,39 @@ class wosVineBottle : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("vineBottle_heal", 1);
+			TNT1 A 0 {
+				ACS_NamedExecute("drunkVino", 0);
+				A_GiveInventory("vineBottle_heal", 1);
+			}
+			Stop;
+	}
+}
+class spiritsBottle_heal : Health {
+	Default { 
+		Inventory.Amount 7; 
+	}
+}
+class wosSpiritsBottle : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "Spirits Bottle"
+
+		Tag "Spirits Bottle";
+		height 24;
+		Inventory.PickupMessage "You picked up the Spirits Bottle!";
+		Inventory.Icon "I_SPIB";
+		Inventory.useSound "sounds/dukeDrink";
+		Mass BottleWeight;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+		Use:
+			TNT1 A 0 { 
+				ACS_NamedExecute("drunkKoralka", 0);
+				A_GiveInventory("spiritsBottle_heal", 1); 
+			}
 			Stop;
 	}
 }

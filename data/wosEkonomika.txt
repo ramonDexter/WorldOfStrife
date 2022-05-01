@@ -45,6 +45,7 @@ wosWaterBottle				2
 wosBeerBottle				3
 wosAleBottle				3
 wosVineBottle				4
+wosSpiritsBottle            12
 wosHamburger				2
 wosCheeseburger				3
 wosBigburger				4

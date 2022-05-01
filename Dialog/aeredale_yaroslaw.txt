@@ -1,0 +1,436 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 11;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "aeredale_yaroslaw_opener";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Hello, welcome to my shop.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "What do you sell.";
+            Nextpage = "aeredale_yaroslaw_shop";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "aeredale_yaroslaw_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]I sell all the commons goods that everyday life needs. I sell food and drinks, some tools, even some ammunition.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_opener";
+        }
+        Choice {
+            Text = "Is the food fresh?";
+            Nextpage = "aeredale_yaroslaw_shop_food";
+        }
+        Choice {
+            Text = "What kind of tools?";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+        }
+        Choice {
+            Text = "What kind of ammunition?";
+            Nextpage = "aeredale_yaroslaw_shop_ammo";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_food";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]I got fresh vegetables, fresh fish and meat, packed food rations and food boxes and some soy food. For the frinks I got bottled water, soda cans and some beer and wine. Nothing stronger, tho.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop";
+        }
+        Choice {
+            Text = "I'll take some of the fresh food.";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+        }
+        Choice {
+            Text = "I'll take some packed food.";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+        }
+        Choice {
+            Text = "I'll take some drink.";
+            Nextpage = "aeredale_yaroslaw_shop_drinks";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_freshfood";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Okay, the lettuce, carrots and onions cost 2 gold, fish costs 3 and meat costs 4 gold.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop_food";
+        }
+        Choice {
+            Text = "\c[gold]Buy lettuce";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie3";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy carrots";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie4";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy onions";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie5";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy fish";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosfbMeat3";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy meat";
+            Nextpage = "aeredale_yaroslaw_shop_freshfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosfbMeat1";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_packedfood";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Okay, the food rations cost 11, the foodbox costs 12 and the soyfood costs 13 gold.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop_food";
+        }
+        Choice {
+            Text = "\c[gold]Buy rations I";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation1";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy rations II";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation2";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy rations III";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation3";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy foodbox";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodBox";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy soyfood";
+            Nextpage = "aeredale_yaroslaw_shop_packedfood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSoyFood";
+            Cost {
+                item = "goldCoin";
+                amount = 13;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_drinks";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Okay, bottle of water costs 2, bottle of beer costs 3 and bottle of wine costs 6 gold.";
+        Goodbye = "\c[red]Goodbye.";  
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop_food";
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of water";
+            Nextpage = "aeredale_yaroslaw_shop_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosWaterBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of beer";
+            Nextpage = "aeredale_yaroslaw_shop_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of wine";
+            Nextpage = "aeredale_yaroslaw_shop_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVineBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 6;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_tools";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]I got here the environment suits and rebreathers, than some flares and grenades. Oh, and I've also got a binocular.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy environmental suit";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosEnvSuit";
+            Cost {
+                item = "goldCoin";
+                amount = 75;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy rebreather";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosRebreather";
+            Cost {
+                item = "goldCoin";
+                amount = 35;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy flare";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "Flare";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy grenade";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosGrenadeE";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy binocular";
+            Nextpage = "aeredale_yaroslaw_shop_tools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBinocular";
+            Cost {
+                item = "goldCoin";
+                amount = 120;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shop_ammo";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]I got only bullets and electric crossbow bolts. If you need some energy ammo, ask the techsmith down next to the entrance.\nClip of bullets cost 10 gold and bundle of electric arrows cost 15 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy clip of bullets";
+            Nextpage = "aeredale_yaroslaw_shop_ammo";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBulletCartridge";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bundle of electric arrows";
+            Nextpage = "aeredale_yaroslaw_shop_ammo";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBundleElectric";
+            Cost {
+                item = "goldCoin";
+                amount = 15;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_questions";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]What would you like to know?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_opener";
+        }
+        Choice {
+            Text = "What's going on here?";
+            Nextpage = "aeredale_yaroslaw_goingon";
+        }
+        Choice {
+            Text = "I saw the Shippig Guild sign outside. Are you with them?";
+            Nextpage = "aeredale_yaroslaw_shippingguild";
+        }
+        Choice {
+            Text = "Could you tell me about your village?";
+            Nextpage = "aeredale_yaroslaw_aboutaeredale";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_goingon";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Well, nothing much. The traders tend to their crops, the herds watch over their herds and the flies bother everyone else. But yeah, we got a little problem here. As you probably already saw, the water in our village well is little bit ... umm ... not good. Yeah, it stinks also. And our village techsmith don't know how to clean the water. So we have to take the water from the well outside the walls, and this water is not so good either.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_shippingguild";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Oh yeah, I'm the shipping guild representative here in Aeredale.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_yaroslaw_aboutaeredale";
+        Name = "\c[yellow]Yaroslaw, Trader";
+        Dialog = "\c[white]Our little village is a peaceful place to live. The woods around makes it harder to farm here, so the village is on the decline for the last few years, but we are struggling hard. We got a techsmith and a medic here. Our pub has good cold beer, so what do we need more?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_yaroslaw_questions";
+        }
+    }
+}

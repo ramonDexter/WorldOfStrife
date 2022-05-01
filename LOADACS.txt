@@ -7,3 +7,4 @@ FLASHLIGHT
 CFIRE
 WOSDBG
 pdoors
+wositm

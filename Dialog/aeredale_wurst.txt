@@ -1,0 +1,210 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 12;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "aeredale_wurst_opener";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Welcome to the Pub of Aeredale, where all your desires will be fulfilled! I am Wurst, and this is my Pub. We have good tasty food and fresh cold beer. What would you like, a bite of tasty chew, a sip of cold beer or a good talk?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I would like something to eat.";
+            Nextpage = "aeredale_wurst_food";
+        }
+        Choice {
+            Text = "I would like something to drink.";
+            Nextpage = "aeredale_wurst_drink";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "aeredale_wurst_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_food";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]All right, something to drink! The beer and ale is cold, the wine is red like a blood and the spirits kicks like a wild bull. Oh, and we got water too. What will be your order?\nBottle of beer and ale costs 3, bottle of wine costs 5 and bottle of spirits costs 12 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_opener";
+        }
+        Choice {
+            Text = "\c[gold]Bottle of water";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosWaterBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of beer";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of ale";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosAleBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of wine";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVineBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of spirits";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSpiritsBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_drink";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Okay, we god the best grilled chicken and burgers. Our cheeseburgers are legendary! And our hotdogs are the god's mana, as one guy said.\nThe grilled chicken costs 25, cheeseburger costs 5 and the hotdog is for 3 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_opener";
+        }
+        Choice {
+            Text = "\c[gold]Give me the grilled chicken";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosGrilledChicken";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the cheeseburger";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosCheeseburgerDouble";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the hotdog";
+            Nextpage = "aeredale_wurst_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosHotdog02";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_questions";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Yes, a good talk it is. I know everything about our village and the locals. Just ask me anything, and you'll be suprised what I'll tell you.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_opener";
+        }
+        Choice {
+            Text = "What going on around here?";
+            Nextpage = "aeredale_wurst_goingon";
+        }
+        Choice {
+            Text = "Where do you get this good food and beer?";
+            Nextpage = "aeredale_wurst_wheregetgoodfood";
+        }
+        Choice {
+            Text = "Could you tell me about your village?";
+            Nextpage = "aeredale_wurst_aboutaeredale";
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_goingon";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Well, besides the normal daily routine consisting of normal daily farmwork, nothing much. The bandits are peaceful this year, so we aren't bothered by them. The only thing happened in the last few weeks is the pollution of the town's well. Even our techsmith can't find out what caused it. And worse, he tried to clean the water, but failed. Oh yeah, and daughter of farmer Curtis gone missing. I think she ran away with one of the traders that passed through here a month ago. As always, like last year. And the year before. Merry girl, I say.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_wheregetgoodfood";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Oh, that's my secret. I got good connections, so I'm able to get all the best produce from local farmers and herders.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_questions";
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_aboutaeredale";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]Aeredale is small farming community hidden in the woods of the Western Borderlands. Local farmers supply their produce to the city of Millport, which in return provides protection from the bandits. Also, our village act as a trading point in the borderlands.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_questions";
+        }
+    }
+}

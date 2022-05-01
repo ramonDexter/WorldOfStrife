@@ -431,3 +431,13 @@ texture WIRE_1
 	pic WIRE_1 tics 6
 	pic WIRE_2 tics 3
 	pic WIRE_3 tics 4
+
+texture PILA01
+	pic PILA01 tics 4
+	pic PILA02 tics 4
+	pic PILA03 tics 4
+
+texture PILA11
+	pic PILA11 tics 4
+	pic PILA12 tics 4
+	pic PILA13 tics 4

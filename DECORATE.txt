@@ -20,6 +20,7 @@
 #include "Decorate/Decorations/foodbarrels.dec"
 #include "Decorate/Decorations/waterfall.dec"
 #include "Decorate/Decorations/nature.dec"
+#include "Decorate/Decorations/deco_animals.dec"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  Droplets  //////////////////////////////////////////////////////////////////

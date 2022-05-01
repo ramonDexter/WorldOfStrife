@@ -1,5 +1,6 @@
-//Interactive switchable decorations
-//------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
+// Interactive switchable decorations //////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ACTOR InteractiveDeco : SwitchableDecoration
 {
 	+UseSpecial
@@ -7,8 +8,9 @@ ACTOR InteractiveDeco : SwitchableDecoration
 	Activation THINGSPEC_Switch
 }
 
-//Interactive decorations : ActivableDeco
-//------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////
+// Interactive decorations : ActivableDeco /////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ACTOR ActivableDeco {
 	+UseSpecial
 	+DontThrust
@@ -232,3 +234,101 @@ actor hexenFlySpawner : RandomSpawner 18125 {
 
 	DropItem "LittleFly"
 }
+
+// wallsprites /////////////////////////////////////////////////////////////////
+actor wosWallSprite_base {
+    //$Category "Flatsprites&Wallsprites"
+    +WALLSPRITE
+}
+
+actor wosWS_bloodCalendar : wosWallSprite_base 18000 {
+    //$Title "blood calendar"
+    radius 4
+    height 23
+    tag "wall calendar"
+    
+    States {
+        Spawn:
+            BL01 A -1
+            Stop
+    }
+}
+actor wosWS_bloodWallPlug : wosWallSprite_base 18001 {
+    //$Category "Flatsprites&Wallsprites"
+    //$Title "blood wall plug"
+    radius 4
+    height 23
+    tag "wall plug"
+
+    States {
+        Spawn:
+            BL02 A -1
+            Stop
+    }
+}
+actor wosWS_bloodSignExit : wosWallSprite_base 18002 {
+    //$Title "blood exitsign"
+    radius 4
+    height 23
+    tag "exit sign"
+
+    States {
+        Spawn:
+            BL03 A -1
+            Stop
+    }
+}
+actor wosWS_bloodDirtyDuct : wosWallSprite_base 18003 {
+    //$Title "blood dirty duct"
+    radius 4
+    height 23
+    tag "dirty duct"
+
+    States {
+        Spawn:
+            BL04 A -1
+            Stop
+    }
+}
+actor wosWS_bloodMirror : wosWallSprite_base 18004 {
+    //$Title "blood mirror"
+    radius 4
+    height 23
+    tag "mirror"
+
+    States {
+        Spawn:
+            BL05 A -1
+            Stop
+    }
+}
+actor wosWS_bloodSignNoAdmittance : wosWallSprite_base 18005 {
+    //$Title "blood sign no admittance"
+    radius 4
+    height 23
+    tag "no admittance"
+
+    States {
+        Spawn:
+            BL06 A -1
+            Stop
+    }
+}
+actor wosWS_bloodMirrorRoundSmall : wosWallSprite_base 18006 {
+    //$Title "blood round mirror"
+    radius 4
+    height 23
+    tag "round mirror"
+
+    States {
+        Spawn:
+            BL07 A -1
+            Stop
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

@@ -26,6 +26,7 @@ wosBundlePoison	            50
 wosBundleElectric	        15
 wosBulletsBox				50
 wosEnergyPod				10
+wosEnergyCell               20
 wosEnergyKit				30
 wosEnergyPack				50
 wosBulletCartridge			10

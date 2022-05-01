@@ -1430,11 +1430,11 @@ model wosaleBottle {
 	frameindex DUMM A 0 0
 }
 model wosvineBottle {
-	path "models/props/waterbottle/"
-	model 0 "waterBottle.md3"
-	skin 0 "tx_btlWine.png"
-	scale 3.0 3.0 3.0
-	offset 0.0 0.0 0.0	
+	path "models/props/deusex/"
+	model 0 "wineBottle.md3"
+	skin 0 "WineBottleTex1.png"
+	scale 0.45 0.45 0.45
+	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosSpiritsBottle {

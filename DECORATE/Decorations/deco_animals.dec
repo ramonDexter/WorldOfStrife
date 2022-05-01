@@ -1,0 +1,120 @@
+actor wosD_npc_staticDaggCow01 19000 {    
+	//$Category "Other NPCs/Wos"
+	//$Title "cow 1"
+    Tag "cow"
+    Radius 32
+	Height 32
+	+SOLID
+	+useSpecial
+
+    States {
+        Spawn:
+            COW1 AAAAAAAAAAAAAAAAAAAAAAAAABCD 5
+            Loop
+    }
+}
+actor wosD_npc_staticDaggCow02 19001 {
+    //$Category "Other NPCs/Wos"
+	//$Title "cow 2"
+    Tag "cow"
+    Radius 32
+	Height 32
+	+SOLID
+	+useSpecial
+
+    States {
+        Spawn:
+            COW2 AAAAAAAAAAAAAAAAAAAAAAAAAAABCD 5
+            Loop
+    }
+}
+actor wosD_npc_staticDaggDog 19002 {
+    //$Category "Other NPCs/Wos"
+	//$Title "dog"
+    tag "dog"
+    scale 0.8
+	Radius 32
+	Height 32
+	+SOLID
+	+useSpecial
+
+    States {
+        Spawn:
+            DOG1 ABCD 4
+            Loop
+    }
+}
+actor wosD_npc_staticDaggCat1 19003 {
+    //$Category "Other NPCs/Wos"
+	//$Title "cat 1"
+    tag "cat"
+    Radius 8
+	Height 16
+	+SOLID
+	+useSpecial
+
+	States {
+        Spawn:
+            CAT3 ABCD 8
+            Loop
+	}
+}
+actor wosD_npc_staticDaggCat2 19004 {
+    //$Category "Other NPCs/Wos"
+	//$Title "cat 2"
+    tag "cat"
+    Radius 8
+	Height 16
+	+SOLID
+	+useSpecial
+
+	States {
+        Spawn:
+            CAT2 ABCDDDDDDDDDDDDDDD 8
+            Loop
+	}
+}
+actor wosD_npc_staticDaggHorse1 19005 {
+    //$Category "Other NPCs/Wos"
+	//$Title "brown horse"
+    tag "brown horse"
+    scale 0.8
+	Radius 32
+	Height 32
+	+SOLID
+	+useSpecial
+	States {
+        Spawn:
+            HRS1 ABCDDDDDDDDDD 8
+            Loop
+	}
+}
+actor wosD_npc_staticDaggHorse2 19006 {
+    //$Category "Other NPCs/Wos"
+	//$Title "grey horse"
+    tag "grey horse"
+    scale 0.8
+	Radius 32
+	Height 32
+	+SOLID
+	+useSpecial
+	States {
+        Spawn:
+            HRS2 ABCDDDDDDDDDDDDDDD 8
+            Loop
+	}
+}
+actor wosD_npc_staticDaggGull 19007 {
+    //$Category "Other NPCs/Wos"
+	//$Title "gull"
+    tag "gull"
+    Radius 8
+	Height 32
+	+SOLID
+	+useSpecial
+	States {
+        Spawn:
+            GULL A -1
+            Stop
+	}
+}

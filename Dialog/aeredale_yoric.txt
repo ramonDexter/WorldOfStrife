@@ -173,7 +173,7 @@ Conversation {
     Page {
         pageName = "aeredale_yoric_aboutaeredale";
         Name = "\c[yellow]Yoric, Medic";
-        Dialog = "\c[white]Well, Aeredale is a village of farmers. The soil around the village is rich and gives good harvest. The locals are friendly and happy people.";
+        Dialog = "\c[white]Well, Aeredale is a village of farmers. The soil around the village is rich and gives good harvest. The locals are friendly and happy people. We're living a peaceful life here.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
             Text = "\c[yellow]<< BACK";

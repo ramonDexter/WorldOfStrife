@@ -19,7 +19,7 @@ class executorRifle : wosWeapon {
         radius 24;
         height 16;
 
-        Tag "Executor Rifle ER-15";
+        Tag "ER-15 Executor Rifle";
         Inventory.PickupMessage "You picked up the Executor Rifle!";
         obituary "%o was drilled full of holes by %k's executor rifle.";
         inventory.icon "H_ERMD";
@@ -145,6 +145,7 @@ class dummy_executorRifle01 : actor {
     Default {
         //$Category "Decorations/Wos"
 	    //$Title "deco executor rifle 01"
+        tag "executor rifle";
         radius 10;
         height 8;
         +SOLID
@@ -161,6 +162,7 @@ class dummy_executorRifle02 : actor {
     Default {
         //$Category "Decorations/Wos"
 	    //$Title "deco executor rifle 02"
+        tag "executor rifle";
         radius 6;
         height 32;
         +SOLID
@@ -177,6 +179,7 @@ class dummy_executorRifle03 : actor {
     Default {
         //$Category "Decorations/Wos"
 	    //$Title "deco executor rifle 03"
+        tag "executor rifle";
         radius 10;
         height 8;
         +SOLID

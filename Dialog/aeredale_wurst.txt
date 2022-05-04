@@ -34,81 +34,6 @@ Conversation {
     Page {
         pageName = "aeredale_wurst_food";
         Name = "\c[yellow]Wurst, Innkeeper";
-        Dialog = "\c[white]All right, something to drink! The beer and ale is cold, the wine is red like a blood and the spirits kicks like a wild bull. Oh, and we got water too. What will be your order?\nBottle of beer and ale costs 3, bottle of wine costs 5 and bottle of spirits costs 12 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_wurst_opener";
-        }
-        Choice {
-            Text = "\c[gold]Bottle of water";
-            Nextpage = "aeredale_wurst_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosWaterBottle";
-            Cost {
-                item = "goldCoin";
-                amount = 2;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Bottle of beer";
-            Nextpage = "aeredale_wurst_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBeerBottle";
-            Cost {
-                item = "goldCoin";
-                amount = 3;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Bottle of ale";
-            Nextpage = "aeredale_wurst_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosAleBottle";
-            Cost {
-                item = "goldCoin";
-                amount = 3;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Bottle of wine";
-            Nextpage = "aeredale_wurst_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosVineBottle";
-            Cost {
-                item = "goldCoin";
-                amount = 5;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Bottle of spirits";
-            Nextpage = "aeredale_wurst_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosSpiritsBottle";
-            Cost {
-                item = "goldCoin";
-                amount = 12;
-            }
-        }
-    }
-    Page {
-        pageName = "aeredale_wurst_drink";
-        Name = "\c[yellow]Wurst, Innkeeper";
         Dialog = "\c[white]Okay, we god the best grilled chicken and burgers. Our cheeseburgers are legendary! And our hotdogs are the god's mana, as one guy said.\nThe grilled chicken costs 25, cheeseburger costs 5 and the hotdog is for 3 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -152,6 +77,81 @@ Conversation {
             Cost {
                 item = "goldCoin";
                 amount = 3;
+            }
+        }
+    }
+    Page {
+        pageName = "aeredale_wurst_drink";
+        Name = "\c[yellow]Wurst, Innkeeper";
+        Dialog = "\c[white]All right, something to drink! The beer and ale is cold, the wine is red like a blood and the spirits kicks like a wild bull. Oh, and we got water too. What will be your order?\nBottle of beer and ale costs 3, bottle of wine costs 5 and bottle of spirits costs 12 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_wurst_opener";
+        }
+        Choice {
+            Text = "\c[gold]Bottle of water";
+            Nextpage = "aeredale_wurst_drink";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosWaterBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of beer";
+            Nextpage = "aeredale_wurst_drink";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of ale";
+            Nextpage = "aeredale_wurst_drink";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosAleBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of wine";
+            Nextpage = "aeredale_wurst_drink";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVineBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Bottle of spirits";
+            Nextpage = "aeredale_wurst_drink";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSpiritsBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
             }
         }
     }

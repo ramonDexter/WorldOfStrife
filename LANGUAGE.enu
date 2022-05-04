@@ -85,7 +85,8 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"SUPWOD01:SUPWOD02:MGWDH2:X_001:"
 			"X_002:X_003:X_004:X_005:"
 			"X_006:X_007:X_008:X_009:"
-			"X_010:X_011:F_NAT00:F_NAT01:";
+			"X_010:X_011:F_NAT00:F_NAT01:"
+			"F_OLDWOD:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -214,7 +215,6 @@ STEP_SSTX_123 = "step/carpet"; //:
 STEP_AXCARPH = "step/carpet";
 STEP_AXCARPM = "step/carpet";
 STEP_F_ROYCRP = "step/carpet";
-STEP_F_NAT02 = "step/carpet";
 STEP_FCARP01 = "step/carpet";
 STEP_F_CARP1 = "step/carpet";
 STEP_KBEDB = "step/carpet";
@@ -237,6 +237,7 @@ STEP_F_DIRT01 = "step/dirt";
 STEP_F_CAVE02 = "step/dirt";
 STEP_F_NAT00 = "step/dirt";
 STEP_F_NAT01 = "step/dirt";
+STEP_F_NAT02 = "step/dirt";
 
 
 // Gravel //////////////////////////////////////////////////////////////////////
@@ -393,6 +394,7 @@ STEP_WOOD08 = "step/wood";
 STEP_SUPWOD01 = "step/wood";
 STEP_SUPWOD02 = "step/wood";
 STEP_MGWDH2 = "step/wood";
+STEP_F_OLDWOD = "step/wood";
 
 
 

@@ -9207,7 +9207,6 @@ actor NewFlameHuge {
 			Loop
 	}
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor newFlameEmbersLarge : newFlameEmbersHuge {
 	scale 0.55
 }
@@ -9220,7 +9219,39 @@ actor newFlameEmbersMedium : newFlameEmbersHuge {
 actor newFlameMedium : NewFlameHuge {
 	scale 0.45
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor hugeTorchEmbers : newFlameEmbersHuge {
+	tag "huge torch"
+}
+actor mediumTorchEmbers : newFlameEmbersMedium {
+	tag "medium torch"
+}
+actor largeTorchEmbers : newFlameEmbersLarge {
+	tag "large torch"
+}
+actor burningBrazierEmbers : newFlameEmbersLarge {
+	tag "burning brazier"
+}
+actor burningBowlEmbers : newFlameEmbersLarge {
+	tag "burning bowl"
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor hugeTorchFlameNew : NewFlameHuge {
+	tag "huge torch"
+}
+actor mediumTorchFlameNew : newFlameMedium {
+	tag "medium torch"
+}
+actor largeTorchFlameNew : newFlameLarge {
+	tag "large torch"
+}
+actor burningBrazierFlameNew : NewFlameHuge {
+	tag "burning brazier"
+}
+actor burningBowlFlameNew : NewFlameHuge {
+	tag "burning bowl"
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor wosD_hugeTorchNewFlame 21524 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame huge torch"
@@ -9231,8 +9262,8 @@ actor wosD_hugeTorchNewFlame 21524 {
 	States {
 		Spawn:
 			DUMM A -1 NODELAY { 
-				A_SpawnItemEx("NewFlameHuge", 0, 0, 57); 
-				A_SpawnItemEx("newFlameEmbersHuge", 0, 0, 58);
+				A_SpawnItemEx("hugeTorchFlameNew", 0, 0, 57); 
+				A_SpawnItemEx("hugeTorchEmbers", 0, 0, 58);
 			}
 			Stop
 	}
@@ -9248,8 +9279,8 @@ actor wosD_mediumTorchNewFlame 21525 {
 	States {
 		Spawn:
 			DUMM A -1 NODELAY {
-				A_SpawnItemEx("newFlameMedium", 0, 0, 48);
-				A_SpawnItemEx("newFlameEmbersMedium", 0, 0, 48);
+				A_SpawnItemEx("mediumTorchFlameNew", 0, 0, 48);
+				A_SpawnItemEx("mediumTorchEmbers", 0, 0, 48);
 			}
 			Stop
 	}
@@ -9266,8 +9297,8 @@ actor wosD_largeTorchNewFlame 21526 {
 	States {
 		Spawn:
 			DUMM A -1 NODELAY {
-				A_SpawnItemEx("newFlameLarge", 0, 0, 52);
-				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 52);
+				A_SpawnItemEx("largeTorchFlameNew", 0, 0, 52);
+				A_SpawnItemEx("largeTorchEmbers", 0, 0, 52);
 			}
 			Stop
 	}
@@ -9283,8 +9314,8 @@ actor wosD_burningBrazierNewFlame 21527 {
 	States {
 		Spawn:
 			DUMM A -1 NODELAY {
-				A_SpawnItemEx("NewFlameHuge", 0, 0, 23);
-				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 23);
+				A_SpawnItemEx("burningBrazierFlameNew", 0, 0, 23);
+				A_SpawnItemEx("burningBrazierEmbers", 0, 0, 23);
 			}
 			Stop
 	}
@@ -9301,8 +9332,8 @@ actor wosD_burningBowlNewFlame 21528 {
 	States {
 		Spawn:
 			DUMM A -1 NODELAY {
-				A_SpawnItemEx("NewFlameHuge", 0, 0, 5);
-				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 5);
+				A_SpawnItemEx("burningBowlFlameNew", 0, 0, 5);
+				A_SpawnItemEx("burningBowlEmbers", 0, 0, 5);
 			}
 			Stop
 	}

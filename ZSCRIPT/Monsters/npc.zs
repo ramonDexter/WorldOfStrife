@@ -937,65 +937,51 @@ class beggarBase : Beggar {
 	}
 }
 
-class beggar_tan : beggarBase
-{
-	Default
-	{
+class beggar_tan : beggarBase {
+	Default {
 		//$Title "Beggar Tan"
 		+FRIENDLY
 	}
 }
 
-class beggar_darkGreen : beggarBase
-{
-	Default
-	{
+class beggar_darkGreen : beggarBase {
+	Default {
 		//$Title "Beggar Dark Green"
 		+FRIENDLY
 		Translation "128:143=48:63";
 		
 	}
 }
-class beggar_bronze : beggarBase
-{
-	Default
-	{
+class beggar_bronze : beggarBase {
+	Default {
 		//$Title "Beggar Bronze"
 		+FRIENDLY
 		Translation "128:143=80:95";		
 	}
 }
-class beggar_blue : beggarBase
-{
-	Default
-	{
+class beggar_blue : beggarBase {
+	Default {
 		//$Title "Beggar Blue"
 		+FRIENDLY
 		Translation "128:143=112:127";
 	}
 }
-class beggar_brown : beggarBase
-{
-	Default
-	{
+class beggar_brown : beggarBase {
+	Default {
 		//$Title "Beggar Brown"
 		+FRIENDLY
 		Translation	"128:143=173:188";	
 	}
 }
-class beggar_darkTan : beggarBase 
-{
-	Default
-	{
+class beggar_darkTan : beggarBase {
+	Default {
 		//$Title "Beggar darkTan"
 		+FRIENDLY
 		Translation "128:143=208:223";
 	}
 }
-class beggar_gray : beggarBase
-{
-	Default
-	{
+class beggar_gray : beggarBase {
+	Default {
 		//$Title "Beggar gray"
 		+FRIENDLY
 		Translation "128:143=16:31";

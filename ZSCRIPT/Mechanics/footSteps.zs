@@ -87,13 +87,13 @@ class Footsteps : Actor
             if (foundIndex != fstep_textures.Size()) {
     
                 //3-1) play the sound
-                S_StartSound(fstep_sounds[foundIndex], CHAN_AUTO, soundLevel);
+                S_Sound(fstep_sounds[foundIndex], CHAN_AUTO, soundLevel);
                 //Console.PrintF("Found tx = %s, play snd = %s",fstep_textures_names_debug[foundIndex], fstep_sounds[foundIndex]); 
             }
             else {
             
                 //3-2) Play default sound if no match was found
-                S_StartSound(fstep_default_sound,  CHAN_AUTO, soundLevel);
+                S_Sound(fstep_default_sound,  CHAN_AUTO, soundLevel);
                 //Console.PrintF("Not found Tx ! , play default snd = %s",fstep_default_sound); 
             }
                           

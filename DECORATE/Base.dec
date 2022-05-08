@@ -217,19 +217,20 @@ ACTOR PlasmaSmoke: ExplosionSmoke1 {
 	}
 }
 Actor MyLeafSpawner : RandomSpawner 18123 { 
-	//$Category "WoS/SFX"
+	//$Category "Decorations/SFX"
 	//$Color 15
 
 	DropItem "LeafSpawner" 
 }
 actor hexenFogSpawner : RandomSpawner 18124 { 
-	//$Category "WoS/SFX"
+	//$Category "Decorations/SFX"
 	//$Color 15
+    //$Title "hexenFogRandomSpawner"
 
 	DropItem "FogSpawner"
 }
 actor hexenFlySpawner : RandomSpawner 18125 { 
-	//$Category "WoS/SFX"
+	//$Category "Decorations/SFX"
 	//$Color 15
 
 	DropItem "LittleFly"

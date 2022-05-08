@@ -5,7 +5,7 @@
 
 Actor FogCloud_Generator 27941 {
 	//$Category "Decorations/SFX"
-	//$Title Fog Spawner
+	//$Title Fog Cloud generator
     +Missile
     +NoBlockmap
     +NoGravity

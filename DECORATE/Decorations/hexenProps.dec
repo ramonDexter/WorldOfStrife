@@ -73,8 +73,8 @@ ACTOR hexFogPatchLarge : hexFogPatchMedium
 
 ACTOR hexFogSpawner 28165
 {
-	//$Category "Decorations/Hexen"
-	//$Title Fog Spawner
+	//$Category "Decorations/SFX"
+	//$Title hexen Fog Spawner
   +NOSECTOR
   +NOBLOCKMAP
   +FLOATBOB

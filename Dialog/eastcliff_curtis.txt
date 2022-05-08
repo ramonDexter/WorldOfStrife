@@ -1,0 +1,224 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 8;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "eastcliff_curtis_opener";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Hello, welcome to the White Cock Inn. What may I serve you? We got good beer from Ravenrock brewery, roasted steaks and grilled chicken, and also some burgers.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Yeah, little snack would be good.";
+            Nextpage = "eastcliff_curtis_food";
+        }
+        Choice {
+            Text = "Actually, I'm a bit thirsty.";
+            Nextpage = "eastcliff_curtis_drinks";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "eastcliff_curtis_questions";
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_food";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Okay, your hunger will be satisified here! So, the steak costs 10, the grilled chicken is for 25 and the bigburger costs 6 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_curtis_opener";
+        }
+        Choice {
+            Text = "\c[gold]Give me the steak";
+            Nextpage = "eastcliff_curtis_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosfbMeat1";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the grilled chicken";
+            Nextpage = "eastcliff_curtis_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosGrilledChicken";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the burger";
+            Nextpage = "eastcliff_curtis_food";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBigburger";
+            Cost {
+                item = "goldCoin";
+                amount = 6;
+            }
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_drinks";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]We got the best beer straight from the Ravenrock brewery. Good refreshing beer and strong dark ale. Also, we got strong spirits Sliwowotz and some wine and if you want, some canned soda and some water. What would you like?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_curtis_opener";
+        }
+        Choice {
+            Text = "\c[gold]Give me the beer";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the ale";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosAleBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the sliwowitz";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSpiritsBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the wine";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVineBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 8;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the canned soda";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSodaCan";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Give me the water";
+            Nextpage = "eastcliff_curtis_drinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosWaterBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_questions";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Okay, what would you like to know? I know a littble about everything here in Eastcliff. Just ask.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_curtis_opener";
+        }
+        Choice {
+            Text = "What's going on around here?";
+            Nextpage = "eastcliff_curtis_goingon";
+        }
+        Choice {
+            Text = "How's business going?";
+            Nextpage = "eastcliff_curtis_howsbusiness";
+        }
+        Choice {
+            Text = "Could you tell me about your village?";
+            Nextpage = "eastcliff_curtis_abouteastcliff";
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_goingon";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Well, mostly nothing. Most of the days the village gets empty in the morning, when the fishermen go to hunt fish and the farmers go to the fields. The only excitement we have here is when the trade caravan arrives, or when the Shipping guild ships bring new goods to the port. Also, we have some fun on every sunday, when nobody works. The locals usually hang around or go travelling around.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_curtis_questions";
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_howsbusiness";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Oh yes, good, very good. The last sunday was connected to the Day of the Mourning on tuesday, so we got 4 free days. The locals like to drink, so ve got bigger sales than ever.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]That's good to hear.";
+            Nextpage = "eastcliff_curtis_questions";
+            YesMessage = "\c[white]Thanks for asking.";
+        }
+    }
+    Page {
+        pageName = "eastcliff_curtis_abouteastcliff";
+        Name = "\c[yellow]Curtis, Innkeeper";
+        Dialog = "\c[white]Our little village lives from the rich of the sea. Most of our income comes from the fishhunting. The lesser part of our income of from the famers work. The farms are located up the cliff, where the soil is rich and gives good harvest. We also have some fortune from our location on the main road from Millport to the south. Trading caravans venture through our village, and exchanges lots of goods here.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_curtis_questions";
+        }
+    }
+}

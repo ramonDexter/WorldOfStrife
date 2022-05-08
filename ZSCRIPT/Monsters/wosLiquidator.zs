@@ -28,20 +28,20 @@ class wosLiquidator : actor {
             LIQU B 10 A_Look();
             Loop;
         See:
-            TNT1 A 0 A_PlaySound("Liquidator/LegLift",0);
+            TNT1 A 0 A_StartSound("Liquidator/LegLift",0);
             LIQU AAA 4 A_Chase();
-            TNT1 A 0 A_PlaySound("Liquidator/LegStomp",0);
+            TNT1 A 0 A_StartSound("Liquidator/LegStomp",0);
             LIQU BBB 4 A_Chase();
-            TNT1 A 0 A_PlaySound("Liquidator/LegLift",0);
+            TNT1 A 0 A_StartSound("Liquidator/LegLift",0);
             LIQU CCC 4 A_Chase();
-            TNT1 A 0 A_PlaySound("Liquidator/LegStomp",0);
+            TNT1 A 0 A_StartSound("Liquidator/LegStomp",0);
             LIQU BBB 4 A_Chase();
             Loop;
         Missile:
             TNT1 A 0 A_Jump(100,"BFGAttack");
             LIQU D 4 A_FaceTarget();
             LIQU D 4 Bright {
-                A_PlaySound("Liquidator/Fire",2);
+                A_StartSound("Liquidator/Fire",2);
                 A_SpawnProjectile("LiquidatorPlasma",92,32,0);
                 A_SpawnProjectile("LiquidatorPlasma",88,36,8);
                 A_SpawnProjectile("LiquidatorPlasma",88,28,-8);
@@ -50,7 +50,7 @@ class wosLiquidator : actor {
             LIQU D 2 A_SentinelRefire();
             Goto Missile+1;
         BFGAttack:
-            LIQU D 4 A_PlaySound("Liquidator/BFG",2);
+            LIQU D 4 A_StartSound("Liquidator/BFG",2);
             LIQU DDDDDDDDD 4 A_FaceTarget();
             LIQU D 4 Bright A_SpawnProjectile("LiquidatorBFG",88,32,0);
             LIQU D 8;

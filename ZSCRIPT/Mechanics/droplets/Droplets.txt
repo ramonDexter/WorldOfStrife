@@ -99,7 +99,7 @@ class BloodDroplet : Droplets
 				linedat.HitLine.v2.p.x - linedat.HitLine.v1.p.x,
 				linedat.HitLine.v2.p.y - linedat.HitLine.v1.p.y)
 				- 90.0;
-			invoker.A_PlaySound("blood/drip",volume: invoker.final_scale * invoker.last_vel * 0.0625);
+			invoker.A_StartSound("blood/drip",volume: invoker.final_scale * invoker.last_vel * 0.0625);
 			return resolveState("NULL");
 		}
 		invoker.vel.xy *= 0.94;
@@ -167,7 +167,7 @@ class BloodDroplet : Droplets
 		TNT1 A 0 { bWINDTHRUST = false; bMISSILE = false; }
 		TNT1 A 0 A_JumpIf(ceilingz - pos.z < 8.0, "Ceil");
 		TNT1 A 0 {if (blood_splash) A_SplitDroplet('BloodDroplet', scale.x);}
-		TNT1 A 0 A_PlaySound("blood/drip",volume: final_scale * last_vel * 0.0625);
+		TNT1 A 0 A_StartSound("blood/drip",volume: final_scale * last_vel * 0.0625);
 		TNT1 A 0 A_JumpIf(pos.z > floorz + 8.0, "Null");
 		TNT1 A 0 A_JumpIf(LiquidCheck(),"Fog");
 		TNT1 A 0 A_SetAngle(frandom(0.0,360.0));
@@ -205,7 +205,7 @@ class DecoDroplet : BloodDroplet
 	Death:
 		TNT1 A 0 { bWINDTHRUST = false; bMISSILE = false; }
 		TNT1 A 0 {if (blood_splash) A_SplitDroplet('DecoDroplet', scale.x);}
-		TNT1 A 0 A_PlaySound("blood/drip",volume: final_scale * last_vel * 0.0625);
+		TNT1 A 0 A_StartSound("blood/drip",volume: final_scale * last_vel * 0.0625);
 		TNT1 A 0 A_JumpIf(pos.z > floorz + 8.0, "Wall");
 		TNT1 A 0 A_JumpIf(LiquidCheck(),"Fog");
 		TNT1 A 0 A_SetAngle(frandom(0.0,360.0));

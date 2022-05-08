@@ -78,7 +78,7 @@ class nuclearMutant : actor {
                 }
             }
             NMUT F 4 {                
-                A_PlaySound("nuclearMutant/raiseGuns");
+                A_StartSound("nuclearMutant/raiseGuns");
                 A_FaceTarget();
             }
             NMUT G 3;

@@ -281,7 +281,7 @@ class Kombopack_apply : medicalApply {
 			AMHS F 4;
 			AMHS G 3;
 			AMHS H 2;
-			AMHS I 2 A_Playsound("sounds/med");
+			AMHS I 2 A_StartSound("sounds/med");
             AMHS J 1 W_applyMed("Kombopack_heal");
 		Deselect:
 			AMHS K 2 A_Lower(9);
@@ -387,7 +387,7 @@ class InstaLek_apply : medicalApply {
 			AMHS F 4;
 			AMHS G 3;
 			AMHS H 2;
-			AMHS I 2 A_Playsound("sounds/med");
+			AMHS I 2 A_StartSound("sounds/med");
             AMHS J 1 W_applyMed("InstaLek_heal");
 		Deselect:
 			AMHS K 2 A_Lower(9);

@@ -48,10 +48,10 @@ class wosSquirrel : CritterBase {
 			SQUR B 1 A_Stop();
 			goto See;
 		Pain:
-			TNT1 A 0 A_PlaySound("SquirrelHit/Pain",0,1);
+			TNT1 A 0 A_StartSound("SquirrelHit/Pain",0,1);
 			goto See;
 		Death:
-			TNT1 A 0 A_PlaySound("SquirrelDead/Dead",0,1);
+			TNT1 A 0 A_StartSound("SquirrelDead/Dead",0,1);
 			SQUD AAAABBBBCCCC 1;
 			Stop;
   	}
@@ -146,7 +146,7 @@ class wosRat : CritterBase {
 		PIGA A 0 A_Chase;
 		Loop;
 	Pain:
-		TNT1 A 0 A_PlaySound("PigHurt/Hurt",0,1);
+		TNT1 A 0 A_StartSound("PigHurt/Hurt",0,1);
 		PIGA A 10;
 		Goto RunAway;
 	RunAway:
@@ -160,7 +160,7 @@ class wosRat : CritterBase {
 		TNT1 A 0 A_ChangeFlag("Frightened", False);
 		Goto See;
 	Death:
-		TNT1 A 0 A_PlaySound("PigDeath/Death",0,1);
+		TNT1 A 0 A_StartSound("PigDeath/Death",0,1);
 		PIGD AAAABBBBCCCCDDDDEEEEFFFFGGGGH 1;
 		PIGD H -1;
 		Stop;
@@ -205,12 +205,12 @@ class wosRat : CritterBase {
 		TNT1 A 0 A_Jump(256,"EatGrass","See","See","See","See","See","See","See","See");
 		Loop;
 	EatGrass:
-		TNT1 A 0 A_PlaySound("SheepNom/Nom",0,1);
+		TNT1 A 0 A_StartSound("SheepNom/Nom",0,1);
 		NSHG A 50;
 		NSHG B 30;
 		Goto See;
 	Pain:
-		TNT1 A 0 A_PlaySound("sight",0,1);
+		TNT1 A 0 A_StartSound("sight",0,1);
 		NSHP A 10;
 		Goto RunAway;
 	RunAway:
@@ -224,7 +224,7 @@ class wosRat : CritterBase {
 		TNT1 A 0 A_ChangeFlag("Frightened", False);
 		Goto See;
 	Death:
-		TNT1 A 0 A_PlaySound("sight",0,1);
+		TNT1 A 0 A_StartSound("sight",0,1);
 		NSHD AAAABBBBCCCCDDDDEEEEFFFF 1;
 		NSHD F -1;
 		Stop;
@@ -257,8 +257,11 @@ class wosChickenCritter : CritterBase {
 	}
 	States {
 		Spawn:
-			TNT1 A 0 A_ChangeFlag("Float", False);
-			TNT1 A 0 A_ChangeFlag("NOGRAVITY", False);
+			TNT1 A 0 { 
+				bFloat = false;
+				bNOGRAVITY = false; 
+			}
+			//TNT1 A 0 A_ChangeFlag("NOGRAVITY", False);
 			CHIC A 10;
 			Goto See;
 		See:
@@ -266,15 +269,20 @@ class wosChickenCritter : CritterBase {
 			CHIC A 0 A_Chase();
 			Loop;
 		Pain:
-			TNT1 A 0 A_PlaySound("ChickenHurt/Hurt",0,1);
-			TNT1 A 0 A_ChangeFlag("Frightened", True);
+			TNT1 A 0 A_StartSound("ChickenHurt/Hurt",0,1);
+			//TNT1 A 0 A_ChangeFlag("Frightened", True);
+			TNT1 A 0 { bFrightened = true; }
 			CHIC A 5;
 			TNT1 A 0 ThrustThingZ (0, random(16,28), 0, 0);
 			TNT1 A 0 ThrustThing(angle*256/360, random(1,5), 0, 0);
 			Goto RunAway;
 		RunAway:
-			TNT1 A 0 A_ChangeFlag("LOWGRAVITY", TRUE);
-			TNT1 A 0 A_ChangeFlag("Float", True);
+			//TNT1 A 0 A_ChangeFlag("LOWGRAVITY", TRUE);
+			//TNT1 A 0 A_ChangeFlag("Float", True);
+			TNT1 A 0 { 
+				bNOGRAVITY = true;
+				bFloat = true;
+			}
 			TNT1 A 0 A_SpawnItemEx("Feathers",random(-5,5),random(-5,5),random(-5,5),random(-1,1),random(-1,1),random(0,1),0, SXF_NOCHECKPOSITION);
 			CHIC AAAA 1 A_Chase();
 			TNT1 A 0 A_SpawnItemEx("Feathers",random(-5,5),random(-5,5),random(-5,5),random(-1,1),random(-1,1),random(0,1),0, SXF_NOCHECKPOSITION);
@@ -323,16 +331,20 @@ class wosChickenCritter : CritterBase {
 			CHIC CCCC 1 A_Chase();
 			TNT1 A 0 A_SpawnItemEx("Feathers",random(-5,5),random(-5,5),random(-5,5),random(-1,1),random(-1,1),random(0,1),0, SXF_NOCHECKPOSITION);
 			CHIC DDDD 1 A_Chase();
-			TNT1 A 0 A_ChangeFlag("Float", False);
-			TNT1 A 0 A_ChangeFlag("Frightened", False);
+			//TNT1 A 0 A_ChangeFlag("Float", False);
+			//TNT1 A 0 A_ChangeFlag("Frightened", False);
+			TNT1 A 0 { 
+				bFloat = false;
+				bNOGRAVITY = false; 
+			}
 			Goto See;
 		Death:
-			TNT1 A 0 A_PlaySound("ChickenDeath/Death",0,1);
+			TNT1 A 0 A_StartSound("ChickenDeath/Death",0,1);
 			CHDE ABCDEFG 4;
 			CHDE H -1;
 			Stop;
 		Burn:
-			TNT1 A 0 A_PlaySound("ChickenDeath/Death",0,1);
+			TNT1 A 0 A_StartSound("ChickenDeath/Death",0,1);
 			CHDE ABC 4;
 			CHDE DEFG 4;
 			CHDE H -1;
@@ -401,7 +413,7 @@ class wosCrab : CritterBase {
 			Loop;
 		Melee:
 			CRAB A 3 A_FaceTarget();
-			CRAB D 3 A_MeleeAttack();
+			CRAB D 3 A_CustomMeleeAttack();
 			CRAB A 3;
 			Goto See;
 		Pain:
@@ -443,7 +455,7 @@ class wosDragonFly : CritterBase {
 			Goto See;
 		See:
 			DFLY ABAB 2 A_Wander();
-			DFLY A 0 A_ChangeVelocity(velx, vely, random(-1,1), CVF_REPLACE);
+			DFLY A 0 A_ChangeVelocity(vel.x, vel.y, random(-1,1), CVF_REPLACE);
 			Loop;
 		Death:
 			TNT1 A 0;
@@ -478,7 +490,7 @@ class wosFireFly : CritterBase {
 			Goto See;
 		See:
 			FFLY AABB 2 Bright light("fireflyLight") A_Wander();
-			FFLY A 0 Bright light("fireflyLight") A_ChangeVelocity(velx, vely, random(-1,1), CVF_REPLACE);
+			FFLY A 0 Bright light("fireflyLight") A_ChangeVelocity(vel.x, vel.y, random(-1,1), CVF_REPLACE);
 			Loop;
 		Death:
 			TNT1 A 0;

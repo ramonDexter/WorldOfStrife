@@ -77,7 +77,7 @@ class binderPlayer : StrifePlayer {
 		Player.StartItem "magazine_blasterStaff", 48;
 		Player.StartItem "magazine_missileLauncher", 8;
 		Player.StartItem "magazine_pistol", 12;
-		Player.StartItem "shldrGunMag", 32;
+		Player.StartItem "magazine_shoulderGun", 32;
 		Player.StartItem "notePlayerPersonal", 1;
 		Player.StartItem "journalitem", 1;
 		Player.StartItem "PDAReader", 1;
@@ -108,7 +108,7 @@ class binderPlayer : StrifePlayer {
         If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
 		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
         If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000) 
-		// armor ///////////////////////////////////////////////////////////////
+		// armor&mass //////////////////////////////////////////////////////////
 		If (armoramount < 1) {
 			currentarmor=0; 
             armorpower=0;
@@ -183,6 +183,8 @@ class binderPlayer : StrifePlayer {
 	}
 	////////////////////////////////////////////////////////////////////////////
 
+	// common handlers /////////////////////////////////////////////////////////
+	// spawn player body ///////////////////////////////////////////////////////
 	void HandlePlayerBody() {
 		If(backplaye==null) {
 			bool spawn1; 
@@ -191,18 +193,20 @@ class binderPlayer : StrifePlayer {
 			backplaye=spawn2;
 		}
 	}
+	// bleeding controller /////////////////////////////////////////////////////
 	void HandleBleed() {
 		If ( bleedlevel > 0 ) {
             If( bleedtimer >= ( 70 / bleedlevel )) {
-				//A_Print("bleedDamage!");
                 BleedDamage();
+				//A_Print("bleedDamage!");
 			}
 			Else {
-				//A_Print("bleedTimer++");
 				bleedtimer++;
+				//A_Print("bleedTimer++");
 			}
 		}
 	}
+	// weight based on player's stamina /////////////////////////////////////////
 	void HandleWeight() {
 		if ( maxstamin == 440 ) { weightmax = 2750; }
 		if ( maxstamin == 520 ) { weightmax = 3250; }
@@ -210,6 +214,8 @@ class binderPlayer : StrifePlayer {
 		if ( maxstamin == 700 ) { weightmax = 4375; }
 		if ( maxstamin == 800 ) { weightmax = 5000; }
 	}
+	////////////////////////////////////////////////////////////////////////////
+
 	// jarewill's adopted code /////////////////////////////////////////////////
 	//  code by Jarewill
     void BleedDamage() {
@@ -231,7 +237,10 @@ class binderPlayer : StrifePlayer {
 		angle+=frandom(-shake,shake);
 		pitch+=frandom(-shake,shake);
 	}
-	
+	////////////////////////////////////////////////////////////////////////////
+
+	// stamina controller //////////////////////////////////////////////////////
+	//  code by Jarewill
 	void HandleStamina() {
 		// modified working stamina raise according to player's health modified by UpgradeStamina //
         maxstamin = 400;
@@ -275,43 +284,10 @@ class binderPlayer : StrifePlayer {
 			}
 		}
     }
-	/*void FallDamage() {
-		double cvel = vel.z;
-		int damage;
-		If(pvel<cvel) {
-			If(pvel<=-32){damage=(int)(pvel)*2;}
-			Else If(pvel<=-23){damage=(int)(pvel);}
-			Else If(pvel<=-16&&bracing==0){damage=(int)(pvel)/4;}
-			If(bracing==1){damage/=2;}
-			DamageMobj(null,null,-damage,"Falling");
-		}
-	}*/
-	/*void HealthSlow() {
-		double hpeed = 1.0; //health*0.01;
-		double stmed = 0.01 * (175 - stamin);
-		If(stmed<0){stmed=0;}
-		hpeed -= stmed;
-		If(hpeed<0.1){hpeed=0.1;}
-		If(hpeed>1.0){hpeed=1.0;}        
-		//If(currentarmor!=4)
-		//{
-		//	If(SpeedUpgrade==2){hpeed*=1.5;}
-		//	Else If(SpeedUpgrade==1){hpeed*=1.2;}
-		//}
-		If(sprinting==1){
-			hpeed*=3.0;
-            If(GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN){hpeed/=2;}			
-		} else if ( sprinting == 0 ) {
-			hpeed = 0.55;
-		}
-		If(currentarmor==2){ hpeed*=0.8; }
-		If(overweight==1){ hpeed*=0.5; } //Halve speed when true
-        If(overweight2==1){ hpeed*=0.01; } //Set it to veery slow when true
-		//If(surgery==1||repairing==1){hpeed=0;}
-		ViewBob = 1.1*hpeed;
-		speed = hpeed;
-	}*/
+	////////////////////////////////////////////////////////////////////////////
+
 	// damageMObj() ////////////////////////////////////////////////////////////
+	//  code by Jarewill
 	Override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle) {
 		int newdamage;
 		
@@ -342,9 +318,9 @@ class binderPlayer : StrifePlayer {
 		Return Super.DamageMobj(inflictor,source,damage,mod);
 	}
 	////////////////////////////////////////////////////////////////////////////
-
 	
-	//double speedbase; property BaseSpeed : speedbase; //moved up
+	// new movement function ///////////////////////////////////////////////////
+	//  code by Jarewill & ramon.dexter
 	void HandleSpeed() {
         double hpeed = speedbase;
 		bool dont;
@@ -371,7 +347,10 @@ class binderPlayer : StrifePlayer {
 		ViewBob = 0.6*hpeed; //lower the viewBob
 		speed = hpeed;
     }
+	////////////////////////////////////////////////////////////////////////////
 
+	// ledge climb function ////////////////////////////////////////////////////
+	//  code by Jarewill
 	void LedgeClimb() {
 		If((player.readyweapon is "wosPunchDagger")&&player.cmd.buttons&BT_JUMP) {
 			FLineTraceData h, i, j;
@@ -391,7 +370,10 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 	}
-	
+	////////////////////////////////////////////////////////////////////////////
+
+	// new jump function ///////////////////////////////////////////////////////
+	//  code by Jarewill
 	Override void CheckJump() {
 		If (player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap") {
 			Super.CheckJump();
@@ -422,100 +404,10 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 	}
-	
-	/*void CheckSprint()
-	{
-		If (player.cmd.buttons&BT_SPEED&&!slowed) {
-			running = 1;
-			//sprinting = 1;
-		}
-		Else {
-			running = 0;
-			//sprinting = 0;
-		}
-	}*/
 	////////////////////////////////////////////////////////////////////////////
 	
-	//  climbing code by Dodopod  //////////////////////////////////////////////
-	/*const climbReach = 8;
-    const thrustSpeed = 4;
-    bool climbing;
-    int maxLedgeHeight;
-    int climbSpeed;
-    property MaxLedgeHeight: maxLedgeHeight;
-    property ClimbSpeed: climbSpeed;	
-
-    override void CheckJump() {
-        let player = self.player;
-
-        double ledgeHeight;
-        {
-            vector3 oldPos = pos;
-
-            SetXyz(pos + (0, 0, maxLedgeHeight));   // Account for thin 3D floors
-            ledgeHeight = GetZAt(radius + climbReach, 0) - oldPos.z;
-            SetXyz(oldPos);
-        }
-
-        bool jump = player.cmd.buttons & BT_JUMP;
-        double clearance = GetZAt(radius + climbReach, 0, 0, GZF_CEILING) - GetZAt(radius + climbReach, 0);
-
-        // Start/stop climbing
-        if (!climbing) {
-			// allow climbing only with dagger in hand /////////////////////////
-            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight && player.readyweapon is "wosPunchDagger") {
-                climbing = true;
-                A_StartSound("*Climb", CHAN_BODY);
-                viewBob = 0.0;
-            }
-        }
-        else {
-            if (!jump || ledgeHeight > maxLedgeHeight) { // Drop down/get knocked down from ledge
-                climbing = false;
-            }
-            else if (ledgeHeight <= maxStepHeight && clearance >= 0.5 * height) { // Reach top of ledge
-                climbing = false;
-
-                // Crouch, so player can fit into small spaces
-                player.crouchFactor = 0.5;
-                SetOrigin(pos + (0, 0, 0.5 * fullHeight), false);   // Keep view from jerking
-                player.viewHeight *= 0.5;
-
-                VelFromAngle(thrustSpeed, angle);  // Thrust player onto ledge
-            }
-
-            if (!climbing) { // Exit climbing state
-                viewBob = 1.0;
-                player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetUpState());
-                player.jumpTics = -1;
-            }
-        }
-
-        if (climbing) {
-            // Weapon will reset to Ready state, so we need to set it to Down state every tic
-            player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
-            let psp = player.GetPsprite(PSP_WEAPON);
-			
-            if (psp.y == WEAPONTOP) { // Keep weapon down
-                psp.y = WEAPONBOTTOM;
-            }
-            else { // Lower weapon twice as fast
-                psp.y += 6;
-            }
-
-            if (ledgeHeight <= maxStepHeight) { // Hold onto ledge at top, if player can't get on it
-                vel = (0, 0, 0);
-            }
-            else { // Climb ledge
-                vel = (0, 0, climbSpeed);
-            }
-        }
-		
-        Super.CheckJump();
-    }*/
-	////////////////////////////////////////////////////////////////////////////
-
 	// CheatGive() new commands ////////////////////////////////////////////////
+	//  code by ramon.dexter
 	override void CheatGive( String name, int amount ) {
 		if ( name ~== "accuracy" ) {			
 			if ( !amount ) { 
@@ -754,7 +646,7 @@ class binderPlayer : StrifePlayer {
 		}
 		else if ( name ~== "shouldergun" ) {
 			A_GiveInventory("shoulderGun", 1);
-			A_GiveInventory("shldrGunMag", 32);
+			A_GiveInventory("magazine_shoulderGun", 32);
 			A_GiveInventory("shoulderGunCharger", 1);
 		}
 		else if ( name ~== "gold" || name ~=="money" ) {
@@ -786,9 +678,8 @@ class binderPlayer : StrifePlayer {
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
-
 	
-	
+	// States definition ///////////////////////////////////////////////////////
 	States {
 		Spawn:
 			BNDP A -1;
@@ -837,6 +728,136 @@ class binderPlayer : StrifePlayer {
 			BNDP Y -1;
 			Stop;
 	}
+	////////////////////////////////////////////////////////////////////////////
+	
+	////////////////////////////////////////////////////////////////////////////
+	/*void FallDamage() {
+		double cvel = vel.z;
+		int damage;
+		If(pvel<cvel) {
+			If(pvel<=-32){damage=(int)(pvel)*2;}
+			Else If(pvel<=-23){damage=(int)(pvel);}
+			Else If(pvel<=-16&&bracing==0){damage=(int)(pvel)/4;}
+			If(bracing==1){damage/=2;}
+			DamageMobj(null,null,-damage,"Falling");
+		}
+	}*/
+	/*void HealthSlow() {
+		double hpeed = 1.0; //health*0.01;
+		double stmed = 0.01 * (175 - stamin);
+		If(stmed<0){stmed=0;}
+		hpeed -= stmed;
+		If(hpeed<0.1){hpeed=0.1;}
+		If(hpeed>1.0){hpeed=1.0;}        
+		//If(currentarmor!=4)
+		//{
+		//	If(SpeedUpgrade==2){hpeed*=1.5;}
+		//	Else If(SpeedUpgrade==1){hpeed*=1.2;}
+		//}
+		If(sprinting==1){
+			hpeed*=3.0;
+            If(GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN){hpeed/=2;}			
+		} else if ( sprinting == 0 ) {
+			hpeed = 0.55;
+		}
+		If(currentarmor==2){ hpeed*=0.8; }
+		If(overweight==1){ hpeed*=0.5; } //Halve speed when true
+        If(overweight2==1){ hpeed*=0.01; } //Set it to veery slow when true
+		//If(surgery==1||repairing==1){hpeed=0;}
+		ViewBob = 1.1*hpeed;
+		speed = hpeed;
+	}*/
+	/*void CheckSprint()
+	{
+		If (player.cmd.buttons&BT_SPEED&&!slowed) {
+			running = 1;
+			//sprinting = 1;
+		}
+		Else {
+			running = 0;
+			//sprinting = 0;
+		}
+	}*/
+	////////////////////////////////////////////////////////////////////////////
+	
+	//  climbing code by Dodopod  //////////////////////////////////////////////
+	/*const climbReach = 8;
+    const thrustSpeed = 4;
+    bool climbing;
+    int maxLedgeHeight;
+    int climbSpeed;
+    property MaxLedgeHeight: maxLedgeHeight;
+    property ClimbSpeed: climbSpeed;	
+
+    override void CheckJump() {
+        let player = self.player;
+
+        double ledgeHeight;
+        {
+            vector3 oldPos = pos;
+
+            SetXyz(pos + (0, 0, maxLedgeHeight));   // Account for thin 3D floors
+            ledgeHeight = GetZAt(radius + climbReach, 0) - oldPos.z;
+            SetXyz(oldPos);
+        }
+
+        bool jump = player.cmd.buttons & BT_JUMP;
+        double clearance = GetZAt(radius + climbReach, 0, 0, GZF_CEILING) - GetZAt(radius + climbReach, 0);
+
+        // Start/stop climbing
+        if (!climbing) {
+			// allow climbing only with dagger in hand /////////////////////////
+            if (jump && ledgeHeight > maxStepHeight && ledgeHeight <= maxLedgeHeight && player.readyweapon is "wosPunchDagger") {
+                climbing = true;
+                A_StartSound("*Climb", CHAN_BODY);
+                viewBob = 0.0;
+            }
+        }
+        else {
+            if (!jump || ledgeHeight > maxLedgeHeight) { // Drop down/get knocked down from ledge
+                climbing = false;
+            }
+            else if (ledgeHeight <= maxStepHeight && clearance >= 0.5 * height) { // Reach top of ledge
+                climbing = false;
+
+                // Crouch, so player can fit into small spaces
+                player.crouchFactor = 0.5;
+                SetOrigin(pos + (0, 0, 0.5 * fullHeight), false);   // Keep view from jerking
+                player.viewHeight *= 0.5;
+
+                VelFromAngle(thrustSpeed, angle);  // Thrust player onto ledge
+            }
+
+            if (!climbing) { // Exit climbing state
+                viewBob = 1.0;
+                player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetUpState());
+                player.jumpTics = -1;
+            }
+        }
+
+        if (climbing) {
+            // Weapon will reset to Ready state, so we need to set it to Down state every tic
+            player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+            let psp = player.GetPsprite(PSP_WEAPON);
+			
+            if (psp.y == WEAPONTOP) { // Keep weapon down
+                psp.y = WEAPONBOTTOM;
+            }
+            else { // Lower weapon twice as fast
+                psp.y += 6;
+            }
+
+            if (ledgeHeight <= maxStepHeight) { // Hold onto ledge at top, if player can't get on it
+                vel = (0, 0, 0);
+            }
+            else { // Climb ledge
+                vel = (0, 0, climbSpeed);
+            }
+        }
+		
+        Super.CheckJump();
+    }*/
+	////////////////////////////////////////////////////////////////////////////
 }
 class wos_sprintWeap : wosWeapon {
     Default {

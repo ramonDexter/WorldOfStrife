@@ -36,7 +36,7 @@ class CeilingDroplet : DecoDroplet
 	Death:
 		TNT1 A 0 { bWINDTHRUST = false; bMISSILE = false; }
 		TNT1 A 0 {if (blood_splash) A_SplitDroplet('DecoDroplet', scale.x * 2.666664);}
-		TNT1 A 0 A_PlaySound("blood/drip",volume: final_scale * last_vel * 0.0625);
+		TNT1 A 0 A_StartSound("blood/drip",volume: final_scale * last_vel * 0.0625);
 		TNT1 A 0 A_JumpIf(pos.z > floorz + 8.0, "Wall");
 		TNT1 A 0 A_JumpIf(LiquidCheck(),"Fog");
 		TNT1 A 0 A_SetAngle(frandom(0.0,360.0));

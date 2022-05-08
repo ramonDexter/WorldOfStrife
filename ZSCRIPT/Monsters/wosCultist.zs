@@ -31,9 +31,9 @@ class wosCultist : actor {
             Loop;
         Missile:
             CULT EE 5 A_FaceTarget();
-            CULT F 0 Bright A_CustomMissile("ThrallShot1",42,-6,0,1,0);
-            CULT F 0 Bright A_CustomMissile("ThrallShot1",42,6,0,1,0);
-            CULT F 8 Bright A_PlaySound("monster/culatk");
+            CULT F 0 Bright A_SpawnProjectile("ThrallShot1",42,-6,0,1,0);
+            CULT F 0 Bright A_SpawnProjectile("ThrallShot1",42,6,0,1,0);
+            CULT F 8 Bright A_StartSound("monster/culatk");
             Goto See;
         Pain: 
             CULT G 2;

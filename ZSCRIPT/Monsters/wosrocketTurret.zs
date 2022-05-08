@@ -58,7 +58,7 @@ class RTurretProjectile : actor {
 
     States {
         Spawn:
-            TMIS A 2 A_PlaySound("TRocket/Flight",5,0.4,true);
+            TMIS A 2 A_StartSound("TRocket/Flight",5,0.4,true);
             TMIS A 2 A_SpawnItemEx("RocketTrail",0,0,0,0,0,0,180);
             Loop;
         Death:

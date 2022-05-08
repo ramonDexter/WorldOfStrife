@@ -175,7 +175,7 @@ class wosEventHandler : EventHandler {
         if ( e.Name == "give_binderPackRegular" ) {
             pawn.A_GiveInventory("binder_helmet", 1);
 			pawn.A_GiveInventory("shoulderGun", 1);
-			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("magazine_shoulderGun", 32);
 			pawn.A_GiveInventory("StaffBlaster", 1);
 			pawn.A_GiveInventory("laserpistol", 1);
 			//armor
@@ -205,7 +205,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("binder_helmet", 1);
 			// weapons
 			pawn.A_GiveInventory("shoulderGun", 1);
-			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("magazine_shoulderGun", 32);
 			pawn.A_GiveInventory("StaffBlaster", 1);
 			// armor
 			pawn.A_GiveInventory("wosKineticArmor", 1);
@@ -242,7 +242,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosMauler", 1);
 		} else if ( e.Name == "give_shouldergun" ) {
 			pawn.A_GiveInventory("shoulderGun", 1);
-			pawn.A_GiveInventory("shldrGunMag", 32);
+			pawn.A_GiveInventory("magazine_shoulderGun", 32);
 			pawn.A_GiveInventory("shoulderGunCharger", 1);
 		} else if ( e.Name == "give_10Accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);

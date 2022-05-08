@@ -82,7 +82,7 @@ class wosWeapon : StrifeWeapon {
 			double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
 			A_FireProjectile (projectileType, angl, false, 0, 0, FPF_NOAUTOAIM);
 			//angle = savedangle;
-			A_PlaySound ("weapons/xbowshoot", CHAN_WEAPON);
+			A_StartSound ("weapons/xbowshoot", CHAN_WEAPON);
 		}
 	}
 	////////////////////////////////////////////////////////////////////////////
@@ -369,7 +369,7 @@ class wosWeapon : StrifeWeapon {
 				return;
 
 			if (grenade.SeeSound != 0) {
-				grenade.A_PlaySound (grenade.SeeSound, CHAN_VOICE);
+				grenade.A_StartSound(grenade.SeeSound, CHAN_VOICE);
 			}
 
 			grenade.Vel.Z = (-clamp(tan(Pitch), -5, 5)) * grenade.Speed + 8;

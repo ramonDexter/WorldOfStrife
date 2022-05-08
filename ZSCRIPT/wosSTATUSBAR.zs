@@ -354,8 +354,8 @@ class wosStatusBar : BaseStatusBar {
             inventory shldGun;
             inventory shldGunAmmo;
             shldGun = CPlayer.mo.FindInventory("shoulderGun");
-            shldGunAmmo = CPlayer.mo.FindInventory("shldrGunMag");
-            int shldGunAmmoCount = CPlayer.mo.CountInv("shldrGunMag");
+            shldGunAmmo = CPlayer.mo.FindInventory("magazine_shoulderGun");
+            int shldGunAmmoCount = CPlayer.mo.CountInv("magazine_shoulderGun");
 
             if ( shldGun != null ) {
                 drawImage ("HUDshgf", (-54, 0), DI_ITEM_OFFSETS);

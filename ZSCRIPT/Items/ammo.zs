@@ -537,7 +537,7 @@ class ammoSatchel_item : wosPickup {
                 A_GiveInventory("ClipOfBullets", 50);
                 A_GiveInventory("EnergyPod", 40);
                 //A_GiveInventory("MiniMissiles", 5);
-                A_GiveInventory("shldrgunmag", 32);
+                A_GiveInventory("magazine_shoulderGun", 32);
                 A_GiveInventory("HEGrenadeRounds", 3);
                 A_GiveInventory("PhosphorusGrenadeRounds", 3);
                 A_GiveInventory("wosGrenadeE", 5);

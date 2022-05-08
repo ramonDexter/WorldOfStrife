@@ -245,20 +245,20 @@ class YoungHellroseBramble : actor {
             ROSX R 0 A_SpawnItemEx("Drt2", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
             ROSX R 0 A_SpawnItemEx("Drt1", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
             ROSX R 0 A_SpawnItemEx("Drt3", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
-            ROSX P 4 A_MeleeAttack();
+            ROSX P 4 A_CustomMeleeAttack();
             ROSX ONML 4;
             ROSX ABC 4;
             ROSX D 0 A_FaceTarget();
             ROSX D 0 /*A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee")*/;
-            ROSX D 3 A_MeleeAttack();
+            ROSX D 3 A_CustomMeleeAttack();
             ROSX A 0 A_Jump(64,6);
             ROSX EF 5;
             ROSX G 0 A_FaceTarget();
-            ROSX G 3 A_MeleeAttack();
+            ROSX G 3 A_CustomMeleeAttack();
             ROSX G 0 A_CPosRefire();
             Goto Melee +14;
             ROSX JKL 4;
-            ROSX H 3 A_MeleeAttack();
+            ROSX H 3 A_CustomMeleeAttack();
             ROSX H 0 A_CPosRefire();
             Goto Melee +14;
         FakeMelee:
@@ -524,20 +524,20 @@ class HellroseBramble : actor {
             ROSX R 0 A_SpawnItemEx("Drt2", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
             ROSX R 0 A_SpawnItemEx("Drt1", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
             ROSX R 0 A_SpawnItemEx("Drt3", 0, 0, 0, 5, 0, 3, Random(0, 360), 128);
-            ROSX P 4 A_MeleeAttack();
+            ROSX P 4 A_CustomMeleeAttack();
             ROSX ONML 4;
             ROSX ABC 4;
             ROSX D 0 A_FaceTarget();
             ROSX D 0 /*A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee")*/;
-            ROSX D 3 A_MeleeAttack();
+            ROSX D 3 A_CustomMeleeAttack();
             ROSX A 0 A_Jump(64,6);
             ROSX EF 5;
             ROSX G 0 A_FaceTarget();
-            ROSX G 3 A_MeleeAttack();
+            ROSX G 3 A_CustomMeleeAttack();
             ROSX G 0 A_CPosRefire();
             Goto Melee +14;
             ROSX JKL 4;
-            ROSX H 3 A_MeleeAttack();
+            ROSX H 3 A_CustomMeleeAttack();
             ROSX H 0 A_CPosRefire();
             Goto Melee +14;
         FakeMelee:
@@ -758,7 +758,7 @@ class HellRose : actor {
 		ROSF B 3 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
 		ROSF BB 0 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
                 	ROSF B 6
-                	ROSF B 0 BRIGHT A_CustomMissile ("SnakePoisonBall",40,0,0)
+                	ROSF B 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",40,0,0)
                 	ROSF B 4
 		Goto See
 	Spore2:
@@ -775,7 +775,7 @@ class HellRose : actor {
 		ROSF B 3 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
 		ROSF BB 0 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
                 	ROSF B 6
-                	ROSF B 0 BRIGHT A_CustomMissile ("SnakePoisonBall",40,0,0)
+                	ROSF B 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",40,0,0)
                 	ROSF B 4
 		Goto See
 	Spore3:
@@ -794,12 +794,12 @@ class HellRose : actor {
 		ROSF B 3 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
 		ROSF BB 0 A_SpawnItemEx("Spore", 0, 0, 56, 2, 0, 2, Random(0, 360), 128);
                 	ROSF B 6
-                	ROSF B 0 BRIGHT A_CustomMissile ("SnakePoisonBall",40,0,0)
+                	ROSF B 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",40,0,0)
                 	ROSF B 4
 		Goto See
 	SnakePoison:
 		ROSF BCD 3 A_FaceTarget
-		ROSF E 3 A_CustomMissile ("SnakePoisonBall",40,0,0)
+		ROSF E 3 A_SpawnProjectile ("SnakePoisonBall",40,0,0)
 		ROSF B 4
 		Goto See
 	Death:
@@ -986,7 +986,7 @@ class FieryBeast : actor {
             BLDD ABCDEF 6 A_Chase();
             Loop;
         Run:
-            TNT1 A 0 A_PlaySound("shadowbeast/sight");
+            TNT1 A 0 A_StartSound("shadowbeast/sight");
             BLDD ABCDEF 2 A_Chase();
             BLDD ABCDEF 2 A_Chase();
             BLDD ABCDEF 2 A_Chase();
@@ -995,60 +995,60 @@ class FieryBeast : actor {
             TNT1 A 0 A_JumpIfHealthLower (250, "Missile2");
             TNT1 A 0 A_Jump(90, 5);
             BLDD H 6 A_FaceTarget();
-            BLDD I 0 A_CustomMissile ("FieryBeastBall", 56, 0, -8);
-            BLDD I 6 A_CustomMissile ("FieryBeastBall", 56, 0, 8);
-            BLDD I 0 A_CustomMissile ("FieryBeastBall", 56, 0, 0);
+            BLDD I 0 A_SpawnProjectile ("FieryBeastBall", 56, 0, -8);
+            BLDD I 6 A_SpawnProjectile ("FieryBeastBall", 56, 0, 8);
+            BLDD I 0 A_SpawnProjectile ("FieryBeastBall", 56, 0, 0);
             Goto See;
             BLDD H 4 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, -16);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, -16);
             BLDD I 0 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, -8);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, -8);
             BLDD I 0 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, 0);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, 0);
             BLDD I 0 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, 8);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, 8);
             BLDD I 0 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, 16);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, 16);
             BLDD I 0 A_FaceTarget();
-            BLDD I 4 A_CustomMissile ("FieryBeastBall", 56, 0, 32);
+            BLDD I 4 A_SpawnProjectile ("FieryBeastBall", 56, 0, 32);
             Goto See;
         Missile2:
             TNT1 A 0 A_JumpIfCloser (350, 1);
             Goto Wave;
             BLDD H 6 A_FaceTarget();
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
-            BLDD I 2 A_CustomMissile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
+            BLDD I 2 A_SpawnProjectile ("FieryBeast_BallFire", 56, 0, random(-8,8));
             Goto See;
         Wave:
             BLDD H 16 A_FaceTarget();
-            BLDD I 0 A_CustomMissile ("FieryBeastFireWave", 0, 0, 0);
-        /* BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 64)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -56)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 56)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -48)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 48)    
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -40)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 40)    
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -32)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 32)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -24)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 24)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -16)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 16)    
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, -8)
-            BLDD I 0 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 8)    
-            BLDD I 6 A_CustomMissile ("ShadowBeast_Ball3", 56, 0, 0)*/
+            BLDD I 0 A_SpawnProjectile ("FieryBeastFireWave", 0, 0, 0);
+        /* BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 64)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -56)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 56)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -48)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 48)    
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -40)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 40)    
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -32)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 32)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -24)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 24)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -16)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 16)    
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, -8)
+            BLDD I 0 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 8)    
+            BLDD I 6 A_SpawnProjectile ("ShadowBeast_Ball3", 56, 0, 0)*/
             Goto See;
         Pain:
             TNT1 A 0 A_Jump (16, "Spread");
@@ -1075,7 +1075,8 @@ class FieryBeast : actor {
             Goto Wander;
         Wander:
             TNT1 A 0 A_UnSetShootable();
-            TNT1 A 0 A_ChangeFlag("NoPain", 1);
+            //TNT1 A 0 A_ChangeFlag("NoPain", 1);
+            TNT1 A 0 { bNOPAIN = true; }
             TNT1 A 0 A_Jump(60, 5);
             TNT1 A 0 A_Jump(60, 15);
             TNT1 A 0 A_Jump(60, 25);
@@ -1095,7 +1096,8 @@ class FieryBeast : actor {
             BLDD F 3 A_Wander();
             BLDD A 0 A_SetTranslucent (1.0);
             TNT1 A 0 A_SetShootable();
-            TNT1 A 0 A_ChangeFlag("NoPain", 0);
+            //TNT1 A 0 A_ChangeFlag("NoPain", 0);
+            TNT1 A 0 { bNoPain = false; }
             Goto See;
     }
 }
@@ -1110,7 +1112,7 @@ class FieryBeast_Spread : actor {
 	states {
 		Spawn:
 		    TNT1 A 0;
-		    TNT1 A 0 A_PlaySound ("shadowbeast/spread");
+		    TNT1 A 0 A_StartSound ("shadowbeast/spread");
 		    BLDD STUVWXY 8;
 	        BLDD Z 70;
 		Death:
@@ -1263,13 +1265,13 @@ class Lizard : actor {
         Melee:
             LIZR FG 2 A_FaceTarget();
             LIZR H 0 /*A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee")*/;
-            LIZR H 0 A_Playsound ("monster/lizardattack");
-            LIZR H 4 A_MeleeAttack();
+            LIZR H 0 A_StartSound ("monster/lizardattack");
+            LIZR H 4 A_CustomMeleeAttack();
             LIZR H 0 A_Jump (192,1);
             LIZR GF 4;
             Goto See;
         FakeMelee:
-            LIZR H 0 A_Playsound ("monster/lizardattack");
+            LIZR H 0 A_StartSound ("monster/lizardattack");
             LIZR H 4;
             LIZR H 0 A_Jump (192,1);
             LIZR GF 4;
@@ -1279,7 +1281,7 @@ class Lizard : actor {
             LIZR E 4 A_Pain();
             Goto See;
         DEATH:
-            LIZR L 0 A_PlaySound("monster/lizarddeath2");
+            LIZR L 0 A_StartSound("monster/lizarddeath2");
             LIZR L 4;
             LIZR M 4 A_XScream();
             LIZR N 4 A_NoBlocking(); 
@@ -1312,7 +1314,7 @@ class LizardSmall: Lizard {
             LIZR ABCD 2 A_FastChase();
             Loop;
         Death:
-            LIZR L 0 A_PlaySound("monster/lizarddeath2");
+            LIZR L 0 A_StartSound("monster/lizarddeath2");
             LIZR L 4;
             LIZR M 4 A_XScream();
             LIZR N 4 A_NoBlocking(); 
@@ -1348,8 +1350,8 @@ class LizardMiddle : Lizard {
     states {
         Missile:
             LIZR E 6 A_FaceTarget();
-            LIZR E 0 Bright A_PlaySound("monster/lizardidle");
-            LIZR E 0 BRIGHT A_CustomMissile ("SnakePoisonBall",40,0,0);
+            LIZR E 0 Bright A_StartSound("monster/lizardidle");
+            LIZR E 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",40,0,0);
             LIZR E 4;
             Goto See;
         Death:
@@ -1367,7 +1369,7 @@ class LizardMiddle : Lizard {
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
         XDEATH:
-            LIZR L 0 A_PlaySound("monster/lizarddeath2");
+            LIZR L 0 A_StartSound("monster/lizarddeath2");
             LIZR L 4;
             LIZR M 4 A_XScream();
             LIZR N 4 A_NoBlocking(); 
@@ -1401,14 +1403,14 @@ class LizardLarge : Lizard {
             Loop;
         Missile:
             LIZR E 6 A_FaceTarget();
-            LIZR E 0 Bright A_PlaySound("monster/lizardidle");
-            LIZR E 0 BRIGHT A_CustomMissile ("SnakePoisonBall",52,0,30);
-            LIZR E 0 BRIGHT A_CustomMissile ("SnakePoisonBall",52,0,-30);
-            LIZR E 0 BRIGHT A_CustomMissile ("SnakePoisonBall",52,0,0);
+            LIZR E 0 Bright A_StartSound("monster/lizardidle");
+            LIZR E 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",52,0,30);
+            LIZR E 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",52,0,-30);
+            LIZR E 0 BRIGHT A_SpawnProjectile ("SnakePoisonBall",52,0,0);
             LIZR E 4;
             Goto See;
         Charge:
-            LIZR H 1 A_Playsound ("monster/lizardsee");
+            LIZR H 1 A_StartSound ("monster/lizardsee");
             LIZR H 4 A_SkullAttack (25);
             LIZR H 4 A_SkullAttack (25);     
             LIZR H 4 A_SkullAttack (25);     
@@ -1496,12 +1498,12 @@ class Ophidiant : actor {
         Melee:
             OOS2 E 6 A_FaceTarget();
             OOS2 F 4 A_FaceTarget();
-            OOS2 F 2 A_PlaySound("snake/attack");
-            OOS2 G 6 A_CustomMissile("SnakePoisonBall", 32,0,0);
+            OOS2 F 2 A_StartSound("snake/attack");
+            OOS2 G 6 A_SpawnProjectile("SnakePoisonBall", 32,0,0);
             goto See;
         Missile:
             OOS2 EF 6 A_FaceTarget();
-            OOS2 G 6 A_CustomMissile("SnakePoisonBall", 32,0,0);
+            OOS2 G 6 A_SpawnProjectile("SnakePoisonBall", 32,0,0);
             goto See;
         Pain:
             OOS2 H 2;
@@ -1628,8 +1630,8 @@ class wosPitLord : actor {
             Goto See;
         FireBreath:
             DRG1 GG 4 A_FaceTarget();
-            DRG1 G 0 A_PlaySound("WEAPONS/UFLAME");
-            DRG1 HHHHHHHHHH 1 A_CustomMissile ("PitFiendFlameBurst", 40, 0, 0);
+            DRG1 G 0 A_StartSound("WEAPONS/UFLAME");
+            DRG1 HHHHHHHHHH 1 A_SpawnProjectile ("PitFiendFlameBurst", 40, 0, 0);
             Goto See;
         Pain:
             DRG1 I 3;
@@ -1696,7 +1698,7 @@ class PitFiendBall : actor {
 	
 	States {
         Spawn:
-            FBL8 AABBCC 2 bright A_CustomMissile("PitFiendBallTrail",0,0,0);
+            FBL8 AABBCC 2 bright A_SpawnProjectile("PitFiendBallTrail",0,0,0);
             Loop;
         Death:
             FBL8 DEFGH 4;
@@ -1745,8 +1747,8 @@ class wosPitFiend : wosPitLord {
             Goto See;
         FireBreath:
             DRG3 HH 4 A_FaceTarget();
-            DRG3 H 0 A_PlaySound("WEAPONS/UFLAME");
-            DRG3 IIIIIIII 1 A_CustomMissile ("PitFiendFlameBurst", 40, 0, 0);
+            DRG3 H 0 A_StartSound("WEAPONS/UFLAME");
+            DRG3 IIIIIIII 1 A_SpawnProjectile ("PitFiendFlameBurst", 40, 0, 0);
             Goto See;
         Pain:
             DRG3 G 3;
@@ -1830,7 +1832,7 @@ class wosPlagueFiend : actor {
             Goto See;
         PoisonBreath:
             DRG2 FF 4 A_FaceTarget();
-            DRG2 EEEEEEEEEE 1 Bright A_CustomMissile ("PlagueFiendPoison", 48, 0, 0);
+            DRG2 EEEEEEEEEE 1 Bright A_SpawnProjectile ("PlagueFiendPoison", 48, 0, 0);
             Goto See;
         Pain:
             DRG2 G 3;
@@ -1841,7 +1843,7 @@ class wosPlagueFiend : actor {
             DRG2 I 6 A_Scream();
             DRG2 JK 6;
             DRG2 K 0 A_Jump(128,2);
-            DRG2 K 0 A_CustomMissile("ToxinCloud", 32,0,0,0,0);
+            DRG2 K 0 A_SpawnProjectile("ToxinCloud", 32,0,0,0,0);
             DRG2 L 6 A_NoBlocking();
             DRG2 M 6;
             DRG2 M 1 /*ACS_NamedExecuteAlways("ExpGain",0,400,0,0) */;             //Gain 400 Exp 
@@ -1963,13 +1965,13 @@ class MiniDragon : actor {
         Missile:
             TNT1 A 0 A_JumpIfCloser(270, 1);
             Goto See;
-            TNT1 A 0 A_PlaySound("dragonfam/attack");
+            TNT1 A 0 A_StartSound("dragonfam/attack");
             IMPX E 2 Bright A_CPosRefire();
-            TNT1 A 0 A_CustomMissile("MiniFirePuffNoDamage", 12, 0, 0);
+            TNT1 A 0 A_SpawnProjectile("MiniFirePuffNoDamage", 12, 0, 0);
             IMPX F 2 Bright A_CPosRefire();
-            TNT1 A 0 A_CustomMissile("MiniFirePuff", 12, 0, Random(1,2));
+            TNT1 A 0 A_SpawnProjectile("MiniFirePuff", 12, 0, Random(1,2));
             IMPX F 2 Bright A_CPosRefire();
-            TNT1 A 0 A_CustomMissile("MiniFirePuff", 12, 0, Random(-2,-1));
+            TNT1 A 0 A_SpawnProjectile("MiniFirePuff", 12, 0, Random(-2,-1));
             TNT1 A 0 A_JumpIfCloser(270, 1);
             Goto See;
             TNT1 A 0 A_Jump(48, "See");
@@ -2077,21 +2079,22 @@ class ascSerpentFly : actor {
     states {
         Spawn:
             SFL1 A 1;
-            SFL1 A 1 A_PlaySound ("Hornet/Fly", CHAN_7, 0.2);
+            SFL1 A 1 A_StartSound ("Hornet/Fly", CHAN_7, 0.2);
             SFL1 ABBCCDD 2 A_Look();
             loop;
         See:
             SFL1 A 0;
             SFL1 A 0  {
-                A_ChangeFlag("FRIGHTENED",0); 
+                //A_ChangeFlag("FRIGHTENED",0); 
+                bFRIGHTENED = false;
                 A_ChangeVelocity (0, 0, 0, CVF_REPLACE); 
                 A_SentinelBob();
             }
-            SFL1 A 2 A_PlaySound ("Hornet/Fly", CHAN_7, 0.2);
+            SFL1 A 2 A_StartSound ("Hornet/Fly", CHAN_7, 0.2);
             SFL1 A 0 A_JumpIf(waterlevel > 0, "FlyUp");
             SFL1 A 2 {
                 A_Chase(); 
-                A_PlaySound ("Hornet/Fly", CHAN_7, 0.4);
+                A_StartSound ("Hornet/Fly", CHAN_7, 0.4);
             }
             SFL1 A 0 A_JumpIf(waterlevel > 0, "FlyUp");
             SFL1 B 2 A_Chase();
@@ -2110,11 +2113,12 @@ class ascSerpentFly : actor {
         FlyUp:
             SFL1 A 0;
             SFL1 A 0 {
-                A_ChangeFlag("FRIGHTENED",1); 
+                //A_ChangeFlag("FRIGHTENED",1); 
+                bFRIGHTENED = true;
                 A_ChangeVelocity (0, 0, 7, CVF_REPLACE); 
                 A_SentinelBob();
             }
-            SFL1 A 0 A_PlaySound ("Hornet/Fly", CHAN_7, 0.4);
+            SFL1 A 0 A_StartSound ("Hornet/Fly", CHAN_7, 0.4);
             SFL1 AABBCCDDAABBCCDD 2 A_Chase();
             goto See;
         Missile:
@@ -2136,14 +2140,15 @@ class ascSerpentFly : actor {
         Death:
             SFL1 G 1 A_StopSound (CHAN_7);
             SFL1 G 1 /*ACS_NamedExecuteAlways("ExpGain",0,22,0,0)*/;         //Gain 22 Exp. 
-            SFL1 H 0 A_ChangeFlag ("FLOATBOB", 0);
+            //SFL1 H 0 A_ChangeFlag ("FLOATBOB", 0);
+            TNT1 A 0 { bFLOATBOB = false; }
             SFL1 H 0 A_ScreamAndUnblock();
         Fall:
             SFL1 H 1 A_CheckFloor ("Splat");
             loop;
         Splat:
             SFL1 I 1 A_Stop();
-            SFL1 J 0 A_PlaySound ("Hornet/Splat");
+            SFL1 J 0 A_StartSound ("Hornet/Splat");
             SFL1 JKLM 4;
             SFL1 N -1;
             stop;
@@ -2258,10 +2263,10 @@ class ascTramp : actor {
             Loop;
         Melee:
             BEGR DD 4 A_FaceTarget();
-            BEGR D 1 bright A_PlaySound("swordmiss");
+            BEGR D 1 bright A_StartSound("swordmiss");
             BEGR E 7 bright A_Custommeleeattack(random(3,8), "swordhit", "swordmiss", "meleeattack", true);
             BEGR DD 4 A_FaceTarget();
-            BEGR D 1 bright A_PlaySound("swordmiss");
+            BEGR D 1 bright A_StartSound("swordmiss");
             //BEGR E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee");
             BEGR E 7 bright A_Custommeleeattack(random(3,8), "swordhit", "swordmiss", "meleeattack", true);
             Goto See;
@@ -2283,7 +2288,7 @@ class ascTramp : actor {
             BEGR N -1;
             Stop;
 		Disintegrate:
-			DISR A 5 A_PlaySoundEx("misc/disruptordeath", "Voice");
+			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2291,7 +2296,7 @@ class ascTramp : actor {
 			MEAT D 700;
 			Stop;
 		Burn:
-			BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice");
+			BURN A 3 Bright A_StartSound("human/imonfire", CHAN_AUTO);
 			BURN B 3 Bright A_DropFire();
 			BURN C 3 Bright A_Wander();
 			BURN D 3 Bright A_NoBlocking();
@@ -2409,11 +2414,11 @@ class ascRogue : actor {
 			Loop;
 		Melee:
 			DATF EE 4 A_FaceTarget();
-			DATF E 1 bright A_PlaySound("swordmiss");
+			DATF E 1 bright A_StartSound("swordmiss");
 			//DATF E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee"); 
 			DATF F 7 bright A_Custommeleeattack(random(6,14), "swordhit", "swordmiss", "meleeattack", true);
 			DATF EE 4 A_FaceTarget();
-			DATF E 1 bright A_PlaySound("swordmiss");
+			DATF E 1 bright A_StartSound("swordmiss");
 			//DATF E 0 A_Jump(4*ACS_NamedExecuteWithResult("RDexterity",0,0,0),"FakeMelee"); 
 			DATF F 7 bright A_Custommeleeattack(random(6,14), "swordhit", "swordmiss", "meleeattack", true);
 			Goto See;
@@ -2422,7 +2427,7 @@ class ascRogue : actor {
 			Goto See;
 		Missile:
 			DATF H 12 A_FaceTarget();
-			DATF I 3 A_CustomMissile ("Knife_1", 40, 3);
+			DATF I 3 A_SpawnProjectile ("Knife_1", 40, 3);
 			DATF I 3;
 			Goto See;
 		Pain:
@@ -2438,7 +2443,7 @@ class ascRogue : actor {
 			DATF Q -1;
 			Stop;
 		Disintegrate:
-			DISR A 5 A_PlaySoundEx("misc/disruptordeath", "Voice");
+			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2446,7 +2451,7 @@ class ascRogue : actor {
 			MEAT D 700;
 			Stop;
 		Burn:
-			BURN A 3 Bright A_PlaySoundEx("human/imonfire", "Voice");
+			BURN A 3 Bright A_StartSound("human/imonfire", CHAN_AUTO);
 			BURN B 3 Bright A_DropFire();
 			BURN C 3 Bright A_Wander();
 			BURN D 3 Bright A_NoBlocking();

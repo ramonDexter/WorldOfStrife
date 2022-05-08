@@ -114,6 +114,7 @@ version "4.6.0"
 #include "zscript/Items/targeter.zs"
 #include "zscript/Items/binoculars.zs"
 #include "zscript/Items/wosscanner.zs"
+#include "zscript/Items/stealthboy.zs"
 
 ////////////////////////////////////////////////////////////////////////////////
 

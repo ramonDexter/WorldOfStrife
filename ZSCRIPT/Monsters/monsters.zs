@@ -1388,7 +1388,7 @@ class ascImpFlesh : actor {
 			Loop;
 		See:
 			IMP1 BBBCCC 2 A_Chase();
-			IMP1 C 0 A_Playsound("H2Imp/Wings");
+			IMP1 C 0 A_StartSound("H2Imp/Wings");
 			IMP1 BBBAAA 2 A_Chase();
 			Loop;
 		Melee:
@@ -1405,7 +1405,7 @@ class ascImpFlesh : actor {
 			IMP1 A 0 A_JumpIfCloser(384, 1);
 			Goto See;
 			IMP1 A 8 A_FaceTarget();
-			IMP1 C 0 A_PlaySound("H2Imp/Charge");
+			IMP1 C 0 A_StartSound("H2Imp/Charge");
 			IMP1 C 15 A_SkullAttack();
 			IMP1 C 0 A_Stop();
 			Goto See;
@@ -1426,7 +1426,7 @@ class ascImpFlesh : actor {
 			Stop;
 		Idle:
 			IMP1 BBBCCC 2 A_Look();
-			IMP1 B 0 A_Playsound("H2Imp/Wings");
+			IMP1 B 0 A_StartSound("H2Imp/Wings");
 			IMP1 BBBAAA 2 A_Look();
 			Loop;
    	}

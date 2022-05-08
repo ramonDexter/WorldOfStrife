@@ -30,11 +30,11 @@ class shoulderGun : wosPickup {
 		player.mo.PlayAttacking2 ();
 		let ownr2 = binderPlayer(invoker.owner);
         if (useAmmo) {
-            ownr2.takeInventory("shldrGunMag", 1);
+            ownr2.takeInventory("magazine_shoulderGun", 1);
         }		
 		//  shoot action z blasterStaff lvl.2 altFire  /////////////////////////
 		A_StartSound("weapons/shoulderGun/loop", CHAN_6, CHANF_DEFAULT, 1.0, false);                               
-        A_GunFlash();
+        //A_GunFlash();
 		A_FireProjectile("greenArcLightning", 0.1*random(20,-20), false, -10, 20, 0, 0);
 		A_SpawnItemEx("redFlashShort", 8, 0, 16, 0);
         if (doAlertMonsters) {
@@ -70,12 +70,12 @@ class shoulderGun : wosPickup {
         Use:
             TNT1 A 0 {
                 if ( GetPlayerInput(MODINPUT_BUTTONS)&BT_USE ) { return resolveState("UseCheck"); }
-				else if ( GetPlayerInput(MODINPUT_BUTTONS)&BT_USER1 && CountInv("shoulderGunCharger") && CountInv("shldrGunMag") != 32 ) { return resolveState("UseReload"); }
+				else if ( GetPlayerInput(MODINPUT_BUTTONS)&BT_USER1 && CountInv("shoulderGunCharger") && CountInv("magazine_shoulderGun") != 32 ) { return resolveState("UseReload"); }
                 else { return resolveState("UseYes"); }
             }
             Fail;
         UseCheck:
-            TNT1 A 0 A_Log(String.Format("\c[yellow][ %i%s", CountInv("shldrGunMag"), "\c[yellow] pts ShoulderGun battery left ]"));
+            TNT1 A 0 A_Log(String.Format("\c[yellow][ %i%s", CountInv("magazine_shoulderGun"), "\c[yellow] pts ShoulderGun battery left ]"));
             Fail;
 		UseReload:
 			TNT1 A 0 {
@@ -91,7 +91,7 @@ class shoulderGun : wosPickup {
 			TNT1 A 0 {			
 				statelabel nextstate = "remove";
 				let ownr = binderPlayer(invoker.owner); 
-				if (ownr && ownr.countInv("shldrGunMag") > 0 ) {					
+				if (ownr && ownr.countInv("magazine_shoulderGun") > 0 ) {					
 					nextstate = "startoverlay";						 									
 				}
 				else {
@@ -195,7 +195,7 @@ class shoulderGun3_dummy : actor {
 	}
 }
 //  weapon/item ammunition  ////////////////////////////////////////////////////
-class shldrGunMag : CustomInventory {
+class magazine_shoulderGun : CustomInventory {
 	Default {
 		//$Category "Ammunition/WoS"
 		//$Title "Shouldercannon Ammo"
@@ -203,12 +203,12 @@ class shldrGunMag : CustomInventory {
 		-INVENTORY.INVBAR		
 		radius 10;
 		height 16;
-		Tag "$TAG_shldrGunMag";
+		Tag "$TAG_magazine_shoulderGun";
 		inventory.icon "I_SHCC";
 		inventory.amount 1;
 		Inventory.MaxAmount 32;
 		inventory.interhubamount 32;
-		Inventory.PickupMessage "$PICKUP_shldrGunMag";
+		Inventory.PickupMessage "$PICKUP_magazine_shoulderGun";
 		Mass 0;
 	}
 	
@@ -227,13 +227,13 @@ class shoulderGunCharger : wosPickup {
             return;
         }
         int ammoToCharge;
-        ammoToCharge = 32 - CountInv("shldrGunMag");
-		if ( CountInv("shldrGunMag") == 32 ) {
+        ammoToCharge = 32 - CountInv("magazine_shoulderGun");
+		if ( CountInv("magazine_shoulderGun") == 32 ) {
 			A_Log("$M_shouldergunmagfull");
 		} else {
 			if ( CountInv("EnergyPod") >= ammoToCharge && CountInv("EnergyPod") != 0 ) {
 				A_StartSound("weapons/shouldergun/recharge");
-				A_GiveInventory("shldrGunMag", ammoToCharge);
+				A_GiveInventory("magazine_shoulderGun", ammoToCharge);
 				A_TakeInventory("EnergyPod", ammoToCharge);				
 				A_Log(string.format("%s%i%s", stringtable.localize("$M_shouldergunReload1"), ammoToCharge, stringtable.localize("$M_shouldergunReload2")));
 			} else {
@@ -285,7 +285,7 @@ class shoulderGunMag_item : wosPickup {
 			DUMM AAAABBB 6;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("shldrGunMag", 32);
+			TNT1 A 0 A_GiveInventory("magazine_shoulderGun", 32);
 			Stop;
 	}
 }

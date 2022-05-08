@@ -891,6 +891,8 @@ M_REBREATHER_filtersUsedUp = "\c[red][ The filters are used up! ]";
 M_REBREATHER_filtersLeft1 = "\c[yellow][ ";
 M_REBREATHER_filtersLeft2 = "\c[yellow]% filters left ]";
 
+T_wosStealthBoy = "Stealth device";
+F_wosStealthBoy = "You picked up the Stealth device!";
 
 TAG_shoulderGun = "ShoulderGun";
 PICKUP_shoulderGun = "You picked up the ShoulderGun!";

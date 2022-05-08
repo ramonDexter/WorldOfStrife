@@ -812,11 +812,12 @@ class DaggerSpider : Spider
 		ASHD E 4 BRIGHT A_NoBlocking();
 		ASHD F -1;
 		Stop;
-	Raise:
+	/*Raise:
 		DAGC A 3;
-		Goto See;
+		Goto See;*/
 	}
 }
+
 
 //===========================================================================
 //
@@ -1067,10 +1068,33 @@ class GiantSpider : Spider
 		ASHD E 4 BRIGHT A_NoBlocking();
 		ASHD F -1;
 		Stop;
-	Raise:
+	/*Raise:
 		GTSH K 4;
 		GTSH KJJIIHHGGFFEEDDCCBBAA 3;
-		Goto See;
+		Goto See;*/
+	}
+}
+
+
+class spiderQueen01 : GiantSpider {
+	Default {
+		//$Title "spider queen#01"
+		Tag "spider queen";
+		Health 550;
+	}
+}
+class spiderQueen02 : GiantSpider {
+	Default {
+		//$Title "spider queen#02"
+		Tag "spider queen";
+		Health 550;
+	}
+}
+class spiderQueen03 : GiantSpider {
+	Default {
+		//$Title "spider queen#03"
+		Tag "spider queen";
+		Health 550;
 	}
 }
 
@@ -1360,9 +1384,9 @@ class ShadowSpider : Spider
 		CSPI I 2 A_NoBlocking();
 		CSPI J -1;
 		Stop;
-	Raise:
+	/*Raise:
 		CSPI JIHGF 2;
-		Goto See;
+		Goto See;*/
 	}
 }
 
@@ -1470,9 +1494,9 @@ class ShadowSpider2 : Spider
 			CSPI I 5 A_NoBlocking();
 			CSPI J -1;
 			Stop;
-		Raise:
+		/*Raise:
 			CSPI JIHGF 2;
-			Goto See;
+			Goto See;*/
 	}
 }
 
@@ -1535,9 +1559,9 @@ class SmallSteal : Spider
 		Goto Death;
 	XDeath:
 		Goto Death;
-	Raise:
+	/*Raise:
 		SPSD HGFEDCBA 2;
-		Goto See;
+		Goto See;*/
 	}
 }
 
@@ -1689,9 +1713,9 @@ class CycloneWasp : Spider
 			CYCA J 2;
 			TNT1 A 0 A_StopSound(1);
 			Stop;
-		Raise:
+		/*Raise:
 			CYCA JIHGF 2;
-			Goto See;
+			Goto See;*/
 	}
 }
 
@@ -1776,10 +1800,10 @@ class MutantFly : Spider
 			DIS6 W 1;
 			DIS6 X -1 A_Stop();
 			Stop;
-		Raise:
+		/*Raise:
 			DIS6 A 8 A_UnSetFloorClip();
 			DIS6 CCBBAA 8;
-			Goto See;
+			Goto See;*/
 	}
 }
 
@@ -1802,7 +1826,7 @@ class PSXWasp : actor
 		
 		Tag "Wasp Drone";
 		Species "Wasp";
-		Health 70;
+		Health 128;
 		Radius 31;
 		Height 56;
 		Mass 400;
@@ -1947,10 +1971,10 @@ class PSRedWasp : Spider
 		PSRW F 4 A_Noblocking();
 		PSRW G 4 A_SetFloorClip();
 		Stop;
-	Raise:
+	/*Raise:
 		PSRW A 8 A_UnSetFloorClip();
 		PSRW CCBBAA 8;
-		Goto See;
+		Goto See;*/
 	}
 }
 
@@ -2028,10 +2052,10 @@ class PSWasp : Spider
 			PWSP H 3 A_ScreamAndUnblock();
 			PWSP I -1 A_SetFloorClip();
 			Stop;
-		Raise:
+		/*Raise:
 			PWSP A 8 A_UnSetFloorClip();
 			PWSP CCBBAA 8;
-			Goto See;
+			Goto See;*/
 	}
 }
 

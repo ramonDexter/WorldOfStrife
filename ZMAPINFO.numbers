@@ -50,7 +50,7 @@ DoomEdNums {
 	20045 = wosBulletsBox
 	20046 = wosEnergyPod
 	20047 = wosEnergyPack
-	//20048 = quickTravelTAM
+	20048 = wosStealthBoy
 	20049 = miniSentinel
 	20050 = paladin
 	20051 = rebelEnemy
@@ -212,7 +212,7 @@ DoomEdNums {
 	20207 = tgPowerPlant_hereticCaptain
 	20208 = wosDegninOre
 	20209 = shoulderGun
-	20210 = shldrGunMag
+	//20210 = magazine_shoulderGun
 	20211 = shoulderGun1_dummy
 	20212 = shoulderGun2_dummy
 	20213 = shoulderGun3_dummy	
@@ -262,9 +262,9 @@ DoomEdNums {
 	20257 = dummy_executorRifle02
 	20258 = dummy_executorRifle03
 	20259 = wosSpiritsBottle
-	20260 = m8f_hn_AreaNameMarker_MP_commons
-	20261 = m8f_hn_AreaNameMarker_MP_commons_Tavern
-	20262 = m8f_hn_AreaNameMarker_MP_commons_butcher
+	20260 = spiderQueen01
+	20261 = spiderQueen02
+	20262 = spiderQueen03
 	20263 = m8f_hn_AreaNameMarker_MP_commons_library
 	20264 = m8f_hn_AreaNameMarker_MP_temple
 	20265 = m8f_hn_AreaNameMarker_MP_villa

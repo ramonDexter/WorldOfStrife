@@ -1,12 +1,12 @@
 SHLDV = "SHLDV0" {
 	Scale = 0.65
 }
-ZMZKV = "ZMZKV0" {
-	Scale = 0.45
-}
-RNGHV = "RNGHV0" {
-	Scale = 0.6
-}
+/*//ZMZKV = "ZMZKV0" {
+//	Scale = 0.45
+//}
+//RNGHV = "RNGHV0" {
+//	Scale = 0.6
+}*/
 STIMA = "STIMA0" {
 	Scale = 0.4
 }
@@ -57,20 +57,20 @@ QTDVV0 = "QTDVV" {
 	scale = 0.5
 }
 */
-EVAPV0 = "EVAPV0" {
+/*EVAPV0 = "EVAPV0" {
 	scale = 0.65
 }
 RGA1V0 = "RGA1V0" {
 	scale = 0.9
-}
-RGA2V0 = "RGA2V0" {
+}*/
+/*RGA2V0 = "RGA2V0" {
 	Scale = 0.9
-}
-SHDDV0 = "SHDDV0" {
+}*/
+/*SHDDV0 = "SHDDV0" {
 	scale = 0.5
-}
+}*/
 //  gas grenade  //
-GASGB0 = "GASGB0" {
+/*GASGB0 = "GASGB0" {
 	scale = 0.5
 }
 GASGC0 = "GASGC0" {
@@ -78,4 +78,4 @@ GASGC0 = "GASGC0" {
 }
 GGS3A0 = "GGS3A0" {
 	scale = 0.5
-}
+}*/

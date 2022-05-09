@@ -55,7 +55,7 @@ Conversation {
         Dialog = "\c[white]Our village is a peaceful and faithful place. We have a great Temple here, and a Shipping Guild office. And I can't forget the White Cock Inn. Great kitchen and good beer.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_mayor_else";
         }
     }
@@ -65,7 +65,7 @@ Conversation {
         Dialog = "\c[white]The locals are fishers and farmers. The local water are full of fish, so we have full plate and even lot to sale. And the plateau up on the cliffs has rich soil, so the crops are good too.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_mayor_else";
         }
     }
@@ -75,7 +75,7 @@ Conversation {
         Dialog = "\c[white]Yes, I would like some help here.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_mayor_else";
         }
     }

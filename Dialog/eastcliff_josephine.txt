@@ -43,7 +43,7 @@ Conversation {
         Dialog = "\c[white]Yes, a little chat would be nice. What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_josephine_opener";
         }
         Choice {
@@ -61,7 +61,7 @@ Conversation {
         Dialog = "\c[white]Our village is nice quiet place. We got great Temple here, which I visit often. People say that I'm very faithful. Also, we got a pub here. The White Cock has the best kitchen, even better than pubs in Millport.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_josephine_questions";
         }
     }
@@ -71,7 +71,7 @@ Conversation {
         Dialog = "\c[white]The locals are nice people. The traders are rich and the fishermen and farmers too, thanks to local abundance of resources. The local waters are full of fish and the fields have rich soil.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_josephine_questions";
         }
     }

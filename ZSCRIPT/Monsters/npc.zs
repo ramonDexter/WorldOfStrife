@@ -351,8 +351,14 @@ class tekPeasant01_base : StrifeHumanoid {
 	
 	States {
 		Spawn:
-			PS01 A 10 A_Look2();
+			PS01 G 10 A_Look2();
 			Loop;
+			PS01 G 10;
+			loop;
+			PS01 G 10;
+			Loop;
+			PS01 AABBCCDD 5 A_Wander();
+			Goto Spawn;
 		See:
 			PS01 AABBCCDD 5 A_Wander();
 			Goto Spawn;
@@ -420,44 +426,50 @@ class tekPeasant02_base : StrifeHumanoid {
 	}
 	
 	States {
-	Spawn:
-		PS02 A 10 A_Look2();
-		Loop;
-	See:
-		PS02 AABBCCDD 5 A_Wander();
-		Goto Spawn;
-	Melee:
-		PS02 E 10 A_FaceTarget();
-		PS02 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
-		PS02 E 8;
-		Goto See;
-	Pain:
-		PEAS O 3;
-		PEAS O 3 A_Pain();
-		Goto Melee;
-	Wound:
-		PEAS G 5;
-		PEAS H 10 A_GetHurt();
-		PEAS I 6;
-		Goto Wound+1;
-	Death:
-		PEAS G 5;
-		PEAS H 5 A_Scream;
-		PEAS I 6;
-		PEAS J 5 A_NoBlocking;
-		PEAS K 5;
-		PEAS L 6;
-		PEAS M 8;
-		PEAS N 1400;
-		GIBS U 5;
-		GIBS V 1400;
-		Stop;
-	XDeath:
-		GIBS M 5 A_TossGib;
-		GIBS N 5 A_XScream;
-		GIBS O 5 A_NoBlocking;
-		GIBS PQRS 4 A_TossGib;
-		Goto Death+8;
+		Spawn:
+			PS02 G 10 A_Look2();
+			Loop;
+			PS02 G 10;
+			loop;
+			PS02 G 10;
+			Loop;
+			PS02 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		See:
+			PS02 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		Melee:
+			PS02 E 10 A_FaceTarget();
+			PS02 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
+			PS02 E 8;
+			Goto See;
+		Pain:
+			PEAS O 3;
+			PEAS O 3 A_Pain();
+			Goto Melee;
+		Wound:
+			PEAS G 5;
+			PEAS H 10 A_GetHurt();
+			PEAS I 6;
+			Goto Wound+1;
+		Death:
+			PEAS G 5;
+			PEAS H 5 A_Scream;
+			PEAS I 6;
+			PEAS J 5 A_NoBlocking;
+			PEAS K 5;
+			PEAS L 6;
+			PEAS M 8;
+			PEAS N 1400;
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
+		XDeath:
+			GIBS M 5 A_TossGib;
+			GIBS N 5 A_XScream;
+			GIBS O 5 A_NoBlocking;
+			GIBS PQRS 4 A_TossGib;
+			Goto Death+8;
 	}
 }
 
@@ -491,44 +503,50 @@ class tekPeasant03_base : StrifeHumanoid {
 	}
 	
 	States {
-	Spawn:
-		PS03 A 10 A_Look2();
-		Loop;
-	See:
-		PS03 AABBCCDD 5 A_Wander();
-		Goto Spawn;
-	Melee:
-		PS03 E 10 A_FaceTarget();
-		PS03 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
-		PS03 E 8;
-		Goto See;
-	Pain:
-		PEAS O 3;
-		PEAS O 3 A_Pain();
-		Goto Melee;
-	Wound:
-		PEAS G 5;
-		PEAS H 10 A_GetHurt();
-		PEAS I 6;
-		Goto Wound+1;
-	Death:
-		PEAS G 5;
-		PEAS H 5 A_Scream;
-		PEAS I 6;
-		PEAS J 5 A_NoBlocking;
-		PEAS K 5;
-		PEAS L 6;
-		PEAS M 8;
-		PEAS N 1400;
-		GIBS U 5;
-		GIBS V 1400;
-		Stop;
-	XDeath:
-		GIBS M 5 A_TossGib;
-		GIBS N 5 A_XScream;
-		GIBS O 5 A_NoBlocking;
-		GIBS PQRS 4 A_TossGib;
-		Goto Death+8;
+		Spawn:
+			PS03 G 10 A_Look2();
+			Loop;
+			PS03 G 10;
+			loop;
+			PS03 G 10;
+			Loop;
+			PS03 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		See:
+			PS03 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		Melee:
+			PS03 E 10 A_FaceTarget();
+			PS03 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
+			PS03 E 8;
+			Goto See;
+		Pain:
+			PEAS O 3;
+			PEAS O 3 A_Pain();
+			Goto Melee;
+		Wound:
+			PEAS G 5;
+			PEAS H 10 A_GetHurt();
+			PEAS I 6;
+			Goto Wound+1;
+		Death:
+			PEAS G 5;
+			PEAS H 5 A_Scream;
+			PEAS I 6;
+			PEAS J 5 A_NoBlocking;
+			PEAS K 5;
+			PEAS L 6;
+			PEAS M 8;
+			PEAS N 1400;
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
+		XDeath:
+			GIBS M 5 A_TossGib;
+			GIBS N 5 A_XScream;
+			GIBS O 5 A_NoBlocking;
+			GIBS PQRS 4 A_TossGib;
+			Goto Death+8;
 	}
 }
 
@@ -562,44 +580,50 @@ class tekPeasant04_base : StrifeHumanoid {
 	}
 	
 	States {
-	Spawn:
-		PS04 A 10 A_Look2();
-		Loop;
-	See:
-		PS04 AABBCCDD 5 A_Wander();
-		Goto Spawn;
-	Melee:
-		PS04 E 10 A_FaceTarget();
-		PS04 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
-		PS04 E 8;
-		Goto See;
-	Pain:
-		PEAS O 3;
-		PEAS O 3 A_Pain();
-		Goto Melee;
-	Wound:
-		PEAS G 5;
-		PEAS H 10 A_GetHurt();
-		PEAS I 6;
-		Goto Wound+1;
-	Death:
-		PEAS G 5;
-		PEAS H 5 A_Scream;
-		PEAS I 6;
-		PEAS J 5 A_NoBlocking;
-		PEAS K 5;
-		PEAS L 6;
-		PEAS M 8;
-		PEAS N 1400;
-		GIBS U 5;
-		GIBS V 1400;
-		Stop;
-	XDeath:
-		GIBS M 5 A_TossGib;
-		GIBS N 5 A_XScream;
-		GIBS O 5 A_NoBlocking;
-		GIBS PQRS 4 A_TossGib;
-		Goto Death+8;
+		Spawn:
+			PS04 G 10 A_Look2();
+			Loop;
+			PS04 G 10;
+			loop;
+			PS04 G 10;
+			Loop;
+			PS04 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		See:
+			PS04 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		Melee:
+			PS04 E 10 A_FaceTarget();
+			PS04 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
+			PS04 E 8;
+			Goto See;
+		Pain:
+			PEAS O 3;
+			PEAS O 3 A_Pain();
+			Goto Melee;
+		Wound:
+			PEAS G 5;
+			PEAS H 10 A_GetHurt();
+			PEAS I 6;
+			Goto Wound+1;
+		Death:
+			PEAS G 5;
+			PEAS H 5 A_Scream;
+			PEAS I 6;
+			PEAS J 5 A_NoBlocking;
+			PEAS K 5;
+			PEAS L 6;
+			PEAS M 8;
+			PEAS N 1400;
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
+		XDeath:
+			GIBS M 5 A_TossGib;
+			GIBS N 5 A_XScream;
+			GIBS O 5 A_NoBlocking;
+			GIBS PQRS 4 A_TossGib;
+			Goto Death+8;
 	}
 }
 class tekPeasant05_base : StrifeHumanoid {
@@ -631,44 +655,50 @@ class tekPeasant05_base : StrifeHumanoid {
 	}
 	
 	States {
-	Spawn:
-		PS05 A 10 A_Look2();
-		Loop;
-	See:
-		PS05 AABBCCDD 5 A_Wander();
-		Goto Spawn;
-	Melee:
-		PS05 E 10 A_FaceTarget();
-		PS05 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
-		PS05 E 8;
-		Goto See;
-	Pain:
-		PEAS O 3;
-		PEAS O 3 A_Pain();
-		Goto Melee;
-	Wound:
-		PEAS G 5;
-		PEAS H 10 A_GetHurt();
-		PEAS I 6;
-		Goto Wound+1;
-	Death:
-		PEAS G 5;
-		PEAS H 5 A_Scream;
-		PEAS I 6;
-		PEAS J 5 A_NoBlocking;
-		PEAS K 5;
-		PEAS L 6;
-		PEAS M 8;
-		PEAS N 1400;
-		GIBS U 5;
-		GIBS V 1400;
-		Stop;
-	XDeath:
-		GIBS M 5 A_TossGib;
-		GIBS N 5 A_XScream;
-		GIBS O 5 A_NoBlocking;
-		GIBS PQRS 4 A_TossGib;
-		Goto Death+8;
+		Spawn:
+			PS05 G 10 A_Look2();
+			Loop;
+			PS05 G 10;
+			loop;
+			PS05 G 10;
+			Loop;
+			PS05 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		See:
+			PS05 AABBCCDD 5 A_Wander();
+			Goto Spawn;
+		Melee:
+			PS05 E 10 A_FaceTarget();
+			PS05 F 8 A_CustomMeleeAttack(2*random[PeasantAttack](1, 5)+2);
+			PS05 E 8;
+			Goto See;
+		Pain:
+			PEAS O 3;
+			PEAS O 3 A_Pain();
+			Goto Melee;
+		Wound:
+			PEAS G 5;
+			PEAS H 10 A_GetHurt();
+			PEAS I 6;
+			Goto Wound+1;
+		Death:
+			PEAS G 5;
+			PEAS H 5 A_Scream;
+			PEAS I 6;
+			PEAS J 5 A_NoBlocking;
+			PEAS K 5;
+			PEAS L 6;
+			PEAS M 8;
+			PEAS N 1400;
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
+		XDeath:
+			GIBS M 5 A_TossGib;
+			GIBS N 5 A_XScream;
+			GIBS O 5 A_NoBlocking;
+			GIBS PQRS 4 A_TossGib;
+			Goto Death+8;
 	}
 }
 
@@ -934,6 +964,47 @@ class beggarBase : Beggar {
 	Default {
 		//$Category "Other NPCs/WoS"
 		Health 56;
+	}
+	States {
+		Spawn:
+			BEGR P 10 A_Look2();
+			Loop;
+			BEGR P 10;
+			Loop;
+			BEGR P 10;
+			Loop;
+			BEGR AABBCC 4 A_Wander;
+			Loop;
+		See:
+			BEGR AABBCC 4 A_Wander;
+			Loop;
+		Melee:
+			BEGR D 8;
+			BEGR D 8 A_CustomMeleeAttack(2*random[PeasantAttack](1,5)+2);
+			BEGR E 1 A_Chase;
+			BEGR D 8 A_SentinelRefire;
+			Loop;
+		Pain:
+			BEGR A 3 A_Pain;
+			BEGR A 3 A_Chase;
+			Goto Melee;
+		Death:
+			BEGR F 4;
+			BEGR G 4 A_Scream;
+			BEGR H 4;
+			BEGR I 4 A_NoBlocking;
+			BEGR JKLM 4;
+			BEGR N -1;
+			Stop;
+		XDeath:
+			BEGR F 5 A_TossGib;
+			GIBS M 5 A_TossGib;
+			GIBS N 5 A_XScream;
+			GIBS O 5 A_NoBlocking;
+			GIBS PQRST 4 A_TossGib;
+			GIBS U 5;
+			GIBS V 1400;
+			Stop;
 	}
 }
 

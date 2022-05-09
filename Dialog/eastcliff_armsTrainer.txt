@@ -4,7 +4,7 @@ Conversation {
     /*
     Page {
         pageName = "";
-        Name = "\c[yellow]Titus, master trainer"; 
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
         Dialog = "\c[white]";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -15,12 +15,12 @@ Conversation {
     */
     Page {
         pageName = "EC_armstrainer_opener";
-        Name = "\c[yellow]Titus, master trainer";
-        Dialog = "\c[white]Hello, Binder. Welcome to my gym. Would you need some training? Or did you come for a little chat?";
+        Name = "\c[yellow]Titus, Grocery Vendor";
+        Dialog = "\c[white]Hello, Binder. Welcome to the grocery store. We got all the basic needs here and reasonable prices. What would you need?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "Yes, I would like some training.";
-            Nextpage = "EC_armstrainer_training";
+            Text = "Oh yeah, I need some stuff.";
+            Nextpage = "EC_armstrainer_shop";
         }
         Choice {
             Text = "I've got some questions.";
@@ -28,35 +28,12 @@ Conversation {
         }
     }
     Page {
-        pageName = "EC_armstrainer_training";
-        Name = "\c[yellow]Titus, master trainer";
-        Dialog = "\c[white]Good to hear that from a Binder. A good fighter always wants to leanr more.\nI can teach you precision. For, lets say, 1000 gold.\n(raise accuracy by 10 for 1000 gold)";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "EC_armstrainer_opener";
-        }
-        Choice {
-            Text = "All right, teach me. (pay 1000 gold)";
-            Nextpage = "EC_rebecca_shop_grenades";
-            CloseDialog = true;
-            YesMessage = "Okay, listen carefully...";
-            NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 1201;
-            Cost {
-                item = "goldCoin";
-                amount = 1000;
-            }
-        }
-    }
-    Page {
         pageName = "EC_armstrainer_questions";
-        Name = "\c[yellow]Titus, master trainer";
+        Name = "\c[yellow]Titus, Grocery Vendor";
         Dialog = "\c[white]Yes, a good fighter also seeks knowledge. What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_armstrainer_opener";
         }
         Choice {
@@ -64,28 +41,328 @@ Conversation {
             Nextpage = "EC_armstrainer_questions_eastcliff";
         }
         Choice {
-            Text = "This is your gym?";
+            Text = "This is your shop?";
             Nextpage = "EC_armstrainer_questions_gym";
         }
     }
     Page {
         pageName = "EC_armstrainer_questions_eastcliff";
-        Name = "\c[yellow]Titus, master trainer";
+        Name = "\c[yellow]Titus, Grocery Vendor";
         Dialog = "\c[white]Our village is a peaceful place. The locals live from the abundance of fish in local waters, and from farming on the farms up on the cliffs on the plateau.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_armstrainer_questions";
         }
     }
     Page {
         pageName = "EC_armstrainer_questions_gym";
-        Name = "\c[yellow]Titus, master trainer";
-        Dialog = "\c[white]Yes, it is. My grand-grandfather built this place. He was an army retire, settled here after a long service. And since that time, men in our family are fighters and warriors. Two of my brothers serve in Tabit's army and the third brother is a captain in Imperial Army. And I serve as a master trainer of martial arts, as my father did.";
+        Name = "\c[yellow]Titus, Grocery Vendor";
+        Dialog = "\c[white]Yes, it is. My grand-grandfather built this place. He was an army retire, settled here after a long service. And since that time, men in our family are traders and vendors. Two of my brothers travel with the caravans and the third brother has a shop in the Capital City. And I work as a trader here in Eastcliff, as my father did.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_armstrainer_questions";
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_shop";
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
+        Dialog = "\c[white]Okay, we have some food, some drinks, some tools and even some ammunition.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_armstrainer_opener";
+        }
+        Choice {
+            Text = "I need some food.";
+            Nextpage = "EC_armstrainer_shopFood";
+        }
+        Choice {
+            Text = "I need some drink.";
+            Nextpage = "EC_armstrainer_shopDrinks";
+        }
+        Choice {
+            Text = "I need some tool.";
+            Nextpage = "EC_armstrainer_shopTools";
+        }
+        Choice {
+            Text = "I need some ammo.";
+            Nextpage = "EC_armstrainer_shopAmmo";
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_shopFood";
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
+        Dialog = "\c[white]I got some food rations here, these cost 12, then some foodboxes for 12 and some soy food for 12 gold. What would you like?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_armstrainer_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy food ration 1";
+            Nextpage = "EC_armstrainer_shopFood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation1";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy food ration 2";
+            Nextpage = "EC_armstrainer_shopFood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation2";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy food ration 3";
+            Nextpage = "EC_armstrainer_shopFood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodRation3";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy foodbox";
+            Nextpage = "EC_armstrainer_shopFood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosFoodBox";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy soyfood";
+            Nextpage = "EC_armstrainer_shopFood";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSoyFood";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_shopDrinks";
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
+        Dialog = "\c[white]Yes, we have water for 2, beer for 4, wine for 6 and some spirits for 12 gold. And also some canned soda for 4 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_armstrainer_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of water";
+            Nextpage = "EC_armstrainer_shopDrinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosWaterBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 2;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of beer";
+            Nextpage = "EC_armstrainer_shopDrinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBeerBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 4;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of wine";
+            Nextpage = "EC_armstrainer_shopDrinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVineBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 6;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy bottle of spirits";
+            Nextpage = "EC_armstrainer_shopDrinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSpiritsBottle";
+            Cost {
+                item = "goldCoin";
+                amount = 12;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy canned soda";
+            Nextpage = "EC_armstrainer_shopDrinks";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosSodaCan";
+            Cost {
+                item = "goldCoin";
+                amount = 4;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_shopTools";
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
+        Dialog = "\c[white]Yes, got rebreather for 40, the environmental suit for 75, flare for 5 and box of flares for 25, oh, and I got the armor repair kits for 15 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_armstrainer_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy rebreather";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosRebreather";
+            Cost {
+                item = "goldCoin";
+                amount = 35;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy environmental suit";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosEnvSuit";
+            Cost {
+                item = "goldCoin";
+                amount = 75;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy flare";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "Flare";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy box of flares";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "FlareBox";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy armor repair kit";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosArmorShard";
+            Cost {
+                item = "goldCoin";
+                amount = 15;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_armstrainer_shopAmmo";
+        Name = "\c[yellow]Titus, Grocery Vendor"; 
+        Dialog = "\c[white]I got bullet clips for 10, electric arrow satchels for 25 and energycells for 20 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_armstrainer_shop";
+        }
+        Choice {
+            Text = "\c[gold]Buy clip of bullets";
+            Nextpage = "EC_armstrainer_shopAmmo";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBulletCartridge";
+            Cost {
+                item = "goldCoin";
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy electric arrows satchel";
+            Nextpage = "EC_armstrainer_shopAmmo";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosBoltsElectric";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy energycell";
+            Nextpage = "EC_armstrainer_shopAmmo";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosEnergyCell";
+            Cost {
+                item = "goldCoin";
+                amount = 20;
+            }
         }
     }
 

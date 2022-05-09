@@ -562,9 +562,9 @@ class wosi_StimDevice : wosPickup {
 		Use:
 			TNT1 A 0 {
 				let pawn = binderPlayer(self);				
-				if ( pawn.stamin > 390 ) {
+				if ( pawn.stamin == pawn.maxstamin ) {
 					return resolveState("UseNot");
-				} else if ( pawn.stamin < 390 ) {
+				} else if ( pawn.stamin < pawn.maxstamin ) {
 					return resolveState("UseYes");
 				}
 				return resolveState(null);
@@ -572,8 +572,9 @@ class wosi_StimDevice : wosPickup {
 			Fail;
 		UseYes:
 			TNT1 A 0 {
-				let pawn = binderPlayer(self);				
-				pawn.stamin = pawn.stamin + 350;
+				let pawn = binderPlayer(self);	
+				//int giveStamin = pawn.maxstamin - pawn.stamin;			
+				pawn.stamin = pawn.maxstamin;
 				pawn.A_StartSound("sounds/med",CHAN_ITEM);
 			}
 			Stop;

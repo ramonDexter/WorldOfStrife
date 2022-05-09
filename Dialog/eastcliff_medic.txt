@@ -47,7 +47,7 @@ Conversation {
         Dialog = "\c[white]Yeah, I do sell medical supplies. But nothing cheap.\nThe Hypospray costs 25, Kombopack costs 50 and the Instaheal costs 100 gold. Also, I've got the Medpatches for 10, Medical Kits for 25 annd Surgery Kits for 100 gold. What will you take?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_medic_opener";
         }
         Choice {
@@ -129,7 +129,7 @@ Conversation {
         Dialog = "\c[white]What did you wanted to know? As a local, I know lot of things about our village.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_medic_opener";
         }
         Choice {
@@ -143,7 +143,7 @@ Conversation {
         Dialog = "\c[white]Eastcliff's a peaceful place. Our position on the main road gives the local traders a good opportunity to make a good business. Besides that, the locals make their living by fishing and farming.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "EC_medic_questions";
         }
         Choice {

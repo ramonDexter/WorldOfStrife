@@ -40,7 +40,7 @@ class wosStealthBoy : wosPickup {
 		Mass targeterWeight;
 		wosPickup.charge 100;
     }
-	
+
     States {
         Spawn:
 			DUMM A -1;
@@ -109,6 +109,7 @@ class wosPowerStealth : PowerInvisibility {
         Powerup.Duration 0x7FFFFFFD;
         Powerup.Strength 75;
         Powerup.Mode "Cumulative";
+		Inventory.Icon "";
     }
 }
 ////////////////////////////////////////////////////////////////////////////////

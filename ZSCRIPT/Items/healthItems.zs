@@ -410,10 +410,8 @@ class zscMedPatch_heal : Health {
 		inventory.Amount 10;
 	}
 }
-class zscMedPatch : wosPickup replaces MedPatch
-{
-	Default
-	{
+class zscMedPatch : wosPickup replaces MedPatch {
+	Default {
 		//$Category "Health and Armor/WoS"
 		//$Title "zsc MedPatch"
 
@@ -425,16 +423,15 @@ class zscMedPatch : wosPickup replaces MedPatch
 		Mass medpatchWeight;
 	}
 
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
 			TNT1 A 0 {
-				A_GiveInventory("zscMedPatch_heal", 1);
+				//A_GiveInventory("zscMedPatch_heal", 1);
 				let pawn = binderPlayer(self);
-				pawn.bleedlevel=0;
+				pawn.bleedlevel = 0;
 				pawn.A_StartSound("sounds/armorLight",CHAN_ITEM);
 			}
 			Stop;
@@ -448,10 +445,8 @@ class zscMedicalKit_heal : Health {
 		inventory.Amount 25;
 	}
 }
-class zscMedicalKit : wosPickup replaces MedicalKit
-{
-	Default
-	{
+class zscMedicalKit : wosPickup replaces MedicalKit {
+	Default {
 		//$Category "Health and Armor/WoS"
 		//$Title "zsc MedicalKit"
 		+INVENTORY.INVBAR
@@ -462,8 +457,7 @@ class zscMedicalKit : wosPickup replaces MedicalKit
 		Mass medicalkitWeight;
 	}
 
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
@@ -485,10 +479,8 @@ class zscSurgeryKit_heal : Health {
 		inventory.Amount -100;
 	}
 }
-class zscSurgeryKit : wosPickup replaces SurgeryKit
-{
-	Default
-	{
+class zscSurgeryKit : wosPickup replaces SurgeryKit {
+	Default {
 		//$Category "Health and Armor/WoS"
 		//$Title "zsc SurgeryKit"
 		+INVENTORY.INVBAR
@@ -499,8 +491,7 @@ class zscSurgeryKit : wosPickup replaces SurgeryKit
 		Mass surgerykitWeight;
 	}
 
-	States
-	{
+	States {
 		Spawn:
 			DUMM AB 35;
 			Loop;

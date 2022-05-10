@@ -244,23 +244,36 @@ Conversation {
     Page {
         pageName = "EC_armstrainer_shopTools";
         Name = "\c[yellow]Titus, Grocery Vendor"; 
-        Dialog = "\c[white]Yes, got rebreather for 40, the environmental suit for 75, flare for 5 and box of flares for 25, oh, and I got the armor repair kits for 15 gold.";
+        Dialog = "\c[white]Yes, got medical patches for 10 and hyposprays for 25, the environmental suit for 75, flare for 5 and box of flares for 25, oh, and I got the armor repair kits for 15 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
             Nextpage = "EC_armstrainer_shop";
         }
         Choice {
-            Text = "\c[gold]Buy rebreather";
+            Text = "\c[gold]Buy medpatch";
             Nextpage = "EC_armstrainer_shopTools";
             CloseDialog = true;
             DisplayCost = true;
             YesMessage = "Here it is!";
             NoMessage = "Not enough gold!";
-            GiveItem = "wosRebreather";
+            GiveItem = "zscMedPatch";
             Cost {
                 item = "goldCoin";
-                amount = 35;
+                amount = 10;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy hypospray";
+            Nextpage = "EC_armstrainer_shopTools";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosHyposprej";
+            Cost {
+                item = "goldCoin";
+                amount = 25;
             }
         }
         Choice {

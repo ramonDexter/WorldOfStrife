@@ -1,0 +1,83 @@
+// map14 fast travel scripts //////////////////////////////////////////////////
+//millport
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map08", 991, 0);
+}
+//aeredale
+script 992 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map10", 991, 0);
+}
+//ravenrock
+script 993 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map12", 991, 0);
+}
+///////////////////////////////////////////////////////////////////////////////
+
+// map08 fast travel scripts //////////////////////////////////////////////////
+//aeredale
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map10", 991, 0);
+}
+//eastcliff
+script 992 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map14", 991, 0);
+}
+//ravenrock
+script 993 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map12", 991, 0);
+}
+///////////////////////////////////////////////////////////////////////////////
+
+// map10 fast travel scripts //////////////////////////////////////////////////
+//millport
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map08", 991, 0);
+}
+//eastcliff
+script 992 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map14", 991, 0);
+}
+//ravenrock
+script 993 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map12", 991, 0);
+}
+///////////////////////////////////////////////////////////////////////////////
+
+// map12 fast travel scripts //////////////////////////////////////////////////
+//aeredale
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map10", 991, 0);
+}
+//eastcliff
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map14", 991, 0);
+}
+//millport
+script 991 (void) {
+    Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    ChangeLevel("map08", 991, 0);
+}
+///////////////////////////////////////////////////////////////////////////////

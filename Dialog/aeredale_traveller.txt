@@ -1,0 +1,117 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 999;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "aeredale_traveller_opener";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]Hello, how may I help you? I'm the Traveller, I can take you to other surrounding places for a small fee. We'll make a special trip just for you, same low price!";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Where can you take me?";
+            Nextpage = "aeredale_traveller_places";
+        }
+    }
+    Page {
+        pageName = "aeredale_traveller_places";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]I can take you to Millport, Eastcliff and Ravenrock.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_traveller_opener";
+        }
+        Choice {
+            Text = "Take me to Millport.";
+            Nextpage = "aeredale_traveller_travel_Millport";
+        }
+        Choice {
+            Text = "Take me to Eastcliff.";
+            Nextpage = "aeredale_traveller_travel_Eastcliff";
+        }
+        Choice {
+            Text = "Take me to Ravenrock.";
+            Nextpage = "aeredale_traveller_travel_ravenrock";
+        }
+    }
+    Page {
+        pageName = "aeredale_traveller_travel_Millport";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]The trip to Millport costs 16 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay. \c[gold](pay 16 gold)";
+            Nextpage = "aeredale_traveller_opener";
+            CloseDialog = true;
+            YesMessage = "Take your seat, let's go!";
+            NoMessage = "Not enough gold!";
+            Special = 80;
+            arg0 = 991;
+            Cost {
+                item = "goldCoin";
+                amount = 16;
+            }
+        }
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "aeredale_traveller_places";
+        }
+    }
+    Page {
+        pageName = "aeredale_traveller_travel_Eastcliff";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]The trip to Eastcliff costs 36 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay. \c[gold](pay 36 gold)";
+            Nextpage = "aeredale_traveller_opener";
+            CloseDialog = true;
+            YesMessage = "Take your seat, let's go!";
+            NoMessage = "Not enough gold!";
+            Special = 80;
+            arg0 = 992;
+            Cost {
+                item = "goldCoin";
+                amount = 36;
+            }
+        }
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "aeredale_traveller_places";
+        }
+    }
+    Page {
+        pageName = "aeredale_traveller_travel_ravenrock";
+        Name = "\c[yellow]Traveller"; 
+        Dialog = "\c[white]The trip to Ravenrock costs 24 gold.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay. \c[gold](pay 24 gold)";
+            Nextpage = "aeredale_traveller_opener";
+            CloseDialog = true;
+            YesMessage = "Take your seat, let's go!";
+            NoMessage = "Not enough gold!";
+            Special = 80;
+            arg0 = 993;
+            Cost {
+                item = "goldCoin";
+                amount = 24;
+            }
+        }
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "aeredale_traveller_places";
+        }
+    }
+}

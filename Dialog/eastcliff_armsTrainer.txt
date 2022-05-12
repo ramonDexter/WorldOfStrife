@@ -30,7 +30,7 @@ Conversation {
     Page {
         pageName = "EC_armstrainer_questions";
         Name = "\c[yellow]Titus, Grocery Vendor";
-        Dialog = "\c[white]Yes, a good fighter also seeks knowledge. What did you wanted to know?";
+        Dialog = "\c[white]Yes, what did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";

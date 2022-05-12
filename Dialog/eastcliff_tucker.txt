@@ -34,7 +34,7 @@ Conversation {
     Page {
         pageName = "EC_tucker_doinghere";
         Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]I came here to buy some supplies for my farm, and to exchange my products. The prices are good this year, and I'm making a good trade. Right now, I've stopped here for a small break, before I'll head back to my farm.";
+        Dialog = "\c[white]I came here to buy some supplies for my farm, and to exchange my produce. The prices are good this year, and I'm making a good trade. Right now, I've stopped here for a small break, before I'll head back to my farm.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
@@ -68,7 +68,7 @@ Conversation {
     Page {
         pageName = "EC_tucker_surroundings";
         Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]Well, the northern road limbs up to the cliffs and then heads mostly straight to the hills where lies the city of Kolyma. It's quite peacefule land, as the Imperial Army does good job of controlling the local bands of bandits.";
+        Dialog = "\c[white]Well, the northern road climbs up to the cliffs and then heads mostly straight to the hills where lies the city of Kolyma. It's quite peacefule land, as the Imperial Army does good job of controlling the local bands of bandits.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";

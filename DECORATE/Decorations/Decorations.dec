@@ -1430,8 +1430,8 @@ Actor MM_radio 21071
 	
 	+Solid
 	tag "pocket radio"
-	radius 8
-	height 25
+	radius 4
+	height 12
 	
 	States
 	{

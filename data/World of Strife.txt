@@ -171,7 +171,7 @@ The Principality of Narfol sends a military expedition south, into the plains. B
 
 834
 // csy // 
-Válka mezi Tabitskými a Narolským knížectvím končí porážkou Narfolků. Vítězství Tabitských je dosaženo hlavně díky úderným oddílům Binderů, kteří vedli oddíly pravidelného vojska Tabitských. Území o které byl spor veden připadne Tabitským. Od té doby se toto území jmenuje 'Tabitské pláně'.
+Válka mezi Tabitskými a Narfolským knížectvím končí porážkou Narfolků. Vítězství Tabitských je dosaženo hlavně díky úderným oddílům Binderů, kteří vedli oddíly pravidelného vojska Tabitských. Území o které byl spor veden připadne Tabitským. Od té doby se toto území jmenuje 'Tabitské pláně'.
 // enu //
 The war between the Principality of Tabit and the Principality of Narola ends with the defeat of the Narfolk. The victory of the Tabit is achieved mainly thanks to the Binder stormtroopers who led the Tabit regular army. The territory that was disputed goes to the Tabit. Since then, this territory has been called the 'Tabit Plains'.
 

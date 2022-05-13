@@ -913,6 +913,14 @@ model modelStrifeBurningBarrel {
 	offset 0.0 0.0 0.0
 	frameindex BBAR A 0 0 
 }
+model wosD_StrifeBurningBarrelNewFlame {
+	path "models/props/lanterns/"
+	model 0 "burningBarrel.md3"
+	skin 0 "tx_burningBarrel.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model LightGlobe {
 	path "models/props/lanterns/"
 	model 0 "lightGlobe.md3"

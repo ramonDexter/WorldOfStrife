@@ -1037,7 +1037,7 @@ Actor MM_food_01 21053
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 1"
+	//$Title "food 1 platter1"
 	
 	radius 8
 	height 8
@@ -1053,7 +1053,7 @@ Actor MM_food_02 21054
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 2"
+	//$Title "food 2 platter2"
 	
 	radius 8
 	height 8
@@ -1069,7 +1069,7 @@ Actor MM_food_03 21055
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 3"
+	//$Title "food 3 platter3"
 	
 	radius 8
 	height 8
@@ -1085,7 +1085,7 @@ Actor MM_food_04 21056
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 4"
+	//$Title "food 4 cup1"
 	
 	radius 8
 	height 8
@@ -1101,7 +1101,7 @@ Actor MM_food_05 21057
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 5"
+	//$Title "food 5 cup2"
 	
 	radius 8
 	height 8
@@ -1117,7 +1117,7 @@ Actor MM_food_06 21058
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 6"
+	//$Title "food 6 pot small"
 	+NOGRAVITY
 	+DONTTHRUST
 	
@@ -1136,7 +1136,7 @@ Actor MM_food_07 21059
 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 7"
+	//$Title "food 7 pot large"
 	+NOGRAVITY
 	+DONTTHRUST
 	
@@ -9235,6 +9235,9 @@ actor burningBrazierEmbers : newFlameEmbersLarge {
 actor burningBowlEmbers : newFlameEmbersLarge {
 	tag "burning bowl"
 }
+actor strifeBurningBarrelEmbers : newFlameEmbersLarge {
+	tag "burning barrel"
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor hugeTorchFlameNew : NewFlameHuge {
 	tag "huge torch"
@@ -9250,6 +9253,9 @@ actor burningBrazierFlameNew : NewFlameHuge {
 }
 actor burningBowlFlameNew : NewFlameHuge {
 	tag "burning bowl"
+}
+actor strifeBurningBarrelFlameNew : NewFlameHuge {
+	tag "burning barrel"
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor wosD_hugeTorchNewFlame 21524 {
@@ -9334,6 +9340,23 @@ actor wosD_burningBowlNewFlame 21528 {
 			DUMM A -1 NODELAY {
 				A_SpawnItemEx("burningBowlFlameNew", 0, 0, 5);
 				A_SpawnItemEx("burningBowlEmbers", 0, 0, 5);
+			}
+			Stop
+	}
+}
+actor wosD_StrifeBurningBarrelNewFlame 21529 {
+	//$Category "Decorations/Wos"
+	//$Title "newFlame burning barrel"
+	tag "burning barrel"
+	Radius 16
+	Height 48
+	+SOLID
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1 NODELAY {
+				A_SpawnItemEx("strifeBurningBarrelFlameNew", 0, 0, 26);
+				A_SpawnItemEx("strifeBurningBarrelEmbers", 0, 0, 28);
 			}
 			Stop
 	}

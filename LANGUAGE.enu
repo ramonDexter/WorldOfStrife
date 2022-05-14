@@ -86,7 +86,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"X_002:X_003:X_004:X_005:"
 			"X_006:X_007:X_008:X_009:"
 			"X_010:X_011:F_NAT00:F_NAT01:"
-			"F_OLDWOD:";
+			"F_OLDWOD:DNTILE04:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -357,6 +357,7 @@ STEP_CEIL3_4 = "step/tile/a";
 STEP_FLAT3 = "step/tile/a";
 STEP_F_GCIRCL = "step/tile/a";
 STEP_F_BCIRCL = "step/tile/a";
+STEP_DNTILE04 = "step/tile/a";
 
 // Tile B //////////////////////////////////////////////////////////////////////
 STEP_FLOOR7_2 = "step/tile/b";

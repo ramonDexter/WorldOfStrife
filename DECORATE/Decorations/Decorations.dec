@@ -1412,8 +1412,8 @@ Actor MM_gold 21070
 	+NOGRAVITY
 	
 	Tag "mmgold"
-	radius 8
-	height 20
+	radius 4
+	height 8
 	
 	States
 	{
@@ -1450,8 +1450,8 @@ Actor MM_relic 21072
 	+NOGRAVITY
 	
 	Tag "golden relic"
-	radius 8
-	height 32
+	radius 6
+	height 20
 	//scale 0.8
 	
 	States
@@ -6124,7 +6124,7 @@ actor wosD_dex_plant2 21337 {
 	+DONTTHRUST
 	Tag "decorative plant"
 	radius 8
-	height 40
+	height 52
 	States {
 		Spawn:
 			DUMM A -1
@@ -6150,7 +6150,7 @@ actor wosD_dex_plant3 21338 {
 actor wosD_dex_basket 21339 {
 	//$Category "Decorations/deusEx"
 	//$Title "dEx basket"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST

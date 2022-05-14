@@ -447,3 +447,9 @@ texture BWEB01
 	pic BWEB02 tics 4
 	pic BWEB03 tics 4
 	pic BWEB04 tics 4
+
+// water filtration filled //
+texture WATDEV1
+	pic WATDEV1 tics 4
+	pic WATDEV2 tics 4
+	pic WATDEV3 tics 4

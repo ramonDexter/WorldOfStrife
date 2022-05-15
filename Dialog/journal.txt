@@ -164,10 +164,9 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
+        /////////////////////////////////////////////////////////////
 
-        //quest - murder in city bath
-        //-----------------------------------------------------------
+        // quest - murder in city bath //////////////////////////////
         Choice {
             Text = "[ Quest - Murder in City Bath ]";
             NextPage = "journal_SQ_q_murderInBath_given";
@@ -180,8 +179,9 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
-
+        /////////////////////////////////////////////////////////////
+		
+        /////////////////////////////////////////////////////////////
         Choice {
             Text = "[ Quest - Heretical hideout in Silent Hills ]";
             NextPage = "journal_SQ_bishop_hereticHideout_opener";
@@ -194,9 +194,9 @@ Conversation {
                 amount = 1;
             }
         }
+        /////////////////////////////////////////////////////////////
 
-        //tekguildmaster q01 Ore delivery
-        //-----------------------------------------------------------
+        // tekguildmaster q01 Ore delivery //////////////////////////
         Choice {
             Text = "[ Quest - Ore Delivery ]";
             NextPage = "journal_SQ_tekguildmaster_quest01_opener";
@@ -209,10 +209,9 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
+        /////////////////////////////////////////////////////////////
 
-        //tekguildmaster q02 Broken Machinery
-        //-----------------------------------------------------------
+        // tekguildmaster q02 Broken Machinery //////////////////////
         Choice {
             Text = "[ Quest - Broken Machinery ]";
             NextPage = "journal_SQ_tekguildmaster_quest02_opener";
@@ -225,10 +224,9 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
+        /////////////////////////////////////////////////////////////
 
-        //tekguildmaster q03 Powerplant Trouble
-        //-----------------------------------------------------------
+        // tekguildmaster q03 Powerplant Trouble ////////////////////
         Choice {
             Text = "[ Quest - Trouble in coastal powerplant ]";
             NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
@@ -241,10 +239,9 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
+        /////////////////////////////////////////////////////////////
 
-        //millport - najdi kuchare pro council club
-        //-----------------------------------------------------------
+        //millport - najdi kuchare pro council club /////////////////
         Choice {
             Text = "[ Quest - Find a cook for the Council Club ]";
             NextPage = "journal_MPquest_councilClubCook_given";
@@ -257,9 +254,37 @@ Conversation {
                 amount = 1;
             }
         }
-        //-----------------------------------------------------------
+        /////////////////////////////////////////////////////////////
 
-        
+		// eastcliff - Destroy Spider Nests /////////////////////////
+        Choice {
+			Text = "[ Quest - Destroy Spider Nests ]";
+			NextPage = "journal_ECquest_killSpiders_given";
+            Require {
+                item = "m14q_killQueens_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_killQueens_finished";
+                amount = 1;
+            }
+		}
+        /////////////////////////////////////////////////////////////
+
+		// eastcliff - Raided Waterplant ////////////////////////////
+		Choice {
+			Text = "[ Quest - Raided Waterplant ]";
+			NextPage = "journal_ECquest_raidedwaterplant_given";
+			Require {
+                item = "m14q_raidedWaterplant_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_raidedWaterplant_finished";
+                amount = 1;
+            }
+		}
+        /////////////////////////////////////////////////////////////
 
 
 	}
@@ -1491,6 +1516,104 @@ Conversation {
 			NextPage = "journal_quests";
 		}
     }
+    //##################################################################################################################
+	
+    //##################################################################################################################
+    // eastcliff quests ################################################################################################
+    //##################################################################################################################
+	
+	// starosta quest 1 pobij pavouky
+    //##################################################################################################################
+	Page {
+        link = "journal_ECquest_killSpiders_killed";
+        ifitem {
+            item = "m14q_killQueens_killed";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_killSpiders_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[ ] Destroy the spider nests\n[ ] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_killSpiders_finished";
+        ifitem {
+            item = "m14q_killQueens_killed";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_killSpiders_killed"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[ ] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_ECquest_killSpiders_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[X] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    //##################################################################################################################
+	
+	// starosta quest 2 pobij bandity
+    //##################################################################################################################
+    Page {
+        link = "journal_ECquest_raidedwaterplant_killed";
+        ifitem {
+            item = "m14q_raidedWaterplant_killed";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_raidedwaterplant_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[ ] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_raidedwaterplant_finished";
+        ifitem {
+            item = "m14q_raidedWaterplant_finished";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_raidedwaterplant_killed"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_ECquest_raidedwaterplant_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[X] Return back to mayor Holden";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }	
     //##################################################################################################################
 
 }

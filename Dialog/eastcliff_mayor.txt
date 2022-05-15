@@ -30,6 +30,54 @@ Conversation {
             Text = "Do you need any help here?";
             Nextpage = "EC_mayor_help";
         }
+        Choice {
+            Text = "About the spider nests...";
+            Nextpage = "EC_mayor_quest1givenNotDone";
+            Require {
+                item = "m14q_killQueens_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_killQueens_killed";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "About the spider nests...";
+            Nextpage = "EC_mayor_quest1queensKilled";
+            Require {
+                item = "m14q_killQueens_killed";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_killQueens_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "About the waterplant...";
+            Nextpage = "EC_mayor_quest2givenNotDone";
+            Require {
+                item = "m14q_raidedWaterplant_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_raidedWaterplant_killed";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "About the waterplant...";
+            Nextpage = "EC_mayor_quest2banditskilled";
+            Require {
+                item = "m14q_raidedWaterplant_killed";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_raidedWaterplant_finished";
+                amount = 1;
+            }
+        }
     }
     Page {
         pageName = "EC_mayor_else";
@@ -77,6 +125,183 @@ Conversation {
         Choice {
             Text = "\c[yellow]<< BACK";
             Nextpage = "EC_mayor_else";
+        }
+        Choice {
+            Text = "And what kind of help do you need?";
+            Nextpage = "EC_mayor_quest1opener";
+            Exclude {
+                item = "m14q_killQueens_given";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "You said you have another job.";
+            Nextpage = "EC_mayor_quest2opener";
+            require {
+                item = "m14q_killQueens_finished";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_raidedWaterplant_given";
+                amount = 1;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1opener";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Oh, the kind of help you Binders usually provide. I have problem with an insect infestation, and I would like to ask you to help with that insect problem.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh, insects, not interested.";
+            Nextpage = "EC_mayor_opener";
+        }
+        Choice {
+            Text = "Okay, tell me more.";
+            Nextpage = "EC_mayor_quest1tellmore";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1tellmore";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Well, due to unstability of the local sandstone rocks, new caves opened in our farms up the cliffs. And big nasty spiders crawl out of these caves! Our guards are trying to get rid of them, but everytime they clean the place, even more spiders return. So we need some specialist to handle this case. Would you try it?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "And how do you expect me to handle this,\nwhen your guards couldn't help?";
+            Nextpage = "EC_mayor_quest1howtodo";
+        }
+        Choice {
+            Text = "Sorry, I've changed my mind.";
+            Nextpage = "EC_mayor_opener";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1howtodo";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Well, this time I'm better prepared than before. I've bought some explosive devices, so you will just have to kill any spider there and then blow up their nest. Don't worry, the reward will be worth the effort.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Sorry, I've changed my mind.";
+            Nextpage = "EC_mayor_opener";
+        }
+        Choice {
+            Text = "Okay, I'll do it.";
+            Nextpage = "EC_mayor_quest1accept";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1accept";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]THere is only one, quite important thing. The explosives are marked #1, #2 and #3. The numbers are according to the nests. I've marked the nests on your map, so be careful using the explosives. They are shaped for each of the caves, so PLEASE, don't mix them up.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh, hope I'll do good.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[shite]I'm sure you will. Good luck!";
+            Special = 80;
+            arg0 = 1401;
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1givenNotDone";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Were you succesfull with the spider nests?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Sorry, not yet.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[shite]So get on with it!";
+            Closedialog = true;
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1queensKilled";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Were you succesfull with the spider nests?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh yeah. It was a wonderful firework!";
+            Nextpage = "EC_mayor_quest1finisher";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest1finisher";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Oh, thank you. The spiders were a threat that were causing a harm to our harvest and our farmers also. And thanks to you, they are gone. Once again, thank you. Oh, I mostly forgot your reward. Here is 500 gold, some meds and and some armor repair kits.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I thank you, too.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[white]You're welcome!\nBy the way, I have another job for you, now that you've proven how helpful you're.";
+            Special = 80;
+            arg0 = 1402;
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest2opener";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]This time, it's more serious. Some kind of bandit scum have taken control of our waterplant that supplies water to the farms. I think you're the best for this task. What do you say, purge some bandit scum, that should be easy for a skilled Binder like you. Say, I double the reward this time.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Let me think about it for a while.";
+            Nextpage = "EC_mayor_opener";
+        }
+        Choice {
+            Text = "Okay, that sure sounds easy. Tell me more.";
+            Nextpage = "EC_mayor_quest2tellmemore";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest2tellmemore";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Yes, the waterplant lies just next to the entrance to the farms. The entrance to the waterplant is locked out, so I really don't know how they got in. According to the security cameras, these are some low level scum led by some kind of wird militia, I've never seen uniforms like this. I think there are 20 of them. The task is easy. Kill them all and then return back to me. I'll watch you on the security cameras, so don't worry, I'll count them. Aand, as I said, I'll double the reward.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "EC_mayor_opener";
+        }
+        Choice {
+            Text = "Okay, I'll do it.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[white]Good luck!";
+            Special = 80;
+            arg0 = 1403;
+            Closedialog = true;
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest2givenNotDone";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]How's it going with the bandits in the waterplant? Are they dead?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Not yet.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[white]So let's get back to work!";
+            Closedialog = true;
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest2banditskilled";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]How's it going with the bandits in the waterplant? Are they dead?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Yes, I've killed them all.";
+            Nextpage = "EC_mayor_quest2finisher";
+        }
+    }
+    Page {
+        pageName = "EC_mayor_quest2finisher";
+        Name = "\c[yellow]Holden, village mayor"; 
+        Dialog = "\c[white]Oh, that's great. Here is your promised reward. 1000 gold, some meds, armor repair kits and some grenades. You've earned them. I have to say thank you, again.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "I thank you.";
+            Nextpage = "EC_mayor_opener";
+            YesMessage = "\c[white]You're welcome! And I have just another task for you. Hope it'll be the last one.";
+            Special = 80;
+            arg0 = 1404;
         }
     }
 }

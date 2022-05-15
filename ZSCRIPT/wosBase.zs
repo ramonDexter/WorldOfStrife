@@ -67,6 +67,87 @@ class groundDustSplash : WaterSplash {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+//  QUEST MARKERS in SVE style  ////////////////////////////////////////////////
+class questMarker : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRKR ABCDEFEDCB 2;
+			Loop;
+	}
+}
+class questMarker_1 : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker#1"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRK1 ABCDEFEDCB 2;
+			Loop;
+	}
+}
+class questMarker_2 : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker#2"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRK2 ABCDEFEDCB 2;
+			Loop;
+	}
+}
+class questMarker_3 : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker#3"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRK3 ABCDEFEDCB 2;
+			Loop;
+	}
+}
+class questMarker_4 : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker#4"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRK4 ABCDEFEDCB 2;
+			Loop;
+	}
+}
+class questMarker_5 : MapMarker {
+	Default {
+		//$Category "Map Markers"
+		//$Color 7
+		//$Title "quest marker#5"
+		//$NotAngled
+	}	
+	States {
+		Spawn:
+			MRK5 ABCDEFEDCB 2;
+			Loop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
 //  RANDOM DROPS - RANDOM SPAWNERS  ////////////////////////////////////////////
 //heretic random drops
 class randomDrop_01 : RandomSpawner {
@@ -104,22 +185,6 @@ class randomDrop_04 : RandomSpawner {
 		DropItem "Hyposprej", 128, 1;
 		DropItem "Flare", 128, 1;
 		DropItem "DeployableShieldItem", 64, 1;
-	}
-}
-////////////////////////////////////////////////////////////////////////////////
-
-//  quest marker in SVE style  /////////////////////////////////////////////////
-class questMarker : MapMarker {
-	Default {
-		//$Category "Map Markers"
-		//$Color 7
-		//$Title "quest marker"
-		//$NotAngled
-	}	
-	States {
-		Spawn:
-			MRKR ABCDEFEDCB 2;
-			Loop;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -167,6 +232,28 @@ class wos_bright_techlampbrass : techlampbrass replaces techlampbrass {
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

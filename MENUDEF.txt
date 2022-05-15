@@ -56,6 +56,7 @@ OptionMenu "wosDEBUGmenu" {
 	Command "Binder pack", "netevent give_binderPackRegular"
 	Command "Binder pack light", "netevent give_binderpackLight"
 	Command "Shouldergun", "netevent give_shouldergun"
+	Command "badge&implants", "netevent give_badgeimplants"
 	//StaticText ""
 	Command "10% accuracy", "netevent give_10Accuracy"
 	Command "10% stamina", "netevent give_10Stamina"

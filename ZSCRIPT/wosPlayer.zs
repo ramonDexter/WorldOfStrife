@@ -14,6 +14,7 @@ class binderPlayer : StrifePlayer {
     bool bracing;
     int stamin;
 	int maxstamin; //to allow handling of var in statusbar
+	bool staminaImplant;
 	int bleedlevel;
 	int bleedtimer;
 	double pvel;
@@ -25,6 +26,7 @@ class binderPlayer : StrifePlayer {
 	int currentarmor;
 	int armoramount;
 	int armorpower;
+	int armorclass;
 	int SpeedUpgrade;
 	Actor backplaye;
 	bool nightEyeGrainEnable;
@@ -101,40 +103,11 @@ class binderPlayer : StrifePlayer {
 		pang=angle;
 		encumbrance=0; //Before ticking, reset the encumbrance
         Super.Tick();
-		// LF encumberance code ////////////////////////////////////////////////
-		weightmax=2500; //Set the default		
-        //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
-        //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
-        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
-		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
-        If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000) 
-		// armor&mass //////////////////////////////////////////////////////////
-		If (armoramount < 1) {
-			currentarmor=0; 
-            armorpower=0;
-        }		
-		If (currentarmor==1) {
-            encumbrance+=LeatherWeight/5; 
-            mass=300; 
-            bNOBLOOD=0;
-        } Else If (currentarmor==2) {
-            encumbrance+=MetalWeight/5; 
-            mass=400; 
-            bNOBLOOD=1;
-        } Else If (currentarmor==3) {
-            encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=0;
-        } Else If (currentarmor==4) {
-            encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=1;
-        } Else {
-			mass=100; 
-			bNOBLOOD=0; 
-			PainChance=255;
-		}
+		// LF code /////////////////////////////////////////////////////////////
+		
 		// custom functions ////////////////////////////////////////////////////
+		HandleEncumberance();
+		HandleArmorMass();
 		HandleWeight();
 		HandleBleed();
 		HandlePlayerBody();
@@ -143,18 +116,62 @@ class binderPlayer : StrifePlayer {
 		LedgeClimb();
 		HandleSpeed();
 		
+		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
+
+
 		// obsolete functions //////////////////////////////////////////////////
 		//CheckSprint();
 		//FallDamage();
         //HealthSlow();
-
-		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
+		/*weightmax=2500; //Set the default		
+        //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
+        //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
+        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
+		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
+        If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)*/
+		// armor&mass //////////////////////////////////////////////////////////
+		/*If (armoramount < 1) {
+			currentarmor=0; 
+            armorpower=0;
+        }		
+		If (currentarmor==1) {
+            encumbrance+=LeatherWeight/5; 
+            mass=300; 
+            bNOBLOOD=0;
+			armorpower = 24;
+        } Else If (currentarmor==2) {
+            encumbrance+=MetalWeight/5; 
+            mass=400; 
+            bNOBLOOD=1;
+			armorpower = 44;
+        } Else If (currentarmor==3) {
+            encumbrance+=BinderBasicWeight/7; 
+            mass=350; 
+            bNOBLOOD=0;
+			armorpower = 33;
+        } Else If (currentarmor==4) {
+            encumbrance+=BinderBasicWeight/7; 
+            mass=350; 
+            bNOBLOOD=1;
+			armorpower = 50;
+        } Else if (currentarmor==5) {
+			encumbrance+=BinderBasicWeight/7; 
+            mass=350; 
+            bNOBLOOD=1;
+			armorpower = 65;
+		} 
+		Else {
+			mass=100; 
+			bNOBLOOD=0; 
+			PainChance=255;
+		}*/
     }
 
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
 		// LF sprinting code //
         stamin = 400;
+		bleedlevel = 0;
 		////////
     }	
 
@@ -184,7 +201,61 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 
 	// common handlers /////////////////////////////////////////////////////////
-	// spawn player body ///////////////////////////////////////////////////////
+	// encumberance ////////////////////////////////////////////////////////////
+	void HandleEncumberance() {
+		weightmax=2500; //Set the default		
+        //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
+        //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
+        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
+		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
+        If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)
+	}
+ 	// armor&mass //////////////////////////////////////////////////////////////
+	void HandleArmorMass() {
+		If (armoramount < 1) {
+			//reset power when no armor or depleted
+			currentarmor=0; 
+            armorpower=0;
+			armorclass=0;
+        }		
+		If (currentarmor==1) {
+            encumbrance+=LeatherWeight/5; 
+            mass=300; 
+            bNOBLOOD=0;
+			armorpower = 24;
+			armorclass = 4;
+        } Else If (currentarmor==2) {
+            encumbrance+=MetalWeight/5; 
+            mass=400; 
+            bNOBLOOD=1;
+			armorpower = 44;
+			armorclass = 7;
+        } Else If (currentarmor==3) {
+            encumbrance+=BinderBasicWeight/7; 
+            mass=350; 
+            bNOBLOOD=0;
+			armorpower = 33;
+			armorclass = 6;
+        } Else If (currentarmor==4) {
+            encumbrance+=BinderAdvancedWeight/7; 
+            mass=350; 
+            bNOBLOOD=1;
+			armorpower = 50;
+			armorclass = 9;
+        } Else if (currentarmor==5) {
+			encumbrance+=KineticWeight/7; 
+            mass=250; 
+            bNOBLOOD=1;
+			armorpower = 65;
+			armorclass = 12;
+		} 
+		Else {
+			mass=100; 
+			bNOBLOOD=0; 
+			PainChance=255;
+		}
+	}
+ 	// spawn player body ///////////////////////////////////////////////////////
 	void HandlePlayerBody() {
 		If(backplaye==null) {
 			bool spawn1; 
@@ -250,7 +321,7 @@ class binderPlayer : StrifePlayer {
 		If ( pawnmaxhealth >= 160 && pawnmaxhealth < 180 ) { maxstamin = 600; }
 		If ( pawnmaxhealth >= 180 && pawnmaxhealth < 200 ) { maxstamin = 700; }
 		If ( pawnmaxhealth == 200 ) { maxstamin = 800; }
-		If ( player.cheats&(CF_GODMODE|CF_GODMODE2) ) { stamin = maxstamin; }		
+		If ( (player.cheats&(CF_GODMODE|CF_GODMODE2)) || staminaImplant ) { stamin = maxstamin; }		
 		If( sprinting == 0 ) {
 			If( stamin > 10 && GetPlayerInput(MODINPUT_BUTTONS)&BT_SPEED ) {
 				//A_Print("speeding up!", 1.0);
@@ -304,7 +375,7 @@ class binderPlayer : StrifePlayer {
 					If(mod=="Fire"&&currentarmor==6) {newdamage/=2;}
 					If(mod=="Fire"/*&&CountInv("LFPowerMask")>0)||*/&&currentarmor==4){}
 					Else{
-						armoramount -= damage/10; //vykomnetovanim se vypne damage armoru >> armor funguje jako ve falloutu nebo v hexenu
+						armoramount -= damage/20; //vykomnetovanim se vypne damage armoru >> armor funguje jako ve falloutu nebo v hexenu
 					}
 					If(armoramount<=0) {
 						armorpower=0;
@@ -649,7 +720,7 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("magazine_shoulderGun", 32);
 			A_GiveInventory("shoulderGunCharger", 1);
 		}
-		else if ( name ~== "gold" || name ~=="money" ) {
+		else if ( name ~== "gold" || name ~=="money" || name ~== "coin" || name ~== "coins" ) {
 			if ( !amount ) {
 				A_GiveInventory("goldCoin", 1);
 			} else {
@@ -657,7 +728,7 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 		else if ( name ~== "all" || name ~== "everything" ) {
-			A_Log("\c[red]Cheat blocked. Use other cheats if you are in need of assistance.");
+			A_Log("\c[red][ Cheat blocked. Use other cheats if you are in need of assistance. ]");
 		}
 		else if ( name ~== "keys" ) {
 			A_GiveInventory("skeletonKey", 1);

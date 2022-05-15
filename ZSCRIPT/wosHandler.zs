@@ -172,7 +172,7 @@ class wosEventHandler : EventHandler {
 		// ACS support //
 		
 
-        if ( e.Name == "give_binderPackRegular" ) {
+        if ( e.Name ~== "give_binderPackRegular" ) {
             pawn.A_GiveInventory("binder_helmet", 1);
 			pawn.A_GiveInventory("shoulderGun", 1);
 			pawn.A_GiveInventory("magazine_shoulderGun", 32);
@@ -193,6 +193,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosHyposprej", 30);
 			pawn.A_GiveInventory("wosKombopack", 10);
 			pawn.A_GiveInventory("wosInstaLek", 5);
+			pawn.A_GiveInventory("wosi_StimDevice", 5);
 			//BlasterTurret_item
 			pawn.A_GiveInventory("wosInterceptordrone", 5);	
 			//DeployableShieldItem
@@ -201,7 +202,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosSwarmers", 5);
 			// goldCoin x2500
 			pawn.A_GiveInventory("goldCoin", 2500);
-        } else if ( e.Name == "give_binderpackLight" ) {
+        } else if ( e.Name ~== "give_binderpackLight" ) {
 			pawn.A_GiveInventory("binder_helmet", 1);
 			// weapons
 			pawn.A_GiveInventory("shoulderGun", 1);
@@ -218,19 +219,20 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosKombopack", 5);
 			pawn.A_GiveInventory("wosInstaLek", 2);
 			pawn.A_GiveInventory("wosKombopack", 5);
+			pawn.A_GiveInventory("wosi_StimDevice", 5);
 			// grenades
 			pawn.A_GiveInventory("wosGrenadeE", 5);
 			pawn.A_GiveInventory("wosGrenadeF", 5);
 			pawn.A_GiveInventory("wosInstaLek", 5);
 			// gold
 			pawn.A_GiveInventory("goldCoin", 2500);
-		} else if ( e.Name == "give_allarmor" ) {
+		} else if ( e.Name ~== "give_allarmor" ) {
 			pawn.A_GiveInventory("wosLeatherArmor", 1);
 			pawn.A_GiveInventory("wosMetalArmor", 1);
 			pawn.A_GiveInventory("wosBinderArmorBasic", 1);
 			pawn.A_GiveInventory("wosBinderArmorAdvanced", 1);
 			pawn.A_GiveInventory("wosKineticArmor", 1);
-		} else if ( e.Name == "give_allweapons" ) {
+		} else if ( e.Name ~== "give_allweapons" ) {
 			pawn.A_GiveInventory("wosStrifeXbow", 1);
 			pawn.A_GiveInventory("StormPistol", 1);
 			pawn.A_GiveInventory("laserPistol", 1);
@@ -240,43 +242,47 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosFlamethrower", 1);
 			pawn.A_GiveInventory("wosGrenadeLauncher", 1);
 			pawn.A_GiveInventory("wosMauler", 1);
-		} else if ( e.Name == "give_shouldergun" ) {
+		} else if ( e.Name ~== "give_shouldergun" ) {
 			pawn.A_GiveInventory("shoulderGun", 1);
 			pawn.A_GiveInventory("magazine_shoulderGun", 32);
 			pawn.A_GiveInventory("shoulderGunCharger", 1);
-		} else if ( e.Name == "give_10Accuracy" ) {
+		} else if ( e.Name ~== "give_10Accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
-		} else if ( e.Name == "give_10Stamina" ) {
+		} else if ( e.Name ~== "give_10Stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 10);
-		} else if ( e.Name == "give_10Mind" ) {
+		} else if ( e.Name ~== "give_10Mind" ) {
 			pawn.A_GiveInventory("upgradeMind", 1);
-		} else if ( e.Name == "give_20Accuracy" ) {
+		} else if ( e.Name ~== "give_20Accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
-		} else if ( e.Name == "give_20Stamina" ) {
+		} else if ( e.Name ~== "give_20Stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 20);
-		} else if ( e.Name == "give_20Mind" ) {
+		} else if ( e.Name ~== "give_20Mind" ) {
 			pawn.A_GiveInventory("upgradeMind", 1);
 			pawn.A_GiveInventory("upgradeMind", 1);
-		} else if ( e.Name == "give_40accuracy" ) {
+		} else if ( e.Name ~== "give_40accuracy" ) {
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
 			pawn.A_GiveInventory("upgradeAccuracy", 1);
-		} else if ( e.Name == "give_40stamina" ) {
+		} else if ( e.Name ~== "give_40stamina" ) {
 			pawn.A_GiveInventory("UpgradeStamina", 40);
-		} else if ( e.Name == "give_40Mind" ) {
+		} else if ( e.Name ~== "give_40Mind" ) {
 			pawn.A_GiveInventory("upgradeMind", 1);
 			pawn.A_GiveInventory("upgradeMind", 1);
 			pawn.A_GiveInventory("upgradeMind", 1);
 			pawn.A_GiveInventory("upgradeMind", 1);
-		} else if ( e.Name == "log_pawnmaxhealth" ) {
+		} else if ( e.Name ~== "log_pawnmaxhealth" ) {
 			pawn.A_logInt(pawn.GetMaxHealth(true));
-		} else if ( e.Name == "heal_Player" ) {
+		} else if ( e.Name ~== "heal_Player" ) {
 			pawn.A_GiveInventory("surgUnitHealing", 1);
+		} else if ( e.Name ~== "give_badgeimplants" ) {
+			pawn.A_GiveInventory("binderbadge", 1);
+			pawn.A_GiveInventory("implant_health", 1);
+			pawn.A_GiveInventory("implant_stamina", 1);
 		}
 		// ACS script support //
-		else if ( e.Name == "selectDagger" ) {
+		else if ( e.Name ~== "selectDagger" ) {
 			pawn.A_SelectWeapon("wosPunchDagger");
 		}
     }

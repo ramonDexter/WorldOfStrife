@@ -1,0 +1,44 @@
+// surgical unit healing //////////////////////////////////////////////////////////////
+script 7700 (void) {
+	ScriptCall("wosZSC2ACS", "FN_healPlayer");
+}
+// accuracy upgrade script ////////////////////////////////////////////////////////////
+script 7701 (void) {
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player
+	Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    //upgrade players accuracy
+	ScriptCall("wosZSC2ACS", "FN_give10accuracy");
+    Delay(5);
+	FadeTo(0, 0, 0, 0.0, 1.5);
+	Delay(50);
+	SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);//unfreeze player
+}
+
+// stamina upgrade script /////////////////////////////////////////////////////////////
+script 7702 (void) {
+    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player
+	Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    //upgrade players stamina
+	ScriptCall("wosZSC2ACS", "FN_give10stamina");
+    Delay(5);
+	FadeTo(0, 0, 0, 0.0, 1.5);
+	Delay(50);
+	SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);//unfreeze player
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+// mind upgrade script ////////////////////////////////////////////////////////////////
+script 7703 (void) {
+	SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player
+	Fadeto(0, 0, 0, 1.0, 1.5);
+	Delay(50);
+    //upgrade players mind
+	ScriptCall("wosZSC2ACS", "FN_give10mind");
+    Delay(5);
+	FadeTo(0, 0, 0, 0.0, 1.5);
+	Delay(50);
+	SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);//unfreeze player
+}
+///////////////////////////////////////////////////////////////////////////////////////

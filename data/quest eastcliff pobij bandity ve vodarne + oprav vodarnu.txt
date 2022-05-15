@@ -1,0 +1,67 @@
+// quest eastcliff pobij bandity ve vodarne + oprav vodarnu ///////////////////////////
+// po pobiti pavouku starosta pozada o dalsi pomoc
+// vodarnu obsadili banditi
+// pobij vsehny bandity
+// pak se vrat ke starostovi
+
+//m14q_raidedWaterplant_given
+//m14q_raidedWaterplant_killed
+//m14q_raidedWaterplant_finished
+
+// zadani v dialogu po splneni questu#1 //
+script 1403 (void) {
+    displayQuest("Raided Waterplant", 1);
+    GiveInventory("m14k_waterplantKey", 1);
+    GiveInventory("m14q_raidedWaterplant_given", 1);
+}
+
+// kill bandit counter script //
+int killedCounter;
+script "killAllHeretics" (void) {
+	killedCounter++;
+    int remainingBandits = 20 - killedCounter;
+    Log(l:"\c[red][ Bandit Killed! Remaining: ", i:remainingBandits, l:"\c[red] ]");
+	if ( killedCounter == 20 ) {
+		displayQuest("All bandits are dead. Report back to the mayor.", 2);
+        GiveInventory("m14q_raidedWaterplant_killed", 1);
+	}
+}
+
+// po navratu v dialogu //
+script 1404 (void) {
+    displayQuest("Raided Waterplant", 3);
+    GiveInventory("m14q_raidedWaterplant_finished", 1);
+    GiveInventory("goldCoin", 1000);
+    GiveInventory("wosHyposprej", 10);
+    GiveInventory("wosArmorShard", 10);
+    GiveInventory("wosGrenadeE", 5);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+// quest eastcliff oprav vodarnu //
+// po pobiti banditu muze hrac zjistit, ze je vodarna poskozena
+// jinak ho starosta pozada o dalsi pomoc
+// banditi ukradli z vodarny hlavni procesor
+// bez nej vodarna nepracuje
+// nikdo nevi, kam banditi odesli
+// v Millportu v Black Pub hrac ziska info, kde se banditi skryvaji
+// banditi se skryvaji vychodne od ravenrocku ve starem mlyne
+// hrac muze procesor vykoupit, nebo bandity pobit, nebo ho ukrast
+// odmena, upgrade token
+
+m14q_damagedWaterplant_found
+m14q_damagedWaterplant_given
+m14q_damagedWaterplant_acquired
+m14q_damagedWaterplant_fixed
+m14q_damagedWaterplant_finished
+
+// hrac muze najit poskozeni
+script "checkDamage" (void) {
+    Print(l:"Looks like something was removed from here.");
+    GiveInventory("m14q_damagedWaterplant_found", 1);
+}
+// zadani v dialogu
+script 1405 (void) {
+    displayQuest("Damaged waterplant", 1);
+    GiveInventory("m14q_damagedWaterplant_given", 1);
+}

@@ -1,0 +1,95 @@
+// quest eastcliff pobij pavouky /////////////////////////////////////////////////////
+// je treba zabit 3 kralovny, ktere rodi nove pavouky
+// kralovny se ukryvaji v doupatech u poli
+
+//m14q_killQueens_given
+//m14q_killQueens_killed
+//m14q_killQueens_finished
+
+//zadani questu v dialogu
+script 1401 (void) {
+    displayQuest("Kill spider queens", 1);
+    GiveInventory("m14q_killQueens_given", 1);
+	Thing_deactivate(117); //queen1 nest
+	Thing_deactivate(118); //queen1 nest
+	Thing_deactivate(119); //queen1 nest
+	//raise the caves open - to prevent problems with no assigned quest firing out
+	Ceiling_MoveToValue(120, 256, 810, false);
+	Ceiling_MoveToValue(121, 256, 730, false);
+	Ceiling_MoveToValue(122, 256, 794, false);
+}
+
+
+
+bool queen1killed;
+bool queen2killed;
+bool queen3killed;
+
+script "placeBombHere" (void) {
+	if ( queen1killed || queen2killed || queen3killed ) { Print(l:"Place the bomb here!"); }
+}
+
+// queen1 dies ...
+script "queen1" (void) {
+    queen1killed = true;
+    displayQuest("Killed spider queen!", 2);
+    SpawnSpot ("ProximityInteractionIcon", 112, 1401);
+	ACS_NamedExecuteAlways("", 0);
+    Delay(35);
+    displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
+}
+// script to blow first cave
+script "m14_queen1_blowWall" (void) {
+    SpawnSpot ("dummy_explosion", 112); //explosion effect
+    //lower wall by explosion
+    Ceiling_MoveToValue(111, 256, 698, false);
+	ACS_NamedExecuteAlways("deadQueens", 0);
+	Thing_activate(117); //queen1 nest
+}
+// queen2 dies ...
+script "queen2" (void) {
+    queen1killed = true;
+    displayQuest("Killed spider queen!", 2);
+    SpawnSpot ("ProximityInteractionIcon", 114, 1402);
+    Delay(35);
+    displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
+}
+// script to blow second cave
+script "m14_queen2_blowWall" (void) {
+    SpawnSpot ("dummy_explosion", 114); //explosion effect
+    //lower wall by explosion
+    Ceiling_MoveToValue(113, 256, 602, false);
+	ACS_NamedExecuteAlways("deadQueens", 0);
+	Thing_activate(118); //queen1 nest
+}
+// queen3 dies ...
+script "queen3" (void) {
+    queen1killed = true;
+    displayQuest("Killed spider queen!", 2);
+    SpawnSpot ("ProximityInteractionIcon", 116, 1403);
+    Delay(35);
+    displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
+}
+// script to blow third cave
+script "m14_queen3_blowWall" (void) {
+    SpawnSpot ("dummy_explosion", 116); //explosion effect
+    //lower wall by explosion
+    Ceiling_MoveToValue(115, 256, 626, false);
+	ACS_NamedExecuteAlways("deadQueens", 0);
+	Thing_activate(119); //queen1 nest
+}
+script "deadQueens" (void) {
+    if ( queen1killed && queen2killed && queen3killed ) {
+        displayQuest("Spider queens are dead. You can return to the mayor now.", 2);
+        GiveInventory("m14q_killQueens_killed", 1);
+    }
+}
+// po navratu v dialogu
+script 1402 (void) {
+    displayQuest("Kill spider queens", 3);
+    GiveInventory("m14q_killQueens_finished", 1);
+    GiveInventory("goldCoin", 500);
+    GiveInventory("wosHyposprej", 5);
+    GiveInventory("wosArmorShard", 5);
+}
+///////////////////////////////////////////////////////////////////////////////////////

@@ -103,55 +103,90 @@ class upgradeToken : CustomInventory {
 			Fail;
 	}
 }
-// upgrade implants ///
-class wosi_implant_accuracy : CustomInventory {
+
+// upgrade implants ////////////////////////////////////////////////////////////
+
+// health regeneration implant /////////////////////////////////////////////////
+class implant_health : CustomInventory {
+
+	int counter;
+	override void AttachToOwner (Actor other) {
+        super.AttachToOwner(other);
+        counter = 0;
+    }
+	override void Tick() {
+		if ( counter == 35 ) {
+			let pawn = binderPlayer(owner);
+			if ( owner && owner.player ) {
+				if ( pawn.health < pawn.maxhealth ) { 
+					owner.GiveBody(1, 0); 
+					counter = 0;
+					if ( pawn.bleedlevel > 0 ) {
+						pawn.bleedlevel = 0;
+						A_Log("\c[red][ Bleeding stopped! ]");
+					}
+				}
+			}
+		} else {
+			counter++;
+		}
+		Super.Tick();
+	}
+
 	Default {
-		//$Category "Quest things/WoS"
-		//$Title "Accuracy Implant"
-				
-		+INVENTORY.INVBAR
-		Tag "Accuracy Implant";
-		Inventory.Icon "I_UPAC";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 10;
-		Inventory.InterHubAmount 10;		
-		Inventory.PickupMessage "Accuracy Implant Acquired!";
-		Inventory.PickupSound "misc/p_pkup";
+		-INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		+INVENTORY.UNTOSSABLE
+		+INVENTORY.UNCLEARABLE
+		tag "Health Regeneration Implant";
+		inventory.icon "I_HLRG";
+		inventory.Amount 1;
+		inventory.MaxAmount 1;
+		Inventory.InterHubAmount 1;
 		Mass 0;
 	}
+
 	States {
 		Spawn:
-			UPAC A -1;
+			DUMM A -1;
 			Stop;
 		Use:
 			TNT1 A 0;
 			Fail;
 	}
 }
-class wosi_implant_stamina : CustomInventory {
+
+// full stamina implant ////////////////////////////////////////////////////////
+class implant_stamina : CustomInventory {
 	Default {
-		//$Category "Quest things/WoS"
-		//$Title "Stamina Implant"
-				
-		+INVENTORY.INVBAR
-		Tag "Stamina Implant";
-		Inventory.Icon "I_UPST";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 10;
-		Inventory.InterHubAmount 10;		
-		Inventory.PickupMessage "Stamina Implant Acquired!";
-		Inventory.PickupSound "misc/p_pkup";
+		-INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		+INVENTORY.UNTOSSABLE
+		+INVENTORY.UNCLEARABLE
+		tag "Stamina Implant";
+		inventory.icon "I_STRG";
+		inventory.Amount 1;
+		inventory.MaxAmount 1;
+		Inventory.InterHubAmount 1;
 		Mass 0;
 	}
+
+	override void AttachToOwner (Actor other) {
+        super.AttachToOwner(other);
+        let pawn = binderPlayer(owner);
+        pawn.staminaImplant = true;
+    }
+
 	States {
 		Spawn:
-			UPST A -1;
+			DUMM A -1;
 			Stop;
 		Use:
 			TNT1 A 0;
 			Fail;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
 
 // mind upgrade ////////////////////////////////////////////////////////////////
 class upgradeMind : DummyStrifeItem {
@@ -750,6 +785,159 @@ class q_bomb_01 : actor {
 	}
 }
 
+// queen1 cave /////////////////////////////////////////////////////////////////
+class q_dynamite_queen1 : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "explosive device#1"
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		+INVENTORY.UNTOSSABLE
+		Tag "Explosive Device #1";
+		Inventory.Icon "I_HRLC";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1;
+		Inventory.InterhubAmount 1;
+		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupSound "misc/i_pkup";
+		height 32;
+		Mass 0;
+	}
+	States {
+		Spawn:
+			MS01 A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_SpawnItemEx("q_bomb_queen1", 16, 0, 0);
+			Stop;
+	}
+}
+class q_bomb_queen1 : actor {
+	Default {
+		-SOLID
+		height 32;
+		radius 16;
+	}
+	States {
+		Spawn:
+			MS01 A 175;
+		Death:
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 A 0;
+			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
+            TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
+			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
+			TNT1 A 0 ACS_NamedExecute("m14_queen1_blowWall", 14);
+			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
+			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
+			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
+            stop;
+			
+	}
+}
+// queen2 cave /////////////////////////////////////////////////////////////////
+class q_dynamite_queen2 : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "explosive device#2"
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		+INVENTORY.UNTOSSABLE
+		Tag "Explosive Device #2";
+		Inventory.Icon "I_HRLC";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1;
+		Inventory.InterhubAmount 1;
+		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupSound "misc/i_pkup";
+		height 32;
+		Mass 0;
+	}
+	States {
+		Spawn:
+			MS01 A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_SpawnItemEx("q_bomb_queen2", 16, 0, 0);
+			Stop;
+	}
+}
+class q_bomb_queen2 : actor {
+	Default {
+		-SOLID
+		height 32;
+		radius 16;
+	}
+	States {
+		Spawn:
+			MS01 A 175;
+		Death:
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 A 0;
+			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
+            TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
+			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
+			TNT1 A 0 ACS_NamedExecute("m14_queen2_blowWall", 14);
+			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
+			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
+			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
+            stop;
+			
+	}
+}
+// queen3 cave /////////////////////////////////////////////////////////////////
+class q_dynamite_queen3 : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "explosive device#2"
+		+INVENTORY.INVBAR
+		+INVENTORY.UNDROPPABLE
+		+INVENTORY.UNTOSSABLE
+		Tag "Explosive Device #2";
+		Inventory.Icon "I_HRLC";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 1;
+		Inventory.InterhubAmount 1;
+		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupSound "misc/i_pkup";
+		height 32;
+		Mass 0;
+	}
+	States {
+		Spawn:
+			MS01 A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_SpawnItemEx("q_bomb_queen3", 16, 0, 0);
+			Stop;
+	}
+}
+class q_bomb_queen3 : actor {
+	Default {
+		-SOLID
+		height 32;
+		radius 16;
+	}
+	States {
+		Spawn:
+			MS01 A 175;
+		Death:
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 A 0;
+			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
+            TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
+			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
+			TNT1 A 0 ACS_NamedExecute("m14_queen3_blowWall", 14);
+			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
+			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
+			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
+            stop;
+			
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
 
 class hereticLeaderSkull : CustomInventory {
 	Default {
@@ -869,6 +1057,56 @@ class millPortTransportTicket : travelTicket {
 ////////////////////////////////////////////////////////////////////////////////
 //  deprecated&&unused stuff  //////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+/*class wosi_implant_accuracy : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Accuracy Implant"
+				
+		+INVENTORY.INVBAR
+		Tag "Accuracy Implant";
+		Inventory.Icon "I_UPAC";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;		
+		Inventory.PickupMessage "Accuracy Implant Acquired!";
+		Inventory.PickupSound "misc/p_pkup";
+		Mass 0;
+	}
+	States {
+		Spawn:
+			UPAC A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosi_implant_stamina : CustomInventory {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Stamina Implant"
+				
+		+INVENTORY.INVBAR
+		Tag "Stamina Implant";
+		Inventory.Icon "I_UPST";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 10;
+		Inventory.InterHubAmount 10;		
+		Inventory.PickupMessage "Stamina Implant Acquired!";
+		Inventory.PickupSound "misc/p_pkup";
+		Mass 0;
+	}
+	States {
+		Spawn:
+			UPST A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}*/
+
 /*
 class flatCoin : coin replaces coin {
 	Default {

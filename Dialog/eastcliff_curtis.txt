@@ -171,7 +171,7 @@ Conversation {
     Page {
         pageName = "eastcliff_curtis_questions";
         Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Okay, what would you like to know? I know a littble about everything here in Eastcliff. Just ask.";
+        Dialog = "\c[white]Okay, what would you like to know? I know a little about everything here in Eastcliff. Just ask.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";

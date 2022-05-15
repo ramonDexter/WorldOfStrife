@@ -46,6 +46,8 @@ class wosArmorBase : wosPickup {
     property ArmorPower : armorpower;
     int armormass;
     property ArmorMass : armormass;
+	//int armorClass;
+	//property ArmorClass : armorClass;
     bool nosound;
     property NoSound : nosound;
 	
@@ -183,9 +185,10 @@ class wosArmorBase : wosPickup {
 class wosLeatherArmor : wosArmorBase replaces LeatherArmor {
     Default {
         wosArmorBase.ArmorType 1;
-        wosArmorBase.ArmorPower 33;
+        wosArmorBase.ArmorPower 24;
 		wosArmorBase.ArmorMass 125;
 		wosArmorBase.ArmorAmount 100;
+		//wosArmorBase.ArmorClass 4;
         Inventory.Icon "I_ARM2";
 		Inventory.PickupMessage "Picked up a suit of leather armor.";
 		Tag "Leather Armor";
@@ -200,9 +203,10 @@ class wosLeatherArmor : wosArmorBase replaces LeatherArmor {
 class wosMetalArmor : wosArmorBase replaces MetalArmor {
     Default {
         wosArmorBase.ArmorType 2;
-		wosArmorBase.ArmorPower 50;
+		wosArmorBase.ArmorPower 44;
 		wosArmorBase.ArmorMass 250;
 		wosArmorBase.ArmorAmount 200;
+		//wosArmorBase.ArmorClass 7;
 		Inventory.Icon "I_ARM1";
 		Inventory.PickupMessage "Picked up a suit of metal armor.";
 		Tag "Metal Armor";
@@ -223,9 +227,10 @@ class wosBinderArmorBasic : wosArmorBase {
 		Inventory.PickupMessage "$W_CYBERARMOR1";
 		Inventory.UseSound "sounds/armorLight";
         wosArmorBase.ArmorType 3;
-		wosArmorBase.ArmorPower 33;
+		wosArmorBase.ArmorPower 35;
 		wosArmorBase.ArmorMass 135;
 		wosArmorBase.ArmorAmount 120;
+		//wosArmorBase.ArmorClass 6;
         Mass BinderBasicWeight;
     }
     States {
@@ -243,9 +248,10 @@ class wosBinderArmorAdvanced : wosArmorBase {
 		Inventory.PickupMessage "$F_CYBERARMOR2";
 		Inventory.UseSound "sounds/armorLight";
         wosArmorBase.ArmorType 4;
-		wosArmorBase.ArmorPower 45;
+		wosArmorBase.ArmorPower 50;
 		wosArmorBase.ArmorMass 165;
 		wosArmorBase.ArmorAmount 240;
+		//wosArmorBase.ArmorClass 9;
         Mass BinderAdvancedWeight;
     }
     States {
@@ -266,6 +272,7 @@ class wosKineticArmor : wosArmorBase {
 		wosArmorBase.ArmorPower 65;
 		wosArmorBase.ArmorMass 140;
 		wosArmorBase.ArmorAmount 360;
+		//wosArmorBase.ArmorClass 12;
         Mass KineticWeight;
     }
     States {

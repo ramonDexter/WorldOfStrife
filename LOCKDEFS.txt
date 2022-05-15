@@ -104,3 +104,10 @@ Lock 64 Strife {
 	Message "Locked!"
 	Mapcolor 150 150 150
 }
+
+Lock 65 Strife {
+	//$Title "m14 waterplant key"
+	Any { m14k_waterplantKey }
+	Message "You need the Waterplant Key!"
+	Mapcolor 150 150 150
+}

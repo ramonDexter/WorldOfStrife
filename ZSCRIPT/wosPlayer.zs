@@ -744,6 +744,10 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("m08k_BP_pokladnice", 1);
 			//A_GiveInventory("", 1);
 		}
+		else if ( name ~== "implants" ) {
+			A_GiveInventory("implant_health", 1);
+			A_GiveInventory("implant_stamina", 1);
+		}
 		else {
 			Super.CheatGive(name,amount);
 		}

@@ -254,15 +254,14 @@ class journalitem : CustomInventory {
 ////////////////////////////////////////////////////////////////////////////////
 //  binder badge - also serves as token  ///////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class binderBadge : CustomInventory {
+class binderBadge : CustomInventory {	
 	Default {
 		//$Category "Quest things/WoS"
 		//$Title "Binder Badge"
 		
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
-		+INVENTORY.UNTOSSABLE
-		
+		+INVENTORY.UNTOSSABLE		
 		Tag "Binder Badge";
 		inventory.icon "I_BADG";
 		inventory.amount 1;

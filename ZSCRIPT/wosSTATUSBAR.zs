@@ -326,7 +326,7 @@ class wosStatusBar : BaseStatusBar {
 				Else If(pawn.currentarmor==3){armortype="I_RGA1";}
 				Else If(pawn.currentarmor==4){armortype="I_RGA2";}
 				Else If(pawn.currentarmor==5){armortype="I_SHLD";}
-				DrawImage(armortype,(-56, 2),DI_ITEM_OFFSETS);
+				DrawImage(armortype,(-56, 4),DI_ITEM_OFFSETS);
 				//DrawString(mYelFont, FormatNumber(item.Amount, 3, 5), (362, 19), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
 				//DrawInventoryIcon(armortype, (120, 177), DI_ITEM_OFFSETS);
 				//If(pawn.currentarmor!=6){DrawString(mYelFont, FormatNumber(pawn.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
@@ -336,22 +336,27 @@ class wosStatusBar : BaseStatusBar {
             Inventory ammo1, ammo2; 
             [ ammo1, ammo2 ]= GetCurrentAmmo ();
             if (ammo2 != NULL) {
-                DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 33), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-                DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (-12, 40), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);		
+                DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);		
 				//drawBar int vertical == 0 left>right; 1 right>left; 2 down>up; 3 up>down
-				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 31), 0, 3);				
-                DrawInventoryIcon (ammo2, (-25, 2), DI_ITEM_OFFSETS);
+				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 27), 0, 3);				
+                DrawInventoryIcon (ammo2, (-25, -2), DI_ITEM_OFFSETS);
             } else if ( ammo1 != NULL ) {
-				DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 37), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
+				DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 33), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
 				//DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (370, 148), DI_TEXT_ALIGN_RIGHT);		
-				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 31), 0, 3);
-				DrawInventoryIcon (ammo1, (-25, 2), DI_ITEM_OFFSETS);
+				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 27), 0, 3);
+				DrawInventoryIcon (ammo1, (-25, -2), DI_ITEM_OFFSETS);
 			}			
 			
             //  weapon icon  ///////////////////////////////////////////////////
             item = CPlayer.ReadyWeapon;
             if ( item != null ) {
-                DrawInventoryIcon(CPlayer.ReadyWeapon, (20, 1), DI_ITEM_OFFSETS);
+				if ( item is "staffBlaster" ) { //draw long staffblaster icon insted short one in h_astf
+					drawImage ("STFSH", (14, 1), DI_ITEM_OFFSETS);
+				} else {
+					DrawInventoryIcon(CPlayer.ReadyWeapon, (20, 1), DI_ITEM_OFFSETS);
+				}
+                //DrawInventoryIcon(CPlayer.ReadyWeapon, (20, 1), DI_ITEM_OFFSETS);
             }            
 
             //  shoulderGun icon + ammo display  ///////////////////////////////
@@ -587,9 +592,10 @@ class wosStatusBar : BaseStatusBar {
 				//  Does the player have a binder badge?  //////////////////////
 				item = CPlayer.mo.FindInventory ("binderBadge");
 				if (item != NULL) {
-					screen.DrawTexture (item.Icon, true,
-						left + 219*xscale,
-						top + 70*yscale,
+					textureID id_badge = TexMan.CheckForTexture("h_badg", 0, 0); 
+					screen.DrawTexture (id_badge, true,
+						left + 225*xscale,
+						top + 71*yscale,
 						DTA_CleanNoMove, true);
 				}
 				
@@ -673,13 +679,14 @@ class wosStatusBar : BaseStatusBar {
 
 				for (i = 0; i < 10; ++i) {
 					item = CPlayer.mo.FindInventory (WeaponList[i]);
-					if (item != NULL) {
+					if (item != NULL) {						
 						screen.DrawTexture (item.Icon, true,
 							left + WeaponX[i] * xscale,
 							top + WeaponY[i] * yscale,
 							DTA_CleanNoMove, true,
 							DTA_LeftOffset, 0,
 							DTA_TopOffset, 0);
+						
 					}
 				}
 			break;

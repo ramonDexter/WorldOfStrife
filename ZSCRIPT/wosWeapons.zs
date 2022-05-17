@@ -24,7 +24,9 @@ class wosWeapon : StrifeWeapon {
 		//let ownr = binderPlayer(invoker.owner);
 		//player.mo.PlayAttacking2 ();
 		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
-		A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
+		//A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
+		A_FireProjectile (projectileType, angl, false, 5.5, 3, FPF_NOAUTOAIM);	
+		//SpawnPlayerMissile(projectileType);
 		//ownr.takeInventory("magazine_blasterStaff", 1);
 		A_StartSound("weapons/staffShoot", 0);
 		A_SpawnItemEx(flashType, 8, 0, 16, 0);	

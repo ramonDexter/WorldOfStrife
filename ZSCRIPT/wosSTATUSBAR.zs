@@ -4,8 +4,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 class wosStatusBar : BaseStatusBar {
 	
-	InventoryBarState diparms;
-	InventoryBarState diparms_argsbar;
+	//InventoryBarState diparms;
+	//InventoryBarState diparms_argsbar;
 
 	// Number of tics to move the popscreen up and down.
 	const POP_TIME = (Thinker.TICRATE/8);
@@ -84,7 +84,7 @@ class wosStatusBar : BaseStatusBar {
 		mBigFont = HUDFont.Create("BigFont", 0, false, 2, 2);
         mESfont = HUDFont.Create("ESFONT", 0, false, 1, 1);
 
-        diparms_argsbar = InventoryBarState.CreateNoBox(mYelFont, boxsize:(36, 30), innersize:(40, 30), arrowoffs:(0, 0));
+        //diparms_argsbar = InventoryBarState.CreateNoBox(mYelFont, boxsize:(36, 30), innersize:(40, 30), arrowoffs:(0, 0));
 
         
 	}
@@ -560,6 +560,11 @@ class wosStatusBar : BaseStatusBar {
 				// health implant display //////////////////////////////////////
 				item = CPlayer.mo.FindInventory ("implant_health");
 				if ( item != NULL ) {
+					textureID implantName = TexMan.CheckForTexture("HLTRGN", 0, 0);
+					screen.DrawTexture (implantName, true,
+						left + 128*xscale,
+						top + 62*yscale,
+						DTA_CleanNoMove, true);
 					screen.DrawTexture (item.Icon, true,
 						left + 105*xscale,
 						top + 63*yscale,
@@ -569,6 +574,11 @@ class wosStatusBar : BaseStatusBar {
  				// stamina implant display /////////////////////////////////////
 				item = CPlayer.mo.FindInventory ("implant_stamina");
 				if ( item != NULL ) {
+					textureID implantName = TexMan.CheckForTexture("ENRGY", 0, 0);
+					screen.DrawTexture (implantName, true,
+						left + 129*xscale,
+						top + 91*yscale,
+						DTA_CleanNoMove, true);
 					screen.DrawTexture (item.Icon, true,
 						left + 105*xscale,
 						top + 83*yscale,

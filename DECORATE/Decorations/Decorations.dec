@@ -258,6 +258,8 @@ actor bloodCandleFire {
 	+FORCEYBILLBOARD
 	Tag "Candle"
 	scale 0.55
+	radius 4
+	height 4
 	States {
 		Spawn:
 			BCDF ABCD 4 Bright light("candleLight")
@@ -6006,7 +6008,7 @@ actor candle2 : candle replaces candle 21330 {
 	+DONTTHRUST
 	tag "candle"
 	radius 4
-	height 4
+	height 8
 	States {
 		Spawn:
 			DUMM A -1 Bright NODELAY A_SpawnItemEx("bloodCandleFire", 0, 0, 12)

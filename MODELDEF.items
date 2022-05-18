@@ -502,7 +502,7 @@ model wosBulletsBox {
 	path "models/items/ammo/"
 	model 0 "BoxOfBullets.md3"
 	skin 0 "tx_boxOfBulletst.png"
-	scale 3.5 3.5 3.5
+	scale 1.57 1.57 1.57
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -979,7 +979,7 @@ model wosGrenadeE_3 {
 	path "models/items/grenades/"
 	model 0 "p_grenadeTrio.md3"
 	skin 0 "tx_grnd_expl.png"
-	scale 2.5 2.5 2.5
+	scale 1.8 1.8 1.8
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -1005,7 +1005,7 @@ model wosGrenadeF_3 {
 	path "models/items/grenades/"
 	model 0 "p_grenadeTrio.md3"
 	skin 0 "tx_grnd_fire.png"
-	scale 2.5 2.5 2.5
+	scale 1.8 1.8 1.8
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -1036,7 +1036,7 @@ model wosGrenadeG_3 {
 	USEACTORROLL
 	path "models/items/grenades/"
 	model 0 "gasGrenadeTrio.md3"
-	scale 3.0 3.0 3.0
+	scale 1.65 1.65 1.65
 	offset 0.0 0.0 0.0
 	skin 0 "tx_gasg1.png"
 	frameindex DUMM A 0 0

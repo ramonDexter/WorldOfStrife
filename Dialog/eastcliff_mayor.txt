@@ -117,6 +117,7 @@ Conversation {
             Nextpage = "EC_mayor_else";
         }
     }
+    // quests //////////////////////////////////////////////////////////////////////////////////
     Page {
         pageName = "EC_mayor_help";
         Name = "\c[yellow]Holden, village mayor";
@@ -147,6 +148,7 @@ Conversation {
             }
         }
     }
+    // quest 1 start ///////////////////////////////////////////////////////////////////////////
     Page {
         pageName = "EC_mayor_quest1opener";
         Name = "\c[yellow]Holden, village mayor"; 
@@ -200,6 +202,7 @@ Conversation {
             YesMessage = "\c[shite]I'm sure you will. Good luck!";
             Special = 80;
             arg0 = 1401;
+            Closedialog = true;
         }
     }
     Page {
@@ -237,6 +240,7 @@ Conversation {
             arg0 = 1402;
         }
     }
+    // quest 2 start ///////////////////////////////////////////////////////////////////////////
     Page {
         pageName = "EC_mayor_quest2opener";
         Name = "\c[yellow]Holden, village mayor"; 

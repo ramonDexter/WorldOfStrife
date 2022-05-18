@@ -710,6 +710,7 @@ class wosStatusBar : BaseStatusBar {
 				TextureID idPOPMAP8 = TexMan.CheckForTexture("IPOPM8", 0, 0);
 				screen.DrawTexture (idPOPSTBKLog, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
 				screen.DrawText(SmallFont, Font.CR_UNTRANSLATED, left + 22 * xscale, top - 8 * yscale, "LOCATION: "..level.FormatMapName(2), DTA_CleanNoMove, true);
+				screen.DrawText(SmallFont2, Font.CR_UNTRANSLATED, left + 250 * xscale, top -8 * yscale, Level.TimeFormatted(), DTA_CleanNoMove, true);
 				screen.DrawTexture (idPOPSTATLog, true, left, top-50, DTA_CleanNoMove, true);
 				/*if ( level.mapname ~== "map08") {
 					screen.DrawTexture (idPOPMAP8, true, left, top-50, DTA_CleanNoMove, true, DTA_Alpha, 0.75);
@@ -722,7 +723,7 @@ class wosStatusBar : BaseStatusBar {
 				
 				/*
 				// Draw the latest log message.
-				screen.DrawText(SmallFont2, Font.CR_UNTRANSLATED, left + 210 * xscale, top + 8 * yscale, Level.TimeFormatted(),
+				screen.DrawText(SmallFont2, Font.CR_UNTRANSLATED, left + 210 * xscale, top -8 * yscale, Level.TimeFormatted(),
 					DTA_CleanNoMove, true);
 
 				if (CPlayer.LogText.Length() > 0 {

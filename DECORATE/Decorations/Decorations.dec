@@ -9041,7 +9041,7 @@ actor wosD_dex_pan3 21513 {
 	//$Category "Decorations/deusEx"
 	//$Title "dex pan3"
 	-NOBLOCKMAP
-	tag "metal pan"
+	tag "small metal pot"
 	radius 8
 	height 8
 	States {
@@ -9054,7 +9054,7 @@ actor wosD_dex_pan4 21514 {
 	//$Category "Decorations/deusEx"
 	//$Title "dex pan4"
 	-NOBLOCKMAP
-	tag "metal pan"
+	tag "metal pot"
 	radius 8
 	height 8
 	States {

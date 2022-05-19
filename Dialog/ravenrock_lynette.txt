@@ -55,7 +55,7 @@ Conversation {
         Dialog = "\c[white]Well, I won't tell you much. Ravenrock is small farmer's settlement, notable only for the brewery. Yes, it makes locals wealthy, but it also causes a lot people to drink more than they should. Especially the tourists are annoying.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_lynette_else";
         }
     }
@@ -65,7 +65,7 @@ Conversation {
         Dialog = "\c[white]The locals are nice people, but little bit too simple for my taste. You know, they are farmers and most of their talks are about the farming.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_lynette_else";
         }
     }
@@ -75,7 +75,7 @@ Conversation {
         Dialog = "\c[white]Sorry, I don't travel.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_lynette_else";
         }
     }

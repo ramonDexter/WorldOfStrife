@@ -55,7 +55,7 @@ Conversation {
         Dialog = "\c[white]Our humble village is known for the big brewery, over there in the center of village. Thanks to local farmers, our beer is good and strong, and the market demoand is sometimes so strong, that we hardly fulfill our guests orders. Besides that, locals live from farming or hunting in the surrounding areas. Be careful, as the local fauna os little bit aggresive.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_mayor_else";
         }
         Choice {
@@ -69,7 +69,7 @@ Conversation {
         Dialog = "\c[white]Oh, yes, certainly. The road leading south will take you straight to Millport. It's not far from here, around 40 kilometres. The road leading to the west will take you to Narfolk, but that's little bit further, like 500 kilometres or so. This area is dangerous, as wild fauna and bandits roam the area. Be careful especially around the old cemetery, not far from village western gate. The eastern road leads to Kolyma. These areas are little bit calmer, but your still need to be careful when travelling in these parts. The roads leads through plateau infected with carnivorous plants.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "Thank you. I wanted something else.";
+            Text = "Thank you. \c[yellow]<< BACK";
             Nextpage = "ravenrock_mayor_else";
         }
     }
@@ -79,7 +79,7 @@ Conversation {
         Dialog = "\c[white]The locals are mostly farmers. Around one third of the village population works in the brewery. ";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_mayor_else";
         }
     }
@@ -89,7 +89,7 @@ Conversation {
         Dialog = "\c[white]Certainly, yes. Thanks for asking. I can always welcome any help offered.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_mayor_else";
         }
     }

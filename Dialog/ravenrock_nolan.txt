@@ -55,7 +55,7 @@ Conversation {
         Dialog = "\c[white]Yes, sure I can do. Ravenrock's nice little village. We got everyhting we need. Our fields give good crops, and we're brewing our own beer here, which is nice.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_nolan_else";
         }
     }
@@ -65,7 +65,7 @@ Conversation {
         Dialog = "\c[white]I'm not usre if I'm the right person to ask. I spend most of my day on the field, so I don't really have time for travelling. The only time I've got time to travel is when I go to visit the market at Millport, which is to the south from here, about fifty kilometres. Well, that's all I can tell you about surroundings.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "ravenrock_nolan_else";
         }
     }

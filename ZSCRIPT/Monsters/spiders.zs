@@ -1827,8 +1827,8 @@ class PSXWasp : actor
 		Tag "Wasp Drone";
 		Species "Wasp";
 		Health 128;
-		Radius 31;
-		Height 56;
+		Radius 16;
+		Height 32;
 		Mass 400;
 		Speed 7;
 		PainChance 128;
@@ -2003,8 +2003,8 @@ class PSWasp : Spider
 		Tag "Wasp Warrior";
 		Species "Wasp";
 		Health 200;
-		Radius 21;
-		Height 35;
+		Radius 24;
+		Height 56;
 		Mass 600;
 		PainChance 96;
 		Speed 3;

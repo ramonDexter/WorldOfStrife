@@ -12,6 +12,7 @@ const gChest100Weight = 50;
 const gChest250Weight = 125;
 const gChest500Weight = 250;
 const wosDegninOreWeight = 10;
+const wosq_chemicalOreWeight = 15;
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1038,6 +1039,28 @@ class wosDegninOre : wosPickup {
 		Use:
 			TNT1 A 0;
 			Stop;
+	}
+}
+// chemical ore 
+class wosq_chemicalOre : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Copper Sulfate Ore"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Copper Sulfate Ore";
+		Inventory.Icon "I_CHOR";
+		Inventory.PickupMessage "You picked up the Coppar Sulfate Ore.";
+		Mass wosq_chemicalOreWeight;
+	}
+	States {
+		Spawn:
+			CHOR A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
 	}
 }
 

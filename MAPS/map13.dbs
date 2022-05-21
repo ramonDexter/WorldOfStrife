@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -9277.271f;
+		viewpositionx = -3754.864f;
 		defaulttoptexture = "CONCRT03";
 		overrideceilheight = false;
-		viewpositiony = -7385.032f;
+		viewpositiony = -12079.93f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 16;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1378571f;
+		viewscale = 0.3937313f;
 		
 		plugins
 		{
@@ -83,46 +83,40 @@ maps
 			}
 		}
 		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
 		fieldtypes
 		{
-			
-			linedef
-			{
-				arg0str = 2;
-				alpha = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_bottom = 1;
-				offsety_mid = 1;
-				offsetx_mid = 1;
-				offsety_top = 1;
-				offsetx_top = 1;
-				offsety_bottom = 1;
-				scalex_bottom = 1;
-				scaley_bottom = 1;
-			}
 			
 			sector
 			{
 				user_managed_3d_floor = 3;
-				xpanningceiling = 1;
-				ypanningceiling = 1;
-				rotationceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				xpanningfloor = 1;
-				ypanningfloor = 1;
-				rotationfloor = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
-			}
-			
-			thing
-			{
-				arg0str = 2;
-				conversation = 0;
 			}
 		}
 		
@@ -146,8 +140,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 2507;
-				firstvisibleline = 102;
+				caretposition = 12129;
+				firstvisibleline = 436;
 				activetab = true;
 			}
 		}

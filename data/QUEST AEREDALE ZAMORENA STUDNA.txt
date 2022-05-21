@@ -1,0 +1,53 @@
+// QUEST AEREDALE ZAMORENA STUDNA /////////////////////////////////////////////////////
+// v aeredale je zamorena studna
+// mistni techmisth nema vybaveni na vycisteni, mistni medik taky ne
+// techsmith te posle za medikem do millportu
+// medik v millportu na vyrobu cisticiho roztoku potrebuje rudu z dolu v map13 - borderlands north
+// v dolech musis najit 10 kusu rudy
+// po navratu ti medik da roztok
+// po noavratu do aeredale te techmisth posle studnu vycistit
+// po vycisteni odmena: penize, lekarsky vyabeni, armoshards, ~upgradeToken
+///////////////////////////////////////////////////////////////////////////////////////
+
+// inv tokeny /////////////////////////////////////////////////////////////////////////
+// m10q_troubledWaters_given
+// m10q_troubledWaters_go4ore
+// m10q_troubledWaters_foundOre
+// m10q_troubledWaters_haveSolution
+// m10q_troubledWaters_cleanedWater
+// m10q_troubledWaters_finished
+///////////////////////////////////////////////////////////////////////////////////////
+
+// zaadani v dialogu u techsmithe v aeredale //////////////////////////////////////////
+script 1001 (void) {
+    displayQuest("Troubled Waters", 1);
+    GiveInventory("m10q_troubledWaters_given", 1);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+// v dialogu u medika v millportu /////////////////////////////////////////////////////
+script 1002 (void) {
+    displayQuest("Troubled Waters - Go for Copper Sulfate Ore", 2);
+    GiveInventory("m10q_troubledWaters_go4ore", 1);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+// v dolech - nalezeni potrebnyho poctu kusu rudy /////////////////////////////////////
+int chemOreCount;
+script "collectChemOre" (void) {
+	chemOreCount++;
+	if ( chemOreCount == 10 ) {
+		DisplayQuest("Troubled Waters - You've found just enough Copper Sulfate Ore. You can return to the Medic now.", 2);
+        GiveInventory("m10q_troubledWaters_foundOre", 1);
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////
+
+// po navratu v dialogu u medika v millportu //////////////////////////////////////////
+script 1003 (void) {
+    displayQuest("Troubled Waters - Return to the Techmisth in Aeredale", 2);
+    GiveInventory("m10q_troubledWaters_haveSolution", 1);
+    GiveInventory("wosq_chemSolution", 1);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+

@@ -13,6 +13,7 @@ const gChest250Weight = 125;
 const gChest500Weight = 250;
 const wosDegninOreWeight = 10;
 const wosq_chemicalOreWeight = 15;
+const wosq_chemicalSolutionWeight = 15;
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1057,6 +1058,27 @@ class wosq_chemicalOre : wosPickup {
 	States {
 		Spawn:
 			CHOR A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosq_chemicalSolution : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "Chemical Solution"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Chemical Solution";
+		Inventory.Icon "I_CHSL";
+		Inventory.PickupMessage "You picked up the Coppar Sulfate Ore.";
+		Mass wosq_chemicalSolutionWeight;
+	}
+	States {
+		Spawn:
+			CHSL A -1;
 			Stop;
 		Use:
 			TNT1 A 0;

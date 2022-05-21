@@ -74,6 +74,7 @@ OptionMenu "wosDEBUGmenu" {
 	Command "MAP09 - Eastern Coast", "MAP MAP09"
 	Command "MAP10 - Borderlands West", "MAP MAP10"
 	Command "MAP12 - Ravenrock", "MAP MAP12"
+	Command "MAP13 - Borderlands North", "MAP MAP13"
 	Command "MAP14 - Eastcliff", "MAP MAP14"
 }
 ////////////////////////////////////////////////////////////////////////////////

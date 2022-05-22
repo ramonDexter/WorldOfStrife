@@ -776,4 +776,57 @@ class wosCandyBar : wosPickup {
 			Stop;
 	}
 }
+
+class FoodTrayHeal : Health {
+	Default {
+		inventory.Amount 17;
+	}
+}
+class wosFoodTrayEmpty : wosPickup {
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "Empty Food Tray"
+		Tag "Empty Food Tray";
+		inventory.icon "I_FDTE";
+		Inventory.PickupMessage "You picked up the Empty Food Tray!";
+		inventory.usesound "sounds/eat";
+		Mass wosCandyBarWeight;
+	}
+	States {
+		Spawn:
+			FDTE A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosFoodTray : wosPickup {
+	action void W_eatFoodTray() {
+		if ( player == null ) {
+            return;
+        }
+		A_GiveInventory("FoodTrayHeal", 1);
+		A_GiveInventory("wosFoodTrayEmpty", 1);
+	}
+
+	Default {
+		//$Category "Health and Armor/Food"
+		//$Title "Food Tray"
+		
+		Tag "Food Tray";
+		inventory.icon "I_FDTR";
+		Inventory.PickupMessage "You picked up the Food Tray!";
+		inventory.usesound "sounds/eat";
+		Mass wosCandyBarWeight;
+	}
+	States {
+		Spawn:
+			FDTR A -1;
+			Stop;
+		Use:
+			TNT1 A 0 W_eatFoodTray();
+			Stop;
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////

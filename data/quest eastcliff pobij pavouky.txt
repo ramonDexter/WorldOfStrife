@@ -8,12 +8,15 @@
 
 //zadani questu v dialogu
 script 1401 (void) {
-    displayQuest("Kill spider queens", 1);
+    displayQuest("Destroy Spider Nests", 1);
     GiveInventory("m14q_killQueens_given", 1);
+    GiveInventory("wosq_dynamite_queen1", 1);
+    GiveInventory("wosq_dynamite_queen2", 1);
+    GiveInventory("wosq_dynamite_queen3", 1);
 	Thing_deactivate(117); //queen1 nest
 	Thing_deactivate(118); //queen1 nest
 	Thing_deactivate(119); //queen1 nest
-	//raise the caves open - to prevent problems with no assigned quest firing out
+	//raise the caves open
 	Ceiling_MoveToValue(120, 256, 810, false);
 	Ceiling_MoveToValue(121, 256, 730, false);
 	Ceiling_MoveToValue(122, 256, 794, false);
@@ -25,21 +28,28 @@ bool queen1killed;
 bool queen2killed;
 bool queen3killed;
 
-script "placeBombHere" (void) {
+/*script "placeBombHere" (void) {
 	if ( queen1killed || queen2killed || queen3killed ) { Print(l:"Place the bomb here!"); }
-}
+}*/ //>>dela zscript sam volanej z acs
 
 // queen1 dies ...
 script "queen1" (void) {
     queen1killed = true;
     displayQuest("Killed spider queen!", 2);
     SpawnSpot ("ProximityInteractionIcon", 112, 1401);
-	ACS_NamedExecuteAlways("", 0);
+	//ACS_NamedExecuteAlways("", 0);
     Delay(35);
     displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
 }
+script "queen1bombAllow" (void) {
+	ScriptCall("q_dynamite_queen1", "F_plantBombAllow");
+}
+script "queen1bombDisable" (void) {
+	ScriptCall("q_dynamite_queen1", "F_plantBombDisable");
+}
 // script to blow first cave
 script "m14_queen1_blowWall" (void) {
+	queen1killed = true;
     SpawnSpot ("dummy_explosion", 112); //explosion effect
     //lower wall by explosion
     Ceiling_MoveToValue(111, 256, 698, false);
@@ -48,14 +58,21 @@ script "m14_queen1_blowWall" (void) {
 }
 // queen2 dies ...
 script "queen2" (void) {
-    queen1killed = true;
+    queen2killed = true;
     displayQuest("Killed spider queen!", 2);
     SpawnSpot ("ProximityInteractionIcon", 114, 1402);
     Delay(35);
     displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
 }
+script "queen2bombAllow" (void) {
+	ScriptCall("q_dynamite_queen2", "F_plantBombAllow");
+}
+script "queen2bombDisable" (void) {
+	ScriptCall("q_dynamite_queen2", "F_plantBombDisable");
+}
 // script to blow second cave
 script "m14_queen2_blowWall" (void) {
+	queen2killed = true;
     SpawnSpot ("dummy_explosion", 114); //explosion effect
     //lower wall by explosion
     Ceiling_MoveToValue(113, 256, 602, false);
@@ -64,14 +81,21 @@ script "m14_queen2_blowWall" (void) {
 }
 // queen3 dies ...
 script "queen3" (void) {
-    queen1killed = true;
+    queen3killed = true;
     displayQuest("Killed spider queen!", 2);
     SpawnSpot ("ProximityInteractionIcon", 116, 1403);
     Delay(35);
     displayQuest("Collapse the cave. Place the bomb on the marked spot near entrance.", 2);
 }
+script "queen3bombAllow" (void) {
+	ScriptCall("q_dynamite_queen3", "F_plantBombAllow");
+}
+script "queen3bombDisable" (void) {
+	ScriptCall("q_dynamite_queen3", "F_plantBombDisable");
+}
 // script to blow third cave
 script "m14_queen3_blowWall" (void) {
+	queen3killed = true;
     SpawnSpot ("dummy_explosion", 116); //explosion effect
     //lower wall by explosion
     Ceiling_MoveToValue(115, 256, 626, false);
@@ -86,7 +110,7 @@ script "deadQueens" (void) {
 }
 // po navratu v dialogu
 script 1402 (void) {
-    displayQuest("Kill spider queens", 3);
+    displayQuest("Destroy Spider Nests", 3);
     GiveInventory("m14q_killQueens_finished", 1);
     GiveInventory("goldCoin", 500);
     GiveInventory("wosHyposprej", 5);

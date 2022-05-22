@@ -265,9 +265,9 @@ DoomEdNums {
 	20260 = spiderQueen01
 	20261 = spiderQueen02
 	20262 = spiderQueen03
-	20263 = q_dynamite_queen1
-	20264 = q_dynamite_queen2
-	20265 = q_dynamite_queen3
+	20263 = wosq_dynamite_queen1
+	20264 = wosq_dynamite_queen2
+	20265 = wosq_dynamite_queen3
 	20266 = questMarker_1
 	20267 = questMarker_2
 	20268 = questMarker_3
@@ -275,9 +275,9 @@ DoomEdNums {
 	20270 = questMarker_5
 	20271 = wosq_chemicalOre 
 	20272 = wosq_chemicalSolution
-	20273 = m8f_hn_AreaNameMarker_MP_butcher
-	20274 = m8f_hn_AreaNameMarker_MP_technic
-	20275 = m8f_hn_AreaNameMarker_MP_binderBase_clinic
+	20273 = wosq_rottenWater
+	20274 = wosFoodTray
+	20275 = wosFoodTrayEmpty
 	20276 = m8f_hn_AreaNameMarker_MP_binderBase_weaponsVendor
 	20277 = m8f_hn_AreaNameMarker_MP_binderBase_underground
 	20278 = m8f_hn_AreaNameMarker_MP_binderBase_undergroundTemple

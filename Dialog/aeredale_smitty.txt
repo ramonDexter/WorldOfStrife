@@ -19,6 +19,30 @@ Conversation {
         Dialog = "\c[white]Hello, Binder. What brings you to my workshop?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
+            Text = "The water in the well is clean now.";
+            Nextpage = "aeredale_smitty_wellcleaned";
+            Require {
+                item = "m10q_troubledWaters_cleanedWater";
+                amount = 1;
+            }
+            Exclude {
+                item = "m10q_troubledWaters_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "I'm back. I've got the chemical to clean the water.";
+            Nextpage = "aeredale_smitty_gotsolution";
+            Require {
+                item = "m10q_troubledWaters_haveSolution";
+                amount = 1;
+            }
+            Exclude {
+                item = "m10q_troubledWaters_cleanedWater";
+                amount = 1;
+            }
+        }
+        Choice {
             Text = "I need some supplies.";
             Nextpage = "aeredale_smitty_shop";
         }
@@ -232,11 +256,15 @@ Conversation {
     Page {
         pageName = "aeredale_smitty_goingon";
         Name = "\c[yellow]Smitty, Techsmith";
-        Dialog = "\c[white]Oh, not much. We're small faring community, so basically, nothing happens here. But as you ask, we have a problem here. Water's gone bad in the local well. I tried to fix it, but I'm no chemist, so I had no luck. But, as I look at you, maybe you could lend me a helping hand. Say, would you like to help me out?";
+        Dialog = "\c[white]Oh, not much. We're small farming community, so basically, nothing happens here. But as you ask, we have a problem here. Water's gone bad in the local well. I tried to fix it, but I'm no chemist, so I had no luck. But, as I look at you, maybe you could lend me a helping hand. Say, would you like to help me out?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
             Nextpage = "aeredale_smitty_questions";
+        }
+        Choice {
+            Text = "Sure, what do you need?";
+            Nextpage = "aeredale_smitty_help";
         }
     }
     Page {
@@ -249,4 +277,63 @@ Conversation {
             Nextpage = "aeredale_smitty_questions";
         }
     }
+    // quest zamorena studna //////////////////////////////////////////////////////////
+    Page {
+        pageName = "aeredale_smitty_help";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Well, the water in our main village well got rotten. I can't figure out what's the cause. And worse, me nor local medic have the required resources to solve this problem. We have to take water from the well out of the nortern gate, and this water is not that good, so some of us are having ... problems. Say, would you take a trip to the medic in Millport, show him a sample of the rotten water and ask him is he would know how to clean it and make it drinkdable again?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "aeredale_smitty_opener";
+        }
+        Choice {
+            Text = "Okay, that sounds easy.";
+            Nextpage = "aeredale_smitty_helpsure";
+        }
+    }
+    Page {
+        pageName = "aeredale_smitty_helpsure";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Great, just great. Here, take this sample of the water and go to Millport. You need to visit dr.Henry, he has his clinic near eastern gate, just next to the Public Club Inn. Show him this sample and ask him if he knows what caused this problem and how to solve it.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Will do.";
+            Nextpage = "aeredale_smitty_opener";
+            Closedialog = true;
+            YesMessage = "\c[white]Good luck.";
+            Special = 80;
+            arg0 = 1001;
+        }
+        Choice {
+            Text = "I've changed my mind.";
+            Nextpage = "aeredale_smitty_opener";
+        }
+    }
+    Page {
+        pageName = "aeredale_smitty_gotsolution";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Oh, that's great news! Now, use to clean the water in the well.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay.";
+            Nextpage = "aeredale_smitty_opener";
+            Closedialog = true;
+        }
+    }
+    Page {
+        pageName = "aeredale_smitty_wellcleaned";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Good job! I know this took you some travelling, so the reward is corresponding for the effort. You've helped us a lot, and thank to you, we have drinking water in the village.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "aeredale_smitty_opener";
+            YesMessage = "\c[white]You're welcome.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1005;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
 }

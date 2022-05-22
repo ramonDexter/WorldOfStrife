@@ -18,7 +18,12 @@ Conversation {
         Name = "\c[yellow]Food Dispenser";
         Dialog = "\c[white]";
         Goodbye = "\c[red]Leave"; 
+		// normal prices //////////////////////////////////////////////////////////////
         Choice {
+			Exclude {
+				item = "binderBadge";
+				amount = 1;
+			}
             Text = "\c[gold]Buy foodbox";
 			NextPage = "foodDispenser_takefood";
 			CloseDialog = true;
@@ -32,6 +37,10 @@ Conversation {
 			}
         } 
         Choice {
+			Exclude {
+				item = "binderBadge";
+				amount = 1;
+			}
             Text = "\c[gold]Buy food ration 1";
 			NextPage = "foodDispenser_takefood";
 			CloseDialog = true;
@@ -45,6 +54,10 @@ Conversation {
 			}
         } 
         Choice {
+			Exclude {
+				item = "binderBadge";
+				amount = 1;
+			}
             Text = "\c[gold]Buy food ration 2";
 			NextPage = "foodDispenser_takefood";
 			CloseDialog = true;
@@ -58,6 +71,10 @@ Conversation {
 			}
         } 
         Choice {
+			Exclude {
+				item = "binderBadge";
+				amount = 1;
+			}
             Text = "\c[gold]Buy food ration 3";
 			NextPage = "foodDispenser_takefood";
 			CloseDialog = true;
@@ -71,6 +88,10 @@ Conversation {
 			}
         } 
         Choice {
+			Exclude {
+				item = "binderBadge";
+				amount = 1;
+			}
             Text = "\c[gold]Buy soyfood";
 			NextPage = "foodDispenser_takefood";
 			CloseDialog = true;
@@ -83,5 +104,94 @@ Conversation {
 				amount = 13;
 			}
         }
+		///////////////////////////////////////////////////////////////////////////////
+
+		// binder discount ////////////////////////////////////////////////////////////
+        Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+            Text = "\c[gold]Buy foodbox";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodBox";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        } 
+        Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+            Text = "\c[gold]Buy food ration 1";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation1";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        } 
+        Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+            Text = "\c[gold]Buy food ration 2";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation2";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        } 
+        Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+            Text = "\c[gold]Buy food ration 3";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation3";
+			Cost {
+				item = "goldCoin";
+				amount = 5;
+			}
+        } 
+        Choice {
+			Require {
+				item = "binderBadge";
+				amount = 1;
+			}
+            Text = "\c[gold]Buy soyfood";
+			NextPage = "foodDispenser_takefood";
+			CloseDialog = true;
+            DisplayCost = true;
+			//YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "goldCoin";
+				amount = 6;
+			}
+        }
+		///////////////////////////////////////////////////////////////////////////////
     }
 }

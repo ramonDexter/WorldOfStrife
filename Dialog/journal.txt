@@ -286,6 +286,21 @@ Conversation {
 		}
         /////////////////////////////////////////////////////////////
 
+        // aeredale - troubled waters ///////////////////////////////
+        Choice {
+			Text = "[ Quest - Raided Waterplant ]";
+			NextPage = "journal_AEquest_troubledWaters_given";
+			Require {
+                item = "m10q_troubledWaters_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m10q_troubledWaters_finished";
+                amount = 1;
+            }
+		}
+        /////////////////////////////////////////////////////////////
+
 
 	}
     //##################################################################################################################
@@ -1613,7 +1628,86 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }	
+    }
+    //##################################################################################################################
+
+    // quest aeredale - zamorena studna //
+    //##################################################################################################################    
+    Page {
+        link = "journal_AEquest_troubledWaters_go4ore";
+        ifitem {
+            item = "m10q_troubledWaters_go4ore";
+            amount = 1;
+        }
+        pageName = "journal_AEquest_troubledWaters_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[ ] Take a sample of infected water and show it to medic in Millport";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_AEquest_troubledWaters_havesolution";
+        ifitem {
+            item = "m10q_troubledWaters_haveSolution";
+            amount = 1;
+        }
+        pageName = "journal_AEquest_troubledWaters_go4ore"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[ ] Medic in Millport needs copper ore";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_AEquest_troubledWaters_cleanedwater";
+        ifitem {
+            item = "m10q_troubledWaters_cleanedWater";
+            amount = 1;
+        }
+        pageName = "journal_AEquest_troubledWaters_havesolution"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[ ] Use the solution to clean the water";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_AEquest_troubledWaters_finished";
+        ifitem {
+            item = "m10q_troubledWaters_finished";
+            amount = 1;
+        }
+        pageName = "journal_AEquest_troubledWaters_cleanedwater"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_AEquest_troubledWaters_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
     //##################################################################################################################
 
 }

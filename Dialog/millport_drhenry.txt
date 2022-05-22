@@ -5,12 +5,48 @@ namespace = "GZDoom";
 Conversation
 {
 	ID = 16;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Henry, medical specialist";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "MP_henryMedic_opener";
 		Name = "\c[yellow]Henry, medical specialist";
 		Dialog = "\c[white]Hello binder, are you in need of medical services? If so, please use on of the autoDocs behind you. If you need some medical supplies, you can buy what I got in stock. And for the last, I can install you cybernetic implants that will raise your health.";
 		Panel = "M_DCTR";
         Goodbye = "\c[red]Goodbye";
+        Choice {
+            Text = "Here is the ore.";
+            Nextpage = "MP_henryMedic_foundOre";
+			Require {
+				item = "m10q_troubledWaters_foundOre";
+				amount = 1;
+			}
+			Exclude {
+				item = "m10q_troubledWaters_haveSolution";
+				amount = 1;
+			}
+        }
+        Choice {
+            Text = "Could you take a look at this sample of rotten water?";
+            Nextpage = "MP_henryMedic_rottenwater";
+			Require {
+				item = "m10q_troubledWaters_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m10q_troubledWaters_go4ore";
+				amount = 1;
+			}
+        }
 		Choice {
 			Text = "\c[yellow]Buy Hypospray";
 			NextPage = "MP_henryMedic_opener";
@@ -160,5 +196,55 @@ Conversation
             Nextpage = "MP_henryMedic_questions";
         }
     }
+	// quest zamorena studna //////////////////////////////////////////////////////////
+    Page {
+        pageName = "MP_henryMedic_rottenwater";
+        Name = "\c[yellow]Henry, medical specialist";
+        Dialog = "\c[white]Yes, give it to me. \c[green](drops a sample in his microscope and looks at it)\c[white] Yes, it infected by some viral agent. Cleaning could be simple, if you have the right solution. I think that some copper sulfate would do the job here. Unfortunately, I don't have enough copper sulfate do make the solution. Say, would you pay a visit to an old deserted mine and bring me some copper ore? I can extract copper sulfate out of it and brew the solution for you. Easy task, not even a long walk.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Do I have other options?";
+            Nextpage = "MP_henryMedic_otheroptions";
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_otheroptions";
+        Name = "\c[yellow]Henry, medical specialist";
+        Dialog = "\c[white]Sorry, but the are none. But don't be afraid, the mine's in good shape, as far as I know. It's located in the northern Borderlands. |follow the road north and when you reach the bridge, turn to the left and go throught the cave. Here, I'll mark it on your map.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Thank you. Be right back.";
+            Nextpage = "MP_henryMedic_opener";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 1002;
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_foundOre";
+        Name = "\c[yellow]Henry, medical specialist";
+        Dialog = "\c[white]Okay, give it to me. This will take just a moment.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Here it is.";
+            Nextpage = "MP_henryMedic_solutionready";
+			Special = 80;
+			arg0 = 1003;
+        }
+    }
+    Page {
+        pageName = "MP_henryMedic_solutionready";
+        Name = "\c[yellow]Henry, medical specialist";
+        Dialog = "\c[white]And here is the solution. It was quite easy. Just don't try to drink it.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Don't worry. Thank you.";
+            Nextpage = "";
+			Special = 80;
+			arg0 = 1004;
+			CloseDialog = true;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
 }
 //##################################################################################################################

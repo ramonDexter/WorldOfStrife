@@ -18,10 +18,11 @@
 // m10q_troubledWaters_finished
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// zaadani v dialogu u techsmithe v aeredale //////////////////////////////////////////
+// zadani v dialogu u techsmithe v aeredale //////////////////////////////////////////
 script 1001 (void) {
     displayQuest("Troubled Waters", 1);
     GiveInventory("m10q_troubledWaters_given", 1);
+    GiveInventory("wosq_rottenWater", 1);
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -29,8 +30,21 @@ script 1001 (void) {
 script 1002 (void) {
     displayQuest("Troubled Waters - Go for Copper Sulfate Ore", 2);
     GiveInventory("m10q_troubledWaters_go4ore", 1);
+    TakeInventory("wosq_rottenWater", 1);
 }
 ///////////////////////////////////////////////////////////////////////////////////////
+
+// map marker v map13 /////////////////////////////////////////////////////////////////
+script "qZamorenaStudnaMarker" ENTER {
+    if ( CheckInventory("m10q_troubledWaters_go4ore") ) {
+        Thing_Deactivate(20);
+    }    
+}
+script "qZamorenaStudnaMarkerReturn" RETURN {
+    if ( CheckInventory("m10q_troubledWaters_go4ore") ) {
+        Thing_Deactivate(20);
+    }
+}
 
 // v dolech - nalezeni potrebnyho poctu kusu rudy /////////////////////////////////////
 int chemOreCount;
@@ -39,6 +53,7 @@ script "collectChemOre" (void) {
 	if ( chemOreCount == 10 ) {
 		DisplayQuest("Troubled Waters - You've found just enough Copper Sulfate Ore. You can return to the Medic now.", 2);
         GiveInventory("m10q_troubledWaters_foundOre", 1);
+        Thing_Activate(20);
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -58,19 +73,24 @@ script 1004 (void) {
 // po navratu v aeredale - vycisteni studny ///////////////////////////////////////////
 // skript na zmenu textury vody ve studni >> vycisteni studny >> bude se volat z jinyho skriptu
 script "clearWell" (void) {
-    SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player
-	Fadeto(0, 0, 0, 1.0, 1.5);
-	Delay(50);
-    TakeInventory("wosq_chemicalSolution", 1);
-	ChangeFloor(157, "CWATR01");
-	ChangeCeiling(157, "CWATR01");
-	SetLineTexture(159, SIDE_FRONT, TEXTURE_MIDDLE, "CWATR01");
-    displayQuest("Troubled Waters - You've cleaned the water in the well", 2);
-    GiveInventory("m10q_troubledWaters_cleanedWater", 1);
-    Delay(5);
-	FadeTo(0, 0, 0, 0.0, 1.5);
-	Delay(50);
-	SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);//unfreeze player
+    if ( CheckInventory("wosq_chemicalSolution") ) {
+        SetPlayerProperty(0, 1, PROP_TOTALLYFROZEN); //freeze the player
+        Fadeto(0, 0, 0, 1.0, 1.5);
+        Delay(50);
+        TakeInventory("wosq_chemicalSolution", 1);
+        ChangeFloor(157, "CWATR01");
+        ChangeCeiling(157, "CWATR01");
+        SetLineTexture(159, SIDE_FRONT, TEXTURE_MIDDLE, "CWATR01");
+        displayQuest("Troubled Waters - You've cleaned the water in the well", 2);
+        GiveInventory("m10q_troubledWaters_cleanedWater", 1);
+        Delay(5);
+        FadeTo(0, 0, 0, 0.0, 1.5);
+        Delay(50);
+        SetPlayerProperty(0, 0, PROP_TOTALLYFROZEN);//unfreeze player
+    } else {
+        Print(l:"[ You need the Chemical Solution to clean the water! ]");
+    }
+    
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 

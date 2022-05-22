@@ -152,3 +152,12 @@ class m14q_raidedWaterplant_given : tokenBase {}
 class m14q_raidedWaterplant_killed : tokenBase {}
 class m14q_raidedWaterplant_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
+
+// aeredale quest troubled waters //
+class m10q_troubledWaters_given : tokenBase {}
+class m10q_troubledWaters_go4ore : tokenBase {}
+class m10q_troubledWaters_foundOre : tokenBase {}
+class m10q_troubledWaters_haveSolution : tokenBase {}
+class m10q_troubledWaters_cleanedWater : tokenBase {}
+class m10q_troubledWaters_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////

@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = -2399.898f;
-		viewpositionx = 10952.08f;
+		viewpositiony = -3398.308f;
+		viewpositionx = 11613.89f;
 		
 		testprecommand
 		{
@@ -51,7 +51,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 2.942961f;
+		viewscale = 2.263779f;
 		
 		reloadresourceprecommand
 		{
@@ -82,6 +82,33 @@ maps
 			autocloseonsuccess = true;
 			exitcodeiserror = true;
 			stderriserror = true;
+		}
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -30592;
+					outertop = 28096;
+					outerbottom = 12992;
+				}
+			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "18342 18350 18351 18353 18354 18355 18356 18359 18361 18363 18368 18369 18373 18374 18378 18379 18386 18387 18396 18397 18398 18402 18406 18407 18411 18412 18416 18417 18418 18422 18469 18470 18471 18472 18474 18475 18476 18477 18491 18492 18493 18494";
+				sectors = "5059 5060 5061 5062 5070 5079 5100 5101 5104";
+			}
 		}
 		
 		fieldtypes

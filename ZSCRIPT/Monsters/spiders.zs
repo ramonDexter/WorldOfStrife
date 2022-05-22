@@ -2059,6 +2059,245 @@ class PSWasp : Spider
 	}
 }
 
+//===========================================================================
+//
+// DaggerFall Scorpion
+//
+//===========================================================================
+
+class Scorpion : actor
+{
+	Default {
+		+BLOODSPLATTER
+		+ALWAYSFAST
+		+FLOORCLIP
+		+DONTOVERLAP
+		+DONTHARMSPECIES
+		Species "Scorpions";
+		Bloodcolor "Red";
+		SeeSound "hx2scorpion/sight";
+		DeathSound "hx2scorpion/death";
+		PainSound "hx2scorpion/pain";
+		ActiveSound "hx2scorpion/active";
+	}
+	
+	States {
+		Death.Fire: //(The 3D0 Killing Time Way)
+			//NULL A 0 A_ChangeFlag("FLOATBOB",false);
+			//NULL A 0 A_ChangeFlag("FLOAT",false);
+			//NULL A 0 A_ChangeFlag("NOGRAVITY",false);
+			TNT1 A 0 {
+				bFLOATBOB = false;
+				bFLOAT = false;
+				bNOGRAVITY = false;
+			}
+			NULL A 0 A_SetScale(0.40);
+			NULL A 0 A_SetTranslucent(1.0);
+			NULL A 0 A_StopSound(1);
+			NULL A 0 A_SetFloorClip();
+			ASHD A 4 BRIGHT A_ScreamAndUnblock();
+			ASHD B 4 BRIGHT;
+			ASHD C 4 BRIGHT;
+			ASHD D 4 BRIGHT;
+			ASHD E 4 BRIGHT;
+			ASHD F -1;
+			NULL A 0 A_StopSound(1);
+			Stop;
+	}
+}
+
+class DaggerScorpion : Scorpion
+{
+	Default {
+		//$Category "Monsters/wasps"
+		//$Title "scorpion dagger"
+		PainChance 50;
+		Health 400;
+		Radius 10;
+		Height 26;
+		Mass 350;
+		Scale 0.5;
+		Speed 10;
+		DamageType "Poison";
+		PoisonDamage 6,6,0;
+		MeleeDamage 10;
+		+BLOODSPLATTER
+		+BOSSDEATH
+		+FASTMELEE
+		BloodColor "Red";
+		SeeSound "hx2scorpion/sight";
+		DeathSound "hx2scorpion/death";
+		PainSound "hx2scorpion/pain";
+		Obituary "%o was no match for a Dagger-tailed scorpion of unusual size.";
+	}
+	
+	States
+	{
+	Spawn:
+		9DAG F 1 A_Look();
+		Loop;
+	See:
+		9DAG ABCDE 2 A_Chase();//("","")
+		Loop;
+	Melee: 
+		9DAG F 2 A_FaceTarget();
+		9DAG GH 2 A_FaceTarget();
+		TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+		9DAG I 5 A_CustomMeleeAttack(20,0,0,"Poison");
+		9DAG HGF 3 A_FaceTarget();
+		Goto See;
+	Pain:
+		9DAG J 4;
+		9DAG FJ 3 A_Pain();
+		Goto See;
+	Death:
+		TNT1 A 0 A_ScreamAndUnblock();
+		9DAG FFFFFJJJJJ 1;// A_SpawnDebris("NashGore_FlyingBlood",1);
+		9DAG K -1 A_BossDeath();
+		Stop;
+	Death.Fire:
+		NULL A 0 A_SetScale(0.80);
+		ASHD A 4 BRIGHT A_Scream();
+		ASHD B 4 BRIGHT;
+		ASHD C 4 BRIGHT A_NoBlocking();
+		ASHD D 4 BRIGHT;
+		ASHD E 4 BRIGHT A_BossDeath();
+		ASHD F -1;
+		Stop;
+	/*Raise:
+		9DAG A 3;
+		Goto See;*/
+	}
+}
 
 
+//===========================================================================================================
+//
+//	Hexen II Scorpion By DBThanatos from AEoD
+//
+//===========================================================================================================
 
+class YellowScorpion : actor
+{
+	Default {
+		Monster;
+		Radius 16;
+		Height 32;
+		Mass 700;
+		Speed 8;
+		MeleeDamage 10;
+		PoisonDamage 10;
+		Health 250;
+		Scale 0.4;
+		PainChance 70;
+		BloodColor "Red";
+		SeeSound "hx2scorpion/sight";
+		DeathSound "hx2scorpion/death";
+		PainSound "hx2scorpion/pain";
+		Obituary "%o was poisoned to death by a scorpion.";
+		HitObituary "%o was chopped into pieces by a scorpion.";
+	}
+    
+    States
+    {
+    Spawn:
+		SC1I A 3 A_Look();
+		Loop;
+    See:
+	Chase:
+		SC1W A 2 A_Chase();
+		SC1W A 0 A_PlaySound("hx2scorpion/active");
+		SC1W B 2 A_Chase();
+		SC1W B 0 A_PlaySound("hx2scorpion/active");
+		SC1W C 1 A_Chase();
+		SC1W C 0 A_PlaySound("hx2scorpion/active");
+		SC1W D 1 A_Chase();
+		SC1W D 0 A_PlaySound("hx2scorpion/active");
+		SC1W E 2 A_Chase();
+		SC1W E 0 A_PlaySound("hx2scorpion/active");
+		SC1W F 2 A_Chase();
+		SC1W F 0 A_PlaySound("hx2scorpion/active");
+		SC1W G 2 A_Chase();
+		SC1W G 0 A_PlaySound("hx2scorpion/active");
+		SC1W H 2 A_Chase();
+		SC1W H 0 A_PlaySound("hx2scorpion/active");
+		TNT1 A 0;
+		Loop;
+		TNT1 A 0 A_Jump(15,"Death");
+		Loop;
+    Melee:
+		TNT1 A 0 A_Jump(150,"Tail");
+		SC1A A 3 A_FaceTarget();
+		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+		SC1A B 3 A_CustomMeleeAttack(8,0,0);
+		SC1A C 3 A_FaceTarget();
+		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+		SC1A D 3 A_CustomMeleeAttack(8,0,0);
+		SC1A EF 3 A_FaceTarget();
+		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+		SC1A G 3 A_CustomMeleeAttack(8,0,0);
+		SC1A HIJK 3 A_FaceTarget();
+		Goto Chase;
+    Tail:
+		SC1T AB 4 A_FaceTarget();
+		SC1T CD 2 A_FaceTarget();
+		TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+		SC1T EF 2 A_FaceTarget();
+		SC1T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
+		SC1T HIJKL 3 A_FaceTarget();
+		Goto Chase;
+    Pain:
+		SC1P A 1;
+		SC1P BCD 2;
+		SC1P EF 3;
+		Goto See;
+	Death:
+    XDeath:
+		SC1D A 2;
+		SC1D B 2 A_Scream();
+		SC1D C 2 A_NoBlocking();
+		SC1D DEFGHI 2;
+		SC1D J -1;
+		Stop;
+		TNT1 A 0 A_Die();
+		TNT1 A 0 A_NoBlocking();
+		Stop;
+	Death.Fire:
+		NULL A 0 A_SetScale(0.80);
+		NULL A 0 A_SetTranslucent(1.0);
+		TNT1 A 0 A_StopSound(1);
+		ASHD A 4 BRIGHT A_Scream();
+		ASHD B 4 BRIGHT;
+		ASHD C 4 BRIGHT ;
+		ASHD D 4 BRIGHT;
+		ASHD E 4 BRIGHT A_NoBlocking();
+		ASHD F -1;
+		TNT1 A 0 A_StopSound(1);
+		Stop;
+	Raise:
+		SC1D IHGFEDCBA 2;
+		Goto See;
+    }	
+}
+
+class Scorp1PoisonDummy : actor
+{
+	Default {
+		Projectile;
+		Speed 50;
+		Damage 10;
+		PoisonDamage 80;
+		DamageType "Poison";
+		RenderStyle "None";
+	}
+    
+    States
+    {
+		Spawn:
+			PLAY A 2;
+			Stop;
+		Death:
+			PLAY A 1;
+			Stop;
+    }
+}

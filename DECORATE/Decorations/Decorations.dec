@@ -9383,6 +9383,43 @@ actor wosD_bloodKokan 21530 {
 	}
 }
 
+actor wosD_dryingFish01 21531 {
+	//$Category "Decorations/Wos"
+	//$Title "drying hanging fish 01"
+	tag "drying fish"
+	radius 8
+	height 40
+	scale 0.5
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	+USESPECIAL
+
+	States {
+		Spawn:
+			FIS2 A -1
+			Stop
+	}
+}
+actor wosD_dryingFish02 21532 {
+	//$Category "Decorations/Wos"
+	//$Title "drying hanging fish 02"
+	tag "drying fish"
+	radius 8
+	height 56
+	scale 0.5
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	+USESPECIAL
+
+	States {
+		Spawn:
+			FIS5 A -1
+			Stop
+	}
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

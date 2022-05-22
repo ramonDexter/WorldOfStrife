@@ -1589,6 +1589,22 @@ model wosCandyBar {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+model wosFoodTrayEmpty {
+	path "models/props/food/"
+	model 0 "dx_fPlatter03.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex FDTE A 0 0
+}
+model wosFoodTray {
+	path "models/props/food/"
+	model 0 "dx_fPlatter01.md3"
+	skin 0 "tx_foodplatter.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex FDTR A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

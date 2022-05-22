@@ -790,14 +790,14 @@ class q_bomb_01 : actor {
 // queen1 cave /////////////////////////////////////////////////////////////////
 class wosq_dynamite_queen1 : CustomInventory {
 	// ACS support /////////////////////////////////////////////////////////
-	bool bombCanBePlanted;
-	static void F_plantBombAllow(void) {
+	/*bool bombCanBePlanted;	
+	action void F_plantBombAllow(void) {
 		bombCanBePlanted = true;
 		A_Log("\c[green][ You can place the bomb#1 here. ]");
 	}
-	static void F_plantBombDisable(void) {
+	action void F_plantBombDisable(void) {
 		bombCanBePlanted = false;
-	}
+	}*/
 	////////////////////////////////////////////////////////////////////////
 	Default {
 		//$Category "Quest things/WoS"
@@ -820,7 +820,7 @@ class wosq_dynamite_queen1 : CustomInventory {
 			MS01 A -1;
 			Stop;
 		Use:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if ( bombCanBePlanted ) {
 					return resolveState("UseYes");
 				} else {
@@ -831,7 +831,7 @@ class wosq_dynamite_queen1 : CustomInventory {
 		UseNot:
 			TNT1 A 0 A_Log("\c[red][ This bomb could be used near nest#1 only! ]");
 			Fail;
-		UseYes:
+		UseYes:*/
 			TNT1 A 0 {
 				A_SpawnItemEx("q_bomb_queen1", 16, 0, 0);
 				A_Log("\c[red][ Bomb#1 planted. RUN AWAY!!! ]");
@@ -865,14 +865,14 @@ class q_bomb_queen1 : actor {
 // queen2 cave /////////////////////////////////////////////////////////////////
 class wosq_dynamite_queen2 : CustomInventory {
 	// ACS support /////////////////////////////////////////////////////////
-	bool bombCanBePlanted;
+	/*bool bombCanBePlanted;
 	static void F_plantBombAllow(void) {
 		bombCanBePlanted = true;
 		A_Log("\c[green][ You can place the bomb#2 here. ]");
 	}
 	static void F_plantBombDisable(void) {
 		bombCanBePlanted = false;
-	}
+	}*/
 	////////////////////////////////////////////////////////////////////////
 
 	Default {
@@ -896,7 +896,7 @@ class wosq_dynamite_queen2 : CustomInventory {
 			MS01 A -1;
 			Stop;
 		Use:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if ( bombCanBePlanted ) {
 					return resolveState("UseYes");
 				} else {
@@ -907,7 +907,7 @@ class wosq_dynamite_queen2 : CustomInventory {
 		UseNot:
 			TNT1 A 0 A_Log("\c[red][ This bomb could be used near nest#2 only! ]");
 			Fail;
-		UseYes:
+		UseYes:*/
 			TNT1 A 0 {
 				A_SpawnItemEx("q_bomb_queen2", 16, 0, 0);
 				A_Log("\c[red][ Bomb#2 planted. RUN AWAY!!! ]");
@@ -941,14 +941,14 @@ class q_bomb_queen2 : actor {
 // queen3 cave /////////////////////////////////////////////////////////////////
 class wosq_dynamite_queen3 : CustomInventory {
 	// ACS support /////////////////////////////////////////////////////////
-	bool bombCanBePlanted;
+	/*bool bombCanBePlanted;
 	static void F_plantBombAllow(void) {
 		bombCanBePlanted = true;
 		A_Log("\c[green][ You can place the bomb#3 here. ]");
 	}
 	static void F_plantBombDisable(void) {
 		bombCanBePlanted = false;
-	}
+	}*/
 	////////////////////////////////////////////////////////////////////////
 
 	Default {
@@ -972,7 +972,7 @@ class wosq_dynamite_queen3 : CustomInventory {
 			MS01 A -1;
 			Stop;
 		Use:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if ( bombCanBePlanted ) {
 					return resolveState("UseYes");
 				} else {
@@ -983,7 +983,7 @@ class wosq_dynamite_queen3 : CustomInventory {
 		UseNot:
 			TNT1 A 0 A_Log("\c[red][ This bomb could be used near nest#3 only! ]");
 			Fail;
-		UseYes:
+		UseYes:*/
 			TNT1 A 0 {
 				A_SpawnItemEx("q_bomb_queen3", 16, 0, 0);
 				A_Log("\c[red][ Bomb#3 planted. RUN AWAY!!! ]");

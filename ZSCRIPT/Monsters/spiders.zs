@@ -2424,10 +2424,10 @@ class PSScorpion : Scorpion {
 		XDeath:
 			TNT1 A 0 A_SetScale(0.3);
 			TNT1 A 0 A_ScreamAndUnblock();
-			TNT1 A 0 A_CustomMissile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
-			TNT1 A 0 A_CustomMissile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
-			TNT1 A 0 A_CustomMissile("PSScpGib3",-2,0,random(75,95),2,random(35,75));
-			TNT1 A 0 A_CustomMissile("PSScpGib4",-2,0,random(75,95),2,random(35,75));
+			//TNT1 A 0 A_CustomMissile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
+			//TNT1 A 0 A_CustomMissile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
+			//TNT1 A 0 A_CustomMissile("PSScpGib3",-2,0,random(75,95),2,random(35,75));
+			//TNT1 A 0 A_CustomMissile("PSScpGib4",-2,0,random(75,95),2,random(35,75));
 			MOSA NOP 2 A_Die();
 			Stop;
 	}

@@ -843,12 +843,12 @@ class q_bomb_queen1 : actor {
 	}
 	States {
 		Spawn:
-			//MS01 A 175;
-			MS01 A 35 A_Log("\c[red][ = 5 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 4 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 3 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 2 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 1 = ]";);
+			//MS01 A 175;0
+			MS01 A 35 A_Log("\c[red][ = 5 = ]");
+			MS01 A 35 A_Log("\c[red][ = 4 = ]");
+			MS01 A 35 A_Log("\c[red][ = 3 = ]");
+			MS01 A 35 A_Log("\c[red][ = 2 = ]");
+			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
             TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
@@ -920,11 +920,11 @@ class q_bomb_queen2 : actor {
 	States {
 		Spawn:
 			//MS01 A 175;
-			MS01 A 35 A_Log("\c[red][ = 5 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 4 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 3 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 2 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 1 = ]";);
+			MS01 A 35 A_Log("\c[red][ = 5 = ]");
+			MS01 A 35 A_Log("\c[red][ = 4 = ]");
+			MS01 A 35 A_Log("\c[red][ = 3 = ]");
+			MS01 A 35 A_Log("\c[red][ = 2 = ]");
+			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
             TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
@@ -995,11 +995,11 @@ class q_bomb_queen3 : actor {
 	States {
 		Spawn:
 			//MS01 A 175;
-			MS01 A 35 A_Log("\c[red][ = 5 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 4 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 3 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 2 = ]";);
-			MS01 A 35 A_Log("\c[red][ = 1 = ]";);
+			MS01 A 35 A_Log("\c[red][ = 5 = ]");
+			MS01 A 35 A_Log("\c[red][ = 4 = ]");
+			MS01 A 35 A_Log("\c[red][ = 3 = ]");
+			MS01 A 35 A_Log("\c[red][ = 2 = ]");
+			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
             TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;

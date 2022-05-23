@@ -1339,7 +1339,7 @@ class LizardMiddle : Lizard {
         Radius 24;
         Height 48;
         Scale 1;
-        Speed 7;
+        Speed 6;
         //FastSpeed 30;
         PainChance 30;
         Mass 200;
@@ -1389,7 +1389,7 @@ class LizardLarge : Lizard {
         Radius 24;
         Height 64;
         Scale 1.5;
-        Speed 9;
+        Speed 7;
         //FastSpeed 25;
         PainChance 20;
         Mass 300;

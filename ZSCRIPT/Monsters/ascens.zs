@@ -1302,8 +1302,8 @@ class LizardSmall: Lizard {
         Radius 16;
         Height 24;
         Scale 0.5;
-        Speed 20;
-        FastSpeed 35;
+        Speed 5;
+        //FastSpeed 35;
         PainChance 50;
         Mass 100;
         MeleeDamage 1;
@@ -1339,8 +1339,8 @@ class LizardMiddle : Lizard {
         Radius 24;
         Height 48;
         Scale 1;
-        Speed 17;
-        FastSpeed 30;
+        Speed 7;
+        //FastSpeed 30;
         PainChance 30;
         Mass 200;
         MeleeDamage 3;
@@ -1389,8 +1389,8 @@ class LizardLarge : Lizard {
         Radius 24;
         Height 64;
         Scale 1.5;
-        Speed 15;
-        FastSpeed 25;
+        Speed 9;
+        //FastSpeed 25;
         PainChance 20;
         Mass 300;
         MeleeDamage 5;

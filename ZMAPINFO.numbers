@@ -247,7 +247,7 @@ DoomEdNums {
 	20242 = wosfbMeat2
 	20243 = wosfbMeat3
 	20244 = m14k_waterplantKey
-	//20245 = wosi_implant_stamina
+	20245 = PSScorpion
 	20246 = wosD_NightEyeDevice
 	20247 = dummy_binoc
 	20248 = wosD_Rebreather
@@ -278,9 +278,9 @@ DoomEdNums {
 	20273 = wosq_rottenWater
 	20274 = wosFoodTray
 	20275 = wosFoodTrayEmpty
-	20276 = m8f_hn_AreaNameMarker_MP_binderBase_weaponsVendor
-	20277 = m8f_hn_AreaNameMarker_MP_binderBase_underground
-	20278 = m8f_hn_AreaNameMarker_MP_binderBase_undergroundTemple
+	20276 = DaggerScorpion
+	20277 = YellowScorpion
+	20278 = BlackScorpion
 	20279 = dest_ShortBush
 	20280 = dest_TallBush
 	20281 = dest_Pot

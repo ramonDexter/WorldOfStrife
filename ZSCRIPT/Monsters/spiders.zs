@@ -1,4 +1,11 @@
-//spiders
+///////////////////////////////////////////////////////////////////////////////////////
+// spiders, wasps & scorpions /////////////////////////////////////////////////////////
+// from aracnocide enemies ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////
+// SPIDERS ////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 
 class Spider : actor
 {
@@ -35,11 +42,10 @@ class Spider : actor
 	}
 }
 
-//========================================================================//
-//
+
+///////////////////////////////////////////////////////////////////////////////////////
 // Spider Swarms
-//
-//========================================================================//
+///////////////////////////////////////////////////////////////////////////////////////
 
 //Basic Spawners
 
@@ -195,16 +201,9 @@ class FlyingSpiderHell : actor
 	}
 }
 
-
-
-
-
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Gibs
-//
-//==========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class Gibbery : actor
 {
 	Default
@@ -249,10 +248,9 @@ class Gibbery : actor
 	}
 }
 
-//=======================================================//
-// Blood Spider Gibs									 //
-//=======================================================//
-
+///////////////////////////////////////////////////////////////////////////////////////
+// Blood Spider Gibs
+///////////////////////////////////////////////////////////////////////////////////////
 class BloodHead : Gibbery
 {
 	Default
@@ -313,10 +311,9 @@ class BloodLleg : Gibbery
 	}
 }
 
-//=======================================================//
-// Powerslave Spider Gibs								 //
-//=======================================================//
-
+///////////////////////////////////////////////////////////////////////////////////////
+// Powerslave Spider Gibs
+///////////////////////////////////////////////////////////////////////////////////////
 class PSHead : Gibbery
 {
 	Default
@@ -399,10 +396,9 @@ class PSEye : Gibbery
 	}
 }
 
-//=======================================================//
-// ShadowCaster Spider Gibs								 //
-//=======================================================//
-
+///////////////////////////////////////////////////////////////////////////////////////
+// ShadowCaster Spider Gibs	
+///////////////////////////////////////////////////////////////////////////////////////
 class SHHead : Gibbery
 {
 	Default
@@ -488,12 +484,9 @@ class SHEye : Gibbery
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Avalon Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class AvalonSpider : Spider
 {
 	Default
@@ -619,13 +612,9 @@ class SmallBC : actor
     } 
 }
 
-
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Blood Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class BloodSpider : Spider
 {
 	Default
@@ -712,12 +701,9 @@ class BloodSpider : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Stealth Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class BloodSpider2 : BloodSpider
 {
 	Default
@@ -742,12 +728,9 @@ class BloodSpider2 : BloodSpider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // DaggerFall Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class DaggerSpider : Spider
 {
 	Default
@@ -818,13 +801,9 @@ class DaggerSpider : Spider
 	}
 }
 
-
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Big Spit
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class BigSpit : CStaffMissile
 {
 	Default
@@ -865,12 +844,9 @@ class BigSpit : CStaffMissile
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Death Widow
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class DeathWidow : Spider
 {
 	Default
@@ -936,12 +912,9 @@ class DeathWidow : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Frightened Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class Fright : Spider
 {
 	Default
@@ -1001,12 +974,9 @@ class Fright : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Giant Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class GiantSpider : Spider
 {
 	Default
@@ -1098,12 +1068,9 @@ class spiderQueen03 : GiantSpider {
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Secret Golden Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class GoldenSpider : Spider
 {
 	Default
@@ -1178,15 +1145,9 @@ class GoldenSpider : Spider
 	}
 }
 
-
-
-
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Powerslave Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class PowerSlaveSpider2 : Spider
 {
 	Default
@@ -1312,12 +1273,9 @@ class PowerSlaveSpider : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // ShadowCaster Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class ShadowSpider : Spider
 {
 	Default
@@ -1390,15 +1348,12 @@ class ShadowSpider : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Acid Spit
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 //(Thanks to Chronoteeth, i was going to use poison screen effects 
 // as a A_GiveInventory item with green screen color). CStaffMissile is WAY EASIER.
-
+///////////////////////////////////////////////////////////////////////////////////////
 class AcidSpit : CStaffMissile
 {
 	Default
@@ -1439,12 +1394,9 @@ class AcidSpit : CStaffMissile
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Small Shadow Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class ShadowSpider2 : Spider
 {
 	Default
@@ -1500,12 +1452,9 @@ class ShadowSpider2 : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Small Steal Princess Spider
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class SmallSteal : Spider
 {
 	Default
@@ -1565,12 +1514,9 @@ class SmallSteal : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Widow
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class Widow : Spider
 {
 	Default
@@ -1635,19 +1581,17 @@ class Widow : Spider
 			Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 
-//=================================================================
-//
-//	WASPS
-//
-//=================================================================
+///////////////////////////////////////////////////////////////////////////////////////
+// WASPS //////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Cyclone Wasp
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class CycloneWasp : Spider
 {
 	Default
@@ -1719,12 +1663,9 @@ class CycloneWasp : Spider
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Disruptor Mutant Fly
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class MutantFly : Spider
 {
 	Default
@@ -1807,9 +1748,9 @@ class MutantFly : Spider
 	}
 }
 
-
-
-//PSX Powerslave/Exhumed Wasp decorate by Lex Safonov
+///////////////////////////////////////////////////////////////////////////////////////
+// PSX Powerslave/Exhumed Wasp decorate by Lex Safonov
+///////////////////////////////////////////////////////////////////////////////////////
 
 class PSXWasp : actor
 {
@@ -1896,12 +1837,9 @@ class PSXWasp : actor
 	}
 }
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Powerslave Red Wasp
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class PSRedWasp : Spider
 {
 	Default
@@ -1978,14 +1916,9 @@ class PSRedWasp : Spider
 	}
 }
 
-
-
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 // Powerslave Wasp
-//
-//===========================================================================
-
+///////////////////////////////////////////////////////////////////////////////////////
 class PSWasp : Spider
 {
 	Default
@@ -2058,15 +1991,18 @@ class PSWasp : Spider
 			Goto See;*/
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
 
-//===========================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
+// SCORPIONS //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////////
 // DaggerFall Scorpion
-//
-//===========================================================================
-
-class Scorpion : actor
-{
+///////////////////////////////////////////////////////////////////////////////////////
+class Scorpion : actor {
 	Default {
 		+BLOODSPLATTER
 		+ALWAYSFAST
@@ -2106,11 +2042,11 @@ class Scorpion : actor
 	}
 }
 
-class DaggerScorpion : Scorpion
-{
+class DaggerScorpion : Scorpion {
 	Default {
-		//$Category "Monsters/wasps"
+		//$Category "Monsters/scorpions"
 		//$Title "scorpion dagger"
+		Tag "Brown Scorpion";
 		PainChance 50;
 		Health 400;
 		Radius 10;
@@ -2131,55 +2067,52 @@ class DaggerScorpion : Scorpion
 		Obituary "%o was no match for a Dagger-tailed scorpion of unusual size.";
 	}
 	
-	States
-	{
-	Spawn:
-		9DAG F 1 A_Look();
-		Loop;
-	See:
-		9DAG ABCDE 2 A_Chase();//("","")
-		Loop;
-	Melee: 
-		9DAG F 2 A_FaceTarget();
-		9DAG GH 2 A_FaceTarget();
-		TNT1 A 0 A_PlaySound("hx2scorpion/tail");
-		9DAG I 5 A_CustomMeleeAttack(20,0,0,"Poison");
-		9DAG HGF 3 A_FaceTarget();
-		Goto See;
-	Pain:
-		9DAG J 4;
-		9DAG FJ 3 A_Pain();
-		Goto See;
-	Death:
-		TNT1 A 0 A_ScreamAndUnblock();
-		9DAG FFFFFJJJJJ 1;// A_SpawnDebris("NashGore_FlyingBlood",1);
-		9DAG K -1 A_BossDeath();
-		Stop;
-	Death.Fire:
-		NULL A 0 A_SetScale(0.80);
-		ASHD A 4 BRIGHT A_Scream();
-		ASHD B 4 BRIGHT;
-		ASHD C 4 BRIGHT A_NoBlocking();
-		ASHD D 4 BRIGHT;
-		ASHD E 4 BRIGHT A_BossDeath();
-		ASHD F -1;
-		Stop;
-	/*Raise:
-		9DAG A 3;
-		Goto See;*/
+	States {
+		Spawn:
+			9DAG F 1 A_Look();
+			Loop;
+		See:
+			9DAG ABCDE 2 A_Chase();//("","")
+			Loop;
+		Melee: 
+			9DAG F 2 A_FaceTarget();
+			9DAG GH 2 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			9DAG I 5 A_CustomMeleeAttack(20,0,0,"Poison");
+			9DAG HGF 3 A_FaceTarget();
+			Goto See;
+		Pain:
+			9DAG J 4;
+			9DAG FJ 3 A_Pain();
+			Goto See;
+		Death:
+			TNT1 A 0 A_ScreamAndUnblock();
+			9DAG FFFFFJJJJJ 1;// A_SpawnDebris("NashGore_FlyingBlood",1);
+			9DAG K -1 A_BossDeath();
+			Stop;
+		Death.Fire:
+			NULL A 0 A_SetScale(0.80);
+			ASHD A 4 BRIGHT A_Scream();
+			ASHD B 4 BRIGHT;
+			ASHD C 4 BRIGHT A_NoBlocking();
+			ASHD D 4 BRIGHT;
+			ASHD E 4 BRIGHT A_BossDeath();
+			ASHD F -1;
+			Stop;
+		/*Raise:
+			9DAG A 3;
+			Goto See;*/
 	}
 }
 
-
-//===========================================================================================================
-//
+///////////////////////////////////////////////////////////////////////////////////////
 //	Hexen II Scorpion By DBThanatos from AEoD
-//
-//===========================================================================================================
-
-class YellowScorpion : actor
-{
+///////////////////////////////////////////////////////////////////////////////////////
+class YellowScorpion : actor {
 	Default {
+		//$Category "Monsters/scorpions"
+		//$Title "scorpion yellow"
+		Tag "Yellow Scorpion";
 		Monster;
 		Radius 16;
 		Height 32;
@@ -2198,90 +2131,88 @@ class YellowScorpion : actor
 		HitObituary "%o was chopped into pieces by a scorpion.";
 	}
     
-    States
-    {
-    Spawn:
-		SC1I A 3 A_Look();
-		Loop;
-    See:
-	Chase:
-		SC1W A 2 A_Chase();
-		SC1W A 0 A_PlaySound("hx2scorpion/active");
-		SC1W B 2 A_Chase();
-		SC1W B 0 A_PlaySound("hx2scorpion/active");
-		SC1W C 1 A_Chase();
-		SC1W C 0 A_PlaySound("hx2scorpion/active");
-		SC1W D 1 A_Chase();
-		SC1W D 0 A_PlaySound("hx2scorpion/active");
-		SC1W E 2 A_Chase();
-		SC1W E 0 A_PlaySound("hx2scorpion/active");
-		SC1W F 2 A_Chase();
-		SC1W F 0 A_PlaySound("hx2scorpion/active");
-		SC1W G 2 A_Chase();
-		SC1W G 0 A_PlaySound("hx2scorpion/active");
-		SC1W H 2 A_Chase();
-		SC1W H 0 A_PlaySound("hx2scorpion/active");
-		TNT1 A 0;
-		Loop;
-		TNT1 A 0 A_Jump(15,"Death");
-		Loop;
-    Melee:
-		TNT1 A 0 A_Jump(150,"Tail");
-		SC1A A 3 A_FaceTarget();
-		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-		SC1A B 3 A_CustomMeleeAttack(8,0,0);
-		SC1A C 3 A_FaceTarget();
-		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-		SC1A D 3 A_CustomMeleeAttack(8,0,0);
-		SC1A EF 3 A_FaceTarget();
-		TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-		SC1A G 3 A_CustomMeleeAttack(8,0,0);
-		SC1A HIJK 3 A_FaceTarget();
-		Goto Chase;
-    Tail:
-		SC1T AB 4 A_FaceTarget();
-		SC1T CD 2 A_FaceTarget();
-		TNT1 A 0 A_PlaySound("hx2scorpion/tail");
-		SC1T EF 2 A_FaceTarget();
-		SC1T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
-		SC1T HIJKL 3 A_FaceTarget();
-		Goto Chase;
-    Pain:
-		SC1P A 1;
-		SC1P BCD 2;
-		SC1P EF 3;
-		Goto See;
-	Death:
-    XDeath:
-		SC1D A 2;
-		SC1D B 2 A_Scream();
-		SC1D C 2 A_NoBlocking();
-		SC1D DEFGHI 2;
-		SC1D J -1;
-		Stop;
-		TNT1 A 0 A_Die();
-		TNT1 A 0 A_NoBlocking();
-		Stop;
-	Death.Fire:
-		NULL A 0 A_SetScale(0.80);
-		NULL A 0 A_SetTranslucent(1.0);
-		TNT1 A 0 A_StopSound(1);
-		ASHD A 4 BRIGHT A_Scream();
-		ASHD B 4 BRIGHT;
-		ASHD C 4 BRIGHT ;
-		ASHD D 4 BRIGHT;
-		ASHD E 4 BRIGHT A_NoBlocking();
-		ASHD F -1;
-		TNT1 A 0 A_StopSound(1);
-		Stop;
-	Raise:
-		SC1D IHGFEDCBA 2;
-		Goto See;
+    States {
+		Spawn:
+			SC1I A 3 A_Look();
+			Loop;
+		See:
+		Chase:
+			SC1W A 2 A_Chase();
+			SC1W A 0 A_PlaySound("hx2scorpion/active");
+			SC1W B 2 A_Chase();
+			SC1W B 0 A_PlaySound("hx2scorpion/active");
+			SC1W C 1 A_Chase();
+			SC1W C 0 A_PlaySound("hx2scorpion/active");
+			SC1W D 1 A_Chase();
+			SC1W D 0 A_PlaySound("hx2scorpion/active");
+			SC1W E 2 A_Chase();
+			SC1W E 0 A_PlaySound("hx2scorpion/active");
+			SC1W F 2 A_Chase();
+			SC1W F 0 A_PlaySound("hx2scorpion/active");
+			SC1W G 2 A_Chase();
+			SC1W G 0 A_PlaySound("hx2scorpion/active");
+			SC1W H 2 A_Chase();
+			SC1W H 0 A_PlaySound("hx2scorpion/active");
+			TNT1 A 0;
+			Loop;
+			TNT1 A 0 A_Jump(15,"Death");
+			Loop;
+		Melee:
+			TNT1 A 0 A_Jump(150,"Tail");
+			SC1A A 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC1A B 3 A_CustomMeleeAttack(8,0,0);
+			SC1A C 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC1A D 3 A_CustomMeleeAttack(8,0,0);
+			SC1A EF 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC1A G 3 A_CustomMeleeAttack(8,0,0);
+			SC1A HIJK 3 A_FaceTarget();
+			Goto Chase;
+		Tail:
+			SC1T AB 4 A_FaceTarget();
+			SC1T CD 2 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			SC1T EF 2 A_FaceTarget();
+			SC1T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
+			SC1T HIJKL 3 A_FaceTarget();
+			Goto Chase;
+		Pain:
+			SC1P A 1;
+			SC1P BCD 2;
+			SC1P EF 3;
+			Goto See;
+		Death:
+		XDeath:
+			SC1D A 2;
+			SC1D B 2 A_Scream();
+			SC1D C 2 A_NoBlocking();
+			SC1D DEFGHI 2;
+			SC1D J -1;
+			Stop;
+			TNT1 A 0 A_Die();
+			TNT1 A 0 A_NoBlocking();
+			Stop;
+		Death.Fire:
+			NULL A 0 A_SetScale(0.80);
+			NULL A 0 A_SetTranslucent(1.0);
+			TNT1 A 0 A_StopSound(1);
+			ASHD A 4 BRIGHT A_Scream();
+			ASHD B 4 BRIGHT;
+			ASHD C 4 BRIGHT ;
+			ASHD D 4 BRIGHT;
+			ASHD E 4 BRIGHT A_NoBlocking();
+			ASHD F -1;
+			TNT1 A 0 A_StopSound(1);
+			Stop;
+		Raise:
+			SC1D IHGFEDCBA 2;
+			Goto See;
     }	
 }
 
-class Scorp1PoisonDummy : actor
-{
+class Scorp1PoisonDummy : actor {
 	Default {
 		Projectile;
 		Speed 50;
@@ -2291,8 +2222,7 @@ class Scorp1PoisonDummy : actor
 		RenderStyle "None";
 	}
     
-    States
-    {
+    States {
 		Spawn:
 			PLAY A 2;
 			Stop;
@@ -2301,3 +2231,209 @@ class Scorp1PoisonDummy : actor
 			Stop;
     }
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Hexen II Black Scorpion by DBThanatos
+///////////////////////////////////////////////////////////////////////////////////////
+class BlackScorpion : actor {
+	Default {
+		//$Category "Monsters/scorpions"
+		//$Title "scorpion black"
+		Tag "Black Scorpion";
+		Monster;
+		Radius 20;
+		Height 32;
+		Mass 700;
+		Speed 6;
+		MeleeDamage 6;
+		Health 200;
+		Scale 0.39;
+		PainChance 170;
+		BloodColor "Red";
+		SeeSound "hx2scorpion/sight";
+		DeathSound "hx2scorpion/death";
+		PainSound "hx2scorpion/pain";
+		Obituary "%o was poisoned to death by a scorpion.";
+		HitObituary "%o was chopped into pieces by a scorpion.";
+	}
+    
+    States {
+		Spawn:
+			SC2I A 3 A_Look();
+			Loop;
+		See:
+			SC2W A 2 A_Chase();
+			SC2W A 0 A_PlaySound("hx2scorpion/active");
+			SC2W B 2 A_Chase();
+			SC2W B 0 A_PlaySound("hx2scorpion/active");
+			SC2W C 2 A_Chase();
+			SC2W C 0 A_PlaySound("hx2scorpion/active");
+			SC2W D 2 A_Chase();
+			SC2W D 0 A_PlaySound("hx2scorpion/active");
+			SC2W E 2 A_Chase();
+			SC2W E 0 A_PlaySound("hx2scorpion/active");
+			SC2W F 2 A_Chase();
+			SC2W F 0 A_PlaySound("hx2scorpion/active");
+			SC2W G 2 A_Chase();
+			SC2W G 0 A_PlaySound("hx2scorpion/active");
+			SC2W H 2 A_Chase();
+			SC2W H 0 A_PlaySound("hx2scorpion/active");
+			TNT1 A 0;
+			Loop;
+			TNT1 A 0 A_Jump(5,"Death");
+			Loop;
+		Melee:
+			TNT1 A 0 A_Jump(90,"Tail");
+			SC2A A 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC2A B 3 A_MeleeAttack();
+			SC2A C 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC2A D 3 A_MeleeAttack();
+			SC2A EF 3 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			SC2A G 3 A_MeleeAttack();
+			SC2A HIJK 3 A_FaceTarget();
+			Goto See;
+		Tail:
+			SC2T AB 4 A_FaceTarget();
+			SC2T CD 2 A_FaceTarget();
+			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			SC2T EF 2 A_FaceTarget();
+			SC2T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
+			SC2T HIJKL 3 A_FaceTarget();
+			Goto See;
+		Pain:
+			SC2P A 2 A_Pain();
+			SC2P BCD 2;
+			SC2P EF 3;
+			Goto See;
+		Death:
+		XDeath:
+			SC2D A 2;
+			SC2D B 2 A_Scream();
+			SC2D C 2 A_NoBlocking();
+			SC2D DEFGHI 2;
+			SC2D J -1;
+			Stop;
+			TNT1 A 0 A_Die();
+			TNT1 A 0 A_NoBlocking();
+			Stop;
+		Death.Fire:
+			NULL A 0 A_SetScale(0.80);
+			NULL A 0 A_SetTranslucent(1.0);
+			TNT1 A 0 A_StopSound(1);
+			ASHD A 4 BRIGHT A_Scream();
+			ASHD B 4 BRIGHT;
+			ASHD C 4 BRIGHT ;
+			ASHD D 4 BRIGHT;
+			ASHD E 4 BRIGHT A_NoBlocking();
+			ASHD F -1;
+			TNT1 A 0 A_StopSound(1);
+			Stop;
+		Raise:
+			SC2D IHGFEDCBA 2;
+			Goto See;
+    }	
+}
+
+class Scorp2PoisonDummy : actor {
+	Default {
+		Projectile;
+		Speed 50;
+		Damage 9;
+		PoisonDamage 40;
+		DamageType "AEPoison";
+		RenderStyle "None";
+	}
+    
+    States {
+		Spawn:
+			PLAY A 2;
+			Stop;
+		Death:
+			PLAY A 1;
+			Stop;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+// PSX Powerslave Scorpion (Edited decorate from LEX SAFANOV)
+///////////////////////////////////////////////////////////////////////////////////////
+class PSScorpion : Scorpion {
+	Default {
+		//$Category "Monsters/scorpions"
+		//$Title "scorpion blue"
+		Tag "Blue Scorpion";
+		Health 50;
+		Radius 22;
+		Height 42;
+		Mass 700;
+		Speed 12;
+		PoisonDamage 3;
+		MeleeDamage 1;
+		PainChance 100;
+		Damage 1;
+		Scale 0.7;
+		DeathSound "hx2scorpion/death";
+		BloodColor "Green";
+		Obituary "%o just got scratched by a big Scorpion.";
+	}
+	
+	States {
+		Spawn:
+			PM01 B 1 FAST A_Look();
+			Loop;
+		See:
+			PM01 BCDEBCDE 3 FAST A_Chase();
+			Loop;
+		Melee:
+			PM01 BB 2 A_FaceTarget();
+			PM01 C 1 A_Jump(160,"RandomJump");
+			PM01 C 2 A_CustomMeleeAttack(2,0,0,"Poison");
+			PM01 DDEE 2 A_FaceTarget();
+			PM01 C 2 A_JumpIfCloser(16,"Squashed");
+			PM01 BCDEBCDE 3 FAST A_Wander();
+			PM01 BCDEBCDE 3 FAST A_Wander();
+			Goto See;
+		RandomJump:
+			PM01 A 2 A_FaceTarget();
+			PM01 D 2 ThrustThingZ(0,10,0,0);
+			TNT1 A 0 ThrustThing (angle*256/360, 3, 0, 0);
+		JumpUp:
+			TNT1 A 0 A_SetShootable();
+			PM01 C 1 A_SkullAttack();
+		JumpDown:
+			PM01 B 1 A_CheckFloor("Drop");
+			loop;
+		Drop:
+			PM01 C 1 A_Stop();
+			PM01 BCDEBCDE 3 FAST A_Wander();
+			PM01 BCDEBCDE 3 FAST A_Wander();
+			PM01 BCDEBCDE 3 FAST A_Wander();
+			goto See;
+		Pain:
+			TNT1 A 0 A_Pain();
+			PM01 BBCC 2 A_Wander();
+			PM01 DDEE 2 A_Wander();
+			Goto See;
+		Squashed:
+			NULL A 0 A_Die();
+			Goto Death;
+		Death:
+		XDeath:
+			TNT1 A 0 A_SetScale(0.3);
+			TNT1 A 0 A_ScreamAndUnblock();
+			TNT1 A 0 A_CustomMissile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
+			TNT1 A 0 A_CustomMissile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
+			TNT1 A 0 A_CustomMissile("PSScpGib3",-2,0,random(75,95),2,random(35,75));
+			TNT1 A 0 A_CustomMissile("PSScpGib4",-2,0,random(75,95),2,random(35,75));
+			MOSA NOP 2 A_Die();
+			Stop;
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////

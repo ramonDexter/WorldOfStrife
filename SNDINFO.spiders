@@ -189,5 +189,16 @@ T2Wasps/Pain2 			DST2WSP2
 T2Wasps/Death1 			DST2WSD1
 T2Wasps/Death2 			DST2WSD2
 
+
+//==============================================================================
+// Hexen 2 Scorpions
+//==============================================================================
+hx2scorpion/sight	"sounds/aracnocide/scorpions/h2scsit.ogg"
+hx2scorpion/active	"sounds/aracnocide/scorpions/h2scact.ogg"
+hx2scorpion/claw	"sounds/aracnocide/scorpions/h2scclaw.ogg"
+hx2scorpion/tail	"sounds/aracnocide/scorpions/h2sctail.ogg"
+hx2scorpion/pain	"sounds/aracnocide/scorpions/h2scpain.ogg"
+hx2scorpion/death	"sounds/aracnocide/scorpions/h2scdie.ogg"
+
 //End of SNDINFO.
 //=======================================================//

@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = -471.032f;
-		viewpositionx = 3724.235f;
+		viewpositiony = 2456.457f;
+		viewpositionx = 73.41139f;
 		
 		testprecommand
 		{
@@ -51,7 +51,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 2.263779f;
+		viewscale = 1.339514f;
 		
 		reloadresourceprecommand
 		{
@@ -140,8 +140,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 23708;
-				firstvisibleline = 761;
+				caretposition = 22704;
+				firstvisibleline = 731;
 				activetab = true;
 			}
 		}

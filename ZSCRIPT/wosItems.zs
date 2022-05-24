@@ -121,7 +121,8 @@ class implant_health : CustomInventory {
 		if ( counter == 35 ) {
 			let pawn = binderPlayer(owner);
 			if ( owner && owner.player ) {
-				if ( pawn.health < pawn.maxhealth ) { 
+				int realMaxHealth = 100 + pawn.stamina;
+				if ( pawn.health < realMaxHealth ) { 
 					owner.GiveBody(1, 0); 
 					counter = 0;
 					if ( pawn.bleedlevel > 0 ) {

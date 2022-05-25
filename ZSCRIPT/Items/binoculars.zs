@@ -19,6 +19,7 @@ class wosBinocular : wosPickup {
         pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
         A_GiveInventory("binoc_weapon", 1);
         A_SelectWeapon("binoc_weapon");
+        
 		A_Overlay(7, "Binoc");
         invoker.binocUsed = true;
     }
@@ -31,6 +32,7 @@ class wosBinocular : wosPickup {
         A_SelectWeapon(pawn.selectedWeapon.GetClassName(), SWF_SELECTPRIORITY);
         A_TakeInventory("binoc_weapon", 1);
         A_ClearOverlays(7, 7);
+        //A_SetCrosshair(13);
         invoker.binocUsed = false;
     }
     Default {
@@ -86,11 +88,13 @@ class binoc_weapon : weapon {
             Loop;
         Select:
 			TNT1 A 0 A_ZoomFactor(4.0);
+            TNT1 A 0 A_SetCrosshair(0);
 		SelectLoop:
             TNT1 A 0 A_Raise();
             Loop;
         Deselect:
 			TNT1 A 0 A_ZoomFactor(1.0);
+            TNT1 A 0 A_SetCrosshair(13);
 		DeselectLoop:
             TNT1 A 0 A_Lower();
             Loop;

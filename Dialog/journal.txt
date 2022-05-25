@@ -1558,7 +1558,7 @@ Conversation {
     Page {
         link = "journal_ECquest_killSpiders_finished";
         ifitem {
-            item = "m14q_killQueens_killed";
+            item = "m14q_killQueens_finished";
             amount = 1;
         }
         pageName = "journal_ECquest_killSpiders_killed"; 

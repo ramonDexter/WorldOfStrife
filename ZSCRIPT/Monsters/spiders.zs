@@ -1827,6 +1827,7 @@ class PSXWasp : actor
 			TNT1 A 0 A_StopSound(1);
 			TNT1 A 0 A_StopSound(6);
 			TNT1 A 0 A_StopSound(7);
+			SPUD ABC 2;
 			TNT1 A 0 A_Scream();
 			PM01 JKLM 4; //A_SpawnDebris("NashGore_FlyingBlood",1)
 			TNT1 A 0 A_SpawnProjectile("SHEye",-2,0,random(80,100),2,random(40,80));
@@ -2118,8 +2119,8 @@ class YellowScorpion : actor {
 		Height 32;
 		Mass 700;
 		Speed 8;
-		MeleeDamage 10;
-		PoisonDamage 10;
+		MeleeDamage 5;
+		PoisonDamage 5;
 		Health 250;
 		Scale 0.4;
 		PainChance 70;
@@ -2245,7 +2246,7 @@ class BlackScorpion : actor {
 		Height 32;
 		Mass 700;
 		Speed 6;
-		MeleeDamage 6;
+		MeleeDamage 4;
 		Health 200;
 		Scale 0.39;
 		PainChance 170;

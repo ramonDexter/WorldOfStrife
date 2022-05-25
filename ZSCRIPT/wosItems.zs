@@ -851,12 +851,12 @@ class q_bomb_queen1 : actor {
 			MS01 A 35 A_Log("\c[red][ = 2 = ]");
 			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
-            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("exlosionFireBig", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
 			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
             TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
 			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
-			TNT1 A 0 ACS_NamedExecute("m14_queen1_blowWall", 14);
+			TNT1 A 0 ACS_NamedExecute("m14_queen1_blowWall", 0);
 			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
@@ -927,12 +927,12 @@ class q_bomb_queen2 : actor {
 			MS01 A 35 A_Log("\c[red][ = 2 = ]");
 			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
-            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("exlosionFireBig", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
 			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
             TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
 			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
-			TNT1 A 0 ACS_NamedExecute("m14_queen2_blowWall", 14);
+			TNT1 A 0 ACS_NamedExecute("m14_queen2_blowWall", 0);
 			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
@@ -1002,12 +1002,12 @@ class q_bomb_queen3 : actor {
 			MS01 A 35 A_Log("\c[red][ = 2 = ]");
 			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
-            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("exlosionFireBig", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
 			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
             TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
 			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
-			TNT1 A 0 ACS_NamedExecute("m14_queen3_blowWall", 14);
+			TNT1 A 0 ACS_NamedExecute("m14_queen3_blowWall", 0);
 			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));

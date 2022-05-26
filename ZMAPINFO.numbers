@@ -212,7 +212,7 @@ DoomEdNums {
 	20207 = tgPowerPlant_hereticCaptain
 	20208 = wosDegninOre
 	20209 = shoulderGun
-	//20210 = magazine_shoulderGun
+	20210 = wosRebreather
 	20211 = shoulderGun1_dummy
 	20212 = shoulderGun2_dummy
 	20213 = shoulderGun3_dummy	

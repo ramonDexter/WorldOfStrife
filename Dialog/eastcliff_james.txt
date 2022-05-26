@@ -1,0 +1,171 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 11;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "EC_james_opener";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Hello, how may I serve you? I sell produce from my farm.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "What do you got on sale?";
+            Nextpage = "EC_james_shop";
+        }
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "EC_james_questions";
+        }
+    }
+    Page {
+        pageName = "EC_james_shop";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]I've got some carrots, onions and lettuce. Also, I got good cheese and some beef.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_opener";
+        }
+        Choice {
+            Text = "\c[gold]Buy carrots";
+            Nextpage = "EC_james_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie4";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy onions";
+            Nextpage = "EC_james_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie5";
+            Cost {
+                item = "goldCoin";
+                amount = 3;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy lettuce";
+            Nextpage = "EC_james_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosVegie3";
+            Cost {
+                item = "goldCoin";
+                amount = 4;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy cheese";
+            Nextpage = "EC_james_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosfbMeat2";
+            Cost {
+                item = "goldCoin";
+                amount = 5;
+            }
+        }
+        Choice {
+            Text = "\c[gold]Buy beef";
+            Nextpage = "EC_james_shop";
+            CloseDialog = true;
+            DisplayCost = true;
+            YesMessage = "Here it is!";
+            NoMessage = "Not enough gold!";
+            GiveItem = "wosfbMeat1";
+            Cost {
+                item = "goldCoin";
+                amount = 7;
+            }
+        }
+    }
+    Page {
+        pageName = "EC_james_questions";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Yes, what would you like to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_opener";
+        }
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "EC_james_whoareyou";
+        }
+        Choice {
+            Text = "Where are you from?";
+            Nextpage = "EC_james_wherefrom";
+        }
+        Choice {
+            Text = "How's business?";
+            Nextpage = "EC_james_howsbusiness";
+        }
+        Choice {
+            Text = "What's going on around here?";
+            Nextpage = "EC_james_goingon";
+        }
+    }
+    Page {
+        pageName = "EC_james_whoareyou";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Name's James. I'm a farmer, you know. Spend my whole day on the field, diggin' dirt.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_questions";
+        }
+    }
+    Page {
+        pageName = "EC_james_wherefrom";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Hail from small village to the north, Brightford. Nice place to live in.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_questions";
+        }
+    }
+    Page {
+        pageName = "EC_james_howsbusiness";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Oh yeah, trade's good, thanks for asking.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_questions";
+        }
+    }
+    Page {
+        pageName = "EC_james_goingon";
+        Name = "\c[yellow]James, trader";
+        Dialog = "\c[white]Oh, nothing much. I spend whole day here in the market, and besides that I go only to the pub or to the bed. People come here to buy food, or have a little chat. So, nothing at all.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "EC_james_questions";
+        }
+    }
+}

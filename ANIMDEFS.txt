@@ -453,3 +453,14 @@ texture WATDEV1
 	pic WATDEV1 tics 4
 	pic WATDEV2 tics 4
 	pic WATDEV3 tics 4
+
+
+
+
+texture DISPB00
+	pic DISPB00 tics 4
+	pic DISPB01 tics 4
+	pic DISPB02 tics 4
+	pic DISPB03 tics 4
+	pic DISPB04 tics 4
+	pic DISPB05 tics 4

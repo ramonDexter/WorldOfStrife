@@ -83,3 +83,11 @@ wosGrilledChicken			25
 wosSoyFood                  13
 wosSodaCan                  5
 wosCandyBar                 7
+wosVegie1(Strange Fruit)    4
+wosVegie2(Apple)            3
+wosVegie3(Lettuce)          4
+wosVegie4(Carrots)          5
+wosVegie5(Onion)            3
+wosfbMeat1(beef)            7
+wosfbMeat2(cheese)          5
+wosfbMeat3(fish)            6

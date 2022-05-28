@@ -1,4 +1,4 @@
-// quest eastcliff pobij pavouky /////////////////////////////////////////////////////
+// quest eastcliff pobij pavouky //////////////////////////////////////////////////////
 // je treba zabit 3 kralovny, ktere rodi nove pavouky
 // kralovny se ukryvaji v doupatech u poli
 

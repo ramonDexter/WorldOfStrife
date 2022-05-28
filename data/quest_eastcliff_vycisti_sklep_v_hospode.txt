@@ -1,0 +1,115 @@
+// quest eastcliff vycisti sklep v hospode ////////////////////////////////////////////
+// hospodsky v hospode v eastcliffu pozada hrace o vycisteni sklepa zamoreneho krysama
+// - pobij krysy
+// - mensi odmena
+// - po pobiti krys hospodsky pozada o likvidaci hnizda krys, aby se neobjevovaly novy krysy
+// - hnizdo je treba najit >> nachazi se za poskozenou zdi
+// - ke zniceni hnizda je potreba jed
+// - jed vyrobi mistni medik, k tomu potrebuje rybi vnitrnosti
+// - rybi vnitrnosti ma rybar zijici na vychonim pobrezi
+// - odmena
+
+// tokeny:
+// m14q_cleanTheCellar_given
+// m14q_cleanTheCellar_killedRats
+// m14q_cleanTheCellar_findNest
+// m14q_cleanTheCellar_getPoison
+// m14q_cleanTheCellar_getFishGuts
+// m14q_cleanTheCellar_gotfishguts
+// m14q_cleanTheCellar_gotpoison
+// m14q_cleanTheCellar_destroyNest
+// m14q_cleanTheCellar_destroyed
+// m14q_cleanTheCellar_finished
+
+// items:
+// wosq_fishGuts
+// wosq_ratPoison
+///////////////////////////////////////////////////////////////////////////////////////
+
+// zadani v dialogu ///////////////////////////////////////////////////////////////////
+script 1410 (void) {
+    displayQuest("Clean the Cellar", 1);
+    GiveInventory("m14q_cleanTheCellar_given", 1);
+	Thing_Deactivate(196);
+}
+// pobiti krys ve sklepe //////////////////////////////////////////////////////////////
+int ratCounter;
+script "killRats" (void) {
+    ratCounter++;
+    if ( ratCounter == 9 ) {
+        GiveActorInventory(0, "m14q_cleanTheCellar_killedRats", 1);
+        displayQuest("Clean the Cellar - Rats are dead. Return to the innkeeper.", 2);
+    }
+}
+// po navratu v dialogu ///////////////////////////////////////////////////////////////
+// odmena
+script 1411 (void) {
+    GiveInventory("goldCoin", 300);
+}
+// zadani zniceni hnizda //////////////////////////////////////////////////////////////
+script 1412 (void) {
+    displayQuest("Clean the Cellar - Find the rat nest.", 2);
+    GiveInventory("m14q_cleanTheCellar_findNest", 1);
+}
+// nalezeni hnizda - spolecne s otevrenim zdi /////////////////////////////////////////
+script "ratNestFound" (void) {
+    if ( CheckInventory("m14q_cleanTheCellar_findNest") && !CheckInventory("m14q_cleanTheCellar_getPoison") ) {
+        displayQuest("Clean the Cellar - You've found the rat nest. Now get the poison.", 2);
+        GiveInventory("m14q_cleanTheCellar_getPoison", 1);
+    }
+}
+// v dialogu u medika /////////////////////////////////////////////////////////////////
+script 1413 (void) {
+    displayQuest("Clean the Cellar - Medic need some fish guts to brew the poison.", 2);
+    GiveInventory("m14q_cleanTheCellar_getFishGuts", 1);
+}
+// v dialogu u rybare /////////////////////////////////////////////////////////////////
+script 1414 (void) {
+    displayQuest("Clean the Cellar - Take the fish guts to the medic.", 2);
+    GiveInventory("m14q_cleanTheCellar_gotfishguts", 1);
+    GiveInventory("wosq_fishGuts", 1);
+}
+// v dialogu u medika /////////////////////////////////////////////////////////////////
+script 1415 (void) {
+    TakeInventory("wosq_fishGuts", 1); //odebrat fish guts z hracovo inv
+}
+script 1416 (void) {
+    displayQuest("Clean the Cellar - You've got the poison. Return back to the innkeeper.", 2);
+    GiveInventory("wosq_ratPoison", 1);
+}
+// po navratu u hospodskeho ///////////////////////////////////////////////////////////
+script 1417 (void) {
+	displayQuest("Clean the Cellar - Take the poison and destroy the rat nest.", 2);
+    GiveInventory("m14q_cleanTheCellar_destroyNest", 1);
+}
+// zniceni hnizda krysi ///////////////////////////////////////////////////////////////
+bool ratnestDestroyed;
+script "destroyNest" (void) {
+	if ( CheckInventory("wosq_ratPoison") && !ratnestDestroyed ) {
+		TakeInventory("wosq_ratPoison", 1);
+		Thing_Activate(194);
+		Thing_Activate(194);
+		GiveInventory("m14q_cleanTheCellar_destroyed", 1);
+		//GiveActorInventory(0, "m14q_cleanTheCellar_destroyed", 1);
+		displayQuest("Clean the Cellar - You've destroyed the rat  nest. Return to the innkeeper.", 2);
+		ratnestDestroyed = true;
+	} else if ( ratnestDestroyed ) {
+		Log(l:"The rat nest is destroyed. You almost feel regret for those poor rats.");
+	} else {
+		Log(l:"\c[red][ You need rat poison to destroy the nest. ]");
+	}
+
+}
+// v dialogu u hospodskeho ////////////////////////////////////////////////////////////
+script 1418 (void) {
+    GiveInventory("m14q_cleanTheCellar_finished", 1);
+    displayQuest("Clean the Cellar", 3);
+    GiveInventory("goldCoin", 500);
+    GiveInventory("wosAleBottle", 3);
+    GiveInventory("wosCheeseburgerDouble", 1);
+	Thing_Activate(196);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////

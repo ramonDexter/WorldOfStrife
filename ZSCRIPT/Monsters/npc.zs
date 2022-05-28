@@ -1243,6 +1243,7 @@ class wos_monkGuy : SwitchableDecoration {
         //$Title "Monk guy"
         +SOLID
         +USESPECIAL
+		Tag "Monk";
   		Radius 16;
   		Height 56;
         Activation THINGSPEC_Switch; // dulezity pokud to ma jit aktivovat!!!!
@@ -1265,6 +1266,282 @@ class wos_monkGuy : SwitchableDecoration {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// daggerfall blacksmith ///////////////////////////////////////////////////////
+class wos_daggerfallBlacksmith : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "blacksmith daggerfall"
+		Tag "Blacksmith";
+		radius 32;
+		height 96;
+		+SOLID
+		+USESPECIAL
+	}
+    States {
+		Spawn:
+			DM12 E 5;
+			DM12 B 8;
+			DM12 AB 7;
+			DM12 C 6;
+			DM12 D 5 A_PlaySound("smith",5,20.0);
+			DM12 D 3 A_Jump(64,"Spawn4");           
+			Loop;
+		Spawn3:
+			DM12 C 0;
+			DM12 C 6;
+			DM12 D 6 A_PlaySound("smith",5,20.0);
+			DM12 D 3 A_Jump(64,"Spawn4");
+			Loop;
+		Spawn4:
+			DM12 D 1;
+			DM12 D 6 A_PlaySound("smith1",5,20.0);
+			DM12 E 6;
+			DM12 E 3 A_Jump(64,"Spawn");
+			DM12 E 3 A_Jump(64,"Spawn3");
+			Loop;
+  	}
+}
+class wos_daggerfallBlacksmith2 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "blacksmith arena"
+		Tag "Blacksmith";
+		radius 16;
+		height 70;
+		+SOLID
+		+USESPECIAL
+	}
+    States {
+		Spawn:
+			DM29 ABCDE 8;
+			Loop;
+  	}
+}
+class wos_arenaOldGuy : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "oldguy"
+		Tag "old guy";
+		radius 16;
+		height 87;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM13 A -1;
+			Stop;
+	}
+}
+class wos_daggerfallFatNoble : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger fat noble"
+		Tag "fat noble";
+		radius 32;
+		height 68;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM14 A -1;
+			Stop;
+	}
+}
+class wos_daggerMonk : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger monk"
+		Tag "monk";
+		radius 16;
+		height 69;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM15 A -1;
+			Stop;
+	}
+}
+class wos_daggerfallNobleGuy : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger noble"
+		Tag "noble";
+		radius 16;
+		height 69;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM16 A -1;
+			Stop;
+	}
+}
+class wos_guywithStick : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "guy with stick"
+		Tag "guy with stick";
+		radius 16;
+		height 63;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM17 A -1;
+			Stop;
+	}
+}
+class wos_daggerInnkeeper1 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger innkeeper"
+		Tag "innkeeper";
+		radius 16;
+		height 62;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM18 A -1;
+			Stop;
+	}
+}
+class wos_daggerTrader : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger trader"
+		Tag "trader";
+		radius 16;
+		height 62;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM19 A -1;
+			Stop;
+	}
+}
+class wos_daggerScholar : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger scholar"
+		Tag "scholar";
+		radius 16;
+		height 65;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM20 A -1;
+			Stop;
+	}
+}
+class wos_daggerTrader2 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "dagger trader 2"
+		Tag "trader";
+		radius 16;
+		height 63;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM21 A -1;
+			Stop;
+	}
+}
+class wos_daggerBeardedMonk : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "bearded monk"
+		Tag "bearded monk";
+		radius 16;
+		height 63;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM22 A -1;
+			Stop;
+	}
+}
+class wos_daggerGuyInRed : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "bearded guy"
+		Tag "bearded guy";
+		radius 16;
+		height 64;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM23 A -1;
+			Stop;
+	}
+}
+class wos_femaleInGreen : actor {
+	Default {
+		//$Category "Other NPCs/Females"
+        //$Title "lady in green"
+		Tag "lady in green";
+		radius 16;
+		height 59;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DF24 A -1;
+			Stop;
+	}
+}
+class wos_femaleNobleLady : actor {
+	Default {
+		//$Category "Other NPCs/Females"
+        //$Title "noble lady"
+		Tag "noble lady";
+		radius 16;
+		height 62;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DF25 A -1;
+			Stop;
+	}
+}
+class wos_daggerBard : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+        //$Title "bard with lute"
+		Tag "bard with lute";
+		radius 16;
+		height 62;
+		+SOLID
+		+USESPECIAL
+	}
+	States {
+		Spawn:
+			DM27 ABCDEF 6;
+			Loop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -1274,3 +1551,7 @@ class wos_monkGuy : SwitchableDecoration {
 
 
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

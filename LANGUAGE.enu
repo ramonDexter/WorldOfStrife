@@ -946,7 +946,9 @@ T_CAMPFIRE = ":[ Portable campfire ]:";
 
 //------------------------------------------------------------------------------
 
+////////////////////////////////////////////////////////////////////////////////
 // MONSTERS ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 T_YoungCarnivorousWeed = "Carnivorous Weed - Young";
 T_CarnivorousWeed = "Carnivorous Weed";
 T_wosGiantEel = "Giant Eel";
@@ -981,6 +983,8 @@ TAG_shootingStalker = "Advanced Stalker";
 T_NUCLEARMUTANT = "Nuclear Mutant";
 T_wosLiquidator = "Liquidator";
 TAG_spikerTrap = "Spiker Trap";
+T_GiantRat = "Giant Rat";
+OBI_GiantRat = "%o was gnawed on by a giant rat.";
 ////////////////////////////////////////////////////////////////////////////////
 
 	

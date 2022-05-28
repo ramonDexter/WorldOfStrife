@@ -73,6 +73,7 @@ version "4.6.0"
 #include "zscript/monsters/wosCultist.zs"
 #include "zscript/monsters/wosLiquidator.zs"
 #include "zscript/monsters/wosrocketturret.zs"
+#include "zscript/monsters/giantrat.zs"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  weapons  ///////////////////////////////////////////////////////////////////

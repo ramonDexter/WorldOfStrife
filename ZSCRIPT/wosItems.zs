@@ -506,6 +506,8 @@ class zscScanner : Scanner replaces Scanner {
 //  QUEST ITEMS&&TOKENS  ///////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+
+
 class travelTicket : CustomInventory
 {
 	Default
@@ -536,6 +538,15 @@ class travelTicket : CustomInventory
 			TNT1 A 0;
 			Stop;
 	
+	}
+}
+
+class millPortTransportTicket : travelTicket {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "millport travel ticket"
+		
+		Tag "Millport Travel Ticket";
 	}
 }
 
@@ -1131,7 +1142,7 @@ class wosq_chemicalOre : wosPickup {
 
 		Tag "Copper Sulfate Ore";
 		Inventory.Icon "I_CHOR";
-		Inventory.PickupMessage "You picked up the Coppar Sulfate Ore.";
+		Inventory.PickupMessage "You picked up the Copper Sulfate Ore.";
 		Mass wosq_chemicalOreWeight;
 	}
 	States {
@@ -1152,7 +1163,7 @@ class wosq_chemicalSolution : wosPickup {
 
 		Tag "Chemical Solution";
 		Inventory.Icon "I_CHSL";
-		Inventory.PickupMessage "You picked up the Copper Sulfate Ore.";
+		Inventory.PickupMessage "You picked up the Chemical Solution.";
 		Mass wosq_chemicalSolutionWeight;
 	}
 	States {
@@ -1173,7 +1184,7 @@ class wosq_rottenWater : wosPickup {
 
 		Tag "Rotten Water";
 		Inventory.Icon "I_RTWT";
-		Inventory.PickupMessage "You picked up the Coppar Sulfate Ore.";
+		Inventory.PickupMessage "You picked up the Rotten Water.";
 		Mass wosq_rottenWaterWeight;
 	}
 	States {
@@ -1185,15 +1196,49 @@ class wosq_rottenWater : wosPickup {
 			Fail;
 	}
 }
-
-class millPortTransportTicket : travelTicket {
+class wosq_fishGuts : wosPickup {
 	Default {
 		//$Category "Quest things/WoS"
-		//$Title "millport travel ticket"
-		
-		Tag "Millport Travel Ticket";
+		//$Title "fish guts"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Fish Guts";
+		Inventory.Icon "I_FSGT";
+		Inventory.PickupMessage "You picked up the Fish Guts.";
+		Mass wosq_rottenWaterWeight;
+	}
+	States {
+		Spawn:
+			FSGT A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
 	}
 }
+class wosq_ratPoison : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "rat poison"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Rat Poison";
+		Inventory.Icon "I_RTPN";
+		Inventory.PickupMessage "You picked up the Rat Poison.";
+		Mass wosq_rottenWaterWeight;
+	}
+	States {
+		Spawn:
+			RTPN A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

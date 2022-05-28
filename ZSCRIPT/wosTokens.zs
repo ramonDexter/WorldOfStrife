@@ -153,7 +153,20 @@ class m14q_raidedWaterplant_killed : tokenBase {}
 class m14q_raidedWaterplant_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
 
-// aeredale quest troubled waters //
+// eastcliff vycisti sklep /////////////////////////////////////////////////////
+class m14q_cleanTheCellar_given : tokenBase {}
+class m14q_cleanTheCellar_killedRats : tokenBase {}
+class m14q_cleanTheCellar_findNest : tokenBase {}
+class m14q_cleanTheCellar_getPoison : tokenBase {}
+class m14q_cleanTheCellar_getFishGuts : tokenBase {}
+class m14q_cleanTheCellar_gotfishguts : tokenBase {}
+class m14q_cleanTheCellar_gotpoison : tokenBase {}
+class m14q_cleanTheCellar_destroyNest : tokenBase {}
+class m14q_cleanTheCellar_destroyed : tokenBase {}
+class m14q_cleanTheCellar_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// aeredale quest troubled waters //////////////////////////////////////////////
 class m10q_troubledWaters_given : tokenBase {}
 class m10q_troubledWaters_go4ore : tokenBase {}
 class m10q_troubledWaters_foundOre : tokenBase {}

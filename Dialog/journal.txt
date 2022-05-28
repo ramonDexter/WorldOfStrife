@@ -15,7 +15,7 @@ Conversation {
 			Text = "$page_journal_opener_cNotes";//\c[yellow][ NOTES ]
 			NextPage = "journal_notes";
 		}*/
-		Choice {
+		Choice { // notes moved to zscript pda by nash
 			Text = "$page_journal_opener_cNotes";//\c[yellow][ NOTES ]
 			NextPage = "journal_opener";
 			Closedialog = true;
@@ -300,6 +300,20 @@ Conversation {
             }
 		}
         /////////////////////////////////////////////////////////////
+
+        // eastscliff - vycisti sklep hospody ///////////////////////
+        Choice {
+            Text = "[ Quest - Clean the Cellar ]";
+            NextPage = "journal_ECquest_cleanTheCellar_given";
+            Require {
+                item = "m14q_cleanTheCellar_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m14q_cleanTheCellar_finished";
+                amount = 1;
+            }
+        }
 
 
 	}
@@ -1701,6 +1715,155 @@ Conversation {
         pageName = "journal_AEquest_troubledWaters_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
         Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    //##################################################################################################################
+
+    //##################################################################################################################
+    // quest eastcliff - vycisti sklep //
+    //##################################################################################################################
+    Page {
+        link = "journal_ECquest_cleanTheCellar_killedRats";
+        ifitem {
+            item = "m14q_cleanTheCellar_killedRats";
+            amount = 1;
+        }
+        link = "journal_ECquest_cleanTheCellar_destroyNest";
+        ifitem {
+            item = "wosq_ratPoison";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_findNest";
+        ifitem {
+            item = "m14q_cleanTheCellar_findNest";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_killedRats"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_getPoison";
+        ifitem {
+            item = "m14q_cleanTheCellar_getPoison";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_findNest"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[ ] Find the rat nest";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_getFishGuts";
+        ifitem {
+            item = "m14q_cleanTheCellar_getFishGuts";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_getPoison"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_gotGuts";
+        ifitem {
+            item = "m14q_cleanTheCellar_gotfishguts";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_getFishGuts"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[ ] Get fish guts so the medic can brew the rat poison";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_destroyNest";
+        ifitem {
+            item = "wosq_ratPoison";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_gotGuts"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_destroyed";
+        ifitem {
+            item = "m14q_cleanTheCellar_destroyed";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_destroyNest"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[ ] Destroy the rat nest";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_cleanTheCellar_finished";
+        ifitem {
+            item = "m14q_cleanTheCellar_finished";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_cleanTheCellar_destroyed"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[ ] Return to the inkkeper.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_ECquest_cleanTheCellar_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[X] Return to the inkkeper.";
         Panel = "M_BLNK";
         Goodbye = "\c[red][ EXIT ]";
 		Choice {

@@ -1,0 +1,38 @@
+// quest eastcliff dones jidlo rybari /////////////////////////////////////////////////
+// - dcera hostinskeho pozada hrace o doneseni jidla rybari
+// - po navratu dostane hrac jidlo, pivo a 100@
+
+// tokeny:
+// wosq_ECdeliverFood_given
+// wosq_ECdeliverFood_delivered
+// wosq_ECdeliverFood_finished
+
+// item:
+// wosFoodTray
+///////////////////////////////////////////////////////////////////////////////////////
+
+// zadani v dialogu u dcery ///////////////////////////////////////////////////////////
+script 1420 (void) {
+    displayQuest("Food Delivery", 1);
+    GiveInventory("m14q_cleanTheCellar_given", 1);
+	Thing_Deactivate(196); // aktivuj marker
+}
+// v dialogu u rybare /////////////////////////////////////////////////////////////////
+script 1421 (void) {
+    TakeInventory("wosFoodTray", 1);
+    displayQuest("Food Delivery - Return back to Jasmine.", 2);
+    GiveInventory("wosq_ECdeliverFood_delivered", 1);
+	Thing_Activate(196); // deaktivuj marker
+	Thing_Deactivate(198); // aktivuj marker u dcery
+}
+// po navratu u dcery /////////////////////////////////////////////////////////////////
+script 4122 (void) {
+    displayQuest("Food Delivery", 3);
+    GiveInventory("wosq_ECdeliverFood_finished", 1);
+    GiveInventory("wosCheeseburgerDouble", 1);
+    GiveInventory("wosAleBottle", 1);
+    GiveInventory("goldCoin", 100);
+}
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////

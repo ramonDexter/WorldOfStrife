@@ -407,12 +407,12 @@ DoomEdNums {
 	20402 = wos_femaleInGreen
 	20403 = wos_femaleNobleLady
 	20404 = wos_daggerBard
+	20405 = wosMonsterSpawner_mutantFly
+	20406 = wosMonsterSpawner_ascSerpentFly
+	20407 = wosMonsterSpawner_PSXWasp
+	20408 = wosMonsterSpawner_BlackScorpion
+	20409 = wosMonsterSpawner_CarnivorousWeed
 	/*
-	20405 = 
-	20406 = 
-	20407 = 
-	20408 = 
-	20409 = 
 	20410 = 
 	20411 = 
 	20412 = 

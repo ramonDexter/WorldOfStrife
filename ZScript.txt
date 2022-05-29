@@ -22,6 +22,7 @@ version "4.6.0"
 #include "zscript/neoworm.zs"
 #include "zscript/wosdebug.zs"
 #include "zscript/zcasing.zs"
+#include "zscript/wosmonsters.zs"
 
 ////////////////////////////////////////////////////////////////////////////////
 

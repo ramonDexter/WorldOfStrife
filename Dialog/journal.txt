@@ -1733,11 +1733,7 @@ Conversation {
             item = "m14q_cleanTheCellar_killedRats";
             amount = 1;
         }
-        link = "journal_ECquest_cleanTheCellar_destroyNest";
-        ifitem {
-            item = "wosq_ratPoison";
-            amount = 1;
-        }
+        
         pageName = "journal_ECquest_cleanTheCellar_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
         Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
@@ -1815,7 +1811,7 @@ Conversation {
     Page {
         link = "journal_ECquest_cleanTheCellar_destroyNest";
         ifitem {
-            item = "wosq_ratPoison";
+            item = "m14q_cleanTheCellar_gotpoison";
             amount = 1;
         }
         pageName = "journal_ECquest_cleanTheCellar_gotGuts"; 

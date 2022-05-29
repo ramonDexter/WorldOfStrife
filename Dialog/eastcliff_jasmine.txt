@@ -1,0 +1,154 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 15;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "eastcliff_jasmine_opener";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]Hello Binder. How may I help you?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Do you need any help here?";
+            Nextpage = "eastcliff_jasmine_help";
+            Exclude {
+                item = "wosq_ECdeliverFood_given";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "I've delivered the food.";
+            Nextpage = "eastcliff_jasmine_deliveredfood";
+            Require {
+                item = "wosq_ECdeliverFood_delivered";
+                amount = 1;
+            }
+            Exclude {
+                item = "wosq_ECdeliverFood_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "eastcliff_jasmine_whoareyou";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "eastcliff_jasmine_doinghere";
+        }
+        Choice {
+            Text = "Could you tell me about Eastcliff?";
+            Nextpage = "eastcliff_jasmine_abouteastcliff";
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_whoareyou";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]I'm Jasmine. My father runs this inn, I'm helping here at the bar. Pretty boring here. I know other better things I would do, if I'm not stuck in this hole.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_jasmine_opener";
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_doinghere";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]Well, papa tells me to watch over the bar, but there is not much to do. Locals tend to their drinks and don't even cause any trouble.I'm little bit bored here.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_jasmine_opener";
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_abouteastcliff";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]Oh, Eastcliff is one boring place. You know, these farmers and fishers, they just don't know how to have fun. I miss my days on school in Millport. These days were better. At least I'll return there in the autumn. You know, this summer break could be boring sometimes.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "eastcliff_jasmine_opener";
+        }
+    }
+    // quest eastcliff dones jidlo rybari /////////////////////////////////////////////
+    Page {
+        pageName = "eastcliff_jasmine_help";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]Oh, you want to help me with this boring bar job? Don't ask, there is not much to do. But hey! As you ask, I got an idea! Yeah, you can help me! Say, would you like to make a small journey?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Sorry, I got better things to do.";
+            Nextpage = "eastcliff_jasmine_opener";
+        }
+        Choice {
+            Text = "Okay, tell me more.";
+            Nextpage = "eastcliff_jasmine_tellmore";
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_tellmore";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]So, you're travller type, like me! So, there lives a fisherman on the eastern coast, by the name of Marcus. Let's say he's little bit 'special' to me. He's got this small hut, I love watching sunsets from there, it's so romantic there. Oh, anyways, I would like to ask you if you would take a food and deliver it to him. He spends most of the day on the boat and doesn't even have time to eat some warm food...So, would you do it for me? I would give you nice reward if you do it.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay, I'll do it.";
+            Nextpage = "eastcliff_jasmine_illdoit";
+            //Special = 80;
+            //arg0 = 1420;
+        }
+        Choice {
+            Text = "Let me think about it.";
+            Nextpage = "eastcliff_jasmine_opener";
+            CloseDialog = true;
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_illdoit";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]That's great. Here, take this food platter na deliver it to him. He lives on the eastern coast, just past the turn to the farms, take right turn and you're there. And tell him I'll visit him in the evening.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Okay, I'll take care of it.";
+            Nextpage = "eastcliff_jasmine_opener";
+            YesMessage = "\c[white]Good luck, Binder.";
+            Special = 80;
+            arg0 = 1420;
+            CloseDialog = true;
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_deliveredfood";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]That's great. I hope it tasted him good. Did he said anything to me?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "He sends his thanks. Oh, and he'll be waiting for you in the evening.";
+            Nextpage = "eastcliff_jasmine_finisher";
+        }
+    }
+    Page {
+        pageName = "eastcliff_jasmine_finisher";
+        Name = "\c[yellow]Jasmine";
+        Dialog = "\c[white]Oh, now I cannot wait till evening...Oh, you want your reward. Here it is, one fresh burger, cold beer and something on top for the journey. I'm in your debt now. Thank you.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "You're welcome.";
+            Nextpage = "eastcliff_jasmine_opener";
+            YesMessage = "\c[white]Thank you again, Binder.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1422;
+        }
+    }
+}

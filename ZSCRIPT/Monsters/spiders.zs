@@ -1846,7 +1846,7 @@ class PSRedWasp : Spider
 	Default
 	{
 		//$Category "Monsters/wasps"
-		//$Title Killer wasp red
+		//$Title "Killer Wasp"
 		
 		+FLOAT 
 		+NOGRAVITY
@@ -1925,7 +1925,7 @@ class PSWasp : Spider
 	Default
 	{
 		//$Category "Monsters/wasps"
-		//$Title Killer wasp 3
+		//$Title "Wasp Warrior"
 		
 		+FLOAT 
 		+NOGRAVITY
@@ -2057,7 +2057,7 @@ class DaggerScorpion : Scorpion {
 		Speed 10;
 		DamageType "Poison";
 		PoisonDamage 6,6,0;
-		MeleeDamage 10;
+		MeleeDamage 6;
 		+BLOODSPLATTER
 		+BOSSDEATH
 		+FASTMELEE

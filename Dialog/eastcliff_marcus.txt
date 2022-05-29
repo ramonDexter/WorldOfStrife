@@ -31,6 +31,18 @@ Conversation {
             }
         }
         Choice {
+            Text = "Jasmine from the Inn sends you this food.";
+            Nextpage = "eastcliff_marcus_sentfood";
+            require {
+                item = "wosq_ECdeliverFood_given";
+                amount = 1;
+            }
+            exclude {
+                item = "wosq_ECdeliverFood_delivered";
+                amount = 1;
+            }
+        }
+        Choice {
             Text = "Who are you?";
             Nextpage = "eastcliff_marcus_whoareyou";
         } 
@@ -110,12 +122,43 @@ Conversation {
         Dialog = "\c[white]Oh yeah, I got some fish guts. Right, take this bucket. It smells foul, I would be happy that you'll take it away.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "Godalmighty...thank you.";
+            Text = "Fatheralmighty...thank you.";
             Nextpage = "eastcliff_marcus_opener";
             Special = 80;
             arg0 = 1414;
             Yesmessage = "\c[white]No, I thank you.";
             CloseDialog = true;
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+    
+    ///////////////////////////////////////////////////////////////////////////////////
+    // quest eastcliff dones jidlo rybari /////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+    Page {
+        pageName = "eastcliff_marcus_sentfood";
+        Name = "\c[yellow]Marcus";
+        Dialog = "\c[white]Oh, does she? Nice girl. Pity she thinks she could be happy with me here in this poor shack. Did she wanted you to tell me something?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh, yeah. She said she'll visit you in the evening.";
+            Nextpage = "eastcliff_marcus_shellvisit";
+        }
+    }
+    Page {
+        pageName = "eastcliff_marcus_shellvisit";
+        Name = "\c[yellow]Marcus";
+        Dialog = "\c[white]Oh, that's a nice surprise! So I'll have to sweep this shack a little and make up the bed, he he he. Thank you, Binder. Tell her the food is good, at least I have something warm to eat.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Will do. See you.";
+            Nextpage = "eastcliff_marcus_opener";
+            YesMessage = "\c[white]See you too.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1421;
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////

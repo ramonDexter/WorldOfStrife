@@ -111,3 +111,10 @@ Lock 65 Strife {
 	Message "You need the Waterplant Key!"
 	Mapcolor 150 150 150
 }
+
+Lock 66 Strife {
+	//$Title "m14 inn cellar key"
+	Any { m14k_whiteCockInnCellarKey }
+	Message "You need the White Cock Inn Cellar Key!"
+	Mapcolor 150 150 150
+}

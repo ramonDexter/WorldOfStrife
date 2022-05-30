@@ -166,6 +166,12 @@ class m14q_cleanTheCellar_destroyed : tokenBase {}
 class m14q_cleanTheCellar_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
 
+// quest eastcliff dones jidlo rybari //////////////////////////////////////////
+class wosq_ECdeliverFood_given : tokenBase {}
+class wosq_ECdeliverFood_delivered : tokenBase {}
+class wosq_ECdeliverFood_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
 // aeredale quest troubled waters //////////////////////////////////////////////
 class m10q_troubledWaters_given : tokenBase {}
 class m10q_troubledWaters_go4ore : tokenBase {}

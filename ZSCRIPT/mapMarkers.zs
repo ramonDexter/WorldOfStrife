@@ -5,102 +5,102 @@ class markerBase : MapMarker {
 }
 class markerPub : markerBase {
     Default {        
-	    //$Title "Hospoda"
+	    //$Title "pub"
     }
 	
 	States {
 		Spawn:
-		MK01 A -1;
+		M030 A -1;
 		Stop;
 	}
 }
 class markerBrewery : markerBase {
     Default {
-	    //$Title "Pivovar/palirna"
+	    //$Title "brewery"
     }
 	States {
 		Spawn:
-		MK02 A -1;
+		M032 A -1;
 		Stop;
 	}
 }
 class markerConvent : markerBase {
     Default {
-	//$Title "Hrad"
+	//$Title "castle"
     }
 	States {
 		Spawn:
-		MK03 A -1;
+		M009 A -1;
 		Stop;
 	}
 }
 class markerMedPotions : markerBase {
     Default {
-	//$Title "Med: Potions"
+	//$Title "burgers"
     }
 	States {
 		Spawn:
-		MK04 A -1;
+		M003 A -1;
 		Stop;
 	}
 }
 class markerFoundry : markerBase {
     Default {
-	//$Title "kovar-zbrane"
+	//$Title "blacksmith"
     }
 	States {
 		Spawn:
-		MK05 A -1;
+		M033 A -1;
 		Stop;
 	}
 }
 class markerMagical : markerBase {
     Default {
-	//$Title "magical"
+	//$Title "church/cathedral"
     }
 	States {
 		Spawn:
-		MK06 A -1;
+		M015 A -1;
 		Stop;
 	}
 }
 class markerMedDoctor1 : markerBase {
     Default {
-	//$Title "doktor 1"
+	//$Title "doctor"
     }
 	States {
 		Spawn:
-		MK07 A -1;
+		M019 A -1;
 		Stop;
 	}
 }
 class markerMedDoctor2 : markerBase {
     Default {
-	//$Title "doktor 2"
+	//$Title "cemetery"
     }
 	States {
 		Spawn:
-		MK08 A -1;
+		M006 A -1;
 		Stop;
 	}
 }
 class markerMine : markerBase {
     Default {
-	//$Title "wares shop"
+	//$Title "tools shop"
     }
 	States {
 		Spawn:
-		MK09 A -1;
+		M027 A -1;
 		Stop;
 	}
 }
 class markerPawnShop : markerBase {
     Default {
-	//$Title "pawn shop"
+	//$Title "grocery store"
     }
 	States {
 		Spawn:
-		MK10 A -1;
+		M013 A -1;
 		Stop;
 	}
 }
@@ -110,34 +110,34 @@ class markerTechShop : markerBase {
     }
 	States {
 		Spawn:
-		MK11 A -1;
+		M022 A -1;
 		Stop;
 	}
 }
 class markerSkull1 : markerBase {
     Default {
-	//$Title "skull 1"
+	//$Title "chapel"
     }
 	States
 	{
 		Spawn:
-		MK12 A -1;
+		M014 A -1;
 		Stop;
 	}
 }
 class markerSkull2 : markerBase {
     Default {
-	//$Title "skull 2"
+	//$Title "powerplant"
     }
 	States {
 		Spawn:
-		MK16 A -1;
+		M023 A -1;
 		Stop;
 	}
 }
 class markerRestaurant : markerBase {
     Default {
-	//$Title "skull 1"
+	//$Title "restaurant"
     }
 	States {
 		Spawn:
@@ -151,47 +151,77 @@ class markerRuins : markerBase {
     }
 	States {
 		Spawn:
-		MK14 A -1;
+		M012 A -1;
 		Stop;
 	}
 }
 class markerAlchShop : markerBase {
     Default {
-	//$Title "alchemy shop"
+	//$Title "techsmith"
     }
 	States {
 		Spawn:
-		MK15 A -1;
+		M026 A -1;
 		Stop;
 	}
 }
 class markerVillage : markerBase {
     Default {
-	//$Title "village-town"
+	//$Title "village-town-city"
     }
 	States {
 		Spawn:
-		MK17 A -1;
+		M001 A -1;
 		Stop;
 	}
 }
 class markerStargate : markerBase {
     Default {
-	//$Title "stargate"
+	//$Title "circle"
     }
 	States {
 		Spawn:
-		MK18 A -1;
+		M010 A -1;
 		Stop;
 	}
 }
 class markerChest : markerBase {
     Default {
-	//$Title "chest"
+	//$Title "point of interest"
     }
 	States {
 		Spawn:
-		MK19 A -1;
+		M021 A -1;
+		Stop;
+	}
+}
+class markerGlobe : markerBase {
+    Default {
+	//$Title "globe"
+    }
+	States {
+		Spawn:
+		M029 A -1;
+		Stop;
+	}
+}
+class markerMarket : markerBase {
+    Default {
+	//$Title "market"
+    }
+	States {
+		Spawn:
+		M008 A -1;
+		Stop;
+	}
+}
+class markerPOI2 : markerBase {
+    Default {
+	//$Title "POI2"
+    }
+	States {
+		Spawn:
+		M024 A -1;
 		Stop;
 	}
 }

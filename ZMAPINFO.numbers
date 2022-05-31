@@ -430,10 +430,10 @@ DoomEdNums {
 	20425 = wosMonsterSpawner_DaggerSpider
 	20426 = wosMonsterSpawner_BloodSpider
 	20427 = wosMonsterSpawner_AvalonSpider
+	20428 = markerGlobe
+	20429 = markerMarket
+	20430 = markerPOI2
 	/*
-	20428 = 
-	20429 = 
-	20430 = 
 	20431 = 
 	20432 = 
 	20433 = 

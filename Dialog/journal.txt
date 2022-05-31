@@ -6,8 +6,8 @@ Conversation {
 	ID = 777;
 	Page {
         pageName = "journal_opener";
-		Name = "\c[yellow]$name_personalJournal";//\c[yellow]::[   PERSONAL  JOURNAL   ]::
-		Dialog = "$page_journal_opener";//\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.
+		Name = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";//\c[yellow]::[   PERSONAL  JOURNAL   ]::
+		Dialog = "\c[white]Your personal journal lists notes and active quests.";//\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.
 		Panel = "M_BLNK";
 		Goodbye = "$bye_EXIT";//\c[red][ EXIT ]
 
@@ -26,6 +26,10 @@ Conversation {
 			Text = "$page_journal_opener_cQuests";//\c[yellow][ QUESTS ]
 			NextPage = "journal_quests";
 		}
+        Choice {
+            Text = "$page_journal_opener_cARCHIVE";//\c[yellow][ ARCHIVE ]
+            Nextpage = "journal_questArchive";
+        }
 	}
 	
     //##################################################################################################################
@@ -288,7 +292,7 @@ Conversation {
 
         // aeredale - troubled waters ///////////////////////////////
         Choice {
-			Text = "[ Quest - Raided Waterplant ]";
+			Text = "[ Quest - Troubled Waters ]";
 			NextPage = "journal_AEquest_troubledWaters_given";
 			Require {
                 item = "m10q_troubledWaters_given";
@@ -314,6 +318,19 @@ Conversation {
                 amount = 1;
             }
         }
+        // eastcliff - food delivery ////////////////////////////////
+        Choice {
+            Text = "[ Quest - Food Delivery ]";
+            NextPage = "journal_ECquest_fooddelivery_given";
+            Require {
+                item = "wosq_ECdeliverFood_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "wosq_ECdeliverFood_finished";
+                amount = 1;
+            }
+        }
 
 
 	}
@@ -321,7 +338,189 @@ Conversation {
     //##################################################################################################################
     //##################################################################################################################
 
+    //##################################################################################################################
+    // quest archive //
+    // list here all finished quests //
+    //##################################################################################################################
+    Page {
+        PageName = "journal_questArchive";
+		Name = "\c[yellow]\c[yellow]::[   Q U E S T   A R C H I V E   ]::";
+        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Finished quests will be listed here.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";		
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_opener";
+		}
+        Choice {
+            Text = "[ Main Quest - Destroy Rebel Base ]";
+			NextPage = "journal_mainQuest_01_given";
+            Require {
+                item = "quest01finished";
+				amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Main Quest - Bring the ancient artifact ]";
+            NextPage = "journal_mainQuest_bringArtifact_given";
+            Require {
+                item = "quest02_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Main Quest - Go to Millport ]";
+            NextPage = "journal_mainQuest_millport_given";
+            Require {
+                item = "quest03_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Main Quest - Millport Situation ]";
+            NextPage = "journal_mainQuest_millportBlues_given";
+            Require {
+                item = "quest04_millport_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Town Quest #01 - Clean the waste treatment plant ]";
+            NextPage = "journal_SQ_q_spiders_given";
+            Require {
+                item = "twn_quest01_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Town Quest #02 - Purge the waste treatment and find the device ]";
+            NextPage = "journal_SQ_q_poachers_given";
+            Require {
+                item = "twn_quest02_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Town Quest #03 - Fix the powerplant ]";
+            NextPage = "journal_SQ_q_fixpowerplant_given";
+            Require {
+                item = "twn_quest03_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Find rebel in town ]";
+            NextPage = "journal_SQ_q_rebels_given";
+            Require {
+                item = "twn_judgeQ01_rebels_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Murder in City Bath ]";
+            NextPage = "journal_SQ_q_murderInBath_given";
+            Require {
+                item = "twn_judgeQ01_vrazdaVlaznich_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Heretical hideout in Silent Hills ]";
+            NextPage = "journal_SQ_bishop_hereticHideout_opener";
+            Require {
+                item = "twn_bishopQ01_skrysRebelu_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Ore Delivery ]";
+            NextPage = "journal_SQ_tekguildmaster_quest01_opener";
+            Require {
+                item = "twn_tekGuildMasterQ1_oreDelivery_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Broken Machinery ]";
+            NextPage = "journal_SQ_tekguildmaster_quest02_opener";
+            Require {
+                item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Trouble in coastal powerplant ]";
+            NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
+            Require {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Find a cook for the Council Club ]";
+            NextPage = "journal_MPquest_councilClubCook_given";
+            Require {
+                item = "m08q_CCinnkeeper_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Destroy Spider Nests ]";
+			NextPage = "journal_ECquest_killSpiders_given";
+            Require {
+                item = "m14q_killQueens_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Raided Waterplant ]";
+			NextPage = "journal_ECquest_raidedwaterplant_given";
+            Require {
+                item = "m14q_raidedWaterplant_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Troubled Waters ]";
+			NextPage = "journal_AEquest_troubledWaters_given";
+            Require {
+                item = "m10q_troubledWaters_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Clean the Cellar ]";
+            NextPage = "journal_ECquest_cleanTheCellar_given";
+            Require {
+                item = "m14q_cleanTheCellar_finished";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "[ Quest - Food Delivery ]";
+            NextPage = "journal_ECquest_fooddelivery_given";
+            Require {
+                item = "wosq_ECdeliverFood_finished";
+                amount = 1;
+            }
+        }
 
+
+        
+        /*
+        Choice {
+            Text = "";
+            NextPage = "";
+            Require {
+                item = "";
+                amount = 1;
+            }
+        }
+        */
+    }
+    //##################################################################################################################
+    //##################################################################################################################
+    //##################################################################################################################
 
 
     //##################################################################################################################
@@ -867,7 +1066,8 @@ Conversation {
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
 	}
     //##################################################################################################################	
@@ -914,7 +1114,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -961,7 +1162,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}   
     }
     //##################################################################################################################
@@ -992,7 +1194,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		} 
     }
     //##################################################################################################################
@@ -1056,7 +1259,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1167,7 +1371,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1214,7 +1419,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1283,7 +1489,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1362,7 +1569,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1425,7 +1633,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1461,7 +1670,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		} 
     }
     //##################################################################################################################
@@ -1542,7 +1752,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1593,7 +1804,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1640,7 +1852,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1719,7 +1932,8 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = "journal_quests";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################
@@ -1864,7 +2078,57 @@ Conversation {
         Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+    }
+    //##################################################################################################################
+
+    //##################################################################################################################
+    // quest dones jidlo rybari //
+    //##################################################################################################################
+    Page {
+        link = "journal_ECquest_fooddelivery_delivered";
+        ifitem {
+            item = "wosq_ECdeliverFood_delivered";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_fooddelivery_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[ ] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_ECquest_fooddelivery_finished";
+        ifitem {
+            item = "wosq_ECdeliverFood_finished";
+            amount = 1;
+        }
+        pageName = "journal_ECquest_fooddelivery_delivered"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_ECquest_fooddelivery_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[X] Return to Jasmine.";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
 		}
     }
     //##################################################################################################################

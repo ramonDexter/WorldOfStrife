@@ -322,4 +322,5 @@ npc/smith12 "sounds/smith/smith12.ogg"
 npc/smith13 "sounds/smith/smith13.ogg"
 
 $random npc/smith { npc/smith11 npc/smith12 npc/smith13 }
+$volume npc/smith 0.25
 ////////////////////////////////////////////////////////////////////////////////

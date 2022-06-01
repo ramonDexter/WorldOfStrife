@@ -1283,18 +1283,18 @@ class wos_daggerfallBlacksmith : actor {
 			DM12 B 8;
 			DM12 AB 7;
 			DM12 C 6;
-			DM12 D 5 A_PlaySound("npc/smith",5,20.0);
+			DM12 D 5 A_PlaySound("npc/smith",5,1.0);
 			DM12 D 3 A_Jump(64,"Spawn4");           
 			Loop;
 		Spawn3:
 			DM12 C 0;
 			DM12 C 6;
-			DM12 D 6 A_PlaySound("npc/smith",5,20.0);
+			DM12 D 6 A_PlaySound("npc/smith",5,1.0);
 			DM12 D 3 A_Jump(64,"Spawn4");
 			Loop;
 		Spawn4:
 			DM12 D 1;
-			DM12 D 6 A_PlaySound("npc/smith",5,20.0);
+			DM12 D 6 A_PlaySound("npc/smith",5,1.0);
 			DM12 E 6;
 			DM12 E 3 A_Jump(64,"Spawn");
 			DM12 E 3 A_Jump(64,"Spawn3");

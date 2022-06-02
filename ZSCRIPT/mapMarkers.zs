@@ -225,3 +225,13 @@ class markerPOI2 : markerBase {
 		Stop;
 	}
 }
+class markerBinder : markerBase {
+	Default {
+		//$title "binder"
+	}
+	States {
+		Spawn:
+		M035 A -1;
+		Stop;
+	}
+}

@@ -8341,13 +8341,15 @@ actor wosD_judasCradle 21468 {
 actor wosD_woodenBarrel : WoodenBarrel 21469 {
 	//$Category "Decorations/WoS"
 	//$Title "dx wooden barrel"
-	+SOLID
-	+SHOOTABLE
-	+NOBLOOD
-	+INCOMBAT
+	//+SOLID
+	//+SHOOTABLE
+	//+NOBLOOD
+	//+INCOMBAT
+	//+ACTLIKEBRIDGE
+	//+NOGRAVITY
+	//+DONTTHRUST	
+	+PUSHABLE
 	+ACTLIKEBRIDGE
-	+NOGRAVITY
-	+DONTTHRUST
 	Tag "wooden barrel"
 	Health 28
  	Radius 10

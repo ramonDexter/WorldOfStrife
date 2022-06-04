@@ -101,9 +101,9 @@ material texture "models/weapons/mauler/tx_mauler.png" { shader "shaders/simsun.
 material texture "models/weapons/mauler/tx_maulerPX.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/mauler/tx_handgrenade.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/mauler/tx_pxStaffBlaster.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/stormPistol/tx_rlpistol.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/stormPistol/tx_stromPistol.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/stormPistol/tx_handgrenade.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/Pistol/tx_rlpistol.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/Pistol/tx_Pistol2.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/Pistol/tx_handgrenade.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/shoulderGun/tx_shoulderGun2_px.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/shoulderGun/tx_mmammobox1.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/shoulderGun/tx_energyPod_1.png" { shader "shaders/simsun.fp" }
@@ -114,16 +114,16 @@ material texture "models/weapons/executorRifle/tx_executorRifle.png" { shader "s
 material texture "models/weapons/punchDagger/tx_handgrenade.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/punchDagger/tx_pxStaffBlaster.png" { shader "shaders/simsun.fp" }
 material texture "models/weapons/punchDagger/tx_strifeDagger.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol2.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol3.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol4.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol5.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol6.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol7.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_laserpistol8.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_handgrenade.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_pxStaffBlaster.png" { shader "shaders/simsun.fp" }
-material texture "models/weapons/laserpistol/tx_energyPod_1.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser2.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser3.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser4.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser5.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser6.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser7.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pistolLaser8.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_handgrenade.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_pxStaffBlaster.png" { shader "shaders/simsun.fp" }
+material texture "models/weapons/laser_pistol/tx_energyPod_1.png" { shader "shaders/simsun.fp" }
 ////////////////////////////////////////////////////////////////////////////////
 
 // props ///////////////////////////////////////////////////////////////////////

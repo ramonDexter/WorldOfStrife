@@ -5,15 +5,15 @@ class wosCultist : actor {
         Tag "Heretic Cultist";
         Health 75;
         PainChance 200;
-        DropItem "Fire";
+        //DropItem "Fire";
         Scale 0.90;
         Speed 8;
         Radius 20;
         Height 56;
         Mass 100;
         Monster;
-        +FloorClip;
-        +DontHurtSpecies;
+        +FloorClip
+        +DONTHARMSPECIES
         Obituary "%o was killed by a lowly Cultist.";
         SeeSound "monster/culsit";
         AttackSound "monster/culatk"; 

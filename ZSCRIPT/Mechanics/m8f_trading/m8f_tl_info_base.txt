@@ -1,0 +1,6 @@
+//
+
+class m8f_tl_InfoBase : Inventory
+{
+  
+}

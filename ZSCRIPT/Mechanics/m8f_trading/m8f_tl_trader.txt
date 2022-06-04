@@ -1,0 +1,137 @@
+
+class m8f_tl_Trader
+{
+
+  // public method section /////////////////////////////////////////////////////
+
+  m8f_tl_Trader init(string currency, Actor trader, m8f_tl_CPT currencyPriceTable)
+  {
+    if (trader == null) { return reportInitError("Trader is null!"); }
+
+    _currency = currency;
+    _trader   = trader;
+    _currencyPriceTable = currencyPriceTable;
+
+    _traderInfo = m8f_tl_TraderInfo(_trader.FindInventory("m8f_tl_TraderInfo"));
+    if (_traderInfo == null) { return reportInitError("Trader info is null!"); }
+
+    refreshItemList();
+
+    return self;
+  }
+
+  // read access section ///////////////////////////////////////////////////////
+
+  string getName        () const { return _trader.GetTag(); }
+  int    getCashAmount  () const { return _trader.CountInv(_currency); }
+  int    getItemsNumber () const { return _tradedItems.size(); }
+  bool   isInfiniteMoney() const { return _traderInfo.isInfiniteMoney(); }
+  string getCurrency    () const { return _currency; }
+
+  Inventory getItem(int i) const { return (i > _tradedItems.size()) ? null : _tradedItems[i]; }
+
+  Actor getActor() const { return _trader; }
+
+  double myPrice(double originalPrice) { return originalPrice * _traderInfo.getPriceFactor(); }
+
+  // control section ///////////////////////////////////////////////////////////
+
+  void refreshItemList()
+  {
+    _tradedItems.clear();
+
+    let priceTable = _currencyPriceTable.get(_currency);
+    if (priceTable == null)
+    {
+      console.printf("No price table for currency %s.", _currency);
+    }
+
+    for (let item = _trader.Inv; item; item = item.Inv)
+    {
+      if (item.amount == 0) { continue; }
+
+      int price = priceTable.getPrice(item.GetClassName());
+      if (price == m8f_tl_PriceTable.NOT_FOUND) { continue; }
+
+      _tradedItems.push(item);
+    }
+
+    sortTradedItems();
+  }
+
+  play void freezeTime  () { _trader.GiveInventoryType("PowerTimeFreezer"   ); }
+  play void unfreezeTime() { _trader.TakeInventory    ("PowerTimeFreezer", 1); }
+
+  // private method section ////////////////////////////////////////////////////
+
+  private m8f_tl_Trader reportInitError(string message) { console.printf(message); return null; }
+
+  private void sortTradedItems()
+  {
+    quickSortTradedItems(0, _tradedItems.size() - 1);
+  }
+
+  private void quickSortTradedItems(int lo, int hi)
+  {
+    if (lo < hi)
+    {
+      int p = quickSortTradedItemsPartition(lo, hi);
+      quickSortTradedItems(lo,    p - 1);
+      quickSortTradedItems(p + 1, hi   );
+    }
+  }
+
+  private int quickSortTradedItemsPartition(int lo, int hi)
+  {
+    string pivot = _tradedItems[hi].GetTag();
+
+    int i = lo - 1;
+
+    for (int j = lo; j <= hi - 1; ++j)
+    {
+      if (strCmp(_tradedItems[j].GetTag(), pivot) < 0)
+      {
+        ++i;
+        swapTradedItems(i, j);
+      }
+    }
+    swapTradedItems(i + 1, hi);
+
+    return i + 1;
+  }
+
+  void swapTradedItems(int i, int j)
+  {
+    Inventory tmp   = _tradedItems[i];
+    _tradedItems[i] = _tradedItems[j];
+    _tradedITems[j] = tmp;
+  }
+
+  int strCmp(string str1, string str2)
+  {
+    int size1 = str1.length();
+    int size2 = str2.length();
+
+    for (int i = 0; i < size1 && i < size2; ++i)
+    {
+      int char1 = str1.CharCodeAt(i);
+      int char2 = str2.CharCodeAt(i);
+      if      (char1 > char2) { return  1; }
+      else if (char1 < char2) { return -1; }
+    }
+
+    if      (size1 > size2) { return  1; }
+    else if (size1 < size2) { return -1; }
+
+    return 0;
+  }
+
+  // private attribute section /////////////////////////////////////////////////
+
+  private Actor             _trader;
+  private m8f_tl_TraderInfo _traderInfo;
+  private string            _currency;
+  private Array<Inventory>  _tradedItems;
+  private m8f_tl_CurrencyPriceTable _currencyPriceTable;
+
+} // class m8f_tl_Trader

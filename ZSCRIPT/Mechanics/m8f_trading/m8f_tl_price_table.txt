@@ -1,0 +1,107 @@
+
+class m8f_tl_CurrencyPriceTable
+{
+
+  enum Results
+  {
+    NOT_FOUND = -1,
+  }
+
+  void push(string currency, m8f_tl_PriceTable priceTable)
+  {
+    // array is sorted
+    uint size = _currencies.size();
+    uint i    = 0;
+    for (; i < size && _currencies[i] < currency; ++i);
+    _currencies .insert(i, currency);
+    _priceTables.insert(i, priceTable);
+  }
+
+  m8f_tl_PRiceTable get(string currency)
+  {
+    // binary search
+    int size = _currencies.size();
+    int L    = 0;
+    int R    = size - 1;
+
+    while (L <= R)
+    {
+      int m = (L + R) / 2;
+      string current = _currencies[m];
+      if      (current <  currency) { L = m + 1; }
+      else if (current >  currency) { R = m - 1; }
+      else if (current == currency) { return _priceTables[m]; }
+    }
+
+    return null;
+  }
+
+  int getPrice(string currency, string className)
+  {
+    // binary search
+    int size = _currencies.size();
+    int L    = 0;
+    int R    = size - 1;
+
+    while (L <= R)
+    {
+      int m = (L + R) / 2;
+      string current = _currencies[m];
+      if      (current <  currency) { L = m + 1; }
+      else if (current >  currency) { R = m - 1; }
+      else if (current == currency) { return _priceTables[m].getPrice(className); }
+    }
+
+    return NOT_FOUND;
+  }
+
+  // private attribute section /////////////////////////////////////////////////
+
+  private Array<string>            _currencies;
+  private Array<m8f_tl_PriceTable> _priceTables;
+
+} // m8f_tl_CurrencyPriceTable
+
+class m8f_tl_PriceTable
+{
+
+  enum Results
+  {
+    NOT_FOUND = -1,
+  }
+
+  void push(string className, int price)
+  {
+    // array is sorted
+    uint size = _classNames.size();
+    uint i    = 0;
+    for (; i < size && _classNames[i] < className; ++i);
+    _classNames.insert(i, className);
+    _prices    .insert(i, price);
+  }
+
+  int getPrice(string className)
+  {
+    // binary search
+    int size = _classNames.size();
+    int L    = 0;
+    int R    = size - 1;
+
+    while (L <= R)
+    {
+      int m = (L + R) / 2;
+      string current = _classNames[m];
+      if      (current <  className) { L = m + 1; }
+      else if (current >  className) { R = m - 1; }
+      else if (current == className) { return _prices[m]; }
+    }
+
+    return NOT_FOUND;
+  }
+
+  // private attribute section /////////////////////////////////////////////////
+
+  private Array<string> _classNames;
+  private Array<int>    _prices;
+
+} // m8f_tl_PriceTable

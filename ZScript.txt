@@ -58,6 +58,18 @@ version "4.6.0"
 #include "zscript/mechanics/mwr_lookcursor/MWR_Describer.zs"
 #include "zscript/mechanics/mwr_lookcursor/DefaultDescribers.zs"
 #include "zscript/mechanics/mwr_lookcursor/MWR_Lookcursor.zs"
+// m8f trading license /////////////////////////////////////////////////////////
+/*
+#include "zscript/mechanics/m8f_trading/m8f_tl_trader_info.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_price_table.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_doom_price_table.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_trade_manager.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_trader.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_trade_view.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_event_handler.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_doom_trade_setup.txt"
+#include "zscript/mechanics/m8f_trading/m8f_tl_acs_helper.txt"
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 //  monsters  //////////////////////////////////////////////////////////////////
@@ -120,6 +132,7 @@ version "4.6.0"
 
 ////////////////////////////////////////////////////////////////////////////////
 
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -134,5 +147,6 @@ version "4.6.0"
 //#include "zscript/weapons/executorRifle.zs"
 //#include "zscript/mechanics/nashmove.zs"
 //#include "zscript/pdamessages.zs"
+//#include "zscript/conversation/wosconversationmenu.txt"
 ////////////////////////////////////////////////////////////////////////////////
 

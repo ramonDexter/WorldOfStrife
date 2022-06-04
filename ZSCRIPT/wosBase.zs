@@ -153,18 +153,18 @@ class questMarker_5 : MapMarker {
 class randomDrop_01 : RandomSpawner {
 	Default {
 		DropItem "goldCoin", 255, 10;
-		DropItem "ClipOfBullets", 255, 2;
-		DropItem "Gold10", 128, 1;
+		DropItem "wosBulletCartridge", 255, 2;
+		DropItem "wosGold10", 128, 1;
 		DropItem "zscMedPatch", 128, 1;
 		DropItem "zscMedicalKit", 64, 1;
-		DropItem "EnergyPod", 64, 1;
+		DropItem "wosEnergyCell", 64, 1;
 	}
 }
 class randomDrop_02 : RandomSpawner {
 	Default {
 		DropItem "goldCoin", 255, 5;
-		DropItem "ClipOfBullets", 255, 2;
-		DropItem "Gold10", 128, 1;
+		DropItem "wosBulletCartridge", 255, 2;
+		DropItem "wosGold10", 128, 1;
 		DropItem "zscMedPatch", 128, 1;
 		DropItem "Gold25", 64, 1;
 	}
@@ -172,19 +172,19 @@ class randomDrop_02 : RandomSpawner {
 class randomDrop_03 : RandomSpawner {
 	Default {
 		DropItem "goldCoin", 255, 5;
-		DropItem "ClipOfBullets", 255, 2;
-		DropItem "Gold10", 128, 1;
-		DropItem "Hyposprej", 128, 1;
-		DropItem "grenadeExplosive", 64, 1;
+		DropItem "wosBulletCartridge", 255, 2;
+		DropItem "wosGold10", 128, 1;
+		DropItem "wosHyposprej", 128, 1;
+		DropItem "wosGrenadeE", 64, 1;
 	}
 }
 class randomDrop_04 : RandomSpawner {
 	Default {
-		DropItem "Gold10", 255, 1;
-		DropItem "energyPod", 255, 1;
-		DropItem "Hyposprej", 128, 1;
+		DropItem "wosGold10", 255, 1;
+		DropItem "wosEnergyCell", 255, 1;
+		DropItem "wosHyposprej", 128, 1;
 		DropItem "Flare", 128, 1;
-		DropItem "DeployableShieldItem", 64, 1;
+		DropItem "wosDeployableShield", 64, 1;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

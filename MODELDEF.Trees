@@ -5,7 +5,7 @@
 
 
 
-Model Palm01
+/*Model Palm01
 { 
    path models
    Model 0 "palm1.md3" 
@@ -50,7 +50,7 @@ Model Palm04
    Scale 0.5 0.5 0.5
    FrameIndex DUMM A 0 0
 }
-
+*/
 
 
 //-----------------------ZOD Trees Models------------------------//

@@ -1,0 +1,44 @@
+
+class m8f_tl_DoomTradeSetup : EventHandler
+{
+
+  override void WorldThingSpawned(WorldEvent event)
+  {
+    Actor thing = event.thing;
+    if (thing == null) { return; }
+
+    string doomCurrency = "Clip";
+    string hereCurrency = "GoldWandAmmo";
+    double priceFactor  = 1.0;
+    double greedyPriceFactor = 2.0;
+
+    if      (thing is "DoomPlayer")    { MakeTrader(thing, doomCurrency, priceFactor, false); }
+    else if (thing is "HereticPlayer") { MakeTrader(thing, hereCurrency, priceFactor, false); }
+    else if (thing is "DoomImp")
+    {
+      MakeTrader(thing, doomCurrency, greedyPriceFactor, true );
+      thing.GiveInventory("Pistol",       1);
+      thing.GiveInventory("Shotgun",      1);
+      thing.GiveInventory("SuperShotgun", 1);
+      thing.GiveInventory("Chaingun",     1);
+      thing.GiveInventory("BFG9000",      1);
+    }
+    else if (thing is "Mummy")
+    {
+      MakeTrader(thing, hereCurrency, greedyPriceFactor, true );
+      thing.GiveInventory("ArtiInvisibility", 1);
+      thing.GiveInventory("ArtiTomeOfPower",  1);
+      thing.GiveInventory("ArtiTimeBomb",     1);
+      thing.GiveInventory("SuperMap",         1);
+    }
+  }
+
+  // private function section
+
+  private static void Maketrader(Actor actor, string currency, double priceFactor, bool isInfiniteMoney)
+  {
+    let traderInfo = m8f_tl_TraderInfo(actor.GiveInventoryType("m8f_tl_TraderInfo"));
+    traderInfo.init(currency, priceFactor, isInfiniteMoney);
+  }
+
+} // class m8f_tl_DoomPriceGiver

@@ -26,13 +26,14 @@ GameInfo {
 	AddEventHandlers = "LowDetailHandler"
 	AddEventHandlers = "MWR_LanguageHandler" //Required by DescriberProvider
 	AddEventHandlers = "MWR_DescriberProvider" //Required by LookCursorHandler
-	AddEventHandlers = "MWR_LookCursorHandler" //Required for LookCursor to function
+	AddEventHandlers = "MWR_LookCursorHandler" //Required for LookCursor to function 
+	//AddEventHandlers = "m8f_tl_KeyboardHandler"
 	
 	
 	quitsound = "silence" // Sound effects handled by message box code
 	//messageboxclass = "ROTTMessageBox" 
 		
-	//DefaultConversationMenuClass = "SampleConversationMenu"
+	//DefaultConversationMenuClass = "wosConversationMenu"
 }
 ////////////////////////////////////////////////////////////////////////////////
 

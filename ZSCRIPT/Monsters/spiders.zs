@@ -2060,7 +2060,7 @@ class DaggerScorpion : Scorpion {
 		MeleeDamage 6;
 		+BLOODSPLATTER
 		+BOSSDEATH
-		+FASTMELEE
+		//+FASTMELEE
 		BloodColor "Red";
 		SeeSound "hx2scorpion/sight";
 		DeathSound "hx2scorpion/death";
@@ -2078,7 +2078,7 @@ class DaggerScorpion : Scorpion {
 		Melee: 
 			9DAG F 2 A_FaceTarget();
 			9DAG GH 2 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			TNT1 A 0 A_StartSound("hx2scorpion/tail");
 			9DAG I 5 A_CustomMeleeAttack(20,0,0,"Poison");
 			9DAG HGF 3 A_FaceTarget();
 			Goto See;
@@ -2139,21 +2139,21 @@ class YellowScorpion : actor {
 		See:
 		Chase:
 			SC1W A 2 A_Chase();
-			SC1W A 0 A_PlaySound("hx2scorpion/active");
+			SC1W A 0 A_StartSound("hx2scorpion/active");
 			SC1W B 2 A_Chase();
-			SC1W B 0 A_PlaySound("hx2scorpion/active");
+			SC1W B 0 A_StartSound("hx2scorpion/active");
 			SC1W C 1 A_Chase();
-			SC1W C 0 A_PlaySound("hx2scorpion/active");
+			SC1W C 0 A_StartSound("hx2scorpion/active");
 			SC1W D 1 A_Chase();
-			SC1W D 0 A_PlaySound("hx2scorpion/active");
+			SC1W D 0 A_StartSound("hx2scorpion/active");
 			SC1W E 2 A_Chase();
-			SC1W E 0 A_PlaySound("hx2scorpion/active");
+			SC1W E 0 A_StartSound("hx2scorpion/active");
 			SC1W F 2 A_Chase();
-			SC1W F 0 A_PlaySound("hx2scorpion/active");
+			SC1W F 0 A_StartSound("hx2scorpion/active");
 			SC1W G 2 A_Chase();
-			SC1W G 0 A_PlaySound("hx2scorpion/active");
+			SC1W G 0 A_StartSound("hx2scorpion/active");
 			SC1W H 2 A_Chase();
-			SC1W H 0 A_PlaySound("hx2scorpion/active");
+			SC1W H 0 A_StartSound("hx2scorpion/active");
 			TNT1 A 0;
 			Loop;
 			TNT1 A 0 A_Jump(15,"Death");
@@ -2161,22 +2161,22 @@ class YellowScorpion : actor {
 		Melee:
 			TNT1 A 0 A_Jump(150,"Tail");
 			SC1A A 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
 			SC1A B 3 A_CustomMeleeAttack(8,0,0);
 			SC1A C 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
 			SC1A D 3 A_CustomMeleeAttack(8,0,0);
 			SC1A EF 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
 			SC1A G 3 A_CustomMeleeAttack(8,0,0);
 			SC1A HIJK 3 A_FaceTarget();
 			Goto Chase;
 		Tail:
 			SC1T AB 4 A_FaceTarget();
 			SC1T CD 2 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			TNT1 A 0 A_StartSound("hx2scorpion/tail");
 			SC1T EF 2 A_FaceTarget();
-			SC1T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
+			SC1T G 3 A_SpawnProjectile("Scorp1PoisonDummy",27,0,0);
 			SC1T HIJKL 3 A_FaceTarget();
 			Goto Chase;
 		Pain:
@@ -2264,21 +2264,21 @@ class BlackScorpion : actor {
 			Loop;
 		See:
 			SC2W A 2 A_Chase();
-			SC2W A 0 A_PlaySound("hx2scorpion/active");
+			SC2W A 0 A_StartSound("hx2scorpion/active");
 			SC2W B 2 A_Chase();
-			SC2W B 0 A_PlaySound("hx2scorpion/active");
+			SC2W B 0 A_StartSound("hx2scorpion/active");
 			SC2W C 2 A_Chase();
-			SC2W C 0 A_PlaySound("hx2scorpion/active");
+			SC2W C 0 A_StartSound("hx2scorpion/active");
 			SC2W D 2 A_Chase();
-			SC2W D 0 A_PlaySound("hx2scorpion/active");
+			SC2W D 0 A_StartSound("hx2scorpion/active");
 			SC2W E 2 A_Chase();
-			SC2W E 0 A_PlaySound("hx2scorpion/active");
+			SC2W E 0 A_StartSound("hx2scorpion/active");
 			SC2W F 2 A_Chase();
-			SC2W F 0 A_PlaySound("hx2scorpion/active");
+			SC2W F 0 A_StartSound("hx2scorpion/active");
 			SC2W G 2 A_Chase();
-			SC2W G 0 A_PlaySound("hx2scorpion/active");
+			SC2W G 0 A_StartSound("hx2scorpion/active");
 			SC2W H 2 A_Chase();
-			SC2W H 0 A_PlaySound("hx2scorpion/active");
+			SC2W H 0 A_StartSound("hx2scorpion/active");
 			TNT1 A 0;
 			Loop;
 			TNT1 A 0 A_Jump(5,"Death");
@@ -2286,22 +2286,22 @@ class BlackScorpion : actor {
 		Melee:
 			TNT1 A 0 A_Jump(90,"Tail");
 			SC2A A 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-			SC2A B 3 A_MeleeAttack();
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
+			SC2A B 3 A_CustomMeleeAttack();
 			SC2A C 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-			SC2A D 3 A_MeleeAttack();
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
+			SC2A D 3 A_CustomMeleeAttack();
 			SC2A EF 3 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/claw");
-			SC2A G 3 A_MeleeAttack();
+			TNT1 A 0 A_StartSound("hx2scorpion/claw");
+			SC2A G 3 A_CustomMeleeAttack();
 			SC2A HIJK 3 A_FaceTarget();
 			Goto See;
 		Tail:
 			SC2T AB 4 A_FaceTarget();
 			SC2T CD 2 A_FaceTarget();
-			TNT1 A 0 A_PlaySound("hx2scorpion/tail");
+			TNT1 A 0 A_StartSound("hx2scorpion/tail");
 			SC2T EF 2 A_FaceTarget();
-			SC2T G 3 A_CustomMissile("Scorp1PoisonDummy",27,0,0);
+			SC2T G 3 A_SpawnProjectile("Scorp1PoisonDummy",27,0,0);
 			SC2T HIJKL 3 A_FaceTarget();
 			Goto See;
 		Pain:
@@ -2425,10 +2425,10 @@ class PSScorpion : Scorpion {
 		XDeath:
 			TNT1 A 0 A_SetScale(0.3);
 			TNT1 A 0 A_ScreamAndUnblock();
-			//TNT1 A 0 A_CustomMissile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
-			//TNT1 A 0 A_CustomMissile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
-			//TNT1 A 0 A_CustomMissile("PSScpGib3",-2,0,random(75,95),2,random(35,75));
-			//TNT1 A 0 A_CustomMissile("PSScpGib4",-2,0,random(75,95),2,random(35,75));
+			//TNT1 A 0 A_SpawnProjectile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
+			//TNT1 A 0 A_SpawnProjectile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
+			//TNT1 A 0 A_SpawnProjectile("PSScpGib3",-2,0,random(75,95),2,random(35,75));
+			//TNT1 A 0 A_SpawnProjectile("PSScpGib4",-2,0,random(75,95),2,random(35,75));
 			MOSA NOP 2 A_Die();
 			Stop;
 	}

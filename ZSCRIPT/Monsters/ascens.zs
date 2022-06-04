@@ -851,16 +851,16 @@ class wosGiantEel : actor {
         PainChance 192;
         DeathSound "Eel/Death";
         Monster;
-        +NoGravity;
+        +NoGravity
         //  +Float;
-        +DontHurtSpecies;
-        -CANPUSHWALLS;
-        -CANUSEWALLS;
-        -ACTIVATEMCROSS;
-        +NOTRIGGER;
-        +NOINFIGHTING;
-        +PUSHABLE;
-        +NOICEDEATH;
+        +DONTHARMSPECIES
+        -CANPUSHWALLS
+        -CANUSEWALLS
+        -ACTIVATEMCROSS
+        +NOTRIGGER
+        +NOINFIGHTING
+        +PUSHABLE
+        +NOICEDEATH
         //DamageFactor "Normal", 1.0
 	    //DamageFactor "NormalFist", 0.5
         //DamageFactor "NormalHit", 1.0
@@ -2079,7 +2079,7 @@ class ascSerpentFly : actor {
     states {
         Spawn:
             SFL1 A 1;
-            SFL1 A 1 A_StartSound ("Hornet/Fly", CHAN_7, 0.2);
+            SFL1 A 1 A_StartSound ("Hornet/Fly", CHAN_7, CHANF_DEFAULT, 0.25);
             SFL1 ABBCCDD 2 A_Look();
             loop;
         See:
@@ -2090,11 +2090,11 @@ class ascSerpentFly : actor {
                 A_ChangeVelocity (0, 0, 0, CVF_REPLACE); 
                 A_SentinelBob();
             }
-            SFL1 A 2 A_StartSound ("Hornet/Fly", CHAN_7, 0.2);
+            SFL1 A 2 A_StartSound ("Hornet/Fly", CHAN_7, CHANF_DEFAULT, 0.25);
             SFL1 A 0 A_JumpIf(waterlevel > 0, "FlyUp");
             SFL1 A 2 {
                 A_Chase(); 
-                A_StartSound ("Hornet/Fly", CHAN_7, 0.4);
+                A_StartSound ("Hornet/Fly", CHAN_7, CHANF_DEFAULT, 0.45);
             }
             SFL1 A 0 A_JumpIf(waterlevel > 0, "FlyUp");
             SFL1 B 2 A_Chase();
@@ -2118,7 +2118,7 @@ class ascSerpentFly : actor {
                 A_ChangeVelocity (0, 0, 7, CVF_REPLACE); 
                 A_SentinelBob();
             }
-            SFL1 A 0 A_StartSound ("Hornet/Fly", CHAN_7, 0.4);
+            SFL1 A 0 A_StartSound ("Hornet/Fly", CHAN_7, CHANF_DEFAULT, 0.45);
             SFL1 AABBCCDDAABBCCDD 2 A_Chase();
             goto See;
         Missile:

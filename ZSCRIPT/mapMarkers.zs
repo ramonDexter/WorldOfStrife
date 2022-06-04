@@ -141,7 +141,7 @@ class markerRestaurant : markerBase {
     }
 	States {
 		Spawn:
-		MK13 A -1;
+		M031 A -1;
 		Stop;
 	}
 }
@@ -151,7 +151,7 @@ class markerRuins : markerBase {
     }
 	States {
 		Spawn:
-		M012 A -1;
+		M047 A -1;
 		Stop;
 	}
 }
@@ -167,7 +167,7 @@ class markerAlchShop : markerBase {
 }
 class markerVillage : markerBase {
     Default {
-	//$Title "village-town-city"
+	//$Title "city-town"
     }
 	States {
 		Spawn:
@@ -232,6 +232,156 @@ class markerBinder : markerBase {
 	States {
 		Spawn:
 		M035 A -1;
+		Stop;
+	}
+}
+class markerHouse : markerBase {
+	Default {
+		//$title "house"
+	}
+	States {
+		Spawn:
+		M036 A -1;
+		Stop;
+	}
+}
+class markerEstate : markerBase {
+	Default {
+		//$title "estate"
+	}
+	States {
+		Spawn:
+		M037 A -1;
+		Stop;
+	}
+}
+class markerApartment : markerBase {
+	Default {
+		//$title "apartment"
+	}
+	States {
+		Spawn:
+		M038 A -1;
+		Stop;
+	}
+}
+class markerPlaza : markerBase {
+	Default {
+		//$title "plaza"
+	}
+	States {
+		Spawn:
+		M007 A -1;
+		Stop;
+	}
+}
+class markerVillageSmallCity : markerBase {
+	Default {
+		//$title "village - small city"
+	}
+	States {
+		Spawn:
+		M048 A -1;
+		Stop;
+	}
+}
+class markerFarm : markerBase {
+	Default {
+		//$title "farm"
+	}
+	States {
+		Spawn:
+		M039 A -1;
+		Stop;
+	}
+}
+class markerFields : markerBase {
+	Default {
+		//$title "fields"
+	}
+	States {
+		Spawn:
+		M040 A -1;
+		Stop;
+	}
+}
+class markerDrinkingWater : markerBase {
+	Default {
+		//$title "drinking water"
+	}
+	States {
+		Spawn:
+		M041 A -1;
+		Stop;
+	}
+}
+class markerWaterWell : markerBase {
+	Default {
+		//$title "water well"
+	}
+	States {
+		Spawn:
+		M042 A -1;
+		Stop;
+	}
+}
+class markerBarbedWire : markerBase {
+	Default {
+		//$title "banditos"
+	}
+	States {
+		Spawn:
+		M043 A -1;
+		Stop;
+	}
+}
+class markerDanger : markerBase {
+	Default {
+		//$title "danger"
+	}
+	States {
+		Spawn:
+		M044 A -1;
+		Stop;
+	}
+}
+class markerDangerDeadly : markerBase {
+	Default {
+		//$title "danger deadly"
+	}
+	States {
+		Spawn:
+		M045 A -1;
+		Stop;
+	}
+}
+class markerDistillery : markerBase {
+	Default {
+		//$title "distillery"
+	}
+	States {
+		Spawn:
+		M046 A -1;
+		Stop;
+	}
+}
+class markerGhostTown : markerBase {
+	Default {
+		//$title "ghost town"
+	}
+	States {
+		Spawn:
+		M012 A -1;
+		Stop;
+	}
+}
+class markerTriangle : markerBase {
+	Default {
+		//$title "triangle"
+	}
+	States {
+		Spawn:
+		M049 A -1;
 		Stop;
 	}
 }

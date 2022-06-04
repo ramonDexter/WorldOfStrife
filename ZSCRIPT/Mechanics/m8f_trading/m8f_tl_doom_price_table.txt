@@ -1,0 +1,40 @@
+
+class m8f_tl_DoomPriceTable : m8f_tl_CPT
+{
+
+  m8f_tl_DoomPriceTable init()
+  {
+    // Doom
+    let clipPriceTable = new("m8f_tl_PriceTable");
+    push("Clip", clipPriceTable);
+
+    clipPriceTable.push("RocketLauncher", 200);
+    clipPriceTable.push("Chaingun",       100);
+    clipPriceTable.push("BasicArmor",       1);
+    clipPriceTable.push("Pistol",          15);
+    clipPriceTable.push("Shotgun",         60);
+    clipPriceTable.push("SuperShotgun",   150);
+    clipPriceTable.push("BFG9000",        400);
+    clipPriceTable.push("PlasmaRifle",    300);
+    clipPriceTable.push("Chainsaw",       180);
+
+    // Heretic
+    let goldPriceTable = new("m8f_tl_PriceTable");
+    push("GoldWandAmmo", goldPriceTable);
+
+    goldPriceTable.push("ArtiInvisibility",  200);
+    goldPriceTable.push("ArtiTomeOfPower",   100);
+    goldPriceTable.push("ArtiTimeBomb",        1);
+    goldPriceTable.push("ArtiFly",             1);
+    goldPriceTable.push("ArtiInvulnerability", 1);
+    goldPriceTable.push("ArtiTorch",           1);
+    goldPriceTable.push("ArtiEgg",             1);
+    goldPriceTable.push("ArtiTeleport",        1);
+    goldPriceTable.push("KeyGreen",            1);
+    goldPriceTable.push("KeyBlue",             1);
+    goldPriceTable.push("KeyYellow",           1);
+
+    return self;
+  }
+
+} // class m8f_tl_DoomPriceTable

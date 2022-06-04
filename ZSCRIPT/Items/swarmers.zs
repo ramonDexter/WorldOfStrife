@@ -165,7 +165,7 @@ class SwarmerMite : actor
 		TNT1 A 0 ThrustThing(random(0,360), 1, 0, 0);
 		SPMT BC 1;
 		TNT1 A 0 ThrustThing(random(0,360), 1, 0, 0);
-		TNT1 A 0 A_StartSound("SHDPFLY",5,0.2,1);
+		TNT1 A 0 A_StartSound("SHDPFLY",5, CHANF_DEFAULT, 0.25);
 		TNT1 A 0 A_Jump(150,8);
 		TNT1 A 0 ThrustThingZ(random(3,6), 0, 0, 0);
 		SPMT BC 1;
@@ -183,12 +183,12 @@ class SwarmerMite : actor
 		Goto Spawn+8;
 	Rise:
 		TNT1 A 0;
-		TNT1 A 0 A_StartSound("SHDPFLY",5,0.2,1);
+		TNT1 A 0 A_StartSound("SHDPFLY",5, CHANF_DEFAULT, 0.25);
 		SPMT BCBC 1 ThrustThingZ(0,2,0,0);
 		Goto Spawn+8;
 	Seeker:
 		TNT1 A 0;
-		TNT1 A 0 A_StartSound("SHDPFLY",5,0.2,1);
+		TNT1 A 0 A_StartSound("SHDPFLY",5, CHANF_DEFAULT, 0.25);
 		TNT1 A 0
 		{
 			self.bSeekerMissile = true;
@@ -205,7 +205,7 @@ class SwarmerMite : actor
 		TNT1 A 0;
 		TNT1 A 0 
 		{
-			A_StartSound("SHDPDIE",5,0.6,0);
+			A_StartSound("SHDPDIE",5, CHANF_DEFAULT, 0.65);
 			A_SpawnItem("SMiteExplosion",0,0,0);
 		}
 		Stop;
@@ -291,7 +291,7 @@ class SMiteExplosion : actor
 			Goto Death;
 		Death:
 			TNT1 A 0;
-			TNT1 A 0 A_StartSound("SHPODEXP",5,0.6,0);
+			TNT1 A 0 A_StartSound("SHPODEXP",5, CHANF_DEFAULT, 0.65);
 			MTXP ABCDEFGHIJ 1;
 			Stop;
 	}

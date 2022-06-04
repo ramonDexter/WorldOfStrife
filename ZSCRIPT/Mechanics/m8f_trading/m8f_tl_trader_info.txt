@@ -1,0 +1,28 @@
+
+/* An actor may have several trader infos, each one for different currency:
+ * some traders may only trade in particular currency, others may trade in any currency.
+ *
+ */
+class m8f_tl_TraderInfo : Inventory
+{
+
+  m8f_tl_TraderInfo init(string currency, double priceFactor, bool isInfiniteMoney)
+  {
+    _currency        = currency;
+    _priceFactor     = priceFactor;
+    _isInfiniteMoney = isInfiniteMoney;
+
+    return self;
+  }
+
+  string getCurrency    () const { return _currency;        }
+  double getPriceFactor () const { return _priceFactor;     }
+  bool   isInfiniteMoney() const { return _isInfiniteMoney; }
+
+  // private attribute section
+
+  private string _currency;
+  private double _priceFactor;
+  private bool   _isInfiniteMoney;
+
+} // class m8f_tl_TraderInfo

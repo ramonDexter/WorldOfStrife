@@ -19,6 +19,10 @@ class wosZSC2ACS {
     static void FN_healPlayer(void) {
         wosEventHandler.SendNetworkEvent("heal_Player");
     }
+    /*static void FN_initTrade() {
+        //m8f_tl_init_trade
+        m8f_tl_KeyboardHandler.SendNetworkEvent("m8f_tl_init_trade");
+    }*/
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 

@@ -1,0 +1,345 @@
+
+class m8f_tl_ScreenSize
+{
+  int width;
+  int height;
+}
+
+class m8f_tl_TradeView
+{
+  const namesY      = 10;
+  const namesColor  = Font.CR_Gray;
+  const itemsColor  = Font.CR_Blue;
+  const itemsColorSelected = Font.CR_Cyan;
+  const itemsYStart = 50;
+  const listSize    =  9;
+
+  const targetWidth  = 640;
+  const targetHeight = 400;
+
+  const leftTraderX  = targetWidth / 4;
+  const rightTraderX = targetWidth / 4 * 3;
+
+  const listWidthHalf  = targetWidth / 4 - 15;
+  const iconLineHeight = 30;
+
+  m8f_tl_TradeView init(m8f_tl_TradeManager tradeManager)
+  {
+    _leftItemShift  = 0;
+    _rightItemShift = 0;
+
+    _isLeftSelected = true;
+
+    _leftSelectedIndex  = 0;
+    _rightSelectedIndex = 0;
+
+    _tradeManager = tradeManager;
+
+    return self;
+  }
+
+  void updateView()
+  {
+    int leftN  = _tradeManager.getLeftTrader().getItemsNumber();
+    int rightN = _tradeManager.getRightTrader().getItemsNumber();
+
+    if (_isLeftSelected)
+    {
+      if (_leftSelectedIndex  >= leftN)  { _leftSelectedIndex  = leftN  - 1; }
+    }
+    else
+    {
+      if (_rightSelectedIndex >= rightN) { _rightSelectedINdex = rightN - 1; }
+    }
+
+    _leftItemShift  = clamp(0, leftN  - listSize, _leftItemShift );
+    _rightItemShift = clamp(0, rightN - listSize, _rightItemShift);
+  }
+
+  void show()
+  {
+    let virtualScreenSize = calculateVirtualScreenSize();
+
+    showBackground(virtualScreenSize);
+
+    showTrader( _tradeManager.getLeftTrader()
+              , leftTraderX
+              , virtualScreenSize
+              , _leftSelectedIndex
+              , _isLeftSelected
+              , _leftItemShift
+              );
+
+    showTrader( _tradeManager.getRightTrader()
+              , rightTraderX
+              , virtualScreenSize
+              , _rightSelectedIndex
+              , !_isLeftSelected
+              , _rightItemShift
+              );
+  }
+
+  private m8f_tl_ScreenSize calculateVirtualScreenSize()
+  {
+    int virtualWidth;
+    int virtualHeight;
+
+    double targetAspectRatio = double(targetWidth) / targetHeight;
+    double screenAspectRatio = Screen.GetAspectRatio();
+
+    if (screenAspectRatio > targetAspectRatio)
+    {
+      virtualHeight = targetHeight;
+      virtualWidth  = targetHeight * targetAspectRatio;
+    }
+    else
+    {
+      virtualWidth  = targetWidth;
+      virtualHeight = targetWidth / targetAspectRatio;
+    }
+
+    m8f_tl_ScreenSize result = new("m8f_tl_ScreenSize");
+    result.width  = virtualWidth;
+    result.height = virtualHeight;
+    return result;
+  }
+
+  private void showBackground(m8f_tl_ScreenSize screenSize)
+  {
+    int       usetype = TexMan.Type_Any;
+    int       flags   = TexMan.TryAny;
+    TextureID backgroundTexture = TexMan.CheckForTexture("tl_back", usetype, flags);
+    bool      animate = false;
+    double    x       = 0.0;
+    double    y       = 0.0;
+
+    Screen.DrawTexture( backgroundTexture
+                      , animate
+                      , x
+                      , y
+                      , DTA_VirtualWidth,  screenSize.width
+                      , DTA_VirtualHeight, screenSize.height
+                      );
+  }
+
+  private void showTrader( m8f_tl_Trader     trader
+                         , int               x
+                         , m8f_tl_ScreenSize screenSize
+                         , int               selectedIndex
+                         , bool              isActive
+                         , int               itemShift
+                         )
+  {
+    double titleY     = namesY;
+    Font   f          = SmallFont;
+    double lineHeight = f.GetHeight() * 1.2;
+
+    drawTextCenter( trader.getName()
+                  , namesColor
+                  , f
+                  , x
+                  , titleY
+                  , screenSize.width
+                  , screenSize.height
+                  );
+    titleY += lineHeight;
+
+    string currency = trader.getCurrency();
+    if (!trader.isInfiniteMoney())
+    {
+      int    leftCashAmount  = trader.getCashAmount();
+      string leftCash        = String.Format("%s: %d", currency, leftCashAmount);
+      drawTextCenter( leftCash
+                    , namesColor
+                    , f
+                    , leftTraderX
+                    , titleY
+                    , screenSize.width
+                    , screenSize.height
+                    );
+    }
+
+    drawItemList(x, itemsYStart, trader, f, screenSize, iconLineHeight, selectedIndex, isActive, itemShift);
+  }
+
+  void drawItemList( double x
+                   , double y
+                   , m8f_tl_Trader trader
+                   , Font   f
+                   , m8f_tl_ScreenSize screenSize
+                   , double lineHeight
+                   , int    selectedIndex
+                   , bool   isActive
+                   , int    itemShift
+                   )
+  {
+    if (itemShift > 0)
+    {
+      drawTextCenter("...", itemsColor, f, x, y, screenSize.width, screenSize.height);
+    }
+    y += lineHeight;
+
+    int itemsNumber = trader.getItemsNumber();
+
+    for (int i = itemShift; i < itemsNumber && i < itemShift + listSize; ++i)
+    {
+      let    item       = trader.getItem(i);
+      int    color      = (i == selectedIndex && isActive) ? itemsColorSelected : itemsColor;
+      string amount     = (item.amount == 1) ? "" : String.Format(" (x%d)", item.amount);
+      int    price      = trader.myPrice(_tradeManager.getPrice(item));
+      string itemString = String.Format("%s%s", item.GetTag(), amount);
+      string itemPrice  = String.Format("%d", price);
+
+      Screen.DrawTexture(item.icon
+                     , false
+                     , x - listWidthHalf
+                     , y - 14 + f.GetHeight() / 2
+                     , DTA_VirtualWidth  , screenSize.width
+                     , DTA_VirtualHeight , screenSize.height
+                     );
+      Screen.DrawText( f
+                     , color
+                     , x - listWidthHalf + 30
+                     , y
+                     , itemString
+                     , DTA_VirtualWidth  , screenSize.width
+                     , DTA_VirtualHeight , screenSize.height
+                     );
+      Screen.DrawText( f
+                     , color
+                     , x + listWidthHalf - f.StringWidth(itemPrice)
+                     , y
+                     , itemPrice
+                     , DTA_VirtualWidth  , screenSize.width
+                     , DTA_VirtualHeight , screenSize.height
+                     );
+
+      y += lineHeight;
+    }
+
+    if (itemShift + listSize < itemsNumber)
+    {
+      drawTextCenter("...", itemsColor, f, x, y, screenSize.width, screenSize.height);
+    }
+    y += lineHeight;
+  }
+
+  bool isLeftSelected() const
+  {
+    return _isLeftSelected;
+  }
+
+  int getLeftSelectedIndex() const
+  {
+    return _leftSelectedIndex;
+  }
+
+  int getRightSelectedIndex() const
+  {
+    return _rightSelectedIndex;
+  }
+
+  void toggleLeftRightSelection()
+  {
+    _isLeftSelected = !_isLeftSelected;
+  }
+
+  void moveItemSelectionDown()
+  {
+    if (_isLeftSelected)
+    {
+      int number = _tradeManager.getLeftTrader().getItemsNumber();
+      [_leftSelectedIndex, _leftItemShift] = makeMoveSelectionDown(_leftSelectedIndex, _leftItemShift, number);
+    }
+    else
+    {
+      int number = _tradeManager.getRightTrader().getItemsNumber();
+      [_rightSelectedIndex, _rightItemShift] = makeMoveSelectionDown(_rightSelectedIndex, _rightItemShift, number);
+    }
+  }
+
+  void moveItemSelectionUp()
+  {
+    if (_isLeftSelected)
+    {
+      int number = _tradeManager.getLeftTrader().getItemsNumber();
+      [_leftSelectedIndex, _leftItemShift] = makeMoveSelectionUp(_leftSelectedIndex, _leftItemShift, number);
+    }
+    else
+    {
+      int number = _tradeManager.getRightTrader().getItemsNumber();
+      [_rightSelectedIndex, _rightItemShift] = makeMoveSelectionUp(_rightSelectedIndex, _rightItemShift, number);
+    }
+  }
+
+  // private method section ////////////////////////////////////////////////////
+
+  private void drawTextCenter( string text
+                             , int    color
+                             , Font   font
+                             , double x
+                             , double y
+                             , int    virtualWidth
+                             , int    virtualHeight
+                             )
+  {
+    x -= font.StringWidth(text) / 2;
+
+    Screen.DrawText( font
+                   , color
+                   , x
+                   , y
+                   , text
+                   , DTA_VirtualWidth  , virtualWidth
+                   , DTA_VirtualHeight , virtualHeight
+                   );
+  }
+
+  // return selectedIndex, itemShift
+  private int, int makeMoveSelectionDown(int selectedIndex, int itemShift, int itemNumber)
+  {
+    selectedIndex = (selectedIndex + 1) % itemNumber;
+
+    int limit = itemShift + listSize;
+    if (selectedIndex >= limit)
+    {
+      ++itemShift;
+    }
+    else if (selectedIndex == 0)
+    {
+      itemShift = 0;
+    }
+
+    return selectedIndex, itemShift;
+  }
+
+  // return selectedIndex, itemShift
+  private int, int makeMoveSelectionUp(int selectedIndex, int itemShift, int itemNumber)
+  {
+    selectedIndex = (selectedIndex - 1 + itemNumber) % itemNumber;
+
+    int limit = itemShift + listSize;
+    if (selectedIndex < itemShift)
+    {
+      --itemShift;
+    }
+    else if (selectedIndex >= limit)
+    {
+      itemShift = itemNumber - listSize;
+    }
+
+    return selectedIndex, itemShift;
+  }
+
+  // private attribute section /////////////////////////////////////////////////
+
+  private int _leftItemShift;
+  private int _rightItemShift;
+
+  private bool _isLeftSelected;
+  private int  _leftSelectedIndex;
+  private int  _rightSelectedIndex;
+
+  private m8f_tl_TradeManager _tradeManager;
+
+} // class m8f_tl_TradeView

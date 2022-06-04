@@ -1,0 +1,98 @@
+
+class m8f_tl_KeyboardHandler : EventHandler
+{
+  // public:
+
+  void startTrade()
+  {
+    _tradeManager.startTradeForPlayerAndTarget();
+    setUiState();
+  }
+
+  void endTrade()
+  {
+    _tradeManager.endTrade();
+    setUiState();
+  }
+
+  // public: EventHandler
+
+  override void OnRegister()
+  {
+    _priceTable   = new("m8f_tl_DoomPriceTable").init();
+    _tradeManager = new("m8f_tl_TradeManager"  ).init(_priceTable);
+    _tradeView    = new("m8f_tl_TradeView"     ).init(_tradeManager);
+  }
+
+  override void NetworkProcess(ConsoleEvent event)
+  {
+    string eventName = event.name;
+
+    if      (eventName == "m8f_tl_init_trade" ) { startTrade();      }
+    else if (eventName == "m8f_tl_end_trade"  ) { endTrade();        }
+    else if (eventName == "m8f_tl_transaction") { makeTransaction(); }
+  }
+
+  override bool UiProcess(UiEvent event)
+  {
+    int type = event.type;
+    if (type != UiEvent.Type_KeyDown && type != UiEvent.Type_KeyRepeat) { return true; }
+
+    int key = event.keyChar;
+
+    switch (key)
+    {
+    case UiEvent.Key_Escape:
+      SendNetworkEvent("m8f_tl_end_trade");
+      break;
+
+    case UiEvent.Key_Tab:
+      _tradeView.toggleLeftRightSelection();
+      break;
+
+    case UiEvent.Key_Down:
+      _tradeView.moveItemSelectionDown();
+      break;
+
+    case UiEvent.Key_Up:
+      _tradeView.MoveItemSelectionUp();
+      break;
+
+    case UiEvent.Key_Return:
+      SendNetworkEvent("m8f_tl_transaction");
+      break;
+    }
+
+    return true;
+  }
+
+  override void RenderOverlay(RenderEvent event)
+  {
+    if (!_tradeManager.isStarted()) { return; }
+
+    _tradeView.show();
+  }
+
+  // private:
+
+  void makeTransaction()
+  {
+    _tradeManager.makeTransaction( _tradeView.isLeftSelected()
+                                 , _tradeView.getLeftSelectedIndex()
+                                 , _tradeView.getRightSelectedIndex()
+                                 );
+    _tradeView.updateView();
+  }
+
+  void setUiState()
+  {
+    self.IsUiProcessor = _tradeManager.IsStarted();
+  }
+
+  // private attribute section /////////////////////////////////////////////////
+
+  private m8f_tl_CPT          _priceTable;
+  private m8f_tl_TradeManager _tradeManager;
+  private m8f_tl_TradeView    _tradeView;
+
+} // class m8f_tl_KeyboardHandler

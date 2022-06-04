@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 309.2056f;
+		viewpositionx = 12801f;
 		defaulttoptexture = "MKNRKTN";
 		overrideceilheight = false;
-		viewpositiony = -303.0501f;
+		viewpositiony = -2564.045f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		

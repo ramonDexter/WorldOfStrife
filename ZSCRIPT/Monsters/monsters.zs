@@ -1375,7 +1375,7 @@ class ascImpFlesh : actor {
 		radius 16;
 		height 32;
 		+FloorClip
-		+DontHurtSpecies
+		+DONTHARMSPECIES
 		+Float
 		+NoGravity
 		+NoTrigger

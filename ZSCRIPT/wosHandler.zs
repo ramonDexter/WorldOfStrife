@@ -284,7 +284,7 @@ class wosEventHandler : EventHandler {
 		// ACS script support //
 		else if ( e.Name ~== "selectDagger" ) {
 			pawn.A_SelectWeapon("wosPunchDagger");
-		}
+		} 
     }
 	////////////////////////////////////////////////////////////////////////////
 	

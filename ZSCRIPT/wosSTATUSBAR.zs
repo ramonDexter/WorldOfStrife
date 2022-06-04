@@ -228,49 +228,49 @@ class wosStatusBar : BaseStatusBar {
 		Color azure2 = Color(255, 59, 127, 139);
 		
 		if (health == 999) {
-				FillBar(x, y-4, 0, 14, azure2, azure2);
+				//FillBar(x, y-4, 0, 14, azure2, azure2);
 				FillBar(x, y-2, 0, 14, azure2, azure2);
 				FillBar(x, y, 0, 14, azure1, azure1);
 				FillBar(x, y+2, 0, 14, azure1, azure1);
 				FillBar(x, y+4, 0, 14, azure2, azure2);
-				FillBar(x, y+6, 0, 14, azure2, azure2);
+				//FillBar(x, y+6, 0, 14, azure2, azure2);
 		}
 		else {
 			if (health == 0) {
-				FillBar(x, y-4, 0, 14, grey2, grey2);
+				//FillBar(x, y-4, 0, 14, grey2, grey2);
 				FillBar(x, y-2, 0, 14, grey2, grey2);
 				FillBar(x, y, 0, 14, grey1, grey1);
 				FillBar(x, y+2, 0, 14, grey1, grey1);
 				FillBar(x, y+4, 0, 14, grey2, grey2);
-				FillBar(x, y+6, 0, 14, grey2, grey2);
+				//FillBar(x, y+6, 0, 14, grey2, grey2);
 			} else if ( health <= 33 ) {
-				FillBar(x, y-4, 0, 14, red2, red2);
+				//FillBar(x, y-4, 0, 14, red2, red2);
 				FillBar(x, y-2, 0, 14, red2, red2);
 				FillBar(x, y, 0, 14, red1, red1);
 				FillBar(x, y+2, 0, 14, red1, red1);
 				FillBar(x, y+4, 0, 14, red2, red2);
-				FillBar(x, y+6, 0, 14, red2, red2);
+				//FillBar(x, y+6, 0, 14, red2, red2);
 			} else if ( health <= 66 ) {
-				FillBar(x, y-4, 0, 14, gold2, gold2);
+				//FillBar(x, y-4, 0, 14, gold2, gold2);
 				FillBar(x, y-2, 0, 14, gold2, gold2);
 				FillBar(x, y, 0, 14, gold1, gold1);
 				FillBar(x, y+2, 0, 14, gold1, gold1);
 				FillBar(x, y+4, 0, 14, gold2, gold2);
-				FillBar(x, y+6, 0, 14, gold2, gold2);
+				//FillBar(x, y+6, 0, 14, gold2, gold2);
 			} else if ( health<=88 ) {
-				FillBar(x, y-4, 0, 14, blue2, blue2);
+				//FillBar(x, y-4, 0, 14, blue2, blue2);
 				FillBar(x, y-2, 0, 14, blue2, blue2);
 				FillBar(x, y, 0, 14, blue1, blue1);
 				FillBar(x, y+2, 0, 14, blue1, blue1);
 				FillBar(x, y+4, 0, 14, blue2, blue2);
-				FillBar(x, y+6, 0, 14, blue2, blue2);
+				//FillBar(x, y+6, 0, 14, blue2, blue2);
 			} else {
-				FillBar(x, y-4, 0, 14, green2, green2);
+				//FillBar(x, y-4, 0, 14, green2, green2);
 				FillBar(x, y-2, 0, 14, green2, green2);
 				FillBar(x, y, 0, 14, green1, green1);
 				FillBar(x, y+2, 0, 14, green1, green1);
 				FillBar(x, y+4, 0, 14, green2, green2);
-				FillBar(x, y+6, 0, 14, green2, green2);
+				//FillBar(x, y+6, 0, 14, green2, green2);
 			}			
 		}
 	}
@@ -298,11 +298,12 @@ class wosStatusBar : BaseStatusBar {
 			let pawn = binderPlayer(CPlayer.mo);
 
             //  draw statusbar frame  //////////////////////////////////////////
-            drawImage ("HUDfrmT", (-54, 0), DI_ITEM_OFFSETS);
-            drawImage ("HUDiB", (-54, 0), DI_ITEM_OFFSETS, 0.5);
+            drawImage ("HUDfrmT2", (-54, 0), DI_ITEM_OFFSETS);
+            //drawImage ("HUDfrmT", (-54, 0), DI_ITEM_OFFSETS);
+            //drawImage ("HUDiB", (-54, 0), DI_ITEM_OFFSETS, 0.5);
 
             //  Health  ////////////////////////////////////////////////////////
-            DrawString(mGrnFont, FormatNumber(CPlayer.health, 3, 19), (359, 20), DI_TEXT_ALIGN_RIGHT, Font.CR_DARKRED);
+            DrawString(mGrnFont, FormatNumber(CPlayer.health, 3, 19), (296, 5), DI_TEXT_ALIGN_RIGHT, Font.CR_DARKRED);
             int points;        
             if (CPlayer.cheats & CF_GODMODE) {
                 points = 999;
@@ -310,14 +311,14 @@ class wosStatusBar : BaseStatusBar {
             else {
                 points = min(CPlayer.health, 200);				
             }			
-            DrawHealthBar (points, 339, 8);
+            DrawHealthBar (points, 251, 6);
 
 			// stamina bar /////////////////////////////////////////////////////
 			//let pawn = binderPlayer(CPlayer.mo);
 			if ( CPlayer.cheats & CF_GODMODE || pawn.staminaImplant ) {
-				DrawBar("stamBax", "stamBck", pawn.stamin, pawn.maxstamin, (369, 97), 0, 3);
+				DrawBar("stamBax", "stamBck", pawn.stamin, pawn.maxstamin, (369, 100), 0, 3);
 			} else {
-				DrawBar("stamBar", "stamBck", pawn.stamin, pawn.maxstamin, (369, 97), 0, 3);
+				DrawBar("stamBar", "stamBck", pawn.stamin, pawn.maxstamin, (369, 100), 0, 3);
 			}
 			//DrawString(mGrnFont, FormatNumber(pawn.stamin, 3, 19), (359, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 
@@ -379,13 +380,15 @@ class wosStatusBar : BaseStatusBar {
 
             //  selected inventory display  ////////////////////////////////////
 			if (CPlayer.mo.InvSel != null) {
-				DrawInventoryIcon(CPlayer.mo.InvSel, (-23, 179), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28));
+				//DrawInventoryIcon(CPlayer.mo.InvSel, (-23, 179), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28));
+				DrawInventoryIcon(CPlayer.mo.InvSel, (351, 18), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28));
 				item = CPlayer.mo.InvSel;
 				/*wosPickup itemCharge = wosPickup(item);
 				if (item.Amount == 1 && item is "wosPickup" && itemCharge.charge > 0) {
 					DrawString(mYelFont, FormatNumber(itemCharge.charge, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_CYAN);
-				} else*/ if (item.Amount > 1) {					
-					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+				} else*/ if (item.Amount > 1) {
+					//DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);			
+					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (363, 25), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 				} 
 			}			
 

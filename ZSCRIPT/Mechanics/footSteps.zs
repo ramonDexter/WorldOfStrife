@@ -1,12 +1,8 @@
-////////////////////////////////////////////////////////////////////////////////
-/*
-FOOTSTEPS
----------
-credits: Da_Zombie_Killer, vsonnier
-*/
-////////////////////////////////////////////////////////////////////////////////
-class Footsteps : Actor
-{
+///////////////////////////////////////////////////////////////////////////////////////
+// FOOTSTEPS //////////////////////////////////////////////////////////////////////////
+// credits: Da_Zombie_Killer, vsonnier ////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+class Footsteps : Actor {
     //the player footsteps are attached to.
     PlayerPawn toFollow;
 
@@ -20,8 +16,7 @@ class Footsteps : Actor
     int next_update_tics_countdown;
 
     //attach PlayerPawn, load the texture/sound associated tables.
-    void Init( PlayerPawn attached_player)
-	{
+    void Init( PlayerPawn attached_player) 	{
         next_update_tics_countdown = -1;
         self.toFollow = attached_player;
         
@@ -53,8 +48,7 @@ class Footsteps : Actor
         fstep_default_sound = StringTable.Localize("$STEP_DEFAULT");
     }
 
-    override void Tick()
-	{  
+    override void Tick() {  
         next_update_tics_countdown--;
         
         //0) do nothing until next_update_tics_countdown is below 0
@@ -87,13 +81,13 @@ class Footsteps : Actor
             if (foundIndex != fstep_textures.Size()) {
     
                 //3-1) play the sound
-                S_Sound(fstep_sounds[foundIndex], CHAN_AUTO, soundLevel);
+                S_StartSound(fstep_sounds[foundIndex], CHAN_AUTO, 0, soundLevel);
                 //Console.PrintF("Found tx = %s, play snd = %s",fstep_textures_names_debug[foundIndex], fstep_sounds[foundIndex]); 
             }
             else {
             
                 //3-2) Play default sound if no match was found
-                S_Sound(fstep_default_sound,  CHAN_AUTO, soundLevel);
+                S_StartSound(fstep_default_sound,  CHAN_AUTO, 0, soundLevel);
                 //Console.PrintF("Not found Tx ! , play default snd = %s",fstep_default_sound); 
             }
                           
@@ -113,6 +107,10 @@ class Footsteps : Actor
         Super.Tick();
     }  
     Default {
+        +NOBLOCKMAP
         Tag "footsteps";
     }
 }
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////

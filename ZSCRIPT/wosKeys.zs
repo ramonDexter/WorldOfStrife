@@ -231,7 +231,7 @@ class m14k_waterplantKey : wosKey {
 class m14k_whiteCockInnCellarKey : wosKey {
 	Default {
 		//$Category "Keys/WoS"
-		Inventory.icon "I_AB2K";
+		Inventory.icon "K_AB2K";
 		Tag "Cellar Key";
 		Inventory.PickupMessage "You picked up the White Cock Inn Cellar Key.";
 	}

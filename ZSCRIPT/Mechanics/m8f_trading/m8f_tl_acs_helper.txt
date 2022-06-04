@@ -1,0 +1,11 @@
+
+class m8f_tl_AcsHelper
+{
+
+  play static void StartTrade()
+  {
+    let handler = m8f_tl_KeyboardHandler(StaticEventHandler.Find("m8f_tl_KeyboardHandler"));
+    handler.startTrade();
+  }
+
+} // class m8f_tl_AcsHelper

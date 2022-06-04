@@ -1,0 +1,119 @@
+
+class m8f_tl_CPT : m8f_tl_CurrencyPriceTable {}
+
+class m8f_tl_TradeManager play
+{
+
+  // public: ///////////////////////////////////////////////////////////////////
+
+  m8f_tl_TradeManager init(m8f_tl_CPT currencyPriceTable)
+  {
+    _isLoggingEnabled = true;
+
+    _isStarted        = false;
+    _leftTrader       = null;
+    _rightTrader      = null;
+
+    _currencyPriceTable = currencyPriceTable;
+
+    return self;
+  }
+
+  void startTradeFor(string currency, Actor leftTrader, Actor rightTrader)
+  {
+    log(StringStruct.Format("trade started: %s with %s", leftTrader.getTag(), rightTrader.getTag()));
+
+    _leftTrader  = new("m8f_tl_Trader").init(currency,  leftTrader, _currencyPriceTable);
+    _rightTrader = new("m8f_tl_Trader").init(currency, rightTrader, _currencyPriceTable);
+
+    bool isSuccess = (_leftTrader != null && _rightTrader != null);
+    if (!isSuccess) { return; }
+
+    //freezeTime();
+
+    _isStarted = true;
+    _currency  = currency;
+  }
+
+  void startTradeForPlayerAndTarget()
+  {
+    Actor playerActor = players[consolePlayer].mo;
+    if (playerActor == null) { return; }
+
+    Actor targetActor = playerActor.AimTarget();
+    if (targetActor == null) { return; }
+
+    //string currency = "Clip";
+    string currency = "GoldWandAmmo";
+    startTradeFor(currency, playerActor, targetActor);
+  }
+
+  void endTrade()
+  {
+    //unfreezeTime();
+
+    _isStarted = false;
+  }
+
+  bool   isStarted()   const { return _isStarted; }
+  string getCurrency() const { return _currency;  }
+
+  m8f_tl_Trader getLeftTrader()  const { return _leftTrader;  }
+  m8f_tl_Trader getRightTrader() const { return _rightTrader; }
+
+  int getPrice(Actor a) const
+  {
+    return _currencyPriceTable.getPrice(_currency, a.GetClassName());
+  }
+
+  void makeTransaction(bool isLeftToRight, int leftIndex, int rightIndex)
+  {
+    m8f_tl_Trader seller;
+    m8f_tl_Trader buyer;
+    int           index;
+
+    if (isLeftToRight) { index = leftIndex;  seller = _leftTrader;  buyer = _rightTrader; }
+    else               { index = rightIndex; seller = _rightTrader; buyer = _leftTrader;  }
+
+    if (!(0 <= index && index < seller.getItemsNumber())) { return; }
+
+    bool   buyerIsInfiniteMoney = buyer.isInfiniteMoney();
+    Actor  item        = seller.getItem(index);
+    string className   = item.GetClassName();
+    int    price       = seller.myPrice(_currencyPriceTable.getPrice(_currency, className));
+    Actor  buyerActor  = buyer.GetActor();
+    Actor  sellerActor = seller.GetActor();
+
+    if (buyerActor.CountInv(_currency) < price && !buyerIsInfiniteMoney)
+    {
+      console.printf("Not enough %s!", _currency);
+      return;
+    }
+
+    sellerActor.TakeInventory(className, 1);
+    buyerActor .GiveInventory(className, 1);
+
+    sellerActor.GiveInventory(_currency, price);
+    if (!buyerIsInfiniteMoney) { buyerActor.TakeInventory(_currency, price); }
+
+    seller.refreshItemList();
+    buyer .refreshItemList();
+  }
+
+  // private: //////////////////////////////////////////////////////////////////
+
+  private void log(string message) const
+  {
+    if (_isLoggingEnabled) { console.printf(message); }
+  }
+
+  // private: attributes ///////////////////////////////////////////////////////
+
+  bool          _isLoggingEnabled;
+  bool          _isStarted;
+  m8f_tl_Trader _leftTrader;
+  m8f_tl_Trader _rightTrader;
+  m8f_tl_CPT    _currencyPriceTable;
+  string        _currency;
+
+} // class m8f_tl_TradeManager

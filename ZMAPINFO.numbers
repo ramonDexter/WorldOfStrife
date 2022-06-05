@@ -320,7 +320,7 @@ DoomEdNums {
 	20315 = goldChest100_item
 	20316 = goldChest250_item
 	20317 = goldChest500_item
-	//20318 = m10k_acolyteBase_firstKey
+	20318 = wosMonsterSpawner_wosGiantEel
 	//20319 = m10k_acolyteBase_secondKey
 	20320 = wosGrenadeG
 	20321 = wosgrenadeE_3

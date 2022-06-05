@@ -286,6 +286,15 @@ class wosMonsterSpawner_AvalonSpider : wosMonsterSpawner {
         wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
     }
 }
+class wosMonsterSpawner_wosGiantEel : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - Giant Eel"
+        //$Sprite "EEL1A1"
+        wosMonsterSpawner.MonsterType "wosGiantEel"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////

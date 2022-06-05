@@ -1614,19 +1614,25 @@ class wosPitLord : actor {
             DRG1 G 0 A_Jump(128,4);
             DRG1 G 0 A_Jump(128,7);
             DRG1 G 8 A_FaceTarget();
-            DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             Goto See;
             DRG1 G 8 A_FaceTarget();
-            DRG1 H 3 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             DRG1 H 2 A_FaceTarget();
-            DRG1 H 3 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             Goto See;
             DRG1 G 6 A_FaceTarget();
-            DRG1 H 3 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             DRG1 H 2 A_FaceTarget();
-            DRG1 H 3 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             DRG1 H 2 A_FaceTarget();
-            DRG1 H 3 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG1 H 8 A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG1 H 8 A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             Goto See;
         FireBreath:
             DRG1 GG 4 A_FaceTarget();
@@ -1743,7 +1749,8 @@ class wosPitFiend : wosPitLord {
             DRG3 H 0;
             TNT1 A 0 A_JumpIfCloser(256, "FireBreath");
             DRG3 H 8 A_FaceTarget();
-            DRG3 I 8 Bright A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            //DRG3 I 8 Bright A_CustomComboAttack("PitFiendBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
+            DRG3 I 8 Bright A_CustomComboAttack("SnakePoisonBall", 36, random[pfiendAttack](1,8)*3, "pfiend/attack");
             Goto See;
         FireBreath:
             DRG3 HH 4 A_FaceTarget();
@@ -2234,6 +2241,7 @@ class ascTramp : actor {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "tramp"
+        Tag "Tramp";
         Health 80;
         Radius 20;
         Height 56;
@@ -2384,6 +2392,7 @@ class ascRogue : actor {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "rogue"
+        Tag "Rogue";
         Health 150;
         Radius 20;
         Height 56;

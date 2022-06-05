@@ -324,3 +324,17 @@ npc/smith13 "sounds/smith/smith13.ogg"
 $random npc/smith { npc/smith11 npc/smith12 npc/smith13 }
 $volume npc/smith 0.25
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// hexen swamp monster/stalker /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+SerpentSight            "sounds/hxnstalker/wtrcrt7.wav"
+SerpentActive           "sounds/hxnstalker/srfc3.wav"
+SerpentPain             "sounds/hxnstalker/serppn1.wav"
+SerpentAttack           "sounds/hxnstalker/wtrswip.wav"
+SerpentMeleeHit         "sounds/hxnstalker/wtrhit.wav"
+SerpentDeath            "sounds/hxnstalker/srpdth1.wav"
+SerpentBirth            "sounds/hxnstalker/srfc1.wav"
+SerpentFXContinuous     "sounds/hxnstalker/glbhiss1.wav"
+SerpentFXHit            "sounds/hxnstalker/glbhit4.wav"
+////////////////////////////////////////////////////////////////////////////////

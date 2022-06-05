@@ -201,10 +201,10 @@ class tekGuildMaster_04 : actor {
 class nwCultist : actor {
 	Default {
 		//$Category "Other NPCs/WoS"
-		//$Title "Cultist"
-		
+		//$Title "Cultist"		
 		+SOLID
-		
+		+USESPECIAL
+		+DONTTHRUST		
 		Tag "Cultist";
 		radius 16;
 		height 56;
@@ -1543,6 +1543,127 @@ class wos_daggerBard : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// noeworm based Order priests /////////////////////////////////////////////////
+class wos_nwCultist02 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 2"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT2 A -1;
+			Stop;
+	}
+}
+class wos_nwCultist03 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 3"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT3 A -1;
+			Stop;
+	}
+}
+class wos_nwCultist04 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 4"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT4 A -1;
+			Stop;
+	}
+}
+class wos_nwCultist05 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 5"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT5 A -1;
+			Stop;
+	}
+}
+class wos_nwCultist06 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 6"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT6 A -1;
+			Stop;
+	}
+}
+class wos_millportBishop : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "millport bishop"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Bishop";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT6 A -1;
+			Stop;
+	}
+}
+class wos_nwCultist07 : actor {
+	Default {
+		//$Category "Other NPCs/WoS"
+		//$Title "Priest 7"		
+		+SOLID
+		+USESPECIAL
+		+DONTTHRUST		
+		Tag "Priest";
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CLT7 A -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
 

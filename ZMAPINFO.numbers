@@ -321,7 +321,7 @@ DoomEdNums {
 	20316 = goldChest250_item
 	20317 = goldChest500_item
 	20318 = wosMonsterSpawner_wosGiantEel
-	//20319 = m10k_acolyteBase_secondKey
+	20319 = wosMonsterSpawner_ascTramp
 	20320 = wosGrenadeG
 	20321 = wosgrenadeE_3
 	20322 = wosgrenadeF_3
@@ -449,11 +449,51 @@ DoomEdNums {
 	20444 = markerDistillery
 	20445 = markerGhostTown
 	20446 = markerTriangle
+	20447 = wosBogMonster
+	20448 = wosMonsterSpawner_wosBogMonster
+	20449 = wosMonsterSpawner_ascRogue
+	20450 = wosMonsterSpawner_LizardSmall
+	20451 = wosMonsterSpawner_LizardMiddle
+	20452 = wosMonsterSpawner_LizardLarge
+	20453 = wosMonsterSpawner_Ophidiant
+	20454 = wos_nwCultist02
+	20455 = wos_nwCultist03
+	20456 = wos_nwCultist04
+	20457 = wos_nwCultist05
+	20458 = wos_nwCultist06
+	20459 = wos_nwCultist07
+	20460 = wos_millportBishop
 	/*
-	20447 = 
-	20448 = 
-	20449 = 
-	20450 = 
+	20461 = 
+	20462 = 
+	20463 = 
+	20464 = 
+	20465 = 
+	20466 = 
+	20467 = 
+	20468 = 
+	20469 = 
+	20470 = 
+	20471 = 
+	20472 = 
+	20473 = 
+	20474 = 
+	20475 = 
+	20476 = 
+	20477 = 
+	20478 = 
+	20479 = 
+	20480 = 
+	20481 = 
+	20482 = 
+	20483 = 
+	20484 = 
+	20485 = 
+	20486 = 
+	20487 = 
+	20488 = 
+	20489 = 
+	20490 = 
 
 	*/
 

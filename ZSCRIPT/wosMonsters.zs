@@ -295,6 +295,69 @@ class wosMonsterSpawner_wosGiantEel : wosMonsterSpawner {
         wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
     }
 }
+class wosMonsterSpawner_wosBogMonster : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - bog monster"
+        //$Sprite "SSDVA0"
+        wosMonsterSpawner.MonsterType "wosBogMonster"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_ascTramp : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - tramp"
+        //$Sprite "BEGRA1"
+        wosMonsterSpawner.MonsterType "ascTramp"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_ascRogue : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - rogue"
+        //$Sprite "DATFA1"
+        wosMonsterSpawner.MonsterType "ascRogue"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_LizardSmall : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - Lizard Small"
+        //$Sprite "LIZRA1"
+        wosMonsterSpawner.MonsterType "LizardSmall"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_LizardMiddle : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - Lizard Middle"
+        //$Sprite "LIZRA1"
+        wosMonsterSpawner.MonsterType "LizardMiddle"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_LizardLarge : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - Lizard Large"
+        //$Sprite "LIZRA1"
+        wosMonsterSpawner.MonsterType "LizardLarge"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
+class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "spawner - snakeman"
+        //$Sprite "OOS2A1"
+        wosMonsterSpawner.MonsterType "Ophidiant"; //Spawn a monster
+        wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
+    }
+}
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////

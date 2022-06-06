@@ -73,6 +73,7 @@ frameindex DUMM A 0 0 //1
 Model Tree14Leaves
 {
 Scale 1.0 1.0 1.0
+offset 0.0 0.0 -2.0
 path "models/Tree"
 Model 0 "ctree1.md2"
 Skin 0 "ctree2_1.png"
@@ -198,6 +199,7 @@ Frame DUMM A 0 "stay00"
 Model Tree14Green
 {
 Scale 1.0 1.0 1.0
+offset 0.0 0.0 -2.0
 path "models/Tree"
 Model 0 "ctree1.md2"
 Skin 0 "ctree2.png"

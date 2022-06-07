@@ -12,7 +12,8 @@ LISTMENU "MainMenu" {
 	
 	//StaticPatch 20, 20, "SOALOG"
 	
-	TextItem "$MM_NEW", "n", "PlayerclassMenu"
+	//TextItem "$MM_NEW", "n", "PlayerclassMenu" //EpisodeMenu
+	TextItem "$MM_NEW", "n", "EpisodeMenu"
 	TextItem "[ wosDEBUG ]", "x", "wosDEBUGmenu"
 	TextItem "$MM_OPTIONS","o", "OptionsMenu"
 	TextItem "$MM_LOAD", "l", "LoadGameMenu"

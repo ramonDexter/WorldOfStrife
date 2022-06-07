@@ -353,7 +353,7 @@ class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
     Default {
         //$Category "Monsters/WoS"
 		//$Title "spawner - snakeman"
-        //$Sprite "OOS2A1"
+        //$Sprite "oOS2A1C1"
         wosMonsterSpawner.MonsterType "Ophidiant"; //Spawn a monster
         wosMonsterSpawner.RespawnTime 60; //Wait 60 seconds for respawn DEFAULT else set time by args[0]
     }

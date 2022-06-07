@@ -99,19 +99,22 @@ class wosscannerweapon : weapon {
             TNT1 A 1 A_WeaponReady(WRF_NOSWITCH);
             Loop;
         Select:
-			TNT1 A 0;
+			TNT1 A 0 A_SetCrosshair(15);
 		SelectLoop:
             TNT1 A 0 A_Raise();
             Loop;
         Deselect:
-			TNT1 A 0;
+			//TNT1 A 0;
+            TNT1 A 0 A_SetCrosshair(13);
 		DeselectLoop:
             TNT1 A 0 A_Lower();
             Loop;
         Fire: //actually scanner action, when held, repeated action
-            //TNT1 A 0;
+            TNT1 A 0;
             TNT1 A 1 W_startScanner();
-            TNT1 A 1;
+            Goto Ready;
+        AltFire:    
+            //TNT1 A 1;
             TNT1 A 1 W_stopScanner();
             TNT1 A 0 /*A_Refire("Fire")*/;
             TNT1 A 1;       

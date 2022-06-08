@@ -1652,11 +1652,11 @@ class wosPitLord : actor {
             DRG1 LMN 6;
             DRG1 O 6 A_NoBlocking();
             DRG1 PQ 6;
-            DRG1 Q 1 /*ACS_NamedExecuteAlways("ExpGain",0,500,0,0)*/;        //Gain 500 Exp 
+            DRG1 Q 1;        //Gain 500 Exp  ACS_NamedExecuteAlways("ExpGain",0,500,0,0)
             DRG1 R -1;
             Stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,500,0,0)*/;	//Gain 500 Exp 
+            "####" "#" 1;	//Gain 500 Exp ACS_NamedExecuteAlways("ExpGain",0,500,0,0)
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1767,7 +1767,7 @@ class wosPitFiend : wosPitLord {
             DRG3 LMN 6;
             DRG3 O 6 A_NoBlocking();
             DRG3 PQ 6;
-            DRG3 P 1 ACS_NamedExecuteAlways("ExpGain",0,300,0,0);              //Gain 300 Exp
+            DRG3 P 1;              //Gain 300 Exp ACS_NamedExecuteAlways("ExpGain",0,300,0,0)
             DRG3 R -1;
             Stop;
         Ice:

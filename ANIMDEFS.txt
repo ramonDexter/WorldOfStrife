@@ -464,3 +464,24 @@ texture DISPB00
 	pic DISPB03 tics 4
 	pic DISPB04 tics 4
 	pic DISPB05 tics 4
+
+
+texture DEXTA00
+	pic DEXTA00 tics 4
+	pic DEXTA01 tics 4
+	pic DEXTA02 tics 4
+	pic DEXTA03 tics 4
+	pic DEXTA04 tics 4
+	pic DEXTA05 tics 4
+
+texture DEXTE01
+	pic DEXTE01 tics 4
+	pic DEXTE02 tics 4
+	pic DEXTE03 tics 4
+	pic DEXTE04 tics 4
+
+texture DEXTF01
+	pic DEXTF01 tics 4
+	pic DEXTF02 tics 4
+	pic DEXTF03 tics 4
+	pic DEXTF04 tics 4

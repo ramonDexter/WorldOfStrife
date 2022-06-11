@@ -33,11 +33,11 @@ Conversation {
         Dialog = "\c[white]Yes, that's why we're here.\nSo, we got water, some beer imported from ravenrock brewery and some kolyman wine. If you're hungry, we're selling food ration packs.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "mp_groceryvendor_opener";
         }
         Choice {
-            Text = "\c[yellow]Give me bottle of water";
+            Text = "\c[gold]Give me bottle of water";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -50,7 +50,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "\c[yellow]Give me bottle of beer";
+            Text = "\c[gold]Give me bottle of beer";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -63,7 +63,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "\c[yellow]Give me bottle of wine";
+            Text = "\c[gold]Give me bottle of wine";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -76,7 +76,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "\c[yellow]Give me food ration 1";
+            Text = "\c[gold]Give me food ration 1";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -89,7 +89,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "\c[yellow]Give me food ration 2";
+            Text = "\c[gold]Give me food ration 2";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -102,7 +102,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "\c[yellow]Give me food ration 3";
+            Text = "\c[gold]Give me food ration 3";
 			NextPage = "mp_groceryvendor_shop";
 			CloseDialog = true;
             DisplayCost = true;
@@ -121,7 +121,7 @@ Conversation {
         Dialog = "\c[white]Sorry sir, but I don't have for talking. I'm here for business.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
-            Text = "I wanted something else.";
+            Text = "\c[yellow]<< BACK";
             Nextpage = "mp_groceryvendor_opener";
         }
     }

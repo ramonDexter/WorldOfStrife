@@ -8,7 +8,7 @@ Conversation {
 	Page {
         pageName = "MP_jonyWeaponsVendor_opener";
 		Name = "\c[yellow]Jony, weapons vendor";
-		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistols, Laser Pistols and Assault Guns. You should visit my twin brother Tony, he sells heavy weapons.";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistols, Laser Pistols and Executor Rifles. You should visit my twin brother Tony, he sells heavy weapons.";
 		Panel = "M_JONY";
         Goodbye = "\c[red]Goodbye";
 		Choice {
@@ -60,15 +60,15 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Assault Gun";
+			Text = "\c[yellow]Buy Executor Rifle ER-15";
 			NextPage = "MP_jonyWeaponsVendor_opener";
-			GiveItem = "wosAssaultGun";
+			GiveItem = "executorRifle";
 			YesMessage = "Here is one Assault Gun!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
 			Cost {
 				item = "goldCoin";
-				amount = 350;
+				amount = 450;
 			}
 		}
 		Choice {
@@ -96,16 +96,16 @@ Conversation {
 		Panel = "M_JONY";
         Goodbye = "\c[red]Goodbye";
         Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_jonyWeaponsVendor_opener";
+        }
+        Choice {
             Text = "Could you tell me about yourself?";
             NextPage = "MP_jonyWeaponsVendor_aboutyourself";
         }
         Choice {
             Text = "Could you tell me about the city? I'm new here and wanted to know the locals.";
             NextPage = "MP_jonyWeaponsVendor_aboutcity";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_jonyWeaponsVendor_opener";
         }
     }
     Page {
@@ -225,16 +225,16 @@ Conversation {
 		Panel = "M_TONY";
         Goodbye = "\c[red]Goodbye";
         Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "MP_tonyWeaponsVendor_opener";
+        }
+        Choice {
             Text = "Could you tell me about yourself?";
             NextPage = "MP_tonyWeaponsVendor_aboutyourself";
         }
         Choice {
             Text = "Could you tell me about the city?";
             NextPage = "MP_tonyWeaponsVendor_aboutcity";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_tonyWeaponsVendor_opener";
         }
     }
     Page {

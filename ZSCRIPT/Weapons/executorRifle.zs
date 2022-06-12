@@ -1,4 +1,4 @@
-const executorRifleWeight = 150;
+const executorRifleWeight = 250;
 
 class magazine_executorRifle : ammo {
     Default {

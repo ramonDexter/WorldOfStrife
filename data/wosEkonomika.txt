@@ -11,6 +11,7 @@ zscFlameThrower	            850
 zscStrifeGrenadeLauncher    750
 zscMauler	                950
 shoulderGun	                --
+executorRifle               450
 
 ARMOR	
 wosLeatherArmor	            100

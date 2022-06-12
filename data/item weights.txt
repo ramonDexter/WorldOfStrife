@@ -1,16 +1,17 @@
 // item s
-//max=1500; //Set the default, 1500 == 15 kilograms, 100 == 1 kilogram
+//max=2500; //Set the default, 2500 == 25 kilograms, 100 == 1 kilogram
 // weapons
 //wosPickup
-storm pistol        50 //1.15
-crossbow            85 //1.05
-blasterstaff        100 //1.5
-assault gun         150 //2.25
-missile launcher    220 //3.5
-flamer              270 //4.5
-grenade launcher    350 //4.0
-mauler              320 //3.9
-laser pistol        75 //1.05
+storm pistol        50 //0.5
+laser pistol        75 //0.75
+crossbow            85 //0.85
+blasterstaff        100 //1.0
+assault gun         150 //1.5
+executorRifle       250 //2.5
+missile launcher    220 //2.2
+flamer              270 //2.7
+grenade launcher    350 //3.5
+mauler              320 //3.2
 // items
 hyposprej           5
 kombopack           10

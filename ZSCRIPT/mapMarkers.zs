@@ -385,3 +385,226 @@ class markerTriangle : markerBase {
 		Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////////////
+// marker names ///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+/*class markerNamed_binderPlaza : MarkerBase {
+	Default {
+		//$Title "name: Binder Plaza"
+	}
+	States {
+		Spawn:
+		MT01 A -1;
+		Stop;
+	}
+}
+class markerNamed_mainplaza : MarkerBase {
+	Default {
+		//$Title "name: Main Plaza"
+	}
+	States {
+		Spawn:
+		MT02 A -1;
+		Stop;
+	}
+}
+class markerNamed_oldplaza : MarkerBase {
+	Default {
+		//$Title "name: Old Plaza"
+	}
+	States {
+		Spawn:
+		MT03 A -1;
+		Stop;
+	}
+}
+class markerNamed_tekguildplaza : MarkerBase {
+	Default {
+		//$Title "name: TekGuild Plaza"
+	}
+	States {
+		Spawn:
+		MT04 A -1;
+		Stop;
+	}
+}
+class markerNamed_BinderBase : MarkerBase {
+	Default {
+		//$Title "name: Binder Base"
+	}
+	States {
+		Spawn:
+		MT05 A -1;
+		Stop;
+	}
+}
+class markerNamed_insulaNorth : MarkerBase {
+	Default {
+		//$Title "name: insula north"
+	}
+	States {
+		Spawn:
+		MT06 A -1;
+		Stop;
+	}
+}
+class markerNamed_insulaWest : MarkerBase {
+	Default {
+		//$Title "name: insula west"
+	}
+	States {
+		Spawn:
+		MT07 A -1;
+		Stop;
+	}
+}
+class markerNamed_powerStation : MarkerBase {
+	Default {
+		//$Title "name: power station"
+	}
+	States {
+		Spawn:
+		MT08 A -1;
+		Stop;
+	}
+}
+class markerNamed_temple : MarkerBase {
+	Default {
+		//$Title "name: temple"
+	}
+	States {
+		Spawn:
+		MT09 A -1;
+		Stop;
+	}
+}
+class markerNamed_thecastle : MarkerBase {
+	Default {
+		//$Title "name: the castle"
+	}
+	States {
+		Spawn:
+		MT10 A -1;
+		Stop;
+	}
+}
+class markerNamed_thecommons : MarkerBase {
+	Default {
+		//$Title "name: the commons"
+	}
+	States {
+		Spawn:
+		MT11 A -1;
+		Stop;
+	}
+}
+class markerNamed_thevilla : MarkerBase {
+	Default {
+		//$Title "name: the villa"
+	}
+	States {
+		Spawn:
+		MT12 A -1;
+		Stop;
+	}
+}
+class markerNamed_townbath : MarkerBase {
+	Default {
+		//$Title "name: town bath"
+	}
+	States {
+		Spawn:
+		MT13 A -1;
+		Stop;
+	}
+}
+class markerNamed_market : MarkerBase {
+	Default {
+		//$Title "name: market"
+	}
+	States {
+		Spawn:
+		MT14 A -1;
+		Stop;
+	}
+}
+class markerNamed_blackpub : MarkerBase {
+	Default {
+		//$Title "name: black pub"
+	}
+	States {
+		Spawn:
+		MT15 A -1;
+		Stop;
+	}
+}
+class markerNamed_councilclub : MarkerBase {
+	Default {
+		//$Title "name: council club"
+	}
+	States {
+		Spawn:
+		MT16 A -1;
+		Stop;
+	}
+}
+class markerNamed_store : MarkerBase {
+	Default {
+		//$Title "name: store"
+	}
+	States {
+		Spawn:
+		MT17 A -1;
+		Stop;
+	}
+}
+class markerNamed_tavern : MarkerBase {
+	Default {
+		//$Title "name: tavern"
+	}
+	States {
+		Spawn:
+		MT18 A -1;
+		Stop;
+	}
+}
+class markerNamed_blacksmith : MarkerBase {
+	Default {
+		//$Title "name: blacksmith"
+	}
+	States {
+		Spawn:
+		MT19 A -1;
+		Stop;
+	}
+}
+class markerNamed_gunsmith : MarkerBase {
+	Default {
+		//$Title "name: gunsmith"
+	}
+	States {
+		Spawn:
+		MT20 A -1;
+		Stop;
+	}
+}
+class markerNamed_techsmith : MarkerBase {
+	Default {
+		//$Title "name: techsmith"
+	}
+	States {
+		Spawn:
+		MT21 A -1;
+		Stop;
+	}
+}
+class markerNamed_medic : MarkerBase {
+	Default {
+		//$Title "name: medic"
+	}
+	States {
+		Spawn:
+		MT22 A -1;
+		Stop;
+	}
+}*/

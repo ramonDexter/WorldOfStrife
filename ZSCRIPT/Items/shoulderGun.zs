@@ -9,9 +9,9 @@ sounds: banjo software
 zscript: ramon.dexter, gzdoom.pk3
 */
 ////////////////////////////////////////////////////////////////////////////////
-const shoulderGunWeight = 50;
+const shoulderGunWeight = 75;
 const shoulderGunMagWeight = 1;
-const shoulderGun_chargerWeight = 25;
+const shoulderGun_chargerWeight = 35;
 
 //  puff with decal  ///////////////////////////////////////////////////////////
 class decalMaulerPuff : MaulerPuff {

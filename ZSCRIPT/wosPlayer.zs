@@ -97,75 +97,33 @@ class binderPlayer : StrifePlayer {
 	}
 	////////////////////////////////////////////////////////////////////////////
 
-	//  overall override  //////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	// overall override ////////////////////////////////////////////////////////
+	// Tick() //////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	override void Tick() {
 		pvel=vel.z;
 		pang=angle;
 		encumbrance=0; //Before ticking, reset the encumbrance
         Super.Tick();
-		// LF code /////////////////////////////////////////////////////////////
 		
 		// custom functions ////////////////////////////////////////////////////
+		// LF code /////////////////////////////////////////////////////////////
+        HandleStamina();
 		HandleEncumberance();
 		HandleArmorMass();
-		HandleWeight();
 		HandleBleed();
 		HandlePlayerBody();
 		HealthShake();
-        HandleStamina();
 		LedgeClimb();
 		HandleSpeed();
 		
-		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku
-
-
-		// obsolete functions //////////////////////////////////////////////////
-		//CheckSprint();
-		//FallDamage();
-        //HealthSlow();
-		/*weightmax=2500; //Set the default		
-        //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
-        //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
-        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
-		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
-        If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)*/
-		// armor&mass //////////////////////////////////////////////////////////
-		/*If (armoramount < 1) {
-			currentarmor=0; 
-            armorpower=0;
-        }		
-		If (currentarmor==1) {
-            encumbrance+=LeatherWeight/5; 
-            mass=300; 
-            bNOBLOOD=0;
-			armorpower = 24;
-        } Else If (currentarmor==2) {
-            encumbrance+=MetalWeight/5; 
-            mass=400; 
-            bNOBLOOD=1;
-			armorpower = 44;
-        } Else If (currentarmor==3) {
-            encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=0;
-			armorpower = 33;
-        } Else If (currentarmor==4) {
-            encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=1;
-			armorpower = 50;
-        } Else if (currentarmor==5) {
-			encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=1;
-			armorpower = 65;
-		} 
-		Else {
-			mass=100; 
-			bNOBLOOD=0; 
-			PainChance=255;
-		}*/
+		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku	
+		////////////////////////////////////////////////////////////////////////	
     }
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
@@ -202,11 +160,19 @@ class binderPlayer : StrifePlayer {
 
 	// common handlers /////////////////////////////////////////////////////////
 	// encumberance ////////////////////////////////////////////////////////////
+	// weight based on player's stamina ////////////////////////////////////////
 	void HandleEncumberance() {
-		weightmax=2500; //Set the default		
+		weightmax=2200; //Set the default		
         //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
-        //If(HandleUpgrade==2){weightmax+=1000;} //Add 1000 if it's at 2 instead
-        If(CountInv("AmmoSatchel")){weightmax*=1.5;} //Double with the backpack
+		// modify weightmax with stamina upgrades
+		if ( maxstamin == 440 ) { weightmax = 2420; }
+		if ( maxstamin == 520 ) { weightmax = 2860; }
+		if ( maxstamin == 600 ) { weightmax = 3300; }
+		if ( maxstamin == 700 ) { weightmax = 3850; }
+		if ( maxstamin == 800 ) { weightmax = 4400; }
+		// finalize wightmax
+        If( staminaImplant ){ weightmax+=1000; } //Add 1000 if it's at 2 instead
+        If(CountInv("AmmoSatchel")){ weightmax*=1.5; } //Double with the backpack
 		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
         If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)
 	}
@@ -277,14 +243,7 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 	}
-	// weight based on player's stamina /////////////////////////////////////////
-	void HandleWeight() {
-		if ( maxstamin == 440 ) { weightmax = 2750; }
-		if ( maxstamin == 520 ) { weightmax = 3250; }
-		if ( maxstamin == 600 ) { weightmax = 3750; }
-		if ( maxstamin == 700 ) { weightmax = 4375; }
-		if ( maxstamin == 800 ) { weightmax = 5000; }
-	}
+	
 	////////////////////////////////////////////////////////////////////////////
 
 	// jarewill's adopted code /////////////////////////////////////////////////
@@ -806,6 +765,13 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////
+	/*void HandleWeight() {
+		if ( maxstamin == 440 ) { weightmax = 2420; }
+		if ( maxstamin == 520 ) { weightmax = 2860; }
+		if ( maxstamin == 600 ) { weightmax = 3300; }
+		if ( maxstamin == 700 ) { weightmax = 3850; }
+		if ( maxstamin == 800 ) { weightmax = 4400; }
+	}*/
 	/*void FallDamage() {
 		double cvel = vel.z;
 		int damage;

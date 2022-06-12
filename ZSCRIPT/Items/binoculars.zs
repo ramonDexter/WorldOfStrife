@@ -5,7 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // item mass ///////////////////////////////////////////////////////////////////
-const wosBinocularWeight = 42;
+const wosBinocularWeight = 45;
 
 // inventory item //////////////////////////////////////////////////////////////
 class wosBinocular : wosPickup {
@@ -87,7 +87,7 @@ class binoc_weapon : weapon {
             TNT1 A 1 A_WeaponReady(WRF_NOSWITCH);
             Loop;
         Select:
-			TNT1 A 0 A_ZoomFactor(4.0);
+			TNT1 A 0 A_ZoomFactor(6.0);
             TNT1 A 0 A_SetCrosshair(15);
 		SelectLoop:
             TNT1 A 0 A_Raise();

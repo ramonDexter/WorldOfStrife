@@ -15,7 +15,7 @@ zscript: ramon.dexter
 --------------------------------------------------------------------------------
 */
 ////////////////////////////////////////////////////////////////////////////////
-const blasterTurretWeight = 150;
+const blasterTurretWeight = 135;
 
 class wosBlasterTurret : wosPickup {
     Default {

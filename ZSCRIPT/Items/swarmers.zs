@@ -23,7 +23,7 @@ Sprites: Mor'ladim, Raven Software
 Idea Base: Original idea
 */
 ////////////////////////////////////////////////////////////////////////////////
-const swarmersWeight = 5;
+const swarmersWeight = 13;
 
 class wosSwarmers : wosPickup
 {

@@ -3161,6 +3161,23 @@ model wosD_powerDeviceStand {
 	frameindex DUMM B 0 0
 }
 
+// ammo filler //
+model AmmoFiller {
+	path "models/props/ammofeeder/"
+	model 0 "ammoFeeder.md3"
+	skin 0 "tx_ammoFeeder.png"
+	scale 24.0 24.0 24.0
+	offset 0.0 0.0 0.0
+	frameindex AFED A 0 0
+}
+model wosd_AmmoFiller {
+	path "models/props/ammofeeder/"
+	model 0 "ammoFeeder.md3"
+	skin 0 "tx_ammoFeeder.png"
+	scale 24.0 24.0 24.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 
 
 // deus ex pans

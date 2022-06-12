@@ -193,6 +193,8 @@ model zscMedicalKit {
 	//model 0 "medicalKit.md3"
 	//skin 0 "tx_medikit.png"
 	//scale 4.0 4.0 4.0
+	USEACTORPITCH
+	USEACTORROLL
 	path "models/props/deusex/"
 	model 0 "dex_medikit.md3"
 	skin 0 "MedKitTex1.png"
@@ -205,6 +207,8 @@ model wosD_zscMedicalKit {
 	//model 0 "medicalKit.md3"
 	//skin 0 "tx_medikit.png"
 	//scale 4.0 4.0 4.0
+	USEACTORPITCH
+	USEACTORROLL
 	path "models/props/deusex/"
 	model 0 "dex_medikit.md3"
 	skin 0 "MedKitTex1.png"

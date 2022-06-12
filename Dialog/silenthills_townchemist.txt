@@ -2,6 +2,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 4;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Chemist";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_townChemist_opener";
 		Name = "\c[yellow]Chemist";
@@ -9,7 +21,7 @@ Conversation {
 		PANEL = "M_QUINCY";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "One Hypospray";
+			Text = "\c[gold]One Hypospray";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -22,7 +34,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "One Combopack";
+			Text = "\c[gold]One Combopack";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -35,7 +47,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "One Instaheal";
+			Text = "\c[gold]One Instaheal";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -48,7 +60,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "One Medical Patch";
+			Text = "\c[gold]One Medical Patch";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -61,7 +73,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "One Medical Kit";
+			Text = "\c[gold]One Medical Kit";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -74,7 +86,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "One Surgery Kit";
+			Text = "\c[gold]One Surgery Kit";
 			NextPage = "SH_townChemist_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -86,5 +98,61 @@ Conversation {
 				amount = 100;
 			}
 		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "SH_townChemist_questions";
+		}
 	}
+    Page {
+        pageName = "SH_townChemist_questions";
+        Name = "\c[yellow]Chemist";
+        Dialog = "\c[white]Yes, what did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townChemist_opener";
+        }
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "SH_townChemist_whoareyou";
+        }
+        Choice {
+            Text = "How's it going?";
+            Nextpage = "SH_townChemist_going";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_townChemist_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_townChemist_whoareyou";
+        Name = "\c[yellow]Chemist";
+        Dialog = "\c[white]I'm Lucius, but everybody calls me Chemist, as I sell the medical chemicals. I also run this small hospital, competing a little with the city surgeon.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townChemist_questions";
+        }
+    }
+    Page {
+        pageName = "SH_townChemist_going";
+        Name = "\c[yellow]Chemist";
+        Dialog = "\c[white]Oh, everything's fine. I've had some troubles few months ago, but everything's fine now. Father be praised.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townChemist_questions";
+        }
+    }
+    Page {
+        pageName = "SH_townChemist_aboutsilenthills";
+        Name = "\c[yellow]Chemist";
+        Dialog = "\c[white]Silent Hills is a small trading community on the northern edge of the Kolyman peninsula. We're struggling hard to survive in this harsh climate. At least we got some good pubs here, and even city bath!";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townChemist_questions";
+        }
+    }
 }

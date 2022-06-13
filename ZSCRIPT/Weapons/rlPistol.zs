@@ -1,5 +1,5 @@
 //=--RL PISTOL----------------------------------------------------------------==
-const stormPistolBaseWeight = 50;
+//const stormPistolBaseWeight = 50;
 
 class magazine_pistol : ammo {
 	Default {
@@ -22,11 +22,11 @@ class StormPistol : wosWeapon
 		//scale 0.5;
 		height 12;
 		radius 12;
-		Tag "$T_PISTOL";
+		Tag "$TAG_StormPistol";
 		Inventory.icon "H_SPIS";
-		Inventory.Pickupmessage "$F_PISTOL";
+		Inventory.Pickupmessage "$FND_StormPistol";
 		Inventory.Pickupsound "misc/w_pkup";
-		Obituary "%o was bolted by %k's storm pistol.";
+		Obituary "$OBI_StormPistol"; // %o was bolted by %k's storm pistol.
 		AttackSound "weapons/rlPistolShoot";
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.Kickback 40;

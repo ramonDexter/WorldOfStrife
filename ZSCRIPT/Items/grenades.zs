@@ -1,6 +1,6 @@
-const grenadeExplosiveWeight = 5;
-const grenadeFireWeight = 7;
-const grenadeGasWeight = 6;
+//const grenadeExplosiveWeight = 5;
+//const grenadeFireWeight = 7;
+//const grenadeGasWeight = 6;
 //  inventory bar  grenades  ///////////////////////////////////////////////////
 
 // explosive ///////////////////////////////////////////////////////////////////

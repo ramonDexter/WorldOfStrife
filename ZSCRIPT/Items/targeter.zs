@@ -1,4 +1,4 @@
-const targeterWeight = 25;
+//const targeterWeight = 25;
 ////////////////////////////////////////////////////////////////////////////////
 class wosTargeter : wosPickup replaces Targeter {
 	int depleteTimer;

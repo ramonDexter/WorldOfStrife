@@ -1,0 +1,88 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//chief technician
+//==================================================================================================================
+Conversation {
+	ID = 4;
+	Page {
+        pageName = "PP_chiefTechnician_opener";
+		Name = "Chief Technician";
+		Dialog = "\c[white]Hello, what are you doing here? You must have some serious reason to come here. The sec chief doesn't let anyone to wander around here.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "I brought the power coupling.";
+			NextPage = "PP_chiefTechnician_broughtpowercoupling";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_broughtpowercoupling";
+		Name = "Chief Technician";
+		Dialog = "\c[white]That' some great news! Since the basterds stole the power coupling, we had some serious troubles controlling the reactor. We already ordered new power coupling from the tech guild, but it takes some time to build it.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "Here it is.";
+			NextPage = "PP_chiefTechnician_installcoupling";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_installcoupling";
+		Name = "Chief Technician";
+		Dialog = "\c[white]Well, I need one thing from you. We had a accident here and two technicians, who are maintaing the reactor ended up wounded in the hospital. So I need you to install the coupling yourself. Here is a key to the reactor room. The technician in the controll room will tell you how to do it.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "Huh..ok then.";
+			NextPage = 4;
+			CloseDialog = true;
+			GiveItem = "BHpowerPlantReactorKey";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_questions";
+		Name = "Chief Technician";
+		Dialog = "\c[white]Hello, what do you need?";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "Tell me about the powerplant.";
+			NextPage = "PP_chiefTechnician_aboutPowerplant";
+		}
+		Choice {
+			Text = "Tell me about yourself.";
+			NextPage = "PP_chiefTechnician_yourself";
+		}
+		Choice {
+			Text = "Are there any heretics around here?";
+			NextPage = "PP_chiefTechnician_heretics";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_aboutPowerplant";
+		Name = "Chief Technician";
+		Dialog = "\c[white]Our powerplant is pretty old atomic powerplant. The uranium is mined in local mines, we're refiinig it in our fuel preparations. The reactor is old, but quite reliable. We're able to repair most of devices on our own. And what we cannot repair, we have to replace. Our main supplier is the tech guild.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "PP_chiefTechnician_questions";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_yourself";
+		Name = "Chief Technician";
+		Dialog = "\c[white]My name's Mervin and I'm the chief technician in the powerplant. I've been the chief technician for the last twenty years. It's hard job, but I take it.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "PP_chiefTechnician_questions";
+		}
+	}
+	Page {
+        pageName = "PP_chiefTechnician_heretics";
+		Name = "Chief Technician";
+		Dialog = "\c[white]No, we don't have any heretics here. We are all faithful followers of the order.";
+		Panel = "M_FALSP3";
+		Choice {
+			Text = "\c[yellow][ << BACK ]";
+			NextPage = "PP_chiefTechnician_questions";
+		}
+	}
+}
+//==================================================================================================================

@@ -9,7 +9,7 @@ Sprites: Mor'ladim, Raven Software
 Idea Base: Original idea
 */
 ////////////////////////////////////////////////////////////////////////////////
-const FlameTurretWeight = 150;
+//const FlameTurretWeight = 150;
 
 class wosFlameTurret : wosPickup {
 	Default {

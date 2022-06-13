@@ -1,4 +1,4 @@
-const laserPistolBaseWeight = 70;
+//const laserPistolBaseWeight = 70;
 
 class magazine_pistolLaser : ammo {
 	Default {
@@ -22,10 +22,10 @@ class laserPistol : wosWeapon {
 		radius 12;
 		height 16;
 		
-		Tag "$T_laserPistol";
+		Tag "$TAG_laserPistol";
 		Inventory.icon "H_LSPS";
-		Inventory.pickupmessage "$F_laserPistol";
-		Obituary "%o was burned to ashes by %k Laser Pistol";		
+		Inventory.pickupmessage "$FND_laserPistol";
+		Obituary "$OBI_laserPistol"; // %o was burned to ashes by %k Laser Pistol
 		AttackSound "weapons/staffShoot";
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 2;

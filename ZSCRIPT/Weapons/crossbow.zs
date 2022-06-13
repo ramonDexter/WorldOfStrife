@@ -1,4 +1,4 @@
-const CrossbowBaseWeight = 85;
+//const CrossbowBaseWeight = 85;
 
 class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 {
@@ -15,6 +15,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 		radius 12;
 		height 16;
 		
+        Tag "$T_CROSSBOW"; // "Crossbow"
 		Weapon.Slotnumber 2;
 		Weapon.SlotPriority 0.2;
         //Weapon.SelectionOrder 1200;        
@@ -25,9 +26,8 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
         Weapon.AmmoGive2 4;
         Weapon.AmmoType2 "PoisonBolts";
         Inventory.PickupMessage "$F_CROSSBOW"; // "You picked up the crossbow"
-        Tag "$T_CROSSBOW"; // "Crossbow"
         Inventory.Icon "H_XBOW";
-		Mass CrossbowBaseWeight;
+		Mass xBowBaseWeight;
         Weapon.UpSound "weapons/weaponUP";
     }
 

@@ -1,4 +1,4 @@
-const executorRifleWeight = 250;
+//const executorRifleWeight = 250;
 
 class magazine_executorRifle : ammo {
     Default {
@@ -19,9 +19,9 @@ class executorRifle : wosWeapon {
         radius 24;
         height 16;
 
-        Tag "ER-15 Executor Rifle";
-        Inventory.PickupMessage "You picked up the Executor Rifle!";
-        obituary "%o was drilled full of holes by %k's executor rifle.";
+        Tag "$TAG_executorRifle"; // ER-15 Executor Rifle
+        Inventory.PickupMessage "$FND_executorRifle"; // You picked up the Executor Rifle!
+        obituary "$OBI_executorRifle"; // %o was drilled full of holes by %k's executor rifle.
         inventory.icon "H_ERMD";
         weapon.SelectionOrder 600;
         weapon.SlotNumber 3;

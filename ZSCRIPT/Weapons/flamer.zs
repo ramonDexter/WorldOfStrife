@@ -1,5 +1,5 @@
 //new flamethrower with projectile powered by flamethrower library by Boondorl
-const flamerBaseWeight = 240;
+//const flamerBaseWeight = 240;
 
 class wosFlamethrower : wosWeapon replaces FlameThrower {
 	Default {

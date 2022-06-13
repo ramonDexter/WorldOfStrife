@@ -1,0 +1,50 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//security chief
+//==================================================================================================================
+Conversation {
+	ID = 2;
+	Page {
+        pageName = "PP_secuChief_opener";
+		Name = "Security Chief";
+		Dialog = "\c[white]Hello, how can I help you? Please, be careful, we're working with dangerous materials here.";
+		Panel = "M_PEAS7";
+		Choice {
+			Text = "Hello, I need to speak with chief technician.";
+			NextPage = "PP_secuChief_whyneedchieftechnician";
+		}
+	}
+	Page {
+        pageName = "PP_secuChief_whyneedchieftechnician";
+		Name = "Security Chief";
+		Dialog = "\c[white]And why you need to speak with him? He work in the secured area, so you need to have serious reason to allow me to give you a security clearance.";
+		Panel = "M_PEAS7";
+		Choice {
+			Text = "I have the power coupling the poachers stole.";
+			NextPage = "PP_secuChief_thatsgreat";
+			Require {
+				item = "powerPlant_powerCoupling";
+				amount = 1;
+			}
+		}
+	}
+	Page {
+        pageName = "PP_secuChief_thatsgreat";
+		Name = "Security Chief";
+		Dialog = "\c[white]That's great! Here's the security card! And please, be careful around here. We are dealing with dangerous materials here.";
+		Panel = "M_PEAS7";
+		Choice {
+			Text = "Thank you!";
+			NextPage = "PP_secuChief_busyrightnow";
+			CloseDialog = true;
+			GiveItem = "BHpowerPlantKey2";
+		}
+	}
+	Page {
+        pageName = "PP_secuChief_busyrightnow";
+		Name = "Security Chief";
+		Dialog = "\c[white]I'm sorry, but I'm very busy right now. I don't have time to talk.";
+		Panel = "M_PEAS7";
+	}
+}
+//==================================================================================================================

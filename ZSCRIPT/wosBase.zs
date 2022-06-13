@@ -236,7 +236,7 @@ class wos_bright_techlampbrass : techlampbrass replaces techlampbrass {
 class wosd_AmmoFiller : AmmoFiller replaces AmmoFiller {
 	Default {
 		//$Category "Decorations/WoS"
-		//$Title "wos ammo filler"
+		//$Title "dx ammo filler"
 		Tag "Ammo Filler";
 	}
 	States {

@@ -1,0 +1,37 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//reactor technician
+//==================================================================================================================
+Conversation {
+	ID = 5;
+	Page {
+        pageName = "PP_reactorTechnician_opener";
+		Name = "Reactor technician";
+		Dialog = "\c[white]Hello, chief told me that you have the power coupling. Here is the Environmental suit, you'll need it. The reactor room is filled with radiation. It can kill you faster than you think!\nSecond, you have to install the power coupling. You have to reach the console on the wall to the right, when you look out the window. Up the console is a hole where you have to plug the coupling. It's not hard, the hole's pretty big, so you should fit it right in just fine.";
+		Panel = "M_WORNER";
+		Choice {
+			Text = "Ok, thank you.";
+			NextPage = "PP_reactorTechnician_whatareyouwaitingfor";
+			CloseDialog = true;
+			GiveItem = "zscEnvironmentalSuit";
+		}
+	}
+	Page {
+        pageName = "PP_reactorTechnician_whatareyouwaitingfor";
+		link = "PP_reactorTechnician_reactorFixed";
+		IfItem {
+			item = "twn_quest03_powerPlantFixed";
+			amount = 1;
+		}
+		Name = "Reactor technician";
+		Dialog = "\c[white]What are you waiting for? Go and install the thing!";
+		Panel = "M_WORNER";
+	}
+	Page {
+        pageName = "PP_reactorTechnician_reactorFixed";
+		Name = "Reactor technician";
+		Dialog = "\c[white]Great work! The reactor levels are returning to normal. Thank you!";
+		Panel = "M_WORNER";
+	}
+}
+//==================================================================================================================

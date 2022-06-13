@@ -1,4 +1,4 @@
-const grenadeLauncherBaseWeight = 320;
+//const grenadeLauncherBaseWeight = 320;
 
 class grenadeLauncherFire1token : inventory {
 	Default {

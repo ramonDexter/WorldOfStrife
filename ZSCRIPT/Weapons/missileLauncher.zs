@@ -1,4 +1,4 @@
-const missileLauncherBaseWeight = 220;
+//const missileLauncherBaseWeight = 220;
 
 class magazine_missileLauncher : Ammo {
 	Default {		

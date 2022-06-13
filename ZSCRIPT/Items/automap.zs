@@ -1,4 +1,4 @@
-const automapWeight = 3;
+//const automapWeight = 3;
 
 class wosPortableMap : wosPickup {
 	Default {

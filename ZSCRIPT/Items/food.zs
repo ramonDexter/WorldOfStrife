@@ -1,4 +1,5 @@
 //  item weights  //////////////////////////////////////////////////////////////
+/*
 const BottleWeight = 5;
 const burgerweight = 3;
 const cheeseBurgerWeight = 4;
@@ -16,6 +17,7 @@ const wosfbMeat3Weight = 1;
 const wosSoyFoodWeight = 2;
 const wosSodaCanWeight = 3;
 const wosCandyBarWeight = 1;
+*/
 ////////////////////////////////////////////////////////////////////////////////
 
 // food dispensers, vanding machines ///////////////////////////////////////////

@@ -1,4 +1,4 @@
-const envSuitWeight = 120;
+//const envSuitWeight = 120;
 ////////////////////////////////////////////////////////////////////////////////
 class wosEnvSuit : wosPickup replaces EnvironmentalSuit {
     int depleteTimer;

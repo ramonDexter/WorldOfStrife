@@ -1,4 +1,4 @@
-const regenModuleWeight = 45;
+//const regenModuleWeight = 45;
 ////////////////////////////////////////////////////////////////////////////////
 class wosRegenModule : wosPickup {
     int depleteTimer;

@@ -1,4 +1,4 @@
-const armorShardWeight = 5;
+//const armorShardWeight = 5;
 class wosArmorShard : wosPickup {
 	Default {
 		//$Category "Health and Armor/WoS"

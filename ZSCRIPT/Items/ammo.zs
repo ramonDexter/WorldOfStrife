@@ -1,4 +1,5 @@
 //  item weights  //////////////////////////////////////////////////////////////
+/*
 const elBoltsQwWeight = 24;
 const posBoltsQwWeight = 12;
 const elBoltsBndlWeight = 10;
@@ -13,7 +14,7 @@ const heGRboxWeight = 35;
 const fireGRboxWeight = 35;
 const ammoSatchelWeight = 50;
 const ammoBandolierWeight = 50;
-const wosEnergyCellWeight = 5;
+const wosEnergyCellWeight = 5;*/
 ////////////////////////////////////////////////////////////////////////////////
 
 /*class wosAmmo : Ammo {

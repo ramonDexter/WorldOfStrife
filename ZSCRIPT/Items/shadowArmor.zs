@@ -1,4 +1,4 @@
-const shadowArmorWeight = 95;
+//const shadowArmorWeight = 95;
 ////////////////////////////////////////////////////////////////////////////////
 class wosShadowArmor : wosPickup replaces ShadowArmor {
 	int depleteTimer;

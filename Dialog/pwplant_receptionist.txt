@@ -1,0 +1,33 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//powerplant receptionist
+//==================================================================================================================
+Conversation {
+	ID = 1;
+
+	Page {
+        pageName = "PP_reception_opener";
+		Name = "Receptionist";
+		Dialog = "\c[white]Hello, welcome to the powerplant. What can I do for you?";
+		Choice {
+			Text = "I need to speak with chief technician.";
+			NextPage = "PP_reception_chieftechnician";
+		}
+	}
+	Page {
+        pageName = "PP_reception_chieftechnician";
+		Name = "Receptionist";
+		Dialog = "\c[white]Well, you have to head to the main control. But the door's locked and the key has security chief. Speak to him. He's at the fuel preps.";
+		Choice {
+			Text = "OK, thanks.";
+			CloseDialog = true;
+			NextPage = "PP_reception_opener2";
+		}
+	}
+	Page {
+        pageName = "PP_reception_opener2";
+		Name = "Receptionist";
+		Dialog = "\c[white]Hello, welcome to the powerplant. What can I do for you?";
+	}
+}
+//==================================================================================================================

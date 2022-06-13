@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //   STAFFBLASTER  /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-const blasterStaffBaseWeight = 100;
+//const blasterStaffBaseWeight = 100;
 
 //  staffBlaster.reload magazine  //////////////////////////////////////////////  
 class magazine_blasterStaff : ammo {
@@ -27,10 +27,10 @@ class staffBlaster : wosWeapon {
 		Radius 12;
 		Height 64;
 		
-		Tag "$T_STAFFBLASTER";
+		Tag "$TAG_staffBlaster";
 		Inventory.icon "H_ASTF";
-		Inventory.pickupmessage "$F_STAFFBLASTER";
-		Obituary "%o was splattered by %k Blaster Staff";		
+		Inventory.pickupmessage "$FND_staffBlaster";
+		Obituary "$OBI_staffBlaster"; // %o was splattered by %k Mauler Staff
 		AttackSound "weapons/staffShoot";
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 3;

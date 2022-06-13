@@ -29,12 +29,13 @@ class binder_helmet : CustomInventory {
 
 //  LF inspired code  //////////////////////////////////////////////////////////
 //by jarewill
+/*
 Const LeatherWeight = 125;
 Const MetalWeight = 250;
 Const BinderBasicWeight = 135;
 Const BinderAdvancedWeight = 165;
 Const KineticWeight = 140;
-
+*/
 class wosArmorBase : wosPickup {
 	array<int> armoramount;	
     int armorselect;

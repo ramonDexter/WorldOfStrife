@@ -1,0 +1,22 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//powerplant medic
+//==================================================================================================================
+Conversation {
+	ID = 6;
+	Page {
+        pageName = "PP_medic_opener";
+		Name = "Medic";
+		Dialog = "Are you in need of medical services?";
+		Choice {
+			Text = "Yes, I'm wounded.";
+			NextPage = "PP_medic_usemedcrab";
+		}
+	}
+	Page {
+        pageName = "PP_medic_usemedcrab";
+		Name = "Medic";
+		Dialog = "Then use the autodoc. I need to clean this old and cranky medical crab.";
+	}
+}
+//==================================================================================================================

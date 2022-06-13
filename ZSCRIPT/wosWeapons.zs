@@ -2,6 +2,19 @@
 //  WoS weapons main definition  ///////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+// weapons weights /////////////////////////////////////////////////////////////
+const stormPistolBaseWeight = 50;
+const laserPistolBaseWeight = 55;
+const xBowBaseWeight = 45;
+const assaultGunBaseWeight = 110;
+const blasterStaffBaseWeight = 175;
+const executorRifleWeight = 320;
+const missileLauncherBaseWeight = 420;
+const grenadeLauncherBaseWeight = 570;
+const flamerBaseWeight = 470;
+const maulerBaseWeight = 750;
+////////////////////////////////////////////////////////////////////////////////
+
 //  weapon base class  /////////////////////////////////////////////////////////
 class wosWeapon : StrifeWeapon {
 	//  vars&properties

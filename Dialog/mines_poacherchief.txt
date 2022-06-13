@@ -1,0 +1,86 @@
+namespace = "GZDoom";
+//==================================================================================================================
+//mines - poacher chief
+//==================================================================================================================
+Conversation {
+	ID = 1;
+	Page {
+		pageName = "M02_poacherChief_opener";
+		Name = "Poacher chief";
+		Dialog = "What are you doing here? What are you up to?";
+		Choice {
+			Text = "You have something that's not yours.";
+			NextPage = "M02_poacherChief_whatdoyoumean";
+		}
+		Choice {
+			Text = "Die you scum!";
+			NextPage = "M02_poacherChief_opener";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 101;
+		}
+	}
+	Page {
+        pageName = "M02_poacherChief_whatdoyoumean";
+		Name = "Poacher chief";
+		Dialog = "What do you mean? We have many things.";
+		Choice {
+			Text = "You've stolen the power coupling from the powerplant.";
+			NextPage = "M02_poacherChief_wehavecoupling";
+		}
+		Choice {
+			Text = "Die you scum!";
+			NextPage = "M02_poacherChief_whatdoyoumean";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 101;
+		}
+
+	}
+	Page {
+        pageName = "M02_poacherChief_wehavecoupling";
+		Name = "Poacher chief";
+		Dialog = "Yes, we have the power coupling. It could be yours for, let's say, 500 gold. Deal?";
+		Choice {
+			Text = "Deal.";
+			NextPage = "M02_poacherChief_hereitis";
+			YesMessage = "The deal is done. The power coupling is yours.";
+			NoMessage = "You don't have enough gold!";
+			Cost {
+				item = "goldCoin";
+				amount = 500;
+			}
+		}
+		Choice {
+			Text = "I don't have that amount of gold.";
+			NextPage = "M02_poacherChief_wehavecoupling";
+			CloseDialog = true;
+            YesMessage = "Then get some!";
+		}
+		Choice {
+			Text = "Die you scum!";
+			NextPage = "M02_poacherChief_wehavecoupling";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 101;
+		}
+	}
+	Page {
+        pageName = "M02_poacherChief_hereitis";
+		Name = "Poacher chief";
+		Dialog = "Here it is. We'll now leave the town.";
+		Choice {
+			Text = "<take the power coupling>";
+			NextPage = "M02_poacherChief_silentlystares";
+			CloseDialog = true;
+			Special = 80;
+			Arg0 = 102;
+		}
+	}
+	Page {
+        pageName = "M02_poacherChief_silentlystares";
+		Name = "Poacher chief";
+		Dialog = "<silently stares at you>";
+	}
+}
+//==================================================================================================================

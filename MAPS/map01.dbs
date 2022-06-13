@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -14814f;
+		viewpositionx = -1706.526f;
 		defaulttoptexture = "ELEVTR04";
 		overrideceilheight = false;
-		viewpositiony = 14942f;
+		viewpositiony = 622.8407f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,49 +54,42 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.02091616f;
+		viewscale = 0.6334981f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
 		
 		fieldtypes
 		{
 			
-			linedef
-			{
-				arg0str = 2;
-			}
-			
-			sidedef
-			{
-				offsetx_mid = 1;
-				offsetx_top = 1;
-				offsetx_bottom = 1;
-				offsety_mid = 1;
-				offsety_bottom = 1;
-				offsety_top = 1;
-				scalex_bottom = 1;
-				scaley_bottom = 1;
-				scalex_top = 1;
-				scaley_top = 1;
-			}
-			
 			sector
 			{
-				xpanningceiling = 1;
-				rotationceiling = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
-				ypanningceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				xpanningfloor = 1;
-				ypanningfloor = 1;
-				rotationfloor = 1;
 				user_managed_3d_floor = 3;
-			}
-			
-			thing
-			{
-				conversation = 0;
-				arg0str = 2;
 			}
 		}
 		
@@ -110,7 +103,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 22;
+				caretposition = 562;
+				activetab = true;
 			}
 			
 			document1
@@ -122,7 +116,6 @@ maps
 				scripttype = 1;
 				caretposition = 2259;
 				firstvisibleline = 73;
-				activetab = true;
 			}
 		}
 	}

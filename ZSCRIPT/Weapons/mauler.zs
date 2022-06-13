@@ -1,4 +1,4 @@
-const maulerBaseWeight = 300;
+//const maulerBaseWeight = 300;
 
 class wosMaulerFire1token : inventory {
 	Default {

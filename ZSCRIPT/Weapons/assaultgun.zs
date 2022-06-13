@@ -1,4 +1,4 @@
-const assaultGunBaseWeight = 150;
+//const assaultGunBaseWeight = 150;
 
 class magazine_wosAssaultGun : ammo {
 	Default {
@@ -37,7 +37,7 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 		Weapon.AmmoGive2 32;
 		//Decal "SVEbulletScorch";
 		Inventory.PickupMessage "$F_ASSAULTGUN";
-		Obituary "%o was drilled full of holes by %k's assault gun.";
+		Obituary "$OBI_wosAssaultGun"; // %o was drilled full of holes by %k's assault gun.
 		Mass assaultGunBaseWeight;
         Weapon.UpSound "weapons/weaponUP";
 	}

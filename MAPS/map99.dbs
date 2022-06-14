@@ -26,25 +26,25 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -2084.724f;
+		viewpositionx = 4904.474f;
 		defaulttoptexture = "PLASTR10";
 		overrideceilheight = false;
-		viewpositiony = 14968.75f;
+		viewpositiony = 7958.124f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
 		grid
 		{
-			backoffsetx = 0;
-			backsource = 0;
+			backoffsetx = 40000;
+			backsource = 2;
 			gridoriginy = 0;
-			backscaley = 100;
+			backscaley = 4000;
 			gridrotate = 0;
-			backscalex = 100;
+			backscalex = 4000;
 			gridoriginx = 0;
-			gridsize = 8;
-			background = "";
-			backoffsety = 0;
+			gridsize = 64;
+			background = "D:\\DOOM\\kozolupy_r.png";
+			backoffsety = 32000;
 		}
 		overridetoptexture = false;
 		overridebottomtexture = false;
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1067557f;
+		viewscale = 0.01689999f;
 		
 		plugins
 		{

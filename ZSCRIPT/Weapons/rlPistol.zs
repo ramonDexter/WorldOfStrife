@@ -75,6 +75,7 @@ class StormPistol : wosWeapon
 			DUMM B 1 {
 				A_GunFlash();				
 				W_ShootFirearm(3, "weapons/rlPistolShoot");
+				A_AlertMonsters();
 				A_SpawnItemEx("gunFlash", 8, 0, 16, 0);
 			}				
 			DUMM C 1;

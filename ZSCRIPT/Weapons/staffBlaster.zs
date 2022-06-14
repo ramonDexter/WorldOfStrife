@@ -192,7 +192,7 @@ class BlasterTracer : FastProjectile {
             Loop;
 			
         Death:
-            TNT1 A 0;
+            TNT1 A 0 A_AlertMonsters();
             TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BlasterParticle2",0,0,0,frandom(-6,6),frandom(-6,6),frandom(-6,6),0,SXF_NOCHECKPOSITION);
 			TNT1 A 0 A_SpawnItemEx("staffFlashLong", 0, 0, 0, 0);
 			//TNT1 A 0 A_SpawnItemEx("blueExplosion", 0, 0, 0, 0);				

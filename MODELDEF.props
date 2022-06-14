@@ -33,7 +33,7 @@ model wosD_dexATM {
 	model 0 "dx_atm.md3"
 	skin 0 "ATMTex1.png"
 	scale 0.75 0.75 0.75
-	offset 0.0 0.0 0.0
+	offset -2.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 // deusEx barrel1 //////////////////////////////////////////////////////////////

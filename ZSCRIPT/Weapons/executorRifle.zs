@@ -65,6 +65,7 @@ class executorRifle : wosWeapon {
         Fire:
             ERMD B 1 A_JumpIfNoAmmo("Reload");
             ERMD C 2 W_ShootFireArm(8, "weapons/execRiflShoot");
+            TNT1 A 0 A_AlertMonsters();
             ERMD D 2;
             TNT1 A 0 {
                 ZWL_EjectCasing(

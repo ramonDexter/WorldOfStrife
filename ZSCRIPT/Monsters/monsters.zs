@@ -606,6 +606,7 @@ class spikerTrap : actor {
 			TRAP A 4;
 			goto See;
 		Death:
+		TNT1 A 0 A_SpawnItemEx("dummy_explosion");
 			TRAP A -1;
 			Stop;
 	}

@@ -208,6 +208,17 @@ class zscMiniMissile : MiniMissile {
 		+THRUGHOST
 		Damage 20;
 	}
+	States {
+		Death:
+			SMIS A 0 A_AlertMonsters();
+			SMIS A 0 Bright A_SetTranslucent(1, 1);
+			SMIS A 0 Bright; // State left for savegame compatibility
+			SMIS A 5 Bright A_Explode(64, 64, 1, 1);
+			SMIS B 5 Bright;
+			SMIS C 4 Bright;
+			SMIS DEFG 2 Bright;
+			Stop;
+	}
 }
 
 class zscMiniMissile_homing : MiniMissile {
@@ -224,6 +235,15 @@ class zscMiniMissile_homing : MiniMissile {
 				A_SeekerMissile(45, 15, SMF_LOOK|SMF_PRECISE|SMF_CURSPEED , 248, 3);
 			}
 			Loop;
+		Death:
+			SMIS A 0 A_AlertMonsters();
+			SMIS A 0 Bright A_SetTranslucent(1, 1);
+			SMIS A 0 Bright; // State left for savegame compatibility
+			SMIS A 5 Bright A_Explode(64, 64, 1, 1);
+			SMIS B 5 Bright;
+			SMIS C 4 Bright;
+			SMIS DEFG 2 Bright;
+			Stop;
 	}
 	
 }

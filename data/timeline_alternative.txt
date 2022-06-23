@@ -33,3 +33,14 @@
 349 Nomádské kmeny zakládají na severozápadním okraji větrných plání osadu Eldham. Původní nomádi se zde ve větší míře začínají usazovat a proměňují pláně v okolí osady v úrodná pole, poskytující bohatou úrodu.
 
 350 Na východním pobřeží vzniká malá osada Bournemouth, která má sloužit rybářům jako útočiště před špatným počasím, které je na zdejším pobřeží velmi časté.
+
+352 Na severním okraji Kolymského poloostrova, v místech kde končí Velký Hvozd, vzniká osada Silent Hills.
+
+353 Na západě angarského poloostrova, v ístě malé zátoky, vzniká město Relond. Vzniká na deltě řeky, takže se sestává z mnoha oddělených ostrovů a ostrůvků, propojených mosty. Hned po svém vzniku začne představovat významný obchodní uzel, přitahující všechny obchodníky z blízka i z daleka.
+
+360 V Kalanském zálivu vzniká město Narfolk
+
+
+
+
+

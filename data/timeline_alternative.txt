@@ -30,6 +30,8 @@
 
 347 V zálivu, oddělujícím poloostrov Angar od tabitského poloostrova se usazuje kmen Kalanů, podle kterého bude později záliv pojmenován. Kalanové jsou rybáři, takže v zálivu nacházejí bohaté zdroje potravy.
 
+348 Na nejzápadnějším cípu severního poloostrova vzniká království Westmarch. Místní vládci se starají o svoje záležitosti a nijak se nesnaží o kontakty s okolním světem. Bude tak po sto následujícíh let prosperovat skryté v ústraní.
+
 349 Nomádské kmeny zakládají na severozápadním okraji větrných plání osadu Eldham. Původní nomádi se zde ve větší míře začínají usazovat a proměňují pláně v okolí osady v úrodná pole, poskytující bohatou úrodu.
 
 350 Na východním pobřeží vzniká malá osada Bournemouth, která má sloužit rybářům jako útočiště před špatným počasím, které je na zdejším pobřeží velmi časté.
@@ -52,6 +54,8 @@
 
 379 Na severu území okupovaného Sylvanskými se objevuje samostatné území Jarských, bráněné jedním ze synů knížete Jara. ǔzemí se drží po dva roky.
 
+381 Druhá válka mezi Tabitskými a Kolymskými končí kompletní porážkou Kolymských. Území poloostrova Kolyma se stává součástí Tabitského knížectví.
+
 391 Území bývalého jarského knížectví je připojeno k Sylvanskému území.
 
 392 Sylvanští jsou zahnáni na ústup při pokusu o obsazení jednoho z měst Tarského Principátu. Zjevně lépe vybavené tarské oddíly pronikají hluboko na území Sylvanských, kde způsobují chaos a zkásu.
@@ -64,6 +68,8 @@
 
 408 Velká většina Marrebského knížectví se dostává pod kontrolu Tarského Principátu.
 
+410 Na Angarském poloostrově vzniká Angarské Království.
+
 420 Tarský principát ukončuje své výboje ovládanutím zbytku Marrubského území. Území principátu nyní sahá na východě od pobřeží až po území Keralie na západě. Na severu pak hraničí s územím větrných plání, na jihu pak dosahuje do poloviny Velkého Hvozdu.
 
 433 Začátek tzv. Pohraničních Válek mezi Tarským Principátem a Keralií.
@@ -71,6 +77,28 @@
 439 První z velkých bitev Pohraničních válek končí zničením města Oldenu na území Keralie. Pro keralské to znamená citelnou ztrátu.
 
 443 Pohraniční Války končí dohodou mezi oběma stranami. Alespoň na oko. Ve skutečnosti dochází k ovládnutí Keralie Tarským Principátem. Keralie se stává Tarským protektorátem, a úkolem dosazených guvernérů je hlavně zisk na přírodním a nerostném bohatství kraje.
+
+445 Tarský Principát začíná s pronikáním na území Větrných Plání. 
+
+447 Jižní území Větrných plání až po Pahorkatinu se stává severní výspou Tarského Principátu. Nomádské kmeny obývající území s Principátem spíše spolupracují a zabírání vlastního území se nijak nebrání. Pokud s novými pány nesouhlasí, jednoduše území opustí a usadí se jinde.
+
+448 V Millportu se schází skupina spravedlivých, která později vejde ve známost jako Řád Binderů. Město si vybírají za svoji hlavní základnu a nejsvětější svatyni. Bindeři později začnou spolupracovat s Církví a vstoupí do jejích služeb.
+
+449 Tarský Principát začíná s výboji vůči Angarskému království.
+
+450 Na zbývajícím území Tarských plání zakládá kníže Ferris své knížectví. 
+
+451 V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků. Později se změní na monopolní organizaci spravující know-how nutné k výrobě technologií.
+
+452 Ferrisovo knížectví podniká kolonizační výpravu do rozsáhlých Velkých Bažin na západě. Výprava postupuje bažinatým územím jen pomalu.
+
+454 Území Velkých Bažin je připojeno k Ferrisově knížectví. Ferrisovo knížectví tak začíná první kontakty s královstvím Westmarch.
+
+456 První válka Tarského Principátu s angarským královstvím končí porážkou angarských. Rozsáhlé území angarského království na západním úpatí pohoří Aton se dostává pod kontrolu Tarského Principátu. Angarskému království tak zůstává jen území na poloostrově, a fakticky je odříznuto od pozemního obchodu na Kontinentu.
+
+458 V hlavním městě Tarského principátu se v rodině jednoho z důstojníků narodil Bodrik. 
+
+476 Po dokončení místní školyBodrik vstupuje do armády Principátu.
 
 
 

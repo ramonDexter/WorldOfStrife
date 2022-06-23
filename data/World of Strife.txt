@@ -141,13 +141,13 @@ The Church of the Order. Originally, it was a survivor from one of the Shelters.
 
 449 Tarský Principát začíná s výboji vůči Angarskému království.
 
-450 Na zbývajícím území Tarských plání zakládá kníže Ferris své knížectví. 
+450 Na zbývajícím území Tarských plání zakládá kníže Burgerich své knížectví. 
 
 451 V Brodě je založena TekGilda, nejprve jako hlavní cechovní organizace kovářů, techniků a strojníků. Později se změní na monopolní organizaci spravující know-how nutné k výrobě technologií.
 
-452 Ferrisovo knížectví podniká kolonizační výpravu do rozsáhlých Velkých Bažin na západě. Výprava postupuje bažinatým územím jen pomalu.
+452 Burgerichovo knížectví podniká kolonizační výpravu do rozsáhlých Velkých Bažin na západě. Výprava postupuje bažinatým územím jen pomalu.
 
-454 Území Velkých Bažin je připojeno k Ferrisově knížectví. Ferrisovo knížectví tak začíná první kontakty s královstvím Westmarch.
+454 Území Velkých Bažin je připojeno k Burgerichově knížectví. Burgerichovo knížectví tak začíná první kontakty s královstvím Westmarch.
 
 456 První válka Tarského Principátu s angarským královstvím končí porážkou angarských. Rozsáhlé území angarského království na západním úpatí pohoří Aton se dostává pod kontrolu Tarského Principátu. Angarskému království tak zůstává jen území na poloostrově, a fakticky je odříznuto od pozemního obchodu na Kontinentu.
 

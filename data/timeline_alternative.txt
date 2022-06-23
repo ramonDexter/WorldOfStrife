@@ -36,9 +36,26 @@
 
 352 Na severním okraji Kolymského poloostrova, v místech kde končí Velký Hvozd, vzniká osada Silent Hills.
 
-353 Na západě angarského poloostrova, v ístě malé zátoky, vzniká město Relond. Vzniká na deltě řeky, takže se sestává z mnoha oddělených ostrovů a ostrůvků, propojených mosty. Hned po svém vzniku začne představovat významný obchodní uzel, přitahující všechny obchodníky z blízka i z daleka.
+353 Na západě angarského poloostrova, v místě malé zátoky, vzniká město Relond. Vzniká na deltě řeky, takže se sestává z mnoha oddělených ostrovů a ostrůvků, propojených mosty. Hned po svém vzniku začne představovat významný obchodní uzel, přitahující všechny obchodníky z blízka i z daleka.
 
-360 V Kalanském zálivu vzniká město Narfolk
+360 V Kalanském zálivu vzniká město Narfolk, jako přímá konkurence Relondu a Angarským. 
+
+363 Začátek obchodní války mezi angarským Relondem a kalanským Narfolkem. 
+
+365 Na jižním okraji větrných plání vzniká království Sylvania. Od pobřeží ho odděluje území Jarského knížectví. Oba státy sousedí na severu s územím Tarského Principátu a na jihu s územím Marrebského království, ležícího na území Velkého Hvozdu.
+
+366 První z potyček tzv. období válčících států, které bude trvat následujících padesát let. Během této doby se území čtyř výše zmínených státním útvarů promění, některé zcela zaniknou, aby později znovu povstaly z popela.
+
+375 Bitva pod Hvozdem. východní území Jarského knížectví je zničeno nekonečnými oddíly Sylvanských, kteří postupují směrem k pobřeží.
+
+378 Jarské knížectví se dostává pod kontrolu Sylvanských. 
+
+379 Na severu území okupovaného Sylvanskými se objevuje samostatné území Jarských, bráněné jedním ze synů knížete Jara. ǔzemí se drží po dva roky.
+
+392 Sylvanští jsou zahnáni na ústup při pokusu o obsazení jednoho z měst Tarského Principátu. Zjevně lépe vybavené tarské oddíly pronikají hluboko na území Sylvanských, kde způsobují chaos a zkásu.
+
+395 Území Sylvanských se dostává pod plnou kontrolu Tarského principátu. Velení tarské armády zajímá knížete Sylvana, kterého nechává popravit společně se všemi zajatými členy jeho rodiny.
+
 
 
 

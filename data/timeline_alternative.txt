@@ -52,9 +52,30 @@
 
 379 Na severu území okupovaného Sylvanskými se objevuje samostatné území Jarských, bráněné jedním ze synů knížete Jara. ǔzemí se drží po dva roky.
 
+391 Území bývalého jarského knížectví je připojeno k Sylvanskému území.
+
 392 Sylvanští jsou zahnáni na ústup při pokusu o obsazení jednoho z měst Tarského Principátu. Zjevně lépe vybavené tarské oddíly pronikají hluboko na území Sylvanských, kde způsobují chaos a zkásu.
 
 395 Území Sylvanských se dostává pod plnou kontrolu Tarského principátu. Velení tarské armády zajímá knížete Sylvana, kterého nechává popravit společně se všemi zajatými členy jeho rodiny.
+
+402 Tarský principát si podmaňuje zbývající území Sylvanských.
+
+403 Tarský principát začíná postupovat na území Marrebského knížectví.
+
+408 Velká většina Marrebského knížectví se dostává pod kontrolu Tarského Principátu.
+
+420 Tarský principát ukončuje své výboje ovládanutím zbytku Marrubského území. Území principátu nyní sahá na východě od pobřeží až po území Keralie na západě. Na severu pak hraničí s územím větrných plání, na jihu pak dosahuje do poloviny Velkého Hvozdu.
+
+433 Začátek tzv. Pohraničních Válek mezi Tarským Principátem a Keralií.
+
+439 První z velkých bitev Pohraničních válek končí zničením města Oldenu na území Keralie. Pro keralské to znamená citelnou ztrátu.
+
+443 Pohraniční Války končí dohodou mezi oběma stranami. Alespoň na oko. Ve skutečnosti dochází k ovládnutí Keralie Tarským Principátem. Keralie se stává Tarským protektorátem, a úkolem dosazených guvernérů je hlavně zisk na přírodním a nerostném bohatství kraje.
+
+
+
+
+
 
 
 

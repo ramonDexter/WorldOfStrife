@@ -15,6 +15,9 @@ Episode MAP02 {
 Episode MAP08 {
 	name = "Episode 1"
 }
+Episode MAP909 {
+	name = "Southern Plains"
+}
 
 //  MAPS DEFINITION  ///////////////////////////////////////////////////////////
 map MAP01 "Mines" {
@@ -197,8 +200,9 @@ map map14 "Eastcliff Village" {
 }
 
 
-map map99 "#TOP SECRET" {
-	sky1 = "SKYORNG"
+map map909 "Southern Plains" {
+	sky1 = "SKYRGGR"
+	//sky1 = "SKYOIL"
 	music = "ADDER_S"
 	outsidefogdensity = 255
 	skyfog = 255

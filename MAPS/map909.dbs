@@ -1,0 +1,265 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_StrifeUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP99
+	{
+		defaultceiltexture = "PLASTR08";
+		overridefloorheight = false;
+		customfloorheight = 0;
+		uselongtexturenames = false;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		overrideceiltexture = false;
+		viewpositionx = -232.5254f;
+		defaulttoptexture = "SUPWOD01";
+		overrideceilheight = false;
+		viewpositiony = 3961.987f;
+		overridebrightness = false;
+		overridefloortexture = false;
+		
+		grid
+		{
+			backoffsetx = 40000;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 4000;
+			gridrotate = 0;
+			backscalex = 4000;
+			gridoriginx = 0;
+			gridsize = 8;
+			background = "";
+			backoffsety = 32000;
+		}
+		overridetoptexture = false;
+		overridebottomtexture = false;
+		defaultbottomtexture = "SUPWOD01";
+		defaultfloortexture = "SBTEX52";
+		defaultwalltexture = "SUPWOD01";
+		customceilheight = 128;
+		overridemiddletexture = false;
+		custombrightness = 196;
+		viewscale = 0.07546953f;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -28800;
+					outertop = 32576;
+					outerbottom = -14400;
+				}
+			}
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "18 20 33 36 45 52 115 120 128 134 136 145 152 165 168 175 182 192 260 268 270";
+				sectors = "7 20 38 49";
+			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 131;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 11381;
+				firstvisibleline = 427;
+				activetab = true;
+			}
+		}
+	}
+	
+	MAP909
+	{
+		defaultwalltexture = "PLASTR01";
+		overridemiddletexture = false;
+		defaultceiltexture = "PLASTR08";
+		overrideceiltexture = false;
+		custombrightness = 196;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+		}
+		viewpositiony = 3547.539f;
+		viewpositionx = -37.56794f;
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		customceilheight = 128;
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32768;
+					outerright = -28416;
+					outertop = 32767;
+					outerbottom = 8896;
+				}
+			}
+		}
+		customfloorheight = 0;
+		
+		grid
+		{
+			backoffsetx = 0;
+			backsource = 0;
+			gridoriginy = 0;
+			backscaley = 100;
+			gridrotate = 0;
+			backscalex = 100;
+			gridoriginx = 0;
+			gridsize = 4;
+			background = "";
+			backoffsety = 0;
+		}
+		viewscale = 0.6654134f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		defaulttoptexture = "PLASTR01";
+		overridebottomtexture = false;
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+			}
+		}
+		defaultbottomtexture = "PLASTR01";
+		defaultfloortexture = "WOOD08";
+		overrideceilheight = false;
+		overridebrightness = false;
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "0 2 13 18 23 84 91 120 152 168 169 172 181 238 250 269 324 338 369 401 623 624 625 626 627 628 629 630 631 632 633 634 635 636 680 681 682 683 684 685 686 687 688 689 690 691 692 693 694 695 696 697 698 699 700 701 702 703 705 706 707 708 709 814 816 914 915 916 918 933 961 962 1024 1025 1026 1027 1028 1029 1034 1035 1040 1044 1045 1049 1050 1051";
+				sectors = "7 9 17 63 64 98 117 118 119 120 131 133 134 135 136 161 162 182 183 185 186 189 191";
+			}
+		}
+		overridefloorheight = false;
+		overridetoptexture = false;
+		uselongtexturenames = false;
+		overridefloortexture = false;
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+	}
+}

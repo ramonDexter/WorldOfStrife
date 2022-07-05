@@ -1013,3 +1013,47 @@ Brightmap sprite RNGSA8
 	fullbright
 }
 //-----------------------------------
+
+// wcomp 
+//-----------------------------------
+Brightmap texture WCOMP9A {
+	map BM_WCOMP9
+	fullbright
+}
+Brightmap texture WCOMP9B {
+	map BM_WCOMP9
+	fullbright
+}
+Brightmap texture WCOMPAA {
+	map BM_WCOMPA
+	fullbright
+}
+Brightmap texture WCOMPAB {
+	map BM_WCOMPA
+	fullbright
+}
+Brightmap texture WCOMPBA {
+	map BM_WCOMPB
+	fullbright
+}
+Brightmap texture WCOMPBB {
+	map BM_WCOMPB
+	fullbright
+}
+Brightmap texture WCOMPCA {
+	map BM_WCOMPC
+	fullbright
+}
+Brightmap texture WCOMPCB {
+	map BM_WCOMPC
+	fullbright
+}
+Brightmap texture WCOMPDA {
+	map BM_WCOMPD
+	fullbright
+}
+Brightmap texture WCOMPDB {
+	map BM_WCOMPD
+	fullbright
+}
+//-----------------------------------

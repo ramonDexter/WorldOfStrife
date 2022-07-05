@@ -90,7 +90,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"X_002:X_003:X_004:X_005:"
 			"X_006:X_007:X_008:X_009:"
 			"X_010:X_011:F_NAT00:F_NAT01:"
-			"F_OLDWOD:DNTILE04:";
+			"F_OLDWOD:DNTILE04:WWODB01:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -417,6 +417,7 @@ STEP_SUPWOD01 = "step/wood";
 STEP_SUPWOD02 = "step/wood";
 STEP_MGWDH2 = "step/wood";
 STEP_F_OLDWOD = "step/wood";
+STEP_WWODB01 = "step/wood";
 
 
 

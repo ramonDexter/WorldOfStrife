@@ -34,6 +34,10 @@ class binderPlayer : StrifePlayer {
 	// RPG system - new player stats ///////////////////////////////////////////
 	int mindValue;
 	property mind : mindValue;
+	int playerXP;
+	property playerXP : playerXP;
+	int playerLevel;
+	property playerLevel : playerLevel;
 
 	// broken lands ledge climbing /////////////////////////////////////////////	
 	double speedbase; property BaseSpeed : speedbase;
@@ -87,8 +91,11 @@ class binderPlayer : StrifePlayer {
 		//Player.StartItem "wosi_scanner", 1;
 		// custom properties ///////////////////////////////////////////////////
 		binderPlayer.BaseSpeed 2.0;
+		// rpg properties //////////////////////////////////////////////////////
 		binderPlayer.mind 0;
-		/////////////////////////////////////
+		binderPlayer.playerXP 0;
+		binderPlayer.playerLevel 1;
+		////////////////////////////////////////////////////////////////////////
 
 		// dodopod ledge climbing //
 		//binderPlayer.MaxLedgeHeight 56;
@@ -99,8 +106,9 @@ class binderPlayer : StrifePlayer {
 
 	////////////////////////////////////////////////////////////////////////////
 	// overall override ////////////////////////////////////////////////////////
-	// Tick() //////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
+
+	// Tick() //////////////////////////////////////////////////////////////////
 	override void Tick() {
 		pvel=vel.z;
 		pang=angle;
@@ -117,22 +125,23 @@ class binderPlayer : StrifePlayer {
 		HealthShake();
 		LedgeClimb();
 		HandleSpeed();
+		HandlePlayerLevel();
 		
 		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku	
 		////////////////////////////////////////////////////////////////////////	
     }
 	////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////
 
+	// postBeginPlay() /////////////////////////////////////////////////////////
 	override void PostBeginPlay() {
         Super.PostBeginPlay();
 		// LF sprinting code //
         stamin = 400;
 		bleedlevel = 0;
 		////////
-    }	
-
+    }
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	
  	// ACS support - functions to return values to ACS scripts /////////////////
 	static int getplayerAccuracy(actor activator) {
@@ -153,6 +162,20 @@ class binderPlayer : StrifePlayer {
 		let pawn = binderplayer(activator);
 		if ( pawn && pawn.player ) {
 			return pawn.MindValue;
+		}
+		return 0;
+	}
+	static int getplayerXP(actor activator) {
+		let pawn = binderPlayer(activator);
+		if ( pawn && pawn.player ) {
+			return pawn.playerXP;
+		}
+		return 0;
+	}
+	static int getplayerLevel(actor activator) {
+		let pawn = binderPlayer(activator);
+		if ( pawn && pawn.player ) {
+			return pawn.playerLevel;
 		}
 		return 0;
 	}
@@ -377,6 +400,121 @@ class binderPlayer : StrifePlayer {
 		ViewBob = 0.6*hpeed; //lower the viewBob
 		speed = hpeed;
     }
+	////////////////////////////////////////////////////////////////////////////
+
+	// level handler ///////////////////////////////////////////////////////////
+	void HandlePlayerLevel() {
+		if ( playerXP>=1000 && playerLevel==1 ) {
+			playerLevel=2;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=3000 && playerLevel==2 ) {
+			playerLevel=3;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=6000 && playerLevel==3 ) {
+			playerLevel=4;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=10000 && playerLevel==4 ) {
+			playerLevel=5;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=15000 && playerLevel==5 ) {
+			playerLevel=6;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=21000 && playerLevel==6 ) {
+			playerLevel=7;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=28000 && playerLevel==7 ) {
+			playerLevel=8;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=36000 && playerLevel==8 ) {
+			playerLevel=9;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=45000 && playerLevel==9 ) {
+			playerLevel=10;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=55000 && playerLevel==10 ) {
+			playerLevel=11;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=66000 && playerLevel==11 ) {
+			playerLevel=12;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=78000 && playerLevel==12 ) {
+			playerLevel=13;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=91000 && playerLevel==13 ) {
+			playerLevel=14;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=105000 && playerLevel==14 ) {
+			playerLevel=15;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=120000 && playerLevel==15 ) {
+			playerLevel=16;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=136000 && playerLevel==16 ) {
+			playerLevel=17;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=153000 && playerLevel==17 ) {
+			playerLevel=18;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=171000 && playerLevel==18 ) {
+			playerLevel=19;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=190000 && playerLevel==19 ) {
+			playerLevel=20;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=210000 && playerLevel==20 ) {
+			playerLevel=21;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=231000 && playerLevel==21 ) {
+			playerLevel=22;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+		if ( playerXP>=253000 && playerLevel==22 ) {
+			playerLevel=23;
+			A_GiveInventory("upgradeToken", 1);
+			A_Log("\c[yellow][ !!! LEVEL UP !!! ]");
+		}
+	}
 	////////////////////////////////////////////////////////////////////////////
 
 	// ledge climb function ////////////////////////////////////////////////////

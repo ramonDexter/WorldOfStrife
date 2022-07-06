@@ -485,3 +485,8 @@ texture DEXTF01
 	pic DEXTF02 tics 4
 	pic DEXTF03 tics 4
 	pic DEXTF04 tics 4
+
+texture DNSCRN31
+	pic DNSCRN31 tics 4
+	pic DNSCRN32 tics 4
+	pic DNSCRN33 tics 4

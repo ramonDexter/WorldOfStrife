@@ -90,7 +90,7 @@ model TOSladderWoodenHoles {
 	skin 0 "tx_gilotina.png"
 
 	Scale 2.5 2.5 2.5
-	Offset -16.0 0.0 0.0
+	Offset -17.5 0.0 0.0
 
 	FrameIndex UNKN A 0 0
 }

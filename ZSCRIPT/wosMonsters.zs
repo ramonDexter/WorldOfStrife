@@ -1,3 +1,23 @@
+// base monster //
+class wosMonsterBase : actor {
+
+    /////////////////////////////////////////
+    // usage: W_rewardXP(SpawnHealth());   //
+    /*
+            TNT1 A 0 W_rewardXP(SpawnHealth()); //
+    */
+    /////////////////////////////////////////
+	action void W_rewardXP (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
+
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////
 // spawner base definition ////////////////////////////////////////////////////////////
 // by jarewill ////////////////////////////////////////////////////////////////////////

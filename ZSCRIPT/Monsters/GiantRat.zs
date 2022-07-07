@@ -1,4 +1,4 @@
-class wosGiantRat : actor {
+class wosGiantRat : wosMonsterBase {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Giant Rat"
@@ -35,6 +35,7 @@ class wosGiantRat : actor {
 		Death:
 			RATS I 3 A_ScreamAndUnblock();
 			RATS I 0 A_StartSound ("Rat/Splat");
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			RATS JKL 3;
 			RATS L -1;
 			stop;

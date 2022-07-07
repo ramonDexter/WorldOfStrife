@@ -9,7 +9,8 @@ nuclearMutant/attack            NMFIRSHT
 nuclearMutant/shotx             NMFIRXPL
 */
 
-class nuclearMutant : actor {
+class nuclearMutant : wosMonsterBase {
+    
 	void A_SmartChase() {
 		if (CheckSight(target) == true) {
 			A_Chase();
@@ -95,6 +96,7 @@ class nuclearMutant : actor {
             NMUT K 8;
             NMUT L 8 A_NoBlocking();
             NMUT MNOPQRS 6;
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             NMUT T -1;
             Stop;
         Raise:

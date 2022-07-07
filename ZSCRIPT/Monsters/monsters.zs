@@ -2,10 +2,22 @@
 // wos monsters defs //////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // rebel enemy base class /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class rebelEnemy : Rebel replaces Rebel {
+
+	// usage: W_rewardXPRebel(SpawnHealth());   //
+	action void W_rewardXPRebel (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
 
 	int gunmag; //
 	int searchtimer; //
@@ -104,6 +116,7 @@ class rebelEnemy : Rebel replaces Rebel {
 			HMN1 I 3 A_NoBlocking;
 			HMN1 J 4;
 			HMN1 KLM 3;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			HMN1 N -1;
 			Stop;
 		XDeath:
@@ -112,6 +125,7 @@ class rebelEnemy : Rebel replaces Rebel {
 			RGIB C 3 A_NoBlocking;
 			RGIB DEF 3 A_TossGib;
 			RGIB G 3;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RGIB H 1400;
 			Stop;
 	}
@@ -185,6 +199,7 @@ class ShieldRebel : rebelEnemy {
 			SREB I 4 A_Scream();
 			SREB J 4;
 			SREB KLMN 3;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			SREB O -1;
 			Stop;
 		XDeath:
@@ -194,6 +209,7 @@ class ShieldRebel : rebelEnemy {
 			SREB Q 3 A_XScream();
 			SREB R 3 A_TossGib();
 			SREB STUV 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			SREB W -1;
 			Stop;
 		Burn:
@@ -207,11 +223,13 @@ class ShieldRebel : rebelEnemy {
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
 			BURN NOPQPQ 5 Bright;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			BURN RSTU 7 Bright;
 			BURN V -1;
 			Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", 2);
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -301,12 +319,14 @@ class EliteRebel : rebelEnemy {
 			RAVW H 5 A_Scream();
 			RAVW I 5 A_NoBlocking();
 			RAVW JKL 4;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW M -1;
 			Stop;
 		XDeath:
 			RAVW N 3 A_XScream();
 			RAVW N 0 A_NoBlocking();
 			RAVW OPQRST 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW U -1;
 			Stop;
 	}
@@ -352,9 +372,10 @@ class GrenadeRebel : rebelEnemy {
 			GREB G 3 A_Pain();
 			Goto See;
 		Death:
-		GREB H 5 A_Scream();
+			GREB H 5 A_Scream();
 			GREB I 5 A_NoBlocking();
 			GREB JKLM 4;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			GREB N -1;
 			Stop;
 		XDeath:
@@ -362,6 +383,7 @@ class GrenadeRebel : rebelEnemy {
 			GREB P 4 A_XScream();
 			GREB Q 3 A_NoBlocking();
 			GREB RSTU 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			GREB V -1;
 			Stop;
 	}
@@ -414,12 +436,14 @@ class MaulerRebel : rebelEnemy {
 			MRBL H 5 A_Scream();
 			MRBL I 5 A_Noblocking();
 			MRBL JK 4;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			MRBL L -1;
 			Stop;
 		XDeath:
 			RAVW N 3 A_XScream();
 			RAVW N 0 A_NoBlocking();
 			RAVW OPQRST 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW U -1;
 			Stop;
 	}
@@ -481,12 +505,14 @@ class FlamerRebel : rebelEnemy {
 			FLRB H 5 A_ScreamandUnblock();
 			FLRB I 5;
 			FLRB JK 4;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			FLRB L -1;
 			Stop;
 		XDeath:
 			FLRB M 3 A_NoBlocking();
 			FLRB N 3 A_XScream();
 			FLRB OPQRS 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			FLRB T -1;
 			Stop;
 	}
@@ -529,11 +555,13 @@ class RangerRebel : rebelEnemy {
 		Death:
 			RANG H 4 A_ScreamandUnBlock();
 			RANG IJK 4;
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RANG L -1;
 			Stop;
 		XDeath:
 			CGIB A 3 A_XScream();
 			CGIB BCDEFG 3 A_TossGib();
+			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			CGIB H -1;
 			Stop;
 	}
@@ -556,9 +584,9 @@ class hereticCaptain : EliteRebel {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // spiker trap ////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class spikerTrap : actor {
+class spikerTrap : wosMonsterBase {
 
-	void A_TrapAttack() {
+	void W_TrapAttack() {
 		let targ = target;
 		if (targ) {
 			int damage = random[spikerTrap](1, 8) * 2;
@@ -598,15 +626,16 @@ class spikerTrap : actor {
 		
 		Melee:
 			TRAP A 2;
-			TRAP B 3 A_TrapAttack();
+			TRAP B 3 W_TrapAttack();
 			TRAP A 2;
-			TRAP B 3 A_TrapAttack();
+			TRAP B 3 W_TrapAttack();
 			TRAP A 2;
-			TRAP B 3 A_TrapAttack();
+			TRAP B 3 W_TrapAttack();
 			TRAP A 4;
 			goto See;
 		Death:
-		TNT1 A 0 A_SpawnItemEx("dummy_explosion");
+			TNT1 A 0 A_SpawnItemEx("dummy_explosion");
+            TNT1 A 0 W_rewardXP(SpawnHealth()/8);
 			TRAP A -1;
 			Stop;
 	}
@@ -629,6 +658,14 @@ class RV_Sentinel : Sentinel {
 		//$Title "Sentinel vox"
 		+DONTINTERPOLATE
 		
+	}
+	action void W_rewardXPsentinel (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
 	}
 	
 	States {
@@ -669,6 +706,15 @@ class RV_Sentinel : Sentinel {
 			}
 			SEWR YYY 1 A_SpawnItemEx("RV_SentinelBright", 0, 0, 16);
 			Goto Missile+1;
+		Death:
+			SEWR D 7 A_Fall();
+			SEWR E 8 Bright A_TossGib();
+			SEWR F 5 Bright A_Scream();
+			SEWR GH 4 Bright A_TossGib();
+            TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
+			SEWR I 4;
+			SEWR J 5;
+			Stop;
 	}
 }
 class RV_SentinelBright : actor {
@@ -688,6 +734,14 @@ class RV_CeilingTurret : CeilingTurret {
 		//$Title "Ceiling Turret vox"
 		+DONTINTERPOLATE
 	}
+	action void W_rewardXPturret (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
 	
 	States {
 		Spawn:
@@ -704,6 +758,12 @@ class RV_CeilingTurret : CeilingTurret {
 			}
 			TURT Z 1 BRIGHT A_SpawnItemEx("RV_TurretBase");
 			Loop;
+		Death:
+			BALL A 6 Bright A_Scream();
+			BALL BCDE 6 Bright;
+            TNT1 A 0 W_rewardXPturret(SpawnHealth());
+			TURT C -1;
+			Stop;
 	}
 }
 class RV_TurretBase : actor {
@@ -717,7 +777,7 @@ class RV_TurretBase : actor {
 			stop;
 	}
 }
-class hackedSentinel : Sentinel {
+class hackedSentinel : RV_Sentinel {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Hacked Sentinel"
@@ -725,7 +785,7 @@ class hackedSentinel : Sentinel {
 		Tag "$TAG_hackedSentinel";
 	}
 }
-class friendSentinel : Sentinel {
+class friendSentinel : RV_Sentinel {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Friendly Sentinel"
@@ -741,7 +801,7 @@ class friendSentinel : Sentinel {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  zombie mutant /////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class ZombieFodder : actor {
+class ZombieFodder : wosMonsterBase {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Zombie Fodder"
@@ -782,6 +842,7 @@ class ZombieFodder : actor {
 			ZFOD I 7;
 			ZFOD J 7 A_Scream();
 			ZFOD K 5 A_NoBlocking();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			ZFOD L 5;
 			ZFOD M -1;
 			Stop;
@@ -789,6 +850,7 @@ class ZombieFodder : actor {
 			ZFOD N 5;
 			ZFOD O 5 A_XScream();
 			ZFOD P 5 A_NoBlocking();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			ZFOD QR 5;
 			ZFOD S -1;
 			Stop;
@@ -892,6 +954,7 @@ class fodderGhoul : ZombieFodder {
 			GHUL I 7;
 			GHUL J 7 A_Scream();
 			GHUL K 5 A_NoBlocking();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			GHUL L 5;
 			GHUL M -1;
 			Stop;
@@ -899,6 +962,7 @@ class fodderGhoul : ZombieFodder {
 			GHUL N 5;
 			GHUL O 5 A_XScream();
 			GHUL P 5 A_NoBlocking();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			GHUL QR 5;
 			GHUL S -1;
 			Stop;
@@ -915,7 +979,7 @@ class fodderGhoul : ZombieFodder {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // mini sentinel //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class MiniSentinel : actor {
+class MiniSentinel : wosMonsterBase {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Mini Sentinel"
@@ -973,6 +1037,7 @@ class MiniSentinel : actor {
 			MNDR C 7 BRIGHT A_Fall();
 			MNDR D 5 BRIGHT A_Scream();
 			MNDR E 5 BRIGHT A_TossGib();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			MNDR F 5 BRIGHT;
 			MNDR G 5 BRIGHT A_TossGib();
 			MNDR HI 5 BRIGHT;
@@ -1031,7 +1096,7 @@ class LaserBoltTrail : actor {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // paladin robot //////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class Paladin : actor {
+class Paladin : wosMonsterBase {
 	Default {
 		//$Category "Monsters/WoS"
 		//$Title "Paladin"
@@ -1086,6 +1151,7 @@ class Paladin : actor {
 			RROB I 6 A_NoBlocking();
 			RROB J 6;
 			RROB K 6 A_StartSound ("Robot/Fall", 0);
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			RROB L -1;
 			stop;
 	}
@@ -1194,6 +1260,14 @@ class shootingStalker : Stalker {
 		ActiveSound "stalker/active";
 		HitObituary "$OB_STALKER";
 	}
+	action void W_rewardXPstalker (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
 
 	States {
         Spawn:
@@ -1239,6 +1313,7 @@ class shootingStalker : Stalker {
             STLK P 4 A_Scream;
             STLK QRST 4;
             STLK U 4 A_NoBlocking;
+            TNT1 A 0 W_rewardXPstalker(SpawnHealth());
             STLK VW 4;
             STLK XYZ[ 4 Bright;
             Stop;
@@ -1265,6 +1340,15 @@ class wosAcolyte : Acolyte replaces Acolyte {
 	bool lootrep; //
 	string looteqip; Property Equipment : looteqip; //
 	int looteqip2; //
+
+	action void W_rewardXPacolyte (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
     
 	Override void PostBeginPlay() {
 		Super.PostBeginPlay();
@@ -1312,6 +1396,32 @@ class wosAcolyte : Acolyte replaces Acolyte {
 		}
 		Return Super.Used(user);
 	}
+	States {
+		Death:
+			AGRD G 4;
+			AGRD H 4 A_Scream();
+			AGRD I 4;
+			AGRD J 3;
+			AGRD K 3 A_NoBlocking();
+			AGRD L 3;
+			AGRD M 3 A_AcolyteDie();
+            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+			AGRD N -1;
+			Stop;
+		XDeath:
+			GIBS A 5 A_NoBlocking();
+			GIBS BC 5 A_TossGib();
+			GIBS D 4 A_TossGib();
+			GIBS E 4 A_XScream();
+			GIBS F 4 A_TossGib();
+			GIBS GH 4;
+			GIBS I 5;
+			GIBS J 5 A_AcolyteDie();
+            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+			GIBS K 5;
+			GIBS L 1400;
+			Stop;
+	}
 }
 class wosAcolyteTan : wosAcolyte replaces AcolyteTan {}
 class wosAcolyteRed : wosAcolyte replaces AcolyteRed {
@@ -1357,7 +1467,7 @@ class wosAcolyteShadow : wosAcolyte replaces AcolyteShadow {}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ascension flesh imp ////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-class ascImpFlesh : actor {
+class ascImpFlesh : wosMonsterBase {
 	Default {
 		//$category "Monsters/WoS"
 		//$Title "Imp Green"
@@ -1417,6 +1527,7 @@ class ascImpFlesh : actor {
 		Death:
 			IMP1 H 0 { bFLOATBOB = 0; }
 			IMP1 H 1 A_Scream();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			IMP1 H 1;
 		Crash:
 			IMP1 H 0 { bFLOATBOB = 0; }
@@ -1487,6 +1598,33 @@ class wosBogMonster : Serpent {
 		AttackSound "SerpentAttack"; //bogmonster/attack
 		PainSound "SerpentPain"; //bogmonster/pain
 		DeathSound "SerpentDeath"; //bogmonster/death
+	}
+	action void W_rewardXPbogMonster (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
+	States {
+		Death:
+			SSPT O 4;
+			SSPT P 4 A_Scream();
+			SSPT Q 4 A_NoBlocking();
+            TNT1 A 0 W_rewardXPbogMonster(SpawnHealth());
+			SSPT RSTUVWXYZ 4;
+			Stop;
+		XDeath:
+			SSXD A 4;
+			SSXD B 4 A_SpawnItemEx("SerpentHead", 0, 0, 45);
+			SSXD C 4 A_NoBlocking();
+            TNT1 A 0 W_rewardXPbogMonster(SpawnHealth());
+			SSXD DE 4;
+			SSXD FG 3;
+			SSXD H 3 A_SerpentSpawnGibs();
+			Stop;
+		
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

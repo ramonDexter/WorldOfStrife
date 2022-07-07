@@ -380,15 +380,16 @@ class wosStatusBar : BaseStatusBar {
 
             //  selected inventory display  ////////////////////////////////////
 			if (CPlayer.mo.InvSel != null) {
-				//DrawInventoryIcon(CPlayer.mo.InvSel, (-23, 179), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28));
-				DrawInventoryIcon(CPlayer.mo.InvSel, (351, 18), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28));
+				//DrawInventoryIcon(CPlayer.mo.InvSel, (-23, 179), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28)); //vlevo dole
+				DrawInventoryIcon(CPlayer.mo.InvSel, (351, 18), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28)); //vpravo nahore
 				item = CPlayer.mo.InvSel;
+				// display item charge //>>removed, use manual check to check item charge, to improve immersion
 				/*wosPickup itemCharge = wosPickup(item);
 				if (item.Amount == 1 && item is "wosPickup" && itemCharge.charge > 0) {
 					DrawString(mYelFont, FormatNumber(itemCharge.charge, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_CYAN);
 				} else*/ if (item.Amount > 1) {
-					//DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);			
-					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (368, 25), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+					//DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vlevo dole		
+					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (368, 25), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vpravo nahore
 				} 
 			}			
 
@@ -400,13 +401,14 @@ class wosStatusBar : BaseStatusBar {
 				// display all items overall weight in open inventory //////////
 				let pawn = binderPlayer(CPlayer.mo);
 				if ( pawn != NULL ) {
-					DrawString (mESfont, FormatNumber(pawn.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
+					//DrawString (mESfont, FormatNumber(pawn.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
+					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);	//more sophisticated approach			
 				}
 				////////////////////////////////////////////////////////////////
 				
 				let coins = CPlayer.mo.FindInventory("goldCoin");
 				if ( coins != null ) {
-					DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "Coins: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+					DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "GOLD: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 				}
 				
 				// draw items bar //////////////////////////////////////////////
@@ -557,12 +559,16 @@ class wosStatusBar : BaseStatusBar {
 				screen.DrawTexture (idPOPSTAT, true, left, top-86, DTA_CleanNoMove, true);
 				
 				//  Print stats  ///////////////////////////////////////////////
-				//  accuracy
+				// accuracy //
 				DrINumber2 (CPlayer.mo.accuracy, left+266*xscale, top-4*yscale, 7*xscale, imgSTFON0);
-				//  stamina
+				// stamina //
 				DrINumber2 (CPlayer.mo.stamina, left+266*xscale, top+13*yscale, 7*xscale, imgSTFON0);
-				//mind
+				// mind //
 				DrINumber2 (pawn.mindValue, left+266*xscale, top+30*yscale, 7*xscale, imgSTFON0);
+				// Level //
+				DrINumber2 (pawn.playerLevel, left+202*xscale, top+74*yscale, 7*xscale, imgSTFON0);
+				// XP //
+				DrINumber2 (pawn.playerXP, left+243*xscale, top+93*yscale, 7*xscale, imgSTFON0);
 				
 				// health implant display //////////////////////////////////////
 				item = CPlayer.mo.FindInventory ("implant_health");
@@ -592,27 +598,29 @@ class wosStatusBar : BaseStatusBar {
 						DTA_CleanNoMove, true);
 				}			
 
+				// moved to open inventorybar //////////////////////////////////
 				//  Does the player have coins?  ///////////////////////////////
-				item = CPlayer.mo.FindInventory("goldCoin");
+				/*item = CPlayer.mo.FindInventory("goldCoin");
 				if ( item != NULL ) {
 					DrINumber2 (item.Amount, left+216*xscale, top+72 * yscale, 7*xscale, imgSTFON0);
-				}
+				}*/
 				
 				//  Display weight of owned items  /////////////////////////////				
-				if ( pawn != NULL ) {
+				/*if ( pawn != NULL ) {
 					// current weight
 					DrINumber2 (pawn.encumbrance, left+208*xscale, top+91 * yscale, 7*xscale, imgSTFON0);
 					//maximal weight
 					DrINumber2 (pawn.weightmax, left+247*xscale, top+91 * yscale, 7*xscale, imgSTFON0);			
-				}
+				}*/
+				////////////////////////////////////////////////////////////////
 				
 				//  Does the player have a binder badge?  //////////////////////
 				item = CPlayer.mo.FindInventory ("binderBadge");
 				if (item != NULL) {
 					textureID id_badge = TexMan.CheckForTexture("h_badg", 0, 0); 
 					screen.DrawTexture (id_badge, true,
-						left + 225*xscale,
-						top + 71*yscale,
+						left + 229*xscale,
+						top + 62*yscale,
 						DTA_CleanNoMove, true);
 				}
 				

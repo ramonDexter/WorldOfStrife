@@ -11,7 +11,7 @@ class YoungWeedSpores : Inventory {
         Mass 0;
     }
 }
-class YoungCarnivorousWeed : actor {
+class YoungCarnivorousWeed : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Carnivorous Weed Young"
@@ -133,6 +133,7 @@ class YoungCarnivorousWeed : actor {
             ROSE J 5;
             ROSE K 103;
             ROSE K 0 A_KillMaster();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE K -1;
             Stop;
         XDeath:
@@ -144,11 +145,12 @@ class YoungCarnivorousWeed : actor {
             ROSE PQ 5;
             ROSE R 98;
             ROSE R 0 A_KillMaster();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE R -1;
             Stop;
 	}
 }
-class YoungHellroseBramble : actor {
+class YoungHellroseBramble : wosMonsterBase {
     Default {
         height 64;
         radius 20;
@@ -273,6 +275,7 @@ class YoungHellroseBramble : actor {
             ROSX U 5 A_TakeInventory ("WeedSpores", 1, 0, AAPTR_MASTER);
             ROSX V 5 A_Scream();
             ROSX W 5 A_Fall();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSX XRR 5;
             ROSX RRRRRRRRR 2 A_FadeOut (0.1);
             stop;
@@ -291,7 +294,7 @@ class WeedSpores : Inventory {
     }
 }
 
-class CarnivorousWeed : actor {
+class CarnivorousWeed : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Carnivorous Weed"
@@ -413,6 +416,7 @@ class CarnivorousWeed : actor {
             ROSE J 5;
             ROSE K 103;
             ROSE K 0 A_KillMaster();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE K -1;
             Stop;
         XDeath:
@@ -424,12 +428,13 @@ class CarnivorousWeed : actor {
             ROSE PQ 5;
             ROSE R 98;
             ROSE R 0 A_KillMaster();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE R -1;
             Stop;
 	}
 }
 
-class HellroseBramble : actor {
+class HellroseBramble : wosMonsterBase {
     Default {
         height 64;
         radius 20;
@@ -552,6 +557,7 @@ class HellroseBramble : actor {
             ROSX U 5 A_TakeInventory ("WeedSpores", 1, 0, AAPTR_MASTER);
             ROSX V 5 A_Scream();
             ROSX W 5 A_Fall();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSX XRR 5;
             ROSX RRRRRRRRR 2 A_FadeOut (0.1);
             stop;
@@ -834,7 +840,7 @@ class HellRose : actor {
 ////////////////////////////////////////////////////////////////////////////////
 //--------------------------Giant Eel---------------------------------------////
 ////////////////////////////////////////////////////////////////////////////////
-class wosGiantEel : actor {
+class wosGiantEel : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Giant Eel"
@@ -922,7 +928,7 @@ class wosGiantEel : actor {
             Goto See;
         Death:
             EEL1 E 5;
-            EEL1 E 1 /*ACS_NamedExecuteAlways("ExpGain",0,8,0,0)*/;         //Gain 8 Exp. 
+            EEL1 E 1 W_rewardXP(SpawnHealth());
             EEL1 F 5 A_Scream();
             EEL1 G 5 A_NoBlocking();
             EEL1 H 5;
@@ -937,7 +943,7 @@ class wosGiantEel : actor {
 ////////////////////////////////////////////////////////////////////////////////
 //--------------------------FieryBeast-----------------------///////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class FieryBeast : actor {
+class FieryBeast : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Fiery Beast"
@@ -1059,7 +1065,7 @@ class FieryBeast : actor {
             BLDD K 8 A_Scream();
             BLDD LMNOP 6;
             BLDD Q 6 A_NoBlocking();
-            BLDD Q 1 /*ACS_NamedExecuteAlways("ExpGain",0,1000,0,0)*/;          //Gain 1000 Exp. 
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             BLDD R -1;
             Stop;
             Ice:
@@ -1224,7 +1230,7 @@ class FieryBeast_BallFire : actor {
 ////////////////////////////////////////////////////////////////////////////////
 //-------------------------Lizard-------------------------------------------////
 ////////////////////////////////////////////////////////////////////////////////
-class Lizard : actor {
+class Lizard : wosMonsterBase {
     Default {
         MONSTER;
         +FLOORCLIP;
@@ -1319,7 +1325,7 @@ class LizardSmall: Lizard {
             LIZR M 4 A_XScream();
             LIZR N 4 A_NoBlocking(); 
             LIZR OPQRS 4;
-            LIZR S 1 /*ACS_NamedExecuteAlways("ExpGain",0,15,0,0)*/;          //Gain 15 Exp.
+            LIZR S 1 W_rewardXP(SpawnHealth());
             LIZR T -1;
             Stop;
         Ice:
@@ -1360,7 +1366,7 @@ class LizardMiddle : Lizard {
             LZXD C 4;
             LZXD D 4 A_Fall();
             LZXD EFGHIJ 4;
-            LZXD J 1 /*ACS_NamedExecuteAlways("ExpGain",0,120,0,0)*/;         //Gain 120 Exp.
+            LZXD J 1 W_rewardXP(SpawnHealth());
             LZXD K -1;
             Stop;
         Ice:
@@ -1428,7 +1434,7 @@ class LizardLarge : Lizard {
             LZXD C 4;
             LZXD D 4 A_Fall();
             LZXD EFGHIJ 4;
-            LZXD J 1 /*ACS_NamedExecuteAlways("ExpGain",0,500,0,0)*/;          //Gain 500 Exp.
+            LZXD J 1 W_rewardXP(SpawnHealth());
             LZXD K -1;
             Stop;
         Ice:
@@ -1445,7 +1451,7 @@ class LizardLarge : Lizard {
 ////////////////////////////////////////////////////////////////////////////////
 //-------------------------Ophidiant-----------------------------------------///
 ////////////////////////////////////////////////////////////////////////////////
-class Ophidiant : actor {
+class Ophidiant : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Snakeman"
@@ -1515,11 +1521,11 @@ class Ophidiant : actor {
             OOS2 K 8;
             OOS2 L 8 A_NoBlocking();
             OOS2 MN 8;
-            OOS2 N 1 /*ACS_NamedExecuteAlways("ExpGain",0,240,0,0)*/;          //Gain 240 Exp.
+            OOS2 N 1 W_rewardXP(SpawnHealth());
             OOS2 O -1;
             stop;
             Ice:
-                "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,240,0,0)*/;	//Gain 240 Exp 
+                "####" "#" 1 W_rewardXP(SpawnHealth());
                 "####" "#" 5 A_GenericFreezeDeath();
                 "####" "#" 1 A_FreezeDeathChunks();
                 Wait;
@@ -1560,7 +1566,7 @@ class SnakePoisonBall : actor {
 ////////////////////////////////////////////////////////////////////////////////
 //-------------------------PIT LORD-------------------------------------------//
 ////////////////////////////////////////////////////////////////////////////////
-class wosPitLord : actor {
+class wosPitLord : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Pit Lord"
@@ -1652,11 +1658,11 @@ class wosPitLord : actor {
             DRG1 LMN 6;
             DRG1 O 6 A_NoBlocking();
             DRG1 PQ 6;
-            DRG1 Q 1;        //Gain 500 Exp  ACS_NamedExecuteAlways("ExpGain",0,500,0,0)
+            DRG1 Q 1 W_rewardXP(SpawnHealth());
             DRG1 R -1;
             Stop;
         Ice:
-            "####" "#" 1;	//Gain 500 Exp ACS_NamedExecuteAlways("ExpGain",0,500,0,0)
+            "####" "#" 1 W_rewardXP(SpawnHealth());
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1767,11 +1773,11 @@ class wosPitFiend : wosPitLord {
             DRG3 LMN 6;
             DRG3 O 6 A_NoBlocking();
             DRG3 PQ 6;
-            DRG3 P 1;              //Gain 300 Exp ACS_NamedExecuteAlways("ExpGain",0,300,0,0)
+            DRG3 P 1 W_rewardXP(SpawnHealth());
             DRG3 R -1;
             Stop;
         Ice:
-            "####" "#" 1 ACS_NamedExecuteAlways("ExpGain",0,300,0,0);	//Gain 300 Exp 
+            "####" "#" 1 W_rewardXP(SpawnHealth()); 
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1782,7 +1788,7 @@ class wosPitFiend : wosPitLord {
 //------------------PLAGUE FIEND-------------------------------------///////////
 ////////////////////////////////////////////////////////////////////////////////
 
-class wosPlagueFiend : actor {
+class wosPlagueFiend : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Plague fiend"
@@ -1853,11 +1859,11 @@ class wosPlagueFiend : actor {
             DRG2 K 0 A_SpawnProjectile("ToxinCloud", 32,0,0,0,0);
             DRG2 L 6 A_NoBlocking();
             DRG2 M 6;
-            DRG2 M 1 /*ACS_NamedExecuteAlways("ExpGain",0,400,0,0) */;             //Gain 400 Exp 
+            DRG2 M 1 W_rewardXP(SpawnHealth());
             DRG2 N -1;
             Stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,400,0,0)*/;	//Gain 400 Exp 
+            "####" "#" 1 W_rewardXP(SpawnHealth());
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1922,7 +1928,7 @@ class PlagueFiendBall : actor {
 ////////////////////////////////////////////////////////////////////////////////
 //------------------------Dragon-------------------/////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class MiniDragon : actor {
+class MiniDragon : wosMonsterBase {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Drake"
@@ -1993,11 +1999,11 @@ class MiniDragon : actor {
             IMPX I 8 A_Scream();
             IMPX J 6 A_SetFloorClip();
             IMPX KLMNO 6;
-            IMPX O 1 /*ACS_NamedExecuteAlways("ExpGain",0,100,0,0)*/;         //Gain 100 Exp. 
+            IMPX O 1 W_rewardXP(SpawnHealth());
             TNT1 A -1;
             Stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,100,0,0)*/;	//Gain 100 Exp 
+            "####" "#" 1 W_rewardXP(SpawnHealth());
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -2035,7 +2041,7 @@ class MiniFirePuffNoDamage : MiniFirePuff {
 ////////////////////////////////////////////////////////////////////////////////
 // serpent fly /////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class ascSerpentFly : actor {
+class ascSerpentFly : wosMonsterBase/*actor*/ {
     Default {
 		//$Category "Monsters/WoS"
         //$Title "Serpent fly"
@@ -2146,9 +2152,12 @@ class ascSerpentFly : actor {
             goto See; 
         Death:
             SFL1 G 1 A_StopSound (CHAN_7);
-            SFL1 G 1 /*ACS_NamedExecuteAlways("ExpGain",0,22,0,0)*/;         //Gain 22 Exp. 
+            SFL1 G 1;
             //SFL1 H 0 A_ChangeFlag ("FLOATBOB", 0);
-            TNT1 A 0 { bFLOATBOB = false; }
+            TNT1 A 0 { 
+                bFLOATBOB = false;
+                W_rewardXP(SpawnHealth()); 
+            }
             SFL1 H 0 A_ScreamAndUnblock();
         Fall:
             SFL1 H 1 A_CheckFloor ("Splat");
@@ -2160,7 +2169,7 @@ class ascSerpentFly : actor {
             SFL1 N -1;
             stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,22,0,0)*/;	//Gain 22 Exp 
+            "####" "#" 1 W_rewardXP(SpawnHealth());
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -2173,7 +2182,7 @@ class ascSerpentFly : actor {
 ////////////////////////////////////////////////////////////////////////////////
 // tramp - beggar //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class ascTramp : actor {
+class ascTramp : wosMonsterBase {
 
 	int gunmag; //
 	int searchtimer; //
@@ -2292,11 +2301,12 @@ class ascTramp : actor {
             BEGR I 5 A_Scream();
             BEGR J 5 A_NoBlocking();
             BEGR KLM 5;
-            //BEGR M 1 ACS_NamedExecuteAlways("ExpGain",0,22,0,0);          //Gain 22 Exp. 
+            BEGR M 1 W_rewardXP(SpawnHealth()); 
             BEGR N -1;
             Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2313,6 +2323,7 @@ class ascTramp : actor {
 			BURN I 5 Bright A_DropFire();
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			BURN NOPQPQ 5 Bright;
 			BURN RSTU 7 Bright;
 			BURN V -1;
@@ -2324,7 +2335,7 @@ class ascTramp : actor {
 ////////////////////////////////////////////////////////////////////////////////
 // Rogue ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class ascRogue : actor {
+class ascRogue : wosMonsterBase {
 
 	int gunmag; //
 	int searchtimer; //
@@ -2448,11 +2459,12 @@ class ascRogue : actor {
 			DATF L 5 A_Scream();
 			DATF M 5 A_NoBlocking();
 			DATF NOP 5;
-			//DATF P 1 ACS_NamedExecuteAlways("ExpGain",0,72,0,0)          //Gain 72 Exp. 
+			DATF P 1 W_rewardXP(SpawnHealth()); 
 			DATF Q -1;
 			Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2470,6 +2482,7 @@ class ascRogue : actor {
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
 			BURN NOPQPQ 5 Bright;
+            TNT1 A 0 W_rewardXP(SpawnHealth());
 			BURN RSTU 7 Bright;
 			BURN V -1;
 			Stop;

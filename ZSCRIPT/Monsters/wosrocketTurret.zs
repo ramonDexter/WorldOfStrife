@@ -1,4 +1,4 @@
-class wosRocketTurret : Actor {
+class wosRocketTurret : wosMonsterBase {
     Default {
 		//$category "Monsters/WoS"
 		//$Title "rocket turret"
@@ -36,6 +36,7 @@ class wosRocketTurret : Actor {
         Death:
             RTUR A 2 A_Scream();
             RTUR C 4 A_SpawnItemEx("DeathExplosionSmaller",0,0,20,0,0,0);
+            TNT1 A 0 W_rewardXP(SpawnHealth());
             RTUR C 2 A_Fall();
             RTUR C -1;
             Stop;

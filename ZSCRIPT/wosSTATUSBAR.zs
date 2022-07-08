@@ -402,7 +402,8 @@ class wosStatusBar : BaseStatusBar {
 				let pawn = binderPlayer(CPlayer.mo);
 				if ( pawn != NULL ) {
 					//DrawString (mESfont, FormatNumber(pawn.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
-					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);	//more sophisticated approach			
+					// more sophisticated approach //
+					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
 				}
 				////////////////////////////////////////////////////////////////
 				
@@ -424,7 +425,7 @@ class wosStatusBar : BaseStatusBar {
 						DrawString(mESfont, FormatNumber(item.Mass, 3, 5, 0, "W:"), (65 + 35*i, 168), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 					}
 					// display item amount
-					// display item charge
+					// display item charge >> disabled, use manual check to see item charge
 					/*wosPickup itemCharge = wosPickup(item);
 					if (item.Amount == 1 && item is "wosPickup" && itemCharge.charge > 0) {
 						DrawString(mESfont, FormatNumber(itemCharge.charge, 3, 5, 0, "C:"), (65 + 35*i, 192), DI_TEXT_ALIGN_RIGHT, Font.CR_CYAN);						

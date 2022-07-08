@@ -70,6 +70,17 @@ OptionMenu "wosDEBUGmenu" {
 	Command "40% mind", "netevent give_40Mind"	
 	//StaticText ""
 	StaticText ":: M A P S ::"
+	Submenu "MAPS", "wosDebugMaps"
+	/*Command "MAP05 - Heretic Castle", "MAP MAP05"
+	Command "MAP08 - Millport", "map MAP08"
+	Command "MAP09 - Eastern Coast", "MAP MAP09"
+	Command "MAP10 - Borderlands West", "MAP MAP10"
+	Command "MAP12 - Ravenrock", "MAP MAP12"
+	Command "MAP13 - Borderlands North", "MAP MAP13"
+	Command "MAP14 - Eastcliff", "MAP MAP14"*/
+}
+OptionMenu "wosDebugMaps" {
+	StaticText ":: M A P S ::"
 	Command "MAP05 - Heretic Castle", "MAP MAP05"
 	Command "MAP08 - Millport", "map MAP08"
 	Command "MAP09 - Eastern Coast", "MAP MAP09"

@@ -3181,6 +3181,47 @@ model wosd_AmmoFiller {
 
 
 // deus ex pans
+
+// enjay gene-tech /////////////////////////////////////////////////////////////
+Model CeilingDome { 
+   Path "models/props/njgenetech/" 
+   Model 0 "domelight.md3" 
+   Skin 0 "domelight.png"
+   Scale 3.6 3.6 3.6
+   ZOffset -16   
+   FrameIndex DUMM A 0 0
+}
+Model MoistureVaporator { 
+   Path "models/props/njgenetech/" 
+   Model 0 "evaporator.md3" 
+   Skin 0 "evaporator.png"
+   Scale 1.0 1.0 1.0   
+   FrameIndex DUMM A 0 0
+}
+Model ModelMicroscope2 { 
+   Path "models/props/njgenetech/" 
+   Model 0 "micro2.md3" 
+   Skin 0 "micro2.png"
+   Scale 1.0 1.0 1.0   
+   FrameIndex DUMM A 0 0
+}
+
+Model ModelMicroscope3 { 
+   Path "models/props/njgenetech/" 
+   Model 0 "micro2.md3" 
+   Skin 0 "micro3.png"
+   Scale 1.0 1.0 1.0   
+   FrameIndex DUMM A 0 0
+}
+Model ModelToiletPaper { 
+   Path "models/props/njgenetech/" 
+   Model 0 "tpaper.md3" 
+   Skin 0 "tpaper.png"
+   Scale 1.5 1.5 1.5  
+   offset -2.0 0.0 0.0 
+   FrameIndex DUMM A 0 0
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

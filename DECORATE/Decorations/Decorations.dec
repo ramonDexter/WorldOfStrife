@@ -6356,7 +6356,7 @@ actor wosD_dex_shopLight 21351 {
 	height 16
 	States {
 		Spawn:
-			DUMM A -1 Bright
+			DUMM A -1 Bright //light("DOMELAMP")
 			Stop
 	}
 }
@@ -9420,6 +9420,72 @@ actor wosD_dryingFish02 21532 {
 			FIS5 A -1
 			Stop
 	}
+}
+// enjay gene-tech ////////////////////////////////////////////////////////////////////////////////////////////
+actor CeilingDome 21533 {
+	//$Category "Decorations/Wos"
+	//$Title "nj ceiling dome"
+    Radius 16
+    Height 16
+    +SPAWNCEILING
+    +NOGRAVITY
+    States
+    {
+    Spawn:
+        DUMM A -1 Bright light("DOMELAMP")
+        Stop
+    }
+}
+actor MoistureVaporator 21534 {
+	//$Category "Decorations/Wos"
+	//$Title "nj moisture vaporator"
+	Radius 	20
+	Height 	128
+	+SOLID
+    States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+    }
+}
+actor ModelMicroscope2 21535 {
+	//$Category "Decorations/Wos"
+	//$Title "nj microscope 2"
+	radius 8
+	height 16
+    +NOGRAVITY
+	+SOLID
+    States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+    }
+}
+actor ModelMicroscope3 21536 {
+	//$Category "Decorations/Wos"
+	//$Title "nj microscope 3"
+	radius 8
+	height 16
+    +NOGRAVITY
+	+SOLID
+    States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+    }
+}
+actor ModelToiletPaper 21537 {
+	//$Category "Decorations/Wos"
+	//$Title "nj toilet paper"
+	radius 4
+	height 8
+    +NOGRAVITY
+	+SOLID
+    States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+    }	
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

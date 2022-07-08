@@ -1310,7 +1310,8 @@ PDA_noteCoastalRegion_text = 	"\c[yellow]Coastal Region\n"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 PDA_noteTheGreatHouses_Title = "The Great Houses";
 PDA_noteTheGreatHouses_Text = "\c[yellow]Great Houses of the Empire\n"
-									"-------------------------------\n"
+									"===============================\n"
+									"\n"
 								"\c[yellow]House Burgerich\n"
 									"-------------------------------\n"
 								"\c[white]The House of Burgerich appears around 539. The first Prince of Burgerich takes possession of the city of Eldham and quickly takes control of the northern part of the Windy Plains and the Tar Swamp to the town of Westmarch. The reign of all the Princes of Burgerich is characterised by aggressive attacks against their neighbours, which are only ended by marriage. The future Emperor Bodric marries the daughter of Prince Burgerich, making him heir to the Burgerich estate. After the death of the last Prince of Burgerich, the territory is annexed to the Empire and becomes the main territory of the Empire.\n\n"

@@ -11,7 +11,7 @@ actor noteBase : PDA {
 
 	States {
 		Spawn:
-			DUMM ABCD 6
+			DUMM A -1//BCD 6
 			Loop
 	}
 }

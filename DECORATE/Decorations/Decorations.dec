@@ -9487,7 +9487,59 @@ actor ModelToiletPaper 21537 {
 			Stop
     }	
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_sof2axe 21538 {
+	//$Category "Decorations/Wos"
+	//$Title "axe"
+	radius 8
+	height 8
+	+NOGRAVITY
+	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_sof2foodTray 21539 {
+	//$Category "Decorations/Wos"
+	//$Title "food ingreds"
+	radius 8
+	height 8
+	+NOGRAVITY
+	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_sof2hangingFishMahi 21540 {
+	//$Category "Decorations/Wos"
+	//$Title "hanging fish mahi"
+	radius 8
+	height 40
+	+NOGRAVITY
+	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_sof2hangingFishTuna 21541 {
+	//$Category "Decorations/Wos"
+	//$Title "hanging fish tuna"
+	radius 8
+	height 60
+	+NOGRAVITY
+	+SOLID
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

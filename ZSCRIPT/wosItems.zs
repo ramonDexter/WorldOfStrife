@@ -846,7 +846,7 @@ class q_explosiveDevice_01 : CustomInventory {
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
 		Tag "Explosive Device";
-		Inventory.Icon "I_HRLC";
+		Inventory.Icon "I_QBMB";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
@@ -860,8 +860,30 @@ class q_explosiveDevice_01 : CustomInventory {
 			MS01 A -1;
 			Stop;
 		Use:
-			TNT1 A 0;
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
+				let iterator = Level.CreateSectorTagIterator(6090);
+				int index;
+				while ( (index = iterator.Next()) > -1 ) {
+					if ( pawn.CurSector && pawn.CurSector.Index() == index ) {
+						return resolveState("UseYes");
+					} else {
+						return resolveState("UseNot");
+					}
+				}
+				return resolveState(null);
+			}
+		UseNot:
+			TNT1 A 0 A_Log("\c[red][ This bomb could be used near the wall to heretic base only! ]");
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				A_SpawnItemEx("q_bomb_01", 16, 0, 0);
+				A_Log("\c[red][ Bomb planted. RUN AWAY!!! ]");
+			}
 			Stop;
+
+
 	}
 }
 class q_bomb_01 : actor {
@@ -872,14 +894,18 @@ class q_bomb_01 : actor {
 	}
 	States {
 		Spawn:
-			MS01 A 175;
+			MS01 A 35 A_Log("\c[red][ = 5 = ]");
+			MS01 A 35 A_Log("\c[red][ = 4 = ]");
+			MS01 A 35 A_Log("\c[red][ = 3 = ]");
+			MS01 A 35 A_Log("\c[red][ = 2 = ]");
+			MS01 A 35 A_Log("\c[red][ = 1 = ]");
 		Death:
             TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));	
             TNT1 A 0;
 			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
             TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
 			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
-			TNT1 A 0 ACS_NamedExecute("m06_lowerWall", 6);
+			TNT1 A 0 ACS_NamedExecuteAlways("m06_lowerWall", 0);
 			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));

@@ -143,7 +143,7 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
 	
- 	// ACS support - functions to return values to ACS scripts /////////////////
+ 	// ACS support - functions to touch values with ACS scripts ////////////////
 	static int getplayerAccuracy(actor activator) {
 		let pawn = binderplayer(activator);
 		if ( pawn && pawn.player ) {
@@ -178,6 +178,13 @@ class binderPlayer : StrifePlayer {
 			return pawn.playerLevel;
 		}
 		return 0;
+	}
+	static void FN_giveXP(actor activator, int amountXP) {
+		let pawn = binderPlayer(activator);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP += amountXP;
+			pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", amountXP, " XP!"));
+		}
 	}
 	////////////////////////////////////////////////////////////////////////////
 

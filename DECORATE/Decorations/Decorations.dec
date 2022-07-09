@@ -1993,7 +1993,7 @@ actor voxCraneCeiling 21105
 	States
 	{
 	Spawn:
-		CRN2 V -1
+		DUMM A -1
 		Stop
 	}
 }

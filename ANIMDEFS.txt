@@ -490,3 +490,11 @@ texture DNSCRN31
 	pic DNSCRN31 tics 4
 	pic DNSCRN32 tics 4
 	pic DNSCRN33 tics 4
+
+
+
+texture WCOMP9A range WCOMP9B tics 8
+texture WCOMPAA range WCOMPAB tics 8
+texture WCOMPBA range WCOMPBB tics 8
+texture WCOMPCA range WCOMPCB tics 8
+texture WCOMPDA range WCOMPDB tics 8

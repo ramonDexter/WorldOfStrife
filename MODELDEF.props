@@ -3271,6 +3271,89 @@ model voxCraneCeiling {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// tools - nářadí //////////////////////////////////////////////////////////////
+model wosD_dlato1 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "dlato1.md3"
+	skin 0 "tx_tools.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_dlato2 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "dlato2.md3"
+	skin 0 "tx_tools.png"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hrabe {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "hrabe.md3"
+	skin 0 "tx_tools.png"
+	scale 12.0 12.0 12.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_kladivo {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "kladivo.md3"
+	skin 0 "tx_tools.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_krumpac {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "krumpac.md3"
+	skin 0 "tx_tools.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_lopata {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "lopata.md3"
+	skin 0 "tx_tools.png"
+	scale 12.0 12.0 12.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_pila {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "pila.md3"
+	skin 0 "tx_tools.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_ryoba {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/props/tools/"
+	model 0 "ryoba.md3"
+	skin 0 "tx_tools.png"
+	scale 5.0 5.0 5.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

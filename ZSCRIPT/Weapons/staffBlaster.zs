@@ -189,6 +189,9 @@ class BlasterTracer : FastProjectile {
             //FX98 A 1 Bright A_SpawnItem("BlasterFlare",0,0);
 			DUMM ABCDEFGHI 1 Bright;
 			TNT1 A 0 A_SpawnItem("BlasterFlare",0,0);
+			//TNT1 AA 0 A_SpawnParticle ("235713", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.35, 0, frandom(-1.25,1.25), frandom(-1.25,1.25), frandom(-1.25,1.25), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.25);				
+			//TNT1 AAA 0 A_SpawnParticle ("8fc75f", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.5, 0, frandom(-0.85,0.85), frandom(-0.85,0.85), frandom(-0.85,0.85), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.05);
+			//TNT1 AA 0 A_SpawnParticle ("b7e77f", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.25, 0, frandom(-0.45,0.45), frandom(-0.45,0.45), frandom(-0.45,0.45), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.025);
             Loop;
 			
         Death:
@@ -220,9 +223,9 @@ class BlasterParticleTrailSpawner : actor {
 			//TNT1 A 0 A_SpawnItemEx("staffShotSmoke2", 0, 0, 0, 0);
             //TNT1 AA 0 A_SpawnItemEx("BlasterParticle",0,0,0,frandom(-0.4,0.4),frandom(-0.4,0.4),frandom(-0.4,0.4),0,SXF_NOCHECKPOSITION);
             //TNT1 AA 0 A_SpawnItemEx("BlasterParticle",0,0,0,frandom(-0.2,0.2),frandom(-0.2,0.2),frandom(-0.2,0.2),0,SXF_NOCHECKPOSITION);				
-			TNT1 AA 0 A_SpawnParticle ("235713", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.35, 0, frandom(-1.25,1.25), frandom(-1.25,1.25), frandom(-1.25,1.25), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.25);		
+			TNT1 AA 0 A_SpawnParticle ("235713", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.35, 0, frandom(-1.25,1.25), frandom(-1.25,1.25), frandom(-1.25,1.25), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.25);				
 			TNT1 AAA 0 A_SpawnParticle ("8fc75f", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.5, 0, frandom(-0.85,0.85), frandom(-0.85,0.85), frandom(-0.85,0.85), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.05);
-			TNT1 AA 0 A_SpawnParticle ("b7e77f", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.25, 0, frandom(-0.45,0.45), frandom(-0.45,0.45), frandom(-0.45,0.45), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.025);
+			TNT1 AA 0 A_SpawnParticle ("b7e77f", SPF_FULLBRIGHT|SPF_RELATIVE, 17, 0.25, 0, frandom(-0.45,0.45), frandom(-0.45,0.45), frandom(-0.45,0.45), 0, 0, 0, 0, 0, 0, 1.0, -0.1, 0.025);			
         Stopped:
             //TNT1 A 0;
             Stop;

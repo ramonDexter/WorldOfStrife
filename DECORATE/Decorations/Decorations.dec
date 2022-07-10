@@ -1470,7 +1470,7 @@ Actor MM_roadBlock 21073
 	//$Title "road block"
 	
 	+Solid
-	tag "road block"
+	tag "red road block"
 	radius 8
 	height 36
 	
@@ -9425,6 +9425,7 @@ actor wosD_dryingFish02 21532 {
 actor CeilingDome 21533 {
 	//$Category "Decorations/Wos"
 	//$Title "nj ceiling dome"
+	Tag "ceiling dome light"
     Radius 16
     Height 16
     +SPAWNCEILING
@@ -9439,6 +9440,7 @@ actor CeilingDome 21533 {
 actor MoistureVaporator 21534 {
 	//$Category "Decorations/Wos"
 	//$Title "nj moisture vaporator"
+	Tag "moisture vaporator"
 	Radius 	20
 	Height 	128
 	+SOLID
@@ -9451,6 +9453,7 @@ actor MoistureVaporator 21534 {
 actor ModelMicroscope2 21535 {
 	//$Category "Decorations/Wos"
 	//$Title "nj microscope 2"
+	Tag "microscope"
 	radius 8
 	height 16
     +NOGRAVITY
@@ -9464,6 +9467,7 @@ actor ModelMicroscope2 21535 {
 actor ModelMicroscope3 21536 {
 	//$Category "Decorations/Wos"
 	//$Title "nj microscope 3"
+	Tag "microscope"
 	radius 8
 	height 16
     +NOGRAVITY
@@ -9477,6 +9481,7 @@ actor ModelMicroscope3 21536 {
 actor ModelToiletPaper 21537 {
 	//$Category "Decorations/Wos"
 	//$Title "nj toilet paper"
+	Tag "toilet paper"
 	radius 4
 	height 8
     +NOGRAVITY
@@ -9491,6 +9496,7 @@ actor ModelToiletPaper 21537 {
 actor wosD_sof2axe 21538 {
 	//$Category "Decorations/Wos"
 	//$Title "axe"
+	Tag "axe"
 	radius 8
 	height 8
 	+NOGRAVITY
@@ -9504,6 +9510,7 @@ actor wosD_sof2axe 21538 {
 actor wosD_sof2foodTray 21539 {
 	//$Category "Decorations/Wos"
 	//$Title "food ingreds"
+	Tag "food ingreds"
 	radius 8
 	height 8
 	+NOGRAVITY
@@ -9517,6 +9524,7 @@ actor wosD_sof2foodTray 21539 {
 actor wosD_sof2hangingFishMahi 21540 {
 	//$Category "Decorations/Wos"
 	//$Title "hanging fish mahi"
+	Tag "hanging mahi fish"
 	radius 8
 	height 40
 	+NOGRAVITY
@@ -9530,6 +9538,7 @@ actor wosD_sof2hangingFishMahi 21540 {
 actor wosD_sof2hangingFishTuna 21541 {
 	//$Category "Decorations/Wos"
 	//$Title "hanging fish tuna"
+	Tag "hanging tuna fish"
 	radius 8
 	height 60
 	+NOGRAVITY
@@ -9540,6 +9549,130 @@ actor wosD_sof2hangingFishTuna 21541 {
 			Stop
 	}
 }
+// tools - nářadí /////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_dlato1 21542 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - dlato/chisel"
+	Tag "chisel"
+	radius 4
+	height 4
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dlato2 21543 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - dlato/chisel"
+	Tag "chisel"
+	radius 4
+	height 4
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hrabe 21544 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - hrabe/rake"
+	Tag "rake"
+	radius 4
+	height 48
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_kladivo 21545 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - kladivo/hammer"
+	Tag "hammer"
+	radius 4
+	height 8
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_krumpac 21546 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - krumpac/pickaxe"
+	Tag "pickaxe"
+	radius 4
+	height 24
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_lopata 21547 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - lopata/shovel"
+	Tag "shovel"
+	radius 4
+	height 48
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_pila 21548 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - pila/saw"
+	Tag "saw"
+	radius 4
+	height 8
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_ryoba 21549 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - ryoba"
+	Tag "ryoba"
+	radius 4
+	height 20
+	+NOGRAVITY
+	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

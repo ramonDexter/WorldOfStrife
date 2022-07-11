@@ -5,7 +5,6 @@ World of Strife
 -------------------------------------------
 Credits:
 
-coding:
 AFAdoomer - zcsript ladder
 Nash Muhandes - nashmove, pda
 SidDoyle / Joshua Hard - droplets
@@ -14,11 +13,8 @@ gutawer - gutamatics
 m8f
 Talon1024 - zscript ziplines
 cherno - great modeldef tutor
+Enjay - models, resources
 
-
-textures:
-
-spriting:
 
 -------------------------------------------
 

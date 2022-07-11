@@ -283,7 +283,7 @@ class binderPlayer : StrifePlayer {
 		If(health>0) {
 			//A_Print("BleedDamage();");
 			DamageMobj(null,null,bleedlevel,"Bleeding");
-			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel); //po jednom az dvou pokusech zamrzne gzdoom, vykomentovano...zatim jenom damage...
+			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel); //freezes gzdoom
 			A_StartSound("sounds/ambient/heartBeat", CHAN_BODY, CHANF_DEFAULT, 0.9);
 			bleedtimer=0;
 		}

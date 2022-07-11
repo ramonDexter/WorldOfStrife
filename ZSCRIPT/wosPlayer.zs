@@ -116,13 +116,14 @@ class binderPlayer : StrifePlayer {
         Super.Tick();
 		
 		// custom functions ////////////////////////////////////////////////////
-		// LF code /////////////////////////////////////////////////////////////
+		// LF code /////////////////////////////////////////////////////////////		
         HandleStamina();
 		HandleEncumberance();
 		HandleArmorMass();
-		HandleBleed();
-		HandlePlayerBody();
+		HandlePlayerBody();		
 		HealthShake();
+		HandleBleed();
+		//If(bleedlevel>0){If(bleedtimer>=(70/bleedlevel)){BleedDamage();}Else{bleedtimer++;}}
 		LedgeClimb();
 		HandleSpeed();
 		HandlePlayerLevel();
@@ -282,7 +283,7 @@ class binderPlayer : StrifePlayer {
 		If(health>0) {
 			//A_Print("BleedDamage();");
 			DamageMobj(null,null,bleedlevel,"Bleeding");
-			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel);
+			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel); //po jednom az dvou pokusech zamrzne gzdoom, vykomentovano...zatim jenom damage...
 			A_StartSound("sounds/ambient/heartBeat", CHAN_BODY, CHANF_DEFAULT, 0.9);
 			bleedtimer=0;
 		}

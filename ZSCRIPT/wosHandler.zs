@@ -123,7 +123,7 @@ class wosEventHandler : EventHandler {
 	////////////////////////////////////////////////////////////////////////////
 	
     override void WorldThingDamaged(WorldEvent e) {
-        if (/*e.thing &&*/ e.Thing is "binderPlayer") {
+        if (e.thing && e.Thing is "binderPlayer") {
             let pawn = binderPlayer(e.Thing);
 			If(e.Damage>9&&(e.DamageType=="Bullet"||e.DamageType=="Melee")) {
 				//console.printf(string.format("%i", pawn.bleedlevel));

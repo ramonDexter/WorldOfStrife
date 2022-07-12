@@ -22,7 +22,6 @@ GameInfo {
                    , "m8f_hn_AutoSwitchEventHandler"
                    , "m8f_hn_MapTunerEventHandler"
                    , "m8f_hn_BacktrackEventHandler"
-	AddEventHandlers = "DropletsEventHandler"
 	AddEventHandlers = "LowDetailHandler"
 	AddEventHandlers = "MWR_LanguageHandler" //Required by DescriberProvider
 	AddEventHandlers = "MWR_DescriberProvider" //Required by LookCursorHandler

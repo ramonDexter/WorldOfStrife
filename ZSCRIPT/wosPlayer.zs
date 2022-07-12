@@ -123,7 +123,6 @@ class binderPlayer : StrifePlayer {
 		HandlePlayerBody();		
 		HealthShake();
 		HandleBleed();
-		//If(bleedlevel>0){If(bleedtimer>=(70/bleedlevel)){BleedDamage();}Else{bleedtimer++;}}
 		LedgeClimb();
 		HandleSpeed();
 		HandlePlayerLevel();
@@ -283,7 +282,7 @@ class binderPlayer : StrifePlayer {
 		If(health>0) {
 			//A_Print("BleedDamage();");
 			DamageMobj(null,null,bleedlevel,"Bleeding");
-			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel); //po jednom az dvou pokusech zamrzne gzdoom, vykomentovano...zatim jenom damage...
+			SpawnBlood((pos.x,pos.y,pos.z+height-20),angle,bleedlevel);
 			A_StartSound("sounds/ambient/heartBeat", CHAN_BODY, CHANF_DEFAULT, 0.9);
 			bleedtimer=0;
 		}
@@ -833,7 +832,7 @@ class binderPlayer : StrifePlayer {
 			}
 		}
 		else if ( name ~== "all" || name ~== "everything" ) {
-			A_Log("\c[red][ Cheat blocked. Use other cheats if you are in need of assistance. ]");
+			A_Log("\c[red][ Cheat blocked because of dangerously breaking the game. Use other cheats if you are in need of assistance. ]");
 		}
 		else if ( name ~== "keys" ) {
 			A_GiveInventory("skeletonKey", 1);

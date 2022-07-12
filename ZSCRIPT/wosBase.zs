@@ -246,7 +246,34 @@ class wosd_AmmoFiller : AmmoFiller replaces AmmoFiller {
 	}
 }
 
-
+// new blood that stays on floor for a while, code by jarewill /////////////////
+Class wosBlood : Blood replaces Blood {	
+	bool nomore;
+	Override void Tick() {
+		Super.Tick();
+		If( nomore == 0 ) {
+			If( pos.z == GetZAt() ) {
+				bFLATSPRITE = 1; 
+				SetStateLabel("Crash"); 
+				nomore = 1;
+			}
+		}
+	}
+	States {
+		Spawn:
+			BLUD C 8;
+			Wait;
+			BLUD B 8;
+			Wait;
+			BLUD A 8;
+			Wait;
+		Crash:
+			#### # 175;
+			#### # 1 A_FadeOut(0.02);
+			Wait;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
 
 

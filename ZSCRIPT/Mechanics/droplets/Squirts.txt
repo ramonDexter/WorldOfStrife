@@ -1,4 +1,4 @@
-class BloodSquirt : Droplets replaces Blood
+class BloodSquirt : Droplets /*replaces Blood*/
 {
 	Default
 	{

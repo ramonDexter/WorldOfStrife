@@ -109,6 +109,8 @@ class Footsteps : Actor {
     Default {
         +NOBLOCKMAP
         Tag "footsteps";
+        radius 4;
+        height 2;
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////////

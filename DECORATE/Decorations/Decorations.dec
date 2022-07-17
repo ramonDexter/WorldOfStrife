@@ -285,8 +285,8 @@ actor modelBloodCandle : bloodCandle replaces bloodCandle 21014 {
 
 actor voxTortureRack 21015
 {
-	//$Category "Decorations/WoS"
-	//$Title "Torture Rack"
+	//$Category "Decorations/WoS/torture"
+	//$Title "vox Torture Rack"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -303,8 +303,8 @@ actor voxTortureRack 21015
 
 actor voxPillory 21016
 {
-	//$Category "Decorations/WoS"
-	//$Title "Pillory"
+	//$Category "Decorations/WoS/torture"
+	//$Title "voxPillory"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -321,8 +321,8 @@ actor voxPillory 21016
 
 actor voxHeadCrusher 21017
 {
-	//$Category "Decorations/WoS"
-	//$Title "head crusher"
+	//$Category "Decorations/WoS/torture"
+	//$Title "vox head crusher"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -339,8 +339,8 @@ actor voxHeadCrusher 21017
 
 actor voxGuillotine 21018
 {
-	//$Category "Decorations/WoS"
-	//$Title "Guillotine"
+	//$Category "Decorations/WoS/torture"
+	//$Title "vox Guillotine"
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -4265,7 +4265,7 @@ actor dxTablet02 21227 {
 	}
 }
 actor dxGuillotine 21228 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/torture"
 	//$Title "dx gilotina"
 	+SOLID
 	+USESPECIAL
@@ -4283,7 +4283,7 @@ actor dxGuillotine 21228 {
 }
 actor dxPillory 21229 {
 	
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/torture"
 	//$Title "dxPillory"
 	+Solid
 	+DontThrust
@@ -8306,8 +8306,8 @@ actor wosD_hexenLogSwamp 21466 {
 	}
 }
 actor wosD_headCrusher 21467 {
-	//$Category "Decorations/WoS"
-	//$Title "head crusher md3"
+	//$Category "Decorations/WoS/torture"
+	//$Title "head crusher"
 	+SOLID
 	+USESPECIAL
 	+DONTTHRUST
@@ -8322,7 +8322,7 @@ actor wosD_headCrusher 21467 {
 	}
 }
 actor wosD_judasCradle 21468 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/torture"
 	//$Title "juda's cradle"
 	+SOLID
 	+USESPECIAL
@@ -9672,6 +9672,201 @@ actor wosD_ryoba 21549 {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+actor wosD_sverak 21550 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - sverak/vise"
+	Tag "vise"
+	radius 8
+	height 8
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_stojanovaVrtacka 21551 {
+	//$Category "Decorations/Wos"
+	//$Title "tools - stojanova vrtacka/drill stand"
+	Tag "drill stand"
+	radius 8
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_catapult 21552 {
+	//$Category "Decorations/Wos"
+	//$Title "catapult"
+	Tag "catapult"
+	radius 32
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_generator 21553 {
+	//$Category "Decorations/Wos"
+	//$Title "generator"
+	Tag "generator"
+	radius 16
+	height 28
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_excavator 21554 {
+	//$Category "Decorations/Wos"
+	//$Title "excavator"
+	Tag "excavator"
+	radius 64
+	height 96
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_campBed 21555 {
+	//$Category "Decorations/Wos"
+	//$Title "camp bed"
+	Tag "camp bed"
+	radius 32
+	height 64
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hoverTank 21556 {
+	//$Category "Decorations/Wos"
+	//$Title "hover tank"
+	Tag "hover tank"
+	radius 104
+	height 104
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_pillory 21557 {
+	//$Category "Decorations/Wos/torture"
+	//$Title "pillory"
+	Tag "Pillory"
+	radius 8
+	height 40
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_rack 21558 {
+	//$Category "Decorations/Wos/torture"
+	//$Title "torture rack"
+	Tag "torture rack"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_rope 21559 {
+	//$Category "Decorations/Wos"
+	//$Title "rope"
+	Tag "rope"
+	radius 4
+	height 8
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_splitting 21560 {
+	//$Category "Decorations/Wos/torture"
+	//$Title "splitting"
+	Tag "splitting"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_tripod 21561 {
+	//$Category "Decorations/Wos"
+	//$Title "tripod"
+	Tag "tripod"
+	radius 16
+	height 48
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_trurretStand 21562 {
+	//$Category "Decorations/Wos"
+	//$Title "defensive turret"
+	Tag "defensive turret"
+	radius 8
+	height 40
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

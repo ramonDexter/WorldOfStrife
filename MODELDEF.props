@@ -3352,6 +3352,113 @@ model wosD_ryoba {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+model wosD_sverak {
+	path "models/props/tools/"
+	model 0 "sverak.md3"
+	skin 0 "tx_sverak.png"
+	scale 4.55 4.55 4.55
+	offset 8.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_stojanovaVrtacka {
+	path "models/props/tools/"
+	model 0 "stojanovaVrtacka.md3"
+	skin 0 "tx_zarizeni.png"
+	scale 15.0 15.0 15.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_catapult {
+	path "models/props/modelpack/"
+	model 0 "catapult.md3"
+	skin 0 "tx_catapult.png"
+	scale 2.25 2.25 2.25
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_generator {
+	path "models/props/modelpack/"
+	model 0 "generator.md3"
+	skin 0 "tx_generator.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 -1.0
+	frameindex DUMM A 0 0
+}
+model wosD_excavator {
+	path "models/props/modelpack/"
+	model 0 "excavator.md3"
+	skin 0 "tx_excavator.png"
+	scale 2.0 2.0 2.0
+	offset 64.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_campBed {
+	path "models/props/modelpack/"
+	model 0 "campBed.md3"
+	skin 0 "tx_campBed.png"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hoverTank {
+	path "models/props/modelpack/"
+	model 0 "hoverTank.md3"
+	skin 0 "tx_hoverTank.png"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_pillory {
+	path "models/props/modelpack/"
+	model 0 "pillory.md3"
+	skin 0 "tx_pillory.png"
+	scale 3.75 3.75 3.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_rack {
+	path "models/props/modelpack/"
+	model 0 "rack.md3"
+	skin 0 "tx_rack.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_rope {
+	path "models/props/modelpack/"
+	model 0 "rope.md3"
+	skin 0 "tx_rope2.png"
+	scale 0.2 0.2 0.2
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_splitting {
+	path "models/props/modelpack/"
+	model 0 "splitting.md3"
+	skin 0 "tx_splitting.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_tripod {
+	path "models/props/modelpack/"
+	model 0 "tripod.md3"
+	skin 0 "tx_tripod.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_trurretStand {
+	path "models/props/modelpack/"
+	model 0 "turret.md3"
+	skin 0 "tx_turretStand.png"
+	model 1 "turretStand.md3"
+	skin 1 "tx_turretStand.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -1065,23 +1065,56 @@ model wosGrenadeG_Throw {
 //  blaster turret  ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model wosBlasterTurret {
-	path "models/items/blasterTurret/"
+	path "models/props/modelpack/"
+	model 0 "turret.md3"
+	skin 0 "tx_turretStand.png"
+	model 1 "turretStand.md3"
+	skin 1 "tx_turretStand.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+
+	/*path "models/items/blasterTurret/"
 	model 0 "blasterTurret.md3"
 	skin 0 "tx_pxStaffBlaster.png"
 	scale 1.85 1.85 1.85
 	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 0
+	frameindex DUMM A 0 0*/
+	
 }
 model blasterTurretSet {
-	path "models/items/blasterTurret/"
+	path "models/props/modelpack/"
+	model 0 "turret.md3"
+	skin 0 "tx_turretStand.png"
+	model 1 "turretStand.md3"
+	skin 1 "tx_turretStand.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
+
+	/*path "models/items/blasterTurret/"
 	model 0 "blasterTurret.md3"
 	skin 0 "tx_pxStaffBlaster.png"
 	scale 1.85 1.85 1.85
 	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 0
+	frameindex DUMM A 0 0*/
 }
 model Blaster_turret {
-	path "models/items/blasterTurret/"
+	path "models/props/modelpack/"
+	model 0 "turret.md3"
+	skin 0 "tx_turretStand.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 0
+	frameindex DUMM C 0 0
+	frameindex DUMM D 0 0
+	frameindex DUMM E 0 0
+	frameindex DUMM F 0 0
+
+	/*path "models/items/blasterTurret/"
 	model 0 "blasterTurret.md3"
 	skin 0 "tx_pxStaffBlaster.png"
 	scale 1.85 1.85 1.85
@@ -1091,7 +1124,15 @@ model Blaster_turret {
 	frameindex DUMM C 0 4
 	frameindex DUMM D 0 6
 	frameindex DUMM E 0 6
-	frameindex DUMM F 0 8
+	frameindex DUMM F 0 8*/
+}
+model blasterTurretStand {
+	path "models/props/modelpack/"
+	model 0 "turretStand.md3"
+	skin 0 "tx_turretStand.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
 

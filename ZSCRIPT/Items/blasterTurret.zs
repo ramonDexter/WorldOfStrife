@@ -63,11 +63,36 @@ class blasterTurretSet : actor {
             Loop;
         Death:
             DUMM A 1;
-            TNT1 A 0 A_SpawnItemEx("Blaster_turret",1,0,0);
+            TNT1 A 0 {
+                A_SpawnItemEx("Blaster_turret",1,0,0);
+                A_SpawnItemEx("blasterTurretStand",1,0,0);
+            }
             Stop;
     }
 }
 //turret actor with aggresive behavior------------------------------------------
+class blasterTurretStand : actor {
+    Default {
+        +INCOMBAT
+        +FRIENDLY
+	    +DontThrust
+	    +LOOKALLAROUND
+	    +NOBLOOD
+	    +NOTARGET
+	    +NOINFIGHTING
+	    +NOFEAR
+	    +DONTMORPH
+	    +NOICEDEATH
+        Radius 10;
+        height 56;
+        Speed 0;
+    }
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
+}
 class Blaster_turret : actor {
 	int turretCount;	
 

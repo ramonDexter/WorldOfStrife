@@ -25,6 +25,9 @@ class wosMonsterBase : actor {
 Class wosMonsterSpawner : Actor { //This is the base class that deals with respawning
     string montype; Property MonsterType : montype; //This is the monster type property
     int restime; Property RespawnTime : restime; //And this is the respawn time property (respawn is in seconds)
+    Default {        
+        //$arg0 "respawn time (sec)"
+    }
     States {
         Spawn:
             TNT1 A 0 SpawnMonster(); //This respawns the monster

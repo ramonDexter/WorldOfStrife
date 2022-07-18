@@ -9690,7 +9690,7 @@ actor wosD_sverak 21550 {
 actor wosD_stojanovaVrtacka 21551 {
 	//$Category "Decorations/Wos"
 	//$Title "tools - stojanova vrtacka/drill stand"
-	Tag "drill stand"
+	Tag "stand drill"
 	radius 8
 	height 24
 	+SOLID

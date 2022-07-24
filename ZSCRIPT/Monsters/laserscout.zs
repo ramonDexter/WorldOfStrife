@@ -10,17 +10,17 @@ Class LaserScout : wosMonsterBase
 		Height 56;
 		Mass 450;
 		PainChance 40;
+		Tag "Laser-Scout";
+		DeathSound "scout/death";
+		Obituary "%o was vaporized by a laser-scout.";
+		DropItem "wosEnergyPod";
+		GibHealth 100;
 		-FLOAT
 		-NOGRAVITY
 		-SPAWNCEILING
 		-NOGRAVITY
 		-DROPOFF
 		+SEESDAGGERS
-		Tag "Laser-Scout";
-		DeathSound "scout/death";
-		Obituary "%o was vaporized by a laser-scout.";
-		DropItem "wosEnergyPod";
-		GibHealth 100;
 	}
 	States
 	{

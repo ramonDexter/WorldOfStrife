@@ -168,7 +168,7 @@ class Blaster_turret : actor {
 //turret projectile-------------------------------------------------------------
 class blasterTurret_tracer : BlasterTracer {
 	Default {
-		Damage 8;
+		DamageFunction (12 * Random(1, 4));
 	}
 }
 //------------------------------------------------------------------------------

@@ -6,8 +6,8 @@
 blaster turret
 --------------------------------------------------------------------------------
 credits:
-sprites: Mor'ladim, Raven Software, raon.dexter
-voxels: ramon.dexter
+sprites: Mor'ladim, Raven Software, ramon.dexter
+model: ramon.dexter
 sounds: Mor'ladim, Tormentor667
 zscript: ramon.dexter
 
@@ -149,7 +149,7 @@ class Blaster_turret : actor {
             Loop;
         Missile:
             DUMM E 4 A_FaceTarget();
-            DUMM F 3 Bright A_SpawnProjectile("blasterTurret_tracer");
+            DUMM F 3 Bright A_SpawnProjectile("blasterTurretTracer");
             DUMM F 2 Bright;
             DUMM E 4 ;
             DUMM E 4 A_MonsterRefire(130, "See");
@@ -166,7 +166,7 @@ class Blaster_turret : actor {
     }
 }
 //turret projectile-------------------------------------------------------------
-class blasterTurret_tracer : BlasterTracer {
+class blasterTurretTracer : BlasterTracer {
 	Default {
 		DamageFunction (12 * Random(1, 4));
 	}

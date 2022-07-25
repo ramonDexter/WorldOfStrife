@@ -42,8 +42,7 @@ class staffBlaster : wosWeapon {
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 64;
 		//Decal "BulletChip";
-		Mass blasterStaffBaseWeight;
-		
+		Mass blasterStaffBaseWeight;		
 	}
 	
 	States {
@@ -97,7 +96,7 @@ class staffBlaster : wosWeapon {
 			STFM J 1;
 			STFM K 2;
 			STFM L 2;
-			TNT1 A 0 W_StaffSwing("StaffBlasterPuff");
+			TNT1 A 0 W_StaffSwing("staffBlasterMeleePuff");
 			STFM M 2; //IJKLM
 			STFM M 1;
 			STFM LKJI 2;
@@ -148,7 +147,7 @@ class staffBlaster : wosWeapon {
 	}
 }
 //  staffBlaster.mellee puff  //////////////////////////////////////////////////
-class StaffBlasterPuff: BulletPuff {
+class staffBlasterMeleePuff : BulletPuff {
 	Default {
 		seeSound "weapons/staffswing";
 		attacksound "weapons/staffhit";
@@ -263,11 +262,11 @@ class BlasterTracer : FastProjectile {
 		Death:
 			TNT1 A 0 A_SpawnItemEx("BulletPuff");
 			TNT1 A 0 A_AlertMonsters();
-            TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BlasterParticle2",0,0,0,frandom(-6,6),frandom(-6,6),frandom(-6,6),0,SXF_NOCHECKPOSITION);
+            TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("greenShotParticle",0,0,0,frandom(-6,6),frandom(-6,6),frandom(-6,6),0,SXF_NOCHECKPOSITION);
 			TNT1 A 0 {
 				A_SpawnItemEx("staffFlashLong", 0, 0, 0, 0);			
-				A_SpawnItemEx("lightningExplosion", 0, 0, 0, 0);
-				A_SpawnItemEx("blueshotDeath", 0, 0, 0, 0);
+				A_SpawnItemEx("greenShotExplosion", 0, 0, 0, 0);
+				A_SpawnItemEx("greenShotDeath", 0, 0, 0, 0);
 			}
             TNT1 A 2 Light("BLASTERSHOT2");
             TNT1 A 2 Light("BLASTERSHOT3");
@@ -337,8 +336,142 @@ class BlasterTracerTrail : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-// projectile death particles //////////////////////////////////////////////////
-class BlasterParticle : actor {
+// projectile death sfx ////////////////////////////////////////////////////////
+class greenShotParticle : actor {
+	Default {
+	    +DOOMBOUNCE;
+        +MISSILE;
+        +CLIENTSIDEONLY;
+        +NOTELEPORT;
+        +NOBLOCKMAP;
+        +BLOODLESSIMPACT;
+        +NODAMAGETHRUST;
+        +MOVEWITHSECTOR;
+        +NOBLOCKMONST;
+        -SOLID;
+        +THRUACTORS;
+        +DONTSPLASH;
+        -NOGRAVITY;
+        +DONTBLAST;
+		+FORCEXYBILLBOARD;
+		+NOINTERACTION;
+        Scale 0.8;
+        Gravity 0.02;
+        Radius 0;
+        Height 0;
+        Damage 0;     
+        Speed 0;
+    }
+    States {
+        Spawn:
+            PTCL AAAAAAAAAA 1 Bright;
+            Stop;
+    }
+}
+class greenShotDeath : actor {
+	Default {
+		+CannotPush;
+		+NoDamageThrust;
+		+SpawnSoundsource;
+		+nogravity;
+        +FORCEXYBILLBOARD;
+		RenderStyle "Add";
+		scale 0.6;
+	}
+	States {
+		Spawn:
+			GP_D ABCDE 3 Bright;
+			Stop;
+	}
+
+}
+class greenShotExplosion : actor {
+	Default {
+		+NOBLOCKMAP;
+		+NOGRAVITY;
+		+SHADOW;
+		+NOTELEPORT;
+		+CANNOTPUSH;
+		+NODAMAGETHRUST;
+        +FORCEXYBILLBOARD;		
+		renderStyle "Add";
+		scale 0.6;
+		alpha 0.95;
+	}	
+	States {
+		Spawn:
+			TNT1 A 0;
+			ARLG ABCDEF 2 Bright;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// light bind actors ///////////////////////////////////////////////////////////
+class staffFlashShort : flashBase {
+	Default {
+		+NOINTERACTION;
+	}
+	States {
+		Spawn:
+			TNT1 A 3 light("greenFlash");
+			Stop;
+	}
+}
+class staffFlashLong : flashBase {
+	Default {
+		+NOINTERACTION;
+	}
+	States {
+		Spawn:
+			TNT1 A 15 light("greenFlash");
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+//  staffblaster.TESTING MODEL  ////////////////////////////////////////////////
+class staffBlasterModel : actor {
+	Default {
+		//$Category ""
+		//$color 6
+		//$title "blaster staff lvl1 model"
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// DEPRECATED //////////////////////////////////////////////////////////////////
+/*class BlasterFlare : actor {
+    Default {
+		+NOINTERACTION;
+        +NOGRAVITY;
+        +CLIENTSIDEONLY;
+        +DONTBLAST;
+        +FORCEXYBILLBOARD;	
+        renderstyle "Add";
+        radius 1;
+        height 1;
+        alpha 0.4;
+        scale 0.15;
+    }
+    states {
+        Spawn:
+            TNT1 A 0;
+            TNT1 A 0 A_Jump(128,2);
+            LENB A 1 bright;
+            stop;
+            TNT1 A 0;
+            LENB B 1 bright;
+            stop;
+    }
+}*/
+/*class BlasterParticle : actor {
     Default {
         +DOOMBOUNCE;
         +MISSILE;
@@ -380,92 +513,8 @@ class BlasterParticle2 : BlasterParticle {
             SPKB AAAAAAAAA 1 Bright A_SetScale(scale.x*0.86);
             Stop;
     }
-}
-class Flare_General : actor {
-    Default {
-        +NOINTERACTION;
-        +NOGRAVITY;
-        +CLIENTSIDEONLY;
-        +DONTBLAST;
-        +FORCEXYBILLBOARD;	
-        renderstyle "Add";
-        radius 1;
-        height 1;
-        alpha 0.4;
-        scale 0.4;
-    }
-}
-class BlasterFlare : Flare_General {
-    Default {
-        scale 0.15;
-    }
-    states {
-        Spawn:
-            TNT1 A 0;
-            TNT1 A 0 A_Jump(128,2);
-            LENB A 1 bright;
-            stop;
-            TNT1 A 0;
-            LENB B 1 bright;
-            stop;
-    }
-}
-class blueshotDeath : actor {
-	Default {
-		+CannotPush;
-		+NoDamageThrust;
-		+SpawnSoundsource;
-		+nogravity;
-        +FORCEXYBILLBOARD;
-		RenderStyle "Add";
-		scale 0.6;
-	}
-	States {
-		Spawn:
-			GP_D ABCDE 3 Bright;
-			Stop;
-	}
-
-}
-class staffFlashShort : flashBase {
-	Default {
-		+NOINTERACTION;
-	}
-	States {
-		Spawn:
-			TNT1 A 3;
-			Stop;
-	}
-}
-class staffFlashLong : flashBase {
-	Default {}
-	States {
-		Spawn:
-			TNT1 A 15;
-			Stop;
-	}
-}
-class lightningExplosion : actor {
-	Default {
-		+NOBLOCKMAP;
-		+NOGRAVITY;
-		+SHADOW;
-		+NOTELEPORT;
-		+CANNOTPUSH;
-		+NODAMAGETHRUST;
-        +FORCEXYBILLBOARD;		
-		renderStyle "Add";
-		scale 0.6;
-		alpha 0.95;
-	}	
-	States {
-		Spawn:
-			TNT1 A 0;
-			ARLG ABCDEF 2 Bright;
-			Stop;
-	}
-}
-class staffShotSmoke2 : actor {
+}*/
+/*class staffShotSmoke2 : actor {
 	Default {
 		+NOINTERACTION;
 		+NOGRAVITY;		
@@ -482,23 +531,7 @@ class staffShotSmoke2 : actor {
 			ARLG F 1 bright A_FadeOut(0.08);
 			Loop;
 	}
-}
-//  staffblaster.TESTING MODEL  ////////////////////////////////////////////////
-class staffBlasterModel : actor {
-	Default {
-		//$Category ""
-		//$color 6
-		//$title "blaster staff lvl1 model"
-	}
-	States {
-		Spawn:
-			DUMM A -1;
-			Stop;
-	}
-}
-////////////////////////////////////////////////////////////////////////////////
-
-// DEPRECATED //////////////////////////////////////////////////////////////////
+}*/
 /*class BlasterTracer : FastProjectile {
     Default {
         +RANDOMIZE
@@ -542,8 +575,8 @@ class staffBlasterModel : actor {
             TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BlasterParticle2",0,0,0,frandom(-6,6),frandom(-6,6),frandom(-6,6),0,SXF_NOCHECKPOSITION);
 			TNT1 A 0 A_SpawnItemEx("staffFlashLong", 0, 0, 0, 0);
 			//TNT1 A 0 A_SpawnItemEx("blueExplosion", 0, 0, 0, 0);				
-			TNT1 A 0 A_SpawnItemEx("lightningExplosion", 0, 0, 0, 0);
-			TNT1 A 0 A_SpawnItemEx("blueshotDeath", 0, 0, 0, 0);
+			TNT1 A 0 A_SpawnItemEx("greenShotExplosion", 0, 0, 0, 0);
+			TNT1 A 0 A_SpawnItemEx("greenShotDeath", 0, 0, 0, 0);
             TNT1 A 2 Light("BLASTERSHOT2");
             TNT1 A 2 Light("BLASTERSHOT3");
             TNT1 A 2 Light("BLASTERSHOT4");
@@ -620,8 +653,8 @@ class BlasterParticleTrailSpawner : actor {
             TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("BlasterParticle2",0,0,0,frandom(-6,6),frandom(-6,6),frandom(-6,6),0,SXF_NOCHECKPOSITION);
 			TNT1 A 0 A_SpawnItemEx("staffFlashLong", 0, 0, 0, 0);
 			//TNT1 A 0 A_SpawnItemEx("blueExplosion", 0, 0, 0, 0);				
-			TNT1 A 0 A_SpawnItemEx("lightningExplosion", 0, 0, 0, 0);
-			TNT1 A 0 A_SpawnItemEx("blueshotDeath", 0, 0, 0, 0);
+			TNT1 A 0 A_SpawnItemEx("greenShotExplosion", 0, 0, 0, 0);
+			TNT1 A 0 A_SpawnItemEx("greenShotDeath", 0, 0, 0, 0);
             TNT1 A 2 Light("BLASTERSHOT2");
             TNT1 A 2 Light("BLASTERSHOT3");
             TNT1 A 2 Light("BLASTERSHOT4");

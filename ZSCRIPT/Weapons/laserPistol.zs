@@ -199,6 +199,20 @@ class laserParticleTrailSpawner : actor {
             Stop;
     }
 }
+class Flare_General : actor {
+    Default {
+        +NOINTERACTION;
+        +NOGRAVITY;
+        +CLIENTSIDEONLY;
+        +DONTBLAST;
+        +FORCEXYBILLBOARD;	
+        renderstyle "Add";
+        radius 1;
+        height 1;
+        alpha 0.4;
+        scale 0.4;
+    }
+}
 class laserFlare : Flare_General {
     Default {
         scale 0.15;
@@ -215,7 +229,7 @@ class laserFlare : Flare_General {
             stop;
     }
 }
-class laserParticle : actor{
+class laserParticle : actor {
     Default {
         +DOOMBOUNCE;
         +MISSILE;
@@ -250,7 +264,7 @@ class laserParticle : actor{
 		    Stop;
     }
 }
-class laserParticle2 : BlasterParticle {
+class laserParticle2 : laserParticle {
     Default {
 	    Scale 0.07;
     }

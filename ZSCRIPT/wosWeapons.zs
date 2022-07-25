@@ -42,10 +42,8 @@ class wosWeapon : StrifeWeapon {
 		//SpawnPlayerMissile(projectileType);
 		//ownr.takeInventory("magazine_blasterStaff", 1);
 		A_StartSound("weapons/staffShoot", 0);
-		A_SpawnItemEx(flashType, 8, 0, 16, 0);	
-		if ( alertMonsters ) {
-			A_AlertMonsters();
-		}
+		if ( flashType ) { A_SpawnItemEx(flashType, 8, 0, 16, 0); } else {}
+		if ( alertMonsters ) { A_AlertMonsters(); }
 	}
 	//  staffswing  ////////////////////////////////////////////////////////////
 	action void W_StaffSwing(string puffType) {
@@ -613,7 +611,7 @@ class wosWeapon : StrifeWeapon {
 			"----" A 1 Offset(0,82);
 			KICK ABCD 2;
 			KICK EFG 1;
-			KICK H 2 W_Kicking("StaffBlasterPuff");//A_KnifeSlash();
+			KICK H 2 W_Kicking("staffBlasterMeleePuff");//A_KnifeSlash();
 			KICK GFED 1;
 			KICK CBA 2;
 			TNT1 A 0 {

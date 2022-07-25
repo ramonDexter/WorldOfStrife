@@ -101,7 +101,7 @@ class zscFist : wosWeapon {
 		Fire:
 			PEST ACF 1;
 			PEST GH 1;
-			PEST I 2 W_uderPesti("StaffBlasterPuff");//A_CustomPunch(random(1, 6), false, 0, "StaffBlasterPuff");
+			PEST I 2 W_uderPesti("staffBlasterMeleePuff");//A_CustomPunch(random(1, 6), false, 0, "staffBlasterMeleePuff");
 			PEST I 2;
 			PEST HG 1;
 			PEST FEDCB 1;

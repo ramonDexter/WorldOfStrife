@@ -306,6 +306,7 @@ class greenArcLightning : FastProjectile
         +CANNOTPUSH
         +BLOODLESSIMPACT
 		+THRUGHOST
+		+NOEXTREMEDEATH
     }
 
     states

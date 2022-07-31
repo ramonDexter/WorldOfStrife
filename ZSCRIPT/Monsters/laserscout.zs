@@ -1,5 +1,66 @@
 Class LaserScout : wosMonsterBase
 {
+
+	int gunmag; //
+	int searchtimer; //
+	bool searched; //
+	bool lootmed; //
+	bool lootarm; //
+	int lootarm2; //
+	bool lootgun; //
+	int lootgun2; //
+	int lootmoney; //
+	bool lootrep; //
+	string looteqip; Property Equipment : looteqip; //
+	int looteqip2; //
+    
+	Override void PostBeginPlay() {
+		Super.PostBeginPlay();
+		gunmag=30;
+		//If(shielded==1){A_SpawnItemEx("LFAcolyteShield",flags: SXF_SETMASTER);}
+		If(Random(1,3)==1){lootmed=1;} If(Random(1,8)==1){lootarm=1; lootarm2=Random(15,85);}
+		If(Random(1,6)==1){lootgun=1; lootgun2=Random(50,600);} If(Random(1,10)==1){lootrep=1;}
+		lootmoney=Random(3,15);
+	}
+
+	Override bool Used(Actor user) {
+		let pawn = binderPlayer(user);
+		If( searched==0 && health<1 && InStateSequence(CurState,ResolveState("Death")) && user is "binderPlayer" && pawn.currentarmor!=4 ) {
+			int tosearch = 6 - (2 * pawn.SpeedUpgrade);
+			If( searchtimer >= tosearch ) {
+				If( lootmed == 1 ){ 
+					Actor med = A_DropItem("wosArmorShard"); 
+				}
+				If( lootarm == 1 ){ 
+					Actor arm = A_DropItem("wosMetalArmor"); 
+				}
+				If( looteqip == "TARG" ){ 
+					Actor trg = A_DropItem("wosArmorShard"); 
+				}
+				While( lootmoney > 0 ) {
+					If( lootmoney >= 25 ){ 
+						A_DropItem("wosEnergyPack"); 
+						lootmoney-=25; 
+					} Else If( lootmoney >= 10 ){ 
+						A_DropItem("wosEnergyKit"); 
+						lootmoney-=10; 
+					} Else If(lootmoney>=5){
+						A_DropItem("wosEnergyPod"); 
+						lootmoney-=5;
+					}
+				}
+				//If( lootgun == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
+				//Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
+				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
+				searched = 1;
+			} Else {
+				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				searchtimer++;
+			}
+		}
+		Return Super.Used(user);
+	}
+
 	Default
 	{
 		//$category "Monsters/Heretics"

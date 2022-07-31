@@ -464,8 +464,8 @@ DoomEdNums {
 	20459 = wos_nwCultist07
 	20460 = wos_millportBishop
 	20461 = wosd_AmmoFiller
+	20462 = wosSentinel
 	/*
-	20462 = markerNamed_mainplaza
 	20463 = markerNamed_oldplaza
 	20464 = markerNamed_tekguildplaza
 	20465 = markerNamed_BinderBase

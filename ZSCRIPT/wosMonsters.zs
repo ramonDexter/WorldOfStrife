@@ -568,16 +568,38 @@ class wosSentinel : Sentinel replaces Sentinel {
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}
+	Default {
+		//$Category "Monsters/WoS"
+		//$Title "wosSentinel"
+	}
 	States {
 		Death:
 			SEWR D 7 A_Fall;
 			SEWR E 8 Bright A_TossGib;
 			SEWR F 5 Bright A_Scream;
+			TNT1 A 0 A_SpawnItemEx("wosExplosion_low");
 			SEWR GH 4 Bright A_TossGib;
 			TNT1 A 0 W_rewardXPsentinel(100);
 			SEWR I 4;
 			SEWR J 5;
 			Stop;
+	}
+}
+class hackedSentinel : wosSentinel {
+	Default {
+		//$Category "Monsters/WoS"
+		//$Title "Hacked Sentinel"
+		
+		Tag "$TAG_hackedSentinel";
+	}
+}
+class friendSentinel : wosSentinel {
+	Default {
+		//$Category "Monsters/WoS"
+		//$Title "Friendly Sentinel"
+		
+		+FRIENDLY
+		
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////

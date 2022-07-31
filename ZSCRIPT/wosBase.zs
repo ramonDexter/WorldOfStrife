@@ -218,6 +218,21 @@ class dummy_explosion : actor {
 			
 	}
 }
+class wosExplosion_low : dummy_explosion {
+	Default { Damage 8; }
+}
+class wosExplosion_medium : dummy_explosion {
+	Default { Damage 16; }
+}
+class wosExplosion_high : dummy_explosion {
+	Default { Damage 32; }
+}
+class wosExplosion_veryhigh : dummy_explosion {
+	Default { Damage 64; }
+}
+class wosExplosion_extreme : dummy_explosion {
+	Default { Damage 128; }
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 // light replacers - to brighten up ////////////////////////////////////////////

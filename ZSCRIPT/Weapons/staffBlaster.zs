@@ -255,6 +255,7 @@ class BlasterTracer : FastProjectile {
         SeeSound "weapons/staffprojectile";
 		DeathSound "weapons/shotdeath";
 		//+BLOODSPLATTER;
+		+NOEXTREMEDEATH;
 	}
     States {
 		Spawn:

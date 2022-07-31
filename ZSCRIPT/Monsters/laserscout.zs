@@ -1,5 +1,4 @@
-Class LaserScout : wosMonsterBase
-{
+Class LaserScout : wosMonsterBase {
 
 	int gunmag; //
 	int searchtimer; //
@@ -61,9 +60,8 @@ Class LaserScout : wosMonsterBase
 		}
 		Return Super.Used(user);
 	}
-
-	Default
-	{
+	
+	Default {
 		//$category "Monsters/Heretics"
 		//$Title "Heretic Laser Scout"
 		Health 250;
@@ -84,8 +82,7 @@ Class LaserScout : wosMonsterBase
 		-DROPOFF
 		+SEESDAGGERS
 	}
-	States
-	{
+	States {
 		Spawn:
 			MECH H 1 A_TurretLook();
 			loop;
@@ -125,27 +122,22 @@ Class LaserScout : wosMonsterBase
 			Stop;
 	}
 }
-
-Class SentinelFX3 : SentinelFX2
-{
-	Default{+BRIGHT}
-	States
-	{
+Class SentinelFX3 : SentinelFX2 {
+	Default { 
+		+BRIGHT 
+	}
+	States {
 		Spawn:
 		SHT1 AABB 2 A_SpawnItemEx("LaserTrail", -10);
 		loop;
 	}
 }
-
-Class LaserTrail : Actor
-{
-	Default
-	{
+Class LaserTrail : Actor {
+	Default {
 		+BRIGHT
 		+NOGRAVITY
 	}
-	States
-	{
+	States {
 		Spawn:
 		SHT1 AAAABBBB 4 A_FadeOut(0.5);
 		loop;

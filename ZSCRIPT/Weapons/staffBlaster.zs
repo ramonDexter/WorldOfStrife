@@ -277,7 +277,9 @@ class BlasterTracer : FastProjectile {
             Stop;
 	}
 }
-class BlasterTracerTrail : actor {	
+class BlasterTracerTrail : actor {
+	const PTCLDURATION = 2;
+	
     Default {
 		//Alpha 0.5;
 		//RenderStyle "Add";
@@ -290,24 +292,24 @@ class BlasterTracerTrail : actor {
 		Spawn:			
 			TNT1 AA 0 {
 				A_SpawnParticle (
-					"235713", 
-					SPF_FULLBRIGHT|SPF_RELATIVE, 
-					1, 
-					0.55, 
-					0, 
-					frandom(-1.25,1.25), frandom(-1.25,1.25), frandom(-1.25,1.25), 
-					0, 0, 0, 
-					0, 0, 0, 
-					1.0, 
-					-0.1, 
-					0.25
+					"235713", //color1, hexadecimal value or a predefined value such as "Black"
+					SPF_FULLBRIGHT|SPF_RELATIVE, //flags
+					PTCLDURATION, //lifetime in tics
+					0.55, //size, default 1.0
+					0, //angle, default 0
+					frandom(-1.25,1.25), frandom(-1.25,1.25), frandom(-1.25,1.25), //x/y/z offset, default 0
+					0, 0, 0, //velocity x/y/z
+					0, 0, 0, //acceleration x/y/z
+					1.0, //staralphaf, default 1.0
+					-0.1, //fadestep, default -1
+					0.25 //sizestep pre tic
 				);
 			}			
 			TNT1 AAA 0 {
 				A_SpawnParticle (
 					"8fc75f", 
 					SPF_FULLBRIGHT|SPF_RELATIVE, 
-					1, 
+					PTCLDURATION, 
 					0.75, 
 					0, 
 					frandom(-0.85,0.85), frandom(-0.85,0.85), frandom(-0.85,0.85), 
@@ -322,7 +324,7 @@ class BlasterTracerTrail : actor {
 				A_SpawnParticle (
 					"b7e77f", 
 					SPF_FULLBRIGHT|SPF_RELATIVE, 
-					1, 
+					PTCLDURATION, 
 					0.45, 
 					0, 
 					frandom(-0.45,0.45), frandom(-0.45,0.45), frandom(-0.45,0.45), 

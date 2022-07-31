@@ -634,8 +634,8 @@ class spikerTrap : wosMonsterBase {
 			TRAP A 4;
 			goto See;
 		Death:
-			TNT1 A 0 A_SpawnItemEx("dummy_explosion");
-            TNT1 A 0 W_rewardXP(SpawnHealth()/8);
+			TNT1 A 0 A_SpawnItemEx("wosExplosion_low");
+            TNT1 A 0 W_rewardXP(SpawnHealth()/4);
 			TRAP A -1;
 			Stop;
 	}

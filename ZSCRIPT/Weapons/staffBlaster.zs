@@ -13,7 +13,7 @@ class magazine_blasterStaff : ammo {
 //  staffBlaster.weapon  ///////////////////////////////////////////////////////
 class staffBlaster : wosWeapon {
 	bool staffIsFiring;
-	
+
 	Default {		
 		//$Category "weapons/WoS"
 		//$Title "Blaster Staff lvl.1"
@@ -42,7 +42,7 @@ class staffBlaster : wosWeapon {
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 64;
 		//Decal "BulletChip";
-		Mass blasterStaffBaseWeight;		
+		Mass blasterStaffBaseWeight;
 	}
 	
 	States {

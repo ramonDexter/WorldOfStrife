@@ -115,8 +115,8 @@ Class LaserScout : wosMonsterBase
 			MECH Q 5 Bright A_StartSound("reaver/death", CHAN_BODY);
 			MECH Q 0 {
 				A_SpawnItemEx("wosExplosion_low");
-				A_Explode;
-				A_Fall;
+				A_Explode();
+				A_Fall();
 			}
 			MECH RRSSTT 2 Bright A_TossGib;
 			MECH UVW 5 Bright A_TossGib;

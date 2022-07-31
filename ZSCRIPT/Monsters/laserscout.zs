@@ -34,15 +34,15 @@ Class LaserScout : wosMonsterBase
 				If( lootarm == 1 ){ 
 					Actor arm = A_DropItem("wosMetalArmor"); 
 				}
-				If( looteqip == "TARG" ){ 
+				/*If( looteqip == "TARG" ){ 
 					Actor trg = A_DropItem("wosArmorShard"); 
-				}
+				}*/
 				While( lootmoney > 0 ) {
 					If( lootmoney >= 25 ){ 
-						A_DropItem("wosEnergyPack"); 
+						A_DropItem("wosEnergyKit"); 
 						lootmoney-=25; 
 					} Else If( lootmoney >= 10 ){ 
-						A_DropItem("wosEnergyKit"); 
+						A_DropItem("wosEnergyCell"); 
 						lootmoney-=10; 
 					} Else If(lootmoney>=5){
 						A_DropItem("wosEnergyPod"); 
@@ -55,6 +55,7 @@ Class LaserScout : wosMonsterBase
 				searched = 1;
 			} Else {
 				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				A_StartSound("sounds/armorMedium");
 				searchtimer++;
 			}
 		}
@@ -74,7 +75,7 @@ Class LaserScout : wosMonsterBase
 		Tag "Laser-Scout";
 		DeathSound "scout/death";
 		Obituary "%o was vaporized by a laser-scout.";
-		DropItem "wosEnergyPod";
+		//DropItem "wosEnergyPod";
 		GibHealth 100;
 		-FLOAT
 		-NOGRAVITY

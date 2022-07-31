@@ -17,8 +17,10 @@ Class LaserScout : wosMonsterBase {
 		Super.PostBeginPlay();
 		gunmag=30;
 		//If(shielded==1){A_SpawnItemEx("LFAcolyteShield",flags: SXF_SETMASTER);}
-		If(Random(1,3)==1){lootmed=1;} If(Random(1,8)==1){lootarm=1; lootarm2=Random(15,85);}
-		If(Random(1,6)==1){lootgun=1; lootgun2=Random(50,600);} If(Random(1,10)==1){lootrep=1;}
+		If(Random(1,3)==1) { lootmed=1; } 
+		If(Random(1,8)==1) { lootarm=1; lootarm2=Random(15,85); }
+		If(Random(1,6)==1) { lootgun=1; lootgun2=Random(50,600); } 
+		If(Random(1,10)==1) { lootrep=1; }
 		lootmoney=Random(3,15);
 	}
 
@@ -60,7 +62,7 @@ Class LaserScout : wosMonsterBase {
 		}
 		Return Super.Used(user);
 	}
-	
+
 	Default {
 		//$category "Monsters/Heretics"
 		//$Title "Heretic Laser Scout"

@@ -1040,7 +1040,10 @@ class MiniSentinel : wosMonsterBase {
 			MNDR C 7 BRIGHT A_Fall();
 			MNDR D 5 BRIGHT A_Scream();
 			MNDR E 5 BRIGHT A_TossGib();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            TNT1 A 0 {
+				W_rewardXP(SpawnHealth());
+				A_SpawnItemEx("wosExplosion_low");
+			}
 			MNDR F 5 BRIGHT;
 			MNDR G 5 BRIGHT A_TossGib();
 			MNDR HI 5 BRIGHT;
@@ -1263,7 +1266,7 @@ class shootingStalker : Stalker {
 		ActiveSound "stalker/active";
 		HitObituary "$OB_STALKER";
 	}
-	action void W_rewardXPstalker (int rewardXP) {
+	action void W_rewardXPshootingStalker (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
@@ -1316,7 +1319,7 @@ class shootingStalker : Stalker {
             STLK P 4 A_Scream;
             STLK QRST 4;
             STLK U 4 A_NoBlocking;
-            TNT1 A 0 W_rewardXPstalker(SpawnHealth());
+            TNT1 A 0 W_rewardXPshootingStalker(SpawnHealth());
             STLK VW 4;
             STLK XYZ[ 4 Bright;
             Stop;

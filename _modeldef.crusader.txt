@@ -1,3 +1,4 @@
+/*
 Model CrusaderHeavy
 {
 	//NOINTERPOLATION
@@ -8,10 +9,10 @@ Model CrusaderHeavy
 	Scale 0.50 0.55 0.55
 	
 	//resting
-	FrameIndex SARG A 0 11
+	FrameIndex ROB2 Q 0 11
 	//resting to raise
-	FrameIndex POSS A 0 12
-	FrameIndex POSS B 0 13 
+	FrameIndex ROB2 A 0 12
+	FrameIndex ROB2 B 0 13 
 	//walk
 	FrameIndex SPOS A 0 0
 	FrameIndex SPOS B 0 1
@@ -128,8 +129,8 @@ Model CrusHeavyBody
 	FrameIndex MOD1 G 0 6
 	FrameIndex MOD1 H 0 7
 }
-
-
+*/
+/*
 Model CrusaderMk1
 {
 	Path "Models"
@@ -631,3 +632,4 @@ Model CrusMultiBody
 	FrameIndex MOD1 G 0 6
 	FrameIndex MOD1 H 0 7
 }
+*/

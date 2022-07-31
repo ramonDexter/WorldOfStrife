@@ -659,7 +659,7 @@ class RV_Sentinel : Sentinel {
 		+DONTINTERPOLATE
 		
 	}
-	action void W_rewardXPsentinel (int rewardXP) {
+	action void W_rewardXPRVsentinel (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
@@ -711,7 +711,7 @@ class RV_Sentinel : Sentinel {
 			SEWR E 8 Bright A_TossGib();
 			SEWR F 5 Bright A_Scream();
 			SEWR GH 4 Bright A_TossGib();
-            TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
+            TNT1 A 0 W_rewardXPRVsentinel(SpawnHealth());
 			SEWR I 4;
 			SEWR J 5;
 			Stop;

@@ -50,3 +50,55 @@ model dx_cleanerBot {
 	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+// sentinel ////////////////////////////////////////////////////////////////////
+Model wosSentinel {
+	Path "Models/npc/njSentinel/"
+	Model 0 "Sentinel.md3"
+	Skin 0 "sent2.png"
+	ZOffset 8
+	NOINTERPOLATION
+	
+	Scale 1.0 1.0 1.0
+	
+	FrameIndex SEWR A 0 0  //normal
+	
+	FrameIndex SEWR B 0 1  //half open for fire
+	
+	FrameIndex SEWR D 0 3  //pain
+	//FrameIndex SEWR D 0 7  //altpain
+	
+	FrameIndex SEWR E 0 4  //die
+	FrameIndex SEWR F 0 5  //die
+	FrameIndex SEWR G 0 6  //die
+}
+Model wosSentinel {
+	Path "Models/npc/njSentinel/"
+	Model 0 "Sentinel.md3"
+	Skin 0 "sent2a.png"
+	ZOffset 8
+	NOINTERPOLATION
+	
+	Scale 1.0 1.0 1.0
+	
+	FrameIndex SEWR C 0 2  //full open for fire
+
+}
+Model wosSentinel {
+	Path "Models/npc/njSentinel/"
+	Model 0 "sentinedeath.md3"
+	Skin 0 "SentinelDie2.png"
+	ZOffset 8
+	
+	Scale 1.0 1.0 1.0
+	
+	FrameIndex SEWR D 0 0
+	FrameIndex SEWR E 0 1
+	FrameIndex SEWR F 0 2
+	FrameIndex SEWR G 0 3
+	FrameIndex SEWR H 0 4
+	FrameIndex SEWR I 0 5
+	FrameIndex SEWR J 0 6
+	//FrameIndex SEWR H 0 7
+}
+////////////////////////////////////////////////////////////////////////////////

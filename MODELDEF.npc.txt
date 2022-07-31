@@ -11,6 +11,16 @@ model CeilingTurret {
 	frameindex TURT B 0 2
 	frameindex TURT D 0 4
 }
+model wosCeilingTurret {
+	path "models/npc/turret/"
+	model 0 "turret.md3"
+	skin 0 "tx_turret.png"
+	scale 10.0 10.0 10.0
+	offset 0.0 0.0 16.0
+	frameindex TURT A 0 0
+	frameindex TURT B 0 2
+	frameindex TURT D 0 4
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  medical bot  ///////////////////////////////////////////////////////////////

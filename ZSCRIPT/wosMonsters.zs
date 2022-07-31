@@ -401,3 +401,51 @@ class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
+
+// stalker XP replacer ////////////////////////////////////////////////////////////////
+class wosStalker : Stalker replaces Stalker {
+    action void W_rewardXPstalker (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
+
+    States {
+        Death:
+            STLK O 4;
+            STLK P 4 A_Scream;
+            STLK QRST 4;
+            TNT1 A 0 W_rewardXPstalker(80);
+            STLK U 4 A_NoBlocking;
+            STLK VW 4;
+            STLK XYZ[ 4 Bright;
+            Stop;
+    }
+}
+// CeilingTurret XP replacer //////////////////////////////////////////////////////////
+class wosCeilingTurret : CeilingTurret replaces CeilingTurret {
+    action void W_rewardXPCeilingTurret (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
+
+    States {
+        Death:
+            BALL A 6 Bright A_Scream;
+            BALL BCDE 6 Bright;
+            TNT1 A 0 W_rewardXPCeilingTurret(125);
+            TURT C -1;
+            Stop;
+    }
+}
+// 
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////

@@ -87,24 +87,24 @@ Class LaserScout : wosMonsterBase
 	States
 	{
 		Spawn:
-			MECH H 1 A_TurretLook;
+			MECH H 1 A_TurretLook();
 			loop;
 		See:
-			MECH ABCD 5 A_Chase;
+			MECH ABCD 5 A_Chase();
 			loop;
 		Melee:
 		Missile:
-			MECH E 2 A_FaceTarget;
+			MECH E 2 A_FaceTarget();
 			MECH F 4 Bright A_SpawnProjectile("SentinelFX3", 48, -8) ;
-			MECH E 2 A_FaceTarget;
+			MECH E 2 A_FaceTarget();
 			MECH E 0 A_MonsterRefire(30, "See");
 			Goto Missile+1;
 		Pain:
-			MECH G 4 A_Pain;
+			MECH G 4 A_Pain();
 			Goto See;
 		Death:
-			MECH I 6 A_Scream;
-			MECH J 6 A_Fall;
+			MECH I 6 A_Scream();
+			MECH J 6 A_Fall();
 			MECH K 6;
 			MECH L 12;
 			MECH MNO 5 Bright;
@@ -118,8 +118,8 @@ Class LaserScout : wosMonsterBase
 				A_Explode();
 				A_Fall();
 			}
-			MECH RRSSTT 2 Bright A_TossGib;
-			MECH UVW 5 Bright A_TossGib;
+			MECH RRSSTT 2 Bright A_TossGib();
+			MECH UVW 5 Bright A_TossGib();
             TNT1 A 0 W_rewardXP(SpawnHealth());
 			MECH X -1;
 			Stop;

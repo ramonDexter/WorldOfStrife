@@ -465,9 +465,9 @@ DoomEdNums {
 	20460 = wos_millportBishop
 	20461 = wosd_AmmoFiller
 	20462 = wosSentinel
+	20463 = wosSecuriBot
+	20464 = wosSecuribotFriendly
 	/*
-	20463 = markerNamed_oldplaza
-	20464 = markerNamed_tekguildplaza
 	20465 = markerNamed_BinderBase
 	20466 = markerNamed_insulaNorth
 	20467 = markerNamed_insulaWest

@@ -12,6 +12,7 @@ jarewill - huge zscript help, LF zscript mechanics
 gutawer - gutamatics
 m8f
 Talon1024 - zscript ziplines
+dennis belmondo
 cherno - great modeldef tutor
 Enjay - models, resources
 

@@ -418,7 +418,7 @@ class wosStalker : Stalker replaces Stalker {
 			STLK O 4;
 			STLK P 4 A_Scream;
 			STLK QRST 4;
-			TNT1 A 0 W_rewardXPstalker(80);
+			TNT1 A 0 W_rewardXPstalker(SpawnHealth());
 			STLK U 4 A_NoBlocking;
 			STLK VW 4;
 			STLK XYZ[ 4 Bright;
@@ -440,7 +440,7 @@ class wosCeilingTurret : CeilingTurret replaces CeilingTurret {
 		Death:
 			BALL A 6 Bright A_Scream;
 			BALL BCDE 6 Bright;
-			TNT1 A 0 W_rewardXPCeilingTurret(125);
+			TNT1 A 0 W_rewardXPCeilingTurret(SpawnHealth());
 			TURT C -1;
 			Stop;
 	}
@@ -469,6 +469,7 @@ class wosCrusader : Crusader replaces Crusader {
 			ROB2 MN 4 A_TossGib;
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
 			ROB2 O 4 A_Explode(64, 64, alert:true);
+			TNT1 A 0 W_rewardXPCrusader(SpawnHealth());
 			ROB2 P -1 A_CrusaderDeath;
 			Stop;
 	}
@@ -502,7 +503,7 @@ class wosInquisitor : Inquisitor replaces Inquisitor {
 			ROB3 \ 3 A_TossGib;
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
 			ROB3 ] 3 Bright A_Explode(128, 128, alert:true);
-			TNT1 A 0 W_rewardXPInquisitor(1000);
+			TNT1 A 0 W_rewardXPInquisitor(SpawnHealth());
 			RBB3 A 3 Bright A_TossArm;
 			RBB3 B 3 Bright A_TossGib;
 			RBB3 CD 3 A_TossGib;
@@ -528,7 +529,7 @@ class wosTemplar : Templar replaces Templar {
 			PGRD L 4 A_NoBlocking;
 			PGRD MN 4;
 			PGRD O 4 A_TossGib;
-			TNT1 A 0 W_rewardXPTemplar(300);
+			TNT1 A 0 W_rewardXPTemplar(SpawnHealth());
 			PGRD PQRSTUVWXYZ[ 4;
 			PGRD \ -1;
 			Stop;
@@ -553,7 +554,7 @@ class wosReaver : Reaver replaces Reaver {
 			ROB1 NOP 5;
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
 			ROB1 Q 6 A_Explode(32, 32, alert:true);
-			TNT1 A 0 W_rewardXPReaver(150);
+			TNT1 A 0 W_rewardXPReaver(SpawnHealth());
 			ROB1 R -1;
 			Stop;
 		XDeath:
@@ -581,16 +582,14 @@ class wosSentinel : Sentinel replaces Sentinel {
 	}
 	States {
 		Death:
-			SEWR D 7 A_Fall;
-			SEWR E 8 Bright A_TossGib;
-			SEWR F 5 Bright A_Scream;
-			SEWR GH 4 Bright A_TossGib;
-			TNT1 A 0 {
-				W_rewardXPsentinel(100);
-				A_SpawnItemEx("wosExplosion_low");
-			}
-			SEWR I 4;
-			SEWR J 5;
+			SEWR D 7 A_Fall();
+			SEWR E 8 Bright A_TossGib();
+			TNT1 A 0 A_SpawnItemEx("wosExplosion_low");
+			SEWR F 5 Bright A_Scream();
+			SEWR GH 4 Bright A_TossGib();
+			TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
+			SEWR I 4 A_FadeOut(0.5);
+			SEWR J 5 A_FadeOut(0.5);
 			Stop;
 	}
 }

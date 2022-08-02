@@ -1,4 +1,7 @@
-//=--RL PISTOL----------------------------------------------------------------==
+////////////////////////////////////////////////////////////////////////////////
+// storm pistol ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 //const stormPistolBaseWeight = 50;
 
 class magazine_pistol : ammo {
@@ -9,10 +12,8 @@ class magazine_pistol : ammo {
 	}
 }
 
-class StormPistol : wosWeapon 
-{
-	Default
-	{
+class StormPistol : wosWeapon {
+	Default {
 		//$Category "weapons/WoS"
 		//$Title "Pistol"
 		
@@ -41,8 +42,7 @@ class StormPistol : wosWeapon
 		Mass stormPistolBaseWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM R -1;
 			Stop;
@@ -142,16 +142,6 @@ class StormPistol : wosWeapon
 			DUMM LKJ 2;
 			DUMM IHG 3;
 			Goto Ready;
-		  
-		
-			
-			
-		
 	}
 }
-
-
-
-
-
-//==--------------------------------------------------------------------------==
+////////////////////////////////////////////////////////////////////////////////

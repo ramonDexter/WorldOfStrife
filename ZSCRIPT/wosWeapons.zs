@@ -23,6 +23,8 @@ class wosWeapon : StrifeWeapon {
 	// vars&properties /////////////////////////////////////////////////////////
 	//int magazine; 
 	//property Magazine : magazine;
+	//int magazineMax;
+	//property magazineMax : magazineMax;
     //class<wosAmmo> magazineType;
     //property magazineType : magazineType;	
 	

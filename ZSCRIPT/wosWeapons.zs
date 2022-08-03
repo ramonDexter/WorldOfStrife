@@ -25,8 +25,13 @@ class wosWeapon : StrifeWeapon {
 	//property Magazine : magazine;
 	//int magazineMax;
 	//property magazineMax : magazineMax;
-    //class<wosAmmo> magazineType;
+    //class<Ammo> magazineType;
     //property magazineType : magazineType;	
+
+	// check if player has ammo in magazine ////////////////////////////////////
+	/*Action void W_CheckAmmo(int much = 1) {
+		If(Invoker.Magazine<much){Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));}
+	}*/
 	
 	//  staffBlaster actions  //////////////////////////////////////////////////
 	action void W_FireStaffBlaster(string projectileType, string flashType, bool alertMonsters) {
@@ -39,17 +44,28 @@ class wosWeapon : StrifeWeapon {
 			if (!weapon.DepleteAmmo (weapon.bAltFire))
 				return;
 		}
-		//let ownr = binderPlayer(invoker.owner);
-		//player.mo.PlayAttacking2 ();
 		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
 		//A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
-		A_FireProjectile (projectileType, angl, false, 5.5, 3, FPF_NOAUTOAIM);	
-		//SpawnPlayerMissile(projectileType);
-		//ownr.takeInventory("magazine_blasterStaff", 1);
+		A_FireProjectile (projectileType, angl, false, 5.5, 3, FPF_NOAUTOAIM);
 		A_StartSound("weapons/staffShoot", 0);
 		if ( flashType ) { A_SpawnItemEx(flashType, 8, 0, 16, 0); } else {}
 		if ( alertMonsters ) { A_AlertMonsters(); }
 	}
+	// without magazine inv item, using class variables as magazine instead ////
+	/*action void W_FireStaffBlaster2(string projectileType, string flashType, bool alertMonsters) {
+		if (player == null) {
+			return;
+		}
+		
+		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
+		//A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
+		A_FireProjectile (projectileType, angl, false, 5.5, 3, FPF_NOAUTOAIM);	
+		//take away ammo from magazine
+		invoker.magazine--;
+		A_StartSound("weapons/staffShoot", 0);
+		if ( flashType ) { A_SpawnItemEx(flashType, 8, 0, 16, 0); } else {}
+		if ( alertMonsters ) { A_AlertMonsters(); }
+	}*/
 	//  staffswing  ////////////////////////////////////////////////////////////
 	action void W_StaffSwing(string puffType) {
 		FTranslatedLineTarget t;
@@ -382,6 +398,52 @@ class wosWeapon : StrifeWeapon {
 		}
 		//return ResolveState ("ReloadFinish");
 	}
+	// without magazine inv item, using class variables as magazine instead ////
+	/*action void W_reloadCheck2() {
+		if ( player == null ) {
+			return;
+		}
+		// check if no ammo and default to dagger
+		if ( invoker.magazine == 0 && !invoker.magazineType ) {
+			A_Log("\c[red]Ammo depleted!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+			A_SelectWeapon("wospunchdagger");
+			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));
+			return;
+		} else {
+			// check if magazine is full or not && if player has ammo to reload
+			if ( CountInv(invoker.magazineType) > 0 && invoker.magazine < invoker.magazineMax ) {
+				Player.SetPSprite(PSP_WEAPON,invoker.FindState("DoReload"));
+			} else {
+				// if magazine is full, return to ready
+				if (invoker.magazine == invoker.magazineMax) {
+					//.. vrati se do 'ready'
+					A_Log("\c[green]Ammo full!");
+					Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
+				}
+			}
+		}
+	}
+	action void W_Reload2() {
+		if ( player == null ) {
+			return;
+		}	
+		if ( invoker.magazine == 0 || !invoker.magazineType ) {
+			//return ResolveState("Ready");
+			A_Log("\c[red]Not enough ammo!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+			A_SelectWeapon("wospunchdagger");
+		} 
+		//ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
+		int ammoAmount = invoker.magazineMax - invoker.magazine;
+		if (ammoAmount <= 0) { 
+		//do nothing
+		} else { 
+			invoker.magazine += ammoAmount;
+			TakeInventory (invoker.magazineType, ammoAmount);
+		}
+		//return ResolveState ("ReloadFinish");
+	}*/
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////

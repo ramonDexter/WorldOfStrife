@@ -28,8 +28,10 @@ class wosMonsterBase : actor {
 // by jarewill ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 Class wosMonsterSpawner : Actor { //This is the base class that deals with respawning
-	string montype; Property MonsterType : montype; //This is the monster type property
-	int restime; Property RespawnTime : restime; //And this is the respawn time property (respawn is in seconds)
+	string montype; 
+	Property MonsterType : montype; //This is the monster type property
+	int restime; 
+	Property RespawnTime : restime; //And this is the respawn time property (respawn is in seconds)
 	Default {        
 		//$arg0 "respawn time (sec)"
 	}

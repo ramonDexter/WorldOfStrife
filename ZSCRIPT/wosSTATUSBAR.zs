@@ -351,7 +351,15 @@ class wosStatusBar : BaseStatusBar {
 				//DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (370, 148), DI_TEXT_ALIGN_RIGHT);		
 				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 27), 0, 3);
 				DrawInventoryIcon (ammo1, (-25, -2), DI_ITEM_OFFSETS);
-			}			
+			}
+			// using class variables as magazine instead ///////////////////////
+			/*let wpn = wosWeapon(CPlayer.ReadyWeapon);
+			inventory magtype = CPlayer.mo.FindInventory(wpn.magazinetype);
+			if ( wpn.magazine > 0 && magtype != null ) {
+				DrawString(mGrnFont, FormatNumber(wpn.magazine, 3, 5), (-2, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                DrawString(mGrnFont, FormatNumber(magtype.Amount, 3, 5), (-2, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);
+				DrawInventoryIcon (magtype, (-5, -2), DI_ITEM_OFFSETS);
+			}*/
 			
             //  weapon icon  ///////////////////////////////////////////////////
             item = CPlayer.ReadyWeapon;

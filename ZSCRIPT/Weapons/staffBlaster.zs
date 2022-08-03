@@ -43,6 +43,10 @@ class staffBlaster : wosWeapon {
 		Weapon.AmmoGive2 64;
 		//Decal "BulletChip";
 		Mass blasterStaffBaseWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		//wosWeapon.Magazine 48;
+		//wosWeapon.magazineMax 48;
+		//wosWeapon.magazineType "EnergyPod";
 	}
 	
 	States {
@@ -71,6 +75,7 @@ class staffBlaster : wosWeapon {
 			ASTF J 0 A_Raise();
 			Loop;		
 		Fire:
+			//TNT1 A 0 W_CheckAmmo();
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
 			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		

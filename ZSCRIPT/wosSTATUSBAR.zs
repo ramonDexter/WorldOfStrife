@@ -372,7 +372,7 @@ class wosStatusBar : BaseStatusBar {
 					DrawBar("mgznBar", "mgznBck", wpn.magazine, wpn.magazinemax, (-18, 27), 0, 3);
 					DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
 				}
-			} 
+			}
 			
             //  weapon icon  ///////////////////////////////////////////////////
             item = CPlayer.ReadyWeapon;

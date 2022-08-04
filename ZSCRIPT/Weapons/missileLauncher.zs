@@ -154,6 +154,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 				
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("FirePrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("FireAlt");}
@@ -162,6 +163,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		
 		FirePrimary:
 			MMIS A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			MMIS A 4 W_zscFireMiniMissile2("zscMiniMissile");
 			MMIS B 4 A_Light1();
 			MMIS C 5 Bright;
@@ -172,6 +174,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			Goto ReadyPrimary;
 		FireAlt:
 			MMIS T 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			MMIS T 4 W_zscFireMiniMissile2("zscMiniMissile_homing");
 			MMIS U 4 A_Light1();
 			MMIS V 5 Bright;

@@ -76,11 +76,13 @@ class staffBlaster : wosWeapon {
 			Loop;		
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
 			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		
 		RealFire:
 			ASTF A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			ASTF A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);
 			ASTF B 3 bright W_FireStaffBlaster2("BlasterTracer", "staffFlashShort", true);
 			ASTF C 4;

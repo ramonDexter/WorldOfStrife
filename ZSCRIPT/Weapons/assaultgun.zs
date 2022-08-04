@@ -76,6 +76,7 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 A_JumpIf(invoker.assaultGun_isFiring == 1, "RealFire");
 			RIFG AEH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);			
 			TNT1 A 0

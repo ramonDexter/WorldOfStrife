@@ -476,9 +476,9 @@ class wosWeapon : StrifeWeapon {
 	// without magazine inv item, using class variables as magazine instead ////
 	// check if player has ammo in magazine ////////////////////////////////////
 	Action void W_CheckAmmo() {
-		If( Invoker.Magazine < 1 && invoker.magazineType ){
+		If( Invoker.Magazine < 1 && invoker.magazineType ){ //if mag is empty, but there is ammo reserve
 			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Reload"));
-		} else if ( Invoker.Magazine < 1 && !invoker.magazineType ) {
+		} else if ( Invoker.Magazine < 1 && !invoker.magazineType ) { //if mag is empty and no ammo reserve
 			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
 			A_Log("\c[red]Ammo depleted!");
 			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());

@@ -67,7 +67,8 @@ class laserPistol : wosWeapon {
 			LSPI DEFGHI 3 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
 		Fire:
-			TNT1 A 0 W_CheckAmmo();			
+			TNT1 A 0 W_CheckAmmo();	
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");		
 			TNT1 A 0 A_JumpIf(invoker.laserPistolIsFiring == true, "RealFire");
 			LSPI CBA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			LSPI A 1 {
@@ -75,6 +76,7 @@ class laserPistol : wosWeapon {
 			}
 		RealFire:
 			LSPI A 0 W_CheckAmmo();
+			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			LSPS BDF 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);
 			LSPS G 2 bright W_FireLaserPistol2("laserTracer", "lasPisFlashShort");
 			LSPS H 2;

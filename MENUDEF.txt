@@ -46,7 +46,7 @@ OptionMenu "wosDEBUGmenu" {
 	Command "G O D", "god"
 	Command "Buddha", "buddha"
 	Command "All Armor", "netevent give_allarmor"
-	Command "All weapons", "netevent give_allweapons"
+	Command "All weapons", "give weapons"
 	Command "Ammunition", "give ammo"
 	//StaticText ""
 	Command "<< Heal Full >>", "give health"

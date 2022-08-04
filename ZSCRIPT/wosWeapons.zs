@@ -480,7 +480,8 @@ class wosWeapon : StrifeWeapon {
 			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Reload"));
 		} else if ( Invoker.Magazine < 1 && !invoker.magazineType ) { //if mag is empty and no ammo reserve
 			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
-			A_Log("\c[red]Ammo depleted!");
+			//A_Log("\c[red]Ammo depleted!");
+			A_Log("\c[red]Not enough ammo!");
 			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
 			A_SelectWeapon("wospunchdagger");
 		}

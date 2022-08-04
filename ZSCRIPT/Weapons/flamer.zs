@@ -9,7 +9,9 @@ class wosFlamethrower : wosWeapon replaces FlameThrower {
 		inventory.icon "H_FLMR";
 		Tag "$T_FLAMER";
 		Inventory.PickupMessage  "$F_FLAMER";
-		
+		Weapon.AmmoUse1 1;
+  		Weapon.AmmoGive1 100;
+		Weapon.AmmoType1 "EnergyPod";
 		radius 12;
 		height 12;
 		Mass flamerBaseWeight;

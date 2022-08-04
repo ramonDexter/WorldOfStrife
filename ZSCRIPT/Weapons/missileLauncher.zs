@@ -202,7 +202,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS A 1 Offset(0,52);
 			MMIS A 1 Offset(0,44);
 			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLin", 1);
-			TNT1 A 0 W_reload();
+			//TNT1 A 0 W_reload2();
 			MMIS A 1 Offset(0,35);
 			MMIS A 1 Offset(0,32);
 			Goto Ready;

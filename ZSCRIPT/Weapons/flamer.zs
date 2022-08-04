@@ -5,6 +5,8 @@ class wosFlamethrower : wosWeapon replaces FlameThrower {
 	Default {
 		//$Category "Weapons/WoS"
 		//$Title "zsc Flamethrower"
+		//radius 12;
+		//height 12;
 	
 		inventory.icon "H_FLMR";
 		Tag "$T_FLAMER";
@@ -12,8 +14,6 @@ class wosFlamethrower : wosWeapon replaces FlameThrower {
 		Weapon.AmmoUse1 1;
   		Weapon.AmmoGive1 100;
 		Weapon.AmmoType1 "EnergyPod";
-		radius 12;
-		height 12;
 		Mass flamerBaseWeight;
         Weapon.UpSound "weapons/weaponUP";
 	}

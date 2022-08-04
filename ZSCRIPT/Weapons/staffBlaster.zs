@@ -1,15 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //   STAFFBLASTER  /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-//const blasterStaffBaseWeight = 100;
 
-//  staffBlaster.reload magazine  //////////////////////////////////////////////  
-class magazine_blasterStaff : ammo {
-	Default {
-		+Inventory.IgnoreSkill;		
-		Inventory.MaxAmount 48;
-	}
-}
 //  staffBlaster.weapon  ///////////////////////////////////////////////////////
 class staffBlaster : wosWeapon {
 	bool staffIsFiring;
@@ -23,10 +15,7 @@ class staffBlaster : wosWeapon {
 		+WEAPON.NOAUTOFIRE		
 		+WEAPON.NOALERT	
 		
-		//Scale 0.4;	
-		Radius 12;
-		Height 64;
-		
+		Height 64;		
 		Tag "$TAG_staffBlaster";
 		Inventory.icon "H_ASTF";
 		Inventory.pickupmessage "$FND_staffBlaster";
@@ -34,19 +23,13 @@ class staffBlaster : wosWeapon {
 		AttackSound "weapons/staffShoot";
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 3;
-		Weapon.SlotPriority 3;		
+		Weapon.SlotPriority 0.3;		
 		Weapon.kickback 40;
 		Mass blasterStaffBaseWeight;
 		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 48;
 		wosWeapon.magazineMax 48;
 		wosWeapon.magazineType "EnergyPod";
-		//Weapon.AmmoType1 "magazine_blasterStaff";
-		//Weapon.AmmoUse1 1;
-		//Weapon.AmmoType2 "EnergyPod";
-		//Weapon.AmmoUse2 0;
-		//Weapon.AmmoGive2 64;
-		//Decal "BulletChip";
 	}
 	
 	States {
@@ -458,7 +441,27 @@ class staffBlasterModel : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-// DEPRECATED //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+		
+		//Weapon.AmmoType1 "magazine_blasterStaff";
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoType2 "EnergyPod";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 64;
+		//Decal "BulletChip";
+
+//const blasterStaffBaseWeight = 100;
+
+//  staffBlaster.reload magazine  //////////////////////////////////////////////  
+/*class magazine_blasterStaff : ammo {
+	Default {
+		+Inventory.IgnoreSkill;		
+		Inventory.MaxAmount 48;
+	}
+}*/
 /*class BlasterFlare : actor {
     Default {
 		+NOINTERACTION;

@@ -751,6 +751,8 @@ class wosWeapon : StrifeWeapon {
 	Default {
 		Inventory.PickupSound "sounds/itemPickup";
 		Mass 0;
+		Radius 12;
+		Height 12;
 	}
 	
 	

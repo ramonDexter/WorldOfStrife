@@ -1,26 +1,6 @@
-//const missileLauncherBaseWeight = 220;
-
-class magazine_missileLauncher : Ammo {
-	Default {		
-		+Inventory.IgnoreSkill;		
-		Inventory.MaxAmount 8;
-	
-	}
-}
-class missileLauncherFire1token : inventory {
-	Default {
-		inventory.amount 1;
-		inventory.maxamount 1;
-		inventory.interhubamount 1;
-	}
-}
-class missileLauncherFire2token : inventory {
-	Default {
-		inventory.amount 1;
-		inventory.maxamount 1;
-		inventory.interhubamount 1;
-	}
-}
+////////////////////////////////////////////////////////////////////////////////
+// mini-missile launcher ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 	int miniMissile_Switch;
 
@@ -31,10 +11,6 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		+WEAPON.AMMO_OPTIONAL		
 		+FLOORCLIP
 		+WEAPON.NOAUTOAIM
-		
-		//scale 0.8;
-		radius 12;
-		height 12;
 		
 		Tag "$T_MISSILELAUNCHER";
 		Inventory.PickupMessage  "$F_MISSILELAUNCHER";
@@ -48,12 +24,6 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		wosWeapon.Magazine 8;
 		wosWeapon.magazineMax 8;
 		wosWeapon.magazineType "MiniMissiles";
-		//Weapon.AmmoUse1 1;
-		//Weapon.AmmoGive1 0;
-		//Weapon.AmmoType1 "magazine_missileLauncher";
-		//Weapon.AmmoUse2 0;
-		//Weapon.AmmoGive2 8;
-		//Weapon.AmmoType2 "MiniMissiles";
 	}
 
 	States {
@@ -71,29 +41,29 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			Goto Ready;
 			
 		Ready:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) { return ResolveState("ReadyPrimary");}
 				if(invoker.miniMissile_Switch == 1) { return ResolveState("ReadyAlt");}
 				return ResolveState(null);
 			}		
-		ReadyPrimary:			
+		ReadyPrimary:*/			
 			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
-		ReadyAlt:
+		/*ReadyAlt:
 			MMIS T 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			Loop;
+			Loop;*/
 			
 		//AltFire:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("SetAlt");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("SetPrimary");}
 				return ResolveState(null);
-			}
-		SetAlt:
+			}*/
+		/*SetAlt:
 			TNT1 A 0 {
 				invoker.miniMissile_Switch = 1;
-				self.giveinventory("missileLauncherFire2token", 1);
-				self.takeinventory("missileLauncherFire1token", 1);
+				//self.giveinventory("missileLauncherFire2token", 1);
+				//self.takeinventory("missileLauncherFire1token", 1);
 			}
 			MMIS G 2;
 			MMIS H 4;
@@ -110,8 +80,8 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		SetPrimary:
 			TNT1 A 0 {
 				invoker.miniMissile_Switch = 0;
-				self.giveinventory("missileLauncherFire1token", 1);
-				self.takeinventory("missileLauncherFire2token", 1);
+				//self.giveinventory("missileLauncherFire1token", 1);
+				//self.takeinventory("missileLauncherFire2token", 1);
 			}
 			MMIS T 2;
 			MMIS R 4;
@@ -124,36 +94,36 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS I 4;
 			MMIS H 4;
 			MMIS G 2;
-			goto ReadyPrimary;
+			goto ReadyPrimary;*/
 			
 		Deselect:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("DeselectPrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("DeselectAlt");}
 				return ResolveState(null);
 			}
-		DeselectPrimary:
+		DeselectPrimary:*/
 			MMIS A 1 A_Lower();			
 			Loop;
-		DeselectAlt:
+		/*DeselectAlt:
 			MMIS T 1 A_Lower();
-			Loop;		
+			Loop;*/		
 		
 		Select:
-			TNT1 A 0 {
+			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("SelectPrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("SelectAlt");}
 				return ResolveState(null);
 			}
-		SelectPrimary:
+		SelectPrimary:*/
 			MMIS A 1 A_Raise();
 			Loop;
-		SelectAlt:
+		/*SelectAlt:
 			MMIS T 1 A_Raise();
-			Loop;
+			Loop;*/
 				
 		Fire:
-			TNT1 A 0 W_CheckAmmo();
+			/*TNT1 A 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("FirePrimary");}
@@ -161,7 +131,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 				return ResolveState(null);
 			}
 		
-		FirePrimary:
+		FirePrimary:*/
 			MMIS A 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			MMIS A 4 W_zscFireMiniMissile2("zscMiniMissile");
@@ -171,8 +141,9 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS E 2 Bright;
 			MMIS F 2 Bright A_Light0();
 			MMIS F 0 A_ReFire();
-			Goto ReadyPrimary;
-		FireAlt:
+			//Goto ReadyPrimary;
+			Goto Ready;
+		/*FireAlt:
 			MMIS T 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			MMIS T 4 W_zscFireMiniMissile2("zscMiniMissile_homing");
@@ -182,7 +153,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS X 2 Bright;
 			MMIS Y 2 Bright A_Light0();
 			MMIS Y 0 A_ReFire();
-			goto ReadyAlt;
+			goto ReadyAlt;*/
 		
 		Reload:
 			TNT1 A 0 W_reloadCheck2();
@@ -210,7 +181,11 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+// projectile //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class zscMiniMissile : MiniMissile {
 	Default {
 		+THRUGHOST
@@ -228,8 +203,47 @@ class zscMiniMissile : MiniMissile {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
 
-class zscMiniMissile_homing : MiniMissile {
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoGive1 0;
+		//Weapon.AmmoType1 "magazine_missileLauncher";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 8;
+		//Weapon.AmmoType2 "MiniMissiles";
+
+//const missileLauncherBaseWeight = 220;
+
+/*class magazine_missileLauncher : Ammo {
+	Default {		
+		+Inventory.IgnoreSkill;		
+		Inventory.MaxAmount 8;
+	
+	}
+}*/
+
+/*class missileLauncherFire1token : inventory {
+	Default {
+		inventory.amount 1;
+		inventory.maxamount 1;
+		inventory.interhubamount 1;
+	}
+}
+class missileLauncherFire2token : inventory {
+	Default {
+		inventory.amount 1;
+		inventory.maxamount 1;
+		inventory.interhubamount 1;
+	}
+}*/
+
+/*class zscMiniMissile_homing : MiniMissile {
 	Default {
 		+SEEKERMISSILE
 		+THRUGHOST
@@ -254,7 +268,4 @@ class zscMiniMissile_homing : MiniMissile {
 			Stop;
 	}
 	
-}
-
-
-
+}*/

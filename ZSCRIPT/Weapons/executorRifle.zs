@@ -1,13 +1,6 @@
-//const executorRifleWeight = 250;
-
-class magazine_executorRifle : ammo {
-    Default {
-        +INVENTORY.IGNORESKILL
-        inventory.maxamount 32;
-        Mass 0;
-    }
-}
-
+////////////////////////////////////////////////////////////////////////////////
+// executor rifle //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class executorRifle : wosWeapon {
 
     Default {
@@ -18,26 +11,19 @@ class executorRifle : wosWeapon {
 
         radius 24;
         height 16;
-
         Tag "$TAG_executorRifle"; // ER-15 Executor Rifle
         Inventory.PickupMessage "$FND_executorRifle"; // You picked up the Executor Rifle!
         obituary "$OBI_executorRifle"; // %o was drilled full of holes by %k's executor rifle.
         inventory.icon "H_ERMD";
         weapon.SelectionOrder 600;
         weapon.SlotNumber 3;
-		Weapon.SlotPriority 2;
+		Weapon.SlotPriority 0.2;
         weapon.kickBack 40;
         Mass executorRifleWeight;
 		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "ClipOfBullets";
-        //weapon.ammoType1 "magazine_executorRifle";
-        //weapon.ammoUse1 1;
-        //weapon.ammoGive1 0;
-        //weapon.ammoType2 "ClipOfBullets";
-        //weapon.ammoUse2 0;
-        //weapon.ammoGive2 32;
     }
 	
     States {
@@ -108,46 +94,11 @@ class executorRifle : wosWeapon {
             goto Ready;
     }
 }
-/*
-class executorRifle_ground01 : CustomInventory {
-	Default {
-		//$Category "weapons"
-		//$Title "Executor Rifle (ground1)"
-	}
-	
-	States {
-		Spawn:
-			DUMM A -1;
-			Stop;
-	}
-}
-class executorRifle_ground02 : CustomInventory {
-	Default {
-		//$Category "weapons"
-		//$Title "Executor Rifle (ground2)"
-	}
-	
-	States {
-		Spawn:
-			DUMM A -1;
-			Stop;
-	}
-}
-class executorRifle_standing : CustomInventory {
-	Default {
-		//$Category "weapons"
-		//$Title "Executor Rifle (standing)"
-	}
-	
-	States {
-		Spawn:
-			DUMM A -1;
-			Stop;
-	}
-}
-*/
+////////////////////////////////////////////////////////////////////////////////
 
-//dummy actors
+////////////////////////////////////////////////////////////////////////////////
+// dummy actors ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class dummy_executorRifle01 : actor {
     Default {
         //$Category "Decorations/Wos"
@@ -199,3 +150,65 @@ class dummy_executorRifle03 : actor {
             Stop;
     }
 }
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+        //weapon.ammoType1 "magazine_executorRifle";
+        //weapon.ammoUse1 1;
+        //weapon.ammoGive1 0;
+        //weapon.ammoType2 "ClipOfBullets";
+        //weapon.ammoUse2 0;
+        //weapon.ammoGive2 32;
+
+//const executorRifleWeight = 250;
+
+/*class magazine_executorRifle : ammo {
+    Default {
+        +INVENTORY.IGNORESKILL
+        inventory.maxamount 32;
+        Mass 0;
+    }
+}*/
+
+/*
+class executorRifle_ground01 : CustomInventory {
+	Default {
+		//$Category "weapons"
+		//$Title "Executor Rifle (ground1)"
+	}
+	
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class executorRifle_ground02 : CustomInventory {
+	Default {
+		//$Category "weapons"
+		//$Title "Executor Rifle (ground2)"
+	}
+	
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class executorRifle_standing : CustomInventory {
+	Default {
+		//$Category "weapons"
+		//$Title "Executor Rifle (standing)"
+	}
+	
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+*/

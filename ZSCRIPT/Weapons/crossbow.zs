@@ -11,10 +11,8 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
         +FLOORCLIP
 		+WEAPON.NOALERT
 		+WEAPON.NOAUTOAIM
-				
-		radius 12;
-		height 16;
 		
+		height 16;		
         Tag "$T_CROSSBOW"; // "Crossbow"
 		Weapon.Slotnumber 2;
 		Weapon.SlotPriority 0.2;

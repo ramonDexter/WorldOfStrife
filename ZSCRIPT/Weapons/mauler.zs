@@ -27,17 +27,13 @@ class wosMauler : wosWeapon replaces Mauler {
 		Tag "$T_MAULER";
 		Inventory.PickupMessage "$F_MAULER";
 		inventory.icon "H_MAUL";
-		//Weapon.SisterWeapon "wosMauler2";
 		Weapon.AmmoUse1 0;
         Weapon.AmmoGive1 100;
         Weapon.AmmoType1 "energyPod";
         Weapon.AmmoUse2 0;
         Weapon.AmmoGive2 0;
         Weapon.AmmoType2 "energyPod";
-        Weapon.UpSound "weapons/weaponUP";				
-		//scale 0.8;
-		radius 12;
-		height 12;
+        Weapon.UpSound "weapons/weaponUP";
 		Mass maulerBaseWeight;
 		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 200;

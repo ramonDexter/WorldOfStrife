@@ -1,17 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // storm pistol ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-//const stormPistolBaseWeight = 50;
-
-class magazine_pistol : ammo {
-	Default {
-		Inventory.MaxAmount 12;
-		+Inventory.IGNORESKILL;
-		Mass 0;
-	}
-}
-
 class StormPistol : wosWeapon {
 
 	/*override void AttachToOwner(actor other) {
@@ -27,9 +16,6 @@ class StormPistol : wosWeapon {
 		+Weapon.AMMO_OPTIONAL
 		+THRUGHOST
 		
-		//scale 0.5;
-		height 12;
-		radius 12;
 		Tag "$TAG_StormPistol";
 		Inventory.icon "H_SPIS";
 		Inventory.Pickupmessage "$FND_StormPistol";
@@ -45,12 +31,6 @@ class StormPistol : wosWeapon {
 		wosWeapon.Magazine 12;
 		wosWeapon.magazineMax 12;
 		wosWeapon.magazineType "ClipOfBullets";
-		//Weapon.AmmoUse1 1;
-		//Weapon.AmmoGive1 0;
-		//Weapon.AmmoType1 "magazine_pistol";
-		//Weapon.AmmoGive2 0;
-		//Weapon.AmmoType2 "ClipOfBullets";
-		//Decal "SVEbulletScorch";
 	}
 	
 	States {
@@ -59,7 +39,7 @@ class StormPistol : wosWeapon {
 			Stop;
 			
 		Nope:
-			TNT1 A 1 {
+			DUMM A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
@@ -157,3 +137,26 @@ class StormPistol : wosWeapon {
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//const stormPistolBaseWeight = 50;
+
+
+
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoGive1 0;
+		//Weapon.AmmoType1 "magazine_pistol";
+		//Weapon.AmmoGive2 0;
+		//Weapon.AmmoType2 "ClipOfBullets";
+		//Decal "SVEbulletScorch";
+
+/*class magazine_pistol : ammo {
+	Default {
+		Inventory.MaxAmount 12;
+		+Inventory.IGNORESKILL;
+		Mass 0;
+	}
+}*/

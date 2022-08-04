@@ -1,27 +1,19 @@
-//const laserPistolBaseWeight = 70;
-
-class magazine_pistolLaser : ammo {
-	Default {
-		+Inventory.IgnoreSkill
-		Mass 0;
-		inventory.maxAmount 32;
-	}
-}
-
+////////////////////////////////////////////////////////////////////////////////
+// laser pistol ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class laserPistol : wosWeapon {
 	bool laserPistolIsFiring;
 	
 	Default {
 		//$Category "weapons/WoS"
 		//$Title "Laser Pistol (weapon)"
-		+WEAPON.AMMO_OPTIONAL
-		+WEAPON.NOAUTOAIM
-		+WEAPON.NOAUTOFIRE		
-		+WEAPON.NOALERT
+		+WEAPON.AMMO_OPTIONAL;
+		+WEAPON.NOAUTOAIM;
+		+WEAPON.NOAUTOFIRE;	
+		+WEAPON.NOALERT;
 		
-		radius 12;
-		height 16;
-		
+		//radius 12;
+		Height 16;		
 		Tag "$TAG_laserPistol";
 		Inventory.icon "H_LSPS";
 		Inventory.pickupmessage "$FND_laserPistol";
@@ -35,12 +27,6 @@ class laserPistol : wosWeapon {
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "EnergyPod";
-		//Weapon.AmmoType1 "magazine_pistolLaser";
-		//Weapon.AmmoUse1 1;
-		//Weapon.AmmoType2 "EnergyPod";
-		//Weapon.AmmoUse2 0;
-		//Weapon.AmmoGive2 32;		
-		//Weapon.kickback 40;
 	}
 	
 	States {
@@ -325,6 +311,30 @@ class laserExplosion : actor {
             Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+		
+		//Weapon.AmmoType1 "magazine_pistolLaser";
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoType2 "EnergyPod";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 32;		
+		//Weapon.kickback 40;
+
+//const laserPistolBaseWeight = 70;
+
+/*class magazine_pistolLaser : ammo {
+	Default {
+		+Inventory.IgnoreSkill
+		Mass 0;
+		inventory.maxAmount 32;
+	}
+}*/
 /*
 class lasershotDeath : actor
 {

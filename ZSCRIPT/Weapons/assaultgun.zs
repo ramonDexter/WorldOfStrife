@@ -1,13 +1,6 @@
-//const assaultGunBaseWeight = 150;
-
-class magazine_wosAssaultGun : ammo {
-	Default {
-		+Inventory.IgnoreSkill;		
-		Inventory.MaxAmount 32;
-		Mass 0;
-	}
-}
-
+////////////////////////////////////////////////////////////////////////////////
+//  assault gun ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class wosAssaultGun : wosWeapon replaces AssaultGun {
 	bool assaultGun_isFiring;
 	
@@ -17,17 +10,13 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 	
 		+WEAPON.AMMO_OPTIONAL
 		+FLOORCLIP
-		+THRUGHOST
-		
-		
-		radius 12;
-		height 12;
+		+THRUGHOST	
 		
 		Tag "$T_ASSAULTGUN";	
 		inventory.icon "H_RIFL";
 		Weapon.SelectionOrder 600;
 		Weapon.SlotNumber 3;
-		Weapon.SlotPriority 1;
+		Weapon.SlotPriority 0.1;
 		Weapon.Kickback 40;
 		Inventory.PickupMessage "$F_ASSAULTGUN";
 		Obituary "$OBI_wosAssaultGun"; // %o was drilled full of holes by %k's assault gun.		
@@ -37,13 +26,6 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "ClipOfBullets";
-		//Weapon.AmmoType1 "magazine_wosAssaultGun";
-		//Weapon.AmmoUse1 1;	
-		//Weapon.AmmoGive1 0;	
-		//Weapon.AmmoType2 "ClipOfBullets";
-		//Weapon.AmmoUse2 0;
-		//Weapon.AmmoGive2 32;
-		//Decal "SVEbulletScorch";
 	}
 	
 	States {
@@ -149,3 +131,27 @@ class wosAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+		//Weapon.AmmoType1 "magazine_wosAssaultGun";
+		//Weapon.AmmoUse1 1;	
+		//Weapon.AmmoGive1 0;	
+		//Weapon.AmmoType2 "ClipOfBullets";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 32;
+		//Decal "SVEbulletScorch";
+
+//const assaultGunBaseWeight = 150;
+
+/*class magazine_wosAssaultGun : ammo {
+	Default {
+		+Inventory.IgnoreSkill;		
+		Inventory.MaxAmount 32;
+		Mass 0;
+	}
+}*/

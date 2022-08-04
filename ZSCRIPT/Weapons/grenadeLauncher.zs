@@ -1,19 +1,6 @@
-//const grenadeLauncherBaseWeight = 320;
-
-class grenadeLauncherFire1token : inventory {
-	Default {
-		inventory.amount 1;
-		inventory.maxamount 1;
-		inventory.interhubamount 1;
-	}
-}
-class grenadeLauncherFire2token : inventory {
-	Default {
-		inventory.amount 1;
-		inventory.maxamount 1;
-		inventory.interhubamount 1;
-	}
-}
+////////////////////////////////////////////////////////////////////////////////
+// grenade launcher ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 	int grnlSwitch;
 	
@@ -21,15 +8,11 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 		//$Category "Weapons/WoS"
 		//$Title "zsc grenade launcher"
 		
-		+WEAPON.NOAUTOAIM
-		
-		radius 12;
-		height 12;
+		+WEAPON.NOAUTOAIM;
 		
 		Tag "$T_GRENADELAUNCHER";
 		Inventory.PickupMessage "$F_GRENADELAUNCHER";
 		inventory.icon "H_GRND";
-		//weapon.sisterweapon "wosGrenadeLauncher2";
 		Weapon.AmmoUse1 0;
 		Weapon.AmmoGive1 24;
 		Weapon.AmmoType1 "HEGrenadeRounds";
@@ -77,16 +60,16 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
         setGrnl1:
             TNT1 A 0 {
                 invoker.grnlSwitch = 0;
-				self.giveinventory("grenadeLauncherFire2token", 1);
-				self.takeinventory("grenadeLauncherFire1token", 1);
+				//self.giveinventory("grenadeLauncherFire2token", 1);
+				//self.takeinventory("grenadeLauncherFire1token", 1);
             }
             GREN A 15;
             goto grnl1ready;
         setGrnl2:
             TNT1 A 0 {
                 invoker.grnlSwitch = 1;
-				self.giveinventory("grenadeLauncherFire1token", 1);
-				self.takeinventory("grenadeLauncherFire2token", 1);
+				//self.giveinventory("grenadeLauncherFire1token", 1);
+				//self.takeinventory("grenadeLauncherFire2token", 1);
             }
             GREN D 15;
             goto grnl2ready;
@@ -185,3 +168,24 @@ class wosGrenadeLauncher2 : StrifeGrenadeLauncher2 replaces StrifeGrenadeLaunche
 		//weapon.sisterweapon "wosGrenadeLauncher";
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//const grenadeLauncherBaseWeight = 320;
+
+/*class grenadeLauncherFire1token : inventory {
+	Default {
+		inventory.amount 1;
+		inventory.maxamount 1;
+		inventory.interhubamount 1;
+	}
+}
+class grenadeLauncherFire2token : inventory {
+	Default {
+		inventory.amount 1;
+		inventory.maxamount 1;
+		inventory.interhubamount 1;
+	}
+}*/

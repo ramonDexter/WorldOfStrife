@@ -21,17 +21,13 @@ const maulerBaseWeight = 750;
 ////////////////////////////////////////////////////////////////////////////////
 class wosWeapon : StrifeWeapon {
 	// vars&properties /////////////////////////////////////////////////////////
-	//int magazine; 
-	//property Magazine : magazine;
-	//int magazineMax;
-	//property magazineMax : magazineMax;
-    //class<Ammo> magazineType;
-    //property magazineType : magazineType;	
+	int magazine; 
+	property Magazine : magazine;
+	int magazineMax;
+	property magazineMax : magazineMax;
+    class<Ammo> magazineType;
+    property magazineType : magazineType;	
 
-	// check if player has ammo in magazine ////////////////////////////////////
-	/*Action void W_CheckAmmo(int much = 1) {
-		If(Invoker.Magazine<much){Player.SetPSprite(PSP_WEAPON,invoker.FindState("Nope"));}
-	}*/
 	
 	//  staffBlaster actions  //////////////////////////////////////////////////
 	action void W_FireStaffBlaster(string projectileType, string flashType, bool alertMonsters) {
@@ -52,11 +48,10 @@ class wosWeapon : StrifeWeapon {
 		if ( alertMonsters ) { A_AlertMonsters(); }
 	}
 	// without magazine inv item, using class variables as magazine instead ////
-	/*action void W_FireStaffBlaster2(string projectileType, string flashType, bool alertMonsters) {
+	action void W_FireStaffBlaster2(string projectileType, string flashType, bool alertMonsters) {
 		if (player == null) {
 			return;
-		}
-		
+		}		
 		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
 		//A_FireProjectile (projectileType, angl, false, 6.5, 3, FPF_NOAUTOAIM);	
 		A_FireProjectile (projectileType, angl, false, 5.5, 3, FPF_NOAUTOAIM);	
@@ -65,7 +60,7 @@ class wosWeapon : StrifeWeapon {
 		A_StartSound("weapons/staffShoot", 0);
 		if ( flashType ) { A_SpawnItemEx(flashType, 8, 0, 16, 0); } else {}
 		if ( alertMonsters ) { A_AlertMonsters(); }
-	}*/
+	}
 	//  staffswing  ////////////////////////////////////////////////////////////
 	action void W_StaffSwing(string puffType) {
 		FTranslatedLineTarget t;
@@ -139,6 +134,17 @@ class wosWeapon : StrifeWeapon {
 		A_StartSound("weapons/staffShoot", 0);
 		A_SpawnItemEx(flashType, 8, 0, 16, 0);		
 	}
+	action void W_FireLaserPistol2(string projectileType, string flashType) {
+		if (player == null) {
+			return;
+		}
+		double angl = Random2[projectileType]() * (7.625 / 256) * AccuracyFactor();
+		A_FireProjectile (projectileType, angl, false, 7, 5, FPF_NOAUTOAIM);	
+		//take away ammo from magazine
+		invoker.magazine--;
+		A_StartSound("weapons/staffShoot", 0);
+		A_SpawnItemEx(flashType, 8, 0, 16, 0);		
+	}
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////	
@@ -164,6 +170,22 @@ class wosWeapon : StrifeWeapon {
 		LineAttack (ang, PLAYERMISSILERANGE, BulletSlope (), damage, 'Hitscan', "zscStrifePuff");
 		A_AlertMonsters();
 	}
+	action void W_ShootFirearm2(int damageMultiplier, string weapsnd) {
+		if(player == null) {
+			return;
+		}
+		player.mo.PlayAttacking2 ();
+		int damage = damageMultiplier*(random[StrifeGun]() % 3 + 1);
+		double ang = angle;
+		if(player.refire) {
+			ang += Random2[StrifeGun]() * (22.5 / 256) * AccuracyFactor();
+		}
+		A_StartSound (weapsnd, CHAN_WEAPON); //default "weapons/assaultgun"
+		LineAttack (ang, PLAYERMISSILERANGE, BulletSlope (), damage, 'Hitscan', "zscStrifePuff");	
+		//take away ammo from magazine
+		invoker.magazine--;
+		A_AlertMonsters();
+	}
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////
@@ -184,6 +206,17 @@ class wosWeapon : StrifeWeapon {
 		//player.mo.PlayAttacking2 ();
 		double angl = Random2[miniMissileType]() * (7.625 / 256) * AccuracyFactor();
 		A_FireProjectile (miniMissileType, angl, false, 5, 0, FPF_NOAUTOAIM);
+		//ownr.takeInventory("magazine_missileLauncher", 1);
+		//angle = savedangle;
+	}
+	action void W_zscFireMiniMissile2(string miniMissileType) {
+		if (player == null) {
+			return;
+		}
+		double angl = Random2[miniMissileType]() * (7.625 / 256) * AccuracyFactor();
+		A_FireProjectile (miniMissileType, angl, false, 5, 0, FPF_NOAUTOAIM);
+		//take away ammo from magazine
+		invoker.magazine--;
 		//ownr.takeInventory("magazine_missileLauncher", 1);
 		//angle = savedangle;
 	}
@@ -212,6 +245,31 @@ class wosWeapon : StrifeWeapon {
 			// than this, so let's not handicap it by being too faithful to the
 			// original.
 			LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
+			A_AlertMonsters();
+		}
+	}
+	action void W_FireMauler1() {
+		if (player == null) {
+			return;
+		}
+		A_StartSound ("weapons/mauler1", CHAN_WEAPON);
+		/*Weapon weap = player.ReadyWeapon;
+		if (weap != null) {
+			if (!weap.DepleteAmmo (weap.bAltFire, true, 2))
+				return;			
+		}*/
+		player.mo.PlayAttacking2 ();
+		double pitch = BulletSlope ();			
+		for (int i = 0 ; i < 20 ; i++) {
+			int damage = 5 * random[Mauler1](1, 3);
+			double ang = angle + Random2[Mauler1]() * (7.625 / 256);
+			// Strife used a range of 2112 units for the mauler to signal that
+			// it should use a different puff. ZDoom's default range is longer
+			// than this, so let's not handicap it by being too faithful to the
+			// original.
+			LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
+			//take away ammo from magazine
+			invoker.magazine-=20;
 			A_AlertMonsters();
 		}
 	}
@@ -246,6 +304,23 @@ class wosWeapon : StrifeWeapon {
 		}
 		player.mo.PlayAttacking2 ();		
 		SpawnPlayerMissile ("wosMaulerTorpedo");
+		DamageMobj (self, null, 15, 'Disintegrate');
+		Thrust(7.8125, Angle+180.);
+		A_AlertMonsters();
+	}
+	action void W_FireMauler2 () {
+		if (player == null) {
+			return;
+		}
+		Weapon weapon = player.ReadyWeapon;
+		/*if (weapon != null) {
+			if (!weapon.DepleteAmmo (weapon.bAltFire))
+				return;
+		}*/
+		player.mo.PlayAttacking2 ();		
+		SpawnPlayerMissile ("wosMaulerTorpedo");
+		//take away ammo from magazine
+		invoker.magazine-=50;
 		DamageMobj (self, null, 15, 'Disintegrate');
 		Thrust(7.8125, Angle+180.);
 		A_AlertMonsters();
@@ -399,12 +474,23 @@ class wosWeapon : StrifeWeapon {
 		//return ResolveState ("ReloadFinish");
 	}
 	// without magazine inv item, using class variables as magazine instead ////
-	/*action void W_reloadCheck2() {
+	// check if player has ammo in magazine ////////////////////////////////////
+	Action void W_CheckAmmo() {
+		If( Invoker.Magazine < 1 && invoker.magazineType ){
+			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Reload"));
+		} else if ( Invoker.Magazine < 1 && !invoker.magazineType ) {
+			//Player.SetPSprite(PSP_WEAPON,invoker.FindState("Ready"));
+			A_Log("\c[red]Ammo depleted!");
+			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
+			A_SelectWeapon("wospunchdagger");
+		}
+	}
+	action void W_reloadCheck2() {
 		if ( player == null ) {
 			return;
 		}
 		// check if no ammo and default to dagger
-		if ( invoker.magazine == 0 && !invoker.magazineType ) {
+		if ( invoker.magazine < 1 && CountInv(invoker.magazineType) < 1 ) {
 			A_Log("\c[red]Ammo depleted!");
 			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
 			A_SelectWeapon("wospunchdagger");
@@ -428,22 +514,26 @@ class wosWeapon : StrifeWeapon {
 		if ( player == null ) {
 			return;
 		}	
-		if ( invoker.magazine == 0 || !invoker.magazineType ) {
+		/*if ( invoker.magazine == 0 || !invoker.magazineType ) {
 			//return ResolveState("Ready");
 			A_Log("\c[red]Not enough ammo!");
 			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
 			A_SelectWeapon("wospunchdagger");
-		} 
+		} */
 		//ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
 		int ammoAmount = invoker.magazineMax - invoker.magazine;
+		int ammoreserve = CountInv(invoker.magazineType);
 		if (ammoAmount <= 0) { 
 		//do nothing
-		} else { 
+		} else if ( ammoreserve > invoker.magazineMax ) { 
 			invoker.magazine += ammoAmount;
 			TakeInventory (invoker.magazineType, ammoAmount);
+		} else {
+			invoker.magazine += ammoreserve;
+			TakeInventory (invoker.magazineType, ammoreserve);
 		}
 		//return ResolveState ("ReloadFinish");
-	}*/
+	}
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////

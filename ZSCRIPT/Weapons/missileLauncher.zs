@@ -42,14 +42,18 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		Tag "Mini Missile Launcher";
 		inventory.icon "H_MMSL";		
 		Weapon.SlotNumber 4;
-		Weapon.AmmoUse1 1;
-		Weapon.AmmoGive1 0;
-		Weapon.AmmoType1 "magazine_missileLauncher";
-		Weapon.AmmoUse2 0;
-		Weapon.AmmoGive2 8;
-		Weapon.AmmoType2 "MiniMissiles";
-		Mass missileLauncherBaseWeight;
         Weapon.UpSound "weapons/weaponUP";
+		Mass missileLauncherBaseWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		wosWeapon.Magazine 8;
+		wosWeapon.magazineMax 8;
+		wosWeapon.magazineType "MiniMissiles";
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoGive1 0;
+		//Weapon.AmmoType1 "magazine_missileLauncher";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 8;
+		//Weapon.AmmoType2 "MiniMissiles";
 	}
 
 	States {
@@ -149,6 +153,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			Loop;
 				
 		Fire:
+			TNT1 A 0 W_CheckAmmo();
 			TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("FirePrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("FireAlt");}
@@ -156,8 +161,8 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			}
 		
 		FirePrimary:
-			MMIS A 0 A_JumpIfNoAmmo("Reload");
-			MMIS A 4 W_zscFireMiniMissile("zscMiniMissile");
+			MMIS A 0 W_CheckAmmo();
+			MMIS A 4 W_zscFireMiniMissile2("zscMiniMissile");
 			MMIS B 4 A_Light1();
 			MMIS C 5 Bright;
 			MMIS D 2 Bright A_Light2();
@@ -166,8 +171,8 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS F 0 A_ReFire();
 			Goto ReadyPrimary;
 		FireAlt:
-			MMIS T 0 A_JumpIfNoAmmo("Reload");
-			MMIS T 4 W_zscFireMiniMissile("zscMiniMissile_homing");
+			MMIS T 0 W_CheckAmmo();
+			MMIS T 4 W_zscFireMiniMissile2("zscMiniMissile_homing");
 			MMIS U 4 A_Light1();
 			MMIS V 5 Bright;
 			MMIS W 2 Bright A_Light2();
@@ -177,7 +182,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			goto ReadyAlt;
 		
 		Reload:
-			TNT1 A 0 W_reloadCheck();
+			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
 			MMIS A 1 Offset(0,35);
@@ -187,7 +192,7 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS A 1 Offset(0,62);
 			MMIS A 1 Offset(0,72);
 			MMIS A 1 Offset(0,82);
-			TNT1 A 16 W_Reload(); //middle
+			TNT1 A 16 W_Reload2(); //middle
 			MMIS A 1 Offset(0,82);
 			MMIS A 1 Offset(0,72);
 			MMIS A 1 Offset(0,62);

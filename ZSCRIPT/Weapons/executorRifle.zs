@@ -27,13 +27,17 @@ class executorRifle : wosWeapon {
         weapon.SlotNumber 3;
 		Weapon.SlotPriority 2;
         weapon.kickBack 40;
-        weapon.ammoType1 "magazine_executorRifle";
-        weapon.ammoUse1 1;
-        weapon.ammoGive1 0;
-        weapon.ammoType2 "ClipOfBullets";
-        weapon.ammoUse2 0;
-        weapon.ammoGive2 32;
         Mass executorRifleWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		wosWeapon.Magazine 32;
+		wosWeapon.magazineMax 32;
+		wosWeapon.magazineType "ClipOfBullets";
+        //weapon.ammoType1 "magazine_executorRifle";
+        //weapon.ammoUse1 1;
+        //weapon.ammoGive1 0;
+        //weapon.ammoType2 "ClipOfBullets";
+        //weapon.ammoUse2 0;
+        //weapon.ammoGive2 32;
     }
 	
     States {
@@ -63,6 +67,7 @@ class executorRifle : wosWeapon {
             Loop;
 
         Fire:
+			TNT1 A 0 W_CheckAmmo();
             ERMD B 1 A_JumpIfNoAmmo("Reload");
             ERMD C 2 W_ShootFireArm(8, "weapons/execRiflShoot");
             TNT1 A 0 A_AlertMonsters();
@@ -81,7 +86,7 @@ class executorRifle : wosWeapon {
             goto Ready;
 
         Reload:
-			TNT1 A 0 W_reloadCheck();
+			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
             ERMD B 2;
@@ -92,7 +97,7 @@ class executorRifle : wosWeapon {
             ERMD J 8;
             TNT1 A 16 {
                 //A_StartSound("weapons/RLpistolRLin", 1);
-                W_reload();
+                W_reload2();
             }
             ERMD J 8;
             ERMD IH 2;

@@ -34,12 +34,15 @@ class wosMauler : wosWeapon replaces Mauler {
         Weapon.AmmoUse2 0;
         Weapon.AmmoGive2 0;
         Weapon.AmmoType2 "energyPod";
-        Weapon.UpSound "weapons/weaponUP";
-				
+        Weapon.UpSound "weapons/weaponUP";				
 		//scale 0.8;
 		radius 12;
 		height 12;
 		Mass maulerBaseWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		wosWeapon.Magazine 200;
+		wosWeapon.magazineMax 200;
+		wosWeapon.magazineType "EnergyPod";
 	}
 	
 	States {
@@ -163,6 +166,8 @@ class wosMauler : wosWeapon replaces Mauler {
 		
 		Flash:
 			Stop;
+
+			
 			
 		/*User1:
 			TNT1 A 0

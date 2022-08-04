@@ -29,17 +29,21 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 		Weapon.SlotNumber 3;
 		Weapon.SlotPriority 1;
 		Weapon.Kickback 40;
-		Weapon.AmmoType1 "magazine_wosAssaultGun";
-		Weapon.AmmoUse1 1;	
-		Weapon.AmmoGive1 0;	
-		Weapon.AmmoType2 "ClipOfBullets";
-		Weapon.AmmoUse2 0;
-		Weapon.AmmoGive2 32;
-		//Decal "SVEbulletScorch";
 		Inventory.PickupMessage "$F_ASSAULTGUN";
-		Obituary "$OBI_wosAssaultGun"; // %o was drilled full of holes by %k's assault gun.
-		Mass assaultGunBaseWeight;
+		Obituary "$OBI_wosAssaultGun"; // %o was drilled full of holes by %k's assault gun.		
         Weapon.UpSound "weapons/weaponUP";
+		Mass assaultGunBaseWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		wosWeapon.Magazine 32;
+		wosWeapon.magazineMax 32;
+		wosWeapon.magazineType "ClipOfBullets";
+		//Weapon.AmmoType1 "magazine_wosAssaultGun";
+		//Weapon.AmmoUse1 1;	
+		//Weapon.AmmoGive1 0;	
+		//Weapon.AmmoType2 "ClipOfBullets";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 32;
+		//Decal "SVEbulletScorch";
 	}
 	
 	States {
@@ -71,6 +75,7 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			Loop;
 			
 		Fire:
+			TNT1 A 0 W_CheckAmmo();
 			TNT1 A 0 A_JumpIf(invoker.assaultGun_isFiring == 1, "RealFire");
 			RIFG AEH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);			
 			TNT1 A 0
@@ -78,14 +83,14 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 				invoker.assaultGun_isFiring = 1;				
 			}
 		RealFire:
-			TNT1 A 0 A_JumpIfNoAmmo("Reload");
+			TNT1 A 0 W_CheckAmmo();
 			RIFF A 1 W_ShootFirearm(4, "weapons/assaultgun");
 			TNT1 A 0 A_AlertMonsters();	
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
 			RIFF C 2;
 			RIFF D 1;
-			RIFF E 1 W_ShootFirearm(4, "weapons/assaultgun");
+			RIFF E 1 W_ShootFirearm2(4, "weapons/assaultgun");
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32),	random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
 			RIFF A 0 A_Refire("RealFire");
@@ -99,7 +104,7 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			
 		
 		Reload:
-			TNT1 A 0 W_reloadCheck();
+			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
 			//TNT1 A 0 W_reloadCheck();
@@ -115,7 +120,7 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			RIFR KL 2;
 			RIFR MN 2;
 			RIFR O 4 A_StartSound("weapons/RLpistolRLin", 1);
-			TNT1 A 0 W_reload();
+			TNT1 A 0 W_reload2();
 			RIFR P 3;
 			RIFR CB 2;
 			RIFR A 1;

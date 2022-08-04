@@ -340,6 +340,8 @@ class wosStatusBar : BaseStatusBar {
             //  Ammo  //////////////////////////////////////////////////////////		
             Inventory ammo1, ammo2; 
             [ ammo1, ammo2 ]= GetCurrentAmmo ();
+			let wpn = wosWeapon(CPlayer.ReadyWeapon);
+			inventory magtype = CPlayer.mo.FindInventory(wpn.magazinetype);
             if (ammo2 != NULL) {
                 DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
                 DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);		
@@ -351,6 +353,21 @@ class wosStatusBar : BaseStatusBar {
 				//DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (370, 148), DI_TEXT_ALIGN_RIGHT);		
 				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 27), 0, 3);
 				DrawInventoryIcon (ammo1, (-25, -2), DI_ITEM_OFFSETS);
+			} else if ( wpn.magazine > 0 && magtype ) {
+				DrawString(mGrnFont, FormatNumber(wpn.magazine, 3, 5), (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                DrawString(mGrnFont, FormatNumber(magtype.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);
+				DrawBar("mgznBar", "mgznBck", wpn.magazine, wpn.magazinemax, (-18, 27), 0, 3);
+				DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
+			} else if ( wpn.magazine == 0 && magtype ) {
+				DrawString(mGrnFont, "0", (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+				DrawString(mGrnFont, FormatNumber(magtype.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);
+				DrawBar("mgznBar", "mgznBck", wpn.magazine, wpn.magazinemax, (-18, 27), 0, 3);
+				DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
+			} else if (wpn.magazine > 0 && !magtype) {
+				DrawString(mGrnFont, FormatNumber(wpn.magazine, 3, 5), (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+                //DrawString(mGrnFont, FormatNumber(magtype.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);
+				DrawBar("mgznBar", "mgznBck", wpn.magazine, wpn.magazinemax, (-18, 27), 0, 3);
+				DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
 			}
 			// using class variables as magazine instead ///////////////////////
 			/*let wpn = wosWeapon(CPlayer.ReadyWeapon);

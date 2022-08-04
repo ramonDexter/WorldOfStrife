@@ -47,8 +47,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 			Goto Ready;
 			
         Ready:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("PoisonReady"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("ElectricReady"); }
 				return ResolveState(null);
@@ -64,16 +63,14 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             Loop;
 			
         AltFire:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("SetElectric"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("SetPoison"); }
 				return ResolveState(null);
 			}
 
         SetElectric:
-            TNT1 A 0
-            {
+            TNT1 A 0 {
                 invoker.xbowSwitch = 0;
 				//self.bNOALERT = false;
             }
@@ -83,13 +80,11 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             goto ElectricReady;
 
         SetPoison:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(CountInv("PoisonBolts") < 1) {return ResolveState("SetElectric");}
 				return ResolveState(null);
 			}
-            TNT1 A 0
-            {
+            TNT1 A 0 {
                 invoker.xbowSwitch = 1;
 				//self.bNOALERT = true;
             }
@@ -97,8 +92,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             goto PoisonReady;
         
         Fire:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("PoisonFire"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("ElectricFire"); }
 				return ResolveState(null);
@@ -106,8 +100,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 
         ElectricFire:
             XBOW A 3;
-            XBOW B 6 
-            {
+            XBOW B 6 {
                 W_ShootArrow("ElectricBolt");
                 A_TakeInventory("ElectricBolts", 1);
             }
@@ -120,20 +113,17 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             goto ElectricReady+1;
 
         PoisonFire:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(CountInv("PoisonBolts") < 1) {return ResolveState("ElectricFire");}
 				return ResolveState(null);
 			}
             XBOW H 3;
-            XBOW B 6 
-            {
+            XBOW B 6 {
                 W_ShootArrow("PoisonBolt");
                 A_TakeInventory("PoisonBolts", 1);
 
             }
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(CountInv("PoisonBolts") < 1) {return ResolveState("SetElectric");}
 				return ResolveState(null);
 			}
@@ -146,8 +136,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             goto PoisonReady;
 
         Select:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("SelectPoison"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("SelectElectric"); }
 				return ResolveState(null);
@@ -163,8 +152,7 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             Loop;
 
         Deselect:
-			TNT1 A 0
-			{
+			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("DeselectPoison"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("DeselectElectric"); }
 				return ResolveState(null);

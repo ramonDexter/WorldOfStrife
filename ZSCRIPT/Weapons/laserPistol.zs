@@ -30,13 +30,17 @@ class laserPistol : wosWeapon {
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 2;
 		Weapon.SlotPriority 3;
-		Weapon.AmmoType1 "magazine_pistolLaser";
-		Weapon.AmmoUse1 1;
-		Weapon.AmmoType2 "EnergyPod";
-		Weapon.AmmoUse2 0;
-		Weapon.AmmoGive2 32;		
-		//Weapon.kickback 40;
 		Mass laserPistolBaseWeight;
+		// new magazine&reload system //////////////////////////////////////////
+		wosWeapon.Magazine 32;
+		wosWeapon.magazineMax 32;
+		wosWeapon.magazineType "EnergyPod";
+		//Weapon.AmmoType1 "magazine_pistolLaser";
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoType2 "EnergyPod";
+		//Weapon.AmmoUse2 0;
+		//Weapon.AmmoGive2 32;		
+		//Weapon.kickback 40;
 	}
 	
 	States {
@@ -62,16 +66,17 @@ class laserPistol : wosWeapon {
 		Ready:
 			LSPI DEFGHI 3 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;
-		Fire:			
+		Fire:
+			TNT1 A 0 W_CheckAmmo();			
 			TNT1 A 0 A_JumpIf(invoker.laserPistolIsFiring == true, "RealFire");
 			LSPI CBA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			LSPI A 1 {
 				invoker.laserPistolIsFiring = true;
 			}
 		RealFire:
-			LSPI A 0 A_JumpIfNoAmmo("Reload");
+			LSPI A 0 W_CheckAmmo();
 			LSPS BDF 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);
-			LSPS G 2 bright W_FireLaserPistol("laserTracer", "lasPisFlashShort");
+			LSPS G 2 bright W_FireLaserPistol2("laserTracer", "lasPisFlashShort");
 			LSPS H 2;
 			LSPS I 2;
 			LSPS I 2 A_Refire("RealFire");
@@ -87,7 +92,7 @@ class laserPistol : wosWeapon {
 			}
 			Goto Ready;
 		Reload:
-			TNT1 A 0 W_reloadCheck();
+			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
 			//TNT1 A 0 W_reloadCheck();
@@ -107,7 +112,7 @@ class laserPistol : wosWeapon {
 			LSPR M 20; //konec nabijeni, zvuk odpojeni, nebo na predchozi frame
 			TNT1 A 0 { 
 				A_StartSound("weapons/staffOut", 0);
-				W_reload();
+				W_reload2();
 			}
 			LSPR N 2;
 			LSPR O 2;

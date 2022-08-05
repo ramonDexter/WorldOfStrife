@@ -9852,12 +9852,205 @@ actor wosD_tripod 21561 {
 			Stop
 	}
 }
-actor wosD_trurretStand 21562 {
+actor wosD_turretStand 21562 {
 	//$Category "Decorations/Wos"
 	//$Title "defensive turret"
 	Tag "defensive turret"
 	radius 8
 	height 40
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+// scattered evil props ///////////////////////////////////////////////////////////////////////////////////////
+actor wosD_beerBarrel 21563 {
+	//$Category "Decorations/Wos"
+	//$Title "beer tap barrel"
+	Tag "beer tap barrel"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_corpseSitting 21564 {
+	//$Category "Decorations/Wos"
+	//$Title "corpse sitting"
+	Tag "corpse sitting"
+	radius 16
+	height 20
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_wheel 21565 {
+	//$Category "Decorations/Wos"
+	//$Title "wheel"
+	//$arg0 "position"
+	//$arg0tooltip "wheel placement position:\n0: standing\n1: 45°\n2: ground"
+	Tag "wheel"
+	radius 8
+	height 16
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			TNT1 A 0 A_JumpIf( args[0] == 0, "Spawn1" )
+			TNT1 A 0 A_JumpIf( args[0] == 1, "Spawn2" )
+			TNT1 A 0 A_JumpIf( args[0] == 2, "Spawn3" )
+		Spawn1:
+			DUMM A -1
+			Stop
+		Spawn2:
+			DUMM B -1
+			Stop
+		Spawn3:
+			DUMM C -1
+			Stop
+	}
+}
+actor wosD_chairsThrone 21566 {
+	//$Category "Decorations/Wos"
+	//$Title "throne"
+	Tag "throne"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_smallChair 21567 {
+	//$Category "Decorations/Wos"
+	//$Title "small chair"
+	Tag "small chair"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_queen 21568 {
+	//$Category "Decorations/Wos"
+	//$Title "throne queen"
+	Tag "throne queen"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_chair3 21569 {
+	//$Category "Decorations/Wos"
+	//$Title "chair 3"
+	Tag "stone chair"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_chair2 21570 {
+	//$Category "Decorations/Wos"
+	//$Title "chair 2"
+	Tag "stone chair"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_chair1 21571 {
+	//$Category "Decorations/Wos"
+	//$Title "chair 1"
+	Tag "wooden chair"
+	radius 12
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_bench 21572 {
+	//$Category "Decorations/Wos"
+	//$Title "stone bench"
+	Tag "stone bench"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_chair 21573 {
+	//$Category "Decorations/Wos"
+	//$Title "wooden chair"
+	Tag "wooden chair"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_grilledChicken 21574 {
+	//$Category "Decorations/Wos"
+	//$Title "grilled chicken"
+	Tag "grilled chicken"
+	radius 8
+	height 8
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY

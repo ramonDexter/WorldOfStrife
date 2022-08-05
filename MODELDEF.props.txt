@@ -3448,7 +3448,7 @@ model wosD_tripod {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-model wosD_trurretStand {
+model wosD_turretStand {
 	path "models/props/modelpack/"
 	model 0 "turret.md3"
 	skin 0 "tx_turretStand.png"
@@ -3461,6 +3461,106 @@ model wosD_trurretStand {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// scattered evil props ////////////////////////////////////////////////////////
+model wosD_beerBarrel {
+	path "models/props/hexen/"
+	model 0 "beerbarrel.md3"
+	skin 0 "beerbarrel.png"
+	scale 0.7 0.7 0.7
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_corpseSitting {
+	path "models/props/hexen/"
+	model 0 "corpseSitting.md3"
+	scale 1.2 1.2 1.2
+	offset -8.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_wheel {
+	path "models/props/hexen/"
+	model 0 "wheel.md3"
+	skin 0 "wheel.png"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+}
+model wosD_chairsThrone {
+	path "models/props/hexen/"
+	model 0 "chairs_throne.md3"
+	skin 0 "chairs_throne.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_smallChair {
+	path "models/props/hexen/"
+	model 0 "chairs_smallchair.md3"
+	skin 0 "chairs_smallchair.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_queen {
+	path "models/props/hexen/"
+	model 0 "chairs_queen.md3"
+	skin 0 "chairs_queen.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_chair3 {
+	path "models/props/hexen/"
+	model 0 "chairs_chair3.md3"
+	skin 0 "chairs_chair3.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_chair2 {
+	path "models/props/hexen/"
+	model 0 "chairs_chair2.md3"
+	skin 0 "chairs_chair2.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_chair1 {
+	path "models/props/hexen/"
+	model 0 "chairs_chair1.md3"
+	skin 0 "chairs_chair1.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_bench {
+	path "models/props/hexen/"
+	model 0 "chairs_bench.md3"
+	skin 0 "chairs_bench.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_chair {
+	path "models/props/hexen/"
+	model 0 "chair.md3"
+	skin 0 "chair.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_grilledChicken {
+	path "models/props/food/"
+	model 0 "roastedchicken.md3"
+	skin 0 "roastedchicken.png"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -193,27 +193,27 @@ class wosSecuriBot : wosMonsterBase {
 			DUMD C 0 A_CheckLOF ("Missile3", CLOFF_JUMP_ON_MISS|CLOFF_MUSTBESOLID|CLOFF_JUMPOBJECT, 2048, 0, 0, 0, 24, 0, AAPTR_DEFAULT);
 			goto See;
 		Missile3:  
-			//DUMD C 0 A_SpawnItemEx ("MuzzleFlashMedium", 60.0, 36.0, 77.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			//DUMD C 0 A_SpawnItemEx ("MuzzleFlashSmall", 68.0, 36.0, 77.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD C 0 A_SpawnItemEx ("MuzzleFlashMedium", 50.0, 23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD C 0 A_SpawnItemEx ("MuzzleFlashSmall", 58.0, 23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD C 0 A_FaceTarget(); 
 			//DUMD C 0 bright A_PlaySound("ED209/Shot");
-			DUMD C 0 bright A_PlaySound("weapons/execRiflShoot");
+			DUMD C 0 bright A_PlaySound("securibot/shoot"); //weapons/assaultgun // weapons/execRiflShoot
 			DUMD C 1 bright A_CustomBulletAttack(16.0, 8.0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM);
 			DUMD D 1 A_FaceTarget(); 
 			//fake attack to look scarier
-			//DUMD D 0 A_SpawnItemEx ("MuzzleFlashMedium", 62.0, (frandom(35.0,37.0)), (frandom(78.0,82.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			//DUMD D 0 A_SpawnItemEx ("MuzzleFlashSmall", 70.0, (frandom(35.0,37.0)), (frandom(78.0,82.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD D 0 A_SpawnItemEx ("MuzzleFlashMedium", 52.0, (frandom(22.0,24.0)), (frandom(54.0,58.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD D 0 A_SpawnItemEx ("MuzzleFlashSmall", 60.0, (frandom(22.0,24.0)), (frandom(54.0,58.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			//
 			DUMD D 1 A_FaceTarget(); 
-			//DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 60.0, -36.0, 77.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			//DUMD E 0 A_SpawnItemEx ("MuzzleFlashSmall", 68.0, -36.0, 77.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 50.0, -23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD E 0 A_SpawnItemEx ("MuzzleFlashSmall", 58.0, -23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD E 1 A_FaceTarget(); 
 			//DUMD C 0 bright A_PlaySound("ED209/Shot");
-			DUMD C 0 bright A_PlaySound("weapons/execRiflShoot");
+			DUMD C 0 bright A_PlaySound("securibot/shoot");
 			DUMD E 1 bright A_CustomBulletAttack(16.0, 8.0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM);
 			DUMD E 1 A_FaceTarget(); 
-			//DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 62.0, (frandom(-37.0,-35.0)), (frandom(75.0,80.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			//DUMD E 0 A_SpawnItemEx ("MuzzleFlashSmall", 70.0, (frandom(-37.0,-35.0)), (frandom(75.0,80.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 52.0, (frandom(-24.0,-22.0)), (frandom(54.0,58.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			DUMD E 0 A_SpawnItemEx ("MuzzleFlashSmall", 60.0, (frandom(-24.0,-22.0)), (frandom(54.0,58.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD D 2 A_FaceTarget(); 
 			DUMD D 3 A_SpidRefire(); 
 			goto Missile2+10;
@@ -288,5 +288,35 @@ class wosSecuribotFriendly : wosSecuriBot {
         //$Category "Monsters/WoS"		
         //$Title "securibot friendly"
 		+FRIENDLY
+	}
+}
+class muzzleFlashMedium : actor {
+	Default {
+		+NOTELEPORT;
+        +NOBLOCKMAP;
+        +CORPSE;
+        +BLOODLESSIMPACT;
+        +FORCEXYBILLBOARD;
+        +NODAMAGETHRUST;
+        +MOVEWITHSECTOR;
+        +NOBLOCKMONST;
+        -SOLID;
+        +THRUACTORS;
+        +DONTSPLASH;
+        +NOGRAVITY;
+        +DONTBLAST;
+		radius 2;
+		height 2;
+		Scale 0.75;
+	}
+	States {
+		Spawn:
+			WFLR AB 2 Bright;
+			Stop;
+	}
+}
+class muzzleFlashSmall : muzzleFlashMedium {
+	Default {
+		Scale 0.5;
 	}
 }

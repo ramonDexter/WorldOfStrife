@@ -11,219 +11,219 @@ Model wosSecuriBot {
    ZOffset 24
 
    //death 1
-   FrameIndex ROB3 A 0 0
-   FrameIndex ROB3 A 1 0
+   FrameIndex DUMF A 0 0
+   FrameIndex DUMF A 1 0
 
-   FrameIndex ROB3 B 0 1
-   FrameIndex ROB3 B 1 1
+   FrameIndex DUMF B 0 1
+   FrameIndex DUMF B 1 1
 
-   FrameIndex ROB3 C 0 2
-   FrameIndex ROB3 C 1 2
+   FrameIndex DUMF C 0 2
+   FrameIndex DUMF C 1 2
 
-   FrameIndex ROB3 D 0 3
-   FrameIndex ROB3 D 1 3
+   FrameIndex DUMF D 0 3
+   FrameIndex DUMF D 1 3
 
-   FrameIndex ROB3 E 0 4
-   FrameIndex ROB3 E 1 4
+   FrameIndex DUMF E 0 4
+   FrameIndex DUMF E 1 4
 
-   FrameIndex ROB3 F 0 5
-   FrameIndex ROB3 F 1 5
+   FrameIndex DUMF F 0 5
+   FrameIndex DUMF F 1 5
 
-   FrameIndex ROB3 G 0 6
-   FrameIndex ROB3 G 1 6
+   FrameIndex DUMF G 0 6
+   FrameIndex DUMF G 1 6
 
-   FrameIndex ROB3 G 0 7
-   FrameIndex ROB3 G 1 7
+   FrameIndex DUMF G 0 7
+   FrameIndex DUMF G 1 7
 
-   FrameIndex ROB3 H 0 8
-   FrameIndex ROB3 H 1 8
+   FrameIndex DUMF H 0 8
+   FrameIndex DUMF H 1 8
 
-   FrameIndex ROB3 I 0 9
-   FrameIndex ROB3 I 1 9
+   FrameIndex DUMF I 0 9
+   FrameIndex DUMF I 1 9
 
-   FrameIndex ROB3 J 0 10
-   FrameIndex ROB3 J 1 10
+   FrameIndex DUMF J 0 10
+   FrameIndex DUMF J 1 10
 
-   FrameIndex ROB3 K 0 11
-   FrameIndex ROB3 K 1 11
+   FrameIndex DUMF K 0 11
+   FrameIndex DUMF K 1 11
 
-   FrameIndex ROB3 L 0 12
-   FrameIndex ROB3 L 1 12
+   FrameIndex DUMF L 0 12
+   FrameIndex DUMF L 1 12
 
-   FrameIndex ROB3 M 0 13
-   FrameIndex ROB3 M 1 13
+   FrameIndex DUMF M 0 13
+   FrameIndex DUMF M 1 13
 
-   FrameIndex ROB3 N 0 14
-   FrameIndex ROB3 N 1 14
+   FrameIndex DUMF N 0 14
+   FrameIndex DUMF N 1 14
 
-   FrameIndex ROB3 O 0 15
-   FrameIndex ROB3 O 1 15
+   FrameIndex DUMF O 0 15
+   FrameIndex DUMF O 1 15
 
-   FrameIndex ROB3 P 0 16
-   FrameIndex ROB3 P 1 16
+   FrameIndex DUMF P 0 16
+   FrameIndex DUMF P 1 16
 
-   FrameIndex ROB3 Q 0 17
-   FrameIndex ROB3 Q 1 17
+   FrameIndex DUMF Q 0 17
+   FrameIndex DUMF Q 1 17
 
-   FrameIndex ROB3 R 0 18
-   FrameIndex ROB3 R 1 18
+   FrameIndex DUMF R 0 18
+   FrameIndex DUMF R 1 18
 
-   FrameIndex ROB3 S 0 19
-   FrameIndex ROB3 S 1 19
+   FrameIndex DUMF S 0 19
+   FrameIndex DUMF S 1 19
 
    //death 2
-   FrameIndex ROB1 A 0 21
-   FrameIndex ROB1 A 1 21
+   FrameIndex DUME A 0 21
+   FrameIndex DUME A 1 21
 
-   FrameIndex ROB1 B 0 22
-   FrameIndex ROB1 B 1 22
+   FrameIndex DUME B 0 22
+   FrameIndex DUME B 1 22
 
-   FrameIndex ROB1 C 0 23
-   FrameIndex ROB1 C 1 23
+   FrameIndex DUME C 0 23
+   FrameIndex DUME C 1 23
 
-   FrameIndex ROB1 D 0 22
-   FrameIndex ROB1 D 1 22
+   FrameIndex DUME D 0 22
+   FrameIndex DUME D 1 22
 
-   FrameIndex ROB1 E 0 23
-   FrameIndex ROB1 E 1 23
+   FrameIndex DUME E 0 23
+   FrameIndex DUME E 1 23
 
-   FrameIndex ROB1 F 0 24
-   FrameIndex ROB1 F 1 24
+   FrameIndex DUME F 0 24
+   FrameIndex DUME F 1 24
 
-   FrameIndex ROB1 G 0 25
-   FrameIndex ROB1 G 1 25
+   FrameIndex DUME G 0 25
+   FrameIndex DUME G 1 25
 
-   FrameIndex ROB1 H 0 26
-   FrameIndex ROB1 H 1 26
+   FrameIndex DUME H 0 26
+   FrameIndex DUME H 1 26
 
-   FrameIndex ROB1 I 0 27
-   FrameIndex ROB1 I 1 27
+   FrameIndex DUME I 0 27
+   FrameIndex DUME I 1 27
 
-   FrameIndex ROB1 J 0 28
-   FrameIndex ROB1 J 1 28
+   FrameIndex DUME J 0 28
+   FrameIndex DUME J 1 28
 
-   FrameIndex ROB1 K 0 29
-   FrameIndex ROB1 K 1 29
+   FrameIndex DUME K 0 29
+   FrameIndex DUME K 1 29
 
-   FrameIndex ROB1 L 0 30
-   FrameIndex ROB1 L 1 30
+   FrameIndex DUME L 0 30
+   FrameIndex DUME L 1 30
 
-   FrameIndex ROB1 M 0 31
-   FrameIndex ROB1 M 1 31
+   FrameIndex DUME M 0 31
+   FrameIndex DUME M 1 31
 
-   FrameIndex ROB1 N 0 32
-   FrameIndex ROB1 N 1 32
+   FrameIndex DUME N 0 32
+   FrameIndex DUME N 1 32
 
-   FrameIndex ROB1 O 0 33
-   FrameIndex ROB1 O 1 33
+   FrameIndex DUME O 0 33
+   FrameIndex DUME O 1 33
 
-   FrameIndex ROB1 P 0 32
-   FrameIndex ROB1 P 1 32
+   FrameIndex DUME P 0 32
+   FrameIndex DUME P 1 32
 
-   FrameIndex ROB1 Q 0 33
-   FrameIndex ROB1 Q 1 33
+   FrameIndex DUME Q 0 33
+   FrameIndex DUME Q 1 33
 
-   FrameIndex ROB1 R 0 34
-   FrameIndex ROB1 R 1 34
+   FrameIndex DUME R 0 34
+   FrameIndex DUME R 1 34
 
-   FrameIndex ROB1 S 0 35
-   FrameIndex ROB1 S 1 35
+   FrameIndex DUME S 0 35
+   FrameIndex DUME S 1 35
 
-   FrameIndex ROB1 T 0 36
-   FrameIndex ROB1 T 1 36
+   FrameIndex DUME T 0 36
+   FrameIndex DUME T 1 36
 
-   FrameIndex ROB1 U 0 37
-   FrameIndex ROB1 U 1 37
+   FrameIndex DUME U 0 37
+   FrameIndex DUME U 1 37
 
-   FrameIndex ROB1 V 0 38
-   FrameIndex ROB1 V 1 38
+   FrameIndex DUME V 0 38
+   FrameIndex DUME V 1 38
 
-   FrameIndex ROB1 W 0 39
-   FrameIndex ROB1 W 1 39
+   FrameIndex DUME W 0 39
+   FrameIndex DUME W 1 39
 
-   FrameIndex ROB1 X 0 40
-   FrameIndex ROB1 X 1 40
+   FrameIndex DUME X 0 40
+   FrameIndex DUME X 1 40
 
-   FrameIndex ROB1 Y 0 41
-   FrameIndex ROB1 Y 1 41
+   FrameIndex DUME Y 0 41
+   FrameIndex DUME Y 1 41
 
    //pain
-   FrameIndex PGRD A 0 27
-   FrameIndex PGRD A 1 27
+   FrameIndex DUMD A 0 27
+   FrameIndex DUMD A 1 27
 
    //attack
-   FrameIndex PGRD B 0 42
-   FrameIndex PGRD B 1 42
+   FrameIndex DUMD B 0 42
+   FrameIndex DUMD B 1 42
 
-   FrameIndex PGRD C 0 43
-   FrameIndex PGRD C 1 43
+   FrameIndex DUMD C 0 43
+   FrameIndex DUMD C 1 43
 
-   FrameIndex PGRD D 0 44
-   FrameIndex PGRD D 1 44
+   FrameIndex DUMD D 0 44
+   FrameIndex DUMD D 1 44
 
-   FrameIndex PGRD E 0 45
-   FrameIndex PGRD E 1 45
+   FrameIndex DUMD E 0 45
+   FrameIndex DUMD E 1 45
 
    //Spawn
-   FrameIndex AGRD A 0 72
-   FrameIndex AGRD A 1 72
+   FrameIndex DUMA A 0 72
+   FrameIndex DUMA A 1 72
 
-   FrameIndex AGRD B 0 73
-   FrameIndex AGRD B 1 73
+   FrameIndex DUMA B 0 73
+   FrameIndex DUMA B 1 73
 
-   FrameIndex AGRD C 0 74
-   FrameIndex AGRD C 1 74
+   FrameIndex DUMA C 0 74
+   FrameIndex DUMA C 1 74
 
-   FrameIndex AGRD D 0 75
-   FrameIndex AGRD D 1 75
+   FrameIndex DUMA D 0 75
+   FrameIndex DUMA D 1 75
 
    //Look right
-   FrameIndex AGRD E 0 93
-   FrameIndex AGRD E 1 93
+   FrameIndex DUMA E 0 93
+   FrameIndex DUMA E 1 93
 
-   FrameIndex AGRD F 0 94
-   FrameIndex AGRD F 1 94
+   FrameIndex DUMA F 0 94
+   FrameIndex DUMA F 1 94
 
-   FrameIndex AGRD G 0 97
-   FrameIndex AGRD G 1 97
+   FrameIndex DUMA G 0 97
+   FrameIndex DUMA G 1 97
 
-   FrameIndex AGRD H 0 98
-   FrameIndex AGRD H 1 98
+   FrameIndex DUMA H 0 98
+   FrameIndex DUMA H 1 98
 
    //Centre low when looking (smoother animation)
-   FrameIndex AGRD I 0 96
-   FrameIndex AGRD I 1 96
+   FrameIndex DUMA I 0 96
+   FrameIndex DUMA I 1 96
 
-   FrameIndex AGRD J 0 91
-   FrameIndex AGRD J 1 91
+   FrameIndex DUMA J 0 91
+   FrameIndex DUMA J 1 91
 
    //See
-   FrameIndex SEWR A 0 62
-   FrameIndex SEWR A 1 62
+   FrameIndex DUMC A 0 62
+   FrameIndex DUMC A 1 62
 
-   FrameIndex SEWR B 0 63
-   FrameIndex SEWR B 1 63
+   FrameIndex DUMC B 0 63
+   FrameIndex DUMC B 1 63
 
-   FrameIndex SEWR C 0 64
-   FrameIndex SEWR C 1 64
+   FrameIndex DUMC C 0 64
+   FrameIndex DUMC C 1 64
 
-   FrameIndex SEWR D 0 65
-   FrameIndex SEWR D 1 65
+   FrameIndex DUMC D 0 65
+   FrameIndex DUMC D 1 65
 
-   FrameIndex SEWR E 0 66
-   FrameIndex SEWR E 1 66
+   FrameIndex DUMC E 0 66
+   FrameIndex DUMC E 1 66
 
-   FrameIndex SEWR F 0 67
-   FrameIndex SEWR F 1 67
+   FrameIndex DUMC F 0 67
+   FrameIndex DUMC F 1 67
 
-   FrameIndex SEWR G 0 68
-   FrameIndex SEWR G 1 68
+   FrameIndex DUMC G 0 68
+   FrameIndex DUMC G 1 68
 
-   FrameIndex SEWR H 0 69
-   FrameIndex SEWR H 1 69
+   FrameIndex DUMC H 0 69
+   FrameIndex DUMC H 1 69
 
-   FrameIndex SEWR I 0 70
-   FrameIndex SEWR I 1 70
+   FrameIndex DUMC I 0 70
+   FrameIndex DUMC I 1 70
 }
 
 Model wosSecuriBot {
@@ -239,44 +239,44 @@ Model wosSecuriBot {
    ZOffset 24
 
    //Low position
-   FrameIndex ROB2 A 0 2
-   FrameIndex ROB2 A 1 2
+   FrameIndex DUMB A 0 2
+   FrameIndex DUMB A 1 2
 
    //Half up
-   FrameIndex ROB2 B 0 1
-   FrameIndex ROB2 B 1 1
+   FrameIndex DUMB B 0 1
+   FrameIndex DUMB B 1 1
 
    //stood up
-   FrameIndex ROB2 C 0 0
-   FrameIndex ROB2 C 1 0
+   FrameIndex DUMB C 0 0
+   FrameIndex DUMB C 1 0
 
    //Look Right
-   FrameIndex ROB2 D 0 4
-   FrameIndex ROB2 D 1 4
+   FrameIndex DUMB D 0 4
+   FrameIndex DUMB D 1 4
 
    //Fully right
-   FrameIndex ROB2 E 0 5
-   FrameIndex ROB2 E 1 5
+   FrameIndex DUMB E 0 5
+   FrameIndex DUMB E 1 5
 
    //Turn back
-   FrameIndex ROB2 F 0 4
-   FrameIndex ROB2 F 1 4
+   FrameIndex DUMB F 0 4
+   FrameIndex DUMB F 1 4
 
    //Front facing again
-   FrameIndex ROB2 G 0 0
-   FrameIndex ROB2 G 1 0
+   FrameIndex DUMB G 0 0
+   FrameIndex DUMB G 1 0
 
    //Turn left
-   FrameIndex ROB2 H 0 8
-   FrameIndex ROB2 H 1 8
+   FrameIndex DUMB H 0 8
+   FrameIndex DUMB H 1 8
 
    //Fully Left
-   FrameIndex ROB2 I 0 9
-   FrameIndex ROB2 I 1 9
+   FrameIndex DUMB I 0 9
+   FrameIndex DUMB I 1 9
 
    //Turn back
-   FrameIndex ROB2 J 0 8
-   FrameIndex ROB2 J 1 8
+   FrameIndex DUMB J 0 8
+   FrameIndex DUMB J 1 8
 }
 
 model wosSecuribotFriendly {
@@ -292,219 +292,219 @@ model wosSecuribotFriendly {
    ZOffset 24
 
    //death 1
-   FrameIndex ROB3 A 0 0
-   FrameIndex ROB3 A 1 0
+   FrameIndex DUMF A 0 0
+   FrameIndex DUMF A 1 0
 
-   FrameIndex ROB3 B 0 1
-   FrameIndex ROB3 B 1 1
+   FrameIndex DUMF B 0 1
+   FrameIndex DUMF B 1 1
 
-   FrameIndex ROB3 C 0 2
-   FrameIndex ROB3 C 1 2
+   FrameIndex DUMF C 0 2
+   FrameIndex DUMF C 1 2
 
-   FrameIndex ROB3 D 0 3
-   FrameIndex ROB3 D 1 3
+   FrameIndex DUMF D 0 3
+   FrameIndex DUMF D 1 3
 
-   FrameIndex ROB3 E 0 4
-   FrameIndex ROB3 E 1 4
+   FrameIndex DUMF E 0 4
+   FrameIndex DUMF E 1 4
 
-   FrameIndex ROB3 F 0 5
-   FrameIndex ROB3 F 1 5
+   FrameIndex DUMF F 0 5
+   FrameIndex DUMF F 1 5
 
-   FrameIndex ROB3 G 0 6
-   FrameIndex ROB3 G 1 6
+   FrameIndex DUMF G 0 6
+   FrameIndex DUMF G 1 6
 
-   FrameIndex ROB3 G 0 7
-   FrameIndex ROB3 G 1 7
+   FrameIndex DUMF G 0 7
+   FrameIndex DUMF G 1 7
 
-   FrameIndex ROB3 H 0 8
-   FrameIndex ROB3 H 1 8
+   FrameIndex DUMF H 0 8
+   FrameIndex DUMF H 1 8
 
-   FrameIndex ROB3 I 0 9
-   FrameIndex ROB3 I 1 9
+   FrameIndex DUMF I 0 9
+   FrameIndex DUMF I 1 9
 
-   FrameIndex ROB3 J 0 10
-   FrameIndex ROB3 J 1 10
+   FrameIndex DUMF J 0 10
+   FrameIndex DUMF J 1 10
 
-   FrameIndex ROB3 K 0 11
-   FrameIndex ROB3 K 1 11
+   FrameIndex DUMF K 0 11
+   FrameIndex DUMF K 1 11
 
-   FrameIndex ROB3 L 0 12
-   FrameIndex ROB3 L 1 12
+   FrameIndex DUMF L 0 12
+   FrameIndex DUMF L 1 12
 
-   FrameIndex ROB3 M 0 13
-   FrameIndex ROB3 M 1 13
+   FrameIndex DUMF M 0 13
+   FrameIndex DUMF M 1 13
 
-   FrameIndex ROB3 N 0 14
-   FrameIndex ROB3 N 1 14
+   FrameIndex DUMF N 0 14
+   FrameIndex DUMF N 1 14
 
-   FrameIndex ROB3 O 0 15
-   FrameIndex ROB3 O 1 15
+   FrameIndex DUMF O 0 15
+   FrameIndex DUMF O 1 15
 
-   FrameIndex ROB3 P 0 16
-   FrameIndex ROB3 P 1 16
+   FrameIndex DUMF P 0 16
+   FrameIndex DUMF P 1 16
 
-   FrameIndex ROB3 Q 0 17
-   FrameIndex ROB3 Q 1 17
+   FrameIndex DUMF Q 0 17
+   FrameIndex DUMF Q 1 17
 
-   FrameIndex ROB3 R 0 18
-   FrameIndex ROB3 R 1 18
+   FrameIndex DUMF R 0 18
+   FrameIndex DUMF R 1 18
 
-   FrameIndex ROB3 S 0 19
-   FrameIndex ROB3 S 1 19
+   FrameIndex DUMF S 0 19
+   FrameIndex DUMF S 1 19
 
    //death 2
-   FrameIndex ROB1 A 0 21
-   FrameIndex ROB1 A 1 21
+   FrameIndex DUME A 0 21
+   FrameIndex DUME A 1 21
 
-   FrameIndex ROB1 B 0 22
-   FrameIndex ROB1 B 1 22
+   FrameIndex DUME B 0 22
+   FrameIndex DUME B 1 22
 
-   FrameIndex ROB1 C 0 23
-   FrameIndex ROB1 C 1 23
+   FrameIndex DUME C 0 23
+   FrameIndex DUME C 1 23
 
-   FrameIndex ROB1 D 0 22
-   FrameIndex ROB1 D 1 22
+   FrameIndex DUME D 0 22
+   FrameIndex DUME D 1 22
 
-   FrameIndex ROB1 E 0 23
-   FrameIndex ROB1 E 1 23
+   FrameIndex DUME E 0 23
+   FrameIndex DUME E 1 23
 
-   FrameIndex ROB1 F 0 24
-   FrameIndex ROB1 F 1 24
+   FrameIndex DUME F 0 24
+   FrameIndex DUME F 1 24
 
-   FrameIndex ROB1 G 0 25
-   FrameIndex ROB1 G 1 25
+   FrameIndex DUME G 0 25
+   FrameIndex DUME G 1 25
 
-   FrameIndex ROB1 H 0 26
-   FrameIndex ROB1 H 1 26
+   FrameIndex DUME H 0 26
+   FrameIndex DUME H 1 26
 
-   FrameIndex ROB1 I 0 27
-   FrameIndex ROB1 I 1 27
+   FrameIndex DUME I 0 27
+   FrameIndex DUME I 1 27
 
-   FrameIndex ROB1 J 0 28
-   FrameIndex ROB1 J 1 28
+   FrameIndex DUME J 0 28
+   FrameIndex DUME J 1 28
 
-   FrameIndex ROB1 K 0 29
-   FrameIndex ROB1 K 1 29
+   FrameIndex DUME K 0 29
+   FrameIndex DUME K 1 29
 
-   FrameIndex ROB1 L 0 30
-   FrameIndex ROB1 L 1 30
+   FrameIndex DUME L 0 30
+   FrameIndex DUME L 1 30
 
-   FrameIndex ROB1 M 0 31
-   FrameIndex ROB1 M 1 31
+   FrameIndex DUME M 0 31
+   FrameIndex DUME M 1 31
 
-   FrameIndex ROB1 N 0 32
-   FrameIndex ROB1 N 1 32
+   FrameIndex DUME N 0 32
+   FrameIndex DUME N 1 32
 
-   FrameIndex ROB1 O 0 33
-   FrameIndex ROB1 O 1 33
+   FrameIndex DUME O 0 33
+   FrameIndex DUME O 1 33
 
-   FrameIndex ROB1 P 0 32
-   FrameIndex ROB1 P 1 32
+   FrameIndex DUME P 0 32
+   FrameIndex DUME P 1 32
 
-   FrameIndex ROB1 Q 0 33
-   FrameIndex ROB1 Q 1 33
+   FrameIndex DUME Q 0 33
+   FrameIndex DUME Q 1 33
 
-   FrameIndex ROB1 R 0 34
-   FrameIndex ROB1 R 1 34
+   FrameIndex DUME R 0 34
+   FrameIndex DUME R 1 34
 
-   FrameIndex ROB1 S 0 35
-   FrameIndex ROB1 S 1 35
+   FrameIndex DUME S 0 35
+   FrameIndex DUME S 1 35
 
-   FrameIndex ROB1 T 0 36
-   FrameIndex ROB1 T 1 36
+   FrameIndex DUME T 0 36
+   FrameIndex DUME T 1 36
 
-   FrameIndex ROB1 U 0 37
-   FrameIndex ROB1 U 1 37
+   FrameIndex DUME U 0 37
+   FrameIndex DUME U 1 37
 
-   FrameIndex ROB1 V 0 38
-   FrameIndex ROB1 V 1 38
+   FrameIndex DUME V 0 38
+   FrameIndex DUME V 1 38
 
-   FrameIndex ROB1 W 0 39
-   FrameIndex ROB1 W 1 39
+   FrameIndex DUME W 0 39
+   FrameIndex DUME W 1 39
 
-   FrameIndex ROB1 X 0 40
-   FrameIndex ROB1 X 1 40
+   FrameIndex DUME X 0 40
+   FrameIndex DUME X 1 40
 
-   FrameIndex ROB1 Y 0 41
-   FrameIndex ROB1 Y 1 41
+   FrameIndex DUME Y 0 41
+   FrameIndex DUME Y 1 41
 
    //pain
-   FrameIndex PGRD A 0 27
-   FrameIndex PGRD A 1 27
+   FrameIndex DUMD A 0 27
+   FrameIndex DUMD A 1 27
 
    //attack
-   FrameIndex PGRD B 0 42
-   FrameIndex PGRD B 1 42
+   FrameIndex DUMD B 0 42
+   FrameIndex DUMD B 1 42
 
-   FrameIndex PGRD C 0 43
-   FrameIndex PGRD C 1 43
+   FrameIndex DUMD C 0 43
+   FrameIndex DUMD C 1 43
 
-   FrameIndex PGRD D 0 44
-   FrameIndex PGRD D 1 44
+   FrameIndex DUMD D 0 44
+   FrameIndex DUMD D 1 44
 
-   FrameIndex PGRD E 0 45
-   FrameIndex PGRD E 1 45
+   FrameIndex DUMD E 0 45
+   FrameIndex DUMD E 1 45
 
    //Spawn
-   FrameIndex AGRD A 0 72
-   FrameIndex AGRD A 1 72
+   FrameIndex DUMA A 0 72
+   FrameIndex DUMA A 1 72
 
-   FrameIndex AGRD B 0 73
-   FrameIndex AGRD B 1 73
+   FrameIndex DUMA B 0 73
+   FrameIndex DUMA B 1 73
 
-   FrameIndex AGRD C 0 74
-   FrameIndex AGRD C 1 74
+   FrameIndex DUMA C 0 74
+   FrameIndex DUMA C 1 74
 
-   FrameIndex AGRD D 0 75
-   FrameIndex AGRD D 1 75
+   FrameIndex DUMA D 0 75
+   FrameIndex DUMA D 1 75
 
    //Look right
-   FrameIndex AGRD E 0 93
-   FrameIndex AGRD E 1 93
+   FrameIndex DUMA E 0 93
+   FrameIndex DUMA E 1 93
 
-   FrameIndex AGRD F 0 94
-   FrameIndex AGRD F 1 94
+   FrameIndex DUMA F 0 94
+   FrameIndex DUMA F 1 94
 
-   FrameIndex AGRD G 0 97
-   FrameIndex AGRD G 1 97
+   FrameIndex DUMA G 0 97
+   FrameIndex DUMA G 1 97
 
-   FrameIndex AGRD H 0 98
-   FrameIndex AGRD H 1 98
+   FrameIndex DUMA H 0 98
+   FrameIndex DUMA H 1 98
 
    //Centre low when looking (smoother animation)
-   FrameIndex AGRD I 0 96
-   FrameIndex AGRD I 1 96
+   FrameIndex DUMA I 0 96
+   FrameIndex DUMA I 1 96
 
-   FrameIndex AGRD J 0 91
-   FrameIndex AGRD J 1 91
+   FrameIndex DUMA J 0 91
+   FrameIndex DUMA J 1 91
 
    //See
-   FrameIndex SEWR A 0 62
-   FrameIndex SEWR A 1 62
+   FrameIndex DUMC A 0 62
+   FrameIndex DUMC A 1 62
 
-   FrameIndex SEWR B 0 63
-   FrameIndex SEWR B 1 63
+   FrameIndex DUMC B 0 63
+   FrameIndex DUMC B 1 63
 
-   FrameIndex SEWR C 0 64
-   FrameIndex SEWR C 1 64
+   FrameIndex DUMC C 0 64
+   FrameIndex DUMC C 1 64
 
-   FrameIndex SEWR D 0 65
-   FrameIndex SEWR D 1 65
+   FrameIndex DUMC D 0 65
+   FrameIndex DUMC D 1 65
 
-   FrameIndex SEWR E 0 66
-   FrameIndex SEWR E 1 66
+   FrameIndex DUMC E 0 66
+   FrameIndex DUMC E 1 66
 
-   FrameIndex SEWR F 0 67
-   FrameIndex SEWR F 1 67
+   FrameIndex DUMC F 0 67
+   FrameIndex DUMC F 1 67
 
-   FrameIndex SEWR G 0 68
-   FrameIndex SEWR G 1 68
+   FrameIndex DUMC G 0 68
+   FrameIndex DUMC G 1 68
 
-   FrameIndex SEWR H 0 69
-   FrameIndex SEWR H 1 69
+   FrameIndex DUMC H 0 69
+   FrameIndex DUMC H 1 69
 
-   FrameIndex SEWR I 0 70
-   FrameIndex SEWR I 1 70
+   FrameIndex DUMC I 0 70
+   FrameIndex DUMC I 1 70
 }
 model wosSecuribotFriendly {
    Path "models/npc/NJed209/"
@@ -519,42 +519,42 @@ model wosSecuribotFriendly {
    ZOffset 24
 
    //Low position
-   FrameIndex ROB2 A 0 2
-   FrameIndex ROB2 A 1 2
+   FrameIndex DUMB A 0 2
+   FrameIndex DUMB A 1 2
 
    //Half up
-   FrameIndex ROB2 B 0 1
-   FrameIndex ROB2 B 1 1
+   FrameIndex DUMB B 0 1
+   FrameIndex DUMB B 1 1
 
    //stood up
-   FrameIndex ROB2 C 0 0
-   FrameIndex ROB2 C 1 0
+   FrameIndex DUMB C 0 0
+   FrameIndex DUMB C 1 0
 
    //Look Right
-   FrameIndex ROB2 D 0 4
-   FrameIndex ROB2 D 1 4
+   FrameIndex DUMB D 0 4
+   FrameIndex DUMB D 1 4
 
    //Fully right
-   FrameIndex ROB2 E 0 5
-   FrameIndex ROB2 E 1 5
+   FrameIndex DUMB E 0 5
+   FrameIndex DUMB E 1 5
 
    //Turn back
-   FrameIndex ROB2 F 0 4
-   FrameIndex ROB2 F 1 4
+   FrameIndex DUMB F 0 4
+   FrameIndex DUMB F 1 4
 
    //Front facing again
-   FrameIndex ROB2 G 0 0
-   FrameIndex ROB2 G 1 0
+   FrameIndex DUMB G 0 0
+   FrameIndex DUMB G 1 0
 
    //Turn left
-   FrameIndex ROB2 H 0 8
-   FrameIndex ROB2 H 1 8
+   FrameIndex DUMB H 0 8
+   FrameIndex DUMB H 1 8
 
    //Fully Left
-   FrameIndex ROB2 I 0 9
-   FrameIndex ROB2 I 1 9
+   FrameIndex DUMB I 0 9
+   FrameIndex DUMB I 1 9
 
    //Turn back
-   FrameIndex ROB2 J 0 8
-   FrameIndex ROB2 J 1 8
+   FrameIndex DUMB J 0 8
+   FrameIndex DUMB J 1 8
 }

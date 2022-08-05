@@ -449,32 +449,181 @@ class wosCeilingTurret : CeilingTurret replaces CeilingTurret {
 }
 // crusader XP replacer ///////////////////////////////////////////////////////////////
 class wosCrusader : Crusader replaces Crusader {
-	action void W_rewardXPCrusader (int rewardXP) {
+	Default {
+		//$Category "Monsters/WoS"
+		//$Title "wosCrusader"
+		//$Sprite "ROB2A1"
+	}
+  	action void W_rewardXPcrusader (int rewardXP) {
 		let pawn = binderPlayer(target);
-		if ( pawn && pawn.player ) {
+		if ( pawn && pawn.Player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}
 	States {
+		Spawn:
+			DUMA A 10 A_LookEx (0, 0, 0, 0, 0, "Activation");
+			Loop;
+
+		Activation:
+			DUMB AB 2;
+			goto See;
+			
+		Idle:
+			DUMB B 3 A_StartSound("robot/deactivation");
+			DUMB A 3;
+			goto Spawn;
+		
+		See:
+			DUMC AA 1 A_Chase();
+			DUMC A 1 A_Chase();
+			DUMC BB 1 A_Chase();
+			DUMC B 1 A_Chase();
+			DUMC CC 1 A_Chase();
+			DUMC C 1 A_Chase();
+			DUMC DD 1 A_Chase();
+			DUMC D 1 A_Chase();
+			DUMC D 0 A_StartSound("crus/walk", CHAN_BODY, CHANF_DEFAULT, 0.5);
+			DUMC EE 1 A_Chase();
+			DUMC E 1 A_Chase();
+			DUMC FF 1 A_Chase();
+			DUMC F 1 A_Chase();
+			DUMC GG 1 A_Chase();
+			DUMC G 1 A_Chase();
+			DUMC HH 1 A_Chase();
+			DUMC H 1 A_Chase();
+			DUMC II 1 A_Chase();
+			DUMC I 1 A_Chase();
+			DUMC I 0 A_StartSound("crus/walk", CHAN_BODY, CHANF_DEFAULT, 0.5);
+			goto See +2;  //makes animation a little smoother
+
+		Melee:
+			DUMD C 3 A_FaceTarget();
+			DUMD D 3 A_StartSound ("skeleton/swing");
+			DUMD E 3 A_MeleeAttack();
+			DUMD E 3 A_FaceTarget();
+			DUMD D 3 A_FaceTarget();
+			DUMD C 3 A_FaceTarget();
+			goto See;
+		
+		Missile:    
+			DUMD HH 5 A_FaceTarget();
+			DUMD A 6 A_CrusaderChoose();
+			DUMD B 5 A_CrusaderSweepLeft();
+			DUMD A 5 A_CrusaderSweepLeft();
+			DUMD B 5 A_CrusaderSweepRight();
+			DUMD A 5 A_CrusaderRefire();
+			Goto See;
+
+		Pain:
+			DUMD G 2;
+			DUMD G 2 A_Pain();
+			goto See;
+
 		Death:
-			ROB2 G 3 A_Scream;
-			ROB2 H 5 A_TossGib;
-			ROB2 I 4 Bright A_TossGib;
-			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
-			ROB2 J 4 Bright A_Explode(64, 64, alert:true);
-			ROB2 K 4 Bright A_Fall;
-			TNT1 A 0 W_rewardXPCrusader(400);
-			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
-			ROB2 L 4 A_Explode(64, 64, alert:true);
-			ROB2 MN 4 A_TossGib;
-			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
-			ROB2 O 4 A_Explode(64, 64, alert:true);
-			TNT1 A 0 W_rewardXPCrusader(SpawnHealth());
-			ROB2 P -1 A_CrusaderDeath;
+			//TNT1 A 0 A_SpawnItemEx ("Alarm01", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
+			TNT1 A 0 A_SpawnItemEx ("CrusHeavyLegs", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
+			TNT1 A 0 A_SpawnItemEx ("CrusHeavyBody", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
+			TNT1 A 0 A_SpawnItemEx ("CrusHeavyArm", 8.0, 30.0, 40.0, 0.0, 4.0, 2.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
+			TNT1 A 0 A_SpawnItemEx ("CrusHeavyGun", 8.0, -30.0, 40.0, 0.0, -5.0, 0.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
+			TNT1 A 0 A_SpawnItemEx ("wosExplosion_medium", 0.0, 0.0, 32.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			TNT1 A 0 W_rewardXPcrusader(SpawnHealth());
+			//TNT1 A 0 A_SpawnItemEx ("ModelSmoke1Medium", 0.0, 0.0, 32.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
+			TNT1 A 3 A_Quake(9,8,0,192,"NJMT");
+			TNT1 AAAAAA 1 A_TossGib();
+			TNT1 A 3 A_Scream();
+			TNT1 A 3 A_Fall();
+			TNT1 A 3;
+			stop;
+  	}
+}
+class CrusHeavyLegs : actor {
+	Default {
+		Height 1;
+		Radius 1;
+		Mass 5;
+		+NOBLOOD;
+	}	
+	States {
+		Spawn:
+			DUME AAAAAAAA 2 A_TossGib();
+			DUME B 8;
+			DUME C 8;
+			DUME D 8;
+			DUME E 35;
+			Goto FadeOut;
+			
+		FadeOut:
+			DUME E 1 A_FadeOut(0.01);
+			Loop;
+   	}
+}
+class CrusHeavyBody : actor {
+	Default {
+		Height 1;
+		Radius 1;
+		Mass 5;
+		+NOBLOOD;
+	}	
+	States {
+		Spawn:
+			DUME A 3;
+			DUME B 3;
+			DUME C 3;
+			DUME D 3;
+			DUME E 1 A_SetTranslucent(0.9, 0);
+			DUME E 2 A_SetTranslucent(0.8, 0);
+			DUME F 1 A_SetTranslucent(0.7, 0);
+			DUME F 2 A_SetTranslucent(0.6, 0);
+			DUME G 1 A_SetTranslucent(0.5, 0);
+			DUME G 2 A_SetTranslucent(0.4, 0);
+			DUME H 1 A_SetTranslucent(0.3, 0);
+			DUME H 2 A_SetTranslucent(0.2, 0);
 			Stop;
-	}
+  	}
+}
+class CrusHeavyGun : actor {
+	Default {
+		Height 1;
+		Radius 1;
+		Mass 5;
+		+NOBLOOD;
+		+CORPSE;
+	}	
+	States {
+		Spawn:
+			DUME ABCDEF 1;
+			Loop;			
+		Crash:
+			DUME D 70;
+			goto FadeOut;			
+		FadeOut:
+			DUME D 1 A_FadeOut(0.01);
+			Loop;		
+  	}
+}
+class CrusHeavyArm : actor {
+	Default {
+		Height 1;
+		Radius 1;
+		Mass 5;
+		+NOBLOOD;
+		+CORPSE;
+	}	
+	States {
+		Spawn:
+			DUME ABCDEFGH 3;
+			Loop;		
+		Crash:
+			DUME IJKLMNOPONMNOPIJKLMNOPONMNOPIJKLMNOPMNOPMNOPMNOPMNOPMNO 6;
+			DUME P 35;
+			goto FadeOut;		
+		FadeOut:
+			DUME P 1 A_FadeOut(0.01);
+			Loop;		
+  	}
 }
 // Inquisitor XP replacer /////////////////////////////////////////////////////////////
 class wosInquisitor : Inquisitor replaces Inquisitor {
@@ -570,6 +719,11 @@ class wosReaver : Reaver replaces Reaver {
 }
 // sentinel XP replacer ///////////////////////////////////////////////////////////////
 class wosSentinel : Sentinel replaces Sentinel {
+    Default {
+        //$Category "Monsters/WoS"
+		//$Title "wosSentinel"
+		//$Sprite "SEWRA1"
+    }
 	action void W_rewardXPsentinel (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
@@ -578,21 +732,95 @@ class wosSentinel : Sentinel replaces Sentinel {
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}
-	Default {
-		//$Category "Monsters/WoS"
-		//$Title "wosSentinel"
-	}
+    States {
+        Spawn:
+            DUMA A 10 A_Look();
+            Loop;
+        See:
+            DUMA A 0 {
+                bFLOATBOB = true;
+            }
+            DUMA AAA 1 A_Chase ();
+            DUMA A 1 A_Chase();
+            DUMA A 0 {
+				if ( random(1,5) == 3 ) {
+					return resolveState("Bobby");
+				}
+				return resolveState(null);
+			}
+            DUMA AAA 1 A_Chase ();
+            DUMA A 1 A_Chase();
+            Loop;
+        
+        Bobby:
+            DUMA A 0 {
+                bFLOATBOB = false;
+            }
+            DUMA AAAAAA 6 A_SentinelBob();
+            goto See;
+        
+        Missile:
+            DUMA B 0 A_CheckLOF ("Missile2", CLOFF_JUMP_ON_MISS|CLOFF_MUSTBESOLID, 3072, 0, 0, 0, 24, 0, AAPTR_DEFAULT);
+            goto See;
+        Missile2:
+            DUMA B 4 A_FaceTarget();
+            DUMA C 8 A_SentinelAttack();
+            DUMA C 4 A_SentinelRefire();
+            Goto Missile+1;
+        
+        Pain:
+            /*DUMA D 0 A_Jump (256, "Pain1", "Pain2");
+            
+        Pain1:    
+            DUMA K 4;
+            DUMA K 4 A_Pain();
+            Goto See;
+            
+        Pain2:*/
+            DUMA D 4;
+            DUMA D 4 A_Pain();
+            Goto See;
+
+        Death:
+            //change to give nogravity and explosion end
+            //TNT1 A 0 A_SpawnItemEx ("Alerter", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION, 0);
+            DUMA E 2 A_NoGravity();
+            DUMA E 3;
+            DUMA FFFF 1 A_TossGib();
+            DUMA G 1 A_Scream();
+            DUMA GGG 1 A_TossGib();
+            TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
+            DUMA G 1 A_SpawnItemEx ("wosSentinelDeath", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+            TNT1 A 1 A_NoBlocking();
+            Stop;
+        
+            //unlikely to be needed because they don't leave corpses
+        Crush:
+            TNT1 A 4;
+            Stop;
+    }
+}
+class wosSentinelDeath : actor {
+    Default {
+        Mass 5;
+        Height 1;
+        Radius 1;
+        +NOGRAVITY;
+        +NOBLOOD;
+    }	
 	States {
-		Death:
-			SEWR D 7 A_Fall();
-			SEWR E 8 Bright A_TossGib();
-			TNT1 A 0 A_SpawnItemEx("wosExplosion_low");
-			SEWR F 5 Bright A_Scream();
-			SEWR GH 4 Bright A_TossGib();
-			TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
-			SEWR I 4 A_FadeOut(0.5);
-			SEWR J 5 A_FadeOut(0.5);
-			Stop;
+		Spawn:
+            DUMB A 0;
+            DUMB A 1 A_SpawnItemEx ("wosExplosion_low", 0.0, 0.0, 24.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
+            //DUMB A 1 A_SpawnItemEx ("ModelSmoke1Small", 0.0, 0.0, 24.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
+            DUMB B 2 A_SetTranslucent(0.8, 0);
+            DUMB C 2 A_SetTranslucent(0.7, 0);
+            DUMB D 2 A_SetTranslucent(0.6, 0);
+            DUMB E 2 A_SetTranslucent(0.5, 0);
+            DUMB F 2 A_SetTranslucent(0.4, 0);
+            DUMB G 2 A_SetTranslucent(0.3, 0);
+            DUMB H 2 A_SetTranslucent(0.2, 0);
+            Stop;
 	}
 }
 class hackedSentinel : wosSentinel {

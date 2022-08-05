@@ -1,0 +1,124 @@
+Model wosCrusader {
+	//NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusader1.md3"
+	Skin 0 "crusader1.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	//resting
+	FrameIndex DUMA A 0 11
+	//resting to raise
+	FrameIndex DUMB A 0 12
+	FrameIndex DUMB B 0 13 
+	//walk
+	FrameIndex DUMC A 0 0
+	FrameIndex DUMC B 0 1
+	FrameIndex DUMC C 0 2
+	FrameIndex DUMC D 0 3
+	FrameIndex DUMC E 0 4
+	FrameIndex DUMC F 0 5
+	FrameIndex DUMC G 0 6
+	FrameIndex DUMC H 0 8
+	FrameIndex DUMC I 0 9
+	//missile
+	FrameIndex DUMD H 0 13
+	//melee
+	FrameIndex DUMD C 0 16
+	FrameIndex DUMD D 0 17
+	FrameIndex DUMD E 0 18
+	//pain
+	FrameIndex DUMD G 0 14
+}
+
+
+//use a limited 2 frame model to avoid a funny foot shuffle when just reusing the main model.
+Model wosCrusader {
+	NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusader1fire.md3"
+	
+	Skin 0 "cru1fire.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	//missile
+	FrameIndex DUMD A 0 0
+	FrameIndex DUMD B 0 1
+}
+
+
+Model CrusHeavyLegs {
+	//NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusmultilegs.md3"
+	Skin 0 "crusader1.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	FrameIndex DUME A 0 0
+	FrameIndex DUME B 0 1
+	FrameIndex DUME C 0 2
+	FrameIndex DUME D 0 3
+	FrameIndex DUME E 0 4
+}
+
+Model CrusHeavyGun {
+	//NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusheavygun.md3"
+	Skin 0 "crusader1.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	FrameIndex DUME A 0 0
+	FrameIndex DUME B 0 1
+	FrameIndex DUME C 0 2
+	FrameIndex DUME D 0 3
+	FrameIndex DUME E 0 4
+	FrameIndex DUME F 0 5
+}
+
+Model CrusHeavyArm {
+	//NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusheavyarm.md3"
+	Skin 0 "crusader1.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	FrameIndex DUME A 0 0
+	FrameIndex DUME B 0 1
+	FrameIndex DUME C 0 2
+	FrameIndex DUME D 0 3
+	FrameIndex DUME E 0 4
+	FrameIndex DUME F 0 5
+	FrameIndex DUME G 0 6
+	FrameIndex DUME H 0 7
+	FrameIndex DUME I 0 8
+	FrameIndex DUME J 0 9
+	FrameIndex DUME K 0 10
+	FrameIndex DUME L 0 11
+	FrameIndex DUME M 0 12
+	FrameIndex DUME N 0 13
+	FrameIndex DUME O 0 14
+	FrameIndex DUME P 0 15
+}
+
+Model CrusHeavyBody {
+	//NOINTERPOLATION
+	Path "Models/npc/njcrusader/"
+	Model 0 "crusheavybody.md3"
+	Skin 0 "crusader1.png"
+	
+	Scale 0.50 0.55 0.55
+	
+	FrameIndex DUME A 0 0
+	FrameIndex DUME B 0 1
+	FrameIndex DUME C 0 2
+	FrameIndex DUME D 0 3
+	FrameIndex DUME E 0 4
+	FrameIndex DUME F 0 5
+	FrameIndex DUME G 0 6
+	FrameIndex DUME H 0 7
+}

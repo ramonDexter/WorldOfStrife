@@ -467,8 +467,8 @@ DoomEdNums {
 	20462 = wosSentinel
 	20463 = wosSecuriBot
 	20464 = wosSecuribotFriendly
+	20465 = wosCrusader
 	/*
-	20465 = markerNamed_BinderBase
 	20466 = markerNamed_insulaNorth
 	20467 = markerNamed_insulaWest
 	20468 = markerNamed_powerStation

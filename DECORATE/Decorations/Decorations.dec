@@ -10051,12 +10051,30 @@ actor wosD_grilledChicken 21574 {
 	Tag "grilled chicken"
 	radius 8
 	height 8
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	States {
 		Spawn:
 			DUMM A -1
+			Stop
+	}
+}
+actor wosD_grilledChicken2 : wosD_grilledChicken {
+	Tag "grilled chicken on a plate"
+}
+actor wosD_grilledChickenPlate 21575 {
+	//$Category "Decorations/Wos"
+	//$Title "grilled chicken on a plate"
+	Tag "grilled chicken on a plate"
+	radius 8
+	height 1
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1 NODELAY A_SpawnItemEx("wosD_grilledChicken2", 0,0,0.5, 0,0,0, 0, SXF_NOCHECKPOSITION, 0)
 			Stop
 	}
 }

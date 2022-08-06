@@ -1,22 +1,22 @@
-//const CrossbowBaseWeight = 85;
+////////////////////////////////////////////////////////////////////////////////
+// crossbow ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
-{
+// weapon //////////////////////////////////////////////////////////////////////
+class wosStrifeXbow : wosWeapon replaces StrifeCrossbow {
     bool xbowSwitch;
 
-    Default
-    {
+    Default {
 		//$Category "weapons/WoS"
 		//$Title "zsc crossbow"
-        +FLOORCLIP
-		+WEAPON.NOALERT
-		+WEAPON.NOAUTOAIM
+        +FLOORCLIP;
+		+WEAPON.NOALERT;
+		+WEAPON.NOAUTOAIM;
 		
 		height 16;		
         Tag "$T_CROSSBOW"; // "Crossbow"
 		Weapon.Slotnumber 2;
-		Weapon.SlotPriority 0.2;
-        //Weapon.SelectionOrder 1200;        
+		Weapon.SelectionOrder 1200;
         Weapon.AmmoUse1 0;
         Weapon.AmmoGive1 12;
         Weapon.AmmoType1 "ElectricBolts";
@@ -29,21 +29,17 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
         Weapon.UpSound "weapons/weaponUP";
     }
 
-    States
-    {
+    States {
         Spawn:
             DUMM A -1;
-            Stop;
-	
+            Stop;	
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
-			Goto Ready;
-			
+			Goto Ready;			
         Ready:
 			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("PoisonReady"); }
@@ -53,20 +49,17 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
         ElectricReady:
 			XBOW A 0;
             XBOW A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-            Loop;
-			
+            Loop;			
         PoisonReady:
 			XBOW A 0;
             XBOW H 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-            Loop;
-			
+            Loop;			
         AltFire:
 			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("SetElectric"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("SetPoison"); }
 				return ResolveState(null);
 			}
-
         SetElectric:
             TNT1 A 0 {
                 invoker.xbowSwitch = 0;
@@ -76,7 +69,6 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             XBOW G 5;
             XBOW A 5 A_CheckReload();
             goto ElectricReady;
-
         SetPoison:
 			TNT1 A 0 {
 				if(CountInv("PoisonBolts") < 1) {return ResolveState("SetElectric");}
@@ -87,15 +79,13 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
 				//self.bNOALERT = true;
             }
             XBOW IJH 5;
-            goto PoisonReady;
-        
+            goto PoisonReady;        
         Fire:
 			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("PoisonFire"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("ElectricFire"); }
 				return ResolveState(null);
 			}
-
         ElectricFire:
             XBOW A 3;
             XBOW B 6 {
@@ -109,7 +99,6 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             XBOW G 0;
             XBOW G 5 A_CheckReload();
             goto ElectricReady+1;
-
         PoisonFire:
 			TNT1 A 0 {
 				if(CountInv("PoisonBolts") < 1) {return ResolveState("ElectricFire");}
@@ -132,14 +121,12 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             XBOW J 0;
             XBOW J 5 A_CheckReload();
             goto PoisonReady;
-
         Select:
 			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("SelectPoison"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("SelectElectric"); }
 				return ResolveState(null);
-			}
-        
+			}        
         SelectElectric:			
             XBOW A 1 A_Raise();
 			XBOW A 0 A_Raise();
@@ -148,14 +135,12 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             XBOW H 1 A_Raise();
 			XBOW H 0 A_Raise();
             Loop;
-
         Deselect:
 			TNT1 A 0 {
 				if(invoker.xbowSwitch == 1) { return ResolveState("DeselectPoison"); }
 				if(invoker.xbowSwitch == 0) { return ResolveState("DeselectElectric"); }
 				return ResolveState(null);
-			}
-        
+			}        
         DeselectElectric:
 			XBOW A 0 A_Lower();
             XBOW A 1 A_Lower();
@@ -165,17 +150,27 @@ class wosStrifeXbow : wosWeapon replaces StrifeCrossbow
             XBOW H 1 A_Lower();
             Loop;
 		Flash:
-			Stop;
-			
+			Stop;			
 		AmmoDepleted:
 			TNT1 A 0 A_SelectWeapon("wosPunchDagger");
-			Stop;
-			
-		
+			Stop;		
     }
 }
+class wosStrifeXbow2 : StrifeCrossbow2 replaces StrifeCrossbow2 {
+	Default {
+		+WEAPON.CHEATNOTWEAPON			
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-class zscElectricBolt : Actor {
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// projectile //////////////////////////////////////////////////////////////////
+/*class zscElectricBolt : Actor {
 	Default {
 		+STRIFEDAMAGE
 		+NOBLOCKMAP
@@ -240,10 +235,7 @@ class zscPoisonBolt : Actor {
 		}
 		return 1;
 	}
-}
-
-class wosStrifeXbow2 : StrifeCrossbow2 replaces StrifeCrossbow2 {
-	Default {
-		+WEAPON.CHEATNOTWEAPON			
-	}
-}
+}*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

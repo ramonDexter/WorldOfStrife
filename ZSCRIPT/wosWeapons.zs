@@ -253,25 +253,24 @@ class wosWeapon : StrifeWeapon {
 			return;
 		}
 		A_StartSound ("weapons/mauler1", CHAN_WEAPON);
-		/*Weapon weap = player.ReadyWeapon;
-		if (weap != null) {
-			if (!weap.DepleteAmmo (weap.bAltFire, true, 2))
-				return;			
-		}*/
-		player.mo.PlayAttacking2 ();
-		double pitch = BulletSlope ();			
-		for (int i = 0 ; i < 20 ; i++) {
-			int damage = 5 * random[Mauler1](1, 3);
-			double ang = angle + Random2[Mauler1]() * (7.625 / 256);
-			// Strife used a range of 2112 units for the mauler to signal that
-			// it should use a different puff. ZDoom's default range is longer
-			// than this, so let's not handicap it by being too faithful to the
-			// original.
-			LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
+		if ( invoker.magazine < 20 ) {
+			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Reload"));
+		} else {
+			player.mo.PlayAttacking2 ();
+			double pitch = BulletSlope ();			
+			for (int i = 0 ; i < 20 ; i++) {
+				int damage = 5 * random[Mauler1](1, 3);
+				double ang = angle + Random2[Mauler1]() * (7.625 / 256);
+				// Strife used a range of 2112 units for the mauler to signal that
+				// it should use a different puff. ZDoom's default range is longer
+				// than this, so let's not handicap it by being too faithful to the
+				// original.
+				LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
+				A_AlertMonsters();
+			}
 			//take away ammo from magazine
 			invoker.magazine-=20;
-			A_AlertMonsters();
-		}
+		}		
 	}
 	////////////////////////////////////////////////////////////////////////////
 	
@@ -279,7 +278,7 @@ class wosWeapon : StrifeWeapon {
 	// A_FireMauler2Pre ////////////////////////////////////////////////////////
 	// credits: gzdoom.pk3 /////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
-	action void W_FirewosMauler2Pre() {
+	action void W_FireMauler2Pre() {
 		A_StartSound ("weapons/mauler2charge", CHAN_WEAPON);
 		if (player != null) {
 			PSprite psp = player.GetPSprite(PSP_WEAPON);
@@ -312,18 +311,18 @@ class wosWeapon : StrifeWeapon {
 		if (player == null) {
 			return;
 		}
-		Weapon weapon = player.ReadyWeapon;
-		/*if (weapon != null) {
-			if (!weapon.DepleteAmmo (weapon.bAltFire))
-				return;
-		}*/
-		player.mo.PlayAttacking2 ();		
-		SpawnPlayerMissile ("wosMaulerTorpedo");
-		//take away ammo from magazine
-		invoker.magazine-=50;
-		DamageMobj (self, null, 15, 'Disintegrate');
-		Thrust(7.8125, Angle+180.);
-		A_AlertMonsters();
+		if ( invoker.magazine < 50 ) {
+			Player.SetPSprite(PSP_WEAPON,invoker.FindState("Reload"));
+		} else {
+			player.mo.PlayAttacking2 ();		
+			SpawnPlayerMissile ("wosMaulerTorpedo");
+			//take away ammo from magazine
+			invoker.magazine-=50;
+			DamageMobj (self, null, 15, 'Disintegrate');
+			Thrust(7.8125, Angle+180.);
+			A_AlertMonsters();
+		}
+		
 	}
 	////////////////////////////////////////////////////////////////////////////	
 	

@@ -3559,7 +3559,22 @@ model wosD_grilledChicken {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-
+model wosD_grilledChicken2 {
+	path "models/props/food/"
+	model 0 "roastedchicken.md3"
+	skin 0 "roastedchicken.png"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_grilledChickenPlate {
+	path "models/props/food/"
+	model 0 "dx_talir.md3"
+	skin 0 "tx_talir.png"
+	scale 6.0 6.0 6.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 

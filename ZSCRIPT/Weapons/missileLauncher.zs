@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // mini-missile launcher ///////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+// weapon //////////////////////////////////////////////////////////////////////
 class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 	int miniMissile_Switch;
 
@@ -8,19 +10,18 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 		//$Category "Weapons/WoS"		
 		//$Title "zsc Mini Missile Launcher"
 		
-		+WEAPON.AMMO_OPTIONAL		
-		+FLOORCLIP
-		+WEAPON.NOAUTOAIM
+		+WEAPON.AMMO_OPTIONAL;
+		+FLOORCLIP;
+		+WEAPON.NOAUTOAIM;
 		
 		Tag "$T_MISSILELAUNCHER";
 		Inventory.PickupMessage  "$F_MISSILELAUNCHER";
-		Weapon.SelectionOrder 1800;
 		Tag "Mini Missile Launcher";
 		inventory.icon "H_MMSL";		
 		Weapon.SlotNumber 4;
+		Weapon.SelectionOrder 1800;
         Weapon.UpSound "weapons/weaponUP";
 		Mass missileLauncherBaseWeight;
-		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 8;
 		wosWeapon.magazineMax 8;
 		wosWeapon.magazineType "MiniMissiles";
@@ -29,26 +30,88 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 	States {
 		Spawn:
 			DUMM A -1;
-			Stop;
-			
+			Stop;			
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
+			Goto Ready;			
+		Ready:			
+			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
+			Loop;			
+		Deselect:
+			MMIS A 1 A_Lower();			
+			Loop;		
+		Select:
+			MMIS A 1 A_Raise();
+			Loop;				
+		Fire:
+			MMIS A 0 W_CheckAmmo();
+			MMIS A 4 W_zscFireMiniMissile2("zscMiniMissile");
+			MMIS B 4 A_Light1();
+			MMIS C 5 Bright;
+			MMIS D 2 Bright A_Light2();
+			MMIS E 2 Bright;
+			MMIS F 2 Bright A_Light0();
+			MMIS F 0 A_ReFire();
+			Goto Ready;		
+		Reload:
+			TNT1 A 0 W_reloadCheck2();
+			goto Ready;
+		DoReload:
+			MMIS A 1 Offset(0,35);
+			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLout", 1);
+			MMIS A 1 Offset(0,44);
+			MMIS A 1 Offset(0,52);
+			MMIS A 1 Offset(0,62);
+			MMIS A 1 Offset(0,72);
+			MMIS A 1 Offset(0,82);
+			TNT1 A 16 W_Reload2(); //middle
+			MMIS A 1 Offset(0,82);
+			MMIS A 1 Offset(0,72);
+			MMIS A 1 Offset(0,62);
+			MMIS A 1 Offset(0,52);
+			MMIS A 1 Offset(0,44);
+			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLin", 1);
+			MMIS A 1 Offset(0,35);
+			MMIS A 1 Offset(0,32);
 			Goto Ready;
-			
-		Ready:
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// projectile //////////////////////////////////////////////////////////////////
+class zscMiniMissile : MiniMissile {
+	Default {
+		+THRUGHOST
+		Damage 20;
+	}
+	States {
+		Death:
+			SMIS A 0 A_AlertMonsters();
+			SMIS A 0 Bright A_SetTranslucent(1, 1);
+			SMIS A 0 Bright; // State left for savegame compatibility
+			SMIS A 5 Bright A_Explode(64, 64, 1, 1);
+			SMIS B 5 Bright;
+			SMIS C 4 Bright;
+			SMIS DEFG 2 Bright;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) { return ResolveState("ReadyPrimary");}
 				if(invoker.miniMissile_Switch == 1) { return ResolveState("ReadyAlt");}
 				return ResolveState(null);
 			}		
-		ReadyPrimary:*/			
-			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			Loop;
+		ReadyPrimary:*/
 		/*ReadyAlt:
 			MMIS T 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;*/
@@ -95,34 +158,24 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS H 4;
 			MMIS G 2;
 			goto ReadyPrimary;*/
-			
-		Deselect:
 			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("DeselectPrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("DeselectAlt");}
 				return ResolveState(null);
 			}
 		DeselectPrimary:*/
-			MMIS A 1 A_Lower();			
-			Loop;
 		/*DeselectAlt:
 			MMIS T 1 A_Lower();
-			Loop;*/		
-		
-		Select:
+			Loop;*/	
 			/*TNT1 A 0 {
 				if(invoker.miniMissile_Switch == 0) {return ResolveState("SelectPrimary");}
 				if(invoker.miniMissile_Switch == 1) {return ResolveState("SelectAlt");}
 				return ResolveState(null);
 			}
 		SelectPrimary:*/
-			MMIS A 1 A_Raise();
-			Loop;
 		/*SelectAlt:
 			MMIS T 1 A_Raise();
 			Loop;*/
-				
-		Fire:
 			/*TNT1 A 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 {
@@ -132,17 +185,6 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			}
 		
 		FirePrimary:*/
-			MMIS A 0 W_CheckAmmo();
-			//DUMM A 0 A_JumpIfNoAmmo("Reload");
-			MMIS A 4 W_zscFireMiniMissile2("zscMiniMissile");
-			MMIS B 4 A_Light1();
-			MMIS C 5 Bright;
-			MMIS D 2 Bright A_Light2();
-			MMIS E 2 Bright;
-			MMIS F 2 Bright A_Light0();
-			MMIS F 0 A_ReFire();
-			//Goto ReadyPrimary;
-			Goto Ready;
 		/*FireAlt:
 			MMIS T 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
@@ -154,61 +196,6 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS Y 2 Bright A_Light0();
 			MMIS Y 0 A_ReFire();
 			goto ReadyAlt;*/
-		
-		Reload:
-			TNT1 A 0 W_reloadCheck2();
-			goto Ready;
-		DoReload:
-			MMIS A 1 Offset(0,35);
-			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLout", 1);
-			MMIS A 1 Offset(0,44);
-			MMIS A 1 Offset(0,52);
-			MMIS A 1 Offset(0,62);
-			MMIS A 1 Offset(0,72);
-			MMIS A 1 Offset(0,82);
-			TNT1 A 16 W_Reload2(); //middle
-			MMIS A 1 Offset(0,82);
-			MMIS A 1 Offset(0,72);
-			MMIS A 1 Offset(0,62);
-			MMIS A 1 Offset(0,52);
-			MMIS A 1 Offset(0,44);
-			MMIS A 1 Offset(0,38) A_StartSound("weapons/RLpistolRLin", 1);
-			//TNT1 A 0 W_reload2();
-			MMIS A 1 Offset(0,35);
-			MMIS A 1 Offset(0,32);
-			Goto Ready;
-			
-		
-	}
-}
-////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////
-// projectile //////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-class zscMiniMissile : MiniMissile {
-	Default {
-		+THRUGHOST
-		Damage 20;
-	}
-	States {
-		Death:
-			SMIS A 0 A_AlertMonsters();
-			SMIS A 0 Bright A_SetTranslucent(1, 1);
-			SMIS A 0 Bright; // State left for savegame compatibility
-			SMIS A 5 Bright A_Explode(64, 64, 1, 1);
-			SMIS B 5 Bright;
-			SMIS C 4 Bright;
-			SMIS DEFG 2 Bright;
-			Stop;
-	}
-}
-////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////
-// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
 
 
 		//Weapon.AmmoUse1 1;
@@ -269,3 +256,7 @@ class missileLauncherFire2token : inventory {
 	}
 	
 }*/
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

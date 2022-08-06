@@ -10,10 +10,10 @@ class staffBlaster : wosWeapon {
 		//$Category "weapons/WoS"
 		//$Title "Blaster Staff lvl.1"
 		
-		+WEAPON.AMMO_OPTIONAL
-		+WEAPON.NOAUTOAIM
-		+WEAPON.NOAUTOFIRE		
-		+WEAPON.NOALERT	
+		+WEAPON.AMMO_OPTIONAL;
+		+WEAPON.NOAUTOAIM;
+		+WEAPON.NOAUTOFIRE;	
+		+WEAPON.NOALERT;
 		
 		Height 64;		
 		Tag "$TAG_staffBlaster";
@@ -23,10 +23,9 @@ class staffBlaster : wosWeapon {
 		AttackSound "weapons/staffShoot";
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.SlotNumber 3;
-		Weapon.SlotPriority 0.3;		
+		Weapon.SelectionOrder 200;
 		Weapon.kickback 40;
 		Mass blasterStaffBaseWeight;
-		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 48;
 		wosWeapon.magazineMax 48;
 		wosWeapon.magazineType "EnergyPod";
@@ -35,17 +34,14 @@ class staffBlaster : wosWeapon {
 	States {
 		Spawn:
 			DUMM A -1;
-			Stop;
-				
+			Stop;				
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
-			Goto Ready;
-					
+			Goto Ready;					
 		Ready:				
 			ASTF J 2 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;		
@@ -59,13 +55,11 @@ class staffBlaster : wosWeapon {
 			Loop;		
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
-			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
 			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		
 		RealFire:
 			ASTF A 0 W_CheckAmmo();
-			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			ASTF A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);
 			ASTF B 3 bright W_FireStaffBlaster2("BlasterTracer", "staffFlashShort", true);
 			ASTF C 4;
@@ -76,12 +70,10 @@ class staffBlaster : wosWeapon {
 			ASTF G 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);				
 			ASTF HIJ 4 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4|WRF_NOFIRE|WRF_NOSWITCH);
 			TNT1 A 0 { invoker.staffIsFiring = 0; } //hul se muze vratit na stranu
-			Goto Ready;
-			
+			Goto Ready;			
 		//staff melee sttack
 		AltFire: 			
 			STFM EFGH 1;
-			//TNT1 A 5;
 			STFM I 1;
 			STFM J 1;
 			STFM K 2;
@@ -93,7 +85,6 @@ class staffBlaster : wosWeapon {
 			STFM HG 1;
 			STFM FE 2;
 			Goto Ready;		
-		
 		Reload:
 			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
@@ -146,7 +137,6 @@ class staffBlasterMeleePuff : BulletPuff {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-
 //  staffBlaster.projectile  ///////////////////////////////////////////////////
 // particle based projectile ///////////////////////////////////////////////////
 // code base by denis belmondo /////////////////////////////////////////////////
@@ -163,8 +153,7 @@ class BlasterTracer : FastProjectile {
 	
 	// intentional briticism to avoid conflicts with "color" keyword.
 	// modified with strife fitting colors
-	static const color colours[] = {
-		
+	static const color colours[] = {		
 		// reversed order
 		"6b ab 4b",
 		"6b ab 4b",
@@ -172,22 +161,13 @@ class BlasterTracer : FastProjectile {
 		"37 73 23",
 		"23 57 13",
 		"13 3f 0b"
-		// reversed order
-
-		/*"13 3f 0b",
-		"23 57 13",
-		"37 73 23",
-		"4f 8f 37",
-		"6b ab 4b",
-		"8b c7 67"*/ /* appears twice so a segment of this color is longer
-					than the others. */
-	};
-	
+		// reversed orde
+	};	
 	// literally just stole this from wikipedia
 	float lerp(float v0, float v1, float t) {
 		return (1 - t) * v0 + t * v1;
 	}
-	
+
 	override void BeginPlay() {
 		// we don't want to lerp into weird coordinates
 		x1 = pos.x;
@@ -239,12 +219,10 @@ class BlasterTracer : FastProjectile {
 		Height 2;
 		Radius 2;
 		Speed TRACERSPEED;
-        //DamageFunction (16 * Random(1, 4));
-		Damage 12;
+		Damage 16;
         Decal "blueShotScorch";
         SeeSound "weapons/staffprojectile";
 		DeathSound "weapons/shotdeath";
-		//+BLOODSPLATTER;
 		+NOEXTREMEDEATH;
 	}
     States {
@@ -271,9 +249,6 @@ class BlasterTracerTrail : actor {
 	const PTCLDURATION = 2;
 	
     Default {
-		//Alpha 0.5;
-		//RenderStyle "Add";
-		//Scale 0.25;
 		+NOINTERACTION;
 		+NOBLOCKMAP;
         SeeSound "weapons/staffprojectile";
@@ -425,7 +400,6 @@ class staffFlashLong : flashBase {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-
 //  staffblaster.TESTING MODEL  ////////////////////////////////////////////////
 class staffBlasterModel : actor {
 	Default {
@@ -439,6 +413,8 @@ class staffBlasterModel : actor {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -677,8 +653,6 @@ class BlasterParticleTrailSpawner : actor {
             Stop;
 	}
 }*/
-////////////////////////////////////////////////////////////////////////////////
-
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

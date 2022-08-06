@@ -1,57 +1,49 @@
 ////////////////////////////////////////////////////////////////////////////////
 // executor rifle //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class executorRifle : wosWeapon {
 
+// weapon //////////////////////////////////////////////////////////////////////
+class executorRifle : wosWeapon {
     Default {
 		//$Category "weapons"
 		//$Title "Executor Rifle (weapon)"
-        +WEAPON.AMMO_OPTIONAL
-        +FLOORCLIP
+        +WEAPON.AMMO_OPTIONAL;
+        +FLOORCLIP;
 
         radius 24;
         height 16;
-        Tag "$TAG_executorRifle"; // ER-15 Executor Rifle
-        Inventory.PickupMessage "$FND_executorRifle"; // You picked up the Executor Rifle!
-        obituary "$OBI_executorRifle"; // %o was drilled full of holes by %k's executor rifle.
+        Tag "$TAG_executorRifle";
+        Inventory.PickupMessage "$FND_executorRifle";
+        obituary "$OBI_executorRifle";
         inventory.icon "H_ERMD";
-        weapon.SelectionOrder 600;
         weapon.SlotNumber 3;
-		Weapon.SlotPriority 0.2;
+		Weapon.SelectionOrder 400;
         weapon.kickBack 40;
         Mass executorRifleWeight;
-		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "ClipOfBullets";
-    }
-	
+    }	
     States {
         Spawn:
             ERMP A -1;
-            Stop;
-			
+            Stop;			
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
-
         Select:
             ERMD B 1 A_Raise();
             Loop;
-
         Deselect:
             ERMD B 1 A_Lower();
             Loop;
-
         Ready:
             ERMD B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
             Loop;
-
         Fire:
 			TNT1 A 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
@@ -71,7 +63,6 @@ class executorRifle : wosWeapon {
             }
             ERMD E 1 A_Refire();
             goto Ready;
-
         Reload:
 			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
@@ -96,9 +87,7 @@ class executorRifle : wosWeapon {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////////////////
 // dummy actors ////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
 class dummy_executorRifle01 : actor {
     Default {
         //$Category "Decorations/Wos"
@@ -150,6 +139,8 @@ class dummy_executorRifle03 : actor {
             Stop;
     }
 }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -212,3 +203,6 @@ class executorRifle_standing : CustomInventory {
 	}
 }
 */
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

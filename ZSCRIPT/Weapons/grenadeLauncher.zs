@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // grenade launcher ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+// weapon //////////////////////////////////////////////////////////////////////
 class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 	int grnlSwitch;
 	
@@ -19,6 +21,8 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
         Weapon.AmmoUse2 0;
         Weapon.AmmoGive2 24;
         Weapon.AmmoType2 "PhosphorusGrenadeRounds";
+		Weapon.SlotNumber 5;
+		Weapon.SelectionOrder 2400;
 		Mass grenadeLauncherBaseWeight;
         Weapon.UpSound "weapons/weaponUP";
 	}
@@ -26,31 +30,26 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 	States {
 		Spawn:
 			DUMM A -1;
-			Stop;
-			
+			Stop;			
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
-			Goto Ready;
-			
+			Goto Ready;			
         Ready:
 			TNT1 A 0 {
 				if(invoker.grnlSwitch == 1) { return ResolveState("grnl2ready"); }
 				if(invoker.grnlSwitch == 0) { return ResolveState("grnl1ready"); }
 				return ResolveState(null);
-			}
-			
+			}			
         grnl1ready:
 			GREN A 1 A_WeaponReady(WRF_ALLOWUSER1);
 			Loop;
         grnl2ready:
 			GREN D 1 A_WeaponReady(WRF_ALLOWUSER1);
 			Loop;
-
         AltFire:
 			TNT1 A 0 {
 				if(invoker.grnlSwitch == 1) { return ResolveState("setGrnl1"); }
@@ -73,7 +72,6 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
             }
             GREN D 15;
             goto grnl2ready;
-
         Fire:
 			TNT1 A 0 {
 				if(invoker.grnlSwitch == 1) { return ResolveState("grnl2fire"); }
@@ -106,7 +104,6 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 			GREN F 10;
 			GREN A 0 A_ReFire();
             goto grnl2ready;
-
         Select:
 			TNT1 A 0 {
 				if(invoker.grnlSwitch == 1) { return ResolveState("grnl2select"); }
@@ -119,7 +116,6 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
         grnl2select:
 			GREN D 1 A_Raise();
 			Loop;
-
         Deselect:
 			TNT1 A 0 {
 				if(invoker.grnlSwitch == 1) { return ResolveState("grnl2deselect"); }
@@ -132,7 +128,6 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
         grnl2deselect:
 			GREN D 1 A_Lower();
 			Loop;
-
         grnl1flash1:
 			GREF A 5 Bright A_Light1();
 			Goto LightDone;
@@ -145,11 +140,19 @@ class wosGrenadeLauncher : wosWeapon replaces StrifeGrenadeLauncher {
 			Goto LightDone;
         grnl2flash2:
 			GREF D 5 Bright A_Light2();
-			Goto LightDone;
-		
+			Goto LightDone;		
     }
 }
+class wosGrenadeLauncher2 : StrifeGrenadeLauncher2 replaces StrifeGrenadeLauncher2 {
+	Default {
+		+WEAPON.CHEATNOTWEAPON	
+		//inventory.icon "I_GRND";
+		//weapon.sisterweapon "wosGrenadeLauncher";
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 
+// projectile //////////////////////////////////////////////////////////////////
 class zscHEGrenade : HEGrenade {
 	Default {
 		+THRUGHOST
@@ -158,14 +161,6 @@ class zscHEGrenade : HEGrenade {
 class zscPhosphorousGrenade : PhosphorousGrenade {
 	Default {
 		+THRUGHOST
-	}
-}
-
-class wosGrenadeLauncher2 : StrifeGrenadeLauncher2 replaces StrifeGrenadeLauncher2 {
-	Default {
-		+WEAPON.CHEATNOTWEAPON	
-		//inventory.icon "I_GRND";
-		//weapon.sisterweapon "wosGrenadeLauncher";
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -189,3 +184,6 @@ class grenadeLauncherFire2token : inventory {
 		inventory.interhubamount 1;
 	}
 }*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

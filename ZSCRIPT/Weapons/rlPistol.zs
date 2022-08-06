@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 // storm pistol ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+// weapon //////////////////////////////////////////////////////////////////////
 class StormPistol : wosWeapon {
 
 	/*override void AttachToOwner(actor other) {
@@ -13,8 +15,8 @@ class StormPistol : wosWeapon {
 		//$Category "weapons/WoS"
 		//$Title "Pistol"
 		
-		+Weapon.AMMO_OPTIONAL
-		+THRUGHOST
+		+Weapon.AMMO_OPTIONAL;
+		+THRUGHOST;
 		
 		Tag "$TAG_StormPistol";
 		Inventory.icon "H_SPIS";
@@ -25,9 +27,8 @@ class StormPistol : wosWeapon {
         Weapon.UpSound "weapons/weaponUP";
 		Weapon.Kickback 40;
 		Weapon.SlotNumber 2;
-		Weapon.SlotPriority 0.1;
+		Weapon.SelectionOrder 800;
 		Mass stormPistolBaseWeight;
-		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 12;
 		wosWeapon.magazineMax 12;
 		wosWeapon.magazineType "ClipOfBullets";
@@ -36,33 +37,27 @@ class StormPistol : wosWeapon {
 	States {
 		Spawn:
 			DUMM R -1;
-			Stop;
-			
+			Stop;			
 		Nope:
 			DUMM A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
 		Ready:
 			DUMM A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			Loop;
-		
+			Loop;		
 		Deselect:
 			DUMM A 0 A_Lower();
 			DUMM A 1 A_Lower();
-			Loop;
-		
+			Loop;		
 		Select:
 			DUMM A 1 A_Raise();
 			DUMM A 0 A_Raise();
-			Loop;
-		
+			Loop;		
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
-			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			DUMM A 2;
 			DUMM B 1 {
 				A_GunFlash();				
@@ -73,10 +68,46 @@ class StormPistol : wosWeapon {
 			DUMM C 1;
 			TNT1 A 0 A_JumpIfInventory("NoAdvDebris",1,2,AAPTR_PLAYER1);
 			TNT1 A 0 A_FireProjectile("pistolCasingSpawner",-10,0,15,0);
-			//TNT1 A 0 A_SpawnItemEx("Casing9mm",random(3,4),cos(pitch)*-25,sin(-pitch)*25+random(31,32), random(1,3),0,random(4,6), random(-80,-90),0, SXF_ABSOLUTEMOMENTUM);
 			DUMM DE 2;
 			DUMM F 2 A_ReFire();
 			Goto Ready;
+		Reload:
+			TNT1 A 0 W_reloadCheck2();
+			goto Ready;
+		DoReload:
+			DUMM G 3;
+			DUMM HI 2;
+			DUMM JKL 3 A_StartSound("weapons/RLpistolRLout", 1);
+			DUMM M 5;
+			DUMM NOPQ 2;
+			DUMM PON 3;
+			DUMM M 5 A_StartSound("weapons/RLpistolRLin", 1);
+			TNT1 A 0 W_Reload2();
+			DUMM LKJ 2;
+			DUMM IHG 3;
+			Goto Ready;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+//const stormPistolBaseWeight = 50;
+
+
+
+		//Weapon.AmmoUse1 1;
+		//Weapon.AmmoGive1 0;
+		//Weapon.AmmoType1 "magazine_pistol";
+		//Weapon.AmmoGive2 0;
+		//Weapon.AmmoType2 "ClipOfBullets";
+		//Decal "SVEbulletScorch";
+
+		
 		/*
 		Flash:
 			SPIS B 4 bright A_light2();
@@ -119,39 +150,6 @@ class StormPistol : wosWeapon {
 		*/
 			
 			
-		Reload:
-			TNT1 A 0 W_reloadCheck2();
-			goto Ready;
-		DoReload:
-			DUMM G 3;
-			DUMM HI 2;
-			DUMM JKL 3 A_StartSound("weapons/RLpistolRLout", 1);
-			DUMM M 5;
-			DUMM NOPQ 2;
-			DUMM PON 3;
-			DUMM M 5 A_StartSound("weapons/RLpistolRLin", 1);
-			TNT1 A 0 W_Reload2();
-			DUMM LKJ 2;
-			DUMM IHG 3;
-			Goto Ready;
-	}
-}
-////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////
-// DEPRECATED - OBSOLETE ///////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-//const stormPistolBaseWeight = 50;
-
-
-
-		//Weapon.AmmoUse1 1;
-		//Weapon.AmmoGive1 0;
-		//Weapon.AmmoType1 "magazine_pistol";
-		//Weapon.AmmoGive2 0;
-		//Weapon.AmmoType2 "ClipOfBullets";
-		//Decal "SVEbulletScorch";
 
 /*class magazine_pistol : ammo {
 	Default {
@@ -160,3 +158,6 @@ class StormPistol : wosWeapon {
 		Mass 0;
 	}
 }*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

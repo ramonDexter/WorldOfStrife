@@ -1,6 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 //  assault gun ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+// weapon //////////////////////////////////////////////////////////////////////
 class wosAssaultGun : wosWeapon replaces AssaultGun {
 	bool assaultGun_isFiring;
 	
@@ -8,21 +10,19 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 		//$Category "Weapons/WoS"
 		//$Title "zsc Assault Gun"
 	
-		+WEAPON.AMMO_OPTIONAL
-		+FLOORCLIP
-		+THRUGHOST	
+		+WEAPON.AMMO_OPTIONAL;
+		+FLOORCLIP;
+		+THRUGHOST;
 		
 		Tag "$T_ASSAULTGUN";	
 		inventory.icon "H_RIFL";
-		Weapon.SelectionOrder 600;
 		Weapon.SlotNumber 3;
-		Weapon.SlotPriority 0.1;
+		Weapon.SelectionOrder 600;
 		Weapon.Kickback 40;
 		Inventory.PickupMessage "$F_ASSAULTGUN";
 		Obituary "$OBI_wosAssaultGun"; // %o was drilled full of holes by %k's assault gun.		
         Weapon.UpSound "weapons/weaponUP";
 		Mass assaultGunBaseWeight;
-		// new magazine&reload system //////////////////////////////////////////
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "ClipOfBullets";
@@ -31,40 +31,30 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 	States {
 		Spawn:
 			DUMM A -1;
-			Stop;
-			
+			Stop;			
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
 				A_ZoomFactor(1.0);
 			}
-			//TNT1 A 0 B_NoReFire();
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
-
 		Select:
 			RIFG A 1 A_Raise();
 			RIFG A 0 A_Raise();
-			Loop;
-			
+			Loop;			
 		Deselect:
 			RIFG B 0 A_Lower();
 			RIFG B 1 A_Lower();
-			Loop;
-			
+			Loop;			
 		Ready:
 			RIFG A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			Loop;
-			
+			Loop;			
 		Fire:
 			TNT1 A 0 W_CheckAmmo();
-			//DUMM A 0 A_JumpIfNoAmmo("Reload");
 			TNT1 A 0 A_JumpIf(invoker.assaultGun_isFiring == 1, "RealFire");
 			RIFG AEH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);			
-			TNT1 A 0
-			{
-				invoker.assaultGun_isFiring = 1;				
-			}
+			TNT1 A 0 { invoker.assaultGun_isFiring = 1; }
 		RealFire:
 			TNT1 A 0 W_CheckAmmo();
 			RIFF A 1 W_ShootFirearm(4, "weapons/assaultgun");
@@ -79,18 +69,12 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			RIFF A 0 A_Refire("RealFire");
 			RIFG H 140 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			RIFG GFEDCBA 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			TNT1 A 0
-			{
-				invoker.assaultGun_isFiring = 0;
-			}
-			goto Ready;
-			
-		
+			TNT1 A 0 { invoker.assaultGun_isFiring = 0; }
+			goto Ready;		
 		Reload:
 			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
-			//TNT1 A 0 W_reloadCheck();
 			RIFG ABCDEFG 1;
 			RIFR A 2;
 			RIFR B 3;
@@ -109,11 +93,8 @@ class wosAssaultGun : wosWeapon replaces AssaultGun {
 			RIFR A 1;
 			RIFG GFEDCBA 1;
 			Goto Ready;
-			
-		
 	}
 }
-
 class wosAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 	Default {
 		//$Category "Weapons"
@@ -131,6 +112,8 @@ class wosAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -155,3 +138,6 @@ class wosAssaultGun_standing : WeaponGiver replaces AssaultGunStanding {
 		Mass 0;
 	}
 }*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

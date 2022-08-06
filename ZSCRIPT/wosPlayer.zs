@@ -65,8 +65,8 @@ class binderPlayer : StrifePlayer {
 		MaxStepHeight 20;
 		//  weaponslots  ///////////////////////////////////////////////////////
 		Player.WeaponSlot 1, "wosPunchDagger";
-		Player.WeaponSlot 2, "wosStrifeXbow", "StormPistol", "laserPistol";
-		Player.WeaponSlot 3, "wosAssaultGun", "staffBlaster", "executorRifle";
+		Player.WeaponSlot 2, "StormPistol", "laserPistol", "wosStrifeXbow";
+		Player.WeaponSlot 3, "wosAssaultGun", "executorRifle", "staffBlaster";
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
 		Player.WeaponSlot 5, "wosGrenadeLauncher";
 		Player.WeaponSlot 6, "wosFlamethrower";

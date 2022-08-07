@@ -10020,7 +10020,7 @@ actor wosD_bench 21572 {
 	//$Title "stone bench"
 	Tag "stone bench"
 	radius 16
-	height 32
+	height 20
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10078,8 +10078,340 @@ actor wosD_grilledChickenPlate 21575 {
 			Stop
 	}
 }
-
-
+// jedi outcast jedi academy props ////////////////////////////////////////////////////////////////////////////
+actor wosD_jkjaBrazier 21576 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "stone brazier"
+	Tag "stone brazier"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaBunkBed 21577 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "bunk bed"
+	Tag "bunk bed"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaCofeePot 21578 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "coffee pot"
+	Tag "coffee pot"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaCoffinSlab 21579 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "coffin"
+	Tag "coffin"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaContainer 21580 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "container"
+	Tag "container"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaCrane 21581 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "crane"
+	Tag "crane"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaCrate01 21582 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "crate01"
+	Tag "crate"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaCrate02 21583 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "crate02"
+	Tag "crate"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaFieldPost 21584 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "field post"
+	Tag "field post"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaHeater 21585 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "heater"
+	Tag "heater"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaChairHoth 21586 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "chair hoth"
+	Tag "chair"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaChairImperial 21587 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "chair imperial"
+	Tag "chair"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaJunction 21588 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "junction"
+	Tag "junction"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaPodCar2 21589 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "pod car 2"
+	Tag "pod car"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWallGenerator 21590 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wall generator"
+	Tag "wall generator"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWallLight 21591 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wall light"
+	Tag "wall light"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWallTanks 21592 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wall tanks"
+	Tag "wall tanks"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWallTanks2 21593 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wall tanks 2"
+	Tag "wall tanks"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWaterPump 21594 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "water pump"
+	Tag "water pump"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaWeaponRungs 21595 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "weapon rungs"
+	Tag "weapon rungs"
+	radius 8
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjainfirmaryTable 21596 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "infirmary table"
+	Tag "infirmary table"
+	radius 12
+	height 28
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaBrazierFlame 21597 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "stone brazier flame"
+	Tag "stone brazier"
+	radius 12
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1 NODELAY { 
+				A_SpawnItemEx("hugeTorchFlameNew", 0, 0, 26);
+				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 28);
+			}
+			Stop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

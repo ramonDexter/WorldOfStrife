@@ -1089,7 +1089,7 @@ Actor MM_food_04 21056
 	//$Category "Decorations/MM stuff"
 	//$Title "food 4 cup1"
 	
-	radius 8
+	radius 4
 	height 8
 	
 	States
@@ -1105,7 +1105,7 @@ Actor MM_food_05 21057
 	//$Category "Decorations/MM stuff"
 	//$Title "food 5 cup2"
 	
-	radius 8
+	radius 4
 	height 8
 	
 	States
@@ -10173,8 +10173,8 @@ actor wosD_jkjaCrate01 21582 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "crate01"
 	Tag "crate"
-	radius 8
-	height 16
+	radius 12
+	height 24
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10188,8 +10188,8 @@ actor wosD_jkjaCrate02 21583 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "crate02"
 	Tag "crate"
-	radius 8
-	height 16
+	radius 12
+	height 28
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10218,8 +10218,8 @@ actor wosD_jkjaHeater 21585 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "heater"
 	Tag "heater"
-	radius 8
-	height 16
+	radius 12
+	height 20
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10398,7 +10398,7 @@ actor wosD_jkjaBrazierFlame 21597 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "stone brazier flame"
 	Tag "stone brazier"
-	radius 12
+	radius 32
 	height 32
 	+SOLID
 	+USESPECIAL
@@ -10409,6 +10409,187 @@ actor wosD_jkjaBrazierFlame 21597 {
 				A_SpawnItemEx("hugeTorchFlameNew", 0, 0, 26);
 				A_SpawnItemEx("newFlameEmbersLarge", 0, 0, 28);
 			}
+			Stop
+	}
+}
+actor wosD_jkjaCrate04 21598 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "crate04"
+	Tag "crate"
+	radius 24
+	height 38
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaInfirmaryTable02 21599 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "infirmary table 2"
+	Tag "infirmary table"
+	radius 12
+	height 36
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaConsole01 21600 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "console 1"
+	Tag "console"
+	radius 12
+	height 40
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaConsole02 21601 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "console 2"
+	Tag "console"
+	radius 12
+	height 36
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaStatue 21602 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "light post"
+	Tag "light post"
+	radius 16
+	height 128
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1 Bright light("lightPostLight")
+			Stop
+	}
+}
+actor wosD_jkjaChairBig 21603 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "seater"
+	Tag "seater"
+	radius 32
+	height 20
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaChairWide 21604 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wide seater"
+	Tag "wide seater"
+	radius 32
+	height 20
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaBed 21605 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "bed"
+	Tag "bed"
+	radius 24
+	height 16
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_technoPillar replaces PillarTechno 21606 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "wos techno pillar"
+	Tag "techno pillar"
+	radius 16
+	height 128
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaPodCar3 21607 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "pod car 3"
+	Tag "VTOL"
+	radius 150
+	height 128
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaExaminer 21608 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "examiner"
+	Tag "examiner"
+	radius 32
+	height 72
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_jkjaRavenclaw 21609 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "VTOL"
+	Tag "VTOL"
+	radius 32
+	height 72
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

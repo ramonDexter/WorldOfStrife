@@ -1716,6 +1716,14 @@ model PillarTechno {
 	offset 0.0 0.0 0.0
 	frameindex MONI A 0 0
 }
+model wosD_technoPillar {
+	path "models/props/PillarTechno/"
+	model 0 "PillarTechno.md3"
+	skin 0 "tx_PillarTechno.png"
+	scale 52.0 52.0 52.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 //  PillarHugeTech  ////////////////////////////////////////////////////////////
@@ -3578,13 +3586,13 @@ model wosD_grilledChickenPlate {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Jedi Outcast Jedi Academy Props /////////////////////////////////////////////
-/*model wosD_jkjaBed {
+model wosD_jkjaBed {
 	path "models/PROPS/JKJA/"
 	model 0 "bed.md3"
 	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
-}*/
+}
 model wosD_jkjaBrazier {
 	path "models/PROPS/JKJA/"
 	model 0 "brazier.md3"
@@ -3609,7 +3617,7 @@ model wosD_jkjaBunkBed {
 model wosD_jkjaCofeePot {
 	path "models/PROPS/JKJA/"
 	model 0 "coffee_pot.md3"
-	scale 0.5 0.5 0.5
+	scale 0.85 0.85 0.85
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -3620,20 +3628,20 @@ model wosD_jkjaCoffinSlab {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-/*model wosD_jkjaConsole01 {
+model wosD_jkjaConsole01 {
 	path "models/PROPS/JKJA/"
 	model 0 "console01.md3"
-	scale 1.0 1.0 1.0
+	scale 0.8 0.8 0.8
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaConsole02 {
 	path "models/PROPS/JKJA/"
 	model 0 "console02.md3"
-	scale 1.0 1.0 1.0
+	scale 0.8 0.8 0.8
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
-}*/
+}
 model wosD_jkjaContainer {
 	path "models/PROPS/JKJA/"
 	model 0 "container.md3"
@@ -3669,7 +3677,7 @@ model wosD_jkjaCrate02 {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-/*model wosD_jkjaCrate04 {
+model wosD_jkjaCrate04 {
 	path "models/PROPS/JKJA/"
 	model 0 "crate04.md3"
 	scale 1.0 1.0 1.0
@@ -3680,9 +3688,9 @@ model wosD_jkjaExaminer {
 	path "models/PROPS/JKJA/"
 	model 0 "examiner.md3"
 	scale 1.0 1.0 1.0
-	offset 0.0 0.0 0.0
+	offset -32.0 0.0 0.0
 	frameindex DUMM A 0 0
-}*/
+}
 model wosD_jkjaFieldPost {
 	path "models/PROPS/JKJA/"
 	model 0 "fieldPost.md3"
@@ -3693,7 +3701,7 @@ model wosD_jkjaFieldPost {
 model wosD_jkjaHeater {
 	path "models/PROPS/JKJA/"
 	model 0 "heater.md3"
-	scale 0.35 0.35 0.35
+	scale 0.5 0.5 0.5
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -3704,13 +3712,20 @@ model wosD_jkjaChairHoth {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-/*model wosD_jkjaChairBig {
+model wosD_jkjaChairBig {
 	path "models/PROPS/JKJA/"
 	model 0 "chair3.md3"
 	scale 1.0 1.0 1.0
-	offset 0.0 0.0 0.0
+	offset -32.0 0.0 0.0
 	frameindex DUMM A 0 0
-}*/
+}
+model wosD_jkjaChairWide {
+	path "models/PROPS/JKJA/"
+	model 0 "chair4.md3"
+	scale 1.0 1.0 1.0
+	offset -32.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model wosD_jkjaChairImperial {
 	path "models/PROPS/JKJA/"
 	model 0 "impchair.md3"
@@ -3725,18 +3740,18 @@ model wosD_jkjaInfirmaryTable {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-/*model wosD_jkjaInfirmaryTable02 {
+model wosD_jkjaInfirmaryTable02 {
 	path "models/PROPS/JKJA/"
-	model 0 "infirmaryTable2.md3"
+	model 0 "infTable4.md3"
 	scale 0.9 0.9 0.9
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
-}*/
+}
 model wosD_jkjaJunction {
 	path "models/PROPS/JKJA/"
 	model 0 "junction.md3"
 	scale 0.7 0.7 0.7
-	offset 0.0 0.0 0.0
+	offset -8.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 /*model wosD_jkjaMbay {
@@ -3753,14 +3768,21 @@ model wosD_jkjaPodCar2 {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-/*model wosD_jkjaStatue {
+model wosD_jkjaPodCar3 {
+	path "models/PROPS/JKJA/"
+	model 0 "podcar2.md3"
+	scale 1.5 1.5 1.5
+	offset 0.0 0.0 16.0
+	frameindex DUMM A 0 0
+}
+model wosD_jkjaStatue {
 	path "models/PROPS/JKJA/"
 	model 0 "statue.md3"
-	scale 1.0 1.0 1.0
+	scale 1.0 1.0 1.34
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
-model wosD_jkjaStatueDog {
+/*model wosD_jkjaStatueDog {
 	path "models/PROPS/JKJA/"
 	model 0 "statueDog.md3"
 	scale 1.0 1.0 1.0
@@ -3813,6 +3835,13 @@ model wosD_jkjaWeaponRungs {
 	path "models/PROPS/JKJA/"
 	model 0 "weaponsRungs.md3"
 	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_jkjaRavenclaw {
+	path "models/PROPS/JKJA/"
+	model 0 "ravenclaw.md3"
+	scale 2.9 2.9 2.9
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

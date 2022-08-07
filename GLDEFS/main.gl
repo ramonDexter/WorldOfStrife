@@ -202,3 +202,8 @@ pointlight DOMELAMP
     size 64
     offset 0 -40 0
 }
+pointlight lightPostLight {
+	color 0.8 0.8 0.8
+	size 96
+	offset 0 40 0
+}

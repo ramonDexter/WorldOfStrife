@@ -10264,7 +10264,7 @@ actor wosD_jkjaJunction 21588 {
 	//$Title "junction"
 	Tag "junction"
 	radius 8
-	height 16
+	height 32
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10354,7 +10354,7 @@ actor wosD_jkjaWaterPump 21594 {
 	//$Title "water pump"
 	Tag "water pump"
 	radius 8
-	height 16
+	height 50
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY

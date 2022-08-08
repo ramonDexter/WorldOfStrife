@@ -3631,14 +3631,14 @@ model wosD_jkjaCoffinSlab {
 model wosD_jkjaConsole01 {
 	path "models/PROPS/JKJA/"
 	model 0 "console01.md3"
-	scale 0.8 0.8 0.8
+	scale 1.12 1.12 1.12
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaConsole02 {
 	path "models/PROPS/JKJA/"
 	model 0 "console02.md3"
-	scale 0.8 0.8 0.8
+	scale 1.12 1.12 1.12
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -3827,8 +3827,8 @@ model wosD_jkjaWallTanks2 {
 model wosD_jkjaWaterPump {
 	path "models/PROPS/JKJA/"
 	model 0 "waterPump.md3"
-	scale 0.5 0.5 0.5
-	offset 0.0 0.0 0.0
+	scale 0.65 0.65 0.65
+	offset -8.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaWeaponRungs {

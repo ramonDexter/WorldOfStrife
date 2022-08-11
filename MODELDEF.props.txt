@@ -3814,14 +3814,14 @@ model wosD_jkjaWallTanks {
 	path "models/PROPS/JKJA/"
 	model 0 "wallTanks.md3"
 	scale 1.125 1.125 1.125
-	offset -8.0 0.0 0.0
+	offset -16.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaWallTanks2 {
 	path "models/PROPS/JKJA/"
 	model 0 "wallTanks2.md3"
 	scale 1.125 1.125 1.125
-	offset -8.0 0.0 0.0
+	offset -16.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaWaterPump {
@@ -3835,7 +3835,7 @@ model wosD_jkjaWeaponRungs {
 	path "models/PROPS/JKJA/"
 	model 0 "weaponsRungs.md3"
 	scale 0.75 0.75 0.75
-	offset 0.0 0.0 0.0
+	offset -8.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_jkjaRavenclaw {

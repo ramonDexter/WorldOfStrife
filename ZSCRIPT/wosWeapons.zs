@@ -59,7 +59,7 @@ class wosWeapon : StrifeWeapon {
 		invoker.magazine--;
 		A_StartSound("weapons/staffShoot", 0);
 		if ( flashType ) { A_SpawnItemEx(flashType, 8, 0, 16, 0); } else {}
-		if ( alertMonsters ) { A_AlertMonsters(); }
+		//if ( alertMonsters ) { A_AlertMonsters(); }
 	}
 	//  staffswing  ////////////////////////////////////////////////////////////
 	action void W_StaffSwing(string puffType) {
@@ -217,8 +217,6 @@ class wosWeapon : StrifeWeapon {
 		A_FireProjectile (miniMissileType, angl, false, 5, 0, FPF_NOAUTOAIM);
 		//take away ammo from magazine
 		invoker.magazine--;
-		//ownr.takeInventory("magazine_missileLauncher", 1);
-		//angle = savedangle;
 	}
 	////////////////////////////////////////////////////////////////////////////
 	
@@ -245,7 +243,7 @@ class wosWeapon : StrifeWeapon {
 			// than this, so let's not handicap it by being too faithful to the
 			// original.
 			LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
-			A_AlertMonsters();
+			//A_AlertMonsters();
 		}
 	}
 	action void W_FireMauler1() {
@@ -266,7 +264,7 @@ class wosWeapon : StrifeWeapon {
 				// than this, so let's not handicap it by being too faithful to the
 				// original.
 				LineAttack (ang, PLAYERMISSILERANGE, pitch + Random2[Mauler1]() * (7.097 / 256), damage, 'Hitscan', "MaulerPuff", 0, null, 0, 97, 0);
-				A_AlertMonsters();
+				//A_AlertMonsters();
 			}
 			//take away ammo from magazine
 			invoker.magazine-=20;
@@ -320,7 +318,7 @@ class wosWeapon : StrifeWeapon {
 			invoker.magazine-=50;
 			DamageMobj (self, null, 15, 'Disintegrate');
 			Thrust(7.8125, Angle+180.);
-			A_AlertMonsters();
+			//A_AlertMonsters();
 		}
 		
 	}

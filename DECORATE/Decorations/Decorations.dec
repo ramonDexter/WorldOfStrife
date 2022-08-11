@@ -10323,8 +10323,8 @@ actor wosD_jkjaWallTanks 21592 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "wall tanks"
 	Tag "wall tanks"
-	radius 8
-	height 16
+	radius 16
+	height 48
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10338,8 +10338,8 @@ actor wosD_jkjaWallTanks2 21593 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "wall tanks 2"
 	Tag "wall tanks"
-	radius 8
-	height 16
+	radius 16
+	height 64
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY

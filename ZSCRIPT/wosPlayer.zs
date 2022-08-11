@@ -70,9 +70,7 @@ class binderPlayer : StrifePlayer {
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
 		Player.WeaponSlot 5, "wosGrenadeLauncher";
 		Player.WeaponSlot 6, "wosFlamethrower";
-		Player.WeaponSlot 7, "wosMauler";		
-		//Player.WeaponSlot 8, "Sigil";
-		//Player.WeaponSlot 9, "hookShotWeapon";		
+		Player.WeaponSlot 7, "wosMauler";
 		//  start items  ///////////////////////////////////////////////////////
 		Player.StartItem "wosPunchDagger", 1;
 		Player.StartItem "magazine_shoulderGun", 32;
@@ -85,7 +83,9 @@ class binderPlayer : StrifePlayer {
 		binderPlayer.playerXP 0;
 		binderPlayer.playerLevel 1;
 		////////////////////////////////////////////////////////////////////////
-
+		
+		//Player.WeaponSlot 8, "Sigil";
+		//Player.WeaponSlot 9, "hookShotWeapon";		
 		//Player.ForwardMove 0.75, 0.75;
 		//Player.StartItem "magazine_executorRifle", 32;
 		//Player.StartItem "wosi_scanner", 1;	

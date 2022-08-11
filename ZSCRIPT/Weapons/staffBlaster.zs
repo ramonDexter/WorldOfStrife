@@ -57,7 +57,7 @@ class staffBlaster : wosWeapon {
 			TNT1 A 0 W_CheckAmmo();
 			TNT1 A 0 A_JumpIf(invoker.staffIsFiring == 1, "RealFire");
 			ASTF JIH 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-			ASTF A 1 { invoker.staffIsFiring = 1; } //takze hul zustane ve stredu obrazu 		
+			ASTF A 1 { invoker.staffIsFiring = 1; } //hul zustava ve stredu obrazu 		
 		RealFire:
 			ASTF A 0 W_CheckAmmo();
 			ASTF A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_NOFIRE|WRF_NOSWITCH);

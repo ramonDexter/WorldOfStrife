@@ -20,7 +20,7 @@ class wosSecuriBot : wosMonsterBase {
 		radius 40;
 		height 100;
 		mass 750;
-		speed 12;
+		speed 8;
 		painchance 20;
 		DamageFactor "PoisonCloud", 0.0;
 		//DamageFactor "Alarm", 0.0;
@@ -29,15 +29,15 @@ class wosSecuriBot : wosMonsterBase {
 		DeathSound "ED209/Death";
 		Obituary "%o was riddled by a securibot.";
 		MaxTargetRange 2048;
-		//MONSTER;
-		+NOBLOOD
-		+FLOORCLIP
-		+INTERPOLATEANGLES
+		Monster;
+		+NOBLOOD;
+		+FLOORCLIP;
+		+INTERPOLATEANGLES;
 	}
 	
 	states {
 		Spawn:
-			DUMA IIII 10 A_Look();
+			DUMA IIII 10 A_Look2();
 			//More likely to jump to low look arounds than the high ones
 			//Low look arounds
 			DUMA I 0 {
@@ -60,58 +60,58 @@ class wosSecuriBot : wosMonsterBase {
 		//Low look arounds
 		//Low full sweep right first
 		LookAroundLow1:
-			DUMA I 10 A_Look();
+			DUMA I 10 A_Look2();
 			//look right
-			DUMA EFFFFE 10 A_Look(); 
+			DUMA EFFFFE 10 A_Look2(); 
 			//Face front again
-			DUMA I 10 A_Look();
+			DUMA I 10 A_Look2();
 			//look left
-			DUMA GHHHHG 10 A_Look();
+			DUMA GHHHHG 10 A_Look2();
 			//Face front again
-			DUMA I 5 A_Look();
+			DUMA I 5 A_Look2();
 			Goto Spawn;
 		
 		//Low full sweep left first
 		LookAroundLow2:
-			DUMA I 10 A_Look();
+			DUMA I 10 A_Look2();
 			//look left
-			DUMA GHHHHG 10 A_Look();
+			DUMA GHHHHG 10 A_Look2();
 			//Face front again
-			DUMA I 10 A_Look();
+			DUMA I 10 A_Look2();
 			//look right
-			DUMA EFFFFE 10 A_Look(); 
+			DUMA EFFFFE 10 A_Look2(); 
 			//Face front again
-			DUMA I 5 A_Look();
+			DUMA I 5 A_Look2();
 			Goto Spawn;
 		
 		//Low right only
 		LookAroundLow3:
-			DUMA I 10 A_Look(); 
+			DUMA I 10 A_Look2(); 
 			//look right
-			DUMA EFFFFE 10 A_Look(); 
+			DUMA EFFFFE 10 A_Look2(); 
 			//Face front again
-			DUMA I 5 A_Look();
+			DUMA I 5 A_Look2();
 			Goto Spawn;
 		
 		//Low left only
 		LookAroundLow4:
-			DUMA I 10 A_Look(); 
+			DUMA I 10 A_Look2(); 
 			//look left
-			DUMA GHHHHG 10 A_Look(); 
+			DUMA GHHHHG 10 A_Look2(); 
 			//Face front again
-			DUMA I 5 A_Look(); 
+			DUMA I 5 A_Look2(); 
 			Goto Spawn;
 		
 		//High look arounds
 		//Stand tall
 		LookAroundUp:
 			DUMA I 0 A_PlaySound ("ED209/Whine2", CHAN_BODY);
-			DUMA I 10 A_Look(); 
-			DUMA D 0 A_Look(); 
+			DUMA I 10 A_Look2(); 
+			DUMA D 0 A_Look2(); 
 			//Stand up
-			DUMB AB 10 A_Look(); 
+			DUMB AB 10 A_Look2(); 
 			DUMB C 0 A_PlaySound ("ED209/Tiss1", CHAN_AUTO);
-			DUMB CC 10 A_Look(); 
+			DUMB CC 10 A_Look2(); 
 			DUMB C 0 {
 				if (random(1,4)==1) {
 					return resolveState("LookAroundTall1");
@@ -128,48 +128,48 @@ class wosSecuriBot : wosMonsterBase {
 		//tall full sweep right first
 		LookAroundTall1:
 			//Look right
-			DUMB CDEEEF 10 A_Look(); 
+			DUMB CDEEEF 10 A_Look2(); 
 			//Face front again
-			DUMB G 10 A_Look();  
+			DUMB G 10 A_Look2();  
 			//Look Left
-			DUMB HIIIJ 10 A_Look(); 
+			DUMB HIIIJ 10 A_Look2(); 
 			Goto LookAroundDown;
 		
 		//tall full sweep left first
 		LookAroundTall2:
 			//Look Left
-			DUMB CHIIIJ 10 A_Look(); 
+			DUMB CHIIIJ 10 A_Look2(); 
 			//Face front again
-			DUMB G 10 A_Look();
+			DUMB G 10 A_Look2();
 			//Look right
-			DUMB DEEEF 10 A_Look(); 
+			DUMB DEEEF 10 A_Look2(); 
 			Goto LookAroundDown;
 		
 		//tall right only
 		LookAroundTall3:
 			//Look right
-			DUMB CDEEEF 10 A_Look();  
+			DUMB CDEEEF 10 A_Look2();  
 			//Face front again
-			DUMB GG 10 A_Look();  
+			DUMB GG 10 A_Look2();  
 			Goto LookAroundDown;
 		
 		//tall left only
 		LookAroundTall4:
 			//Look Left
-			DUMB CHIIIJ 10 A_Look(); 
+			DUMB CHIIIJ 10 A_Look2(); 
 			//Face front again
-			DUMB GG 10 A_Look(); 
+			DUMB GG 10 A_Look2(); 
 			//back down
 			Goto LookAroundDown;
 		
 		//back down
 		LookAroundDown:
 			DUMB C 0 A_PlaySound ("ED209/Whine1", CHAN_BODY);
-			DUMB CCB 10 A_Look(); 
+			DUMB CCB 10 A_Look2(); 
 			//interpolation fix
 			DUMB A 0 A_PlaySound ("ED209/Tiss2", CHAN_AUTO);
-			DUMA D 5 A_Look(); 
-			DUMA I 0 A_Look(); 
+			DUMA D 5 A_Look2(); 
+			DUMA I 0 A_Look2(); 
 			Goto Spawn;
 
 		See:
@@ -287,7 +287,7 @@ class wosSecuribotFriendly : wosSecuriBot {
 	Default {
         //$Category "Monsters/WoS"		
         //$Title "securibot friendly"
-		+FRIENDLY
+		+FRIENDLY;
 	}
 }
 class muzzleFlashMedium : actor {

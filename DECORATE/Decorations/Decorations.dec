@@ -66,7 +66,7 @@ actor dummyHyposprej 21004
 	+NOGRAVITY
 	Tag "$T_HYPOSPREJ"
 	Height 4
-	Radius 8
+	Radius 4
 
 	States
 	{
@@ -85,7 +85,7 @@ actor dummyKombopak 21005
 	+NOGRAVITY
 	Tag "$T_KOMBOPACK"
 	Height 4
-	Radius 8
+	Radius 4
 	States
 	{
 		Spawn:
@@ -103,7 +103,7 @@ actor dummyInstaHeal 21006
 	+NOGRAVITY
 	Tag "$T_INSTALEK"
 	Height 4
-	Radius 8
+	Radius 4
 	States
 	{
 		Spawn:
@@ -10519,8 +10519,8 @@ actor wosD_jkjaChairWide 21604 {
 }
 actor wosD_jkjaBed 21605 {
 	//$Category "Decorations/Wos/JKJA/"
-	//$Title "bed"
-	Tag "bed"
+	//$Title "medical bed"
+	Tag "medical bed"
 	radius 24
 	height 16
 	+SOLID
@@ -10532,6 +10532,7 @@ actor wosD_jkjaBed 21605 {
 			Stop
 	}
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor wosD_technoPillar replaces PillarTechno 21606 {
 	//$Category "Decorations/Wos/JKJA/"
@@ -10592,6 +10593,11 @@ actor wosD_jkjaRavenclaw 21609 {
 			DUMM A -1
 			Stop
 	}
+}
+actor wos_jkjaBedBridge : InvisibleBridge32 21610 {
+	tag "medical bed"
+	radius 24
+	height 16
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -17,8 +17,8 @@ class wosMonsterBase : actor {
 	}
 
 	Default {
-		+SHOOTABLE
-		+SOLID
+		+SHOOTABLE;
+		+SOLID;
 	}
 
 }

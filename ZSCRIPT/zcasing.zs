@@ -39,8 +39,7 @@ class ZCasing : Actor {
 			//frame = 0;
 			//A_setTics(-1);
 			//console.printf("%f, %f",roll,roll % 360);
-			if(roll % 360 < 180)
-			{
+			if(roll % 360 < 180) {
 				bXFLIP = true;
 			}
 			A_SetRoll(0);

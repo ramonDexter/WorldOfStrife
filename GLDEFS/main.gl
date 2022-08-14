@@ -207,3 +207,14 @@ pointlight lightPostLight {
 	size 96
 	offset 0 40 0
 }
+pointlight WALL_LIGHT {
+	color 1.0 1.0 0.8
+	size 64
+	offset 0 -16 -32
+}
+pointlight lightGlobe_light {
+    color 1.0 1.0 1.0
+    size 84
+    offset 0 72 0
+	attenuate 1
+}

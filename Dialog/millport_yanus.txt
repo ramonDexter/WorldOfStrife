@@ -30,36 +30,18 @@ Conversation {
     Page {
         pageName = "mp_yanus_skills";
         Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]Good, good. I can offer you training of overall balance and accuracy. One lesson costs one Upgrade Token, or 1000 gold.";
+        Dialog = "\c[white]Good, good. I can offer you training of overall skill. One lesson costs 1000 gold. Not a cheap one, but I'm the only trainer in town.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
             Text = "\c[yellow]<< BACK";
             Nextpage = "mp_yanus_opener";
-        } 
-        Choice {
-            Text = "Okay, let's train. \c[gold](pay 1 Upgrade Token)";
-			NextPage = "mp_yanus_skills";
-			CloseDialog = true;
-            DisplayCost = true;
-			YesMessage = "Here it is!";
-			NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 1802;
-            Cost {
-                item = "upgradeToken";
-                amount = 1;
-            }
-            Require {
-                item = "upgradeToken";
-                amount = 1;
-            }
-        } 
+        }
         Choice {
             Text = "Okay, let's train. \c[gold](pay 1000 gold)";
 			NextPage = "mp_yanus_skills";
 			CloseDialog = true;
             DisplayCost = true;
-			YesMessage = "Here it is!";
+			YesMessage = "Okay, let's start with the training!";
 			NoMessage = "Not enough gold!";
             Special = 80;
             arg0 = 1802;

@@ -4530,7 +4530,7 @@ actor strifeChair03 21241 {
 	+DONTTHRUST
 	Tag "wooden armchair"
 	height 16
-	radius 12
+	radius 16
 	
 	States {
 		Spawn:
@@ -10294,7 +10294,7 @@ actor wosD_jkjaWallGenerator 21590 {
 	//$Title "wall generator"
 	Tag "wall generator"
 	radius 8
-	height 16
+	height 56
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10315,7 +10315,7 @@ actor wosD_jkjaWallLight 21591 {
 	+NOGRAVITY
 	States {
 		Spawn:
-			DUMM A -1
+			DUMM A -1 Bright light("WALL_LIGHT")
 			Stop
 	}
 }
@@ -10491,7 +10491,7 @@ actor wosD_jkjaChairBig 21603 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "seater"
 	Tag "seater"
-	radius 32
+	radius 28
 	height 20
 	+SOLID
 	+USESPECIAL
@@ -10506,7 +10506,7 @@ actor wosD_jkjaChairWide 21604 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "wide seater"
 	Tag "wide seater"
-	radius 32
+	radius 28
 	height 20
 	+SOLID
 	+USESPECIAL
@@ -10581,7 +10581,7 @@ actor wosD_jkjaExaminer 21608 {
 }
 actor wosD_jkjaRavenclaw 21609 {
 	//$Category "Decorations/Wos/JKJA/"
-	//$Title "VTOL"
+	//$Title "VTOL - ravenclaw"
 	Tag "VTOL"
 	radius 32
 	height 72
@@ -10598,6 +10598,46 @@ actor wos_jkjaBedBridge : InvisibleBridge32 21610 {
 	tag "medical bed"
 	radius 24
 	height 16
+}
+actor wosD_jkjaPodCar 21611 {
+	//$Category "Decorations/Wos/JKJA/"
+	//$Title "aircar"
+	Tag "aircar"
+	radius 68
+	height 48
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_lightGlobe : lightGlobe replaces lightGlobe 21612 {
+	//$Category "Decorations/Light Sources/WoS/"
+	//$Title "dx light globe"
+	Tag "light globe"
+	radius 8
+	height 72
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1 bright light("lightGlobe_light")
+			Stop
+	}
+}
+actor wos_jkjaSeaterBridge : InvisibleBridge32 21613 {
+	tag "seater"
+	radius 20
+	height 20
+}
+actor wos_jkjaWideSeaterBridge : InvisibleBridge32 21614 {
+	tag "wide seater"
+	radius 28
+	height 20
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

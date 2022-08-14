@@ -38,7 +38,7 @@ Conversation {
         Goodbye = "\c[red]Goodbye.";   
         Choice {
             Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_boldric_opener";
+            Nextpage = "mp_godwin_opener";
         }
         Choice {
             Text = "\c[gold]Buy bottle of water";
@@ -87,7 +87,7 @@ Conversation {
         Goodbye = "\c[red]Goodbye.";   
         Choice {
             Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_boldric_opener";
+            Nextpage = "mp_godwin_opener";
         }
         Choice {
             Text = "\c[gold]Buy grilled chicken";
@@ -123,7 +123,7 @@ Conversation {
         Goodbye = "\c[red]Goodbye.";   
         Choice {
             Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_boldric_opener";
+            Nextpage = "mp_godwin_opener";
         } 
         Choice {
             Text = "Who are you?";

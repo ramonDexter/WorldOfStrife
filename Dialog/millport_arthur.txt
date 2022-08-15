@@ -1,0 +1,209 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 42;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_arthur_opener";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]Hello, welcome to the Public Clinic. Are you in need of medical assistance? Or have you come here to replenish your medical resources? We offer good and reasonable prices and our supplies are the best in town!";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I need help.";
+            Nextpage = "mp_arthur_needhelp";
+        } 
+        Choice {
+            Text = "I need some supplies";
+            Nextpage = "mp_arthur_shop";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "mp_arthur_questions";
+        }
+    }
+    Page {
+        pageName = "mp_arthur_needhelp";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]That's why we're here. Just turn left and use the autodoc. It's perfectly clean are prepared to cure your wounds.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Okay.";
+            Nextpage = "mp_arthur_opener";
+            CloseDialog = true;
+        }
+    }
+    Page {
+        pageName = "mp_arthur_shop";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]All right, we sell all kinds of medical resources.\nThe Hypospray costs 25, Combopack costs 50 and Instaheal costs 100 gold. The Stamina Stim costs 25, the Medical Patches cost 10, Medipacks cost 25 and the Surgery Kit costs 100 gold.";
+        Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy Stamina Stim";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "wosi_StimDevice";
+			YesMessage = "Here is one Stamina Stim!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Hypospray";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "wosHyposprej";
+			YesMessage = "Here is one Hypospray!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Combopack";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "wosKombopack";
+			YesMessage = "Here is one Combopack!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Instaheal";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "wosInstaLek";
+			YesMessage = "Here is one Instaheal!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy MedPatch";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one MedPatch!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Medical Kit";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Medical Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Surgery Kit";
+			NextPage = "mp_arthur_shop";
+			GiveItem = "zscMedPatch";
+			YesMessage = "Here is one Surgery Kit!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "goldCoin";
+				amount = 100;
+			}
+		} 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_opener";
+        }        
+    }
+    Page {
+        pageName = "mp_arthur_questions";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "mp_arthur_whoareyou";
+        }
+        Choice {
+            Text = "What is this place?";
+            Nextpage = "mp_arthur_thisplace";
+        }
+        Choice {
+            Text = "How's it going?";
+            Nextpage = "mp_arthur_howsitgoing";
+        }
+        Choice {
+            Text = "Do you know any rumors?";
+            Nextpage = "mp_arthur_rumors";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_opener";
+        } 
+    }
+    Page {
+        pageName = "mp_arthur_whoareyou";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]I am Arthur Pollock. I serve as a medic here, at the local Public Clinic. I'm humble follower of the Churchs and the Emperor. Praise him!";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Could you tell me about the clinic?";
+            Nextpage = "mp_arthur_thisplace";
+        } 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_questions";
+        }
+    }
+    Page {
+        pageName = "mp_arthur_thisplace";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]The Public Clinic offers free medical care for anyone in need. It was built twenty years ago when the capacities of the old clinic wasn't enough for the growing city. Doctor Henry is the local head of the clinic and main surgeon here. He's got his office upstairs, just right above mine.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_questions";
+        }
+    }
+    Page {
+        pageName = "mp_arthur_howsitgoing";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]Well, pretty good, thanks for asking. In fact, I've found it strange that we've got only few customers, lately. But I know this peace will be disturbed soon, as nothing lasts forever.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_questions";
+        }
+    }
+    Page {
+        pageName = "mp_arthur_rumors";
+        Name = "\c[yellow]Arthur, Medic";
+        Dialog = "\c[white]Sorry, I don't have time to spread or listen to rumors.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_arthur_questions";
+        }
+    }
+}

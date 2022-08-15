@@ -18,14 +18,14 @@ Conversation {
             Text = "I need to resupply.";
             Nextpage = "MP_binderSurgeon_shop";
         }
-        Choice {
+        /*Choice {
             Text = "Cybernetic implant? Tell me more.";
             Nextpage = "MP_binderSurgeon_upgrade";
             Require {
                 item = "upgradeToken";
                 amount = 1;
             }
-        }
+        }*/
     }
     Page {
         pageName = "MP_binderSurgeon_wounded";
@@ -121,7 +121,7 @@ Conversation {
             Nextpage = "MP_binderSurgeon_opener";
         }
     }
-    Page {
+    /*Page {
         pageName = "MP_binderSurgeon_upgrade";
         Name = "\c[yellow]Binder Surgeon";
         Dialog = "\c[white]Just give me the upgrade token and I'll give you the stamina implant. Then use the autodoc to install it. Not a big deal, just hold still, it will take just a few minutes.";
@@ -133,7 +133,7 @@ Conversation {
             CloseDialog = true;
             YesMessage = "\c[white]Here you go. Use the surgical unit to install the implant.";
 			NoMessage = "\c[white]You don't have the upgrade token!";
-            GiveItem = "wosi_implant_stamina";
+            GiveItem = "implant_stamina";
 			Cost {
 				item = "upgradeToken";
 				amount = 1;
@@ -143,6 +143,6 @@ Conversation {
             Text = "\c[yellow]<< BACK";
             Nextpage = "MP_binderSurgeon_opener";
         }
-    }
+    }*/
 }
 //##################################################################################################################

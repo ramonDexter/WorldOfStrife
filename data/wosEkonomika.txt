@@ -63,7 +63,7 @@ wosSpringMine				50
 wosSwarmers					35
 wosTargeter					25
 wosBinocular				120
-// food
+// food ////////////////////////
 wosWaterBottle				2
 wosBeerBottle				3
 wosAleBottle				3

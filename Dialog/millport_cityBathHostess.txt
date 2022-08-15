@@ -1,0 +1,22 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 44;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Hostess";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_cityBathHostess_opener";
+        Name = "\c[yellow]Hostess";
+        Dialog = "RANDOM_MILLPORT_BATHHOSTESS";
+        Goodbye = "\c[red]Goodbye.";
+    }
+}

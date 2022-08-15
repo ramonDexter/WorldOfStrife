@@ -1,0 +1,78 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 46;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_ianbutcher_opener";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]Hello, welcome to my shop. Do you want some fresh beef? Or some chicken meat?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I'd like to buy something.";
+            Nextpage = "mp_ianbutcher_buy";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "mp_ianbutcher_questions";
+        }
+    }
+    Page {
+        pageName = "mp_ianbutcher_buy";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]Okay, I've got beef, I've got some pork ribs and some chicken wings.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_ianbutcher_opener";
+        }
+    }
+    Page {
+        pageName = "mp_ianbutcher_questions";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]What do you want to know? I'm worried that I wont tell you much, as I spend most of the day here in my shop.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "mp_ianbutcher_whoareyou";
+        }  
+        Choice {
+            Text = "How is the business?";
+            Nextpage = "mp_ianbutcher_business";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_ianbutcher_opener";
+        }
+    }
+    Page {
+        pageName = "mp_ianbutcher_whoareyou";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]I am Ian. I am butcher. I sell good meat to the people here, and I have to say I make a good living here. I bought this shop five years ago.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_ianbutcher_questions";
+        }
+    }
+    Page {
+        pageName = "mp_ianbutcher_business";
+        Name = "\c[yellow]Ian, butcher";
+        Dialog = "\c[white]Well, I must admit the business is not as good as it used to be. It must be the meat I bought from the last caravan. Some bad wild meat, as strage taste. Say, would you try to help me a little?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_ianbutcher_questions";
+        }
+    }
+}

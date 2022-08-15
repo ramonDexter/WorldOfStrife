@@ -1,0 +1,94 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 43;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_clinicReceptionist_opener";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]Hello, welcome the Public Clinic. How may serve you?";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "I'm injured!";
+            Nextpage = "mp_clinicReceptionist_injured";
+        } 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "mp_clinicReceptionist_questions";
+        }
+    }
+    Page {
+        pageName = "mp_clinicReceptionist_injured";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]Okay, you can visit dr.Arthur or dr.Henry. Dr.Arthur's office is right next to you downstairs, Dr.Henry's office is upstairs, just next to the stairs.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "mp_clinicReceptionist_opener";
+            CloseDialog = true;
+            YesMessage = "\c[white]You're welcome.";
+        }
+    }
+    Page {
+        pageName = "mp_clinicReceptionist_questions";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "mp_clinicReceptionist_whoareyou";
+        } 
+        Choice {
+            Text = "Could you tell me about the Clinic?";
+            Nextpage = "mp_clinicReceptionist_aboutclinic";
+        } 
+        Choice {
+            Text = "How's it going?";
+            Nextpage = "mp_clinicReceptionist_howsitgoing";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_clinicReceptionist_opener";
+        }
+    }
+    Page {
+        pageName = "mp_clinicReceptionist_whoareyou";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]I'm Sarah. I work here as a nurse and as a receptionist and secretary for our medical staff.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_clinicReceptionist_questions";
+        }
+    }
+    Page {
+        pageName = "mp_clinicReceptionist_aboutclinic";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]The Public Clinic offers free medical care for everyone in need. We're run by the Imperial ministry of healthcare. Our chief physician is dr.Henry, who is also our main surgeon. Dr.Arthur offers immediate urgent medical services. We also have a surgery room and recovery ward.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_clinicReceptionist_questions";
+        }
+    }
+    Page {
+        pageName = "mp_clinicReceptionist_howsitgoing";
+        Name = "\c[yellow]Receptionist";
+        Dialog = "\c[white]Oh, I was in a hurry just before you came here. Lots of clients called to book an appointment for the new vaccination. Looks like the Medguild has prepared something against the latest fever.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_clinicReceptionist_questions";
+        }
+    }
+}

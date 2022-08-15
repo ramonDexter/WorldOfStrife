@@ -218,6 +218,7 @@ class dummy_explosion : actor {
 			
 	}
 }
+// damaging explosions /////////////////////////////////////////////////////////
 class wosExplosion_low : dummy_explosion {
 	Default { Damage 8; }
 }

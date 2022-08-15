@@ -194,23 +194,27 @@ flickerlight newFlameStandingTorchLight {
 	secondarySize 32
 	chance 0.1
 	offset 0 0 0
+	attenuate 1
 }
 
 pointlight DOMELAMP
 {
     color 0.8 0.8 0.8
     size 64
-    offset 0 -40 0
+    offset 0 -64 0
+	attenuate 1
 }
 pointlight lightPostLight {
 	color 0.8 0.8 0.8
 	size 96
 	offset 0 40 0
+	attenuate 1
 }
 pointlight WALL_LIGHT {
 	color 1.0 1.0 0.8
 	size 64
-	offset 0 -16 -32
+	offset 16 -16 0
+	attenuate 1
 }
 pointlight lightGlobe_light {
     color 1.0 1.0 1.0

@@ -1098,6 +1098,13 @@ TXT_RANDOM_MILLPORT_COMMONER_12 = "\c[white]Father be with you!";
 TXT_RANDOM_MILLPORT_COMMONER_13 = "\c[white]May Father guide your steps!";
 TXT_RANDOM_MILLPORT_COMMONER_14 = "\c[white]What have I done?";
 TXT_RANDOM_MILLPORT_COMMONER_15 = "\c[white]These droids are not those you are looking for. Keep going.";
+
+//millport lazensky hostesky
+TXT_RANDOM_MILLPORT_BATHHOSTESS_01 = "\c[white]Hello, welcome to the city bath. How may I serve you?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_02 = "\c[white]Oh hello, welcome to the city bath, handsome. Are you in need of company?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_03 = "\c[white]Hello and welcome to the city bath, where are you desires will be satisfied!";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_04 = "\c[white]Be welcome, stanger. The city bath are here to fill all you needs and dreams.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_05 = "\c[white]I bid you welcome. The city bath welcomes you.";
 //##################################################################################################################
 //##################################################################################################################
 //##################################################################################################################

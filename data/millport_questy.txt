@@ -1,0 +1,48 @@
+millport common questy:
+
+#Derwin,Strife items vendor convID 13
+1 quest:
+- sezen nahradni dily k 3D tiskarne
+
+#Quincy, energy ammo vendor convID 10
+quest:
+- najdi Quincyho sestru, ktera zmizela nekde v okoli Ravenrocku
+
+#Gregory, techsmith, convID 14
+quest:
+- sezen dodavatele soucastek >> dodavatele sezenes v Aeredale, mistni techmisth si rad privydela
+
+# soudce zmeny Afer Valgus Reberio convID 38
+4 questy:
+1) dones zpravu starostovi Ravenrocku
+2) ziskej priznani nebo dukazy proti kaciri v Eastcliffu
+3) najdi ztraceneho syna farmare z Ravenrocku
+4) zlikviduj kacire v Eastcliffu
+
+# reznik Ian convID 46
+1 quest:
+- sezen lepsi dodavatele masa 
+>> farmar cestou k eastcliffu muze dodavat maso NEBO farma v Aeredale muze dodavat maso
+
+# starosta mesta Flavius Nefarius convID 21
+2 questy:
+1) vyber najemne od obyvatel Commons
+2) najdi ztraceneho urednika
+
+# guverner convID 22
+- spolupracuje s bindery
+- hleda spiklence proti Cisari
+- 3 questy: 
+1) najdi ztraceneho spiona
+2) ziskej informace o obchodnikovi Hagenovi
+3) nech se od Hagena najmout >> primo se dostan do jeho organizace
+
+# obchodnik Herbert Ignacius Vigil  convID
+- sefuje mistnimu podsveti
+- guverner se ho snazi dostat
+- je jednim z osnovatelu spiknuti proti Cisari
+4 questy:
+1)
+2)
+3)
+4)

@@ -41,7 +41,7 @@ class shoulderGun : wosPickup {
 		A_SpawnItemEx("redFlashShort", 8, 0, 16, 0);
 		if (doAlertMonsters) {
 			A_AlertMonsters();
-		}        
+		}
 		A_OverlayOffset(6, random(-2,2), random(-2,2), WOF_INTERPOLATE); //vypnout, protoze trese i hlavni zbrani
 		////////////////////////////////////////////////////////////////////////
 	}	

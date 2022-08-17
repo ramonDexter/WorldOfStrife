@@ -25,10 +25,8 @@ Idea Base: Original idea
 ////////////////////////////////////////////////////////////////////////////////
 //const swarmersWeight = 13;
 
-class wosSwarmers : wosPickup
-{
-	Default
-	{
+class wosSwarmers : wosPickup {
+	Default {
 		//$Category "Powerups/WoS"
 		//$Title "Swarmers"
 	
@@ -42,8 +40,7 @@ class wosSwarmers : wosPickup
 		Mass swarmersWeight;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
@@ -52,11 +49,8 @@ class wosSwarmers : wosPickup
 			Stop;
 	} 
 }
-
-class SwarmerPodSet : actor
-{
-	Default
-	{
+class SwarmerPodSet : actor {
+	Default {
 		+MISSILE
 		+DROPOFF
 		+CANBOUNCEWATER
@@ -74,8 +68,7 @@ class SwarmerPodSet : actor
 		//scale 0.5;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			DUMM A 1 Bright;	
 			Loop;
@@ -85,11 +78,8 @@ class SwarmerPodSet : actor
 			Stop;
 	} 
 }
-
-class SwarmerPodActive : actor
-{
-	Default
-	{
+class SwarmerPodActive : actor {
+	Default {
 		+THRUACTORS
 		-SHOOTABLE
 		+BRIGHT
@@ -102,8 +92,7 @@ class SwarmerPodActive : actor
 		//scale 0.5;
 	}
 	
-	States
-	{
+	States {
 		Spawn:   
 			TNT1 A 0;
 			DUMM A 1;
@@ -117,11 +106,8 @@ class SwarmerPodActive : actor
 			Stop;
 	}
 }
-
-class SwarmerMite : actor
-{
-	Default
-	{
+class SwarmerMite : actor {
+	Default {
 		+THRUACTORS
 		-SHOOTABLE
 		+NOGRAVITY
@@ -146,20 +132,15 @@ class SwarmerMite : actor
 		BounceCount 205;
 	}
 	
-	States
-	{
+	States {
 	Spawn:   
 		TNT1 A 0;
-		TNT1 A 0
-		{
+		TNT1 A 0 {
 			self.bNoGravity = false;
 			self.bUseBounceState = false;
 		}
 		SPMT AA 2;
-		TNT1 A 0
-		{
-			self.bUseBounceState = true;
-		}
+		TNT1 A 0 { self.bUseBounceState = true; }
 		SPMT A 1 ThrustThingZ(0,6,0,0);
 		SPMT A 1 ThrustThing(random(0,360), 3, 0, 0);
 		TNT1 A 0 ThrustThing(random(0,360), 1, 0, 0);
@@ -189,33 +170,23 @@ class SwarmerMite : actor
 	Seeker:
 		TNT1 A 0;
 		TNT1 A 0 A_StartSound("SHDPFLY",5, CHANF_DEFAULT, 0.25);
-		TNT1 A 0
-		{
-			self.bSeekerMissile = true;
-		}
+		TNT1 A 0 { self.bSeekerMissile = true; }
 		TNT1 AAA 0 A_SeekerMissile(12,20,SMF_LOOK,256|SMF_PRECISE,40);
 		TNT1 A 0 A_SpawnItem("ShredderDMG",0,0,0);
 		SPMT BCBCBCBC 1 A_SeekerMissile(12,20,SMF_LOOK,256|SMF_PRECISE,40);
-		TNT1 A 0
-		{
-			self.bSeekerMissile = false;
-		}
+		TNT1 A 0 { self.bSeekerMissile = false; }
 		Goto Spawn+8;
 	Death:
 		TNT1 A 0;
-		TNT1 A 0 
-		{
+		TNT1 A 0 {
 			A_StartSound("SHDPDIE",5, CHANF_DEFAULT, 0.65);
 			A_SpawnItem("SMiteExplosion",0,0,0);
 		}
 		Stop;
 	}
 }
-
-class ShredderDMG : actor //Spawn as the "mites" travel to damage enemies.
-{
-	Default
-	{
+class ShredderDMG : actor { //Spawn as the "mites" travel to damage enemies.
+	Default {
 		+BLOODSPLATTER
 		+RIPPER
 		
@@ -226,8 +197,7 @@ class ShredderDMG : actor //Spawn as the "mites" travel to damage enemies.
 		PROJECTILE;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			TNT1 A 1;
 			Stop;
@@ -236,11 +206,8 @@ class ShredderDMG : actor //Spawn as the "mites" travel to damage enemies.
 			Stop;
 	}
 }
-
-class SPodExplosion : actor
-{
-	Default
-	{
+class SPodExplosion : actor {
+	Default {
 		+BRIGHT
 		
 		PROJECTILE;
@@ -252,8 +219,7 @@ class SPodExplosion : actor
 		Scale 0.8;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			TNT1 A 0;
 			Goto Death;
@@ -268,11 +234,8 @@ class SPodExplosion : actor
 			Stop;
 	}
 }
-
-class SMiteExplosion : actor
-{
-	Default
-	{
+class SMiteExplosion : actor {
+	Default {
 		+BRIGHT
 		
 		PROJECTILE;
@@ -284,8 +247,7 @@ class SMiteExplosion : actor
 		Scale 0.4;
 	}
 	
-	States
-	{
+	States {
 		Spawn:
 			TNT1 A 0;
 			Goto Death;
@@ -296,3 +258,6 @@ class SMiteExplosion : actor
 			Stop;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

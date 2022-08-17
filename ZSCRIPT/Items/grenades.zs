@@ -51,6 +51,21 @@ class wosGrenadeE_Throw : HEGrenade {
 		SeeSound "weapons/grenadeThrow";
 		BounceSound "weapons/grenadeBounce";
 	}
+	States {
+		Spawn:
+			GRAP AB 3 A_Countdown();
+			Loop;
+		Death:
+            TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));
+            TNT1 A 0 A_Explode(80, 192);
+			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
+            TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
+			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);
+			TNT1 AAAA 0 A_SpawnProjectile ("PlasmaSmoke", 3, 0, random (0, 360), 2, random (0, 360));
+			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
+			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
+            stop;
+	}
 }
 // fire ////////////////////////////////////////////////////////////////////////
 class wosGrenadeF : wosPickup {

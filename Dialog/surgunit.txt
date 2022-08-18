@@ -158,7 +158,7 @@ Conversation {
 			YesMessage = "[ Healing completed! ]";
 			NoMessage = "Not enough gold!";
 			Special = 80;
-			arg0 = 701;
+			arg0 = 7700;
 			Cost {
 				item = "goldCoin";
 				amount = 10;

@@ -24,7 +24,7 @@ class wosGrenadeE : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_ThrowGrenade("wosGrenadeE_Throw", 8, 12, 6);
+			TNT1 A 0 A_ThrowGrenade("wosGrenadeE_Throw", 8, 16, 6);
 			Stop;
 	}
 }
@@ -57,7 +57,7 @@ class wosGrenadeE_Throw : HEGrenade {
 			Loop;
 		Death:
             TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));
-            TNT1 A 0 A_Explode(80, 192);
+            TNT1 A 0 A_Explode(192, 192, 1, 1);
 			TNT1 A 0 A_SpawnItemEx ("ExplosionFlareSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0);
             TNT1 A 0 A_StartSound("sounds/grenadeExplosion", 1);
 			TNT1 A 1 Radius_Quake (4, 15, 0, 12, 0);

@@ -277,7 +277,13 @@ class wosEventHandler : EventHandler {
 		} else if ( e.Name ~== "log_pawnmaxhealth" ) {
 			pawn.A_logInt(pawn.GetMaxHealth(true));
 		} else if ( e.Name ~== "heal_Player" ) {
-			pawn.A_GiveInventory("surgUnitHealing", 1);
+			// heal player //////////////////////////////////////
+			pawn.bleedlevel = 0;
+			int maxHealth = 100 + pawn.stamina;
+			int toHeal = maxHealth - pawn.Health;
+			pawn.GiveBody(toHeal, 0);
+			pawn.A_Log("\c[yellow]Healing completed!!");
+			/////////////////////////////////////////////////////
 		} else if ( e.Name ~== "give_badgeimplants" ) {
 			pawn.A_GiveInventory("binderbadge", 1);
 			pawn.A_GiveInventory("implant_health", 1);

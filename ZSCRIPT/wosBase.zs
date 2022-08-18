@@ -190,6 +190,131 @@ class randomDrop_04 : RandomSpawner {
 ////////////////////////////////////////////////////////////////////////////////
 
 //  dummy explosion  ///////////////////////////////////////////////////////////
+// explosion particles /////////////////////////////////////////////////////////
+class ExplosionFire : actor {
+    Default {
+        +NOBLOCKMAP;
+        +NOTELEPORT;
+        +DONTSPLASH;
+        +MISSILE;
+        +FORCEXYBILLBOARD;
+        +CLIENTSIDEONLY;
+        +NOINTERACTION;
+        +NOCLIP;
+        +THRUACTORS;
+        +DONTBLAST;
+        Radius 1;
+        Height 1;
+        Speed 3;
+        Damage 0 ;
+        RenderStyle "Add";
+        DamageType "Fire";
+        Scale 0.5;
+        Alpha 1;
+        Gravity 0;
+        Scale 1.0;
+    }
+	States 	{
+        Spawn:
+            EXPL ABCDEFGHI 2 BRIGHT;
+            Stop;
+	}
+}
+class exlosionFireBig : ExplosionFire {
+    Default { Scale 1.0; }    
+}
+class ExplosionFlareSpawner : actor {
+    Default {
+        +NOINTERACTION;
+        +NOGRAVITY;
+        +CLIENTSIDEONLY;
+        +DONTBLAST;
+        +FORCEXYBILLBOARD;
+        renderstyle "Add";
+        radius 1;
+        height 1;
+        alpha 0.4;
+        scale 0.4;
+    }
+    States {
+        Spawn:
+            L2NR AAAA 1 BRIGHT;
+            L2NR A 5;
+            stop;
+	}
+}
+class ExplosionParticle1 : actor {
+    Default {
+        +MISSILE;
+        +CLIENTSIDEONLY;
+        +NOTELEPORT;
+        +NOBLOCKMAP;
+        +CORPSE;
+        +BLOODLESSIMPACT;
+        +FORCEXYBILLBOARD;
+        +NODAMAGETHRUST;
+        +MOVEWITHSECTOR;
+        +NOBLOCKMONST;
+        -SOLID;
+        +THRUACTORS;
+        +DONTSPLASH;
+        -NOGRAVITY;
+        +DONTBLAST;
+        +DOOMBOUNCE;  
+        radius 0;
+        height 0;   
+        scale 0.06;
+        Gravity 0.5;
+        Speed 10;
+        damage 0;
+        Renderstyle "Add";
+        Alpha 0.95;
+    }
+    States {
+        Spawn:
+            SPRK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 BRIGHT A_SetScale(scalex*0.97);
+            Stop;
+    }
+}
+class ExplosionParticle2: ExplosionParticle1 {
+    Default {
+        +NOGRAVITY;
+        -DOOMBOUNCE;
+        Speed 16;
+    }    
+}
+class ExplosionSmoke1: ExplosionParticle2 {
+    Default {
+        Speed 4;
+        scale 1.2;
+        Alpha 0.15;
+        Renderstyle "Translucent";
+    }
+    States {
+        Spawn:
+            SMO2 A 10;
+            SMO2 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 A_FadeOut(0.005);
+            Stop;
+    }
+}
+class PlasmaSmoke: ExplosionSmoke1 {
+    Default {
+        Speed 1;
+        Scale 0.5;
+    }
+    States {
+        Spawn:
+            PUF2 D 1;
+            Goto Death;
+        Death:                                                          
+            SMOC ABCDEFGHIJKLMNOPQRSTUVWXYZ 2 A_FadeOut(0.002);
+            SM7C AB 2 A_FadeOut(0.002);
+            SMOC ABCDEFGHIJKLMNOPQRSTUVWXYZ 2 A_FadeOut(0.002);
+            SM7C AB 2 A_FadeOut(0.002);
+            Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
 class dummy_explosion : actor {
 	Default {
 		-NOGRAVITY

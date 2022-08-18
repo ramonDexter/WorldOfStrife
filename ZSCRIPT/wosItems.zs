@@ -193,7 +193,6 @@ class upgradeToken : CustomInventory {
 
 // health regeneration implant /////////////////////////////////////////////////
 class implant_health : CustomInventory {
-
 	int counter;
 	override void AttachToOwner (Actor other) {
         super.AttachToOwner(other);
@@ -218,7 +217,6 @@ class implant_health : CustomInventory {
 		}
 		Super.Tick();
 	}
-
 	Default {
 		-INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
@@ -231,7 +229,6 @@ class implant_health : CustomInventory {
 		Inventory.InterHubAmount 1;
 		Mass 0;
 	}
-
 	States {
 		Spawn:
 			DUMM A -1;
@@ -244,6 +241,11 @@ class implant_health : CustomInventory {
 
 // full stamina implant ////////////////////////////////////////////////////////
 class implant_stamina : CustomInventory {
+	override void AttachToOwner (Actor other) {
+        super.AttachToOwner(other);
+        let pawn = binderPlayer(owner);
+        pawn.staminaImplant = true;
+    }
 	Default {
 		-INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
@@ -256,13 +258,6 @@ class implant_stamina : CustomInventory {
 		Inventory.InterHubAmount 1;
 		Mass 0;
 	}
-
-	override void AttachToOwner (Actor other) {
-        super.AttachToOwner(other);
-        let pawn = binderPlayer(owner);
-        pawn.staminaImplant = true;
-    }
-
 	States {
 		Spawn:
 			DUMM A -1;
@@ -320,8 +315,7 @@ class journalitem : CustomInventory {
 		radius 10;
 		scale 0.3;
 		Mass 0;
-	}
-	
+	}	
 	States {
 		Spawn:
 			JRNL A -1;
@@ -354,8 +348,7 @@ class binderBadge : CustomInventory {
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 		Mass 0;
-	}
-	
+	}	
 	States {
 		Spawn:
 			BADG A -1;

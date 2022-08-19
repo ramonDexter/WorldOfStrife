@@ -9,10 +9,9 @@ class wosInterceptorDrone : wosPickup {
 		//$Category "Powerups/WoS"
 		//$Title "Interceptor Drone"
 		
-        +inventory.INVBAR
-		+inventory.alwayspickup
-		+FLOORCLIP		
-		
+        +inventory.INVBAR;
+		+inventory.alwayspickup;
+		+FLOORCLIP;			
 		Tag "$T_interceptorDrone";
 		Inventory.PickupMessage "$F_interceptorDrone";
 		Inventory.Icon "I_SPDR";
@@ -30,10 +29,9 @@ class wosInterceptorDrone : wosPickup {
 }
 class interceptorDrone_Set : actor {
     Default {
-        +DROPOFF
-        +CANBOUNCEWATER
-        +Missile
-
+        +DROPOFF;
+        +CANBOUNCEWATER;
+        +Missile;
         DontHurtShooter;
         Radius 4;
         Height 4;
@@ -55,21 +53,19 @@ class interceptorDrone : actor {
 	int droneCount;	
 
     Default {
-
-        +INCOMBAT
-        +FRIENDLY
-	    +DontThrust
-	    +LOOKALLAROUND
-	    +NOBLOOD
-	    +NOTARGET
-	    +NOINFIGHTING
-	    +NOFEAR
-	    +DONTMORPH
-	    +NOICEDEATH
-        +NOGRAVITY
-		+SPAWNFLOAT
-		+FLOAT
-
+        +INCOMBAT;
+        +FRIENDLY;
+	    +DontThrust;
+	    +LOOKALLAROUND;
+	    +NOBLOOD;
+	    +NOTARGET;
+	    +NOINFIGHTING;
+	    +NOFEAR;
+	    +DONTMORPH;
+	    +NOICEDEATH;
+        +NOGRAVITY;
+		+SPAWNFLOAT;
+		+FLOAT;
         Tag "$T_interceptorDrone";
         Monster;
 		Species "interceptorDrone";
@@ -89,7 +85,7 @@ class interceptorDrone : actor {
 			TNT1 A 0 {
 				A_StartSound("sounds/spyDroneAct", 0, CHANF_LOOPING, 1.0);
 				self.droneCount++;				
-				if(self.droneCount == 350) {
+				if(self.droneCount == 700) {
 					self.droneCount = 0;
 					return ResolveState("Death");
 				}
@@ -101,7 +97,7 @@ class interceptorDrone : actor {
 			TNT1 A 0 {
 				self.droneCount++;
 				
-				if(self.droneCount == 350) {
+				if(self.droneCount == 700) {
 					self.droneCount = 0;
 					return ResolveState("Death");
 				}
@@ -129,5 +125,5 @@ class interceptorDrone : actor {
     }
 }
 class interceptorDrone_tracer : BlasterTracer {
-	Default { Damage 8; }
+	Default { Damage 12; }
 }

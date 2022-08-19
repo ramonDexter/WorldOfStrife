@@ -30,9 +30,8 @@ class wosSwarmers : wosPickup {
 		//$Category "Powerups/WoS"
 		//$Title "Swarmers"
 	
-		+INVENTORY.INVBAR
-		+FLOORCLIP
-		
+		+INVENTORY.INVBAR;
+		+FLOORCLIP;		
 		Tag "$T_SWARMERS";
 		Inventory.PickupSound "SHPODGET";
 		Inventory.PickupMessage "$F_SWARMERS";
@@ -51,13 +50,12 @@ class wosSwarmers : wosPickup {
 }
 class SwarmerPodSet : actor {
 	Default {
-		+MISSILE
-		+DROPOFF
-		+CANBOUNCEWATER
-		+BOUNCEONWALLS
-		+THRUACTORS
-		//DONTHURTSHOOTER
-		
+		+MISSILE;
+		+DROPOFF;
+		+CANBOUNCEWATER;
+		+BOUNCEONWALLS;
+		+THRUACTORS;
+		//+DONTHURTSHOOTER;		
 		Radius 3;
 		Height 5;
 		Speed 22;
@@ -80,10 +78,9 @@ class SwarmerPodSet : actor {
 }
 class SwarmerPodActive : actor {
 	Default {
-		+THRUACTORS
-		-SHOOTABLE
-		+BRIGHT
-		
+		+THRUACTORS;
+		-SHOOTABLE;
+		+BRIGHT;		
 		Radius 3;
 		Height 5;
 		Speed 12;
@@ -108,17 +105,16 @@ class SwarmerPodActive : actor {
 }
 class SwarmerMite : actor {
 	Default {
-		+THRUACTORS
-		-SHOOTABLE
-		+NOGRAVITY
-		+NOTARGET
-		-SEEKERMISSILE
-		+STEPMISSILE
-		+CANBOUNCEWATER
-		+BRIGHT
-		+USEBOUNCESTATE
-		+DROPOFF
-		
+		+THRUACTORS;
+		-SHOOTABLE;
+		+NOGRAVITY;
+		+NOTARGET;
+		-SEEKERMISSILE;
+		+STEPMISSILE;
+		+CANBOUNCEWATER;
+		+BRIGHT;
+		+USEBOUNCESTATE;
+		+DROPOFF;		
 		Tag "Active Swarmers Mite";
 		Radius 2;
 		Height 2;
@@ -187,9 +183,8 @@ class SwarmerMite : actor {
 }
 class ShredderDMG : actor { //Spawn as the "mites" travel to damage enemies.
 	Default {
-		+BLOODSPLATTER
-		+RIPPER
-		
+		+BLOODSPLATTER;
+		+RIPPER;		
 		Speed 2;
 		Radius 15;
 		Height 8;
@@ -208,8 +203,7 @@ class ShredderDMG : actor { //Spawn as the "mites" travel to damage enemies.
 }
 class SPodExplosion : actor {
 	Default {
-		+BRIGHT
-		
+		+BRIGHT;		
 		PROJECTILE;
 		Radius 4;
 		Height 4;
@@ -236,8 +230,7 @@ class SPodExplosion : actor {
 }
 class SMiteExplosion : actor {
 	Default {
-		+BRIGHT
-		
+		+BRIGHT;		
 		PROJECTILE;
 		Radius 4;
 		Height 4;

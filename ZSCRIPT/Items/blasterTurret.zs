@@ -20,12 +20,10 @@ zscript: ramon.dexter
 class wosBlasterTurret : wosPickup {
     Default {
 		//$Category "Powerups/WoS"
-		//$Title "Blaster Turret"
-		
+		//$Title "Blaster Turret"		
         +inventory.INVBAR;
 		+inventory.alwayspickup;
-		+FLOORCLIP;
-		
+		+FLOORCLIP;		
 		Tag "Mauler Turret";
 		Inventory.PickupMessage "You picked up the Blaster Turret.";
 		Inventory.Icon "I_STTR";		
@@ -46,9 +44,9 @@ class wosBlasterTurret : wosPickup {
 //turret spawner----------------------------------------------------------------
 class blasterTurretSet : actor {
     Default {
-        +DROPOFF
-        +CANBOUNCEWATER
-        +Missile
+        +DROPOFF;
+        +CANBOUNCEWATER;
+        +Missile;
 
         Tag "Mauler Turret";
         DontHurtShooter;
@@ -73,16 +71,16 @@ class blasterTurretSet : actor {
 //turret actor with aggresive behavior------------------------------------------
 class blasterTurretStand : actor {
     Default {
-        +INCOMBAT
-        +FRIENDLY
-	    +DontThrust
-	    +LOOKALLAROUND
-	    +NOBLOOD
-	    +NOTARGET
-	    +NOINFIGHTING
-	    +NOFEAR
-	    +DONTMORPH
-	    +NOICEDEATH
+        +INCOMBAT;
+        +FRIENDLY;
+	    +DontThrust;
+	    +LOOKALLAROUND;
+	    +NOBLOOD;
+	    +NOTARGET;
+	    +NOINFIGHTING;
+	    +NOFEAR;
+	    +DONTMORPH;
+	    +NOICEDEATH;
         Radius 10;
         height 56;
         Speed 0;
@@ -97,16 +95,16 @@ class Blaster_turret : actor {
 	int turretCount;	
 
     Default {
-        +INCOMBAT
-        +FRIENDLY
-	    +DontThrust
-	    +LOOKALLAROUND
-	    +NOBLOOD
-	    +NOTARGET
-	    +NOINFIGHTING
-	    +NOFEAR
-	    +DONTMORPH
-	    +NOICEDEATH
+        +INCOMBAT;
+        +FRIENDLY;
+	    +DontThrust;
+	    +LOOKALLAROUND;
+	    +NOBLOOD;
+	    +NOTARGET;
+	    +NOINFIGHTING;
+	    +NOFEAR;
+	    +DONTMORPH;
+	    +NOICEDEATH;
 
         Tag "Blaster Turret";
         Monster;

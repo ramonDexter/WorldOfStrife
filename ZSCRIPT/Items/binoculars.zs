@@ -107,13 +107,13 @@ class dummy_binoc : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "dummy binocular"
-		-SOLID
-		//+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS
-		+USESPECIAL
-		+NOGRAVITY
+		-SOLID;
+		//+SHOOTABLE;
+		+NODAMAGE;
+		+NOBLOOD;
+		+CANPASS;
+		+USESPECIAL;
+		+NOGRAVITY;
 		
 		Tag "$T_Binocular";
 		height 8;

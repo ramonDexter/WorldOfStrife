@@ -77,18 +77,14 @@ class wosEnvSuit : wosPickup replaces EnvironmentalSuit {
 
 class wosPowerMask : PowerIronFeet {
 	
-	Override void AbsorbDamage(int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
-	{
-		If(damageType=="Fire"||damageType=="Drowning"||damageType=="Gas")
-		{
+	Override void AbsorbDamage(int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags) {
+		If(damageType=="Fire"||damageType=="Drowning"||damageType=="Gas") {
 			newdamage = 0;
 		}
 	}
-	Override void DoEffect()
-	{
+	Override void DoEffect() {
 		Super.DoEffect();
-		If(!(Level.maptime & 0x3f))
-		{
+		If(!(Level.maptime & 0x3f)) {
 			Owner.A_StartSound("misc/mask", CHAN_5);
 		}
 	}

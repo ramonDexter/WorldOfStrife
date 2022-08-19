@@ -64,7 +64,6 @@ class medicalApply : weapon {
 		}
 		let pawn = binderPlayer(self);
 		pawn.bleedlevel = 0;
-		//int maxHealth = 100 + pawn.stamina;
 		int toHeal = pawn.GetMaxHealth(true) - pawn.Health;
 		pawn.GiveBody(toHeal, 0);		
 	}
@@ -91,8 +90,21 @@ class wosHyposprej : wosPickup {
 			Stop;
 		Use:
 			TNT1 A 0 {
-				let playe = binderPlayer(self);
-				playe.selectedWeapon = Weapon(playe.player.readyWeapon);
+				let pawn = binderPlayer(self);
+				if ( pawn.Health < pawn.GetMaxHealth(true) ) {
+					return resolveState("UseYes");
+				} else {
+					return resolveState("UseNot");
+				}
+				return resolveState(null);
+			}
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ You are fully healthy, no need to use medical! ]");
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
+				pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
 				A_GiveInventory("Hyposprej_apply", 1);
 				A_SelectWeapon("Hyposprej_apply");
 			}
@@ -146,8 +158,21 @@ class wosKombopack : wosPickup {
 			Stop;
 		Use:
 			TNT1 A 0 {
-				let playe = binderPlayer(self);
-				playe.selectedWeapon = Weapon(playe.player.readyWeapon);
+				let pawn = binderPlayer(self);
+				if ( pawn.Health < pawn.GetMaxHealth(true) ) {
+					return resolveState("UseYes");
+				} else {
+					return resolveState("UseNot");
+				}
+				return resolveState(null);
+			}
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ You are fully healthy, no need to use medical! ]");
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
+				pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
 				A_GiveInventory("Kombopack_apply", 1);
 				A_SelectWeapon("Kombopack_apply");
 			}
@@ -201,8 +226,21 @@ class wosInstaLek : wosPickup {
 			Stop;
 		Use:
 			TNT1 A 0 {
-				let playe = binderPlayer(self);
-				playe.selectedWeapon = Weapon(playe.player.readyWeapon);
+				let pawn = binderPlayer(self);
+				if ( pawn.Health < pawn.GetMaxHealth(true) ) {
+					return resolveState("UseYes");
+				} else {
+					return resolveState("UseNot");
+				}
+				return resolveState(null);
+			}
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ You are fully healthy, no need to use medical! ]");
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
+				pawn.selectedWeapon = Weapon(pawn.player.readyWeapon);
 				A_GiveInventory("InstaLek_apply", 1);
 				A_SelectWeapon("InstaLek_apply");
 			}
@@ -265,7 +303,9 @@ class zscMedPatch : wosPickup replaces MedPatch {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 //  MedicalKit  ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class zscMedicalKit : wosPickup replaces MedicalKit {
 	Default {
 		//$Category "Health and Armor/WoS"
@@ -283,6 +323,19 @@ class zscMedicalKit : wosPickup replaces MedicalKit {
 		Use:
 			TNT1 A 0 {
 				let pawn = binderPlayer(self);
+				if ( pawn.Health < pawn.GetMaxHealth(true) ) {
+					return resolveState("UseYes");
+				} else {
+					return resolveState("UseNot");
+				}
+				return resolveState(null);
+			}
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ You are fully healthy, no need to use medical! ]");
+			Fail;
+		UseYes:
+			TNT1 A 0 {
+				let pawn = binderPlayer(self);
 				pawn.bleedlevel=0;
 				pawn.A_StartSound("sounds/med",CHAN_ITEM);
 				pawn.GiveBody(25, 0);
@@ -292,7 +345,9 @@ class zscMedicalKit : wosPickup replaces MedicalKit {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 //  SurgeryKit  ////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class zscSurgeryKit : wosPickup replaces SurgeryKit {
 	Default {
 		//$Category "Health and Armor/WoS"
@@ -308,32 +363,27 @@ class zscSurgeryKit : wosPickup replaces SurgeryKit {
 			DUMM AB 35;
 			Loop;
 		Use:
-			TNT1 A 0 {			
+			TNT1 A 0 {
 				let pawn = binderPlayer(self);
-				int realMaxHealth = 100 + pawn.stamina;
-				if (pawn.Health == realMaxHealth) {
-					return resolveState("UseNot");
-				} else if (pawn.Health < realMaxHealth) {
+				if ( pawn.Health < pawn.GetMaxHealth(true) ) {
 					return resolveState("UseYes");
+				} else {
+					return resolveState("UseNot");
 				}
 				return resolveState(null);
 			}
-			Stop;
+		UseNot:
+			TNT1 A 0 A_Log("\c[yellow][ You are fully healthy, no need to use medical! ]");
+			Fail;
 		UseYes:
 			TNT1 A 0 {
 				let pawn = binderPlayer(self);
 				pawn.bleedlevel=0;
 				pawn.A_StartSound("sounds/med",CHAN_ITEM);
-				//int maxHealth = 100 + pawn.stamina;
 				int toHeal = pawn.GetMaxHealth(true) - pawn.Health;
 				pawn.GiveBody(toHeal, 0);
 			}
 			Stop;
-		UseNot:
-			TNT1 A 0 {
-				A_Print("Cannot use SurgeryKit while completely healthy!");
-			}
-			Fail;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

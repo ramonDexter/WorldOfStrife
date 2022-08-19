@@ -931,7 +931,7 @@ W_CYBERARMOR2 = "Heavy Cybernetic Armor worn!";
 
 T_UberArmor = "Kinetic Armor";
 W_UberArmor = "Kinetic Armor worn!";
-F__UberArmor = "You picked up the Kinetic Armor!";
+F_UberArmor = "You picked up the Kinetic Armor!";
 
 T_ARMORSHARD = "Armor Repair Kit";
 F_ARMORSHARD = "You picked up the Armor Repair Kit.";

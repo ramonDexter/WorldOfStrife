@@ -279,8 +279,8 @@ class wosEventHandler : EventHandler {
 		} else if ( e.Name ~== "heal_Player" ) {
 			// heal player //////////////////////////////////////
 			pawn.bleedlevel = 0;
-			int maxHealth = 100 + pawn.stamina;
-			int toHeal = maxHealth - pawn.Health;
+			//int maxHealth = 100 + pawn.stamina;
+			int toHeal = pawn.GetMaxHealth(true) - pawn.Health;
 			pawn.GiveBody(toHeal, 0);
 			pawn.A_Log("\c[yellow]Healing completed!!");
 			/////////////////////////////////////////////////////

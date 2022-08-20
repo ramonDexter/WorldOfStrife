@@ -10607,7 +10607,7 @@ actor wosD_jkjaPodCar 21611 {
 	Tag "aircar"
 	radius 68
 	height 48
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	States {
@@ -10654,6 +10654,66 @@ actor wos_gypsyCartBridge : InvisibleBridge8 21616 {
 	//$Category "Bridges"
 	//$Title "bridge gypsy cart"
 	tag "gypsy cart"
+}
+actor wosD_fnvTVset 21617 {
+	//$Category "Decorations/Wos/F:NV/"
+	//$Title "TV set"
+	Tag "TV set"
+	radius 8
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_fnvCookingStove 21618 {
+	//$Category "Decorations/Wos/F:NV/"
+	//$Title "cooking stove"
+	Tag "cooking stove"
+	radius 16
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_fnvChairVault 21619 {
+	//$Category "Decorations/Wos/F:NV/"
+	//$Title "chair vault"
+	Tag "chair metal"
+	radius 12
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_fnvHatStand 21620 {
+	//$Category "Decorations/Wos/F:NV/"
+	//$Title "hat stand"
+	Tag "hat stand"
+	radius 4
+	height 64
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

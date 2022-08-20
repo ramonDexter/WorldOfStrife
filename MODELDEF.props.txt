@@ -3863,6 +3863,39 @@ model wosD_jkjaPodCar {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+model wosD_fnvTVset {
+	path "models/props/fnv/"
+	model 0 "tvSet.md3"
+	skin 0 "tv_set_clean.png"
+	scale 0.75 0.75 0.75
+	offset 2.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_fnvCookingStove {
+	path "models/props/fnv/"
+	model 0 "stove.md3"
+	skin 0 "rangeclean.png"
+	scale 0.4 0.4 0.4
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_fnvChairVault {
+	path "models/props/fnv/"
+	model 0 "chairVault.md3"
+	skin 0 "chairvault01.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_fnvHatStand {
+	path "models/props/fnv/"
+	model 0 "hatStand.md3"
+	skin 0 "suburban_hatstand.png"
+	scale 0.6 0.6 0.6
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

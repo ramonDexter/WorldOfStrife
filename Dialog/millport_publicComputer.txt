@@ -1,0 +1,134 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 47;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "mp_publicPC_opener";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[white]Public Computer\n---------------\n- Public announcements\n- City Proclamations\n- News";
+        Goodbye = "\c[red]EXIT"; 
+        Choice {
+            Text = "Public announcements";
+            Nextpage = "mp_publicPC_publicAnnouncements";
+        } 
+        Choice {
+            Text = "City Proclamations";
+            Nextpage = "mp_publicPC_proclamations";
+        }
+        Choice {
+            Text = "News";
+            Nextpage = "mp_publicPC_news";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_publicAnnouncements";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[white]Public Announcements";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "# 001";
+            Nextpage = "mp_publicPC_publicAnnouncements_001";
+        }
+        Choice {
+            Text = "# 002";
+            Nextpage = "mp_publicPC_publicAnnouncements_002";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_opener";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_publicAnnouncements_001";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Imperial Decree # 042005643\n===========================\n\c[white]Announcement of the Imperial MedGuild:\nThe vaccination against the Red Plague will take place from 16. to 27. of the month of harvest. Each citizen will receive an invitation. The invitation is mandatory, vaccination is madnatory. Please, see your nearest medical center for more information.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_publicAnnouncements";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_publicAnnouncements_002";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Imperial Decree # 042005702\n===========================\n\c[white]Travelling merchants are being issued new tax. Payment of the Tax will be collected by local city authorities once they leave the city. The tax will be 1% of each merchants income in said city.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_publicAnnouncements";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_proclamations";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "# 001";
+            Nextpage = "mp_publicPC_proclamations_001";
+        } 
+        Choice {
+            Text = "# 002";
+            Nextpage = "mp_publicPC_proclamations_002";
+        } 
+        Choice {
+            Text = "# 003";
+            Nextpage = "mp_publicPC_proclamations_003";
+        } 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_opener";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_proclamations_001";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]The City Authority announces extensioni of City Guard authority. Due to later difficulties with rebelous heretics, the city guard is allowed to search any individual's belongings. This authoritu is also applied upon members of the Binder Order.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_proclamations";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_proclamations_002";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]The price of trading licence has been raised from 500 gold to 750 gold. Already issued licences ramin the same, new lincences will be issued with new price.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_proclamations";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_proclamations_003";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]The access to city catacombs has been denied until further notice. Tresspassers will be brought to justice and fined accordingly.";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_proclamations";
+        }
+    }
+    Page {
+        pageName = "mp_publicPC_news";
+        Name = "\c[yellow]PUBLIC COMPUTER";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye."; 
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "mp_publicPC_opener";
+        }
+    }
+}

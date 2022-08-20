@@ -20,15 +20,9 @@ const wosCandyBarWeight = 1;
 */
 ////////////////////////////////////////////////////////////////////////////////
 
-// food dispensers, vanding machines ///////////////////////////////////////////
-
 ////////////////////////////////////////////////////////////////////////////////
-
-class waterBottle_heal : Health {
-	Default {
-		Inventory.Amount 5;
-	}
-}
+// food ////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 class wosWaterBottle : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -40,21 +34,14 @@ class wosWaterBottle : wosPickup {
 		Inventory.Icon "I_WATR";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
-	}
-	
+	}	
 	States {
 		Spawn:			
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("waterBottle_heal", 1);
+			TNT1 A 0 W_foodHeal(5);
 			Stop;
-	}
-}
-
-class beerBottle_heal : Health {
-	Default {
-		Inventory.Amount 6;
 	}
 }
 class wosBeerBottle : wosPickup {
@@ -68,8 +55,7 @@ class wosBeerBottle : wosPickup {
 		Inventory.Icon "I_SBER";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
-	}
-	
+	}	
 	States {
 		Spawn:			
 			DUMM A -1;
@@ -77,20 +63,13 @@ class wosBeerBottle : wosPickup {
 		Use:
 			TNT1 A 0 {
 				ACS_NamedExecute("drunkPivo", 0);
-				A_GiveInventory("beerBottle_heal", 1);
+				W_foodHeal(6);
 			}
 			Stop;
 	}
 }
-class aleBottle_heal : Health {
+class wosAleBottle : wosPickup {
 	Default {
-		Inventory.Amount 9;
-	}
-}
-class wosAleBottle : wosPickup
-{
-	Default
-	{
 		//$Category "Health and Armor/Food"
 		//$Title "Ale Bottle"
 		
@@ -100,8 +79,7 @@ class wosAleBottle : wosPickup
 		Inventory.Icon "I_MS12";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
-	}
-	
+	}	
 	States
 	{
 		Spawn:			
@@ -110,14 +88,9 @@ class wosAleBottle : wosPickup
 		Use:
 			TNT1 A 0 {
 				ACS_NamedExecute("drunkPivo", 0);
-				A_GiveInventory("aleBottle_heal", 1);
+				W_foodHeal(9);
 			}
 			Stop;
-	}
-}
-class vineBottle_heal : Health {
-	Default {
-		Inventory.Amount 7;
 	}
 }
 class wosVineBottle : wosPickup {
@@ -131,8 +104,7 @@ class wosVineBottle : wosPickup {
 		Inventory.Icon "I_SVIN";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
-	}
-	
+	}	
 	States {
 		Spawn:			
 			DUMM A -1;
@@ -140,14 +112,9 @@ class wosVineBottle : wosPickup {
 		Use:
 			TNT1 A 0 {
 				ACS_NamedExecute("drunkVino", 0);
-				A_GiveInventory("vineBottle_heal", 1);
+				W_foodHeal(7);
 			}
 			Stop;
-	}
-}
-class spiritsBottle_heal : Health {
-	Default { 
-		Inventory.Amount 7; 
 	}
 }
 class wosSpiritsBottle : wosPickup {
@@ -169,18 +136,11 @@ class wosSpiritsBottle : wosPickup {
 		Use:
 			TNT1 A 0 { 
 				ACS_NamedExecute("drunkKoralka", 0);
-				A_GiveInventory("spiritsBottle_heal", 1); 
+				W_foodHeal(7); 
 			}
 			Stop;
 	}
 }
-
-class hamburger_heal : Health {
-	Default {
-		inventory.amount 5;
-	}
-}
-
 class wosHamburger : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -191,24 +151,16 @@ class wosHamburger : wosPickup {
 		Inventory.PickupMessage "You picked up the Hamburger!";
 		inventory.usesound "sounds/eat";
 		Mass burgerweight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			BRGR A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("hamburger_heal", 1);
+			TNT1 A 0 W_foodHeal(5);
 			Stop;
 	}
 }
-
-class cheeseburger_heal : Health {
-	Default {
-		Inventory.amount 8;
-	}
-}
-
 class wosCheeseburger : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -219,24 +171,16 @@ class wosCheeseburger : wosPickup {
 		Inventory.PickupMessage "You picked up the Cheeseburger!";
 		inventory.usesound "sounds/eat";
 		Mass cheeseBurgerWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			BRGR B -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("cheeseburger_heal", 1);
+			TNT1 A 0 W_foodHeal(8);
 			Stop;			
 	}
 }
-
-class bigburger_heal : Health {
-	Default {
-		Inventory.amount 11;
-	}
-}
-
 class wosBigburger : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -247,21 +191,14 @@ class wosBigburger : wosPickup {
 		Inventory.PickupMessage "You picked up the Bigburger!";
 		inventory.usesound "sounds/eat";
 		Mass bigBurgerWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			BRGR C -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("bigburger_heal", 1);
+			TNT1 A 0 W_foodHeal(11);
 			Stop;
-	}
-}
-
-class cheeseburgerDouble_heal : Health {
-	Default {
-		Inventory.amount 15;
 	}
 }
 class wosCheeseburgerDouble : wosPickup {
@@ -274,20 +211,14 @@ class wosCheeseburgerDouble : wosPickup {
 		Inventory.PickupMessage "You picked up the Double Cheeseburger!";
 		inventory.usesound "sounds/eat";
 		Mass dblCheeBWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			BRGR C -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("cheeseburgerDouble_heal", 1);
+			TNT1 A 0 W_foodHeal(15);
 			Stop;
-	}
-}
-class hotdog_heal : Health {
-	Default {
-		Inventory.Amount 7;
 	}
 }
 class wosHotdog01 : wosPickup {
@@ -300,14 +231,13 @@ class wosHotdog01 : wosPickup {
 		Inventory.PickupMessage "You picked up the Hotdog!";
 		inventory.usesound "sounds/eat";
 		Mass hotdogWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			HTD1 A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("hotdog_heal", 1);
+			TNT1 A 0 W_foodHeal(7);
 			Stop;
 	}
 }
@@ -321,25 +251,16 @@ class wosHotdog02 : wosPickup {
 		Inventory.PickupMessage "You picked up the Hotdog!";
 		inventory.usesound "sounds/eat";
 		Mass hotdogWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			HTD2 A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("hotdog_heal", 1);
+			TNT1 A 0 W_foodHeal(7);
 			Stop;
 	}
 }
-
-
-class donuts_heal : Health {
-	Default {
-		inventory.amount 7;
-	}
-}
-
 class wosDonuts : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -350,24 +271,16 @@ class wosDonuts : wosPickup {
 		Inventory.PickupMessage "You picked up the Donuts!";
 		inventory.usesound "sounds/eat";
 		Mass donutsWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			DNTS A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("donuts_heal", 1);
+			TNT1 A 0 W_foodHeal(7);
 			Stop;
 	}
 }
-
-class foodBox_heal : Health {
-	Default {
-		inventory.amount 15;
-	}
-}
-
 class wosFoodBox : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -378,24 +291,16 @@ class wosFoodBox : wosPickup {
 		Inventory.PickupMessage "You picked up the Foodbox!";
 		inventory.usesound "sounds/eat";
 		Mass foodBoxWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			DBOX A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("foodBox_heal", 1);
+			TNT1 A 0 W_foodHeal(15);
 			Stop;
 	}
 }
-
-class foodRation_heal : Health {
-	Default {
-		inventory.amount 20;
-	}
-}
-
 class wosFoodRation1 : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
@@ -406,14 +311,13 @@ class wosFoodRation1 : wosPickup {
 		Inventory.PickupMessage "You picked up the Food Rations I!";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("foodRation_heal", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
 	}
 }
@@ -427,14 +331,13 @@ class wosFoodRation2 : wosPickup {
 		Inventory.PickupMessage "You picked up the Food Rations II!";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("foodRation_heal", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
 	}
 }
@@ -448,20 +351,14 @@ class wosFoodRation3 : wosPickup {
 		Inventory.PickupMessage "You picked up the Food Rations III!";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
-	}
-	
+	}	
 	States {
 		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("foodRation_heal", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
-	}
-}
-class wosGrilledChicken_Heal : Health {
-	Default {
-		inventory.amount 35;
 	}
 }
 class wosGrilledChicken : wosPickup {
@@ -476,19 +373,14 @@ class wosGrilledChicken : wosPickup {
 	}
 	States {
 		Spawn:
-			CHKN W -1;
+			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("wosGrilledChicken_Heal", 1);
+			TNT1 A 0 W_foodHeal(35);
 			Stop;
 	}
 }
 // food from foodbarrels //////////////////////////////////////////////////////
-class Vegie1 : health {
-	Default {
-		Inventory.Amount 10;
-	}
-}
 class wosVegie1 : wosPickup {
 	Default {
 		//$Category "Decorations/food barrels"
@@ -507,13 +399,8 @@ class wosVegie1 : wosPickup {
 			FRUT A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("Vegie1", 1);
+			TNT1 A 0 W_foodHeal(10);
 			Stop;
-	}
-}
-class Vegie2 : health {
-	Default {
-		Inventory.Amount 15;
 	}
 }
 class wosVegie2 : wosPickup {
@@ -534,13 +421,8 @@ class wosVegie2 : wosPickup {
 			FRUT B -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("Vegie2", 1);
+			TNT1 A 0 W_foodHeal(15);
 			Stop;
-	}
-}
-class Vegie3 : Health {
-	Default {
-		Inventory.Amount 10;
 	}
 }
 class wosVegie3 : wosPickup {
@@ -561,13 +443,8 @@ class wosVegie3 : wosPickup {
 			FRUT D -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("Vegie3", 1);
+			TNT1 A 0 W_foodHeal(10);
 			Stop;
-	}
-}
-class Vegie4 : Health {
-	Default {
-		Inventory.Amount 15;
 	}
 }
 class wosVegie4 : wosPickup {
@@ -588,13 +465,8 @@ class wosVegie4 : wosPickup {
 			FRUT E -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("Vegie4", 1);
+			TNT1 A 0 W_foodHeal(15);
 			Stop;
-	}
-}
-class Vegie5 : Health {
-	Default {
-		Inventory.Amount 10;
 	}
 }
 class wosVegie5 : wosPickup {
@@ -615,13 +487,8 @@ class wosVegie5 : wosPickup {
 			FRUT G -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("Vegie5", 1);
+			TNT1 A 0 W_foodHeal(10);
 			Stop;
-	}
-}
-class fbMeat1 : Health {
-	Default {
-		Inventory.Amount 25;
 	}
 }
 class wosfbMeat1 : wosPickup {
@@ -642,13 +509,8 @@ class wosfbMeat1 : wosPickup {
 			FRUT C -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("fbMeat1", 1);
+			TNT1 A 0 W_foodHeal(25);
 			Stop;
-	}
-}
-class fbMeat2 : Health {
-	Default {
-		Inventory.Amount 20;
 	}
 }
 class wosfbMeat2 : wosPickup {
@@ -669,13 +531,8 @@ class wosfbMeat2 : wosPickup {
 			FRUT F -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("fbMeat2", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
-	}
-}
-class fbMeat3 : Health {
-	Default {
-		Inventory.Amount 20;
 	}
 }
 class wosfbMeat3 : wosPickup {
@@ -696,14 +553,8 @@ class wosfbMeat3 : wosPickup {
 			FRUT H -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("fbMeat3", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
-	}
-}
-
-class soyFoodHeal : Health {
-	Default { 
-		inventory.Amount 20; 
 	}
 }
 class wosSoyFood : wosPickup {
@@ -722,14 +573,8 @@ class wosSoyFood : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("soyFoodHeal", 1);
+			TNT1 A 0 W_foodHeal(20);
 			Stop;
-	}
-}
-
-class sodaCanHeal : Health {
-	Default {
-		inventory.Amount 10;
 	}
 }
 class wosSodaCan : wosPickup {
@@ -748,14 +593,8 @@ class wosSodaCan : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("sodaCanHeal", 1);
+			TNT1 A 0 W_foodHeal(10);
 			Stop;
-	}
-}
-
-class candyBarHeal : Health {
-	Default {
-		inventory.Amount 15;
 	}
 }
 class wosCandyBar : wosPickup {
@@ -774,14 +613,8 @@ class wosCandyBar : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("candyBarHeal", 1);
+			TNT1 A 0 W_foodHeal(15);
 			Stop;
-	}
-}
-
-class FoodTrayHeal : Health {
-	Default {
-		inventory.Amount 17;
 	}
 }
 class wosFoodTrayEmpty : wosPickup {
@@ -808,7 +641,7 @@ class wosFoodTray : wosPickup {
 		if ( player == null ) {
             return;
         }
-		A_GiveInventory("FoodTrayHeal", 1);
+		W_foodHeal(17);
 		A_GiveInventory("wosFoodTrayEmpty", 1);
 	}
 
@@ -831,4 +664,158 @@ class wosFoodTray : wosPickup {
 			Stop;
 	}
 }
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//  deprecated&&unused stuff  //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+/*
+class waterBottle_heal : Health {
+	Default {
+		Inventory.Amount 5;
+	}
+}
+class beerBottle_heal : Health {
+	Default {
+		Inventory.Amount 6;
+	}
+}
+class aleBottle_heal : Health {
+	Default {
+		Inventory.Amount 9;
+	}
+}
+class vineBottle_heal : Health {
+	Default {
+		Inventory.Amount 7;
+	}
+}
+class spiritsBottle_heal : Health {
+	Default { 
+		Inventory.Amount 7; 
+	}
+}
+class hamburger_heal : Health {
+	Default {
+		inventory.amount 5;
+	}
+}
+
+class cheeseburger_heal : Health {
+	Default {
+		Inventory.amount 8;
+	}
+}
+
+class bigburger_heal : Health {
+	Default {
+		Inventory.amount 11;
+	}
+}
+
+class cheeseburgerDouble_heal : Health {
+	Default {
+		Inventory.amount 15;
+	}
+}
+class hotdog_heal : Health {
+	Default {
+		Inventory.Amount 7;
+	}
+}
+
+
+class donuts_heal : Health {
+	Default {
+		inventory.amount 7;
+	}
+}
+
+class foodBox_heal : Health {
+	Default {
+		inventory.amount 15;
+	}
+}
+
+class foodRation_heal : Health {
+	Default {
+		inventory.amount 20;
+	}
+}
+class wosGrilledChicken_Heal : Health {
+	Default {
+		inventory.amount 35;
+	}
+}
+class Vegie1 : health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class Vegie2 : health {
+	Default {
+		Inventory.Amount 15;
+	}
+}
+class Vegie3 : Health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class Vegie4 : Health {
+	Default {
+		Inventory.Amount 15;
+	}
+}
+class Vegie5 : Health {
+	Default {
+		Inventory.Amount 10;
+	}
+}
+class fbMeat1 : Health {
+	Default {
+		Inventory.Amount 25;
+	}
+}
+class fbMeat2 : Health {
+	Default {
+		Inventory.Amount 20;
+	}
+}
+class fbMeat3 : Health {
+	Default {
+		Inventory.Amount 20;
+	}
+}
+
+class soyFoodHeal : Health {
+	Default { 
+		inventory.Amount 20; 
+	}
+}
+
+class sodaCanHeal : Health {
+	Default {
+		inventory.Amount 10;
+	}
+}
+
+class candyBarHeal : Health {
+	Default {
+		inventory.Amount 15;
+	}
+}
+
+class FoodTrayHeal : Health {
+	Default {
+		inventory.Amount 17;
+	}
+}
+
+
+*/
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

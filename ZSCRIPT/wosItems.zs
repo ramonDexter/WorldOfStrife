@@ -146,6 +146,14 @@ class wosPickup : CustomInventory {
             super.OnDrop(dropper);
         }
     }
+	
+	action void W_foodHeal(int healAmount) {
+		if (player == null) {
+			return;
+		}
+		let pawn = binderPlayer(self);
+		pawn.GiveBody(healAmount, 0);
+	}
 
     Default {
 		+INVENTORY.INVBAR;
@@ -379,10 +387,10 @@ class goldCoin : Inventory /*replaces coin*/ {
 	Default {
         //$Category "Quest things/WoS"
 		//$Title "gold coin"
-		+DROPPED
-		+NOTDMATCH
-		+FLOORCLIP
-		+INVENTORY.INVBAR
+		+DROPPED;
+		+NOTDMATCH;
+		+FLOORCLIP;
+		+INVENTORY.INVBAR;
 		Inventory.MaxAmount 10000;
 		Tag "$TAG_goldCOIN";
 		Inventory.Icon "I_COIN";
@@ -426,7 +434,7 @@ class wosGold25 : wosPickup {
 	Default {
         //$Category "Quest things/WoS"
 		//$Title "gold coins (25)"
-		-INVENTORY.INVBAR
+		-INVENTORY.INVBAR;
 		Tag "$TAG_25GOLDcoins";
 		Inventory.PickupMessage "$TXT_25GOLDcoins";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -446,7 +454,7 @@ class wosGold50 : wosPickup {
 	Default {
         //$Category "Quest things/WoS"
 		//$Title "gold coins (50)"
-		-INVENTORY.INVBAR
+		-INVENTORY.INVBAR;
 		Tag "$TAG_50GOLDcoins";
 		Inventory.PickupMessage "$TXT_50GOLDcoins";
 		Inventory.pickupSound "sounds/coinPickup";
@@ -467,9 +475,9 @@ class wosGold50 : wosPickup {
 class goldChest50_item : wosPickup {
     Default {
         //$Category "Quest things/WoS"
-		//$Title "Chest with coins (50)"
+		//$Title "Chest with gold coins (50)"
 		
-		+INVENTORY.INVBAR
+		+INVENTORY.INVBAR;
 		
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
@@ -494,9 +502,9 @@ class goldChest50_item : wosPickup {
 class goldChest100_item : wosPickup {
     Default {
         //$Category "Quest things/WoS"
-		//$Title "Chest with coins (100)"
+		//$Title "Chest with gold coins (100)"
 		
-		+INVENTORY.INVBAR
+		+INVENTORY.INVBAR;
 		
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
@@ -521,9 +529,9 @@ class goldChest100_item : wosPickup {
 class goldChest250_item : wosPickup {
     Default {
         //$Category "Quest things/WoS"
-		//$Title "Chest with coins (250)"
+		//$Title "Chest with gold coins (250)"
 		
-		+INVENTORY.INVBAR
+		+INVENTORY.INVBAR;
 		
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
@@ -548,9 +556,9 @@ class goldChest250_item : wosPickup {
 class goldChest500_item : wosPickup {
     Default {
         //$Category "Quest things/WoS"
-		//$Title "Chest with coins (500)"
+		//$Title "Chest with gold coins (500)"
 		
-		+INVENTORY.INVBAR
+		+INVENTORY.INVBAR;
 		
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";

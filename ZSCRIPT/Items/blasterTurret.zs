@@ -170,3 +170,21 @@ class blasterTurretTracer : BlasterTracer {
 	}
 }
 //------------------------------------------------------------------------------
+// dummy decorative model //////////////////////////////////////////////////////
+class wosD_blasterTurret : actor {
+    Default {
+        //$Category "Decorations/Wos/"
+        //$Title "deco blaster turret"
+        Tag "Mauler Turret";
+        radius 12;
+        height 24;
+        +SOLID;
+        +USESPECIAL;
+        +NOGRAVITY;
+    }
+    States {
+        Spawn:
+            DUMM A -1;
+            Stop;
+    }
+}

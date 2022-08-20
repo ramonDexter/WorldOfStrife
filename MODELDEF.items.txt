@@ -1080,8 +1080,18 @@ model wosBlasterTurret {
 	skin 0 "tx_pxStaffBlaster.png"
 	scale 1.85 1.85 1.85
 	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 0*/
-	
+	frameindex DUMM A 0 0*/	
+}
+model wosD_blasterTurret {
+	path "models/props/modelpack/"
+	model 0 "turret.md3"
+	skin 0 "tx_turretStand.png"
+	model 1 "turretStand.md3"
+	skin 1 "tx_turretStand.png"
+	scale 0.75 0.75 0.75
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	frameindex DUMM A 1 0
 }
 model blasterTurretSet {
 	path "models/props/modelpack/"
@@ -1815,6 +1825,15 @@ model dummy_binoc {
 	frameindex DUMM A 0 0
 }*/
 ////////////////////////////////////////////////////////////////////////////////
+
+model wosGrilledChicken {
+	path "models/props/food/"
+	model 0 "roastedchicken.md3"
+	skin 0 "roastedchicken.png"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 
 
 

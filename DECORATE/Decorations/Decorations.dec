@@ -6356,7 +6356,7 @@ actor wosD_dex_shopLight 21351 {
 	height 16
 	States {
 		Spawn:
-			DUMM A -1 Bright //light("DOMELAMP")
+			DUMM A -1 Bright light("light_dexshoplight")
 			Stop
 	}
 }
@@ -10310,9 +10310,10 @@ actor wosD_jkjaWallLight 21591 {
 	Tag "wall light"
 	radius 8
 	height 16
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
+	-NOBLOCKMAP
 	States {
 		Spawn:
 			DUMM A -1 Bright light("WALL_LIGHT")

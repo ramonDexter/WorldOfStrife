@@ -406,21 +406,21 @@ class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
 
 // stalker XP replacer ////////////////////////////////////////////////////////////////
 class wosStalker : Stalker replaces Stalker {
-	action void W_rewardXPstalker (int rewardXP) {
+	/*action void W_rewardXPstalker (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 
 	States {
 		Death:
 			STLK O 4;
 			STLK P 4 A_Scream;
 			STLK QRST 4;
-			TNT1 A 0 W_rewardXPstalker(SpawnHealth());
+			//TNT1 A 0 W_rewardXPstalker(SpawnHealth());
 			STLK U 4 A_NoBlocking;
 			STLK VW 4;
 			STLK XYZ[ 4 Bright;
@@ -429,20 +429,20 @@ class wosStalker : Stalker replaces Stalker {
 }
 // CeilingTurret XP replacer //////////////////////////////////////////////////////////
 class wosCeilingTurret : CeilingTurret replaces CeilingTurret {
-	action void W_rewardXPCeilingTurret (int rewardXP) {
+	/*action void W_rewardXPCeilingTurret (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 
 	States {
 		Death:
 			BALL A 6 Bright A_Scream;
 			BALL BCDE 6 Bright;
-			TNT1 A 0 W_rewardXPCeilingTurret(SpawnHealth());
+			//TNT1 A 0 W_rewardXPCeilingTurret(SpawnHealth());
 			TURT C -1;
 			Stop;
 	}
@@ -455,14 +455,14 @@ class wosCrusader : Crusader replaces Crusader {
 		//$Sprite "ROB2A1"
 		Speed 2;
 	}
-  	action void W_rewardXPcrusader (int rewardXP) {
+  	/*action void W_rewardXPcrusader (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.Player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 	States {
 		Spawn:
 			DUMA A 10 A_LookEx (0, 0, 0, 0, 0, "Activation");
@@ -530,7 +530,7 @@ class wosCrusader : Crusader replaces Crusader {
 			TNT1 A 0 A_SpawnItemEx ("CrusHeavyArm", 8.0, 30.0, 40.0, 0.0, 4.0, 2.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
 			TNT1 A 0 A_SpawnItemEx ("CrusHeavyGun", 8.0, -30.0, 40.0, 0.0, -5.0, 0.0, 0.0, SXF_NOCHECKPOSITION | SXF_TRANSFERTRANSLATION, 0);
 			TNT1 A 0 A_SpawnItemEx ("wosExplosion_medium", 0.0, 0.0, 32.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			TNT1 A 0 W_rewardXPcrusader(SpawnHealth());
+			//TNT1 A 0 W_rewardXPcrusader(SpawnHealth());
 			//TNT1 A 0 A_SpawnItemEx ("ModelSmoke1Medium", 0.0, 0.0, 32.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			TNT1 A 3 A_Quake(9,8,0,192,"NJMT");
 			TNT1 AAAAAA 1 A_TossGib();
@@ -628,14 +628,14 @@ class CrusHeavyArm : actor {
 }
 // Inquisitor XP replacer /////////////////////////////////////////////////////////////
 class wosInquisitor : Inquisitor replaces Inquisitor {
-	action void W_rewardXPInquisitor (int rewardXP) {
+	/*action void W_rewardXPInquisitor (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 	States {
 		Death:
 			ROB3 L 0 A_StopSound(CHAN_ITEM);
@@ -655,7 +655,7 @@ class wosInquisitor : Inquisitor replaces Inquisitor {
 			ROB3 \ 3 A_TossGib;
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
 			ROB3 ] 3 Bright A_Explode(128, 128, alert:true);
-			TNT1 A 0 W_rewardXPInquisitor(SpawnHealth());
+			//TNT1 A 0 W_rewardXPInquisitor(SpawnHealth());
 			RBB3 A 3 Bright A_TossArm;
 			RBB3 B 3 Bright A_TossGib;
 			RBB3 CD 3 A_TossGib;
@@ -665,14 +665,14 @@ class wosInquisitor : Inquisitor replaces Inquisitor {
 }
 // Templar XP replacer ////////////////////////////////////////////////////////////////
 class wosTemplar : Templar replaces Templar {
-	action void W_rewardXPTemplar (int rewardXP) {
+	/*action void W_rewardXPTemplar (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 	States {
 		Death:
 			PGRD I 4 A_TossGib;
@@ -681,7 +681,7 @@ class wosTemplar : Templar replaces Templar {
 			PGRD L 4 A_NoBlocking;
 			PGRD MN 4;
 			PGRD O 4 A_TossGib;
-			TNT1 A 0 W_rewardXPTemplar(SpawnHealth());
+			//TNT1 A 0 W_rewardXPTemplar(SpawnHealth());
 			PGRD PQRSTUVWXYZ[ 4;
 			PGRD \ -1;
 			Stop;
@@ -689,14 +689,14 @@ class wosTemplar : Templar replaces Templar {
 }
 // Reaver XP replacer /////////////////////////////////////////////////////////////////
 class wosReaver : Reaver replaces Reaver {
-	action void W_rewardXPReaver (int rewardXP) {
+	/*action void W_rewardXPReaver (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
 	States {
 		Death:
 			ROB1 J 6;
@@ -706,7 +706,7 @@ class wosReaver : Reaver replaces Reaver {
 			ROB1 NOP 5;
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_high");
 			ROB1 Q 6 A_Explode(32, 32, alert:true);
-			TNT1 A 0 W_rewardXPReaver(SpawnHealth());
+			//TNT1 A 0 W_rewardXPReaver(SpawnHealth());
 			ROB1 R -1;
 			Stop;
 		XDeath:
@@ -725,14 +725,14 @@ class wosSentinel : Sentinel replaces Sentinel {
 		//$Title "wosSentinel"
 		//$Sprite "SEWRA1"
     }
-	action void W_rewardXPsentinel (int rewardXP) {
+	/*action void W_rewardXPsentinel (int rewardXP) {
 		let pawn = binderPlayer(target);
 		if ( pawn && pawn.player ) {
 			pawn.playerXP+=rewardXP;
 			//A_Log("Added ", rewardXP, " XP!");
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
-	}
+	}*/
     States {
         Spawn:
             DUMA A 10 A_Look();
@@ -790,7 +790,7 @@ class wosSentinel : Sentinel replaces Sentinel {
             DUMA FFFF 1 A_TossGib();
             DUMA G 1 A_Scream();
             DUMA GGG 1 A_TossGib();
-            TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
+            //TNT1 A 0 W_rewardXPsentinel(SpawnHealth());
             DUMA G 1 A_SpawnItemEx ("wosSentinelDeath", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
             TNT1 A 1 A_NoBlocking();
             Stop;

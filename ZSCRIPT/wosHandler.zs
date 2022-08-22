@@ -9,7 +9,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 class wosEventHandler : EventHandler {
 
+	////////////////////////////////////////////////////////////////////////////
 	// armor screen hit display by heydoomer ///////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	bool bGrid;
 	int tCounter;
 	int armor;
@@ -123,81 +125,30 @@ class wosEventHandler : EventHandler {
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////
-	// rpg system support - XP raise based on monster health handler ///////////
+	// rpg system support - XP raise_based_on_monster_health handler ///////////
 	////////////////////////////////////////////////////////////////////////////
 	override void WorldThingDied(WorldEvent e) {
+		class<Actor> wosMonsters[] = {
+			"rebelEnemy", "spikerTrap", "wosStalker", "wosStalker", "wosCrusader", "wosInquisitor", "wosTemplar", "wosReaver", "wosSentinel", "ZombieFodder", "MiniSentinel", "Paladin", "shootingStalker", "wosAcolyte", "ascImpFlesh", "Loremaster", "wosBogMonster", "YoungCarnivorousWeed", "YoungHellroseBramble", "CarnivorousWeed", "HellroseBramble", "wosGiantEel", "FieryBeast", "Lizard", "Ophidiant", "wosPitLord", "wosPitFiend", "wosPlagueFiend", "MiniDragon", "ascSerpentFly", "ascTramp", "ascRogue", "wosGiantRat", "LaserScout", "wosSecuriBot", "AvalonSpider", "BloodSpider", "DaggerSpider", "DeathWidow", "Fright", "GiantSpider", "GoldenSpider", "PowerSlaveSpider2", "PowerSlaveSpider", "ShadowSpider", "ShadowSpider2", "SmallSteal", "Widow", "CycloneWasp", "MutantFly", "PSXWasp", "PSRedWasp", "PSWasp", "Scorpion", "DaggerScorpion", "YellowScorpion", "Scorp1PoisonDummy", "BlackScorpion", "PSScorpion", "wosCultist", "wosLiquidator", "wosRocketTurret" 
+		};
+
 		let mo = e.Thing;
-		let pawn = binderPlayer(mo.Target);
-		if ( mo.Target != null ) {
-			if ( mo is "rebelEnemy" && mo.Target is "binderPlayer" ) {
+		if ( !(mo.Target is "binderPlayer") ) return;
+
+		for (int i = 0; i < wosMonsters.Size(); i++) {
+			if ( mo is wosMonsters[i] ) {
+				let pawn = binderPlayer(mo.Target);
 				pawn.playerXP+=mo.SpawnHealth();
 				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+				break;
 			}
-			if ( mo is "spikerTrap" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosStalker" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosCrusader" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosInquisitor" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosTemplar" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosReaver" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosSentinel" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "ZombieFodder" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "MiniSentinel" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "Paladin" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "shootingStalker" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosAcolyte" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "ascImpFlesh" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "Loremaster" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			if ( mo is "wosBogMonster" && mo.Target is "binderPlayer" ) {
-				pawn.playerXP+=mo.SpawnHealth();
-				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
-			}
-			//pokracovat od ascens.zs dal //
- 		}
+		}		
 	}
 	////////////////////////////////////////////////////////////////////////////
 	
+	////////////////////////////////////////////////////////////////////////////
+	// bleeding handler ////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
     override void WorldThingDamaged(WorldEvent e) {
         if (e.thing && e.Thing is "binderPlayer") {
             let pawn = binderPlayer(e.Thing);
@@ -223,6 +174,11 @@ class wosEventHandler : EventHandler {
 			////////////////////////////////////////////////////////////////////
         }
     }
+	////////////////////////////////////////////////////////////////////////////
+
+	////////////////////////////////////////////////////////////////////////////
+	// footsteps & shield handler //////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	override void PlayerEntered(PlayerEvent e) {
 		let player = PlayerPawn(players[e.PlayerNumber].mo);
 		//BEGIN VSO : Some Wads crash here with VM Abort because player can be NULL
@@ -239,11 +195,11 @@ class wosEventHandler : EventHandler {
 		Footsteps fsteps = Footsteps(Actor.Spawn("Footsteps",player.pos));
         fsteps.Init(player);
 	}
-	/*override void PlayerDisconnected(PlayerEvent e) {
-		//Footsteps fsteps = footsteps("footsteps");
-		//fsteps.Destroy();
-	}*/
+	////////////////////////////////////////////////////////////////////////////
+		
+	////////////////////////////////////////////////////////////////////////////
 	// cheats & debug //////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	override void NetworkProcess(ConsoleEvent e) {
         let pawn = binderPlayer(players[e.Player].mo);
 
@@ -377,3 +333,73 @@ class wosEventHandler : EventHandler {
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+		/*let mo = e.Thing;
+		let pawn = binderPlayer(mo.Target);
+		if ( mo.Target != null ) {
+			if ( mo is "rebelEnemy" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "spikerTrap" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosStalker" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosCrusader" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosInquisitor" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosTemplar" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosReaver" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosSentinel" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "ZombieFodder" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "MiniSentinel" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "Paladin" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "shootingStalker" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosAcolyte" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "ascImpFlesh" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "Loremaster" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			if ( mo is "wosBogMonster" && mo.Target is "binderPlayer" ) {
+				pawn.playerXP+=mo.SpawnHealth();
+				pawn.A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", mo.SpawnHealth()," XP!"));
+			}
+			//pokracovat od ascens.zs dal //
+ 		}*/

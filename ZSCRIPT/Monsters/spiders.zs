@@ -36,7 +36,7 @@ class Spider : wosMonsterBase
 			ASHD C 4 BRIGHT;
 			ASHD D 4 BRIGHT;
 			ASHD E 4 BRIGHT A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			ASHD F -1;
 			TNT1 A 0 A_StopSound(1);
 			Stop;
@@ -556,7 +556,7 @@ class AvalonSpider : Spider
 		TNT1 A 0 A_SpawnProjectile("SmallBC", 32, 0, 630);
 		SPAV IJKL 3 A_Scream();
 		SPAV MNOP 3 A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 		SPAV P -1 A_BossDeath();
 		Stop;
 	XDeath:
@@ -578,7 +578,7 @@ class AvalonSpider : Spider
 		DWID H 5 A_Scream();
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
 		DWID I 4 A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 		DWID J 3 A_BossDeath();
 		Stop;
 	}
@@ -695,7 +695,7 @@ class BloodSpider : Spider
 		SPUD A 0 A_SetScale(1.0);
 		SPUD A 3 A_Scream();
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		SPUD C 0 A_SpawnProjectile("BloodHead");
 		SPUD CC 0 A_SpawnProjectile("BloodRleg",-2,0,random(80,100),2,random(40,80));
 		SPUD CC 0 A_SpawnProjectile("BloodLleg",-2,0,random(75,95),2,random(35,75));
@@ -726,7 +726,7 @@ class BloodSpider2 : BloodSpider
 			SPUD A 0 A_SetScale(1.0);
 			SPUD A 3 A_Scream();
 			TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			SPUD B 3 A_NoBlocking();
 			SPUD C 3;
 			Stop;
@@ -788,7 +788,7 @@ class DaggerSpider : Spider
 		TNT1 A 0 A_ScreamAndUnblock();
 		DAGC AAAAAAAAAAAA 1; //A_SpawnDebris("NashGore_FlyingBlood",1)
 		TNT1 AA 0 A_SpawnProjectile("SHEye",-2,0,random(80,100),2,random(40,80));
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		DAGE AAAAAAAAAAAA 1; //A_SpawnDebris("NashGore_FlyingBlood",1)
 		DAGE A -1 A_BossDeath();
 		Stop;
@@ -799,7 +799,7 @@ class DaggerSpider : Spider
 		ASHD C 4 BRIGHT;
 		ASHD D 4 BRIGHT;
 		ASHD E 4 BRIGHT A_NoBlocking();
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		ASHD F -1;
 		Stop;
 	/*Raise:
@@ -913,7 +913,7 @@ class DeathWidow : Spider
 	XDeath:
 		DWID H 5 A_Scream();
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		DWID I 4 A_NoBlocking();
 		DWID J 3 A_BossDeath();
 		Stop;
@@ -975,7 +975,7 @@ class Fright : Spider
 		XDeath:
 			SPIC D 4 A_Scream;
 			TNT1 A 0 A_StartSound("misc/squish", 0);
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			SPIC E 4 A_NoBlocking;
 			SPIC F 4;
 			SPIC G -1;
@@ -1035,7 +1035,7 @@ class GiantSpider : Spider
 		Goto See;
 	Death:
 		TNT1 A 0 A_ScreamAndUnblock();
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		GTSH ABBCCDDEEFFGGHHIIJJK 2 A_SpawnItem("Fright");
 		GTSH K -1 A_BossDeath();
 		Stop;
@@ -1046,7 +1046,7 @@ class GiantSpider : Spider
 		ASHD C 4 BRIGHT;
 		ASHD D 4 BRIGHT;
 		ASHD E 4 BRIGHT A_NoBlocking();
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		ASHD F -1;
 		Stop;
 	/*Raise:
@@ -1149,7 +1149,7 @@ class GoldenSpider : Spider
 		XDeath:
 			PSGI H 5 A_Scream();
 			TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			TNT1 AA 0 A_SpawnProjectile("PSEye",-2,0,random(80,100),2,random(40,80));
 			PSGI I 5 A_NoBlocking();
 			PSGI J 5;
@@ -1204,7 +1204,7 @@ class PowerSlaveSpider2 : Spider
 	XDeath:
 		PSPI E 5 A_Scream();
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		TNT1 A 0 A_SpawnProjectile("PSHead");
 		TNT1 AA 0 A_SpawnProjectile("PSEye",-2,0,random(80,100),2,random(40,80));
 		TNT1 AA 0 A_SpawnProjectile("PSRLeg",-2,0,random(75,95),2,random(35,75));
@@ -1279,7 +1279,7 @@ class PowerSlaveSpider : Spider
 	XDeath:
 		PSPI E 5 A_Scream();
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		TNT1 A 0 A_SpawnProjectile("SPSHead",-2,0,random(80,100),2,random(40,80));
 		PSPI F 5 A_NoBlocking();
 		PSPI G 5;
@@ -1347,7 +1347,7 @@ class ShadowSpider : Spider
 	XDeath:
 		CSPI F 3;
 		TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		CSPI G 2 A_Scream();
 		CSPI H 2;
 		TNT1 A 0 A_SpawnProjectile("SHHead");
@@ -1458,7 +1458,7 @@ class ShadowSpider2 : Spider
 			CSPI F 5;
 			CSPI G 5 A_Scream();
 			CSPI H 5;
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			CSPI I 5 A_NoBlocking();
 			CSPI J -1;
 			Stop;
@@ -1516,7 +1516,7 @@ class SmallSteal : Spider
 		SPSD F 5 A_Scream();
 		TNT1 A 0 A_StartSound("Misc/Squish", 7);
 		SPSD G 4 A_NoBlocking();
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		SPSD H 3;
 		SPIC G -1;
 		Stop;
@@ -1586,7 +1586,7 @@ class Widow : Spider
 		Death:
 			MOSA G 3 A_Scream();
 			TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			MOSA H 3 A_NoBlocking();
 			MOSA IJKLMLMLMLML 3;
 			MOSA M -1;
@@ -1594,7 +1594,7 @@ class Widow : Spider
 		XDeath:
 			TNT1 A 0 A_SetScale(0.3);
 			MOSA N 2 A_ScreamAndUnblock();
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			TNT1 A 0 A_StartSound("Spiders/Explode", 7);
 			MOSA NOP 1;
 			Stop;
@@ -1671,7 +1671,7 @@ class CycloneWasp : Spider
 			PWSP G 0 A_StopSound(1);
 			CYCA DEFG 3;
 			TNT1 A 0 A_StartSound("Spiders/Explode", 7);
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			CYCA H 2 A_ScreamAndUnblock();
 			CYCA I 2;
 			CYCA J 2;
@@ -1753,7 +1753,7 @@ class MutantFly : Spider
 			}
 			TNT1 A 0 A_StopSound(1);
 			DIS6 P 1 A_ScreamAndUnblock();
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			DIS6 PQRSTU 2;
 		Fall:
 			DIS6 V 1 A_CheckFloor("Splat");
@@ -1850,7 +1850,7 @@ class PSXWasp : wosMonsterBase
 			TNT1 A 0 A_StopSound(7);
 			SPUD ABC 2;
 			TNT1 A 0 A_Scream();
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			PM01 JKLM 4; //A_SpawnDebris("NashGore_FlyingBlood",1)
 			TNT1 A 0 A_SpawnProjectile("SHEye",-2,0,random(80,100),2,random(40,80));
 			TNT1 AA 0 A_SpawnProjectile("SHRLeg",-2,0,random(75,95),2,random(35,75));
@@ -1930,7 +1930,7 @@ class PSRedWasp : Spider
 		PSRW E 0 A_StopSound(1);
 		PSRW E 4 A_Scream();
 		PSRW F 4 A_Noblocking();
-        TNT1 A 0 W_rewardXP(SpawnHealth());
+        //TNT1 A 0 W_rewardXP(SpawnHealth());
 		PSRW G 4 A_SetFloorClip();
 		Stop;
 	/*Raise:
@@ -2007,7 +2007,7 @@ class PSWasp : Spider
 			PWSP G 0 A_StopSound(1);
 			PWSP FG 3;
 			PWSP H 3 A_ScreamAndUnblock();
-        	TNT1 A 0 W_rewardXP(SpawnHealth());
+        	//TNT1 A 0 W_rewardXP(SpawnHealth());
 			PWSP I -1 A_SetFloorClip();
 			Stop;
 		/*Raise:
@@ -2057,7 +2057,7 @@ class Scorpion : wosMonsterBase {
 			NULL A 0 A_StopSound(1);
 			NULL A 0 A_SetFloorClip();
 			ASHD A 4 BRIGHT A_ScreamAndUnblock();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			ASHD B 4 BRIGHT;
 			ASHD C 4 BRIGHT;
 			ASHD D 4 BRIGHT;
@@ -2113,7 +2113,7 @@ class DaggerScorpion : Scorpion {
 			Goto See;
 		Death:
 			TNT1 A 0 A_ScreamAndUnblock();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			9DAG FFFFFJJJJJ 1;// A_SpawnDebris("NashGore_FlyingBlood",1);
 			9DAG K -1 A_BossDeath();
 			Stop;
@@ -2124,7 +2124,7 @@ class DaggerScorpion : Scorpion {
 			ASHD C 4 BRIGHT A_NoBlocking();
 			ASHD D 4 BRIGHT;
 			ASHD E 4 BRIGHT A_BossDeath();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			ASHD F -1;
 			Stop;
 		/*Raise:
@@ -2213,7 +2213,7 @@ class YellowScorpion : wosMonsterBase {
 			Goto See;
 		Death:
 		XDeath:
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			SC1D A 2;
 			SC1D B 2 A_Scream();
 			SC1D C 2 A_NoBlocking();
@@ -2229,7 +2229,7 @@ class YellowScorpion : wosMonsterBase {
 			ASHD C 4 BRIGHT ;
 			ASHD D 4 BRIGHT;
 			ASHD E 4 BRIGHT A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			ASHD F -1;
 			TNT1 A 0 A_StopSound(1);
 			Stop;
@@ -2337,7 +2337,7 @@ class BlackScorpion : wosMonsterBase {
 			Goto See;
 		Death:
 		XDeath:
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			SC2D A 2;
 			SC2D B 2 A_Scream();
 			SC2D C 2 A_NoBlocking();
@@ -2353,7 +2353,7 @@ class BlackScorpion : wosMonsterBase {
 			ASHD C 4 BRIGHT ;
 			ASHD D 4 BRIGHT;
 			ASHD E 4 BRIGHT A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			ASHD F -1;
 			TNT1 A 0 A_StopSound(1);
 			Stop;
@@ -2450,7 +2450,7 @@ class PSScorpion : Scorpion {
 		XDeath:
 			TNT1 A 0 A_SetScale(0.3);
 			TNT1 A 0 A_ScreamAndUnblock();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			//TNT1 A 0 A_SpawnProjectile("PSScpGib1",-2,0,random(80,100),2,random(40,80));
 			//TNT1 A 0 A_SpawnProjectile("PSScpGib2",-2,0,random(80,100),2,random(40,80));
 			//TNT1 A 0 A_SpawnProjectile("PSScpGib3",-2,0,random(75,95),2,random(35,75));

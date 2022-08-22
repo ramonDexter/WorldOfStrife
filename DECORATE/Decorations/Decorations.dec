@@ -1,26 +1,20 @@
 
-actor rangerHelmDummy 21001
-{
+actor rangerHelmDummy 21001 {
 	//$Category "Decorations/WoS"
 	//$Title "deco binder helmet"
 	+USESPECIAL
 	+SOLID
 	+NOGRAVITY
-
 	Tag "Binder Helmet"
 	Height 16
 	Radius 8
-
-	States
-	{
+	States {
 		Spawn:
 		DUMM A -1
 		Stop
 	}
 }
-
-actor rangerArmor1Dummy 21002
-{
+actor rangerArmor1Dummy 21002 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Ranger armor 1"
 	+USESPECIAL
@@ -29,17 +23,13 @@ actor rangerArmor1Dummy 21002
 	Tag "$T_CYBERARMOR1"
 	Height 16
 	Radius 8
-
-	States
-	{
+	States {
 		Spawn:
 			RGA1 A -1
 			Stop
 	}
 }
-
-actor rangerArmor2Dummy 21003
-{
+actor rangerArmor2Dummy 21003 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Ranger armor 2"
 	+USESPECIAL
@@ -48,17 +38,13 @@ actor rangerArmor2Dummy 21003
 	Tag "$T_CYBERARMOR2"
 	Height 16
 	Radius 8
-
-	States
-	{
+	States {
 		Spawn:
 			RGA2 A -1
 			Stop
 	}
 }
-
-actor dummyHyposprej 21004
-{
+actor dummyHyposprej 21004 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Hyposprej"
 	+USESPECIAL
@@ -67,17 +53,13 @@ actor dummyHyposprej 21004
 	Tag "$T_HYPOSPREJ"
 	Height 4
 	Radius 4
-
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-
-actor dummyKombopak 21005
-{
+actor dummyKombopak 21005 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Kombopak"
 	+USESPECIAL
@@ -86,16 +68,13 @@ actor dummyKombopak 21005
 	Tag "$T_KOMBOPACK"
 	Height 4
 	Radius 4
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-
-actor dummyInstaHeal 21006
-{
+actor dummyInstaHeal 21006 {
 	//$Category "Decorations/WoS"
 	//$Title "deco InstaHeal"
 	+USESPECIAL
@@ -104,16 +83,13 @@ actor dummyInstaHeal 21006
 	Tag "$T_INSTALEK"
 	Height 4
 	Radius 4
-	States
-	{
+	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-
-actor medicalCrab2 21007
-{
+actor medicalCrab2 21007 {
 	//$Category "Decorations/WoS"
 	//$Title "Medical crab ceiling"
 	+SpawnCeiling
@@ -121,18 +97,14 @@ actor medicalCrab2 21007
 	-Solid
 	Tag "Medical Crab"
 	height 40
-	radius 16
-	
-	States
-	{
+	radius 16	
+	States {
 		Spawn:
 		CRAB X -1
 		Stop
 	}
 }
-
-actor RelicDummy 21008
-{
+actor RelicDummy 21008 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Relic"
 	+useSpecial
@@ -140,16 +112,13 @@ actor RelicDummy 21008
 	Tag "Holy Relic"
 	height 16
 	radius 8
-	States
-	{
+	States {
 		Spawn:
 		RELC A -1
 		Stop
 	}
 }
-
-actor CommunicatorDummy 21009
-{
+actor CommunicatorDummy 21009 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Communicator"
 	+useSpecial
@@ -158,16 +127,13 @@ actor CommunicatorDummy 21009
 	Tag "$TAG_COMMUNICATOR"
 	height 8
 	radius 8
-	States
-	{
+	States {
 		Spawn:
 		COMM A -1
 		Stop
 	}
 }
-
-actor TargetterDummy 21010
-{
+actor TargetterDummy 21010 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Targetter"
 	+useSpecial
@@ -176,16 +142,13 @@ actor TargetterDummy 21010
 	Tag "$TAG_TARGETER"
 	height 8
 	radius 8
-	States
-	{
+	States {
 		Spawn:
 		TARG A -1
 		Stop
 	}
 }
-
-actor scannerDummy 21011
-{
+actor scannerDummy 21011 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Scanner"
 	+useSpecial
@@ -194,16 +157,13 @@ actor scannerDummy 21011
 	Tag "$TAG_SCANNER"
 	height 8
 	radius 8
-	States
-	{
+	States {
 		Spawn:
 		PMUP ABCD 6
 		Loop
 	}
 }
-
-ACTOR bloodKapacka1 21012
-{
+ACTOR bloodKapacka1 21012 {
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 1"
 	+SOLID
@@ -211,16 +171,13 @@ ACTOR bloodKapacka1 21012
 	scale .5
 	height 64
 	radius 12
-	States
-	{
+	States {
 		Spawn:
 		KPK1 A -1
 		Stop
 	}
 }
-
-ACTOR bloodKapacka2 21013
-{
+ACTOR bloodKapacka2 21013 {
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 2"
 	+SOLID
@@ -228,24 +185,19 @@ ACTOR bloodKapacka2 21013
 	scale .5
 	height 64
 	radius 12
-	States
-	{
+	States {
 		Spawn:
 		KPK2 A -1
 		Stop
 	}
 }
-
-ACTOR bloodCandle 
-{
-	
+ACTOR bloodCandle {	
 	+SOLID
 	//scale .6
 	Tag "Candle"
 	radius 10
 	height 28
-	States
-	{
+	States {
 		Spawn:
 		BCND ABCD 4 Bright Light("candleLight")
 		Loop
@@ -274,17 +226,14 @@ actor modelBloodCandle : bloodCandle replaces bloodCandle 21014 {
 	+DONTTHRUST
 	Tag "Candle"
 	radius 4
-	height 16
-	
+	height 16	
 	States {
 		Spawn:
 			BCND A -1 Bright NODELAY A_SpawnItemEx("bloodCandleFire", 0, 0, 10)
 			Stop
 	}
 }
-
-actor voxTortureRack 21015
-{
+actor voxTortureRack 21015 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox Torture Rack"
 	+Solid
@@ -293,16 +242,13 @@ actor voxTortureRack 21015
 	Tag "Torture rack"
 	height 48
 	radius 16
-	States
-	{
+	States {
 		Spawn:
 			RACK V -1
 			Stop
 	}
 }
-
-actor voxPillory 21016
-{
+actor voxPillory 21016 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "voxPillory"
 	+Solid
@@ -311,16 +257,13 @@ actor voxPillory 21016
 	Tag "Pillory"
 	height 48
 	radius 16
-	States
-	{
+	States {
 		Spawn:
 			PLRY V -1
 			Stop
 	}
 }
-
-actor voxHeadCrusher 21017
-{
+actor voxHeadCrusher 21017 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox head crusher"
 	+Solid
@@ -329,16 +272,13 @@ actor voxHeadCrusher 21017
 	Tag "Head crusher"
 	height 50
 	radius 16
-	States
-	{
+	States {
 		Spawn:
 			HDCR V -1
 			Stop
 	}
 }
-
-actor voxGuillotine 21018
-{
+actor voxGuillotine 21018 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox Guillotine"
 	+Solid
@@ -347,137 +287,107 @@ actor voxGuillotine 21018
 	Tag "Guillotine"
 	radius 10
 	height 64
-	States
-	{
+	States {
 		Spawn:
 		GLTN V -1
 		Stop
 	}
 }
-
-actor skynetFire1  21019
-{
+actor skynetFire1 21019 {
 	//$Category "Decorations/WoS"
-	//$Title "skynet Fire 1"
-	
+	//$Title "skynet Fire 1"	
 	-SOLID
-	+UseSpecial
-	
+	+UseSpecial	
 	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
-	//ActiveSound "sounds/ambient/mwFire"
-	
-	States
-	{
+	//ActiveSound "sounds/ambient/mwFire"	
+	States {
 		Spawn:
 			SKF1 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
 }
-
-actor skynetFire2  21020
-{
+actor skynetFire2 21020 {
 	//$Category "Decorations/WoS"
-	//$Title "skynet Fire 2"
-	
+	//$Title "skynet Fire 2"	
 	-SOLID
-	+UseSpecial
-	
+	+UseSpecial	
 	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
-	//ActiveSound "sounds/ambient/mwFire"
-	
-	States
-	{
+	//ActiveSound "sounds/ambient/mwFire"	
+	States {
 		Spawn:
 			SKF2 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
 }
-
-actor skynetFire3  21021
-{
+actor skynetFire3 21021 {
 	//$Category "Decorations/WoS"
-	//$Title "skynet Fire 3"
-	
+	//$Title "skynet Fire 3"	
 	-SOLID
-	+UseSpecial
-	
+	+UseSpecial	
 	Tag "Fireplace"
 	scale 1
 	Radius 16
 	Height 18
-	//ActiveSound "sounds/ambient/mwFire"
-	
-	States
-	{
+	//ActiveSound "sounds/ambient/mwFire"	
+	States {
 		Spawn:
 			SKF3 ABCD 4 Light("FireMedium") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55)
 			Loop
 	}
 }
-
-actor skynetBones1  21022
-{
-  //$Category "Decorations/WoS"
-  //$Title "skynet Bones 1"
-  Tag "Bones"
-  scale 1
-  Radius 16
-  Height 8
-  -SOLID
-  +UseSpecial
-  States
-  {
-  Spawn:
-    SKB1 A -1
-	Stop
-  }
+actor skynetBones1 21022 {
+	//$Category "Decorations/WoS"
+	//$Title "skynet Bones 1"
+	Tag "Bones"
+	scale 1
+	Radius 16
+	Height 8
+	-SOLID
+	+UseSpecial
+	States {
+		Spawn:
+			SKB1 A -1
+			Stop
+	}
 }
-
-actor skynetBones2  21023
-{
-  //$Category "Decorations/WoS"
-  //$Title "skynet Bones 2"
-  Tag "Bones"
-  scale 1
-  Radius 16
-  Height 18
-  -SOLID
-  +UseSpecial
-  States
-  {
-  Spawn:
-    SKB2 A -1
-	Stop
-  }
+actor skynetBones2 21023 {
+	//$Category "Decorations/WoS"
+	//$Title "skynet Bones 2"
+	Tag "Bones"
+	scale 1
+	Radius 16
+	Height 18
+	-SOLID
+	+UseSpecial
+	States {
+		Spawn:
+			SKB2 A -1
+			Stop
+	}
 }
-
-actor skynetBones3  21024
-{
-  //$Category "Decorations/WoS"
-  //$Title "skynet Bones 3"
-  Tag "Bones"
-  scale 1
-  Radius 16
-  Height 18
-  -SOLID
-  +UseSpecial
-  States
-  {
-	  Spawn:
-		SKB3 A -1
-		Stop
-  }
+actor skynetBones3 21024 {
+	//$Category "Decorations/WoS"
+	//$Title "skynet Bones 3"
+	Tag "Bones"
+	scale 1
+	Radius 16
+	Height 18
+	-SOLID
+	+UseSpecial
+	States {
+		Spawn:
+			SKB3 A -1
+			Stop
+	}
 }
-
 //Fireburning
-Actor FirePitSmall 21025
-{
+Actor FirePitSmall 21025 {
 	//$Category "Decorations/WoS"
 	//$Title "Fire small"
 	Tag "Fireplace"
@@ -488,20 +398,15 @@ Actor FirePitSmall 21025
 	//SeeSound "sounds/firecrack"
 	+NOCLIP
 	+NOBLOCKMAP
-	-Solid
-	
-	
-	states
-	{
+	-Solid	
+	states {
 		Spawn:
 		Active:
 			FIRE ABCDEFGH 2 bright Light("FireLarge") A_StartSound("world/smallfire", CHAN_BODY, CHANF_LOOPING, 0.55) //sounds/ambient/mwFire
 			Loop
 	}
 }
-
-actor voxMicroscrope2 21026
-{
+actor voxMicroscrope2 21026 {
 	//$Category "Decorations/WoS"
 	//$Title "Microscope"
 	+Solid
@@ -511,16 +416,13 @@ actor voxMicroscrope2 21026
 	Tag "Microscope"
 	height 8
 	radius 8
-	States
-	{
-	Spawn:
-		MCRS V -1
-		Stop
+	States {
+		Spawn:
+			MCRS V -1
+			Stop
 	}
 }
-
-actor voxPillarDrill 21027
-{
+actor voxPillarDrill 21027 {
 	//$Category "Decorations/WoS"
 	//$Title "Pillar Drill"
 	+Solid
@@ -530,17 +432,13 @@ actor voxPillarDrill 21027
 	Tag "Pillar drill"
 	height 64
 	radius 16
-
-	States
-	{
-	Spawn:
-		PLDR V -1
-		Stop
+	States {
+		Spawn:
+			PLDR V -1
+			Stop
 	}
 }
-
-actor voxStojanovaBruska 21028
-{
+actor voxStojanovaBruska 21028 {
 	//$Category "Decorations/WoS"
 	//$Title "Bruska"
 	+Solid
@@ -549,18 +447,14 @@ actor voxStojanovaBruska 21028
 	+NoGravity
 	Tag "Grinder"
 	height 40
-	radius 16
-	
-	States
-	{
-	Spawn:
-		GRND V -1
-		Stop
+	radius 16	
+	States {
+		Spawn:
+			GRND V -1
+			Stop
 	}
 }
-
-actor voxChicken 21029
-{
+actor voxChicken 21029 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Chicken"
 	+Solid
@@ -571,17 +465,13 @@ actor voxChicken 21029
 	height 16
 	radius 12
 	//scale 0.35
-
-	States
-	{
-	Spawn:
-		CHKN V -1
-		Stop
+	States {
+		Spawn:
+			CHKN V -1
+			Stop
 	}
 }
-
-actor voxSoustruh2 29198
-{
+actor voxSoustruh2 29198 {
 	//$Category "Decorations/WoS"
 	//$Title "Lathe-Soustruh"
 	+Solid
@@ -591,19 +481,15 @@ actor voxSoustruh2 29198
 	Tag "Lathe"
 	height 32
 	radius 16
-	States
-	{
-	Spawn:
-		LATH V -1
-		Stop
+	States {
+		Spawn:
+			LATH V -1
+			Stop
 	}
 }
-
-ACTOR blueRelicDecoration 21030
-{
+ACTOR blueRelicDecoration 21030 {
 	//$Category "Decorations/WoS"
-	//$Title "Blue Relic Decoration"
-	
+	//$Title "Blue Relic Decoration"	
 	+Solid
 	+DontThrust
 	+UseSpecial
@@ -611,505 +497,383 @@ ACTOR blueRelicDecoration 21030
 	-NOBLOCKMAP
 	Tag "Holy Relic"
 	Radius 10
-	Height 16
-	
-	States
-	{
+	Height 16	
+	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-
-
-ACTOR HPipe1 21031
-{
+ACTOR HPipe1 21031 {
 	//$Category "Decorations/WoS"
-	//$Title Pipe 1
-	
+	//$Title Pipe 1	
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
 	Tag "Piping"
 	Radius 16
 	Height 128
-
-	States
-	{
+	States {
 		Spawn:
 		PIP1 A -1
 		Stop
 	}
 }
-
-ACTOR HPipe2 21032
-{
+ACTOR HPipe2 21032 {
 	//$Category "Decorations/WoS"
-	//$Title Pipe 2
-	
-	+SOLID
-	+useSpecial
-	+FORCEYBILLBOARD
-	Tag "Piping"
-	Radius 16
-	Height 128
-	
-	States
-	{
-		Spawn:
-		PIP2 A -1
-		Stop
-	}
-}
-
-ACTOR HPipe3 21033
-{
-	//$Category "Decorations/WoS"
-	//$Title Pipe 3
-	
+	//$Title Pipe 2	
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
 	Tag "Piping"
 	Radius 16
 	Height 128	
- 
-	States
-	{
+	States {
+		Spawn:
+		PIP2 A -1
+		Stop
+	}
+}
+ACTOR HPipe3 21033 {
+	//$Category "Decorations/WoS"
+	//$Title Pipe 3	
+	+SOLID
+	+useSpecial
+	+FORCEYBILLBOARD
+	Tag "Piping"
+	Radius 16
+	Height 128	 
+	States {
 		Spawn:
 		PIP3 A -1
 		Stop
 	}
 }
-
-ACTOR HPipe4 21034
-{
+ACTOR HPipe4 21034 {
 	//$Category "Decorations/WoS"
-	//$Title Pipe 4
-	
+	//$Title Pipe 4	
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
 	Tag "Piping"
 	Radius 16
-	Height 128
-	
-	States
-	{
+	Height 128	
+	States {
 		Spawn:
 		PIP4 A -1
 		Stop
 	}
 }
-
-ACTOR HPipe5 21035
-{
+ACTOR HPipe5 21035 {
 	//$Category "Decorations/WoS"
-	//$Title Pipe 5
-	
+	//$Title Pipe 5	
 	+SOLID
 	+useSpecial
 	+FORCEYBILLBOARD
 	Tag "Piping"
 	Radius 16
-	Height 128
-	
-	States
-	{
+	Height 128	
+	States {
 		Spawn:
 		PIP5 A -1
 		Stop
 	}
 }
-
-ACTOR falloutCornBase
-{
+ACTOR falloutCornBase {
 	+USESPECIAL
 	-SOLID
 	+DONTTHRUST
-	+FORCEYBILLBOARD
-	
+	+FORCEYBILLBOARD	
 	radius 8
 	height 48
 	scale 1.0
 }
-
-ACTOR falloutCorn1 : falloutCornBase 21036
-{
+ACTOR falloutCorn1 : falloutCornBase 21036 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 1"
-	Tag "Corn plant"
-	
-	States
-	{
+	Tag "Corn plant"	
+	States {
 		Spawn:
 			FCRN A -1
 			Stop
 	}
 }
-
-ACTOR falloutCorn2 : falloutCornBase 21037
-{
+ACTOR falloutCorn2 : falloutCornBase 21037 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 2"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN B -1
 			Stop
 	}
 }
 
-ACTOR falloutCorn3 : falloutCornBase 21038
-{
+ACTOR falloutCorn3 : falloutCornBase 21038 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 3"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN C -1
 			Stop
 	}
 }
-ACTOR falloutCorn4 : falloutCornBase 21039
-{
+ACTOR falloutCorn4 : falloutCornBase 21039 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 4"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN D -1
 			Stop
 	}
 }
-ACTOR falloutCorn5 : falloutCornBase 21040
-{
+ACTOR falloutCorn5 : falloutCornBase 21040 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 5"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN E -1
 			Stop
 	}
 }
-ACTOR falloutCorn6 : falloutCornBase 21041
-{
+ACTOR falloutCorn6 : falloutCornBase 21041 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 6"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN F -1
 			Stop
 	}
 }
-ACTOR falloutCorn7 : falloutCornBase 21042
-{
+ACTOR falloutCorn7 : falloutCornBase 21042 {
 	//$Category "Trees and Rocks/WoS"
 	//$Title "fCorn 7"
 	Tag "Corn plant"
-	States
-	{
+	States {
 		Spawn:
 			FCRN G -1
 			Stop
 	}
 }
-
 //MarlboroMike's Sprites
 //------------------------------------------------------------------------------
-actor MMofficeChair 21043
-{
+actor MMofficeChair 21043 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "office chair"
-	
+	//$Title "office chair"	
 	+SOLID
 	Tag "Office chair"
 	height 16
-	radius 12
-	
-	
-	States
-	{
+	radius 12	
+	States {
 		Spawn:
 			MCHR A -1
 			Stop
 	}
 }
-
-actor MM_camera_1 21044
-{
+actor MM_camera_1 21044 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "camera 1"
-	
+	//$Title "camera 1"	
 	+SPAWNCEILING
 	-SOLID
-	+NOGRAVITY
-	
+	+NOGRAVITY	
 	Tag "security camera"
 	radius 10
-	height 20
-	
-	
-	States
-	{
+	height 20	
+	States {
 		Spawn:
 			DUMM ABCDEDCB 40
 			Loop
 	}
 }
-
-Actor MM_camera_2 21045
-{
+Actor MM_camera_2 21045 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "camera 2"
-	
+	//$Title "camera 2"	
 	+SPAWNCEILING
 	-SOLID
-	+NOGRAVITY
-	
+	+NOGRAVITY	
 	Tag "security camera"
 	radius 10
-	height 21
-	
-	States
-	{
+	height 21	
+	States {
 		Spawn:
 			DUMM ABCDEDCB 40
 			Loop
 	}
 }
-
-Actor MM_ammoCrate_01 21046
-{
+Actor MM_ammoCrate_01 21046 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "ammo crate 1"
-	
+	//$Title "ammo crate 1"	
 	+Solid
 	+usespecial
-	+NOGRAVITY
-	
+	+NOGRAVITY	
 	Tag "ammo crate"
 	radius 8
 	height 18
 	//scale 0.6
-	
-	
-	States
-	{
+	States {
 		Spawn:
 			DUMM AAAABBB 6
 			Loop
 	}	
 }
-Actor MM_ammoCrate_02 21047
-{
+Actor MM_ammoCrate_02 21047 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "ammo crate 2"
-	
+	//$Title "ammo crate 2"	
 	+Solid
-	+usespecial
-	
+	+usespecial	
 	Tag "ammo crate"
 	radius 8
 	height 18
-	scale 0.6
-	
-	
-	States
-	{
+	scale 0.6	
+	States {
 		Spawn:
 			MAC2 A -1
 			Stop
 	}	
 }
-Actor MM_bag_01 21048
-{
+Actor MM_bag_01 21048 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "bag 1"
-	
+	//$Title "bag 1"	
 	-solid
-	+usespecial
-	
+	+usespecial	
 	Tag "cloth bag"
 	radius 8
 	height 8
-	scale 0.6
-	
-	States
-	{
+	scale 0.6	
+	States {
 		Spawn:
 			MBG1 A -1
 			Stop		
 	}
 }
-Actor MM_bag_02 21049
-{
+Actor MM_bag_02 21049 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "bag 2"
-	
+	//$Title "bag 2"	
 	-solid
-	+usespecial
-	
+	+usespecial	
 	Tag "cloth bag"
 	radius 8
 	height 8
-	scale 0.6
-	
-	States
-	{
+	scale 0.6	
+	States {
 		Spawn:
 			MBG2 A -1
 			Stop		
 	}
 }
-Actor MM_box_01 21050
-{
+Actor MM_box_01 21050 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "box 1"
-	
+	//$Title "box 1"	
 	+solid
-	+usespecial
-	
+	+usespecial	
 	Tag "box"
 	radius 10
 	height 12
-	scale 0.7
-	
-	States
-	{
+	scale 0.7	
+	States {
 		Spawn:
 			MBX1 A -1
 			Stop
 	}
 }
-Actor MM_box_02 21051
-{
+Actor MM_box_02 21051 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "box 2"
-	
+	//$Title "box 2"	
 	+solid
-	+usespecial
-	
+	+usespecial	
 	Tag "box"
 	radius 10
 	height 12
-	scale 0.7
-	
-	States
-	{
+	scale 0.7	
+	States {
 		Spawn:
 			MBX2 A -1
 			Stop
 	}
 }
-Actor MM_cactus 21052
-{
+Actor MM_cactus 21052 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "cactus in pot"
-	
+	//$Title "cactus in pot"	
 	Tag "cactus in pot"
 	radius 16
-	height 36
-	
-	States
-	{
+	height 36	
+	States {
 		Spawn:
 			MCAC A -1
 			Stop
 	}
 }
-Actor MM_food_01 21053
-{
+Actor MM_food_01 21053 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 1 platter1"
-	
+	//$Title "food 1 platter1"	
 	radius 8
-	height 8
-	
-	States
-	{
+	height 8	
+	States {
 		Spawn:
 			MFD1 A -1
 			Stop
 	}
 }
-Actor MM_food_02 21054
-{
+Actor MM_food_02 21054 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 2 platter2"
-	
+	//$Title "food 2 platter2"	
 	radius 8
-	height 8
-	
-	States
-	{
+	height 8	
+	States {
 		Spawn:
 			MFD2 A -1
 			Stop
 	}
 }
-Actor MM_food_03 21055
-{
+Actor MM_food_03 21055 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 3 platter3"
-	
+	//$Title "food 3 platter3"	
 	radius 8
-	height 8
-	
-	States
-	{
+	height 8	
+	States {
 		Spawn:
 			MFD3 A -1
 			Stop
 	}
 }
-Actor MM_food_04 21056
-{
+Actor MM_food_04 21056 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 4 cup1"
-	
+	//$Title "food 4 cup1"	
+	Tag "cup of coffee"
 	radius 4
-	height 8
-	
-	States
-	{
+	height 8	
+	States {
 		Spawn:
 			MFD4 A -1
 			Stop
 	}
 }
-Actor MM_food_05 21057
-{
+Actor MM_food_05 21057 {
 	//Default	
 	//$Category "Decorations/MM stuff"
-	//$Title "food 5 cup2"
-	
+	//$Title "food 5 cup2"	
+	Tag "cup of coffee"
 	radius 4
-	height 8
-	
-	States
-	{
+	height 8	
+	States {
 		Spawn:
 			MFD5 A -1
 			Stop
@@ -4315,28 +4079,7 @@ actor dx3Dprinter 21230 {
 		Stop
 	}
 }
-actor PillarHugeTechLightning {
-	+nogravity
-	-Solid
-	+DontThrust
-	Tag "huge tech pillar"
-	RenderStyle "Translucent"
-	Alpha 0.5
-	scale 0.8
-	
-	States {
-		Spawn:
-			PHTL ABCD 4 Bright Light("HugePillarTechLight")
-			Loop
-	}
-}
-actor PillarHugeTechAnimated : PillarHugeTech replaces PillarHugeTech {
-	States {
-		Spawn:
-			HUGE A -1 Bright NODELAY A_SpawnItemEx("PillarHugeTechLightning", 0, 0, 76)
-			Stop
-	}
-}
+
 actor CavePillar : CavePillarBottom replaces CavePillarBottom {
 	Tag "cave pillar"
 	States {
@@ -10717,5 +10460,71 @@ actor wosD_fnvHatStand 21620 {
 	}
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_generator2 21621 {
+	//$Category "Decorations/Wos/"
+	//$Title "generator2"
+	Tag "generator"
+	radius 16
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_generator3 21622 {
+	//$Category "Decorations/Wos/"
+	//$Title "generator3"
+	Tag "generator"
+	radius 16
+	height 40
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wos_generator3bridge : InvisibleBridge16 21623 {
+	//$Category "Bridges"
+	//$Title "bridge generator3"
+	tag "generator"
+	radius 16
+	height 40
+}
+actor PillarHugeTechLightning {
+	+nogravity
+	-Solid
+	+DontThrust
+	Tag "huge tech pillar"
+	RenderStyle "Translucent"
+	Alpha 0.5
+	scale 0.8
+	
+	States {
+		Spawn:
+			PHTL ABCD 4 Bright Light("HugePillarTechLight")
+			Loop
+	}
+}
+actor PillarHugeTechAnimated : PillarHugeTech replaces PillarHugeTech 21624 {
+	//$Category "Decorations/Wos/"
+	//$Title "wos huge tech pillar"
+	Tag "huge pillar"
+	Radius 24
+  	Height 192
+  	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			HUGE A -1 Bright NODELAY A_SpawnItemEx("PillarHugeTechLightning", 0, 0, 76)
+			Stop
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

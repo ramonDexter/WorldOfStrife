@@ -78,7 +78,7 @@ class wosLiquidator : wosMonsterBase {
             LIQU E 2 Bright A_TossGib();
             TNT1 AAAAAAA 0 A_TossGib();
             LIQU E 4 Bright A_SpawnItemEx("DeathExplosionBig",0,0,40,0,0,0);
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             TNT1 A 0 A_Explode(48,128);
             TNT1 AAAAA 0 A_SpawnItemEx("DeathExplosionSmall",0,0,40,random(-6,6),random(-6,6),random(-3,3));
             TNT1 A 0 A_SpawnItemEx("LiquidatorArmToss",0,-40,30,random(-3,3),-3,random(0,5));

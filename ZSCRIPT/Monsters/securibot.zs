@@ -244,7 +244,7 @@ class wosSecuriBot : wosMonsterBase {
 			DUME M 0 A_SpawnItemEx ("wosExplosion_medium", -24.0, 24.0, 96.0, 0.0, 0.0, -2.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			//DUME M 0 A_SpawnItemEx ("ModelSmoke1Small", -24.0, 24.0, 88.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUME M 0 A_PlaySound ("inquisitor/atkexplode");
-			TNT1 A 0 W_rewardXP(SpawnHealth());		
+			//TNT1 A 0 W_rewardXP(SpawnHealth());		
 			DUME NOPQRSTUVWX 3;
 			DUME Y 350;
 			Goto FadeOut1;
@@ -268,7 +268,7 @@ class wosSecuriBot : wosMonsterBase {
 			//DUMF D 0 A_SpawnItemEx ("ModelSmoke1Medium", 0.0, 0.0, 72.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMF EEEFFF 1 A_TossGib(); 
 			DUMF G 3;
-			TNT1 A 0 W_rewardXP(SpawnHealth());
+			//TNT1 A 0 W_rewardXP(SpawnHealth());
 			DUMF H 3 A_Fall(); 
 			DUMF IJKLMNOPQR 3;
 			DUMF S 350;

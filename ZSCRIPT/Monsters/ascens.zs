@@ -133,7 +133,7 @@ class YoungCarnivorousWeed : wosMonsterBase {
             ROSE J 5;
             ROSE K 103;
             ROSE K 0 A_KillMaster();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE K -1;
             Stop;
         XDeath:
@@ -145,7 +145,7 @@ class YoungCarnivorousWeed : wosMonsterBase {
             ROSE PQ 5;
             ROSE R 98;
             ROSE R 0 A_KillMaster();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE R -1;
             Stop;
 	}
@@ -275,7 +275,7 @@ class YoungHellroseBramble : wosMonsterBase {
             ROSX U 5 A_TakeInventory ("WeedSpores", 1, 0, AAPTR_MASTER);
             ROSX V 5 A_Scream();
             ROSX W 5 A_Fall();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSX XRR 5;
             ROSX RRRRRRRRR 2 A_FadeOut (0.1);
             stop;
@@ -416,7 +416,7 @@ class CarnivorousWeed : wosMonsterBase {
             ROSE J 5;
             ROSE K 103;
             ROSE K 0 A_KillMaster();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE K -1;
             Stop;
         XDeath:
@@ -428,7 +428,7 @@ class CarnivorousWeed : wosMonsterBase {
             ROSE PQ 5;
             ROSE R 98;
             ROSE R 0 A_KillMaster();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSE R -1;
             Stop;
 	}
@@ -557,7 +557,7 @@ class HellroseBramble : wosMonsterBase {
             ROSX U 5 A_TakeInventory ("WeedSpores", 1, 0, AAPTR_MASTER);
             ROSX V 5 A_Scream();
             ROSX W 5 A_Fall();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             ROSX XRR 5;
             ROSX RRRRRRRRR 2 A_FadeOut (0.1);
             stop;
@@ -1065,14 +1065,14 @@ class FieryBeast : wosMonsterBase {
             BLDD K 8 A_Scream();
             BLDD LMNOP 6;
             BLDD Q 6 A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             BLDD R -1;
             Stop;
-            Ice:
-                "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,1000,0,0)*/;	//Gain 1000 Exp 
-                    "####" "#" 5 A_GenericFreezeDeath();
-                    "####" "#" 1 A_FreezeDeathChunks();
-                    Wait;
+        Ice:
+            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,1000,0,0)*/;	//Gain 1000 Exp 
+            "####" "#" 5 A_GenericFreezeDeath();
+            "####" "#" 1 A_FreezeDeathChunks();
+            Wait;
         Spread:
             TNT1 A 0 A_SpawnItemEx ("FieryBeast_Spread", 0, 0, 0, 0, 0, 0, 0, 128);
             //TNT1 AAAAAAAAAAAAA 0 A_SpawnItemEx ("ShadowBeast_Sparkle", random(0,16), random(0,16), random(16,48), 0, 0, 0, random(0,359), 128);
@@ -1325,11 +1325,11 @@ class LizardSmall: Lizard {
             LIZR M 4 A_XScream();
             LIZR N 4 A_NoBlocking(); 
             LIZR OPQRS 4;
-            LIZR S 1 W_rewardXP(SpawnHealth());
+            LIZR S 1;
             LIZR T -1;
             Stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,15,0,0)*/;	//Gain 15 Exp 
+            "####" "#" 1 ;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1366,11 +1366,11 @@ class LizardMiddle : Lizard {
             LZXD C 4;
             LZXD D 4 A_Fall();
             LZXD EFGHIJ 4;
-            LZXD J 1 W_rewardXP(SpawnHealth());
+            LZXD J 1;
             LZXD K -1;
             Stop;
         Ice:
-            "####" "#" 1 /*ACS_NamedExecuteAlways("ExpGain",0,120,0,0)*/;	//Gain 120 Exp 
+            "####" "#" 1;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1434,7 +1434,7 @@ class LizardLarge : Lizard {
             LZXD C 4;
             LZXD D 4 A_Fall();
             LZXD EFGHIJ 4;
-            LZXD J 1 W_rewardXP(SpawnHealth());
+            LZXD J 1;
             LZXD K -1;
             Stop;
         Ice:
@@ -1521,11 +1521,11 @@ class Ophidiant : wosMonsterBase {
             OOS2 K 8;
             OOS2 L 8 A_NoBlocking();
             OOS2 MN 8;
-            OOS2 N 1 W_rewardXP(SpawnHealth());
+            OOS2 N 1;
             OOS2 O -1;
             stop;
             Ice:
-                "####" "#" 1 W_rewardXP(SpawnHealth());
+                "####" "#" 1;
                 "####" "#" 5 A_GenericFreezeDeath();
                 "####" "#" 1 A_FreezeDeathChunks();
                 Wait;
@@ -1658,11 +1658,11 @@ class wosPitLord : wosMonsterBase {
             DRG1 LMN 6;
             DRG1 O 6 A_NoBlocking();
             DRG1 PQ 6;
-            DRG1 Q 1 W_rewardXP(SpawnHealth());
+            DRG1 Q 1;
             DRG1 R -1;
             Stop;
         Ice:
-            "####" "#" 1 W_rewardXP(SpawnHealth());
+            "####" "#" 1;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1773,11 +1773,11 @@ class wosPitFiend : wosPitLord {
             DRG3 LMN 6;
             DRG3 O 6 A_NoBlocking();
             DRG3 PQ 6;
-            DRG3 P 1 W_rewardXP(SpawnHealth());
+            DRG3 P 1;
             DRG3 R -1;
             Stop;
         Ice:
-            "####" "#" 1 W_rewardXP(SpawnHealth()); 
+            "####" "#" 1; 
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1859,11 +1859,11 @@ class wosPlagueFiend : wosMonsterBase {
             DRG2 K 0 A_SpawnProjectile("ToxinCloud", 32,0,0,0,0);
             DRG2 L 6 A_NoBlocking();
             DRG2 M 6;
-            DRG2 M 1 W_rewardXP(SpawnHealth());
+            DRG2 M 1;
             DRG2 N -1;
             Stop;
         Ice:
-            "####" "#" 1 W_rewardXP(SpawnHealth());
+            "####" "#" 1;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -1999,11 +1999,11 @@ class MiniDragon : wosMonsterBase {
             IMPX I 8 A_Scream();
             IMPX J 6 A_SetFloorClip();
             IMPX KLMNO 6;
-            IMPX O 1 W_rewardXP(SpawnHealth());
+            IMPX O 1;
             TNT1 A -1;
             Stop;
         Ice:
-            "####" "#" 1 W_rewardXP(SpawnHealth());
+            "####" "#" 1;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -2156,7 +2156,7 @@ class ascSerpentFly : wosMonsterBase/*actor*/ {
             //SFL1 H 0 A_ChangeFlag ("FLOATBOB", 0);
             TNT1 A 0 { 
                 bFLOATBOB = false;
-                W_rewardXP(SpawnHealth()); 
+                //W_rewardXP(SpawnHealth()); 
             }
             SFL1 H 0 A_ScreamAndUnblock();
         Fall:
@@ -2169,7 +2169,7 @@ class ascSerpentFly : wosMonsterBase/*actor*/ {
             SFL1 N -1;
             stop;
         Ice:
-            "####" "#" 1 W_rewardXP(SpawnHealth());
+            "####" "#" 1;
             "####" "#" 5 A_GenericFreezeDeath();
             "####" "#" 1 A_FreezeDeathChunks();
             Wait;
@@ -2301,12 +2301,12 @@ class ascTramp : wosMonsterBase {
             BEGR I 5 A_Scream();
             BEGR J 5 A_NoBlocking();
             BEGR KLM 5;
-            BEGR M 1 W_rewardXP(SpawnHealth()); 
+            BEGR M 1; 
             BEGR N -1;
             Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2323,7 +2323,7 @@ class ascTramp : wosMonsterBase {
 			BURN I 5 Bright A_DropFire();
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			BURN NOPQPQ 5 Bright;
 			BURN RSTU 7 Bright;
 			BURN V -1;
@@ -2459,12 +2459,12 @@ class ascRogue : wosMonsterBase {
 			DATF L 5 A_Scream();
 			DATF M 5 A_NoBlocking();
 			DATF NOP 5;
-			DATF P 1 W_rewardXP(SpawnHealth()); 
+			DATF P 1; 
 			DATF Q -1;
 			Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", CHAN_AUTO);
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -2482,7 +2482,7 @@ class ascRogue : wosMonsterBase {
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
 			BURN NOPQPQ 5 Bright;
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
 			BURN RSTU 7 Bright;
 			BURN V -1;
 			Stop;

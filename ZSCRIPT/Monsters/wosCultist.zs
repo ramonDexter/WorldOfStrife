@@ -44,7 +44,7 @@ class wosCultist : wosMonsterBase {
             CULT I 8 A_Scream(); 
             CULT J 4;
             CULT K 4 A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth()); 
+            //TNT1 A 0 W_rewardXP(SpawnHealth()); 
             CULT L 4;
             CULT M -1;
             Stop;
@@ -52,7 +52,7 @@ class wosCultist : wosMonsterBase {
             CULT N 5;
             CULT O 5 A_XScream(); 
             CULT P 5 A_NoBlocking();
-            TNT1 A 0 W_rewardXP(SpawnHealth());
+            //TNT1 A 0 W_rewardXP(SpawnHealth());
             CULT QRSTUV 5;
             CULT W -1;
             Stop;

@@ -663,7 +663,7 @@ ACTOR falloutCorn7 : falloutCornBase 21042 {
 //------------------------------------------------------------------------------
 actor MMofficeChair 21043 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "office chair"	
 	+SOLID
 	Tag "Office chair"
@@ -677,7 +677,7 @@ actor MMofficeChair 21043 {
 }
 actor MM_camera_1 21044 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "camera 1"	
 	+SPAWNCEILING
 	-SOLID
@@ -693,7 +693,7 @@ actor MM_camera_1 21044 {
 }
 Actor MM_camera_2 21045 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "camera 2"	
 	+SPAWNCEILING
 	-SOLID
@@ -709,7 +709,7 @@ Actor MM_camera_2 21045 {
 }
 Actor MM_ammoCrate_01 21046 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "ammo crate 1"	
 	+Solid
 	+usespecial
@@ -726,7 +726,7 @@ Actor MM_ammoCrate_01 21046 {
 }
 Actor MM_ammoCrate_02 21047 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "ammo crate 2"	
 	+Solid
 	+usespecial	
@@ -742,7 +742,7 @@ Actor MM_ammoCrate_02 21047 {
 }
 Actor MM_bag_01 21048 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bag 1"	
 	-solid
 	+usespecial	
@@ -758,7 +758,7 @@ Actor MM_bag_01 21048 {
 }
 Actor MM_bag_02 21049 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bag 2"	
 	-solid
 	+usespecial	
@@ -774,7 +774,7 @@ Actor MM_bag_02 21049 {
 }
 Actor MM_box_01 21050 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "box 1"	
 	+solid
 	+usespecial	
@@ -790,7 +790,7 @@ Actor MM_box_01 21050 {
 }
 Actor MM_box_02 21051 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "box 2"	
 	+solid
 	+usespecial	
@@ -806,7 +806,7 @@ Actor MM_box_02 21051 {
 }
 Actor MM_cactus 21052 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "cactus in pot"	
 	Tag "cactus in pot"
 	radius 16
@@ -819,7 +819,7 @@ Actor MM_cactus 21052 {
 }
 Actor MM_food_01 21053 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 1 platter1"	
 	radius 8
 	height 8	
@@ -831,7 +831,7 @@ Actor MM_food_01 21053 {
 }
 Actor MM_food_02 21054 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 2 platter2"	
 	radius 8
 	height 8	
@@ -843,7 +843,7 @@ Actor MM_food_02 21054 {
 }
 Actor MM_food_03 21055 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 3 platter3"	
 	radius 8
 	height 8	
@@ -855,7 +855,7 @@ Actor MM_food_03 21055 {
 }
 Actor MM_food_04 21056 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 4 cup1"	
 	Tag "cup of coffee"
 	radius 4
@@ -868,7 +868,7 @@ Actor MM_food_04 21056 {
 }
 Actor MM_food_05 21057 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 5 cup2"	
 	Tag "cup of coffee"
 	radius 4
@@ -882,7 +882,7 @@ Actor MM_food_05 21057 {
 Actor MM_food_06 21058
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 6 pot small"
 	+NOGRAVITY
 	+DONTTHRUST
@@ -901,7 +901,7 @@ Actor MM_food_06 21058
 Actor MM_food_07 21059
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "food 7 pot large"
 	+NOGRAVITY
 	+DONTTHRUST
@@ -920,7 +920,7 @@ Actor MM_food_07 21059
 Actor MM_gadget_01 21060
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 1 table lamp"
 	
 	+Solid
@@ -942,7 +942,7 @@ Actor MM_gadget_01 21060
 Actor MM_gadget_02 21061
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 2 green flask"
 	
 	-Solid
@@ -962,7 +962,7 @@ Actor MM_gadget_02 21061
 Actor MM_gadget_03 
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 3"
 	
 	+Solid
@@ -992,7 +992,7 @@ actor mm_gadget_03_holodisplay {
 }
 actor model_MM_gadget_03 : MM_gadget_03 replaces MM_gadget_03 21062 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 3 holodisplay"
 	+NOGRAVITY
 	+DONTTHRUST
@@ -1006,7 +1006,7 @@ actor model_MM_gadget_03 : MM_gadget_03 replaces MM_gadget_03 21062 {
 Actor MM_gadget_04 
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 4"
 	
 	+Solid
@@ -1036,7 +1036,7 @@ actor mm_gadget_04_holodisplay {
 }
 actor model_MM_gadget_04 : MM_gadget_04 replaces MM_gadget_04 21063 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 4 holodisplay"
 	Tag "holodisplay"
 	States {
@@ -1048,7 +1048,7 @@ actor model_MM_gadget_04 : MM_gadget_04 replaces MM_gadget_04 21063 {
 Actor MM_gadget_05 21064
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 5 pocket radio"
 	
 	-Solid
@@ -1068,7 +1068,7 @@ Actor MM_gadget_05 21064
 Actor MM_gadget_06 21065
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 6 dual controller"
 	
 	+Solid
@@ -1089,7 +1089,7 @@ Actor MM_gadget_06 21065
 Actor MM_gadget_07 21066
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 7 glass dome"
 	
 	+Solid
@@ -1109,7 +1109,7 @@ Actor MM_gadget_07 21066
 Actor MM_gadget_08 21067
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 8 holodisplay"
 	
 	+Solid
@@ -1129,7 +1129,7 @@ Actor MM_gadget_08 21067
 Actor MM_gadget_09 21068
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 9 energy storage"
 	
 	+Solid
@@ -1150,7 +1150,7 @@ Actor MM_gadget_09 21068
 Actor MM_gadget_10 21069
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gadget 10 road block"
 	//light defined in main.gldefs
 	
@@ -1171,7 +1171,7 @@ Actor MM_gadget_10 21069
 Actor MM_gold 21070
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "gold"
 	
 	+Solid
@@ -1191,7 +1191,7 @@ Actor MM_gold 21070
 Actor MM_radio 21071
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "radio"
 	
 	+Solid
@@ -1209,7 +1209,7 @@ Actor MM_radio 21071
 Actor MM_relic 21072
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "relic"
 	
 	+Solid
@@ -1230,7 +1230,7 @@ Actor MM_relic 21072
 Actor MM_roadBlock 21073
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "road block"
 	
 	+Solid
@@ -1248,7 +1248,7 @@ Actor MM_roadBlock 21073
 Actor MM_shrubbery 21074
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "shrubbery"
 	
 	+Solid
@@ -1266,7 +1266,7 @@ Actor MM_shrubbery 21074
 Actor MM_stuff_01 21075
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "device 1"
 	
 	+Solid
@@ -1284,7 +1284,7 @@ Actor MM_stuff_01 21075
 Actor MM_stuff_02 21076
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "device 2"
 	
 	+Solid
@@ -1303,7 +1303,7 @@ Actor MM_stuff_02 21076
 Actor MM_stuff_03 21077
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "device 3"
 	
 	+Solid
@@ -1322,7 +1322,7 @@ Actor MM_stuff_03 21077
 Actor MM_stuff_04 21078
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bottle 1"
 	
 	+Solid
@@ -1342,7 +1342,7 @@ Actor MM_stuff_04 21078
 Actor MM_stuff_05 21079
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "stuff 1"
 	
 	-Solid
@@ -1360,7 +1360,7 @@ Actor MM_stuff_05 21079
 Actor MM_stuff_06 21080
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "stuff 2"
 	
 	-Solid
@@ -1379,7 +1379,7 @@ Actor MM_stuff_06 21080
 Actor MM_stuff_07 21081
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "stuff 3"
 	
 	-Solid
@@ -1398,7 +1398,7 @@ Actor MM_stuff_07 21081
 Actor MM_stuff_08 21082
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "kitchen hanger"
 	
 	-Solid
@@ -1418,7 +1418,7 @@ Actor MM_stuff_08 21082
 Actor MM_stuff_09 21083
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bottle 2"
 	
 	+Solid
@@ -1438,7 +1438,7 @@ Actor MM_stuff_09 21083
 Actor MM_stuff_10 21084
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bottle 3"
 	
 	+Solid
@@ -1458,7 +1458,7 @@ Actor MM_stuff_10 21084
 Actor MM_stuff_11 21085
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bottle 4"
 	
 	+Solid
@@ -1478,7 +1478,7 @@ Actor MM_stuff_11 21085
 Actor MM_stuff_12 21086
 {
 	//Default	
-	//$Category "Decorations/MM stuff"
+	//$Category "Decorations/WoS/MM stuff"
 	//$Title "bottle 5"
 	
 	+Solid
@@ -1645,7 +1645,7 @@ Actor voxGateControls : Piston 21097
 //voxel vehicles pack
 actor voxVTOLgreen 21098
 {
-	//$Category "Decorations/Voxel vehicles"
+	//$Category "Decorations/WoS/Voxel vehicles"
 	//$Title "VTOL - Green"
 	tag "green vtol"
 	Radius 32
@@ -1664,7 +1664,7 @@ actor voxVTOLgreen 21098
 
 actor FlyingCarRed 21099
 {
-	//$Category "Decorations/Voxel vehicles"
+	//$Category "Decorations/WoS/Voxel vehicles"
 	//$Title "Flying car - Red"
 	tag "flying car"
 	Radius 32
@@ -2248,7 +2248,7 @@ actor officeChair2 21130
 }
 actor gizmo01 21131
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 01 pocket map"
 	-SOLID
 	+NOGRAVITY
@@ -2266,7 +2266,7 @@ actor gizmo01 21131
 }
 actor gizmo02 21132
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 02 charger"
 	-SOLID
 	+NOGRAVITY
@@ -2284,7 +2284,7 @@ actor gizmo02 21132
 }
 actor gizmo03 21133
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 03 ring device"
 	-SOLID
 	+NOGRAVITY
@@ -2302,7 +2302,7 @@ actor gizmo03 21133
 }
 actor gizmo04 21134
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 04 breathing apparatus"
 	-SOLID
 	+NOGRAVITY
@@ -2320,7 +2320,7 @@ actor gizmo04 21134
 }
 actor gizmo05 21135
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 05 energy canister"
 	-SOLID
 	+NOGRAVITY
@@ -2338,7 +2338,7 @@ actor gizmo05 21135
 }
 actor gizmo06 21136
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 06 toolbox large"
 	-SOLID
 	+NOGRAVITY
@@ -2356,7 +2356,7 @@ actor gizmo06 21136
 }
 actor gizmo07 21137
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 07 toolbox small"
 	-SOLID
 	+NOGRAVITY
@@ -2374,7 +2374,7 @@ actor gizmo07 21137
 }
 actor gizmo08 21138
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 08"
 	-SOLID
 	+NOGRAVITY
@@ -2392,7 +2392,7 @@ actor gizmo08 21138
 }
 actor gizmo09 21139
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 09"
 	-SOLID
 	+NOGRAVITY
@@ -2410,7 +2410,7 @@ actor gizmo09 21139
 }
 actor gizmo10 21140
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 10"
 	-SOLID
 	+NOGRAVITY
@@ -2428,7 +2428,7 @@ actor gizmo10 21140
 }
 actor gizmo11 21141
 {
-	//$Category "Decorations/gizmos"
+	//$Category "Decorations/WoS/gizmos"
 	//$Title "gizmo 11"
 	-SOLID
 	+NOGRAVITY
@@ -3255,7 +3255,7 @@ Actor Gardenbush3 21191
 
 actor hxnBook01 21192 {
 	
-	//$Category "Decorations/books"
+	//$Category "Decorations/WoS/books"
 	//$Title "book 1"
 	
 	+solid
@@ -3274,7 +3274,7 @@ actor hxnBook01 21192 {
 	}
 }
 actor hxnBook02 21193 {
-	//$Category "Decorations/books"
+	//$Category "Decorations/WoS/books"
 	//$Title "book 2"
 	
 	+solid
@@ -3293,7 +3293,7 @@ actor hxnBook02 21193 {
 	}
 }
 actor hxnBook03 21194 {
-	//$Category "Decorations/books"
+	//$Category "Decorations/WoS/books"
 	//$Title "book 3"
 	
 	+solid
@@ -3312,7 +3312,7 @@ actor hxnBook03 21194 {
 	}
 }
 actor hxnBook04 21195 {
-	//$Category "Decorations/books"
+	//$Category "Decorations/WoS/books"
 	//$Title "book 4"
 	
 	+solid
@@ -4189,8 +4189,8 @@ actor strifeBed03 21236 {
 	+DONTTHRUST
 	
 	Tag "wooden bed"
-	height 16
-	radius 16
+	height 24
+	radius 56
 	
 	States {
 		Spawn:
@@ -5845,7 +5845,7 @@ actor dummy_binderBadge2 21335 {
 	}
 }
 actor wosD_dex_Skull 21336 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx skull"
 	-SOLID
 	+USESPECIAL
@@ -5861,7 +5861,7 @@ actor wosD_dex_Skull 21336 {
 	}
 }
 actor wosD_dex_plant2 21337 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx plant 2"
 	-SOLID
 	+USESPECIAL
@@ -5877,7 +5877,7 @@ actor wosD_dex_plant2 21337 {
 	}
 }
 actor wosD_dex_plant3 21338 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx plant 3"
 	-SOLID
 	+USESPECIAL
@@ -5893,7 +5893,7 @@ actor wosD_dex_plant3 21338 {
 	}
 }
 actor wosD_dex_basket 21339 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx basket"
 	+SOLID
 	+USESPECIAL
@@ -5909,7 +5909,7 @@ actor wosD_dex_basket 21339 {
 	}
 }
 actor wosD_dex_bookOpen 21340 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx book Open"
 	-SOLID
 	+USESPECIAL
@@ -5925,7 +5925,7 @@ actor wosD_dex_bookOpen 21340 {
 	}
 }
 actor wosD_dex_cactus1 21341 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx cactus 1"
 	+SOLID
 	+USESPECIAL
@@ -5941,7 +5941,7 @@ actor wosD_dex_cactus1 21341 {
 	}
 }
 actor wosD_dex_cactus2 21342 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx cactus 2"
 	+SOLID
 	+USESPECIAL
@@ -5957,7 +5957,7 @@ actor wosD_dex_cactus2 21342 {
 	}
 }
 actor wosD_dex_cart 21343 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx cart"
 	+SOLID
 	+USESPECIAL
@@ -5973,7 +5973,7 @@ actor wosD_dex_cart 21343 {
 	}
 }
 actor wosD_dex_compSecurity 21344 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx comp security"
 	+SOLID
 	+USESPECIAL
@@ -5989,7 +5989,7 @@ actor wosD_dex_compSecurity 21344 {
 	}
 }
 actor wosD_dex_fireExtinguisher 21345 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx hasicak"
 	+SOLID
 	+USESPECIAL
@@ -6005,7 +6005,7 @@ actor wosD_dex_fireExtinguisher 21345 {
 	}
 }
 actor wosD_dex_hangingChicken 21346 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx hanging chicken"
 	-SOLID
 	+USESPECIAL
@@ -6022,7 +6022,7 @@ actor wosD_dex_hangingChicken 21346 {
 	}
 }
 actor wosD_dex_hangingPig 21347 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx hanging pig"
 	-SOLID
 	+USESPECIAL
@@ -6039,7 +6039,7 @@ actor wosD_dex_hangingPig 21347 {
 	}
 }
 actor wosD_dex_lamp1 21348 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx lamp 1"
 	+SOLID
 	+USESPECIAL
@@ -6055,7 +6055,7 @@ actor wosD_dex_lamp1 21348 {
 	}
 }
 actor wosD_dex_lamp3 21349 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx lamp 3"
 	+SOLID
 	+USESPECIAL
@@ -6071,7 +6071,7 @@ actor wosD_dex_lamp3 21349 {
 	}
 }
 actor wosD_dex_microscope 21350 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx microscope"
 	+SOLID
 	+USESPECIAL
@@ -6087,7 +6087,7 @@ actor wosD_dex_microscope 21350 {
 	}
 }
 actor wosD_dex_shopLight 21351 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx shop light"
 	+SOLID
 	+USESPECIAL
@@ -6104,7 +6104,7 @@ actor wosD_dex_shopLight 21351 {
 	}
 }
 actor wosD_dex_showerFaucet 21352 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx shower faucet"
 	+SOLID
 	+USESPECIAL
@@ -6120,7 +6120,7 @@ actor wosD_dex_showerFaucet 21352 {
 	}
 }
 actor wosD_dex_showerHead 21353 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx shower head"
 	+SOLID
 	+USESPECIAL
@@ -6136,7 +6136,7 @@ actor wosD_dex_showerHead 21353 {
 	}
 }
 actor wosD_dex_statueLion 21354 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx statue lion"
 	+SOLID
 	+USESPECIAL
@@ -6152,7 +6152,7 @@ actor wosD_dex_statueLion 21354 {
 	}
 }
 actor wosD_dex_tad 21355 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx TAD"
 	+SOLID
 	+USESPECIAL
@@ -6168,7 +6168,7 @@ actor wosD_dex_tad 21355 {
 	}
 }
 actor wosD_dex_toilet1 21356 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx toilet"
 	+SOLID
 	+USESPECIAL
@@ -6184,7 +6184,7 @@ actor wosD_dex_toilet1 21356 {
 	}
 }
 actor wosD_dex_toilet2 21357 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx pissoir"
 	+SOLID
 	+USESPECIAL
@@ -6200,7 +6200,7 @@ actor wosD_dex_toilet2 21357 {
 	}
 }
 actor wosD_dex_trashcan2 21358 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx trashcan 2"
 	+SOLID
 	+USESPECIAL
@@ -6216,7 +6216,7 @@ actor wosD_dex_trashcan2 21358 {
 	}
 }
 actor wosD_dex_trashcan3 21359 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx trashcan 3"
 	+SOLID
 	+USESPECIAL
@@ -6232,7 +6232,7 @@ actor wosD_dex_trashcan3 21359 {
 	}
 }
 actor wosD_dex_waterCooler 21360 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx water cooler"
 	+SOLID
 	+USESPECIAL
@@ -6248,7 +6248,7 @@ actor wosD_dex_waterCooler 21360 {
 	}
 }
 actor wosD_dex_wineBottle 21361 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx wine bottle"
 	+SOLID
 	+USESPECIAL
@@ -6264,7 +6264,7 @@ actor wosD_dex_wineBottle 21361 {
 	}
 }
 actor wosD_dex_smallBoat 21362 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx small boat"
 	+SOLID
 	+USESPECIAL
@@ -6679,7 +6679,7 @@ actor wosD_energyPack 21386 {
 	}
 }
 actor wosD_desuExComputerPersonal 21387 {
-	//$Category "Decorations/deusex"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex computerPersonal"
 	+SOLID
 	+USESPECIAL
@@ -6695,7 +6695,7 @@ actor wosD_desuExComputerPersonal 21387 {
 	}
 }
 actor wosD_dexAIprototype 21388 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex teleportBase"
 	+SOLID
 	+USESPECIAL
@@ -6711,7 +6711,7 @@ actor wosD_dexAIprototype 21388 {
 	}
 }
 actor wosD_dexATM 21389 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex ATM"
 	+SOLID
 	+USESPECIAL
@@ -6727,7 +6727,7 @@ actor wosD_dexATM 21389 {
 	}
 }
 actor wosD_dexBarrel1 21390 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex barrel"
 	+SOLID
 	+USESPECIAL
@@ -6743,7 +6743,7 @@ actor wosD_dexBarrel1 21390 {
 	}
 }
 actor wosD_dexCigaretteMachine 21391 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex cigaretteMachine"
 	+SOLID
 	+USESPECIAL
@@ -6759,7 +6759,7 @@ actor wosD_dexCigaretteMachine 21391 {
 	}
 }
 actor wosD_dexCoffeeTable 21392 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex coffeeTable"
 	+SOLID
 	+USESPECIAL
@@ -6776,7 +6776,7 @@ actor wosD_dexCoffeeTable 21392 {
 	}
 }
 actor wosD_dexCouchLeather 21393 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex couchLeather"
 	+SOLID
 	+USESPECIAL
@@ -6792,7 +6792,7 @@ actor wosD_dexCouchLeather 21393 {
 	}
 }
 actor wosD_dexBookClosed 21394 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bookClosed"
 	+SOLID
 	+USESPECIAL
@@ -6808,7 +6808,7 @@ actor wosD_dexBookClosed 21394 {
 	}
 }
 actor wosD_dexBookOpen 21395 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bookOpen"
 	+SOLID
 	+USESPECIAL
@@ -6824,7 +6824,7 @@ actor wosD_dexBookOpen 21395 {
 	}
 }
 actor wosD_dexOfficeChair 21396 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex officeChair"
 	+SOLID
 	+USESPECIAL
@@ -6840,7 +6840,7 @@ actor wosD_dexOfficeChair 21396 {
 	}
 }
 actor wosD_dexRetinalScanner 21397 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex retinalScanner"
 	+SOLID
 	+USESPECIAL
@@ -6856,7 +6856,7 @@ actor wosD_dexRetinalScanner 21397 {
 	}
 }
 actor wosD_dexTree1 21398 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex tree1"
 	+SOLID
 	+USESPECIAL
@@ -6872,7 +6872,7 @@ actor wosD_dexTree1 21398 {
 	}
 }
 actor wosD_dexTree2 21399 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex tree2"
 	+SOLID
 	+USESPECIAL
@@ -6888,7 +6888,7 @@ actor wosD_dexTree2 21399 {
 	}
 }
 actor wosD_dexTree3 21400 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex tree3"
 	+SOLID
 	+USESPECIAL
@@ -6904,7 +6904,7 @@ actor wosD_dexTree3 21400 {
 	}
 }
 actor wosD_dexTree4 21401 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex tree4"
 	+SOLID
 	+USESPECIAL
@@ -6920,7 +6920,7 @@ actor wosD_dexTree4 21401 {
 	}
 }
 actor wosD_dexBushes1 21402 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes1"
 	+SOLID
 	+USESPECIAL
@@ -6936,7 +6936,7 @@ actor wosD_dexBushes1 21402 {
 	}
 }
 actor wosD_dexBushes2 21403 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes2"
 	+SOLID
 	+USESPECIAL
@@ -6952,7 +6952,7 @@ actor wosD_dexBushes2 21403 {
 	}
 }
 actor wosD_dexBushes3 21404 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes3"
 	+SOLID
 	+USESPECIAL
@@ -6980,7 +6980,7 @@ actor wosD_dexBushes1_2 : wosD_dexBushes1 21406 {
 	Tag "bushes"
 }
 actor wosD_dexPot1 21407 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex pot1"
 	+SOLID
 	+USESPECIAL
@@ -6996,7 +6996,7 @@ actor wosD_dexPot1 21407 {
 	}
 }
 actor wosD_dexPot2 21408 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex pot2"
 	+SOLID
 	+USESPECIAL
@@ -7012,7 +7012,7 @@ actor wosD_dexPot2 21408 {
 	}
 }
 actor wosD_dexTrophy 21409 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex trophy"
 	+SOLID
 	+USESPECIAL
@@ -7028,7 +7028,7 @@ actor wosD_dexTrophy 21409 {
 	}
 }
 actor wosD_dexVase1 21410 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex vase1"
 	+SOLID
 	+USESPECIAL
@@ -7044,7 +7044,7 @@ actor wosD_dexVase1 21410 {
 	}
 }
 actor wosD_dexVase2 21411 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex vase2"
 	+SOLID
 	+USESPECIAL
@@ -7060,7 +7060,7 @@ actor wosD_dexVase2 21411 {
 	}
 }
 actor wosD_dexBenchlibrary 21412 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex benchLibrary"
 	+SOLID
 	+USESPECIAL
@@ -7076,7 +7076,7 @@ actor wosD_dexBenchlibrary 21412 {
 	}
 }
 actor wosD_dexBookstandLibrary 21413 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bookStandLibrary"
 	+SOLID
 	+USESPECIAL
@@ -7092,7 +7092,7 @@ actor wosD_dexBookstandLibrary 21413 {
 	}
 }
 actor wosD_dexCabinet 21414 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex cabinet"
 	+SOLID
 	+USESPECIAL
@@ -7108,7 +7108,7 @@ actor wosD_dexCabinet 21414 {
 	}
 }
 actor wosD_dexDeskSmallLibrary 21415 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex deskSmallLibrary"
 	+SOLID
 	+USESPECIAL
@@ -7124,7 +7124,7 @@ actor wosD_dexDeskSmallLibrary 21415 {
 	}
 }
 actor wosD_dexDeskNobleOffice 21416 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex deskNobleOffice"
 	+SOLID
 	+USESPECIAL
@@ -7140,7 +7140,7 @@ actor wosD_dexDeskNobleOffice 21416 {
 	}
 }
 actor wosD_dexChairNobleOffice 21417 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex chairNobleOffice"
 	+SOLID
 	+USESPECIAL
@@ -7204,7 +7204,7 @@ actor wosD_stimDevice3 21420 {
 	}
 }
 actor wosD_dexAIprototypeCeiling 21421 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex teleportCeiling"
 	+SOLID
 	+USESPECIAL
@@ -7238,7 +7238,7 @@ actor wosD_cyclonesPillar 21422 {
 	}
 }
 actor wosD_dex_statueLion2 21423 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx statue lion 2"
 	+SOLID
 	+USESPECIAL
@@ -7254,7 +7254,7 @@ actor wosD_dex_statueLion2 21423 {
 	}
 }
 actor wosD_dexComputerPublick 21424 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex computer public"
 	+SOLID
 	+USESPECIAL
@@ -8756,7 +8756,7 @@ actor wosD_techLampBrass 21510 {
 }
 
 actor wosD_dex_datacube 21511 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex datacube"
 	-NOBLOCKMAP
 	tag "datacube"
@@ -8770,7 +8770,7 @@ actor wosD_dex_datacube 21511 {
 }
 
 actor wosD_dex_pan1 21512 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex pan1"
 	-NOBLOCKMAP
 	tag "metal pan"
@@ -8783,7 +8783,7 @@ actor wosD_dex_pan1 21512 {
 	}
 }
 actor wosD_dex_pan3 21513 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex pan3"
 	-NOBLOCKMAP
 	tag "small metal pot"
@@ -8796,7 +8796,7 @@ actor wosD_dex_pan3 21513 {
 	}
 }
 actor wosD_dex_pan4 21514 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex pan4"
 	-NOBLOCKMAP
 	tag "metal pot"
@@ -8809,7 +8809,7 @@ actor wosD_dex_pan4 21514 {
 	}
 }
 actor wosD_dex_soyFood 21515 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex soy food"
 	-NOBLOCKMAP
 	tag "soy food"
@@ -8823,7 +8823,7 @@ actor wosD_dex_soyFood 21515 {
 }
 
 actor wosD_dex_roadBlock 21516 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex road block"
 	-NOBLOCKMAP
 	tag "road block"
@@ -8836,7 +8836,7 @@ actor wosD_dex_roadBlock 21516 {
 	}
 }
 actor wosD_dex_lifeSupportBase 21517 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex life support base"
 	-NOBLOCKMAP
 	tag "life support base"
@@ -8849,7 +8849,7 @@ actor wosD_dex_lifeSupportBase 21517 {
 	}
 }
 actor wosD_dex_bioCell 21518 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex biocell"
 	-NOBLOCKMAP
 	tag "Energy Cell"
@@ -8874,7 +8874,7 @@ actor wosDialogDummy 21519 {
 	}
 }
 actor wosD_dex_multiTool 21520 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex multitool"
 	-NOBLOCKMAP
 	tag "multitool"
@@ -8887,7 +8887,7 @@ actor wosD_dex_multiTool 21520 {
 	}
 }
 actor wosD_infoSign 21521 {
-	//$Category "Decorations/deusEx"
+	//$Category "Decorations/WoS/deusEx"
 	//$Title "info sign"
 	-NOBLOCKMAP
 	+USESPECIAL
@@ -10067,7 +10067,7 @@ actor wosD_jkjaWallTanks 21592 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "wall tanks"
 	Tag "wall tanks"
-	radius 16
+	radius 20
 	height 48
 	+SOLID
 	+USESPECIAL
@@ -10361,7 +10361,7 @@ actor wosD_jkjaPodCar 21611 {
 	}
 }
 actor wosD_lightGlobe : lightGlobe replaces lightGlobe 21612 {
-	//$Category "Decorations/Light Sources/WoS/"
+	//$Category "Light Sources/WoS/"
 	//$Title "dx light globe"
 	Tag "light globe"
 	radius 8

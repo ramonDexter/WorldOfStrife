@@ -7,7 +7,7 @@ Idea Base: Action Doom 2 trash cans.
 */
 Actor VegieBarrel 25100
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "veggie barrel"
   tag "veggie barrel"
   Radius 16
@@ -46,7 +46,7 @@ Actor VegieBarrel 25100
 
 Actor SmallBarrel1 25101
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "small barrel 1"
   tag "food barrel"
   Radius 16
@@ -77,7 +77,7 @@ Actor SmallBarrel1 25101
 
 Actor SmallBarrel2 25102
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "small barrel 2"
   tag "food barrel"
   Radius 16
@@ -108,7 +108,7 @@ Actor SmallBarrel2 25102
 
 Actor SmallBarrel3 25103
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "small barrel 3"
   tag "food barrel"
   Radius 16
@@ -139,7 +139,7 @@ Actor SmallBarrel3 25103
 
 Actor SmallBarrel4 25104
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "small barrel 4"
   tag "food barrel"
   Radius 16
@@ -171,7 +171,7 @@ Actor SmallBarrel4 25104
 
 Actor EmptyFoodBarrel 25105
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "empty barrel"
   tag "empty barrel"
   Radius 16
@@ -205,7 +205,7 @@ Actor EmptyFoodBarrel 25105
 
 Actor MeatBarrel 25106
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "meat barrel"
   tag "meat barrel"
   Radius 16
@@ -242,7 +242,7 @@ Actor MeatBarrel 25106
 }
 /*Actor Vegie1 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Strange Fruit"
 	Tag "Strange Fruit"
   Inventory.PickupFlash Pickupflash
@@ -260,7 +260,7 @@ Actor MeatBarrel 25106
 
 /*Actor Vegie2 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Apple"
 	Tag "Apple"
   Inventory.PickupFlash Pickupflash
@@ -278,7 +278,7 @@ Actor MeatBarrel 25106
 
 /*Actor Vegie3 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Lettuce"
 	Tag "Lettuce"
   Inventory.PickupFlash Pickupflash
@@ -296,7 +296,7 @@ Actor MeatBarrel 25106
 
 /*Actor Vegie4 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Carrots"
 	Tag "Carrots"
   Inventory.PickupFlash Pickupflash
@@ -314,7 +314,7 @@ Actor MeatBarrel 25106
 
 /*Actor Vegie5 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Onion"
 	Tag "Onion"
   Inventory.PickupFlash Pickupflash
@@ -332,7 +332,7 @@ Actor MeatBarrel 25106
 
 /*Actor fbMeat1 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Beef"
 	Tag "Beef"
   Inventory.PickupFlash Pickupflash
@@ -351,7 +351,7 @@ Actor MeatBarrel 25106
 
 /*Actor fbMeat2 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Cheese"
 	Tag "Cheese"
   Inventory.PickupFlash Pickupflash
@@ -369,7 +369,7 @@ Actor MeatBarrel 25106
 
 /*Actor fbMeat3 : Health 
 {
-	//$Category "Decorations/food barrels"
+	//$Category "Decorations/WoS/food barrels"
 	//$Title "Fish"
 	Tag "Fish"
   Inventory.PickupFlash Pickupflash

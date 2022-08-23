@@ -383,7 +383,7 @@ class wosGrilledChicken : wosPickup {
 // food from foodbarrels //////////////////////////////////////////////////////
 class wosVegie1 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Strange Fruit"
 		Tag "Strange Fruit";
 		inventory.icon "I_FRTA";
@@ -405,7 +405,7 @@ class wosVegie1 : wosPickup {
 }
 class wosVegie2 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Apple"
 		Tag "Apple";
 		inventory.icon "I_FRTB";
@@ -427,7 +427,7 @@ class wosVegie2 : wosPickup {
 }
 class wosVegie3 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Lettuce"
 		Tag "Lettuce";
 		inventory.icon "I_FRTD";
@@ -449,7 +449,7 @@ class wosVegie3 : wosPickup {
 }
 class wosVegie4 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Carrots"
 		Tag "Carrots";
 		inventory.icon "I_FRTE";
@@ -471,7 +471,7 @@ class wosVegie4 : wosPickup {
 }
 class wosVegie5 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Onion"
 		Tag "Onion";
 		inventory.icon "I_FRTG";
@@ -493,7 +493,7 @@ class wosVegie5 : wosPickup {
 }
 class wosfbMeat1 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Beef"
 		Tag "Beef";
 		inventory.icon "I_FRTC";
@@ -515,7 +515,7 @@ class wosfbMeat1 : wosPickup {
 }
 class wosfbMeat2 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Cheese"
 		Tag "Cheese";
 		inventory.icon "I_FRTF";
@@ -537,7 +537,7 @@ class wosfbMeat2 : wosPickup {
 }
 class wosfbMeat3 : wosPickup {
 	Default {
-		//$Category "Decorations/food barrels"
+		//$Category "Decorations/WoS/food barrels"
 		//$Title "Fish"
 		Tag "Fish";
 		inventory.icon "I_FRTH";

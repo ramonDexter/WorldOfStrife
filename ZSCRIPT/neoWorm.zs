@@ -1,6 +1,6 @@
 class HayRoll : Actor {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Hay rolled"
 		tag "hay rolled";
 		Radius 20;
@@ -15,7 +15,7 @@ class HayRoll : Actor {
 }
 class HayRoll2 : Actor {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Hay rolled stackable"
 		tag "hay rolled";
 		Radius 20;
@@ -33,7 +33,7 @@ class HayRoll2 : Actor {
 
 class HayCube : Actor {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Hay cube"
 		tag "hay cube";
 		Radius 20;
@@ -61,7 +61,7 @@ class Cart01 : Actor {
 		Mass 800;
 		+SOLID;
 		//Health 600;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Cart square 64"
 	}
 
@@ -81,7 +81,7 @@ class Cart02 : Actor {
 		Mass 800;
 		//Health 600;
 		+SOLID;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Cart square 64 alternative
 	}
 
@@ -101,7 +101,7 @@ class Cart03 : Actor {
 		Mass 800;
 		+SOLID;
 		//Health 900;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Gypsy Cart"
 	}
 
@@ -130,7 +130,7 @@ class Table01 : Actor {
 		//+SHOOTABLE;
 		+NOBLOOD;
 		PushFactor 0.2;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Table square 64"
 	}
 
@@ -148,7 +148,7 @@ class Table03 : Table01 {
 		Height 36;
 		Mass 800;
 		//Health 600;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Table square 64 2"
 	}
 
@@ -180,7 +180,7 @@ class Box01 : Actor {
 		//+SHOOTABLE;
 		+NOBLOOD;
 		PushFactor 0.1;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box big 1"
 	}
 	
@@ -196,7 +196,7 @@ class Box01 : Actor {
 
 class Box02 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box big 2"
 	}
 	States {
@@ -214,7 +214,7 @@ class Box03 : Box01 {
 		Mass 500;
 		Friction 0.8;
 		Health 160;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box low"
 	}
 	
@@ -233,7 +233,7 @@ class Box04 : Box01 {
 		Mass 400;
 		Friction 0.8;
 		Health 120;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box small high"
 	}
 	
@@ -254,7 +254,7 @@ class Box05 : Box01
 		Mass 300;
 		Friction 0.8;
 		Health 100;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box small"
 	}
 	
@@ -273,7 +273,7 @@ class Sack01 : Actor {
 		Radius 18;
 		Height 12;
 		+SOLID;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Sack 01"
 	}
 	States {
@@ -287,7 +287,7 @@ class Sack02 : Sack01 {
 	Default {
 		Radius 18;
 		Height 24;
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "Sack 02"
 	}
 	States {
@@ -299,7 +299,7 @@ class Sack02 : Sack01 {
 
 class strifeBox01 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox01"
 		Tag "strife box big wooden";
 		Radius 32;
@@ -308,7 +308,7 @@ class strifeBox01 : Box01 {
 }
 class strifeBox02 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox02"
 		Tag "strife box big metal";
 		Radius 32;
@@ -317,7 +317,7 @@ class strifeBox02 : Box01 {
 }
 class strifeBox03 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox03"
 		Tag "strife box low metal";
 		Radius 32;
@@ -326,7 +326,7 @@ class strifeBox03 : Box01 {
 }
 class strifeBox04 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox04"
 		Tag "strife box tall wooden";
 		Radius 16;
@@ -335,7 +335,7 @@ class strifeBox04 : Box01 {
 }
 class strifeBox05 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox05"
 		Tag "strife box small wooden";
 		Radius 16;
@@ -344,7 +344,7 @@ class strifeBox05 : Box01 {
 }
 class strifeBox06 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox06"
 		Tag "strife box small metal";
 		Radius 16;
@@ -353,7 +353,7 @@ class strifeBox06 : Box01 {
 }
 class strifeBox07 : Box01 {
 	Default {
-		//$Category "Decorations/neoworm"
+		//$Category "Decorations/WoS/neoworm"
 		//$Title "strifeBox07"
 		Tag "strife box low wooden";
 		Radius 32;

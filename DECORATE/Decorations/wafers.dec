@@ -1,5 +1,5 @@
 actor wafer_base {
-	//$Category "Decorations/wafers"
+	//$Category "Decorations/WoS/wafers"
 	+FLATSPRITE
 	-SOLID
 	+USESPECIAL	

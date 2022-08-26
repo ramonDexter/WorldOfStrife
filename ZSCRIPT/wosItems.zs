@@ -261,10 +261,10 @@ class implant_stamina : CustomInventory {
         pawn.staminaImplant = true;
     }
 	Default {
-		-INVENTORY.INVBAR
-		+INVENTORY.UNDROPPABLE
-		+INVENTORY.UNTOSSABLE
-		+INVENTORY.UNCLEARABLE
+		-INVENTORY.INVBAR;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNTOSSABLE;
+		+INVENTORY.UNCLEARABLE;
 		tag "Stamina Implant";
 		inventory.icon "I_STRG";
 		inventory.Amount 1;
@@ -311,16 +311,15 @@ class journalitem : CustomInventory {
 		//$Category "Quest things/WoS"
 		//$Title "Journal"
 			
-		+CountItem
-		+Inventory.invbar
-		+Inventory.AlwaysPickup
-		+INVENTORY.UNDROPPABLE
-		-SOLID
-		+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS		
-		
+		+CountItem;
+		+Inventory.invbar;
+		+Inventory.AlwaysPickup;
+		+INVENTORY.UNDROPPABLE;
+		-SOLID;
+		+SHOOTABLE;
+		+NODAMAGE;
+		+NOBLOOD;
+		+CANPASS;		
 		Tag "$TAG_journalitem";	
 		Inventory.PickupSound "misc/i_pkup";
 		inventory.amount 1;
@@ -355,9 +354,9 @@ class binderBadge : CustomInventory {
 		//$Category "Quest things/WoS"
 		//$Title "Binder Badge"
 		
-		+INVENTORY.INVBAR
-		+INVENTORY.UNDROPPABLE
-		+INVENTORY.UNTOSSABLE		
+		+INVENTORY.INVBAR;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNTOSSABLE;	
 		Tag "Binder Badge";
 		inventory.icon "I_BADG";
 		inventory.amount 1;
@@ -383,7 +382,7 @@ class binderBadge : CustomInventory {
 ////////////////////////////////////////////////////////////////////////////////
 //  goldcoin  //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class goldCoin : Inventory /*replaces coin*/ {
+class goldCoin : Inventory {
 	Default {
         //$Category "Quest things/WoS"
 		//$Title "gold coin"
@@ -396,7 +395,7 @@ class goldCoin : Inventory /*replaces coin*/ {
 		Inventory.Icon "I_COIN";
 		Inventory.PickupMessage "$TXT_goldCOIN";
 		Inventory.pickupSound "sounds/coinPickup";
-		Mass gCoinWeight;
+		Mass 0;
 		radius 8;
 		
 	}
@@ -413,7 +412,7 @@ class wosGold10 : wosPickup {
 	Default {
         //$Category "Quest things/WoS"
 		//$Title "gold coins (10)"
-		-INVENTORY.INVBAR
+		-INVENTORY.INVBAR;
 		//Inventory.Amount 10
 		Tag "$TAG_10GOLDcoins"; // "10 gold"
 		Inventory.PickupMessage "$TXT_10GOLDcoins"; // "You picked up 10 gold."

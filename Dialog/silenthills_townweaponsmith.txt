@@ -115,7 +115,7 @@ Conversation {
         }
         Choice {
             Text = "Is this your shop?";
-            Nextpage = "SH_townWeaponsmith_yourshop?";
+            Nextpage = "SH_townWeaponsmith_yourshop";
         }
         Choice {
             Text = "Could you tell me about the town?";

@@ -382,23 +382,39 @@ class binderPlayer : StrifePlayer {
 		bool dont;
 		double stmed = 0.01 * (175 - stamin);
 
-        If ( !dont && !reactiontime && player.health ) {vel.x*=0.9; vel.y*=0.9; ViewBob=0.6*hpeed;}
-		If ( hpeed < 0.5 ) {hpeed=0.5;}
-
-        If ( stmed < 0 ) {stmed=0;}
+        If ( !dont && !reactiontime && player.health ) {
+			vel.x*=0.9; 
+			vel.y*=0.9; 
+			ViewBob=0.6*hpeed;
+		}
+		If ( hpeed < 0.5 ) {
+			hpeed=0.5;
+		}
+        If ( stmed < 0 ) {
+			stmed=0;
+		}
 		hpeed -= stmed;
-		If ( hpeed < 0.1 ) {hpeed=0.1;}
-		If ( hpeed > 1.0 ) {hpeed=1.0;}
-
+		If ( hpeed < 0.1 ) {
+			hpeed=0.1;
+		}
+		If ( hpeed > 1.0 ) {
+			hpeed=1.0;
+		}
         If( sprinting == 1 ) {
 			hpeed*=3.0;
             If( GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN ){ hpeed /= 2;}			
 		} else if ( sprinting == 0 ) {
 			hpeed *= 0.9;
 		}
-		If( currentarmor == 2 ){ hpeed*=0.8; }
-		If( overweight == 1 ){ hpeed*=0.5; } //Halve speed when true
-        If( overweight2 == 1 ){ hpeed*=0.01; } //Set it to veery slow when true
+		If( currentarmor == 2 ){ 
+			hpeed*=0.8; 
+		}
+		If( overweight == 1 ){ 
+			hpeed*=0.5; 
+		} //Halve speed when true
+        If( overweight2 == 1 ){ 
+			hpeed*=0.01; 
+		} //Set it to veery slow when true
 		//If(surgery==1||repairing==1){hpeed=0;}
 		ViewBob = 0.6*hpeed; //lower the viewBob
 		speed = hpeed;
@@ -406,7 +422,8 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 
 	// level handler ///////////////////////////////////////////////////////////
-	void HandlePlayerLevel() {
+	void HandlePlayerLevel() {		
+
 		if ( playerXP>=1000 && playerLevel==1 ) {
 			playerLevel=2;
 			A_GiveInventory("upgradeToken", 1);
@@ -523,14 +540,14 @@ class binderPlayer : StrifePlayer {
 	// ledge climb function ////////////////////////////////////////////////////
 	//  code by Jarewill
 	void LedgeClimb() {
-		If((player.readyweapon is "wosPunchDagger")&&player.cmd.buttons&BT_JUMP) {
+		if( (player.readyweapon is "wosPunchDagger") && player.cmd.buttons&BT_JUMP ) {
 			FLineTraceData h, i, j;
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height+8,data: i);
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height-4,data: j);
-			If(i.HitType==TRACE_HitNone) {
-				For(int tall=16; tall<=height; tall+=8) {
+			if( i.HitType == TRACE_HitNone ) {
+				for(int tall=16; tall<=height; tall+=8) {
 					LineTrace(angle,24,0,TRF_THRUSPECIES,tall,data: h);
-					If(h.HitType==TRACE_HitWall) {
+					if( h.HitType == TRACE_HitWall ) {
 						int zspd = 0;
 						If(j.HitType==TRACE_HitWall||player.cmd.buttons&BT_FORWARD){zspd=2;}
 						Else{ViewBob=0;}
@@ -546,31 +563,32 @@ class binderPlayer : StrifePlayer {
 	// new jump function ///////////////////////////////////////////////////////
 	//  code by Jarewill
 	Override void CheckJump() {
-		If (player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap") {
+		If ( player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap" ) {
 			Super.CheckJump();
 		}
-		Else If(player.cmd.buttons & BT_JUMP) {
-			If(player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT)&&/*!rolldown&&!blocking&&*/player.onground&&stamin>=35) {
-				double rollbase = speedbase*4.0;
-				double rollbonus = 3.0;
-				If(rollbonus<0.5){rollbonus=0.5;}
-				//rolldown=35;
-				reactiontime=18;
-				player.deltaviewheight=-8;
-				stamin-=35;
+		Else If ( player.cmd.buttons & BT_JUMP ) {
+			If ( player.cmd.buttons & (BT_FORWARD|BT_BACK|BT_MOVELEFT|BT_MOVERIGHT) && player.onground && stamin >= 35 ) {
+				double slideBase = speedbase*4.0;
+				double slideBonus = 3.0;
+				If ( slideBonus < 0.5 ) { 
+					slideBonus = 0.5; 
+				}
+				reactiontime = 18;
+				player.deltaviewheight = -8;
+				stamin -= 35;
 				A_StartSound("weapons/swing",CHAN_BODY);
 				bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
-				If (player.cmd.buttons & BT_FORWARD) {
-					Thrust(rollbase*rollbonus,angle);
+				If ( player.cmd.buttons & BT_FORWARD ) {
+					Thrust(slideBase*slideBonus,angle);
 				}
-				Else If (player.cmd.buttons & BT_BACK) {
-					Thrust(rollbase*rollbonus,angle-180);
+				Else If ( player.cmd.buttons & BT_BACK ) {
+					Thrust(slideBase*slideBonus,angle-180);
 				}
-				If (player.cmd.buttons & BT_MOVELEFT) {
-					Thrust(rollbase*rollbonus,angle-270);
+				If ( player.cmd.buttons & BT_MOVELEFT ) {
+					Thrust(slideBase*slideBonus,angle-270);
 				}
-				Else If (player.cmd.buttons & BT_MOVERIGHT) {
-					Thrust(rollbase*rollbonus,angle-90);
+				Else If ( player.cmd.buttons & BT_MOVERIGHT ) {
+					Thrust(slideBase*slideBonus,angle-90);
 				}
 			}
 		}

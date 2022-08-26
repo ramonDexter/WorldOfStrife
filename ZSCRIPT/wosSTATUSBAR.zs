@@ -442,7 +442,9 @@ class wosStatusBar : BaseStatusBar {
 					}
 					DrawInventoryIcon (item, (35 + 35*i, 169), flags);
 					// display item weight
-					if (item.Mass > 0) {
+					/*if ( item is "Coin" || item is "goldCoin" ) {
+						//do nothing
+					} else*/ if (item.Mass > 0) {
 						DrawString(mESfont, FormatNumber(item.Mass, 3, 5, 0, "W:"), (65 + 35*i, 168), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 					}
 					// display item amount

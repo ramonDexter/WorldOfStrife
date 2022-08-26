@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 16;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Grenades vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_grenadesVendor_opener";
 		Name = "\c[yellow]Grenades vendor";
@@ -32,7 +44,63 @@ Conversation {
 				Item = "goldCoin";
 				Amount = 15;
 			}
-		}
+		} 
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_grenadesVendor_questions";
+        }
 	}
+    Page {
+        pageName = "SH_grenadesVendor_questions";
+        Name = "\c[yellow]Grenades vendor";
+        Dialog = "\c[white]All right, what would you like to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_grenadesVendor_opener";
+        }
+        Choice {
+            Text = "How's business?";
+            Nextpage = "SH_grenadesVendor_business";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_grenadesVendor_aboutsilenthills";
+        }
+        Choice {
+            Text = "Could you tell me abou the locals?";
+            Nextpage = "SH_grenadesVendor_aboutlocals";
+        }
+    }
+    Page {
+        pageName = "SH_grenadesVendor_business";
+        Name = "\c[yellow]Grenades vendor";
+        Dialog = "\c[white]Oh yeah, the business is good. I work mostly for the local government. I mean, I supply grenades to the local Guard and the military. So yeah, the business is very good, lately.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_grenadesVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_grenadesVendor_aboutsilenthills";
+        Name = "\c[yellow]Grenades vendor";
+        Dialog = "\c[white]Silent Hills is a small market community hidden in the Hillside. We're trying our best to be one of the best settlements in this region. Lord Tabit is the owner of the land around town. He is just and fair ruler. We got everything here, shops, markets and the harbor in town center. We got even city bath. Good place to let off steam after hard day. The city is divided in the middle by the river. The eastern part of the town is the business part, while the western part is residential area.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_grenadesVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_grenadesVendor_aboutlocals";
+        Name = "\c[yellow]Grenades vendor";
+        Dialog = "\c[white]The locals are good and faithful people. Half of the locals work in the mines or in the powerplant, the second half are craftsmen and merchants.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_grenadesVendor_questions";
+        }
+    }
 }
 //==================================================================================================================

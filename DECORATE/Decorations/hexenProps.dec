@@ -1356,7 +1356,7 @@ ACTOR hexZChainBit32 28243
 
 ACTOR dagSwampKludge002 23172
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 01"
 	tag "swamp grass"
 	-Solid
@@ -1375,7 +1375,7 @@ ACTOR dagSwampKludge002 23172
 
 ACTOR dagSwampKludge003 23173
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 02"
 	tag "swamp grass"
 	-Solid
@@ -1394,7 +1394,7 @@ ACTOR dagSwampKludge003 23173
 
 ACTOR dagSwampKludge004 23174
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 02"
 	tag "tree swamp"
 	+Solid
@@ -1413,7 +1413,7 @@ ACTOR dagSwampKludge004 23174
 
 ACTOR dagSwampKludge005 23175
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 03"
 	tag "tree swamp"
 	+Solid
@@ -1432,7 +1432,7 @@ ACTOR dagSwampKludge005 23175
 
 ACTOR dagSwampKludge006 23176
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 04"
 	tag "tree swamp"
 	+Solid
@@ -1451,7 +1451,7 @@ ACTOR dagSwampKludge006 23176
 
 ACTOR dagSwampKludge007 23177
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 03"
 	-Solid
 	+DontThrust
@@ -1470,7 +1470,7 @@ ACTOR dagSwampKludge007 23177
 
 ACTOR dagSwampKludge008 23178
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 05"
 	tag "tree swamp"
 	+Solid
@@ -1489,7 +1489,7 @@ ACTOR dagSwampKludge008 23178
 
 ACTOR dagSwampKludge009 23179
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 06"
 	tag "tree swamp"
 	+Solid
@@ -1508,7 +1508,7 @@ ACTOR dagSwampKludge009 23179
 
 ACTOR dagSwampKludge010 23180
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 07"
 	tag "tree swamp"
 	+Solid
@@ -1527,7 +1527,7 @@ ACTOR dagSwampKludge010 23180
 
 ACTOR dagSwampKludge011 23181
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 04"
 	tag "swamp grass"
 	-Solid
@@ -1546,7 +1546,7 @@ ACTOR dagSwampKludge011 23181
 
 ACTOR dagSwampKludge012 23182
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 05"
 	tag "swamp grass"
 	-Solid
@@ -1565,7 +1565,7 @@ ACTOR dagSwampKludge012 23182
 
 ACTOR dagSwampKludge013 23183
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 06"
 	tag "swamp grass"
 	-Solid
@@ -1584,7 +1584,7 @@ ACTOR dagSwampKludge013 23183
 
 ACTOR dagSwampKludge014 23184
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 07"
 	tag "swamp grass"
 	-Solid
@@ -1603,7 +1603,7 @@ ACTOR dagSwampKludge014 23184
 
 ACTOR dagSwampKludge015 23185
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 08"
 	tag "swamp grass"
 	-Solid
@@ -1622,7 +1622,7 @@ ACTOR dagSwampKludge015 23185
 
 ACTOR dagSwampKludge016 23186
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 09"
 	tag "swamp grass"
 	-Solid
@@ -1641,7 +1641,7 @@ ACTOR dagSwampKludge016 23186
 
 ACTOR dagSwampKludge017 23187
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 10"
 	tag "swamp grass"
 	-Solid
@@ -1660,7 +1660,7 @@ ACTOR dagSwampKludge017 23187
 
 ACTOR dagSwampKludge018 23188
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 11"
 	tag "swamp grass"
 	-Solid
@@ -1679,7 +1679,7 @@ ACTOR dagSwampKludge018 23188
 
 ACTOR dagSwampKludge019 23189
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 12"
 	tag "swamp grass"
 	-Solid
@@ -1698,7 +1698,7 @@ ACTOR dagSwampKludge019 23189
 
 ACTOR dagSwampKludge020 23190
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 01"
 	tag "swamp grass"
 	+Solid
@@ -1717,7 +1717,7 @@ ACTOR dagSwampKludge020 23190
 
 ACTOR dagSwampKludge021 23191
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 13"
 	tag "swamp grass"
 	-Solid
@@ -1736,7 +1736,7 @@ ACTOR dagSwampKludge021 23191
 
 ACTOR dagSwampKludge022 23192
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 14"
 	tag "swamp grass"
 	-Solid
@@ -1755,7 +1755,7 @@ ACTOR dagSwampKludge022 23192
 
 ACTOR dagSwampKludge023 23193
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 15"
 	tag "swamp grass"
 	-Solid
@@ -1774,7 +1774,7 @@ ACTOR dagSwampKludge023 23193
 
 ACTOR dagSwampKludge024 23194
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 16"
 	tag "swamp grass"
 	-Solid
@@ -1793,7 +1793,7 @@ ACTOR dagSwampKludge024 23194
 
 ACTOR dagSwampKludge025 23195
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 17"
 	tag "swamp grass"
 	-Solid
@@ -1812,7 +1812,7 @@ ACTOR dagSwampKludge025 23195
 
 ACTOR dagSwampKludge026 23196
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 18"
 	tag "swamp grass"
 	-Solid
@@ -1831,7 +1831,7 @@ ACTOR dagSwampKludge026 23196
 
 ACTOR dagSwampKludge027 23197
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 19"
 	tag "swamp grass"
 	-Solid
@@ -1850,7 +1850,7 @@ ACTOR dagSwampKludge027 23197
 
 ACTOR dagSwampKludge028 23198
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 20"
 	tag "swamp grass"
 	-Solid
@@ -1869,7 +1869,7 @@ ACTOR dagSwampKludge028 23198
 
 ACTOR dagSwampKludge029 23199
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 21"
 	tag "swamp grass"
 	-Solid
@@ -1888,7 +1888,7 @@ ACTOR dagSwampKludge029 23199
 
 ACTOR dagSwampKludge030 23200
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 23"
 	tag "swamp grass"
 	-Solid
@@ -1907,7 +1907,7 @@ ACTOR dagSwampKludge030 23200
 
 ACTOR dagSwampKludge031 23201
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 23"
 	tag "swamp grass"
 	-Solid
@@ -1926,7 +1926,7 @@ ACTOR dagSwampKludge031 23201
 
 ACTOR dagSwampKludge032 23202
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Grass 24"
 	tag "swamp grass"
 	-Solid
@@ -1945,7 +1945,7 @@ ACTOR dagSwampKludge032 23202
 
 ACTOR dagSwampKludge033 23203
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 08"
 	tag "swamp tree"
 	+Solid
@@ -1964,7 +1964,7 @@ ACTOR dagSwampKludge033 23203
 
 ACTOR dagSwampKludge034 23204
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 09"
 	tag "swamp tree"
 	+Solid
@@ -1983,7 +1983,7 @@ ACTOR dagSwampKludge034 23204
 
 ACTOR dagSwampKludge035 23205
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 10"
 	tag "swamp tree"
 	+Solid
@@ -2002,7 +2002,7 @@ ACTOR dagSwampKludge035 23205
 
 ACTOR dagSwampKludge036 23206
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 11"
 	tag "swamp tree"
 	+Solid
@@ -2021,7 +2021,7 @@ ACTOR dagSwampKludge036 23206
 
 ACTOR dagSwampKludge037 23207
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 12"
 	tag "swamp tree"
 	+Solid
@@ -2040,7 +2040,7 @@ ACTOR dagSwampKludge037 23207
 
 ACTOR dagSwampKludge038 23208
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 13"
 	tag "swamp tree"
 	+Solid
@@ -2059,7 +2059,7 @@ ACTOR dagSwampKludge038 23208
 
 ACTOR dagSwampKludge039 23209
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 14"
 	tag "swamp tree"
 	+Solid
@@ -2078,7 +2078,7 @@ ACTOR dagSwampKludge039 23209
 
 ACTOR dagSwampKludge055 23210
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 15"
 	tag "swamp tree"
 	+Solid
@@ -2097,7 +2097,7 @@ ACTOR dagSwampKludge055 23210
 
 ACTOR dagSwampKludge041 23211
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 16"
 	tag "swamp tree"
 	+Solid
@@ -2116,7 +2116,7 @@ ACTOR dagSwampKludge041 23211
 
 ACTOR dagSwampKludge042 23212
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 17"
 	tag "swamp tree"
 	+Solid
@@ -2135,7 +2135,7 @@ ACTOR dagSwampKludge042 23212
 
 ACTOR dagSwampKludge043 23213
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Tree Swamp 18"
 	tag "swamp tree"
 	+Solid
@@ -2154,7 +2154,7 @@ ACTOR dagSwampKludge043 23213
 
 ACTOR dagSwampKludge044 23214
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Stone 01"
 	tag "swamp stone"
 	+Solid
@@ -2173,7 +2173,7 @@ ACTOR dagSwampKludge044 23214
 
 ACTOR dagSwampKludge045 23215
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Stone 02"
 	tag "swamp stone"
 	+Solid
@@ -2192,7 +2192,7 @@ ACTOR dagSwampKludge045 23215
 
 ACTOR dagSwampKludge046 23216
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Stone 03"
 	tag "swamp stone"
 	+Solid
@@ -2211,7 +2211,7 @@ ACTOR dagSwampKludge046 23216
 
 ACTOR dagSwampKludge047 23217
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Stone 04"
 	tag "swamp stone"
 	+Solid
@@ -2230,7 +2230,7 @@ ACTOR dagSwampKludge047 23217
 
 ACTOR dagSwampKludge048 23218
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Stone 05"
 	tag "swamp stone"
 	+Solid
@@ -2249,7 +2249,7 @@ ACTOR dagSwampKludge048 23218
 
 ACTOR dagSwampKludge049 23219
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Shroom"
 	tag "swamp shroom"
 	-Solid
@@ -2268,7 +2268,7 @@ ACTOR dagSwampKludge049 23219
 
 ACTOR dagSwampKludge050 23220
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 03"
 	tag "swamp kludge"
 	-Solid
@@ -2287,7 +2287,7 @@ ACTOR dagSwampKludge050 23220
 
 ACTOR dagSwampKludge051 23221
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 04"
 	tag "swamp kludge"
 	-Solid
@@ -2306,7 +2306,7 @@ ACTOR dagSwampKludge051 23221
 
 ACTOR dagSwampKludge052 23222
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 05"
 	tag "swamp kludge"
 	-Solid
@@ -2325,7 +2325,7 @@ ACTOR dagSwampKludge052 23222
 
 ACTOR dagSwampKludge053 23223
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 06"
 	tag "swamp kludge"
 	-Solid
@@ -2344,7 +2344,7 @@ ACTOR dagSwampKludge053 23223
 
 ACTOR dagSwampKludge054 23224
 {
-	//$Category "Decorations/WoS/Vegetation"
+	//$Category "Trees and Rocks/hexen/"
 	//$Title "Swamp Kludge 07"
 	tag "swamp kludge"
 	-Solid

@@ -468,8 +468,8 @@ DoomEdNums {
 	20463 = wosSecuriBot
 	20464 = wosSecuribotFriendly
 	20465 = wosCrusader
+	20466 = wosCeilingTurret
 	/*
-	20466 = markerNamed_insulaNorth
 	20467 = markerNamed_insulaWest
 	20468 = markerNamed_powerStation
 	20469 = markerNamed_temple

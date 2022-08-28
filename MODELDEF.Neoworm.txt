@@ -146,7 +146,7 @@ Model Table01
   Path "models/neoworm/"
   Model 0 "Table01.obj"
   Skin 0 "FURNI01.png"
-  Scale 1 1 1
+  Scale 1.0 1.0 0.75
   FrameIndex DUMM A 0 0
 }
 
@@ -155,7 +155,7 @@ Model Table03
   Path "models/neoworm/"
   Model 0 "Table03.obj"
   Skin 0 "FURNI03.png"
-  Scale 1 1 1
+  Scale 1.0 1.0 0.67
   FrameIndex DUMM A 0 0
 }
 

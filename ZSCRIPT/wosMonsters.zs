@@ -437,6 +437,10 @@ class wosCeilingTurret : CeilingTurret replaces CeilingTurret {
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}*/
+	Default {
+		//$Category "Monsters/WoS/"
+		//$Title "dx Ceiling Turret"
+	}
 
 	States {
 		Death:

@@ -2218,7 +2218,7 @@ class ascTramp : wosMonsterBase {
 					Actor med = A_DropItem("wosHyposprej"); 
 				}
 				If( lootarm == 1 ){ 
-					Actor arm = A_DropItem("wosLeatherArmor"); 
+					Actor arm = A_DropItem("wosArmorShard"); 
 				}
 				//If( looteqip == "TARG" ){ 
 				//	Actor trg = A_DropItem("wosTargeter"); 
@@ -2241,6 +2241,7 @@ class ascTramp : wosMonsterBase {
 				searched = 1;
 			} Else {
 				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				A_StartSound("sound/wearClothing");
 				searchtimer++;
 			}
 		}
@@ -2394,6 +2395,7 @@ class ascRogue : wosMonsterBase {
 				searched = 1;
 			} Else {
 				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				A_StartSound("sound/wearClothing");
 				searchtimer++;
 			}
 		}

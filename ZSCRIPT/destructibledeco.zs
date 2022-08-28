@@ -327,8 +327,8 @@ class dest_strifeDecoPot3 : dest_Pot {
         //$Category "Decorations/WoS"
         //$Title "deco pot medium destructible"
         tag "medium decorative pot";
-        radius 12;
-        height 24;
+        radius 10;
+        height 12;
         +SOLID;
     }
 	
@@ -392,7 +392,7 @@ class dest_strifeDecoPot5 : dest_Pot {
         //$Title "deco pot large destructible"
         tag "large decorative pot";
         radius 16;
-        height 29;
+        height 20;
         +SOLID
     }
 	

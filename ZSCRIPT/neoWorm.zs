@@ -116,21 +116,21 @@ class Table01 : Actor {
 	Default {
 		Tag "wooden table";
 		Radius 32;
-		Height 32;
+		Height 24;
 		Mass 400;
 		Friction 0.8;
 		//Health 120;
-		+SOLID
-		+PUSHABLE
-		+DROPOFF
-		+SLIDESONWALLS
-		+CANPASS
-		+ACTLIKEBRIDGE
+		+SOLID;
+		+PUSHABLE;
+		+DROPOFF;
+		+SLIDESONWALLS;
+		+CANPASS;
+		+ACTLIKEBRIDGE;
 		+FLOORCLIP;
 		//+SHOOTABLE;
 		+NOBLOOD;
 		PushFactor 0.2;
-		//$Category "Decorations/WoS/neoworm"
+		//$Category "Decorations/WoS/furniture/"
 		//$Title "Table square 64"
 	}
 
@@ -143,13 +143,13 @@ class Table01 : Actor {
 
 class Table03 : Table01 {
 	Default {
-		Tag "wooden table";
+		Tag "decorated table";
 		Radius 32;
-		Height 36;
+		Height 24;
 		Mass 800;
 		//Health 600;
-		//$Category "Decorations/WoS/neoworm"
-		//$Title "Table square 64 2"
+		//$Category "Decorations/WoS/furniture/"
+		//$Title "Table square 64 decorative"
 	}
 
     States {

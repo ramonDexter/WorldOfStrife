@@ -663,9 +663,16 @@ ACTOR falloutCorn7 : falloutCornBase 21042 {
 //------------------------------------------------------------------------------
 actor MMofficeChair 21043 {
 	//Default	
-	//$Category "Decorations/WoS/MM stuff"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair"	
 	+SOLID
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "Office chair"
 	height 16
 	radius 12	
@@ -1586,10 +1593,16 @@ Actor khaki_shirt : RebelShirt 21094
 }
 Actor officeChair 21095
 {  	
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair"
-	+FloorClip
-	+Solid
+	+SOLID
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	tag "office chair"
 	Height 30
 	Radius 15
@@ -2230,17 +2243,22 @@ actor DummyRangerLeaderStanding 21129
 	}
 }
 
-actor officeChair2 21130
-{
-	//$Category "Decorations/WoS"
+actor officeChair2 21130 {
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair 2"
 	+SOLID
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	tag "office chair"
 	radius 14
 	height 32
 	
-	States
-	{
+	States {
 		Spawn:
 			OCHR A -1
 			stop
@@ -4114,15 +4132,20 @@ actor dx_penBlock 21231 {
 	}
 }
 actor strifeChair01 21232 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 01"
 	+SOLID
-	+USESPECIAL
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	
 	Tag "wooden chair"
 	height 24
-	radius 16
+	radius 12
 	
 	States {
 		Spawn:
@@ -4131,15 +4154,20 @@ actor strifeChair01 21232 {
 	}
 }
 actor strifeChair02 21233 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 02"
 	+SOLID
-	+USESPECIAL
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	
 	Tag "wooden chair"
 	height 32
-	radius 16
+	radius 12
 	
 	States {
 		Spawn:
@@ -4266,11 +4294,16 @@ actor strifeNightStand01 21240 {
 	}
 }
 actor strifeChair03 21241 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 03"
 	+SOLID
-	+USESPECIAL
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "wooden armchair"
 	height 16
 	radius 16
@@ -4282,7 +4315,7 @@ actor strifeChair03 21241 {
 	}
 }
 actor strifeCouch01 21242 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx couch 01"
 	+SOLID
 	+USESPECIAL
@@ -4299,11 +4332,16 @@ actor strifeCouch01 21242 {
 	}
 }
 actor strifeCoffeeTable01 21243 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx coffee table 01"
 	+SOLID
-	+USESPECIAL
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "coffee table"
 	height 14
 	radius 12
@@ -4315,7 +4353,7 @@ actor strifeCoffeeTable01 21243 {
 	}
 }
 actor strifeCoffeeTable02 21244 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx coffee table 02"
 	+SOLID
 	+USESPECIAL
@@ -4331,7 +4369,7 @@ actor strifeCoffeeTable02 21244 {
 	}	
 }
 actor strifeTable01 21245 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx table 01"
 	+SOLID
 	+USESPECIAL
@@ -4348,7 +4386,7 @@ actor strifeTable01 21245 {
 	}
 }
 actor strifeNightStand02 21246 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 02"
 	+SOLID
 	+USESPECIAL
@@ -4365,7 +4403,7 @@ actor strifeNightStand02 21246 {
 	}
 }
 actor strifeNightStand03 21247 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 03"
 	+SOLID
 	+USESPECIAL
@@ -4382,7 +4420,7 @@ actor strifeNightStand03 21247 {
 	}
 }
 actor strifeNightStand04 21248 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 04"
 	+SOLID
 	+USESPECIAL
@@ -4399,7 +4437,7 @@ actor strifeNightStand04 21248 {
 	}
 }
 actor strifeTreeBonsai01 21249 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "dx tree bonsai 01"
 	+SOLID
 	+USESPECIAL
@@ -5081,7 +5119,7 @@ actor dx_mikrovlnka 21290 {
 	}
 }
 actor dx_grass01 21291 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava01 zelena"
 	
 	-SOLID
@@ -5098,7 +5136,7 @@ actor dx_grass01 21291 {
 	}
 }
 actor dx_grass02 21292 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava02 zelena"
 	
 	-SOLID
@@ -5115,7 +5153,7 @@ actor dx_grass02 21292 {
 	}
 }
 actor dx_grass03 21293 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava03 zelena"
 	
 	-SOLID
@@ -5132,7 +5170,7 @@ actor dx_grass03 21293 {
 	}
 }
 actor dx_grass04 21294 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava01 washed"
 	
 	-SOLID
@@ -5149,7 +5187,7 @@ actor dx_grass04 21294 {
 	}
 }
 actor dx_grass05 21295 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava02 washed"
 	
 	-SOLID
@@ -5166,7 +5204,7 @@ actor dx_grass05 21295 {
 	}
 }
 actor dx_grass06 21296 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava03 washed"
 	
 	-SOLID
@@ -5183,7 +5221,7 @@ actor dx_grass06 21296 {
 	}
 }
 actor dx_grassPatch01 21297 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 01 zelena"
 	
 	-SOLID
@@ -5200,7 +5238,7 @@ actor dx_grassPatch01 21297 {
 	}
 }
 actor dx_grassPatch02 21298 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 02 zelena"
 	
 	-SOLID
@@ -5217,7 +5255,7 @@ actor dx_grassPatch02 21298 {
 	}
 }
 actor dx_grassPatch03 21299 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 01 washed"
 	
 	-SOLID
@@ -5234,7 +5272,7 @@ actor dx_grassPatch03 21299 {
 	}
 }
 actor dx_grassPatch04 21300 {
-	//$Category "Trees and Rocks"
+	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 02 washed"
 	
 	-SOLID
@@ -6563,7 +6601,7 @@ actor dx_compXK4 21379 {
 	}
 }
 actor wosD_dxPicnicTable 21380 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "picnic table"
 	
 	+SOLID
@@ -6759,7 +6797,7 @@ actor wosD_dexCigaretteMachine 21391 {
 	}
 }
 actor wosD_dexCoffeeTable 21392 {
-	//$Category "Decorations/WoS/deusEx"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex coffeeTable"
 	+SOLID
 	+USESPECIAL
@@ -6824,12 +6862,16 @@ actor wosD_dexBookOpen 21395 {
 	}
 }
 actor wosD_dexOfficeChair 21396 {
-	//$Category "Decorations/WoS/deusEx"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex officeChair"
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "office chair"
 	radius 12
 	height 32
@@ -6863,8 +6905,8 @@ actor wosD_dexTree1 21398 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "green tree"
-	radius 8
-	height 64
+	radius 12
+	height 128
 	States {
 		Spawn:
 			DUMM A -1
@@ -6879,8 +6921,8 @@ actor wosD_dexTree2 21399 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "green tree"
-	radius 8
-	height 64
+	radius 12
+	height 128
 	States {
 		Spawn:
 			DUMM A -1
@@ -6895,8 +6937,8 @@ actor wosD_dexTree3 21400 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "green tree"
-	radius 8
-	height 64
+	radius 12
+	height 128
 	States {
 		Spawn:
 			DUMM A -1
@@ -6912,7 +6954,7 @@ actor wosD_dexTree4 21401 {
 	+DONTTHRUST
 	Tag "green tree"
 	radius 12
-	height 64
+	height 128
 	States {
 		Spawn:
 			DUMM A -1
@@ -7035,8 +7077,8 @@ actor wosD_dexVase1 21410 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "decorative vase"
-	radius 8
-	height 16
+	radius 5
+	height 18
 	States {
 		Spawn:
 			DUMM A -1
@@ -7051,8 +7093,8 @@ actor wosD_dexVase2 21411 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "decorative vase"
-	radius 8
-	height 16
+	radius 6
+	height 6
 	States {
 		Spawn:
 			DUMM A -1
@@ -7140,12 +7182,16 @@ actor wosD_dexDeskNobleOffice 21416 {
 	}
 }
 actor wosD_dexChairNobleOffice 21417 {
-	//$Category "Decorations/WoS/deusEx"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex chairNobleOffice"
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
-	+DONTTHRUST
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "padded chair"
 	radius 16
 	height 32
@@ -8084,18 +8130,17 @@ actor wosD_judasCradle 21468 {
 actor wosD_woodenBarrel : WoodenBarrel 21469 {
 	//$Category "Decorations/WoS"
 	//$Title "dx wooden barrel"
-	//+SOLID
-	//+SHOOTABLE
-	//+NOBLOOD
-	//+INCOMBAT
-	//+ACTLIKEBRIDGE
-	//+NOGRAVITY
-	//+DONTTHRUST	
+	+SOLID
 	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
 	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	Tag "wooden barrel"
 	Health 28
- 	Radius 10
+ 	Radius 13
 	Height 28
 	DeathSound "woodenbarrel/death"
 	States {
@@ -8296,7 +8341,7 @@ actor wosD_dxTablet04 21482 {
 }
 
 actor wosD_stool 21483 {
-	//$Category "Decorations/WoS"
+	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx stool"
 	Tag "wooden stool"
 	Radius 6
@@ -9669,14 +9714,19 @@ actor wosD_wheel 21565 {
 	}
 }
 actor wosD_chairsThrone 21566 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "throne"
 	Tag "throne"
 	radius 16
 	height 32
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -9684,7 +9734,7 @@ actor wosD_chairsThrone 21566 {
 	}
 }
 actor wosD_smallChair 21567 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "small chair"
 	Tag "small chair"
 	radius 16
@@ -9699,7 +9749,7 @@ actor wosD_smallChair 21567 {
 	}
 }
 actor wosD_queen 21568 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "throne queen"
 	Tag "throne queen"
 	radius 16
@@ -9714,14 +9764,19 @@ actor wosD_queen 21568 {
 	}
 }
 actor wosD_chair3 21569 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair 3"
 	Tag "stone chair"
 	radius 16
 	height 32
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -9729,14 +9784,19 @@ actor wosD_chair3 21569 {
 	}
 }
 actor wosD_chair2 21570 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair 2"
 	Tag "stone chair"
 	radius 16
 	height 32
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -9744,14 +9804,19 @@ actor wosD_chair2 21570 {
 	}
 }
 actor wosD_chair1 21571 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair 1"
 	Tag "wooden chair"
 	radius 12
 	height 32
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -9759,7 +9824,7 @@ actor wosD_chair1 21571 {
 	}
 }
 actor wosD_bench 21572 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "stone bench"
 	Tag "stone bench"
 	radius 16
@@ -9774,14 +9839,19 @@ actor wosD_bench 21572 {
 	}
 }
 actor wosD_chair 21573 {
-	//$Category "Decorations/Wos"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "wooden chair"
 	Tag "wooden chair"
-	radius 16
+	radius 8
 	height 32
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -9973,11 +10043,11 @@ actor wosD_jkjaHeater 21585 {
 	}
 }
 actor wosD_jkjaChairHoth 21586 {
-	//$Category "Decorations/Wos/JKJA/"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair hoth"
 	Tag "chair"
-	radius 8
-	height 16
+	radius 10
+	height 32
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -9988,11 +10058,11 @@ actor wosD_jkjaChairHoth 21586 {
 	}
 }
 actor wosD_jkjaChairImperial 21587 {
-	//$Category "Decorations/Wos/JKJA/"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair imperial"
 	Tag "chair"
-	radius 8
-	height 16
+	radius 10
+	height 32
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10232,7 +10302,7 @@ actor wosD_jkjaStatue 21602 {
 	}
 }
 actor wosD_jkjaChairBig 21603 {
-	//$Category "Decorations/Wos/JKJA/"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "seater"
 	Tag "seater"
 	radius 28
@@ -10247,7 +10317,7 @@ actor wosD_jkjaChairBig 21603 {
 	}
 }
 actor wosD_jkjaChairWide 21604 {
-	//$Category "Decorations/Wos/JKJA/"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "wide seater"
 	Tag "wide seater"
 	radius 28
@@ -10430,14 +10500,19 @@ actor wosD_fnvCookingStove 21618 {
 	}
 }
 actor wosD_fnvChairVault 21619 {
-	//$Category "Decorations/Wos/F:NV/"
+	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair vault"
 	Tag "chair metal"
 	radius 12
 	height 24
 	+SOLID
-	+USESPECIAL
-	+NOGRAVITY
+	+PUSHABLE
+	+DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -10523,6 +10598,48 @@ actor PillarHugeTechAnimated : PillarHugeTech replaces PillarHugeTech 21624 {
 	States {
 		Spawn:
 			HUGE A -1 Bright NODELAY A_SpawnItemEx("PillarHugeTechLightning", 0, 0, 76)
+			Stop
+	}
+}
+actor wos_strifeCouch01Bridge8 : InvisibleBridge8 21625 {
+	//$Category "Bridges"
+	//$Title "bridge woodenCouch01_8"
+	Tag "wooden couch"
+	radius 8
+	height 8
+}
+actor wos_strifeCouch01Bridge16 : InvisibleBridge16 21626 {
+	//$Category "Bridges"
+	//$Title "bridge woodenCouch01_16"
+	Tag "wooden couch"
+	height 16
+	radius 16
+} 
+actor wos_dexCouchLeatherBridge8 : InvisibleBridge8 21627 {
+	//$Category "Bridges"
+	//$Title "bridge dexCouchLeather_8"
+	Tag "leather couch"
+	radius 8
+	height 8
+}
+actor wos_dexCouchLeatherBridge16 : InvisibleBridge16 21628 {
+	//$Category "Bridges"
+	//$Title "bridge dexCouchLeather_16"
+	Tag "leather couch"
+	radius 16
+	height 16
+}
+actor wosD_mw3atent 21629 {
+	//$Category "Decorations/Wos/MW/"
+	//$Title "triangle tent"
+	Tag "triangle tent"
+	Radius 16
+  	Height 32
+  	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
 			Stop
 	}
 }

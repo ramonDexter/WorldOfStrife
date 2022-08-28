@@ -980,7 +980,7 @@ ACTOR Plant19 22135
 
 ACTOR Tree01 22141
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
 
   radius 32
   height 180
@@ -1001,7 +1001,7 @@ ACTOR Tree01 22141
 //=========================//
 /*ACTOR Larch 22142
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
 Radius 30
 Height 128
 +SOLID
@@ -1085,7 +1085,7 @@ Stop
 
 ACTOR Larch_dry 22143
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
 Radius 30
 Height 128
 +SOLID
@@ -1118,7 +1118,7 @@ ACTOR Larch4_dry : Larch4 {}
 
 ACTOR Tree04 22144
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   Tag "pine tree"
   radius 24
   height 180
@@ -1150,7 +1150,7 @@ States
 
 ACTOR Tree05Spawner : RandomSpawner 22146
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   +NOGRAVITY
   +DONTTHRUST
     radius 30
@@ -1161,7 +1161,7 @@ ACTOR Tree05Spawner : RandomSpawner 22146
 
 ACTOR Tree05Large 22161
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "large oak"
   radius 30
   height 224
@@ -1179,7 +1179,7 @@ ACTOR Tree05Large 22161
 
 ACTOR Tree05Medium  : Tree05Large 22162
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   +NOGRAVITY
   +DONTTHRUST
   tag "oak tree"
@@ -1192,7 +1192,7 @@ ACTOR Tree05Medium  : Tree05Large 22162
 
 ACTOR Tree06Spawner : RandomSpawner 22147
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   +NOGRAVITY
   +DONTTHRUST
     radius 24
@@ -1203,7 +1203,7 @@ ACTOR Tree06Spawner : RandomSpawner 22147
 
 ACTOR Tree06Large
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 24
   height 192
   +SOLID
@@ -1226,7 +1226,7 @@ ACTOR Tree06Medium : Tree06Large
 
 ACTOR Tree07 22148
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   Tag "small dry tree"
   radius 10
   height 128
@@ -1270,7 +1270,7 @@ ACTOR Tree07c : Tree07 22150
 
 ACTOR Tree08SpawnerA : RandomSpawner 22151
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 24
     height 192
     DropItem "Tree08AMedium"
@@ -1303,7 +1303,7 @@ ACTOR Tree08AMedium : Tree08ALarge
 
 ACTOR Tree08SpawnerB : RandomSpawner 22152
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 24
     height 192
     DropItem "Tree08BMedium"
@@ -1336,7 +1336,7 @@ ACTOR Tree08BMedium : Tree08BLarge
 
 ACTOR Tree09SpawnerA : RandomSpawner 22153
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 16
     height 192
     DropItem "Tree09AMedium"
@@ -1370,7 +1370,7 @@ ACTOR Tree09AMedium : Tree09ALarge
 
 ACTOR Tree09SpawnerB : RandomSpawner 22154
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 16
     height 192
     DropItem "Tree09BMedium"
@@ -1404,7 +1404,7 @@ ACTOR Tree09BMedium : Tree09BLarge
 
 ACTOR Tree10Spawner : RandomSpawner 22155
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 48
     height 180
     DropItem "Tree10Large"
@@ -1443,7 +1443,7 @@ ACTOR Tree10Small : Tree10Large
 
 ACTOR Tree11 22156
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "tall tree"
   radius 16
   height 128
@@ -1461,7 +1461,7 @@ ACTOR Tree11 22156
 
 ACTOR Tree12 22157
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 16
   height 192
   tag "tall tree"
@@ -1478,7 +1478,7 @@ ACTOR Tree12 22157
 
 ACTOR Tree13 22158
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 24
   height 224
   +SOLID
@@ -1497,7 +1497,7 @@ ACTOR Tree13 22158
   
 ACTOR Tree14Leaves 22159
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "beech tree"
   radius 24
   height 180
@@ -1538,7 +1538,7 @@ ACTOR ALeaf2 : Leaf2
 
 ACTOR Tree15 22160
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "beech tree dry"
   radius 24
   height 180
@@ -1555,7 +1555,7 @@ ACTOR Tree15 22160
 }
 ACTOR Tree14Green 22175
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "beech tree"
   radius 24
   height 180
@@ -1574,7 +1574,7 @@ ACTOR Tree14Green 22175
 /*
 ACTOR Tree16Break 22161
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 24
   height 180
   deathheight 24
@@ -1631,7 +1631,7 @@ ACTOR Tree16Break 22161
 
 ACTOR Tree17 22162
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 24
   height 112
   +SOLID
@@ -1655,7 +1655,7 @@ ACTOR Tree17Skull : Tree17 22163
 
 ACTOR Tree18 22164
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 30
   height 128
@@ -1673,7 +1673,7 @@ ACTOR Tree18 22164
 
 ACTOR Tree19 22165
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 20
   height 128
@@ -1691,7 +1691,7 @@ ACTOR Tree19 22165
 
 ACTOR Tree20 22166
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 20
   height 160
@@ -1708,7 +1708,7 @@ ACTOR Tree20 22166
 
 ACTOR Tree21 22167
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 24
   height 100
@@ -1725,7 +1725,7 @@ ACTOR Tree21 22167
   
 ACTOR Tree22 22168
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 24
   height 100
@@ -1742,7 +1742,7 @@ ACTOR Tree22 22168
 
 /*ACTOR Tree23 22169
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 30
   height 112
   +SOLID
@@ -1758,7 +1758,7 @@ ACTOR Tree22 22168
 
 ACTOR Tree24 22170
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
   radius 30
   height 160
@@ -1779,7 +1779,7 @@ ACTOR Tree24 22170
 /*
 ACTOR Tree25 22171
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 30
   height 128
   +SOLID
@@ -1793,7 +1793,7 @@ ACTOR Tree25 22171
 
 ACTOR Tree26 22172
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 30
   height 144
   +SOLID
@@ -1809,7 +1809,7 @@ ACTOR Tree26 22172
 
 ACTOR Tree27Spawner : RandomSpawner 22173
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 16
     height 192
     DropItem "Tree27Medium"
@@ -1840,7 +1840,7 @@ ACTOR Tree27Medium : Tree27Large
 
 ACTOR Tree28Spawner : RandomSpawner 22174
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
     radius 30
     height 144
     DropItem "Tree28Large"
@@ -2647,7 +2647,7 @@ ACTOR Plant30 23332
 
 ACTOR Tree29 23340
 {
-//$category NatureTree
+//$Category "Trees and Rocks/NatureTree/"
   radius 24
   height 112
   +SOLID

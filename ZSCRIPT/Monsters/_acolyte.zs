@@ -350,9 +350,15 @@ Class wosAcolyte : Acolyte replaces Acolyte {
 			AGRD A 0 {
 				If(target is "wosAcolyte")
 				{sighttimer=0; SetStateLabel("See2");}
-				Else If(shielded==0&&health<=30&&healed==0&&noescape<3)
-				{bFRIGHTENED=1; speed=14; sighttimer=0; SetStateLabel("RunAway");}
-				Else{bFRIGHTENED=0; speed=7;}
+				Else If(shielded==0&&health<=30&&healed==0&&noescape<3) {
+					bFRIGHTENED=1; 
+					speed=14; 
+					sighttimer=0; 
+					SetStateLabel("RunAway");
+				} Else {
+					bFRIGHTENED=0; 
+					speed=7;
+				}
 			}
 			AGRD A 0 A_JumpIfTargetInLOS(1,90,JLOSF_DEADNOJUMP,1024);
 			Goto See2;

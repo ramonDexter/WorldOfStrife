@@ -35,6 +35,14 @@ class wosAcolyte : Acolyte replaces Acolyte {
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}
+
+	action void W_shootGunAclt() {
+		double acc = 5.6;
+		A_FaceTarget();
+		A_SpawnProjectile("wos542",32,0,frandom(-acc,acc),0,frandom(-acc,acc));
+		A_StartSound("weapons/assaultgun",CHAN_WEAPON);
+		A_AlertMonsters(1024);
+	}
     
 	Override void PostBeginPlay() {
 		Super.PostBeginPlay();
@@ -88,6 +96,27 @@ class wosAcolyte : Acolyte replaces Acolyte {
 		If(shielded==0&&sprite==GetSpriteIndex("AGRD")){sprite=GetSpriteIndex("ATRP");}
 	}
 	States {
+		Spawn:
+			AGRD A 5 A_Look2();
+			Wait;
+			AGRD B 8 A_ClearShadow();
+			Loop;
+			AGRD D 8;
+			Loop;
+			AGRD ABCDABCD 5 A_Wander();
+			Loop;
+		See:
+			AGRD A 6 Fast Slow A_AcolyteBits();
+			AGRD BCD 6 Fast Slow A_Chase();
+			Loop;
+		Missile:
+			AGRD E 8 Fast Slow A_FaceTarget();
+			AGRD FE 4 Fast Slow W_shootGunAclt(); //A_ShootGun();
+			AGRD F 6 Fast Slow W_shootGunAclt(); //A_ShootGun();
+			Goto See;
+		Pain:
+			AGRD O 8 Fast Slow A_Pain();
+    Goto See
 		Death:
 			AGRD G 4;
 			AGRD H 4 A_Scream();
@@ -96,7 +125,7 @@ class wosAcolyte : Acolyte replaces Acolyte {
 			AGRD K 3 A_NoBlocking();
 			AGRD L 3;
 			AGRD M 3 A_AcolyteDie();
-            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+            //TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
 			AGRD N -1;
 			Stop;
 		XDeath:
@@ -108,7 +137,7 @@ class wosAcolyte : Acolyte replaces Acolyte {
 			GIBS GH 4;
 			GIBS I 5;
 			GIBS J 5 A_AcolyteDie();
-            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+            //TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
 			GIBS K 5;
 			GIBS L 1400;
 			Stop;
@@ -190,10 +219,73 @@ Class wosAcolyteShield : Actor {
 			Loop;
 	}
 }
+Class wosBulletBase : FastProjectile {
+	Array<Actor> ShotList;
+	int penetration; property Penetration : penetration;
+	int BulletDmg; property BulletDmg : BulletDmg;
+	Default {
+		Radius 2;
+		Height 2;
+		Decal "BulletChip";
+		MissileType "wosBulletDebug";
+		MissileHeight 8;
+		DamageType "Bullet";
+		ProjectileKickback 50;
+		+MTHRUSPECIES; 
+        +NOEXTREMEDEATH;
+	}
+	States {
+        Spawn:
+            TNT1 A 1 A_ChangeVelocity(0,0,-1);
+            Loop;
+        Death:
+            TNT1 A 0 A_AlertMonsters(128);
+            TNT1 A 0 A_SpawnItemEx("wosBulletPuff");
+            Stop;
+        Crash:
+            TNT1 A 0 A_AlertMonsters(128);
+            TNT1 A 0 A_SpawnItemEx("wosBulletSpark");
+            Stop;
+        XDeath:
+            TNT1 A 0;
+            Stop;
+	}
+	Override int SpecialMissileHit(Actor victim) {
+		If(ShotList.Find(victim) == ShotList.Size()) {
+			If(victim==Self.target){ Return 1; }
+			Else {
+				victim.DamageMobj(Self,target,Self.BulletDmg*Random(1,4),"Bullet"); ShotList.Push(victim);
+				If(victim.bSHOOTABLE&&!victim.bNOBLOOD){victim.SpawnBlood(self.pos,self.angle,self.BulletDmg);}
+				If(Self.Penetration>victim.Mass){Self.Penetration-=(victim.Mass); Return 1;}
+				Else{Return 0;}
+			}
+		}
+		Else{ Return 1; }
+	}
+}
+Class wosBulletDebug : Actor {
+	Default{
+        +NOGRAVITY;
+    }
+	States {
+		Spawn:
+			PUFY A 0 NoDelay Bright {If(GetCVar("wos_debug")){A_SetTics(35);}}
+			Stop;
+	}
+}
+Class wos542 : wosBulletBase {
+	Default {
+		Speed 640;
+		wosBulletBase.Penetration 150;
+		wosBulletBase.BulletDmg 2; //10
+		Obituary "%o was shot down by %k's assault rifle.";
+	}
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // temporarily removed - musim vyresit problem, proc utoci na patrol pointy...
+//>> !!!!! predelat na rebela !!!!!
 /*Class wosGrenadeBase : Actor {
 	int fusetime; property FuseTime : fusetime;
 	Default {

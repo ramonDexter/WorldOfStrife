@@ -2,7 +2,199 @@
 // acolytes ///////////////////////////////////////////////////////////////////////////////////////////////////
 // looting code from Lost Frontier, credits to jarewill ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Class wosGrenadeBase : Actor {
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// acolytes ///////////////////////////////////////////////////////////////////////////////////////////////////
+// looting code from Lost Frontier, credits to jarewill ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class wosAcolyte : Acolyte replaces Acolyte {
+	int gunmag; //
+	int searchtimer; //
+	bool searched; //
+	bool lootmed; //
+	bool lootarm; //
+	int lootarm2; //
+	bool lootgun; //
+	int lootgun2; //
+	int lootmoney; //
+	bool lootrep; //
+	string looteqip; Property Equipment : looteqip; //
+	int looteqip2; //
+	bool shielded; 
+    Property Shielded : shielded;
+
+	Default {
+		Species "wosAcolyte";
+	}
+
+	action void W_rewardXPacolyte (int rewardXP) {
+		let pawn = binderPlayer(target);
+		if ( pawn && pawn.player ) {
+			pawn.playerXP+=rewardXP;
+			//A_Log("Added ", rewardXP, " XP!");
+			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
+		}
+	}
+    
+	Override void PostBeginPlay() {
+		Super.PostBeginPlay();
+		gunmag=30;
+		//If(shielded==1){A_SpawnItemEx("wosAcolyteShield",flags: SXF_SETMASTER);}
+		If(Random(1,3)==1){lootmed=1;} If(Random(1,8)==1){lootarm=1; lootarm2=Random(15,85);}
+		If(Random(1,6)==1){lootgun=1; lootgun2=Random(50,600);} If(Random(1,10)==1){lootrep=1;}
+		lootmoney=Random(3,15);
+	}
+
+	Override bool Used(Actor user) {
+		let pawn = binderPlayer(user);
+		If( searched==0 && health<1 && InStateSequence(CurState,ResolveState("Death")) && user is "binderPlayer" && pawn.currentarmor!=4 ) {
+			int tosearch = 6 - (2 * pawn.SpeedUpgrade);
+			If( searchtimer >= tosearch ) {
+				If( lootmed == 1 ){ 
+					Actor med = A_DropItem("wosHyposprej"); 
+				}
+				If( lootarm == 1 ){ 
+					Actor arm = A_DropItem("wosLeatherArmor"); 
+				}
+				If( looteqip == "TARG" ){ 
+					Actor trg = A_DropItem("wosTargeter"); 
+				}
+				While( lootmoney > 0 ) {
+					If( lootmoney >= 25 ){ 
+						A_DropItem("Gold25"); 
+						lootmoney-=25; 
+					} Else If( lootmoney >= 10 ){ 
+						A_DropItem("Gold10"); 
+						lootmoney-=10; 
+					} Else If(lootmoney>=1){
+						A_DropItem("coin"); 
+						lootmoney--;
+					}
+				}
+				If( lootgun == 1 ){ Actor gun = A_DropItem("wosAssaultGun"); }
+				Else If( gunmag > 1 ){ Actor mag = A_DropItem("ClipOfBullets",gunmag/2); }
+				If( lootrep == 1 ){ Actor rep = A_DropItem("wosArmorShard"); }
+				searched = 1;
+			} Else {
+				A_ChangeVelocity(frandom(-0.5,0.5),frandom(-0.5,0.5));
+				A_StartSound("sound/wearClothing");
+				searchtimer++;
+			}
+		}
+		Return Super.Used(user);
+	}
+	override void Tick() {
+		Super.Tick();
+		If(shielded==0&&sprite==GetSpriteIndex("AGRD")){sprite=GetSpriteIndex("ATRP");}
+	}
+	States {
+		Death:
+			AGRD G 4;
+			AGRD H 4 A_Scream();
+			AGRD I 4;
+			AGRD J 3;
+			AGRD K 3 A_NoBlocking();
+			AGRD L 3;
+			AGRD M 3 A_AcolyteDie();
+            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+			AGRD N -1;
+			Stop;
+		XDeath:
+			GIBS A 5 A_NoBlocking();
+			GIBS BC 5 A_TossGib();
+			GIBS D 4 A_TossGib();
+			GIBS E 4 A_XScream();
+			GIBS F 4 A_TossGib();
+			GIBS GH 4;
+			GIBS I 5;
+			GIBS J 5 A_AcolyteDie();
+            TNT1 A 0 W_rewardXPacolyte(SpawnHealth());
+			GIBS K 5;
+			GIBS L 1400;
+			Stop;
+		Dummy:
+			AGRD A 0; ATRP A 0;
+	}
+}
+class wosAcolyteTan : wosAcolyte replaces AcolyteTan {}
+class wosAcolyteRed : wosAcolyte replaces AcolyteRed {
+	Default {
+		Translation 0;
+		wosAcolyte.Shielded 1;
+	}
+}
+class wosAcolyteRust : wosAcolyte replaces AcolyteRust {
+	Default {
+		Translation 1;
+		wosAcolyte.Shielded 1;
+	}
+}
+class wosAcolyteGray : wosAcolyte replaces AcolyteGray {
+	Default {
+		Translation 2;
+	}
+}
+class wosAcolyteDGreen : wosAcolyte replaces AcolyteDGreen {
+	Default {
+		Translation 3;
+	}
+}
+class wosAcolyteGold : wosAcolyte replaces AcolyteGold {
+	Default {
+		Translation 4;
+		wosAcolyte.Shielded 1;
+	}
+}
+class wosAcolyteLGreen : wosAcolyte replaces AcolyteLGreen {
+	Default {
+		Translation 5;
+	}
+}
+class wosAcolyteBlue : wosAcolyte replaces AcolyteBlue {
+	Default {
+		Translation "32:63=0:31", "80:95=64:79", "128:143=144:159", "192:192=1:1", "193:223=1:31", "235:239=224:228";
+	}
+}
+class wosAcolyteShadow : wosAcolyte replaces AcolyteShadow {
+	Default {		
+		wosAcolyte.Shielded 1;
+	}
+}
+Class wosAcolyteShield : Actor {
+	Default {
+		+SHOOTABLE; 
+		+NOBLOOD;
+		+DONTTHRUST; 
+		+NODAMAGE;
+		Radius 22;
+		Height 20;
+		Mass 200;
+	}
+	Override void Tick() {
+		Super.Tick();
+		let acol = wosAcolyte(master);
+		If(master==null||master.health<1||acol.shielded==0){Destroy();}
+		Else {
+			let mf = master.frame;
+			If(mf==4||mf==5||mf==14){A_Warp(AAPTR_MASTER,4,0,30,0);}
+			Else{A_Warp(AAPTR_MASTER,0,0,0,0);}
+		}
+	}
+	Override int DamageMobj(Actor inflictor, Actor source, int damage, Name mod, int flags, double angle) {
+		If(master!=null&&mod=="Melee2"){master.SetStateLabel("ShieldDown"); master.reactiontime=4;}
+		Return Super.DamageMobj(inflictor,source,damage,mod,flags,angle);
+	}
+	States {
+		Spawn:
+			TNT1 A 1;
+			Loop;
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// temporarily removed - musim vyresit problem, proc utoci na patrol pointy...
+/*Class wosGrenadeBase : Actor {
 	int fusetime; property FuseTime : fusetime;
 	Default {
 		Health 5;
@@ -735,4 +927,4 @@ Class wosUniqueAcolyte : wosDeadAcolyte {
 			AGRD N -1;
 			Stop;
 	}
-}
+}*/

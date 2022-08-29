@@ -1241,6 +1241,7 @@ Actor MM_roadBlock 21073
 	//$Title "road block"
 	
 	+Solid
+	+nevertarget
 	tag "red road block"
 	radius 8
 	height 36

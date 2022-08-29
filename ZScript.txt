@@ -42,6 +42,9 @@ version "4.6.0"
 #include "zscript/mechanics/boids.zs"
 #include "zscript/mechanics/ztracers.zs"
 
+// wos zforms by Gutawer and phantombeta ///////////////////////////////////////
+//#include "zscript/mechanics/wos_menu/wos_ZForms/include.zs"
+
 #include "zscript/Mechanics/PDA/PDAZForms/Include.zs"
 #include "zscript/Mechanics/PDA/PDAMenuElements.zc"
 #include "zscript/Mechanics/PDA/PDAMenu.zc"

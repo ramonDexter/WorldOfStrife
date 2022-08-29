@@ -36,7 +36,7 @@ class wosAcolyte : Acolyte replaces Acolyte {
 		}
 	}
 
-	action void W_shootGunAclt() {
+	action void W_shootGun_Acolyte() {
 		double acc = 5.6;
 		A_FaceTarget();
 		A_SpawnProjectile("wos542",32,0,frandom(-acc,acc),0,frandom(-acc,acc));
@@ -111,12 +111,12 @@ class wosAcolyte : Acolyte replaces Acolyte {
 			Loop;
 		Missile:
 			AGRD E 8 Fast Slow A_FaceTarget();
-			AGRD FE 4 Fast Slow W_shootGunAclt(); //A_ShootGun();
-			AGRD F 6 Fast Slow W_shootGunAclt(); //A_ShootGun();
+			AGRD FE 4 Fast Slow W_shootGun_Acolyte(); //A_ShootGun();
+			AGRD F 6 Fast Slow W_shootGun_Acolyte(); //A_ShootGun();
 			Goto See;
 		Pain:
 			AGRD O 8 Fast Slow A_Pain();
-    Goto See
+    		Goto See;
 		Death:
 			AGRD G 4;
 			AGRD H 4 A_Scream();
@@ -217,6 +217,21 @@ Class wosAcolyteShield : Actor {
 		Spawn:
 			TNT1 A 1;
 			Loop;
+	}
+}
+Class wosBulletPuff : StrifePuff {
+	States {
+        Spawn:
+            PUFY A 4 Bright;
+            PUFY BCD 4;
+            Stop;
+	}
+}
+Class wosBulletSpark : StrifePuff {
+	States {
+        Spawn:
+            POW3 ABCDEFGH 3;
+            Stop;
 	}
 }
 Class wosBulletBase : FastProjectile {

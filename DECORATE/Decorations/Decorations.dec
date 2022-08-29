@@ -9990,9 +9990,17 @@ actor wosD_jkjaCrate01 21582 {
 	Tag "crate"
 	radius 12
 	height 24
-	+SOLID
+	//+SOLID
+	//+NOGRAVITY
 	+USESPECIAL
-	+NOGRAVITY
+	+SOLID
+	+PUSHABLE
+    +DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1
@@ -10005,9 +10013,17 @@ actor wosD_jkjaCrate02 21583 {
 	Tag "crate"
 	radius 12
 	height 28
-	+SOLID
+	//+SOLID
+	//+NOGRAVITY
 	+USESPECIAL
-	+NOGRAVITY
+	+SOLID
+	+PUSHABLE
+    +DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1

@@ -60,6 +60,7 @@ class Cart01 : Actor {
 		Height 48;
 		Mass 800;
 		+SOLID;
+		+ACTLIKEBRIDGE;
 		//Health 600;
 		//$Category "Decorations/WoS/neoworm"
 		//$Title "Cart square 64"
@@ -77,10 +78,11 @@ class Cart02 : Actor {
 	Default {
 		tag "wooden cart";
 		Radius 32;
-		Height 48;
+		Height 32;
 		Mass 800;
 		//Health 600;
 		+SOLID;
+		+ACTLIKEBRIDGE;
 		//$Category "Decorations/WoS/neoworm"
 		//$Title "Cart square 64 alternative
 	}

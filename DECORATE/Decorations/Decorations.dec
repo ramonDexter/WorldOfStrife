@@ -10661,5 +10661,26 @@ actor wosD_mw3atent 21629 {
 			Stop
 	}
 }
+actor wosD_dulniVozik 21630 {
+	//$Category "Decorations/Wos/"
+	//$Title "mine cart - dulni vozik"
+	Tag "mine cart"
+	Radius 18
+  	Height 32
+  	+SOLID
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wos_dulniVozikBridge : InvisibleBridge16 21631 {
+	//$Category "Bridges"
+	//$Title "bridge mine cart - dulni vozik"
+	Tag "mine cart"
+	radius 18
+	height 32
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -27,7 +27,7 @@ GLTNV = "GLTNV0" {
 }
 
 //---------------------
-CHKNV = "CHKNV0" {
+CHKNV = "CHKNV0.kvx" {
 	Scale = 0.3
 }
 CHKNW = "CHKNW0" {

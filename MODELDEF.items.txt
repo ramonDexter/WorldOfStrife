@@ -1059,6 +1059,20 @@ model wosGrenadeG_Throw {
 	skin 0 "tx_gasg3.png"
 	frameindex GASG C 0 0
 }
+model wosGasGrenade {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/items/grenades/"
+	model 0 "gasGrenade.md3"
+	scale 3.0 3.0 3.0
+	offset 0.0 0.0 0.0
+	skin 0 "tx_gasg1.png"
+	frameindex GASG A 0 0
+	skin 0 "tx_gasg2.png"
+	frameindex GASG B 0 0
+	skin 0 "tx_gasg3.png"
+	frameindex GASG C 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

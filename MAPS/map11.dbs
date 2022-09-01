@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -390.9691f;
+		viewpositionx = -425.7088f;
 		defaulttoptexture = "WALCAV01";
 		overrideceilheight = false;
-		viewpositiony = -267.7805f;
+		viewpositiony = 49.16499f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -54,46 +54,14 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.6232852f;
+		viewscale = 0.6232849f;
 		
 		fieldtypes
 		{
 			
-			linedef
-			{
-				arg0str = 2;
-				alpha = 1;
-			}
-			
-			sidedef
-			{
-				offsetx_mid = 1;
-				offsety_mid = 1;
-				offsetx_top = 1;
-				offsety_top = 1;
-				offsety_bottom = 1;
-				offsetx_bottom = 1;
-				scalex_bottom = 1;
-				scaley_bottom = 1;
-				scalex_mid = 1;
-				scaley_mid = 1;
-				scaley_top = 1;
-				scalex_top = 1;
-			}
-			
 			sector
 			{
-				rotationfloor = 1;
-				xpanningfloor = 1;
-				ypanningfloor = 1;
 				user_managed_3d_floor = 3;
-				xpanningceiling = 1;
-				ypanningceiling = 1;
-				rotationceiling = 1;
-				xscaleceiling = 1;
-				yscaleceiling = 1;
-				xscalefloor = 1;
-				yscalefloor = 1;
 			}
 		}
 		
@@ -121,6 +89,34 @@ maps
 				firstvisibleline = 110;
 				activetab = true;
 			}
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
 		}
 	}
 }

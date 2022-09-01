@@ -1498,6 +1498,7 @@ ACTOR Tree13 22158
 ACTOR Tree14Leaves 22159
 {
 //$Category "Trees and Rocks/NatureTree/"
+  RenderRadius 2048
   tag "beech tree"
   radius 24
   height 180
@@ -1539,6 +1540,7 @@ ACTOR ALeaf2 : Leaf2
 ACTOR Tree15 22160
 {
 //$Category "Trees and Rocks/NatureTree/"
+  RenderRadius 2048
   tag "beech tree dry"
   radius 24
   height 180
@@ -1556,6 +1558,7 @@ ACTOR Tree15 22160
 ACTOR Tree14Green 22175
 {
 //$Category "Trees and Rocks/NatureTree/"
+  RenderRadius 2048
   tag "beech tree"
   radius 24
   height 180

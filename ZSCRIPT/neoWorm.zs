@@ -158,7 +158,6 @@ class Table03 : Table01 {
 		Spawn:
 			DUMM A -1;
 			Stop;
-		Death:
     }
 }
 
@@ -169,8 +168,8 @@ class Box01 : Actor {
 		Tag "wooden box big";
 		Radius 32;
 		Height 64;
-		Mass 1000;
-		Friction 0.8;
+		Mass 35;
+		//Friction 0.8;
 		//Health 200;
 		+SOLID
 		+PUSHABLE
@@ -188,8 +187,23 @@ class Box01 : Actor {
 	
     States {
 		Spawn:
-			DUMM A -1;
-		Stop;/*
+			/*TNT1 A 0 {
+				if ( vel.x > 2 || vel.x < -2 || vel.y > 2 || vel.y < -2 ) {
+					return resolveState("Grind");
+				}
+				return resolveState(null);
+			}*/
+			DUMM A 0 A_JumpIf(vel.x > 0.1, "Grind");
+			DUMM A 0 A_JumpIf(vel.x < -0.1, "Grind");
+			DUMM A 0 A_JumpIf(vel.y < -0.1, "Grind");
+			DUMM A 1 A_JumpIf(vel.y > 0.1, "Grind");
+			Loop;
+		Grind:
+			//DUMM A 1 A_Playsound ("Grind",0|4096,1.2);
+			DUMM A 1 A_StartSound ("Grind", CHAN_BODY, CHANF_NOSTOP, 1.0, 2);
+			goto Spawn;
+
+		/*		
 		Death:
 			BOX1 A 0 A_Burst("WoodenBit");
 			Stop;*/
@@ -201,11 +215,19 @@ class Box02 : Box01 {
 		//$Category "Decorations/WoS/neoworm"
 		//$Title "Box big 2"
 	}
-	States {
+	/*States {
 		Spawn:
-			DUMM A -1;
-			Stop;
-    }
+			//DUMM A -1;
+			//Stop;
+			DUMM A 0 A_JumpIf(vel.x > 1, "Grind");
+			DUMM A 0 A_JumpIf(vel.x < -1, "Grind");
+			DUMM A 0 A_JumpIf(vel.y < -1, "Grind");
+			DUMM A 1 A_JumpIf(vel.y > 1, "Grind");
+			Loop;
+		Grind:
+			DUMM A 1 A_Playsound ("Grind",0|4096,1.2);
+			goto Spawn;
+    }*/
 }
 
 class Box03 : Box01 {
@@ -220,11 +242,19 @@ class Box03 : Box01 {
 		//$Title "Box low"
 	}
 	
-    States {
+   /* States {
 		Spawn:
-			DUMM A -1;
-			Stop;
-    }
+			//DUMM A -1;
+			//Stop;
+			DUMM A 0 A_JumpIf(vel.x > 1, "Grind");
+			DUMM A 0 A_JumpIf(vel.x < -1, "Grind");
+			DUMM A 0 A_JumpIf(vel.y < -1, "Grind");
+			DUMM A 1 A_JumpIf(vel.y > 1, "Grind");
+			Loop;
+		Grind:
+			DUMM A 1 A_Playsound ("Grind",0|4096,1.2);
+			goto Spawn;
+    }*/
 }
 
 class Box04 : Box01 {
@@ -239,11 +269,19 @@ class Box04 : Box01 {
 		//$Title "Box small high"
 	}
 	
-    States {
+    /*States {
 		Spawn:
-			DUMM A -1;
-			Stop;
-    }
+			//DUMM A -1;
+			//Stop;
+			DUMM A 0 A_JumpIf(vel.x > 1, "Grind");
+			DUMM A 0 A_JumpIf(vel.x < -1, "Grind");
+			DUMM A 0 A_JumpIf(vel.y < -1, "Grind");
+			DUMM A 1 A_JumpIf(vel.y > 1, "Grind");
+			Loop;
+		Grind:
+			DUMM A 1 A_Playsound ("Grind",0|4096,1.2);
+			goto Spawn;
+    }*/
 }
 
 class Box05 : Box01
@@ -260,11 +298,19 @@ class Box05 : Box01
 		//$Title "Box small"
 	}
 	
-    States {
+    /*States {
 		Spawn:
-			DUMM A -1;
-			Stop;
-    }
+			//DUMM A -1;
+			//Stop;
+			DUMM A 0 A_JumpIf(vel.x > 1, "Grind");
+			DUMM A 0 A_JumpIf(vel.x < -1, "Grind");
+			DUMM A 0 A_JumpIf(vel.y < -1, "Grind");
+			DUMM A 1 A_JumpIf(vel.y > 1, "Grind");
+			Loop;
+		Grind:
+			DUMM A 1 A_Playsound ("Grind",0|4096,1.2);
+			goto Spawn;
+    }*/
 }
 
 // by NeoWorm

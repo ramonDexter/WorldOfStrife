@@ -17,6 +17,6 @@ Conversation {
         pageName = "mp_cityBathHostess_opener";
         Name = "\c[yellow]Hostess";
         Dialog = "RANDOM_MILLPORT_BATHHOSTESS";
-        Goodbye = "\c[red]Goodbye.";
+        Goodbye = "What a nice welcome.";
     }
 }

@@ -9958,11 +9958,19 @@ actor wosD_jkjaContainer 21580 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "container"
 	Tag "container"
-	radius 8
-	height 16
-	+SOLID
+	radius 9
+	height 33
+	//+SOLID
+	//+NOGRAVITY
 	+USESPECIAL
-	+NOGRAVITY
+	+SOLID
+	+PUSHABLE
+    +DROPOFF
+	+SLIDESONWALLS
+	+CANPASS
+	+ACTLIKEBRIDGE
+	+FLOORCLIP
+	+NOBLOOD
 	States {
 		Spawn:
 			DUMM A -1

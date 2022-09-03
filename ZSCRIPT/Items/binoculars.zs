@@ -88,13 +88,13 @@ class binoc_weapon : weapon {
             Loop;
         Select:
 			TNT1 A 0 A_ZoomFactor(6.0);
-            TNT1 A 0 A_SetCrosshair(15);
+            TNT1 A 0 A_SetCrosshair(1);
 		SelectLoop:
             TNT1 A 0 A_Raise();
             Loop;
         Deselect:
 			TNT1 A 0 A_ZoomFactor(1.0);
-            TNT1 A 0 A_SetCrosshair(13);
+            TNT1 A 0 A_SetCrosshair(9);
 		DeselectLoop:
             TNT1 A 0 A_Lower();
             Loop;

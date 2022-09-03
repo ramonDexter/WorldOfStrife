@@ -1,7 +1,6 @@
 class tokenBase : Inventory {
 	Default {
-		-inventory.invbar		
-		
+		-inventory.invbar;		
 		inventory.amount 1;
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
@@ -123,8 +122,7 @@ class twn_tekGuildMasterQ3_powerplantTrouble_finished : tokenBase {}
 //support token - ziskej duveru mistnich
 class m08q_duveraMistnich : tokenBase {
 	Default {
-		-inventory.invbar		
-		
+		-inventory.invbar;		
 		inventory.amount 1;
 		inventory.maxamount 9;
 		inventory.interhubamount 9;

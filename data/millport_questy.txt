@@ -37,7 +37,7 @@ quest:
 2) ziskej informace o obchodnikovi Hagenovi
 3) nech se od Hagena najmout >> primo se dostan do jeho organizace
 
-# obchodnik Herbert Ignacius Vigil  convID
+# obchodnik Herbert Ignacius Hagen  convID
 - sefuje mistnimu podsveti
 - guverner se ho snazi dostat
 - je jednim z osnovatelu spiknuti proti Cisari

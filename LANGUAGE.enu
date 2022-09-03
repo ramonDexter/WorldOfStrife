@@ -1050,6 +1050,9 @@ OBI_GiantRat = "%o was gnawed on by a giant rat.";
 //##################################################################################################################
 // RANDOM CONVERSATIONS ////////////////////////////////////////////////////////////////////////////////////////////
 //##################################################################################################################
+// 
+// random moznosti musi byt alespon 10, jinak to dela problemy!!!
+//
 TXT_RANDOM_INQUISITOR_01 = "\c[white]Hello Arius, what a beautiful day! Have you slept well?";
 
 
@@ -1110,6 +1113,11 @@ TXT_RANDOM_MILLPORT_BATHHOSTESS_02 = "\c[white]Oh hello, welcome to the city bat
 TXT_RANDOM_MILLPORT_BATHHOSTESS_03 = "\c[white]Hello and welcome to the city bath, where are you desires will be satisfied!";
 TXT_RANDOM_MILLPORT_BATHHOSTESS_04 = "\c[white]Be welcome, stanger. The city bath are here to fill all you needs and dreams.";
 TXT_RANDOM_MILLPORT_BATHHOSTESS_05 = "\c[white]I bid you welcome. The city bath welcomes you.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_06 = "\c[white]Hello, welcome to the city bath. How may I serve you?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_07 = "\c[white]Oh hello, welcome to the city bath, handsome. Are you in need of company?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_08 = "\c[white]Hello and welcome to the city bath, where are you desires will be satisfied!";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_09 = "\c[white]Be welcome, stanger. The city bath are here to fill all you needs and dreams.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_10 = "\c[white]I bid you welcome. The city bath welcomes you.";
 //##################################################################################################################
 //##################################################################################################################
 //##################################################################################################################

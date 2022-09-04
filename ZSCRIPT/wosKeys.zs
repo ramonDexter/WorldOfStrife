@@ -7,7 +7,7 @@ class wosKey : StrifeKey {
 	Default {
 		//$Category "Keys/WoS"
 		Mass 0;
-		-INVENTORY.INVBAR
+		-INVENTORY.INVBAR;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -214,7 +214,94 @@ class m08k_BP_pokladnice : wosKey {
 			Stop;
 	}
 }
-
+// map12 keys //////////////////////////////////////////////////////////////////
+class m12k_powerPlant1Key : wosKey {
+	Default {
+		Inventory.Icon "K_PWR3";//I_AB1K
+		Tag "RR Powerplant\nMain Control Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Main Control Key!";
+	}
+	States {
+		Spawn:
+			PWR3 A -1;
+			Stop;
+	}
+}
+class m12k_powerPlant2Key : wosKey {
+	Default {
+		Inventory.Icon "K_PWR4";//I_AB1K
+		Tag "RR Powerplant\nFuel Preps Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Fuel Preps Key!";
+	}
+	States {
+		Spawn:
+			PWR4 A -1;
+			Stop;
+	}
+}
+class m12k_powerPlant3Key : wosKey {
+	Default {
+		Inventory.Icon "K_PWR5";//I_AB1K
+		Tag "RR Powerplant\nReactor Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Reactor Key!";
+	}
+	States {
+		Spawn:
+			PWR5 A -1;
+			Stop;
+	}
+}
+class m12k_powerPlantEntryKey : wosKey {
+	Default {
+		Inventory.Icon "K_PWR6";//I_AB1K
+		Tag "RR Powerplant\nEntry Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Entry Key!";
+	}
+	States {
+		Spawn:
+			PWR6 A -1;
+			Stop;
+	}
+}
+class m12k_powerPlantStorageA : wosKey {
+	Default {
+		+FLATSPRITE;
+		Inventory.Icon "K_PWRA";//I_AB1K
+		Tag "RR Powerplant\nStorage A Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Storage A Key!";
+	}
+	States {
+		Spawn:
+			PWRA A -1;
+			Stop;
+	}
+}
+class m12k_powerPlantStorageB : wosKey {
+	Default {
+		+FLATSPRITE;
+		Inventory.Icon "K_PWRB";//I_AB1K
+		Tag "RR Powerplant\nStorage B Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Storage B Key!";
+	}
+	States {
+		Spawn:
+			PWRB A -1;
+			Stop;
+	}
+}
+class m12k_powerPlantStorageC : wosKey {
+	Default {
+		+FLATSPRITE;
+		Inventory.Icon "K_PWRC";//I_AB1K
+		Tag "RR Powerplant\nStorage C Key";
+		Inventory.PickupMessage "You picked up the RavenRock Powerplant Storage C Key!";
+	}
+	States {
+		Spawn:
+			PWRC A -1;
+			Stop;
+	}
+}
 // map14 keys //////////////////////////////////////////////////////////////////
 class m14k_waterplantKey : wosKey {
 	Default {

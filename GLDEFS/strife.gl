@@ -3,7 +3,7 @@
 pointlight HugePillarTechLight {
 	color 0.1 1.0 0.1
 	size 96
-	offset 0 64 0
+	offset 0 0 0
 }
 
 pointlight fluorescentLight

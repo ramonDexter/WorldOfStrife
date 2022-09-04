@@ -10117,8 +10117,8 @@ actor wosD_jkjaPodCar2 21589 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "pod car 2"
 	Tag "pod car"
-	radius 8
-	height 16
+	radius 102
+	height 64
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10394,7 +10394,7 @@ actor wosD_jkjaPodCar3 21607 {
 	//$Title "pod car 3"
 	Tag "VTOL"
 	radius 150
-	height 128
+	height 112
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10446,7 +10446,7 @@ actor wosD_jkjaPodCar 21611 {
 	//$Title "aircar"
 	Tag "aircar"
 	radius 68
-	height 48
+	height 32
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10689,6 +10689,80 @@ actor wos_dulniVozikBridge : InvisibleBridge16 21631 {
 	Tag "mine cart"
 	radius 18
 	height 32
+}
+actor wosD_techLampSilver : TechLampSilver replaces TechLampSilver 21632 {
+	//$Category "Light Sources/WoS/"
+	//$Title "dx Silver Tech Lamp"
+	Tag "Silver Tech Lamp"
+	+USESPECIAL
+	States {
+		Spawn:
+			DUMM A -1 Bright light("silverTechLampLight")
+			Stop
+	}
+}
+actor wos_podCar2BridgeH8 : InvisibleBridge16 21633 {
+	//$Category "Bridges"
+	//$Title "bridge - pod Car 2 H8"
+	Tag "pod car"
+	radius 32
+	height 8
+}
+actor wos_podCar2BridgeH24 : InvisibleBridge16 21634 {
+	//$Category "Bridges"
+	//$Title "bridge - pod Car 2 H24"
+	Tag "pod car"
+	radius 32
+	height 24
+}
+actor wos_podCar3BridgeH8 : InvisibleBridge32 21635 {
+	//$Category "Bridges"
+	//$Title "bridge - VTOL H8"
+	Tag "VTOL"
+	radius 32
+	height 8
+}
+actor wos_podCar3BridgeH16 : InvisibleBridge32 21636 {
+	//$Category "Bridges"
+	//$Title "bridge - VTOL H16"
+	Tag "VTOL"
+	radius 32
+	height 16
+}
+actor wos_podCar3BridgeH32 : InvisibleBridge32 21637 {
+	//$Category "Bridges"
+	//$Title "bridge - VTOL H32"
+	Tag "VTOL"
+	radius 32
+	height 32
+}
+actor wos_airCarBridgeR16H8 : InvisibleBridge16 21638 {
+	//$Category "Bridges"
+	//$Title "bridge - aircar R16H8"
+	Tag "aircar"
+	radius 16
+	height 8
+}
+actor wos_airCarBridgeR16H16 : InvisibleBridge16 21639 {
+	//$Category "Bridges"
+	//$Title "bridge - aircar R16H16"
+	Tag "aircar"
+	radius 16
+	height 16
+}
+actor wos_airCarBridgeR32 : InvisibleBridge32 21640 {
+	//$Category "Bridges"
+	//$Title "bridge - aircar R32"
+	Tag "aircar"
+	radius 32
+	height 16
+}
+actor wos_airCarBridgeR8 : InvisibleBridge8 21641 {
+	//$Category "Bridges"
+	//$Title "bridge - aircar R8"
+	Tag "aircar"
+	radius 8
+	height 8
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

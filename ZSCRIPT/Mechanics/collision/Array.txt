@@ -1,0 +1,143 @@
+// Copyright (c) 2017 Benjamin Moir. All rights reserved.
+// This work is licensed under the terms of the MIT license.  
+// To obtain a copy, visit <https://opensource.org/licenses/MIT>.
+
+class ArrayI8
+{
+	Array<int8> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayI8 other) { Values.Copy(other.Values); }
+	void Move(ArrayI8 other) { Values.Move(other.Values); }
+	uint Find(int item) { return Values.Find(item); }
+	uint Push(int item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, int item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayI16
+{
+	Array<int16> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayI16 other) { Values.Copy(other.Values); }
+	void Move(ArrayI16 other) { Values.Move(other.Values); }
+	uint Find(int item) { return Values.Find(item); }
+	uint Push(int item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, int item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayI32
+{
+	Array<int> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayI32 other) { Values.Copy(other.Values); }
+	void Move(ArrayI32 other) { Values.Move(other.Values); }
+	uint Find(int item) { return Values.Find(item); }
+	uint Push(int item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, int item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayF32
+{
+	Array<float> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayF32 other) { Values.Copy(other.Values); }
+	void Move(ArrayF32 other) { Values.Move(other.Values); }
+	uint Find(float item) { return Values.Find(item); }
+	uint Push(float item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, float item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayF64
+{
+	Array<double> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayF64 other) { Values.Copy(other.Values); }
+	void Move(ArrayF64 other) { Values.Move(other.Values); }
+	uint Find(double item) { return Values.Find(item); }
+	uint Push(double item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, double item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayStr
+{
+	Array<string> Values;
+
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayStr other) { Values.Copy(other.Values); }
+	void Move(ArrayStr other) { Values.Move(other.Values); }
+	uint Find(string item) { return Values.Find(item); }
+	uint Push(string item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, string item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}
+
+class ArrayPtr
+{
+	Array<voidptr> Values;
+	
+	uint Size() { return Values.Size(); }
+	void Copy(ArrayPtr other) { Values.Copy(other.Values); }
+	void Move(ArrayPtr other) { Values.Move(other.Values); }
+	uint Find(voidptr item) { return Values.Find(item); }
+	uint Push(voidptr item) { return Values.Push(item); }
+	bool Pop() { return Values.Pop(); }
+	void Delete(uint index, int n = 1) { Values.Delete(index, n); }
+	void Insert(uint index, voidptr item) { Values.Insert(index, item); }
+	void ShrinkToFit() { Values.ShrinkToFit(); }
+	void Grow(uint amount) { Values.Grow(amount); }
+	void Resize(uint amount) { Values.Resize(amount); }
+	uint Reserve(uint amount) { return Values.Reserve(amount); }
+	uint Max() { return Values.Max(); }
+	void Clear() { Values.Clear(); }
+}

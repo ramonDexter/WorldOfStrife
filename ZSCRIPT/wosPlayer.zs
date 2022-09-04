@@ -42,6 +42,9 @@ class binderPlayer : StrifePlayer {
 	// broken lands ledge climbing /////////////////////////////////////////////	
 	double speedbase; property BaseSpeed : speedbase;
 	bool running;
+
+	////////////////////////////////
+	//C3DCollisionClient client;
 	
 	// main player def /////////////////////////////////////////////////////////
 	Default {	
@@ -110,7 +113,13 @@ class binderPlayer : StrifePlayer {
 		pvel=vel.z;
 		pang=angle;
 		encumbrance=0; //Before ticking, reset the encumbrance
+		///////////////
+		//client.PushState();
+		//client.Tick();
+		///////////////
         Super.Tick();
+		///////////////
+		//client.PopState();
 		
 		// custom functions ////////////////////////////////////////////////////		
         HandleStamina();
@@ -135,6 +144,8 @@ class binderPlayer : StrifePlayer {
         stamin = 400;
 		bleedlevel = 0;
 		///////////////////////
+		//client = new('C3DCollisionClient');
+		//client.parent = self;
     }
 	////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////

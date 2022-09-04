@@ -822,6 +822,14 @@ model TechLampSilver {
 	offset 0.0 0.0 0.0
 	frameindex TECH A 0 0
 }
+model wosD_techLampSilver {
+	path "models/props/lanterns/"
+	model 0 "TechLampSilver.md3"
+	skin 0 "tx_TechLampSilver.png"
+	scale 13.0 13.0 13.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 model modelMediumTorch {
 	path "models/props/lanterns/"
 	model 0 "mediumTorch.md3"
@@ -1739,7 +1747,7 @@ model PillarHugeTechAnimated {
 	path "models/props/PillarHugeTech/"
 	model 0 "PillarHugeTech.md3"
 	skin 0 "tx_PillarHugeTech.png"
-	scale 18.0 18.0 18.0
+	scale 20.7 20.7 20.7
 	offset 0.0 0.0 0.0
 	frameindex HUGE A 0 0
 }

@@ -115,6 +115,49 @@ Lock 65 Strife {
 Lock 66 Strife {
 	//$Title "m14 inn cellar key"
 	Any { m14k_whiteCockInnCellarKey }
-	Message "You need the White Cock Inn Cellar Key!"
+	Message "Locked!"
+	Mapcolor 150 150 150
+}
+
+Lock 67 Strife {
+	//$Title "m12 PP main control key"
+	Any { m12k_powerPlant1Key SkeletonKey }
+	Message "You need the RavenRock Powerplant Main Control Key!"
+	Mapcolor 150 150 150
+}
+Lock 68 Strife {
+	//$Title "m12 PP fuel preps key"
+	Any { m12k_powerPlant2Key SkeletonKey }
+	Message "You need the RavenRock Powerplant Fuel Preps Key!"
+	Mapcolor 150 150 150
+}
+Lock 69 Strife {
+	//$Title "m12 PP reactor key"
+	Any { m12k_powerPlant3Key SkeletonKey }
+	Message "You need the RavenRock Powerplant Reactor Key!"
+	Mapcolor 150 150 150
+}
+Lock 70 Strife {
+	//$Title "m12 PP entry key"
+	Any { m12k_powerPlantEntryKey SkeletonKey }
+	Message "You need the RavenRock Powerplant Entry Key!"
+	Mapcolor 150 150 150
+}
+Lock 71 {
+	//$Title "m12 PP storage A key"
+	Any { m12k_powerPlantStorageA SkeletonKey }
+	Message "You need the RavenRock Powerplant Storage A Key!"
+	Mapcolor 150 150 150
+}
+Lock 72 {
+	//$Title "m12 PP storage B key"
+	Any { m12k_powerPlantStorageB SkeletonKey }
+	Message "You need the RavenRock Powerplant Storage B Key!"
+	Mapcolor 150 150 150
+}
+Lock 73 {
+	//$Title "m12 PP storage C key"
+	Any { m12k_powerPlantStorageC SkeletonKey }
+	Message "You need the RavenRock Powerplant Storage C Key!"
 	Mapcolor 150 150 150
 }

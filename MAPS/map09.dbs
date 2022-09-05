@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 1219.578f;
+		viewpositionx = -1422.283f;
 		defaulttoptexture = "F_OLDWOD";
 		overrideceilheight = false;
-		viewpositiony = 4282.86f;
+		viewpositiony = 3544.9f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,7 +42,7 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 4;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
@@ -54,7 +54,7 @@ maps
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.3642643f;
+		viewscale = 1.040375f;
 		
 		plugins
 		{

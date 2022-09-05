@@ -34,7 +34,7 @@ class spikerTrap : wosMonsterBase {
 		Height 12;
 		Monster;
 		Speed 0;
-		Health 256;
+		Health 96;
 		Mass 10000;
 		PainChance 200;
 	
@@ -60,7 +60,7 @@ class spikerTrap : wosMonsterBase {
 			goto See;
 		Death:
 			TNT1 A 0 A_SpawnItemEx("wosExplosion_low");
-            TNT1 A 0 W_rewardXP(SpawnHealth()/4);
+            //TNT1 A 0 W_rewardXP(SpawnHealth()/4);
 			TRAP A -1;
 			Stop;
 	}
@@ -186,7 +186,7 @@ class RV_CeilingTurret : CeilingTurret {
 		Death:
 			BALL A 6 Bright A_Scream();
 			BALL BCDE 6 Bright;
-            TNT1 A 0 W_rewardXPturret(SpawnHealth());
+            //TNT1 A 0 W_rewardXPturret(SpawnHealth());
 			TURT C -1;
 			Stop;
 	}

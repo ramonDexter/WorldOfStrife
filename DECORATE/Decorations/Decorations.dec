@@ -10116,7 +10116,7 @@ actor wosD_jkjaJunction 21588 {
 actor wosD_jkjaPodCar2 21589 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "pod car 2"
-	Tag "pod car"
+	Tag "AirTruck"
 	radius 102
 	height 64
 	+SOLID
@@ -10392,7 +10392,7 @@ actor wosD_technoPillar replaces PillarTechno 21606 {
 actor wosD_jkjaPodCar3 21607 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "pod car 3"
-	Tag "VTOL"
+	Tag "Air Transport"
 	radius 150
 	height 112
 	+SOLID
@@ -10704,35 +10704,35 @@ actor wosD_techLampSilver : TechLampSilver replaces TechLampSilver 21632 {
 actor wos_podCar2BridgeH8 : InvisibleBridge16 21633 {
 	//$Category "Bridges"
 	//$Title "bridge - pod Car 2 H8"
-	Tag "pod car"
+	Tag "AirTruck"
 	radius 32
 	height 8
 }
 actor wos_podCar2BridgeH24 : InvisibleBridge16 21634 {
 	//$Category "Bridges"
 	//$Title "bridge - pod Car 2 H24"
-	Tag "pod car"
+	Tag "AirTruck"
 	radius 32
 	height 24
 }
 actor wos_podCar3BridgeH8 : InvisibleBridge32 21635 {
 	//$Category "Bridges"
 	//$Title "bridge - VTOL H8"
-	Tag "VTOL"
+	Tag "Air Transport"
 	radius 32
 	height 8
 }
 actor wos_podCar3BridgeH16 : InvisibleBridge32 21636 {
 	//$Category "Bridges"
 	//$Title "bridge - VTOL H16"
-	Tag "VTOL"
+	Tag "Air Transport"
 	radius 32
 	height 16
 }
 actor wos_podCar3BridgeH32 : InvisibleBridge32 21637 {
 	//$Category "Bridges"
 	//$Title "bridge - VTOL H32"
-	Tag "VTOL"
+	Tag "Air Transport"
 	radius 32
 	height 32
 }
@@ -10764,5 +10764,138 @@ actor wos_airCarBridgeR8 : InvisibleBridge8 21641 {
 	radius 8
 	height 8
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CS:S models ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// wosD_css_base in wosBase.zs //
+actor wosD_css_bellLarge : wosD_css_base 21642 {
+	//$Title "bell large"
+	Tag "bell"
+	radius 16
+	height 32
+}
+actor wosD_css_bellSmall : wosD_css_base 21645 {
+	//$Title "bell small"
+	Tag "bell"
+	radius 16
+	height 32
+}
+actor wosD_css_clayOven : wosD_css_base 21646 {
+	//$Title "clay oven"
+	Tag "clay oven"
+	radius 32
+	height 16
+}
+actor wosD_css_equipment1 : wosD_css_base 21647 {
+	//$Title "equipment 1"
+	Tag "equipment"
+	radius 16
+	height 88
+}
+actor wosD_css_equipment2 : wosD_css_base 21648 {
+	//$Title "equipment 2"
+	Tag "equipment"
+	radius 16
+	height 32
+}
+actor wosD_css_equipment3a : wosD_css_base 21649 {
+	//$Title "equipment 3a"
+	Tag "equipment"
+	radius 16
+	height 32
+}
+actor wosD_css_equipment3b : wosD_css_base 21650 {
+	//$Title "equipment 3b"
+	Tag "equipment"
+	radius 16
+	height 32
+}
+actor wosD_css_factoryMachine : wosD_css_base 21651 {
+	//$Title "factory machine"
+	Tag "factory machine"
+	radius 24
+	height 56
+}
+actor wosD_css_firehydrant : wosD_css_base 21652 {
+	//$Title "fire hydrant"
+	Tag "fire hydrant"
+	radius 8
+	height 28
+}
+actor wosD_css_grainBasket01a : wosD_css_base 21653 {
+	//$Title "grain basket a"
+	Tag "grain basket"
+	radius 16
+	height 34
+}
+actor wosD_css_grainBasket01b : wosD_css_base 21654 {
+	//$Title "grain basket b"
+	Tag "grain basket"
+	radius 16
+	height 34
+}
+actor wosD_css_grainBasket01c : wosD_css_base 21655 {
+	//$Title "grain basket c"
+	Tag "grain basket"
+	radius 16
+	height 8
+}
+actor wosD_css_orrery : wosD_css_base 21656 {
+	//$Title "orrery"
+	Tag "orrery"
+	radius 48
+	height 80
+}
+actor wosD_css_sundial : wosD_css_base 21657 {
+	//$Title "sundial"
+	Tag "sundial"
+	radius 36
+	height 32
+}
+actor wosD_css_plant01 : wosD_css_base 21658 {
+	//$Title "css plant"
+	Tag "plant"
+	radius 8
+	height 32
+}
+actor wosD_css_spire : wosD_css_base 21659 {
+	//$Title "spire"
+	Tag "spire"
+	radius 10
+	height 96
+}
+actor wosD_css_treeLarge : wosD_css_base 21660 {
+	//$Title "tree large"
+	-NOGRAVITY
+	Tag "oak"
+	radius 16
+	height 128
+}
+actor wosD_css_treeSmall : wosD_css_base 21661 {
+	//$Title "tree small"
+	-NOGRAVITY
+	Tag "oak"
+	radius 16
+	height 128
+}
+actor wosD_grainPile : wosD_css_base 21662 {
+	//$Title "grain pile"
+	-SOLID
+	Tag "grain pile"
+	radius 16
+	height 6
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

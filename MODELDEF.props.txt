@@ -3939,6 +3939,179 @@ model wosD_dulniVozik {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0 
 }
+////////////////////////////////////////////////////////////////////////////////
+model wosD_css_bellLarge {
+	path "models/props/css/"
+	model 0 "bell_large.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_bellSmall {
+	path "models/props/css/"
+	model 0 "bell_small.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_clayOven {
+	path "models/props/css/"
+	model 0 "clayoven.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_equipment1 {
+	path "models/props/css/"
+	model 0 "equipment1.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_equipment2 {
+	path "models/props/css/"
+	model 0 "equipment2.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_equipment3a {
+	path "models/props/css/"
+	model 0 "equipment3a.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_equipment3b {
+	path "models/props/css/"
+	model 0 "equipment3b.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_factoryMachine {
+	path "models/props/css/"
+	model 0 "factorymachine.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_firehydrant {
+	path "models/props/css/"
+	model 0 "firehydrant.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_grainBasket01a {
+	path "models/props/css/"
+	model 0 "grainbasket01a.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_grainBasket01b {
+	path "models/props/css/"
+	model 0 "grainbasket01b.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_grainBasket01c {
+	path "models/props/css/"
+	model 0 "grainbasket01c.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_orrery {
+	path "models/props/css/"
+	model 0 "orrery.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_sundial {
+	path "models/props/css/"
+	model 0 "sundial.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_plant01 {
+	path "models/props/css/"
+	model 0 "plant01.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_spire {
+	path "models/props/css/"
+	model 0 "spire.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_treeLarge {
+	path "models/props/css/"
+	model 0 "tree_small.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_css_treeSmall {
+	path "models/props/css/"
+	model 0 "tree_large.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+model wosD_grainPile {
+	path "models/props/css/"
+	model 0 "grainPile.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

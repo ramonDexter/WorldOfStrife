@@ -1169,7 +1169,8 @@ class dx_medicalBot : SwitchableDecoration {
     }
 }
 //  deus ex cleanerBot  ////////////////////////////////////////////////////////
-class dx_cleanerBot : Actor {
+class dx_cleanerBot : Actor {	
+
     Default {
         //$Category "Other NPCs/WoS"
         //$Title "Cleaner Bot"
@@ -1198,7 +1199,7 @@ class dx_cleanerBot : Actor {
 			DUMM A 10 A_Look2();
 			Loop;
 		See:		
-			DUMM AAAAAAAA 5 A_Wander();		
+			DUMM AAAAAAAA 5 A_Wander();
 			Goto Spawn;
 		Melee:
 			//DUMM A 10 A_FaceTarget();

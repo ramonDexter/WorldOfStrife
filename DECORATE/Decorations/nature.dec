@@ -1171,7 +1171,7 @@ ACTOR Tree05Large 22161
   States
   	{
   	Spawn: 
-		DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetPitch(2*random(-2,2));}
+		//DUMM A 0 nodelay {A_SetAngle(18*random(0,19)); A_SetPitch(2*random(-2,2));}
   		DUMM A -1
   		Stop
   	}

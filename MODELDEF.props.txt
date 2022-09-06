@@ -4111,6 +4111,15 @@ model wosD_grainPile {
 	useactorroll
 	frameindex DUMM A 0 0
 }
+model wosD_css_winch {
+	path "models/props/css/"
+	model 0 "winch.md3"
+	scale 0.6 0.6 0.6
+	offset 0.0 10.0 -28.0
+	useactorpitch
+	useactorroll
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

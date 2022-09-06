@@ -10785,7 +10785,7 @@ actor wosD_css_clayOven : wosD_css_base 21646 {
 	//$Title "clay oven"
 	Tag "clay oven"
 	radius 32
-	height 16
+	height 18
 }
 actor wosD_css_equipment1 : wosD_css_base 21647 {
 	//$Title "equipment 1"
@@ -10796,26 +10796,26 @@ actor wosD_css_equipment1 : wosD_css_base 21647 {
 actor wosD_css_equipment2 : wosD_css_base 21648 {
 	//$Title "equipment 2"
 	Tag "equipment"
-	radius 16
-	height 32
+	radius 20
+	height 64
 }
 actor wosD_css_equipment3a : wosD_css_base 21649 {
 	//$Title "equipment 3a"
 	Tag "equipment"
-	radius 16
-	height 32
+	radius 20
+	height 64
 }
 actor wosD_css_equipment3b : wosD_css_base 21650 {
 	//$Title "equipment 3b"
 	Tag "equipment"
-	radius 16
-	height 32
+	radius 20
+	height 64
 }
 actor wosD_css_factoryMachine : wosD_css_base 21651 {
 	//$Title "factory machine"
 	Tag "factory machine"
 	radius 24
-	height 56
+	height 48
 }
 actor wosD_css_firehydrant : wosD_css_base 21652 {
 	//$Title "fire hydrant"
@@ -10856,8 +10856,8 @@ actor wosD_css_sundial : wosD_css_base 21657 {
 actor wosD_css_plant01 : wosD_css_base 21658 {
 	//$Title "css plant"
 	Tag "plant"
-	radius 8
-	height 32
+	radius 12
+	height 56
 }
 actor wosD_css_spire : wosD_css_base 21659 {
 	//$Title "spire"
@@ -10885,6 +10885,27 @@ actor wosD_grainPile : wosD_css_base 21662 {
 	Tag "grain pile"
 	radius 16
 	height 6
+}
+actor wos_factoryMachineBridge : CustomBridge 21663 {
+	//$Category "Bridges"
+	//$Title "bridge factory machine"
+	Tag "factory machine"
+}
+actor wos_equipment2Bridge : CustomBridge 21664 {
+	//$Category "Bridges"
+	//$Title "bridge equipment2"
+	Tag "equipment"
+}
+actor wos_clayOvenBridge : CustomBridge 21665 {
+	//$Category "Bridges"
+	//$Title "bridge clay oven"
+	Tag "clay oven"
+}
+actor wosD_css_winch : wosD_css_base 21666 {
+	//$Title "winch"
+	Tag "winch"
+	radius 8
+	height 16
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -8,6 +8,7 @@ GameInfo {
 	PlayerClasses = "binderPlayer"
 	ForceKillScripts = true
 	MapArrow = "marrow", "ddtmarr"
+	BorderFlat = "BLACK"
 	//  statusbar
 	//statusbarclass = "wosStatusBar"
 	//  event handlers

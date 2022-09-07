@@ -412,7 +412,7 @@ class wosStatusBar : BaseStatusBar {
 					//DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vlevo dole		
 					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (368, 25), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vpravo nahore
 				} 
-			}			
+			}
 
             //  inventory  pop - up  ///////////////////////////////////////////
             if ( isInventoryBarVisible() ) {

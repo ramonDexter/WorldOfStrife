@@ -10071,7 +10071,7 @@ actor wosD_jkjaHeater 21585 {
 actor wosD_jkjaChairHoth 21586 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair hoth"
-	Tag "chair"
+	Tag "metal chair"
 	radius 10
 	height 32
 	+SOLID
@@ -10086,7 +10086,7 @@ actor wosD_jkjaChairHoth 21586 {
 actor wosD_jkjaChairImperial 21587 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair imperial"
-	Tag "chair"
+	Tag "comfort chair"
 	radius 10
 	height 32
 	+SOLID

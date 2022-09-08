@@ -51,7 +51,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"SLIME07:SLIME08:SFLR6_1:SFLR6_4:"
 			"SFLR7_1:SFLR7_4:LAVA1:LAVA2:"
 			"LAVA3:LAVA4:F_SKY1:F_CONCRP:"
-			"SHSND1:RWOOD33:RWOOD34:RWOOD26:"
+			"RWOOD33:RWOOD34:RWOOD26:"
 			"RWOOD46:LRBOX01:LRBOX02:LRBOX03:"
 			"LRBOX04:LRBOX05:LRBOX06:LRBOX07:"
 			"LRBOX08:LRBOX09:R001:DNSTON04:"
@@ -91,7 +91,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"X_006:X_007:X_008:X_009:"
 			"X_010:X_011:F_NAT00:F_NAT01:"
 			"F_OLDWOD:DNTILE04:WWODB01:F_BSHTOP:"
-			"BLUD0658:F_NAT10:F_NAT06:";
+			"BLUD0658:F_NAT10:F_NAT06:F_0106:";
 			
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -266,6 +266,7 @@ STEP_MFLR8_4 = "step/gravel";
 STEP_RROCK17 = "step/gravel";
 STEP_RROCK18 = "step/gravel";
 STEP_SHSND1 = "step/gravel";
+STEP_F_0106 = "step/gravel";
 STEP_F_CHMOL2 = "step/gravel";
 STEP_F_CAVE1 = "step/gravel";
 STEP_F_GRAVEL = "step/gravel";

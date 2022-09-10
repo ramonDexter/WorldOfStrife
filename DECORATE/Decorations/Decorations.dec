@@ -10632,7 +10632,7 @@ actor PillarHugeTechAnimated : PillarHugeTech replaces PillarHugeTech 21624 {
 	+USESPECIAL
 	States {
 		Spawn:
-			HUGE A -1 Bright NODELAY A_SpawnItemEx("PillarHugeTechLightning", 0, 0, 76)
+			HUGE A -1 Bright NODELAY A_SpawnItemEx("PillarHugeTechLightning", 0, 0, 90)
 			Stop
 	}
 }

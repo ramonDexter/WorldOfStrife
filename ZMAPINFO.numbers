@@ -473,11 +473,11 @@ DoomEdNums {
 	20468 = m12k_powerPlantStorageB
 	20469 = m12k_powerPlantStorageC
 	20470 = wos_switch_telep
+	20471 = wos_switch_button1
+	20472 = wos_switch_doorKnob
+	20473 = wos_switch_lever3
+	20474 = wos_switch_slider
 	/*
-	20471 = markerNamed_thecommons
-	20472 = markerNamed_thevilla
-	20473 = markerNamed_townbath
-	20474 = markerNamed_market
 	20475 = markerNamed_blackpub
 	20476 = markerNamed_councilclub
 	20477 = markerNamed_store

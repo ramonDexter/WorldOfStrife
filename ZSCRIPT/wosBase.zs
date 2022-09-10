@@ -448,35 +448,7 @@ class wosD_css_base : actor {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-class wos_switch_telep : switchableDecoration {
-	Default {
-		//$category "voxel switches"
-		//$Title "telep1"
-		+SOLID;
-		+USESPECIAL;
-		+NOGRAVITY;
-		Tag "lever";
-		//scale 0.75;
-		Radius 8;
-		height 32;
-		Activation THINGSPEC_Switch;
-	}
-	States {
-		Spawn:
-			TLP1 A -1;
-			Stop;
-		Active:
-			TLP1 A 6;
-			TNT1 A 0 A_StartSound("switches/knob");
-			TLP1 B -1 Bright;
-			Stop;
-		Inactive:
-			TLP1 B 6 Bright;
-			TNT1 A 0 A_StartSound("switches/knob");
-			TLP1 A -1;
-			Stop;
-	}
-}
+
 
 
 

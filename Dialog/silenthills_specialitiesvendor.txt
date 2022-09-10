@@ -17,7 +17,7 @@ Conversation {
 			GiveItem = "wosEnvSuit";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 65;
 			}
 		}
@@ -29,7 +29,7 @@ Conversation {
 			GiveItem = "wosTargeter";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 45;
 			}
 		}
@@ -41,7 +41,7 @@ Conversation {
 			GiveItem = "wosShadowArmor";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 145;
 			}
 		}
@@ -53,7 +53,7 @@ Conversation {
 			GiveItem = "Scanner";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 75;
 			}
 		}
@@ -65,7 +65,7 @@ Conversation {
 			GiveItem = "wosDeployableShield";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 100;
 			}
 		}

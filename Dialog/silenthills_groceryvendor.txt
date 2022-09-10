@@ -17,7 +17,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "woshamburger";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 15;
 			}
 		}
@@ -29,7 +29,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "woscheeseburger";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 20;
 			}
 		}
@@ -41,7 +41,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "wosbigburger";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 25;
 			}
 		}
@@ -53,7 +53,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "woswaterBottle";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 5;
 			}
 		}
@@ -65,7 +65,7 @@ Conversation {
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
 		}

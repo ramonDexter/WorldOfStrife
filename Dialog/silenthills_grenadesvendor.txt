@@ -29,7 +29,7 @@ Conversation {
 			GiveItem = "wosgrenadeE";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 10;
 			}
 		}
@@ -41,7 +41,7 @@ Conversation {
 			GiveItem = "wosgrenadeF";
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 15;
 			}
 		} 

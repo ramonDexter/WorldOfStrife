@@ -31,7 +31,7 @@ script "killAllHeretics" (void) {
 script 1404 (void) {
     displayQuest("Raided Waterplant", 3);
     GiveInventory("m14q_raidedWaterplant_finished", 1);
-    GiveInventory("goldCoin", 1000);
+    GiveInventory("Coin", 1000);
     GiveInventory("wosHyposprej", 10);
     GiveInventory("wosArmorShard", 10);
     GiveInventory("wosGrenadeE", 5);

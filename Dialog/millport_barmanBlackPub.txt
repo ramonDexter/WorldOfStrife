@@ -18,7 +18,7 @@ Conversation  {
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 5;
 			}
 		}
@@ -30,7 +30,7 @@ Conversation  {
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
 		}
@@ -42,7 +42,7 @@ Conversation  {
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 3;
 			}
 		}
@@ -54,7 +54,7 @@ Conversation  {
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 15;
 			}
 		}

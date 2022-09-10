@@ -851,9 +851,9 @@ class binderPlayer : StrifePlayer {
 		}
 		else if ( name ~== "gold" || name ~=="money" || name ~== "coin" || name ~== "coins" ) {
 			if ( !amount ) {
-				A_GiveInventory("goldCoin", 1);
+				A_GiveInventory("Coin", 1);
 			} else {
-				A_GiveInventory("goldCoin", amount);
+				A_GiveInventory("Coin", amount);
 			}
 		}
 		else if ( name ~== "all" || name ~== "everything" ) {
@@ -907,7 +907,7 @@ class binderPlayer : StrifePlayer {
 			//Swarmers_item
 			A_GiveInventory("wosSwarmers", 5);
 			// goldCoin x2500
-			A_GiveInventory("goldCoin", 2500);
+			A_GiveInventory("Coin", 2500);
 		}
 		else if ( name ~== "binderpacklight" ) {
 			A_GiveInventory("binder_helmet", 1);
@@ -932,7 +932,7 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosGrenadeF", 5);
 			A_GiveInventory("wosInstaLek", 5);
 			// gold
-			A_GiveInventory("goldCoin", 2500);
+			A_GiveInventory("Coin", 2500);
 		}
 		else if ( name ~== "badge" || name ~== "binderbadge" ) {
 			A_GiveInventory("binderbadge", 1);

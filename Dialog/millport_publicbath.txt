@@ -25,11 +25,11 @@ Conversation {
             Special = 80;
             arg0 = 801;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -61,11 +61,11 @@ Conversation {
             Special = 80;
             arg0 = 802;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -97,11 +97,11 @@ Conversation {
             Special = 80;
             arg0 = 803;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -133,11 +133,11 @@ Conversation {
             Special = 80;
             arg0 = 804;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -169,11 +169,11 @@ Conversation {
             Special = 80;
             arg0 = 805;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -205,11 +205,11 @@ Conversation {
             Special = 80;
             arg0 = 806;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -241,11 +241,11 @@ Conversation {
             Special = 80;
             arg0 = 807;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -277,11 +277,11 @@ Conversation {
             Special = 80;
             arg0 = 808;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
             Require {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }

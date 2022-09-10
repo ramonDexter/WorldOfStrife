@@ -74,7 +74,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 360;
             }
         }
@@ -97,7 +97,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 150;
             }
         }
@@ -120,7 +120,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 5;
             }
         }
@@ -133,7 +133,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 15;
             }
         }
@@ -146,7 +146,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 10;
             }
         }
@@ -169,7 +169,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 35;
             }
         }
@@ -192,7 +192,7 @@ Conversation {
             YesMessage = "\c[white]Here you go!";
             NoMessage = "\c[white]Not enough gold, brother!";
             Cost {
-                item = "goldcoin";
+                item = "Coin";
                 amount = 15;
             }
         }

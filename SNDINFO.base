@@ -32,6 +32,7 @@ sounds/armorhit "sounds/armor/armorhit.ogg"
 
 //item pickup
 sounds/itemPickup "sounds/mwsound/item.wav"
+misc/i_pkup "sounds/mwsound/item.wav"
 
 //money pickup
 sounds/coinPickup "sounds/mwsound/money.wav"

@@ -235,7 +235,7 @@ class wosEventHandler : EventHandler {
 			//Swarmers_item
 			pawn.A_GiveInventory("wosSwarmers", 5);
 			// goldCoin x2500
-			pawn.A_GiveInventory("goldCoin", 2500);
+			pawn.A_GiveInventory("Coin", 2500);
         } else if ( e.Name ~== "give_binderpackLight" ) {
 			pawn.A_GiveInventory("binder_helmet", 1);
 			// weapons
@@ -259,7 +259,7 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("wosGrenadeF", 5);
 			pawn.A_GiveInventory("wosInstaLek", 5);
 			// gold
-			pawn.A_GiveInventory("goldCoin", 2500);
+			pawn.A_GiveInventory("Coin", 2500);
 		} else if ( e.Name ~== "give_allarmor" ) {
 			pawn.A_GiveInventory("wosLeatherArmor", 1);
 			pawn.A_GiveInventory("wosMetalArmor", 1);

@@ -44,7 +44,7 @@ script "killRats" (void) {
 // po navratu v dialogu ///////////////////////////////////////////////////////////////
 // odmena
 script 1411 (void) {
-    GiveInventory("goldCoin", 300);
+    GiveInventory("Coin", 300);
 }
 // zadani zniceni hnizda //////////////////////////////////////////////////////////////
 script 1412 (void) {
@@ -104,7 +104,7 @@ script "destroyNest" (void) {
 script 1418 (void) {
     GiveInventory("m14q_cleanTheCellar_finished", 1);
     displayQuest("Clean the Cellar", 3);
-    GiveInventory("goldCoin", 500);
+    GiveInventory("Coin", 500);
     GiveInventory("wosAleBottle", 3);
     GiveInventory("wosCheeseburgerDouble", 1);
 	Thing_Activate(196);

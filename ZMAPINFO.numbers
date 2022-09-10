@@ -223,7 +223,7 @@ DoomEdNums {
 	20218 = wosBinderArmorBasic
 	20219 = wosBinderArmorAdvanced
 	20220 = wosKineticArmor
-	20221 = goldCoin
+	//20221 = goldCoin
 	20222 = wosGold10
 	20223 = wosGold25
 	20224 = wosGold50
@@ -472,8 +472,8 @@ DoomEdNums {
 	20467 = m12k_powerPlantStorageA
 	20468 = m12k_powerPlantStorageB
 	20469 = m12k_powerPlantStorageC
+	20470 = wos_switch_telep
 	/*
-	20470 = markerNamed_thecastle
 	20471 = markerNamed_thecommons
 	20472 = markerNamed_thevilla
 	20473 = markerNamed_townbath
@@ -496,7 +496,8 @@ DoomEdNums {
 	20490 = 
 
 	*/
-
+	
+	
 
 	
 }

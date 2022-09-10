@@ -2231,7 +2231,7 @@ class ascTramp : wosMonsterBase {
 						A_DropItem("wosGold10"); 
 						lootmoney-=10; 
 					} Else If(lootmoney>=1){
-						A_DropItem("goldCoin"); 
+						A_DropItem("Coin"); 
 						lootmoney--;
 					}
 				}
@@ -2385,7 +2385,7 @@ class ascRogue : wosMonsterBase {
 						A_DropItem("wosGold10"); 
 						lootmoney-=10; 
 					} Else If(lootmoney>=1){
-						A_DropItem("goldCoin"); 
+						A_DropItem("Coin"); 
 						lootmoney--;
 					}
 				}

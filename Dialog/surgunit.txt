@@ -48,7 +48,7 @@ Conversation {
 			Special = 80;
 			arg0 = 7700;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 50;
 			}
 		}
@@ -76,7 +76,7 @@ Conversation {
 			Special = 80;
 			arg0 = 7700;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 25;
 			}
 		}
@@ -160,7 +160,7 @@ Conversation {
 			Special = 80;
 			arg0 = 7700;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
 		}

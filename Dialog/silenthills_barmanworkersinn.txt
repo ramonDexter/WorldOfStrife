@@ -50,7 +50,7 @@ Conversation {
 			YesMessage = "Here's the vine.";
 			NoMessage = "Not enough gold!";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 15;
 			}
 		}
@@ -62,7 +62,7 @@ Conversation {
 			YesMessage = "Here's the beer.";
 			NoMessage = "Not enough gold!";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
 		}
@@ -74,7 +74,7 @@ Conversation {
 			YesMessage = "Here's the water.";
 			NoMessage = "Not enough gold!";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 5;
 			}
         Choice {

@@ -425,7 +425,7 @@ class wosGold10 : wosPickup {
 			CRED A -1;
 			Stop;
 		Pickup:
-			TNT1 A 0 A_GiveInventory("goldCoin", 10);
+			TNT1 A 0 A_GiveInventory("Coin", 10);
 			Stop;
 	}
 }
@@ -445,7 +445,7 @@ class wosGold25 : wosPickup {
 			SACK A -1;
 			Stop;
 		Pickup:
-			TNT1 A 0 A_GiveInventory("goldCoin", 25);
+			TNT1 A 0 A_GiveInventory("Coin", 25);
 			Stop;
 	}
 }
@@ -465,7 +465,7 @@ class wosGold50 : wosPickup {
 			CHST A -1;
 			Stop;
 		Pickup:
-			TNT1 A 0 A_GiveInventory("goldCoin", 50);
+			TNT1 A 0 A_GiveInventory("Coin", 50);
 			Stop;
 	}
 }
@@ -492,7 +492,7 @@ class goldChest50_item : wosPickup {
             Stop;
         Use:
             TNT1 A 0 {
-                A_GiveInventory("goldCoin", 50);
+                A_GiveInventory("Coin", 50);
             }
             Stop;
     }
@@ -519,7 +519,7 @@ class goldChest100_item : wosPickup {
             Stop;
         Use:
             TNT1 A 0 {
-                A_GiveInventory("goldCoin", 100);
+                A_GiveInventory("Coin", 100);
             }
             Stop;
     }
@@ -546,7 +546,7 @@ class goldChest250_item : wosPickup {
             Stop;
         Use:
             TNT1 A 0 {
-                A_GiveInventory("goldCoin", 250);
+                A_GiveInventory("Coin", 250);
             }
             Stop;
     }
@@ -573,7 +573,7 @@ class goldChest500_item : wosPickup {
             Stop;
         Use:
             TNT1 A 0 {
-                A_GiveInventory("goldCoin", 500);
+                A_GiveInventory("Coin", 500);
             }
             Stop;
     }

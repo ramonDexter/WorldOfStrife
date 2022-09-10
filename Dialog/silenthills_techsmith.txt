@@ -71,7 +71,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "wosNightEyeDevice";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 100;
 			}
 		}
@@ -83,7 +83,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "wosarmorShard";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 50;
 			}
 		}
@@ -95,7 +95,7 @@ Conversation {
 			DisplayCost = true;
 			GiveItem = "wosSwarmers";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 100;
 			}
 
@@ -135,7 +135,7 @@ Conversation {
             CloseDialog = true;
             GiveItem = "wosBinderArmorAdvanced";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 500;
             }
             Require {

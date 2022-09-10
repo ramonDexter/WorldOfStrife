@@ -31,7 +31,7 @@ script 1422 (void) {
     GiveInventory("wosq_ECdeliverFood_finished", 1);
     GiveInventory("wosCheeseburgerDouble", 1);
     GiveInventory("wosAleBottle", 1);
-    GiveInventory("goldCoin", 100);
+    GiveInventory("Coin", 100);
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////

@@ -95,7 +95,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosEnergyCell";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 20;
             }
         }
@@ -108,7 +108,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosEnergyKit";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 30;
             }
         }
@@ -121,7 +121,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosEnergyPack";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 50;
             }
         }
@@ -144,7 +144,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosGrenadeE";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 5;
             }
         }
@@ -157,7 +157,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosGrenadeF";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 15;
             }
         }
@@ -170,7 +170,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosGrenadeG";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 10;
             }
         }
@@ -193,7 +193,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosDeployableShield";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 150;
             }
         }
@@ -216,7 +216,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosSwarmers";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 35;
             }
         }

@@ -111,8 +111,8 @@ class wosBoltsElectric : wosPickup {
 		//$Title "Quirell of electric bolts (item)"
 		+INVENTORY.INVBAR
 		
-		radius 10;
-		height 16;
+		//radius 10;
+		//height 16;
 		Tag "$T_ELEBOLTS";
 		inventory.icon "I_EQRL";
 		Inventory.PickupMessage "$F_ELEBOLTS";
@@ -132,7 +132,7 @@ class wosBoltsElectric : wosPickup {
 class wosBoltsPoison : wosPickup {
 	Default {
 		//$Category "Ammunition/WoS"
-		//$Title "Quirell of electric bolts (item)"
+		//$Title "Quirell of poison bolts (item)"
 		+INVENTORY.INVBAR
 		
 		Tag "$T_POISONBOLTS";

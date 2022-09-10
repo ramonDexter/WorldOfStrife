@@ -30,7 +30,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosStrifeXbow";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 150;
 			}
 		}
@@ -43,7 +43,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosboltselectric";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 5;
 			}
 		}
@@ -56,7 +56,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBoltsPoison";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 50;
 			}
 		}
@@ -69,7 +69,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosAssaultGun";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 250;
 			}
 		}
@@ -82,7 +82,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "ClipOfBullets";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 10;
 			}
 		}
@@ -95,7 +95,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBulletsBox";
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 50;
 			}
 		}

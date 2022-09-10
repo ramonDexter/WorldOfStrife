@@ -32,7 +32,7 @@
 	//Swarmers_item
 	GiveInventory("wosSwarmers", 5);
 	// goldCoin x2500
-	GiveInventory("goldCoin", 2500);
+	GiveInventory("Coin", 2500);
 	//
 }*/
 // accuracy upgrades ///////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ script 4204 (int itemAmount) {
 	GiveInventory("wosGrenadeF", 5);
 	GiveInventory("wosInstaLek", 5);
 	// gold
-	GiveInventory("goldCoin", 2500);
+	GiveInventory("Coin", 2500);
 	//
 }*/
 ////////////////////////////////////////////////////////////////////////////////

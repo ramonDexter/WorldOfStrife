@@ -46,7 +46,7 @@ Conversation {
             Special = 80;
             arg0 = 1802;
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 1000;
             }
         }

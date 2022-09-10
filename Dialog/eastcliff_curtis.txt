@@ -124,7 +124,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosfbMeat1";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 10;
             }
         }
@@ -137,7 +137,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosGrilledChicken";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 25;
             }
         }
@@ -150,7 +150,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosBigburger";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 6;
             }
         }
@@ -173,7 +173,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosBeerBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -186,7 +186,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosAleBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -199,7 +199,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosSpiritsBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 12;
             }
         }
@@ -212,7 +212,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosVineBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 8;
             }
         }
@@ -225,7 +225,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosSodaCan";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 3;
             }
         }
@@ -238,7 +238,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosWaterBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 2;
             }
         }

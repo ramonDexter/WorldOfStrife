@@ -19,7 +19,7 @@ Conversation {
             Special = 80;
             arg0 = 2008;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 15;
 			}
 			Require {

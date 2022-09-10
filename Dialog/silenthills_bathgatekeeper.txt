@@ -30,7 +30,7 @@ Conversation {
 			DisplayCost = true;
 			CloseDialog = true;
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
 		}

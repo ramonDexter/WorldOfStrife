@@ -58,7 +58,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosHyposprej";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 27;
 			}
         }
@@ -70,7 +70,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosKombopack";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 55;
 			}
         }
@@ -82,7 +82,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosInstaLek";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 125;
 			}
         }
@@ -94,7 +94,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscMedPatch";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 12;
 			}
         }
@@ -106,7 +106,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscMedicalKit";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 27;
 			}
         }
@@ -118,7 +118,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "zscSurgeryKit";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 125;
 			}
         }
@@ -130,7 +130,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosi_StimDevice";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 28;
 			}
         }

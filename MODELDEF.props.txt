@@ -2755,8 +2755,11 @@ model wosD_dex_compSecurity {
 	model 0 "compSecurity.md3"
 	skin 0 "ComputerSecurityTex1.png"
 	scale 0.75 0.75 0.75
-	offset -4.0 0.0 6.0
+	offset -2.2 0.0 6.0
 	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
 }
 model wosD_dex_fireExtinguisher {
 	path "models/props/deusex/"

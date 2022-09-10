@@ -45,7 +45,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "zscMedPatch";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 10;
             }
         }
@@ -58,7 +58,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "zscMedicalKit";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 25;
             }
         }
@@ -71,7 +71,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "Flare";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 5;
             }
         }
@@ -84,7 +84,7 @@ Conversation {
             NoMessage = "Not enough gold!";
             GiveItem = "wosArmorShard";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 15;
             }
         }

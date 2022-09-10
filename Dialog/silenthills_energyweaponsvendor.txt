@@ -30,7 +30,7 @@ Conversation {
 			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 1750;
 			}
 		}
@@ -43,7 +43,7 @@ Conversation {
 			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 25;
 			}
 		}
@@ -56,7 +56,7 @@ Conversation {
 			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 75;
 			}
 		}
@@ -69,7 +69,7 @@ Conversation {
 			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 100;
 			}
 		}
@@ -82,7 +82,7 @@ Conversation {
 			CloseDialog = false;
 			DisplayCost = true;
 			Cost {
-				Item = "goldCoin";
+				Item = "Coin";
 				Amount = 1450;
 			}
 		}

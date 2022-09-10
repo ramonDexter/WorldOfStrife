@@ -102,7 +102,7 @@ script 1005 (void) {
     GiveInventory("wosInstaLek", 5);
     GiveInventory("wosi_StimDevice", 10);
     GiveInventory("wosArmorShard", 7);
-    GiveInventory("goldCoin", 1000);
+    GiveInventory("Coin", 1000);
     GiveInventory("wosGrenadeE", 5);
     GiveInventory("wosGrenadeF", 5);
     GiveInventory("wosGrenadeG", 5);

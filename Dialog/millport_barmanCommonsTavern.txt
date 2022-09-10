@@ -18,7 +18,7 @@ Conversation {
             DisplayCost = true;
             GiveItem = "wosfoodBox";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 15;
             }
         }
@@ -31,7 +31,7 @@ Conversation {
             DisplayCost = true;
             GiveItem = "woscheeseburger";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 7;
             }
         }
@@ -44,7 +44,7 @@ Conversation {
             DisplayCost = true;
             GiveItem = "wosbeerBottle";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 9;
             }
         }

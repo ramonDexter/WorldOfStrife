@@ -396,8 +396,8 @@ class wosConversationMenu : Menu
 	{
 		if (mShowGold)
 		{
-			let coin = players[consoleplayer].ConversationPC.FindInventory("goldCoin");
-			let icon = GetDefaultByType("goldCoin").Icon;
+			let coin = players[consoleplayer].ConversationPC.FindInventory("Coin");
+			let icon = GetDefaultByType("Coin").Icon;
 			let goldstr = String.Format("%d", coin != NULL ? coin.Amount : 0);
 			screen.DrawText(SmallFont, Font.CR_GRAY, 21, 191, goldstr, DTA_320x200, true, DTA_FillColor, 0, DTA_Alpha, HR_SHADOW);
 			screen.DrawTexture(icon, false, 3, 190, DTA_320x200, true, DTA_FillColor, 0, DTA_Alpha, HR_SHADOW);

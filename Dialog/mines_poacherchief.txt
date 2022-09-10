@@ -47,7 +47,7 @@ Conversation {
 			YesMessage = "The deal is done. The power coupling is yours.";
 			NoMessage = "You don't have enough gold!";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 500;
 			}
 		}

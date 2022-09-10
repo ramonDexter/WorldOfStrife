@@ -59,7 +59,7 @@ class rebelEnemy : Rebel replaces Rebel {
 						A_DropItem("wosGold10"); 
 						lootmoney-=10; 
 					} Else If(lootmoney>=1){
-						A_DropItem("goldCoin"); 
+						A_DropItem("Coin"); 
 						lootmoney--;
 					}
 				}

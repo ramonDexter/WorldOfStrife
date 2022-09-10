@@ -30,7 +30,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosLeatherArmor";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 50;
 			}
 		}
@@ -43,7 +43,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosMetalArmor";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 125;
 			}
 		}
@@ -56,7 +56,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBinderArmorBasic";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 175;
 			}
 		}

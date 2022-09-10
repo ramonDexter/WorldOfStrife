@@ -158,7 +158,7 @@ Conversation {
             arg0 = 1003;
             /*
             script 1003 (void) {
-                GiveInventory ("goldCoin", 250);
+                GiveInventory ("Coin", 250);
                 GiveInventory ("twn_judgeQ01_rebels_finished", 1);
             }
             */

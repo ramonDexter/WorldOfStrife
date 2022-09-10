@@ -6011,7 +6011,7 @@ actor wosD_dex_cart 21343 {
 			Stop
 	}
 }
-actor wosD_dex_compSecurity 21344 {
+actor wosD_dex_compSecurity : SwitchableDecoration 21344 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dEx comp security"
 	+SOLID
@@ -6021,8 +6021,17 @@ actor wosD_dex_compSecurity 21344 {
 	Tag "security terminal"
 	radius 4
 	height 12
+  	Activation THINGSPEC_Switch //switchable musi byt THINGSPEC_Switch!!! - vypnout/zapnout
 	States {
 		Spawn:
+			DUMM A 1
+			Loop
+		Active:
+			DUMM ABC 6
+			DUMM D -1
+			Stop
+		Inactive:
+			DUMM DCB 6
 			DUMM A -1
 			Stop
 	}

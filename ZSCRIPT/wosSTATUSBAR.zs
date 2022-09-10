@@ -83,10 +83,6 @@ class wosStatusBar : BaseStatusBar {
 		mGrnFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), true, 1, 1);
 		mBigFont = HUDFont.Create("BigFont", 0, false, 2, 2);
         mESfont = HUDFont.Create("ESFONT", 0, false, 1, 1);
-
-        //diparms_argsbar = InventoryBarState.CreateNoBox(mYelFont, boxsize:(36, 30), innersize:(40, 30), arrowoffs:(0, 0));
-
-        
 	}
 
 	override void NewGame () {
@@ -332,9 +328,6 @@ class wosStatusBar : BaseStatusBar {
 				Else If(pawn.currentarmor==4){armortype="I_RGA2";}
 				Else If(pawn.currentarmor==5){armortype="I_SHLD";}
 				DrawImage(armortype,(-56, 4),DI_ITEM_OFFSETS);
-				//DrawString(mYelFont, FormatNumber(item.Amount, 3, 5), (362, 19), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);
-				//DrawInventoryIcon(armortype, (120, 177), DI_ITEM_OFFSETS);
-				//If(pawn.currentarmor!=6){DrawString(mYelFont, FormatNumber(pawn.armoramount, 3, 5), (-31, 30), DI_TEXT_ALIGN_RIGHT, Font.CR_LIGHTBLUE);}
 			}
 
             //  Ammo  //////////////////////////////////////////////////////////
@@ -351,7 +344,6 @@ class wosStatusBar : BaseStatusBar {
                 DrawInventoryIcon (ammo2, (-25, -2), DI_ITEM_OFFSETS);
             } else if ( ammo1 != NULL ) {
 				DrawString(mGrnFont, FormatNumber(ammo1.Amount, 3, 5), (-12, 33), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
-				//DrawString(mGrnFont, FormatNumber(ammo2.Amount, 3, 5), (370, 148), DI_TEXT_ALIGN_RIGHT);		
 				DrawBar("mgznBar", "mgznBck", ammo1.Amount, ammo1.MaxAmount, (-18, 27), 0, 3);
 				DrawInventoryIcon (ammo1, (-25, -2), DI_ITEM_OFFSETS);
 			} else if ( wpn != null ) {
@@ -368,7 +360,6 @@ class wosStatusBar : BaseStatusBar {
 					DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
 				} else if ( wpn.magazine > 0 && !magtype ) {
 					DrawString(mGrnFont, FormatNumber(wpn.magazine, 3, 5), (-12, 29), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-					//DrawString(mGrnFont, FormatNumber(magtype.Amount, 3, 5), (-12, 36), DI_TEXT_ALIGN_RIGHT, Font.CR_GRAY);
 					DrawBar("mgznBar", "mgznBck", wpn.magazine, wpn.magazinemax, (-18, 27), 0, 3);
 					DrawInventoryIcon (magtype, (-25, -2), DI_ITEM_OFFSETS);
 				}
@@ -401,14 +392,10 @@ class wosStatusBar : BaseStatusBar {
 
             //  selected inventory display  ////////////////////////////////////
 			if (CPlayer.mo.InvSel != null) {
-				//DrawInventoryIcon(CPlayer.mo.InvSel, (-23, 179), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28)); //vlevo dole
 				DrawInventoryIcon(CPlayer.mo.InvSel, (351, 18), DI_ARTIFLASH|DI_ITEM_CENTER, boxsize:(28, 28)); //vpravo nahore
 				item = CPlayer.mo.InvSel;
 				// display item charge //>>removed, use manual check to check item charge, to improve immersion
-				/*wosPickup itemCharge = wosPickup(item);
-				if (item.Amount == 1 && item is "wosPickup" && itemCharge.charge > 0) {
-					DrawString(mYelFont, FormatNumber(itemCharge.charge, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_CYAN);
-				} else*/ if (item.Amount > 1) {
+				if (item.Amount > 1) {
 					//DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (-8, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vlevo dole		
 					DrawString(mYelFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3, 5, 0, ""), (368, 25), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW); //vpravo nahore
 				} 
@@ -422,13 +409,12 @@ class wosStatusBar : BaseStatusBar {
 				// display all items overall weight in open inventory //////////
 				let pawn = binderPlayer(CPlayer.mo);
 				if ( pawn != NULL ) {
-					//DrawString (mESfont, FormatNumber(pawn.encumbrance, 3, 5, 0, "Weight: "), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);
 					// more sophisticated approach //
 					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
 				}
 				////////////////////////////////////////////////////////////////
 				
-				let coins = CPlayer.mo.FindInventory("goldCoin");
+				let coins = CPlayer.mo.FindInventory("Coin");
 				if ( coins != null ) {
 					DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "GOLD: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 				}
@@ -442,19 +428,16 @@ class wosStatusBar : BaseStatusBar {
 					}
 					DrawInventoryIcon (item, (35 + 35*i, 169), flags);
 					// display item weight
-					/*if ( item is "Coin" || item is "goldCoin" ) {
+					if ( item is "Coin" ) {
 						//do nothing
-					} else*/ if (item.Mass > 0) {
+					} else if (item.Mass > 0) {
 						DrawString(mESfont, FormatNumber(item.Mass, 3, 5, 0, "W:"), (65 + 35*i, 168), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 					}
 					// display item amount
-					// display item charge >> disabled, use manual check to see item charge
-					/*wosPickup itemCharge = wosPickup(item);
-					if (item.Amount == 1 && item is "wosPickup" && itemCharge.charge > 0) {
-						DrawString(mESfont, FormatNumber(itemCharge.charge, 3, 5, 0, "C:"), (65 + 35*i, 192), DI_TEXT_ALIGN_RIGHT, Font.CR_CYAN);						
-					} else*/ if (item.Amount > 1) { //item.Amount > 1
+					if (item.Amount > 1) { 
 						DrawString(mESfont, FormatNumber(item.Amount, 3, 5, 0, "A:"), (65 + 35*i, 192), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-					} 
+					}
+					// display item charge >> disabled, use manual check to see item charge
 					i++;
 				}
 				////////////////////////////////////////////////////////////////
@@ -624,19 +607,8 @@ class wosStatusBar : BaseStatusBar {
 
 				// moved to open inventorybar //////////////////////////////////
 				//  Does the player have coins?  ///////////////////////////////
-				/*item = CPlayer.mo.FindInventory("goldCoin");
-				if ( item != NULL ) {
-					DrINumber2 (item.Amount, left+216*xscale, top+72 * yscale, 7*xscale, imgSTFON0);
-				}*/
-				
-				//  Display weight of owned items  /////////////////////////////				
-				/*if ( pawn != NULL ) {
-					// current weight
-					DrINumber2 (pawn.encumbrance, left+208*xscale, top+91 * yscale, 7*xscale, imgSTFON0);
-					//maximal weight
-					DrINumber2 (pawn.weightmax, left+247*xscale, top+91 * yscale, 7*xscale, imgSTFON0);			
-				}*/
-				////////////////////////////////////////////////////////////////
+				//  Display weight of owned items  /////////////////////////////
+				// moved to open inventorybar //////////////////////////////////
 				
 				//  Does the player have a binder badge?  //////////////////////
 				item = CPlayer.mo.FindInventory ("binderBadge");
@@ -704,10 +676,6 @@ class wosStatusBar : BaseStatusBar {
 						left + 64*xscale,
 						top - 16*yscale,
 						DTA_CleanNoMove, true);
-					/*item = CPlayer.mo.FindInventory("shoulderGunMag_item");
-					if (item != NULL) {
-						DrINumber2 (item.Amount*32, left+249*xscale, top+91*yscale, 7*xscale, imgSTFON0);
-					}*/
 				}
 
 				//  What weapons does the player have?  ////////////////////////

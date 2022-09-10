@@ -112,7 +112,7 @@ script "deadQueens" (void) {
 script 1402 (void) {
     displayQuest("Destroy Spider Nests", 3);
     GiveInventory("m14q_killQueens_finished", 1);
-    GiveInventory("goldCoin", 500);
+    GiveInventory("Coin", 500);
     GiveInventory("wosHyposprej", 5);
     GiveInventory("wosArmorShard", 5);
 }

@@ -19,7 +19,7 @@ Conversation {
             arg0 = 8002;
             NoMessage = "Not enough gold!";
             Cost {
-                item = "goldCoin";
+                item = "Coin";
                 amount = 15;
             }
         }

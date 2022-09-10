@@ -88,7 +88,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrenadeE";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 5;
 			}
         }
@@ -100,7 +100,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrenadeF";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 15;
 			}
         }
@@ -112,7 +112,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrenadeG";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 10;
 			}
         }
@@ -134,7 +134,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "laserPistol";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 210;
 			}
         }
@@ -156,7 +156,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPod";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 12;
 			}
         }
@@ -168,7 +168,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyKit";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 32;
 			}
         }
@@ -180,7 +180,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPack";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 55;
 			}
         }
@@ -202,7 +202,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBulletCartridge";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 13;
 			}
         }
@@ -214,7 +214,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBulletsBox";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 55;
 			}
         }
@@ -236,7 +236,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBundleElectric";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 17;
 			}
         }
@@ -248,7 +248,7 @@ Conversation {
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBoltsElectric";
 			Cost {
-				item = "goldCoin";
+				item = "Coin";
 				amount = 27;
 			}
         }

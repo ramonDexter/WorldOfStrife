@@ -54,6 +54,35 @@ class wos_switch_button1 : switchableDecoration {
             Stop;
     }
 }
+class wos_switch_button1_1 : switchableDecoration {
+    Default {
+        //$category "voxel switches"
+		//$Title "button1 1"
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		Tag "button";
+		//scale 0.75;
+		Radius 8;
+		height 32;
+		Activation THINGSPEC_Switch;
+    }
+    States {
+        Spawn:
+            BTN1 A -1;
+            Stop;
+        Active:
+            BTN1 A 6;
+            BTN1 B 17;
+            BTN1 A -1;
+            Stop;
+        Inactive:
+            BTN1 A 6;
+            BTN1 B 17;
+            BTN1 A -1;
+            Stop;
+    }
+}
 class wos_switch_doorKnob : switchableDecoration {
     Default {
         //$category "voxel switches"
@@ -81,6 +110,37 @@ class wos_switch_doorKnob : switchableDecoration {
             Stop;
     }
 }
+class wos_switch_doorKnob_1 : switchableDecoration {
+    Default {
+        //$category "voxel switches"
+		//$Title "doorKnob 1"
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		Tag "knob";
+		//scale 0.75;
+		Radius 8;
+		height 32;
+		Activation THINGSPEC_Switch;
+    }
+    States {
+        Spawn:
+            DNOB A -1;
+            Stop;
+        Active:
+            DNOB A 6 A_StartSound("switches/knob");
+            DNOB B 35;
+            TNT1 A 0 A_StartSound("switches/knob");
+            DNOB A -1;
+            Stop;
+        Inactive:
+            DNOB A 6 A_StartSound("switches/knob");
+            DNOB B 35;
+            TNT1 A 0 A_StartSound("switches/knob");
+            DNOB A -1;
+            Stop;
+    }
+}
 class wos_switch_lever3 : switchableDecoration {
     Default {
         //$category "voxel switches"
@@ -104,6 +164,37 @@ class wos_switch_lever3 : switchableDecoration {
             Stop;
         Inactive:
             LVR3 B 6;
+            LVR3 A -1;
+            Stop;
+    }
+}
+class wos_switch_lever3_1 : switchableDecoration {
+    Default {
+        //$category "voxel switches"
+		//$Title "lever3 1"
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		Tag "knob";
+		//scale 0.75;
+		Radius 8;
+		height 32;
+		Activation THINGSPEC_Switch;
+    }
+    States {
+        Spawn:
+            LVR3 A -1;
+            Stop;
+        Active:
+            LVR3 A 6 A_StartSound("switches/knob");
+            LVR3 B 35;
+            TNT1 A 0 A_StartSound("switches/knob");
+            LVR3 A -1;
+            Stop;
+        Inactive:
+            LVR3 A 6 A_StartSound("switches/knob");
+            LVR3 B 35;
+            TNT1 A 0 A_StartSound("switches/knob");
             LVR3 A -1;
             Stop;
     }

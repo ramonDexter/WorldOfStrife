@@ -477,10 +477,10 @@ DoomEdNums {
 	20472 = wos_switch_doorKnob
 	20473 = wos_switch_lever3
 	20474 = wos_switch_slider
+	20475 = wos_switch_lever3_1
+	20476 = wos_switch_doorKnob_1
+	20477 = wos_switch_button1_1
 	/*
-	20475 = markerNamed_blackpub
-	20476 = markerNamed_councilclub
-	20477 = markerNamed_store
 	20478 = markerNamed_tavern
 	20479 = markerNamed_blacksmith
 	20480 = markerNamed_gunsmith

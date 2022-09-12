@@ -98,9 +98,11 @@ class wosMauler : wosWeapon replaces Mauler {
 				return ResolveState(null);
 			}		
 		mauler1select:
+			TNT1 A 0 A_SetCrosshair(11);
 			MAUL A 1 A_Raise();
 			Loop;
 		mauler2select:
+			TNT1 A 0 A_SetCrosshair(11);
 			MAUL I 1 A_Raise();
 			Loop;		
 		Deselect:
@@ -111,9 +113,11 @@ class wosMauler : wosWeapon replaces Mauler {
 			}			
 		mauler1deselect:
 			MAUL A 1 A_Lower();
+			TNT1 A 0 A_SetCrosshair(9);
 			Loop;		
 		mauler2deselect:
 			MAUL I 1 A_Lower();
+			TNT1 A 0 A_SetCrosshair(9);
 			Loop;		
 		Flash:
 			Stop;

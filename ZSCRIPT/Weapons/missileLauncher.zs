@@ -42,9 +42,11 @@ class wosMinimissileLauncher : wosWeapon replaces MiniMissileLauncher {
 			MMIS A 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
 			Loop;			
 		Deselect:
-			MMIS A 1 A_Lower();			
+			MMIS A 1 A_Lower();
+			TNT1 A 0 A_SetCrosshair(9);	
 			Loop;		
 		Select:
+			TNT1 A 0 A_SetCrosshair(10);
 			MMIS A 1 A_Raise();
 			Loop;				
 		Fire:

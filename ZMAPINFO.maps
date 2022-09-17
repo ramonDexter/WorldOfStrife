@@ -21,6 +21,7 @@ Episode MAP909 {
 
 //  MAPS DEFINITION  ///////////////////////////////////////////////////////////
 map MAP01 "Mines" {
+	next = "MAP02"
 	sky1 = "SKYMNT02"
 	music = "D_DARKER"
 	outsidefogdensity = 255
@@ -33,6 +34,7 @@ map MAP01 "Mines" {
 	NoIntermission
 }
 map MAP02 "Silent Hills" {
+	next = "MAP03"
 	//sky1 = "SKYMNT02"
 	sky1 = "SKYRGGR"
 	music = "D_TAVERN"
@@ -46,6 +48,7 @@ map MAP02 "Silent Hills" {
 	NoInfighting
 }
 map MAP03 "Waste Treatment" {
+	next = "MAP04"
 	sky1 = "SKYMNT02"
 	music = "D_DARKER"
 	outsidefogdensity = 255
@@ -58,6 +61,7 @@ map MAP03 "Waste Treatment" {
 	NoIntermission
 }
 map MAP04 "Power Plant" {
+	next = "MAP05"
 	sky1 = "SKYMNT02"
 	music = "D_FAST"
 	outsidefogdensity = 255
@@ -70,6 +74,7 @@ map MAP04 "Power Plant" {
 	NoInfighting
 }
 map MAP05 "Wilderness" {
+	next = "MAP06"
 	sky1 = "SKYMNT02"
 	music = "D_DANGER"
 	outsidefogdensity = 255
@@ -82,6 +87,7 @@ map MAP05 "Wilderness" {
 	NoInfighting
 }
 map MAP06 "Eastern Highlands" {
+	next = "MAP07"
 	sky1 = "SKYMNT02"
 	music = "D_DANGER"
 	outSideFogDensity = 255
@@ -94,6 +100,7 @@ map MAP06 "Eastern Highlands" {
 	NoInfighting
 }
 map MAP07 "Ancient Temple" {
+	next = "MAP08"
 	sky1 = "SKYMNT02"
 	music = "D_TAVERN"
 	outsidefogdensity = 255
@@ -106,6 +113,7 @@ map MAP07 "Ancient Temple" {
 	NoInfighting
 }
 map MAP08 "Millport" {
+	next = "MAP09"
 	sky1 = "SKYRGGR"
 	//sky1 = "SKYREDD"
 	//sky1 = "SKYORNG"
@@ -121,6 +129,7 @@ map MAP08 "Millport" {
 	NoInfighting
 }
 map MAP09 "Coastal region" {
+	next = "MAP10"
 	sky1 = "SKYSNDS"
 	//sky2 = SKYSNDS
 	music = "ADDER_S"
@@ -134,6 +143,7 @@ map MAP09 "Coastal region" {
 	NoInfighting
 }
 map MAP10 "Borderlands West" {
+	next = "MAP11"
 	sky1 = "SKYSNDS"
 	//sky2 = SKYSNDS
 	music = "ADDER_S"
@@ -146,7 +156,8 @@ map MAP10 "Borderlands West" {
 	NoIntermission	
 	NoInfighting
 }
-map map11 "Valley Farm" {
+map MAP11 "Valley Farm" {
+	next = "MAP12"
 	sky1 = "SKYRGGR"
 	music = "D_DARKER"
 	outsidefogdensity = 255
@@ -159,7 +170,8 @@ map map11 "Valley Farm" {
 	NoInfighting
 	
 }
-map map12 "Ravenrock Village" {
+map MAP12 "Ravenrock Village" {
+	next = "MAP13"
 	sky1 = "SKYRGGR"
 	music = "ADDER_S"
 	outsidefogdensity = 255
@@ -172,7 +184,8 @@ map map12 "Ravenrock Village" {
 	NoInfighting
 	
 }
-map map13 "Borderlands North" {
+map MAP13 "Borderlands North" {
+	next = "MAP14"
 	sky1 = "SKYRGGR"
 	music = "ADDER_S"
 	outsidefogdensity = 255
@@ -185,7 +198,8 @@ map map13 "Borderlands North" {
 	NoInfighting
 	
 }
-map map14 "Eastcliff Village" {
+map MAP14 "Eastcliff Village" {
+	//next = ""
 	sky1 = "SKYRGGR"
 	music = "ADDER_S"
 	outsidefogdensity = 255
@@ -200,7 +214,7 @@ map map14 "Eastcliff Village" {
 }
 
 
-map map909 "Southern Plains" {
+map MAP909 "Southern Plains" {
 	sky1 = "SKYRGGR"
 	//sky1 = "SKYOIL"
 	music = "ADDER_S"

@@ -4125,6 +4125,42 @@ model wosD_css_winch {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// tekStreetLamps //////////////////////////////////////////////////////////////
+model wosD_tekStreetLamp {
+	path "models/props/streetlamp/"
+	model 0 "tekStreetLamp.md3"
+	scale 22.0 22.0 22.0
+	offset 0.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_tekStreetLamp2 {
+	path "models/props/streetlamp/"
+	model 0 "tekStreetLamp2.md3"
+	scale 22.0 22.0 22.0
+	offset 0.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_tekStreetLamp2c {
+	path "models/props/streetlamp/"
+	model 0 "tekStreetLamp2c.md3"
+	scale 22.0 22.0 22.0
+	offset -16.0 -16.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_tekStreetLamp4 {
+	path "models/props/streetlamp/"
+	model 0 "tekStreetLamp4.md3"
+	scale 22.0 22.0 22.0
+	offset 0.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
+model wosD_tekStreetPole {
+	path "models/props/streetlamp/"
+	model 0 "tekStreetPole.md3"
+	scale 22.0 22.0 22.0
+	offset 0.0 0.0 0.15
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

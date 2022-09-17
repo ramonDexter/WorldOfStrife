@@ -228,3 +228,41 @@ pointlight light_dexshoplight {
 	offset 0 -64 0
 	attenuate 1
 }
+pointlight tekStreetLampLight {
+	color 1.0 1.0 0.98
+	size 128
+	offset 80.0 64.0 0.0
+	attenuate 1
+}
+pointlight tekStreetLamp2Light1 {
+	color 1.0 1.0 0.98
+	size 128
+	offset 128.0 64.0 0.0
+	attenuate 1
+}
+pointlight tekStreetLamp2Light2 {
+	color 1.0 1.0 0.98
+	size 128
+	offset -128.0 64.0 0.0
+	attenuate 1
+}
+object wosD_tekStreetLamp2 {
+	frame DUMM { light tekStreetLamp2Light1 }
+	frame DUMMA { light tekStreetLamp2Light2 }
+}
+pointlight tekStreetLamp2cLight1 {
+	color 1.0 1.0 0.98
+	size 128
+	offset 128.0 64.0 0.0
+	attenuate 1
+}
+pointlight tekStreetLamp2cLight2 {
+	color 1.0 1.0 0.98
+	size 128
+	offset 0.0 64.0 -128.0
+	attenuate 1
+}
+object wosD_tekStreetLamp2c {
+	frame DUMM { light tekStreetLamp2cLight1 }
+	frame DUMMA { light tekStreetLamp2cLight2 }
+}

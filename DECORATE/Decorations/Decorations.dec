@@ -10920,6 +10920,87 @@ actor wosD_css_winch : wosD_css_base 21666 {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// tek street lamps by ramon.dexter ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+actor wosD_tekStreetLamp 21667 {
+	//$Category "Light Sources/WoS/"
+	//$Title "tek street lamp"
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "street lamp post"
+	radius 8
+	height 184	
+	States {
+		Spawn:
+			DUMM A -1 Bright light("tekStreetLampLight")
+			Stop
+	}
+}
+actor wosD_tekStreetLamp2 21668 {
+	//$Category "Light Sources/WoS/"
+	//$Title "tek street lamp 2"
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "street lamp post"
+	radius 8
+	height 184	
+	States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+	}
+}
+actor wosD_tekStreetLamp2c 21669 {
+	//$Category "Light Sources/WoS/"
+	//$Title "tek street lamp 2c"
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "street lamp post"
+	radius 20
+	height 184	
+	States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+	}
+}
+actor wosD_tekStreetLamp4 21700 {
+	//$Category "Light Sources/WoS/"
+	//$Title "tek street lamp 4"
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "street lamp post"
+	radius 8
+	height 184	
+	States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+	}
+}
+actor wosD_tekStreetPole 21701 {
+	//$Category "Light Sources/WoS/"
+	//$Title "tek street post"
+	+SOLID
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "electric post"
+	radius 8
+	height 184	
+	States {
+		Spawn:
+			DUMM A -1 Bright
+			Stop
+	}
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

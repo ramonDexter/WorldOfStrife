@@ -7,7 +7,7 @@ maps
 	
 	MAP05
 	{
-		defaultceiltexture = "F_BRKTOP";
+		defaultceiltexture = "F_SKY001";
 		overridefloorheight = false;
 		customfloorheight = 0;
 		uselongtexturenames = false;
@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 12102.96f;
-		defaulttoptexture = "BRKGRY07";
+		viewpositionx = 10584.18f;
+		defaulttoptexture = "SUPWOD01";
 		overrideceilheight = false;
-		viewpositiony = 3551.638f;
+		viewpositiony = 4735.96f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -48,13 +48,13 @@ maps
 		}
 		overridetoptexture = false;
 		overridebottomtexture = false;
-		defaultbottomtexture = "BRKGRY07";
-		defaultfloortexture = "F_BASHXL";
-		defaultwalltexture = "BRKGRY07";
+		defaultbottomtexture = "SUPWOD01";
+		defaultfloortexture = "F_SKY001";
+		defaultwalltexture = "SUPWOD01";
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.2329802f;
+		viewscale = 0.3937362f;
 		
 		plugins
 		{

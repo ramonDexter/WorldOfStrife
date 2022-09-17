@@ -394,7 +394,7 @@ class goldCoin : Inventory {
 		Tag "$TAG_goldCOIN";
 		Inventory.Icon "I_COIN";
 		Inventory.PickupMessage "$TXT_goldCOIN";
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 		
@@ -416,7 +416,7 @@ class wosGold10 : wosPickup {
 		//Inventory.Amount 10
 		Tag "$TAG_10GOLDcoins"; // "10 gold"
 		Inventory.PickupMessage "$TXT_10GOLDcoins"; // "You picked up 10 gold."
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}
@@ -436,7 +436,7 @@ class wosGold25 : wosPickup {
 		-INVENTORY.INVBAR;
 		Tag "$TAG_25GOLDcoins";
 		Inventory.PickupMessage "$TXT_25GOLDcoins";
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}
@@ -456,7 +456,7 @@ class wosGold50 : wosPickup {
 		-INVENTORY.INVBAR;
 		Tag "$TAG_50GOLDcoins";
 		Inventory.PickupMessage "$TXT_50GOLDcoins";
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Mass 0;
 		radius 8;
 	}
@@ -481,7 +481,7 @@ class goldChest50_item : wosPickup {
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "$TXT_goldChest_item"; // "You picked up the Chest with coins."
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Inventory.useSound "sounds/coinPickup";
 		Mass gChest50Weight;
     }
@@ -508,7 +508,7 @@ class goldChest100_item : wosPickup {
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "$TXT_goldChest_item"; // "You picked up the Chest with coins."
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Inventory.useSound "sounds/coinPickup";
 		Mass gChest100Weight;
     }
@@ -535,7 +535,7 @@ class goldChest250_item : wosPickup {
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "$TXT_goldChest_item"; // "You picked up the Chest with coins."
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Inventory.useSound "sounds/coinPickup";
 		Mass gChest250Weight;
     }
@@ -562,7 +562,7 @@ class goldChest500_item : wosPickup {
 		Tag "$TAG_goldChest_item"; // "Chest with coins"
 		Inventory.Icon "I_GCHT";
 		Inventory.PickupMessage "$TXT_goldChest_item"; // "You picked up the Chest with coins."
-		Inventory.pickupSound "sounds/coinPickup";
+		//Inventory.pickupSound "sounds/coinPickup";
 		Inventory.useSound "sounds/coinPickup";
 		Mass gChest500Weight;
     }

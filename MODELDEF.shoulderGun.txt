@@ -2,6 +2,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //  shouldergun  ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+/*
 model shoulderGun {	
 	path "models/weapons/shoulderGun/"
 	model 0 "p_shoulderGun.md3"
@@ -58,6 +59,51 @@ model shoulderGun {
 	frameindex SHCH I 0 1
 	offset -13.0 6.0 5.0	
 	frameindex SHCH J 0 1
+	//////////////////////////////
+}
+*/
+model shoulderGun {	
+	path "models/weapons/shoulderGun/"
+	model 0 "p_shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+	
+	//  show/hide  ///////////////
+	path "models/weapons/shoulderGun/"
+	model 0 "shoulderGun2.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.25 1.25 1.25
+	offset -13.0 6.0 5.0		
+	frameindex DUMA A 0 0
+    offset -13.0 2.0 5.0		
+	frameindex DUMA B 0 0
+    offset -13.0 -2.0 5.0	
+	frameindex DUMA C 0 0
+    offset -13.0 -6.0 5.0	
+	frameindex DUMA D 0 0
+    offset -13.0 -10.0 5.0	
+	frameindex DUMA E 0 0
+    offset -13.0 -14.0 5.0	
+	frameindex DUMA F 0 0
+	offset -13.0 -16.0 5.0	
+	frameindex DUMA G 0 0	
+	offset -13.0 -18.0 5.0	
+	frameindex DUMA H 0 0
+	offset -13.0 -19.0 5.0	
+	frameindex DUMA I 0 1
+	offset -13.0 -20.0 5.0		
+	frameindex DUMA J 0 2
+	//////////////////////////////
+
+	//  shoot ////////////////////
+	offset -13.0 -20.0 5.0	
+	frameindex DUMF A 0 2
+	offset -13.0 -18.0 5.0	
+	frameindex DUMF B 0 2	
+	offset -13.0 -19.0 5.0		
+	frameindex DUMF C 0 2	
 	//////////////////////////////
 }
 model shoulderGunMag_item {

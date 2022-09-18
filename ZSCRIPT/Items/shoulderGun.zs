@@ -113,7 +113,28 @@ class shoulderGun : wosPickup {
 			}
 			wait;
 		shootShoulderGun:
-			SHCH JIHGFEDCBA 1;
+			// animation remade with new model //////////////////////////////////////////
+            DUMA ABCDEFGHIJ 1;
+            DUMF AA 1;
+            DUMF A 2;
+            DUMF B 2 Bright W_FireShoulderGun(true, true);
+            DUMF C 2 Bright W_FireShoulderGun(false, false);
+            DUMF B 2 Bright W_FireShoulderGun(false, false);
+            DUMF C 2 Bright W_FireShoulderGun(false, false);
+            DUMF B 2 Bright W_FireShoulderGun(false, false);
+            DUMF C 2 Bright W_FireShoulderGun(false, true);
+            DUMA J 3;
+            DUMA J 4 A_StartSound("weapons/shoulderGun/stop",6); //zrusit zvuk blesku
+            DUMA J 5;
+            DUMA J 3;
+            DUMA J 3;
+            DUMA JIH 4;
+            DUMA GFEDCBA 1;
+			TNT1 A 0 {
+				return resolveState("remove");
+			}
+			/////////////////////////////////////////////////////////////////////////////
+			/*SHCH JIHGFEDCBA 1;
 			SHCH AA 1;
 			//SHCN A 1 A_StartSound("weapons/shoulderGun/fire", CHAN_7, CHANF_DEFAULT, 1.0, false);
 			SHCN A 2;
@@ -134,7 +155,7 @@ class shoulderGun : wosPickup {
 			SHCH ABCDEFGHIJ 1;
 			TNT1 A 0 {
 				return resolveState("remove");
-			}		
+			}*/
 		
 		remove:
 			TNT1 A 0 {

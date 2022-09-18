@@ -727,20 +727,18 @@ model goldChest500_item {
 model binder_helmet {
 	path "models/items/binderhelm/"
 	model 0 "binder_helmet.md3"
-	skin 0 "tx_binderHelmet.png"
 	scale 17.0 17.0 17.0
 	offset 0.0 0.0 0.0
 	
-	frameindex DUMM A 0 1
+	frameindex DUMM A 0 0
 }
 model rangerHelmDummy {
 	path "models/items/binderhelm/"
 	model 0 "binder_helmet.md3"
-	skin 0 "tx_binderHelmet.png"
 	scale 17.0 17.0 17.0
 	offset 0.0 0.0 0.0
 	
-	frameindex DUMM A 0 1
+	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////
 

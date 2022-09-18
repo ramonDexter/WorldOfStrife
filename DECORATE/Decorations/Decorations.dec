@@ -11002,7 +11002,118 @@ actor wosD_tekStreetPole 21701 {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+actor wosD_dex_trashCan4 21702 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx trashcan 4"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "trash can"
+	radius 12
+	height 28
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_satelliteDish 21703 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx satellite dish"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "satellite dish"
+	radius 16
+	height 176
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_phone 21704 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx phone"
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "phone"
+	radius 6
+	height 8
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_marketTarp 21705 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx market tarp"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "market tarp"
+	radius 64
+	height 16
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_chair1 21706 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx chair"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "chair"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_flowers 21707 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx flowers dish"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "flowers dish"
+	radius 8
+	height 16
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_dex_flask 21708 {
+	//$Category "Decorations/WoS/deusEx"
+	//$Title "dEx flask"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "flask"
+	radius 4
+	height 8
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
 
 
 

@@ -2,14 +2,14 @@ class wosPunchDagger : wosWeapon replaces PunchDagger {
 	int altCounter;
 	
 	Default {	
-		+WEAPON.MELEEWEAPON
-		+WEAPON.NOALERT
-		+WEAPON.WIMPY_WEAPON
+		+WEAPON.MELEEWEAPON;
+		+WEAPON.NOALERT;
+		+WEAPON.WIMPY_WEAPON;
 		
 		Tag "$T_PUNCHDAGGER";
 		inventory.icon "H_PUND";
 		weapon.slotNumber 1;
-		Weapon.slotPriority 2;
+		Weapon.slotPriority 0.2;
         //Weapon.UpSound "weapons/weaponUP";
 		//weapon.selectionorder 2100;
 	}

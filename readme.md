@@ -25,6 +25,8 @@ cherno - great modeldef tutor
 
 Enjay - models, resources
 
+NotJabba - vine textures
+
 
 -------------------------------------------
 

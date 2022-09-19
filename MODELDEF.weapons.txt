@@ -10,7 +10,7 @@
 model DMYstaffBlaster01 {
 	//ground
 	path "models/weapons/staff/"
-	model 0 "p_staffBlaster2.md3"
+	model 0 "p_staffBlaster.md3"
 	scale 1.2 1.2 1.2
 	offset 0.0 0.0 0.0
 	
@@ -19,7 +19,7 @@ model DMYstaffBlaster01 {
 model DMYstaffBlaster02 {
 	//standing
 	path "models/weapons/staff/"
-	model 0 "p_staffBlaster2.md3"
+	model 0 "p_staffBlaster.md3"
 	scale 1.2 1.2 1.2
 	offset 0.0 0.0 0.0
 	
@@ -28,7 +28,7 @@ model DMYstaffBlaster02 {
 model DMYstaffBlaster03 {
 	//side
 	path "models/weapons/staff/"
-	model 0 "p_staffBlaster2.md3"
+	model 0 "p_staffBlaster.md3"
 	scale 1.2 1.2 1.2
 	offset 0.0 0.0 0.0
 	
@@ -40,7 +40,7 @@ model DMYstaffBlaster03 {
 model staffBlaster {
 	//pickup model
 	path "models/weapons/staff/"
-	model 0 "p_staffBlaster2.md3"
+	model 0 "p_staffBlaster.md3"
 	scale 1.2 1.2 1.2
 	offset 0.0 0.0 0.0	
 	frameindex DUMM A 0 2
@@ -48,7 +48,7 @@ model staffBlaster {
 model staffBlaster {
 	//HUD weapon
 	path "models/weapons/staff/"
-	model 0 "blasterStaff_lvl2hand.md3"
+	model 0 "blasterStaff_lvl1hand.md3"
 	scale -1.5 1.5 1.5
 	offset 5.0 -20.0 -10.0
 

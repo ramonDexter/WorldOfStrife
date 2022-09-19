@@ -2,11 +2,14 @@
 // various scripts to support ACS /////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 class selectPunchDagger {    
-    static void FN_selectPunchDagger (void) { wosEventHandler.SendNetworkEvent("selectDagger"); }    
+    static void FN_selectBareHands (void) { wosEventHandler.SendNetworkEvent("selectBareHands"); }    
 }
 // zscript to ACS transfer scripts ////////////////////////////////////////////////////
 class wosZSC2ACS {
 
+    static void FN_selectBareHands (void) { 
+        wosEventHandler.SendNetworkEvent("selectBareHands"); 
+    }
     static void FN_give10accuracy (void) {
         wosEventHandler.SendNetworkEvent("give_10Accuracy");
     }

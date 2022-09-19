@@ -67,7 +67,7 @@ class binderPlayer : StrifePlayer {
 		PainChance 255;
 		MaxStepHeight 20;
 		//  weaponslots  ///////////////////////////////////////////////////////
-		Player.WeaponSlot 1, "wosPunchDagger";
+		Player.WeaponSlot 1, "wosBareHands", "wosPunchDagger";
 		Player.WeaponSlot 2, "StormPistol", "laserPistol", "wosStrifeXbow";
 		Player.WeaponSlot 3, "wosAssaultGun", "executorRifle", "staffBlaster";
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
@@ -75,6 +75,7 @@ class binderPlayer : StrifePlayer {
 		Player.WeaponSlot 6, "wosFlamethrower";
 		Player.WeaponSlot 7, "wosMauler";
 		//  start items  ///////////////////////////////////////////////////////
+		Player.StartItem "wosBareHands", 1;
 		Player.StartItem "wosPunchDagger", 1;
 		Player.StartItem "magazine_shoulderGun", 32;
 		Player.StartItem "notePlayerPersonal", 1;
@@ -551,7 +552,7 @@ class binderPlayer : StrifePlayer {
 	// ledge climb function ////////////////////////////////////////////////////
 	//  code by Jarewill
 	void LedgeClimb() {
-		if( (player.readyweapon is "wosPunchDagger") && player.cmd.buttons&BT_JUMP ) {
+		if( (player.readyweapon is "wosPunchDagger" || player.readyweapon is "wosBareHands" ) && player.cmd.buttons&BT_JUMP ) {
 			FLineTraceData h, i, j;
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height+8,data: i);
 			LineTrace(angle,24,0,TRF_THRUSPECIES,height-4,data: j);
@@ -574,7 +575,7 @@ class binderPlayer : StrifePlayer {
 	// new jump function ///////////////////////////////////////////////////////
 	//  code by Jarewill
 	Override void CheckJump() {
-		If ( player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap" ) {
+		If ( player.readyweapon is "wosPunchDagger" || player.readyweapon is "wos_sprintWeap" || player.readyweapon is "wosBareHands" ) {
 			Super.CheckJump();
 		}
 		Else If ( player.cmd.buttons & BT_JUMP ) {
@@ -1152,6 +1153,40 @@ class wos_sprintWeap : wosWeapon {
         Fire:
             TNT1 A 0;
             Goto Ready;
+    }
+}
+class wosBareHands : wosWeapon {
+    Default {	
+		+WEAPON.MELEEWEAPON;
+		+WEAPON.NOALERT;
+		+WEAPON.WIMPY_WEAPON;
+        weapon.selectionOrder 4000;
+		weapon.slotNumber 1;
+		Weapon.slotPriority 0.1;
+        Tag "Bare hands";
+		Mass 0;
+    }
+    States {
+        Nope:
+            TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
+            Goto Ready;
+        Ready:
+            TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
+            Loop;
+        Select:
+            TNT1 A 0 A_Raise();
+            Loop;
+        Deselect:
+            TNT1 A 0 A_Lower();
+            Loop;
+        Fire:
+            TNT1 A 0;
+            Goto Ready;
+		User1:
+			TNT1 A 0 { 
+				if ( GetPlayerInput(MODINPUT_BUTTONS)&BT_USE ) { wos_stripArmor(); }
+			}
+			goto Nope;
     }
 }
 class binderPlayerBody : Actor {

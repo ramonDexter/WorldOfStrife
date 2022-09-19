@@ -322,8 +322,8 @@ class wosEventHandler : EventHandler {
 			pawn.A_GiveInventory("implant_stamina", 1);
 		}
 		// ACS script support //
-		else if ( e.Name ~== "selectDagger" ) {
-			pawn.A_SelectWeapon("wosPunchDagger");
+		else if ( e.Name ~== "selectBareHands" ) {
+			pawn.A_SelectWeapon("wosBareHands");
 		} 
     }
 	////////////////////////////////////////////////////////////////////////////

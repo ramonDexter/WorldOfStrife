@@ -3417,7 +3417,7 @@ model wosD_excavator {
 	model 0 "excavator.md3"
 	skin 0 "tx_excavator.png"
 	scale 2.0 2.0 2.0
-	offset 64.0 0.0 0.0
+	offset 184.0 4.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_campBed {

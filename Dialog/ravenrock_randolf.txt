@@ -51,8 +51,9 @@ Conversation {
             Nextpage = "ravenrock_randolf_else";
         }
         Choice {
-            Text = "Give me the hypospray. (pay 27 gold)";
+            Text = "Give me the hypospray";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -63,8 +64,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the kombopack. (pay 55 gold)";
+            Text = "Give me the kombopack";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -75,8 +77,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the instaheal. (pay 125 gold)";
+            Text = "Give me the instaheal";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -87,8 +90,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the medpatch. (pay 12 gold)";
+            Text = "Give me the medpatch";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -99,8 +103,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the medical kit. (pay 27 gold)";
+            Text = "Give me the medical kit";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -111,8 +116,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the surgery kit. (pay 125 gold)";
+            Text = "Give me the surgery kit";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -123,8 +129,9 @@ Conversation {
 			}
         }
         Choice {
-            Text = "Give me the stamina stim. (pay 28 gold)";
+            Text = "Give me the stamina stim";
 			NextPage = "ravenrock_randolf_shop";
+            DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";

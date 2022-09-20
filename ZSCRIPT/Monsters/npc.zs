@@ -1142,8 +1142,8 @@ class dx_medicalBot : SwitchableDecoration {
     Default {
         //$Category "Other NPCs/WoS"
         //$Title "Medical Bot"
-        +SOLID
-        +USESPECIAL
+        +SOLID;
+        +USESPECIAL;
 
 		Tag "medical bot";
         radius 16;
@@ -1174,13 +1174,13 @@ class dx_cleanerBot : Actor {
     Default {
         //$Category "Other NPCs/WoS"
         //$Title "Cleaner Bot"
-        +SOLID
-        +USESPECIAL
-        +DROPOFF
-        +FRIENDLY
-        +NOTARGET
-        +NODAMAGE
-        +INVULNERABLE
+        +SOLID;
+        +USESPECIAL;
+        +DROPOFF;
+        +FRIENDLY;
+        +NOTARGET;
+        +NODAMAGE;
+        +INVULNERABLE;
 
 		Tag "cleaner bot";
         radius 8;

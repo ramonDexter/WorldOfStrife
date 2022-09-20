@@ -9534,8 +9534,8 @@ actor wosD_excavator 21554 {
 	//$Category "Decorations/Wos"
 	//$Title "excavator"
 	Tag "excavator"
-	radius 64
-	height 96
+	radius 76
+	height 104
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -10230,8 +10230,8 @@ actor wosD_jkjaWeaponRungs 21595 {
 }
 actor wosD_jkjainfirmaryTable 21596 {
 	//$Category "Decorations/Wos/JKJA/"
-	//$Title "infirmary table"
-	Tag "infirmary table"
+	//$Title "infirmary console"
+	Tag "infirmary console"
 	radius 12
 	height 28
 	+SOLID

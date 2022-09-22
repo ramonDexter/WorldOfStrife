@@ -10625,7 +10625,7 @@ actor PillarHugeTechLightning {
 actor PillarHugeTechAnimated : PillarHugeTech replaces PillarHugeTech 21624 {
 	//$Category "Decorations/Wos/"
 	//$Title "wos huge tech pillar"
-	Tag "huge pillar"
+	Tag "huge tech pillar"
 	Radius 24
   	Height 192
   	+SOLID
@@ -11115,7 +11115,22 @@ actor wosD_dex_flask 21708 {
 	}
 }
 
-
+actor wosD_FS_gtbArtemis 21709 {
+	//$Category "Decorations/WoS"
+	//$Title "gtb artemis"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "gtb artemis"
+	radius 32
+	height 64
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

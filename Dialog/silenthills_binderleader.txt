@@ -269,7 +269,7 @@ Conversation {
 	Page {
 		pagename = "binderLeader_ceremony_2_1";
 		Name = "\c[yellow]Tiberius, Binder Superior";
-		Dialog = "\c[white]Here is the ShoulderGun and ShoulderGun Charger. This weapon will give you you an off-hand advantage over your opponents. It is an shoulder mounted mauler cannon, capable of shooting sprays of mauler energy. The charger is used to replenish ShoulderGun's ammo reserve from your EnergyPod ammo pool. Use it wisely.";
+		Dialog = "\c[white]Here is the ShoulderGun and ShoulderGun Charger. This weapon will give you you an off-hand advantage over your opponents. It is an shoulder mounted mauler cannon, capable of shooting sprays of mauler energy. The charger is used to replenish ShoulderGun's ammo reserve from your EnergyPod ammo pool. Use it wisely. I'm alaso giving you a note with more detailed description, you can check it in your Journal.";
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {

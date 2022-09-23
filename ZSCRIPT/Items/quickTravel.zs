@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // code by Virathas ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-class quickTravel : CustomInventory {
+class wosQuickTravel : CustomInventory {
 
 	Actor TeleportTarget;
 
@@ -40,9 +40,8 @@ class quickTravel : CustomInventory {
 	}	
 	States {
 		Spawn:
-			QTDB V -1;
-			Stop;
-		
+			DUMM ABCD 6;
+			Loop;		
 		Use:
 			TNT1 A 0;
 			Stop;
@@ -63,9 +62,8 @@ class quickTravelBeacon : actor {
 	}	
 	States {
 		Spawn:
-		QTBC V -1;
-		Stop;
-		
+			DUMM AB 6;
+			Loop;		
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

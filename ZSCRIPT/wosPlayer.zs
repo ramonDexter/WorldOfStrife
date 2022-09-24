@@ -118,12 +118,12 @@ class binderPlayer : StrifePlayer {
 		//client.PushState();
 		//client.Tick();
 		///////////////
-        Super.Tick();
+		Super.Tick();
 		///////////////
 		//client.PopState();
 		
 		// custom functions ////////////////////////////////////////////////////		
-        HandleStamina();
+		HandleStamina();
 		HandleEncumberance();
 		HandleArmorMass();
 		HandlePlayerBody();		
@@ -135,19 +135,19 @@ class binderPlayer : StrifePlayer {
 		
 		level.aircontrol=1; //umoznuje ovladani hrace ve vzduchu - hrac se nezasekne ve skoku	
 		////////////////////////////////////////////////////////////////////////	
-    }
+	}
 	////////////////////////////////////////////////////////////////////////////
 
 	// postBeginPlay() /////////////////////////////////////////////////////////
 	override void PostBeginPlay() {
-        Super.PostBeginPlay();
+		Super.PostBeginPlay();
 		// LF sprinting code //
-        stamin = 400;
+		stamin = 400;
 		bleedlevel = 0;
 		///////////////////////
 		//client = new('C3DCollisionClient');
 		//client.parent = self;
-    }
+	}
 	////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////
 	

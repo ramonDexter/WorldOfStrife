@@ -11,8 +11,8 @@ class binderPlayer : StrifePlayer {
 	
 	//  LF mechanics vars  //
 	bool sprinting;
-    bool bracing;
-    int stamin;
+	bool bracing;
+	int stamin;
 	int maxstamin; //to allow handling of var in statusbar
 	bool staminaImplant;
 	int bleedlevel;
@@ -20,9 +20,9 @@ class binderPlayer : StrifePlayer {
 	double pvel;
 	double pang;
 	int encumbrance;
-    int weightmax;
-    bool overweight;
-    bool overweight2;
+	int weightmax;
+	bool overweight;
+	bool overweight2;
 	int currentarmor;
 	int armoramount;
 	int armorpower;
@@ -390,11 +390,11 @@ class binderPlayer : StrifePlayer {
 	// new movement function ///////////////////////////////////////////////////
 	//  code by Jarewill & ramon.dexter
 	void HandleSpeed() {
-        double hpeed = speedbase;
+		double hpeed = speedbase;
 		bool dont;
 		double stmed = 0.01 * (175 - stamin);
 
-        If ( !dont && !reactiontime && player.health ) {
+		If ( !dont && !reactiontime && player.health ) {
 			vel.x*=0.9; 
 			vel.y*=0.9; 
 			ViewBob=0.6*hpeed;
@@ -402,7 +402,7 @@ class binderPlayer : StrifePlayer {
 		If ( hpeed < 0.5 ) {
 			hpeed=0.5;
 		}
-        If ( stmed < 0 ) {
+		If ( stmed < 0 ) {
 			stmed=0;
 		}
 		hpeed -= stmed;
@@ -412,9 +412,9 @@ class binderPlayer : StrifePlayer {
 		If ( hpeed > 1.0 ) {
 			hpeed=1.0;
 		}
-        If( sprinting == 1 ) {
+		If( sprinting == 1 ) {
 			hpeed*=3.0;
-            If( GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN ){ hpeed /= 2;}			
+			If( GetPlayerInput(MODINPUT_BUTTONS)&BT_RUN ){ hpeed /= 2;}			
 		} else if ( sprinting == 0 ) {
 			hpeed *= 0.9;
 		}
@@ -424,13 +424,13 @@ class binderPlayer : StrifePlayer {
 		If( overweight == 1 ){ 
 			hpeed*=0.5; 
 		} //Halve speed when true
-        If( overweight2 == 1 ){ 
+		If( overweight2 == 1 ){ 
 			hpeed*=0.01; 
 		} //Set it to veery slow when true
 		//If(surgery==1||repairing==1){hpeed=0;}
 		ViewBob = 0.6*hpeed; //lower the viewBob
 		speed = hpeed;
-    }
+	}
 	////////////////////////////////////////////////////////////////////////////
 
 	// level handler ///////////////////////////////////////////////////////////
@@ -901,6 +901,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosKombopack", 10);
 			A_GiveInventory("wosInstaLek", 5);
 			A_GiveInventory("wosi_StimDevice", 5);
+			//quicktravel
+			A_GiveInventory("wosQuickTravel", 1);
 			//BlasterTurret_item
 			A_GiveInventory("wosInterceptordrone", 5);	
 			//DeployableShieldItem
@@ -932,6 +934,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosGrenadeE", 5);
 			A_GiveInventory("wosGrenadeF", 5);
 			A_GiveInventory("wosInstaLek", 5);
+			//quicktravel
+			A_GiveInventory("wosQuickTravel", 1);
 			// gold
 			A_GiveInventory("Coin", 2500);
 		}

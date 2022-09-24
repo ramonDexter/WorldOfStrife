@@ -1135,67 +1135,69 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 }
 class wos_sprintWeap : wosWeapon {
-    Default {
-        weapon.selectionOrder 4000;
-        Tag "Sprinting";
+	Default {
+		weapon.selectionOrder 4000;
+		Tag "Sprinting";
 		Mass 0;
-    }
-    States {
-        Nope:
-            TNT1 A 1 A_WeaponReady();
-            Loop;
-        Ready:
-            TNT1 A 1 A_WeaponReady(WRF_NOSWITCH);
-            Loop;
-        Select:
-            TNT1 A 0 A_Raise();
-            Loop;
-        Deselect:
-            TNT1 A 0 A_Lower();
-            Loop;
-        Fire:
-            TNT1 A 0;
-            Goto Ready;
-    }
+	}
+	States {
+		Nope:
+			TNT1 A 1 A_WeaponReady();
+			Loop;
+		Ready:
+			TNT1 A 1 A_WeaponReady(WRF_NOSWITCH);
+			Loop;
+		Select:
+			TNT1 A 0 A_Raise();
+			Loop;
+		Deselect:
+			TNT1 A 0 A_Lower();
+			Loop;
+		Fire:
+			TNT1 A 0;
+			Goto Ready;
+	}
 }
 class wosBareHands : wosWeapon {
-    Default {	
+	Default {	
 		+WEAPON.MELEEWEAPON;
 		+WEAPON.NOALERT;
 		+WEAPON.WIMPY_WEAPON;
-        weapon.selectionOrder 4000;
+		weapon.selectionOrder 4000;
 		weapon.slotNumber 1;
 		Weapon.slotPriority 0.1;
-        Tag "Bare hands";
+		Tag "Bare hands";
 		Mass 0;
-    }
-    States {
-        Nope:
-            TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
-            Goto Ready;
-        Ready:
-            TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
-            Loop;
-        Select:
-            TNT1 A 0 A_Raise();
-            Loop;
-        Deselect:
-            TNT1 A 0 A_Lower();
-            Loop;
-        Fire:
-            TNT1 A 0;
-            Goto Ready;
+	}
+	States {
+		Nope:
+			TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
+			Goto Ready;
+		Ready:
+			TNT1 A 1 A_WeaponReady(WRF_ALLOWUSER1);
+			Loop;
+		Select:
+			TNT1 A 0 A_Raise();
+			Loop;
+		Deselect:
+			TNT1 A 0 A_Lower();
+			Loop;
+		Fire:
+			TNT1 A 0;
+			Goto Ready;
 		User1:
 			TNT1 A 0 { 
 				if ( GetPlayerInput(MODINPUT_BUTTONS)&BT_USE ) { wos_stripArmor(); }
 			}
 			goto Nope;
-    }
+	}
 }
 class binderPlayerBody : Actor {
 	Default {
-		+NOGRAVITY; +NOBLOCKMAP;
-		+FORCEYBILLBOARD; +FLOORCLIP;
+		+NOGRAVITY; 
+		+NOBLOCKMAP;
+		+FORCEYBILLBOARD; 
+		+FLOORCLIP;
 	}
 	Override void Tick() {
 		Super.Tick();
@@ -1206,9 +1208,9 @@ class binderPlayerBody : Actor {
 		A_Warp(AAPTR_MASTER,-16,0,0,0,WARPF_NOCHECKPOSITION);
 	}
 	States {
-        Spawn:
-            BNDP A 1;
-            Loop;
+		Spawn:
+			BNDP A 1;
+			Loop;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

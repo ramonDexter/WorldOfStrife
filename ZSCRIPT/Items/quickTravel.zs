@@ -37,6 +37,7 @@ class wosQuickTravel : CustomInventory {
 		Inventory.MaxAmount 1;
 		inventory.InterHubAmount 1;
 		inventory.pickupmessage "$F_QTDEV";
+		Mass 45;
 	}	
 	States {
 		Spawn:

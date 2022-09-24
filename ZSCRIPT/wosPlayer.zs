@@ -285,7 +285,7 @@ class binderPlayer : StrifePlayer {
 
 	// jarewill's adopted code /////////////////////////////////////////////////
 	//  code by Jarewill
-    void BleedDamage() {
+	void BleedDamage() {
 		If(health>0) {
 			//A_Print("BleedDamage();");
 			DamageMobj(null,null,bleedlevel,"Bleeding");

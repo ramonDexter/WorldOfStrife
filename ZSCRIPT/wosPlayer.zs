@@ -201,7 +201,7 @@ class binderPlayer : StrifePlayer {
 	// weight based on player's stamina ////////////////////////////////////////
 	void HandleEncumberance() {
 		weightmax=2200; //Set the default		
-        //If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
+		//If(HandleUpgrade==1){weightmax+=500;} //Add 500 with the specific upgrade at level 1
 		// modify weightmax with stamina upgrades
 		if ( maxstamin == 440 ) { weightmax = 2420; }
 		if ( maxstamin == 520 ) { weightmax = 2860; }
@@ -209,51 +209,50 @@ class binderPlayer : StrifePlayer {
 		if ( maxstamin == 700 ) { weightmax = 3850; }
 		if ( maxstamin == 800 ) { weightmax = 4400; }
 		// finalize wightmax
-        If( staminaImplant ){ weightmax+=1000; } //Add 1000 if it's at 2 instead
-        If(CountInv("AmmoSatchel")){ weightmax*=1.5; } //Double with the backpack
+		If( staminaImplant ){ weightmax+=1000; } //Add 1000 if it's at 2 instead
+		If(CountInv("AmmoSatchel")){ weightmax*=1.5; } //Double with the backpack
 		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
-        If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)
+		If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)
 	}
  	// armor&mass //////////////////////////////////////////////////////////////
 	void HandleArmorMass() {
 		If (armoramount < 1) {
 			//reset power when no armor or depleted
 			currentarmor=0; 
-            armorpower=0;
+			armorpower=0;
 			armorclass=0;
-        }		
+		}		
 		If (currentarmor==1) {
-            encumbrance+=LeatherWeight/5; 
-            mass=300; 
-            bNOBLOOD=0;
+			encumbrance+=LeatherWeight/5; 
+			mass=300; 
+			bNOBLOOD=0;
 			armorpower = 24;
 			armorclass = 4;
-        } Else If (currentarmor==2) {
-            encumbrance+=MetalWeight/5; 
-            mass=400; 
-            bNOBLOOD=1;
+		} Else If (currentarmor==2) {
+			encumbrance+=MetalWeight/5; 
+			mass=400; 
+			bNOBLOOD=1;
 			armorpower = 44;
 			armorclass = 7;
-        } Else If (currentarmor==3) {
-            encumbrance+=BinderBasicWeight/7; 
-            mass=350; 
-            bNOBLOOD=0;
+		} Else If (currentarmor==3) {
+			encumbrance+=BinderBasicWeight/7; 
+			mass=350; 
+			bNOBLOOD=0;
 			armorpower = 33;
 			armorclass = 6;
-        } Else If (currentarmor==4) {
-            encumbrance+=BinderAdvancedWeight/7; 
-            mass=350; 
-            bNOBLOOD=1;
+		} Else If (currentarmor==4) {
+			encumbrance+=BinderAdvancedWeight/7; 
+			mass=350; 
+			bNOBLOOD=1;
 			armorpower = 50;
 			armorclass = 9;
-        } Else if (currentarmor==5) {
+		} Else if (currentarmor==5) {
 			encumbrance+=KineticWeight/7; 
-            mass=250; 
-            bNOBLOOD=1;
+			mass=250; 
+			bNOBLOOD=1;
 			armorpower = 65;
 			armorclass = 12;
-		} 
-		Else {
+		} Else {
 			mass=100; 
 			bNOBLOOD=0; 
 			PainChance=255;
@@ -263,7 +262,7 @@ class binderPlayer : StrifePlayer {
 	void HandlePlayerBody() {
 		If(backplaye==null) {
 			bool spawn1; 
-            Actor spawn2;
+			Actor spawn2;
 			[spawn1, spawn2] = A_SpawnItemEx("binderPlayerBody",flags: SXF_SETMASTER);
 			backplaye=spawn2;
 		}
@@ -271,8 +270,8 @@ class binderPlayer : StrifePlayer {
 	// bleeding controller /////////////////////////////////////////////////////
 	void HandleBleed() {
 		If ( bleedlevel > 0 ) {
-            If( bleedtimer >= ( 70 / bleedlevel )) {
-                BleedDamage();
+			If( bleedtimer >= ( 70 / bleedlevel )) {
+				BleedDamage();
 				//A_Print("bleedDamage!");
 			}
 			Else {
@@ -311,7 +310,7 @@ class binderPlayer : StrifePlayer {
 	//  code by Jarewill
 	void HandleStamina() {
 		// modified working stamina raise according to player's health modified by UpgradeStamina //
-        maxstamin = 400;
+		maxstamin = 400;
 		int pawnmaxhealth = GetMaxHealth(true);
 		If ( pawnmaxhealth >= 120 && pawnmaxhealth < 140 ) { maxstamin = 440; }
 		If ( pawnmaxhealth >= 140 && pawnmaxhealth < 160 ) { maxstamin = 520; }
@@ -351,7 +350,7 @@ class binderPlayer : StrifePlayer {
 				A_SelectWeapon(selectedWeapon.GetClassName());
 			}
 		}
-    }
+	}
 	////////////////////////////////////////////////////////////////////////////
 
 	// damageMObj() ////////////////////////////////////////////////////////////

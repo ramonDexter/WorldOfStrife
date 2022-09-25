@@ -4,13 +4,25 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 15;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Waldreg, Specialities Vendor";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_specilitiesVendor_opener";
-		Name = "\c[yellow]Specialities Vendor";
+		Name = "\c[yellow]Waldreg, Specialities Vendor";
 		Dialog = "\c[white]Hello, what can I get you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy Environmental Suit";
+			Text = "\c[gold]Buy Environmental Suit";
 			NextPage = "SH_specilitiesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -22,7 +34,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Targeter";
+			Text = "\c[gold]Buy Targeter";
 			NextPage = "SH_specilitiesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -34,7 +46,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Shadow Armor";
+			Text = "\c[gold]Buy Shadow Armor";
 			NextPage = "SH_specilitiesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -46,7 +58,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Scanner";
+			Text = "\c[gold]Buy Scanner";
 			NextPage = "SH_specilitiesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -58,7 +70,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Deployable shield";
+			Text = "\c[gold]Buy Deployable shield";
 			NextPage = "SH_specilitiesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -69,6 +81,62 @@ Conversation {
 				Amount = 100;
 			}
 		}
+        Choice {
+            Text = "I've got some questions.";
+            Nextpage = "SH_specilitiesVendor_questions";
+        }
 	}
+    Page {
+        pageName = "SH_specilitiesVendor_questions";
+        Name = "\c[yellow]Waldreg, Specialities Vendor";
+        Dialog = "\c[white]What did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "SH_specilitiesVendor_whoareyou";
+        }
+        Choice {
+            Text = "This is your shop?";
+            Nextpage = "SH_specilitiesVendor_yourshop";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_specilitiesVendor_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_specilitiesVendor_opener";
+        }
+    }
+    Page {
+        pageName = "SH_specilitiesVendor_whoareyou";
+        Name = "\c[yellow]Waldreg, Specialities Vendor";
+        Dialog = "\c[white]My name's Waldreg. I'm techsmisth. I specialize in supporting equipment, like the Environmental Suits, Targeters and Shadow Armor.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_specilitiesVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_specilitiesVendor_yourshop";
+        Name = "\c[yellow]Waldreg, Specialities Vendor";
+        Dialog = "\c[white]Well, yes and no. The business is owned by me, but I have to rent the rooms from a local welthy Merchant. The rental is pretty high, but the business is good, so I'm not struggling.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_specilitiesVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_specilitiesVendor_aboutsilenthills";
+        Name = "\c[yellow]Waldreg, Specialities Vendor";
+        Dialog = "\c[white]Sorry, I'm not local, so I wont tell you much about the town as the true locals do. But let me try. Silent Hills is a small trading community hidden in the Northern Hillside. Most of the locals run some ssort of small business, the rest work in the mines or in the powerplant. The town is supervised by the the Imperial Governor.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_specilitiesVendor_questions";
+        }
+    }
 }
 //==================================================================================================================

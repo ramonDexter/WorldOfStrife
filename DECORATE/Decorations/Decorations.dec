@@ -5885,7 +5885,7 @@ actor dummy_binderBadge2 21335 {
 }
 actor wosD_dex_Skull 21336 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx skull"
+	//$Title "dex skull"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5901,7 +5901,7 @@ actor wosD_dex_Skull 21336 {
 }
 actor wosD_dex_plant2 21337 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx plant 2"
+	//$Title "dex plant 2"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5917,7 +5917,7 @@ actor wosD_dex_plant2 21337 {
 }
 actor wosD_dex_plant3 21338 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx plant 3"
+	//$Title "dex plant 3"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5933,7 +5933,7 @@ actor wosD_dex_plant3 21338 {
 }
 actor wosD_dex_basket 21339 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx basket"
+	//$Title "dex basket"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5949,7 +5949,7 @@ actor wosD_dex_basket 21339 {
 }
 actor wosD_dex_bookOpen 21340 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx book Open"
+	//$Title "dex book Open"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5965,7 +5965,7 @@ actor wosD_dex_bookOpen 21340 {
 }
 actor wosD_dex_cactus1 21341 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx cactus 1"
+	//$Title "dex cactus 1"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5981,7 +5981,7 @@ actor wosD_dex_cactus1 21341 {
 }
 actor wosD_dex_cactus2 21342 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx cactus 2"
+	//$Title "dex cactus 2"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -5997,7 +5997,7 @@ actor wosD_dex_cactus2 21342 {
 }
 actor wosD_dex_cart 21343 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx cart"
+	//$Title "dex cart"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6013,7 +6013,7 @@ actor wosD_dex_cart 21343 {
 }
 actor wosD_dex_compSecurity : SwitchableDecoration 21344 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx comp security"
+	//$Title "dex comp security"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6038,7 +6038,7 @@ actor wosD_dex_compSecurity : SwitchableDecoration 21344 {
 }
 actor wosD_dex_fireExtinguisher 21345 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx hasicak"
+	//$Title "dex hasicak"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6054,7 +6054,7 @@ actor wosD_dex_fireExtinguisher 21345 {
 }
 actor wosD_dex_hangingChicken 21346 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx hanging chicken"
+	//$Title "dex hanging chicken"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6071,7 +6071,7 @@ actor wosD_dex_hangingChicken 21346 {
 }
 actor wosD_dex_hangingPig 21347 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx hanging pig"
+	//$Title "dex hanging pig"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6088,7 +6088,7 @@ actor wosD_dex_hangingPig 21347 {
 }
 actor wosD_dex_lamp1 21348 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx lamp 1"
+	//$Title "dex lamp 1"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6104,7 +6104,7 @@ actor wosD_dex_lamp1 21348 {
 }
 actor wosD_dex_lamp3 21349 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx lamp 3"
+	//$Title "dex lamp 3"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6120,7 +6120,7 @@ actor wosD_dex_lamp3 21349 {
 }
 actor wosD_dex_microscope 21350 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx microscope"
+	//$Title "dex microscope"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6136,7 +6136,7 @@ actor wosD_dex_microscope 21350 {
 }
 actor wosD_dex_shopLight 21351 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx shop light"
+	//$Title "dex shop light"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6153,7 +6153,7 @@ actor wosD_dex_shopLight 21351 {
 }
 actor wosD_dex_showerFaucet 21352 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx shower faucet"
+	//$Title "dex shower faucet"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6169,7 +6169,7 @@ actor wosD_dex_showerFaucet 21352 {
 }
 actor wosD_dex_showerHead 21353 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx shower head"
+	//$Title "dex shower head"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6185,7 +6185,7 @@ actor wosD_dex_showerHead 21353 {
 }
 actor wosD_dex_statueLion 21354 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx statue lion"
+	//$Title "dex statue lion"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6201,7 +6201,7 @@ actor wosD_dex_statueLion 21354 {
 }
 actor wosD_dex_tad 21355 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx TAD"
+	//$Title "dex TAD"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6217,7 +6217,7 @@ actor wosD_dex_tad 21355 {
 }
 actor wosD_dex_toilet1 21356 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx toilet"
+	//$Title "dex toilet"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6233,7 +6233,7 @@ actor wosD_dex_toilet1 21356 {
 }
 actor wosD_dex_toilet2 21357 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx pissoir"
+	//$Title "dex pissoir"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6249,7 +6249,7 @@ actor wosD_dex_toilet2 21357 {
 }
 actor wosD_dex_trashcan2 21358 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx trashcan 2"
+	//$Title "dex trashcan 2"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6265,7 +6265,7 @@ actor wosD_dex_trashcan2 21358 {
 }
 actor wosD_dex_trashcan3 21359 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx trashcan 3"
+	//$Title "dex trashcan 3"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6281,7 +6281,7 @@ actor wosD_dex_trashcan3 21359 {
 }
 actor wosD_dex_waterCooler 21360 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx water cooler"
+	//$Title "dex water cooler"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6297,7 +6297,7 @@ actor wosD_dex_waterCooler 21360 {
 }
 actor wosD_dex_wineBottle 21361 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx wine bottle"
+	//$Title "dex wine bottle"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -6313,7 +6313,7 @@ actor wosD_dex_wineBottle 21361 {
 }
 actor wosD_dex_smallBoat 21362 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx small boat"
+	//$Title "dex small boat"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -7295,7 +7295,7 @@ actor wosD_cyclonesPillar 21422 {
 }
 actor wosD_dex_statueLion2 21423 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx statue lion 2"
+	//$Title "dex statue lion 2"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11004,7 +11004,7 @@ actor wosD_tekStreetPole 21701 {
 
 actor wosD_dex_trashCan4 21702 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx trashcan 4"
+	//$Title "dex trashcan 4"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11020,7 +11020,7 @@ actor wosD_dex_trashCan4 21702 {
 }
 actor wosD_dex_satelliteDish 21703 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx satellite dish"
+	//$Title "dex satellite dish"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11036,7 +11036,7 @@ actor wosD_dex_satelliteDish 21703 {
 }
 actor wosD_dex_phone 21704 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx phone"
+	//$Title "dex phone"
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11052,7 +11052,7 @@ actor wosD_dex_phone 21704 {
 }
 actor wosD_dex_marketTarp 21705 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx market tarp"
+	//$Title "dex market tarp"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11068,13 +11068,13 @@ actor wosD_dex_marketTarp 21705 {
 }
 actor wosD_dex_chair1 21706 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx chair"
+	//$Title "dex chair"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "chair"
-	radius 16
+	radius 10
 	height 32
 	States {
 		Spawn:
@@ -11084,7 +11084,7 @@ actor wosD_dex_chair1 21706 {
 }
 actor wosD_dex_flowers 21707 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx flowers dish"
+	//$Title "dex flowers dish"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -11100,7 +11100,7 @@ actor wosD_dex_flowers 21707 {
 }
 actor wosD_dex_flask 21708 {
 	//$Category "Decorations/WoS/deusEx"
-	//$Title "dEx flask"
+	//$Title "dex flask"
 	-SOLID
 	+USESPECIAL
 	+NOGRAVITY

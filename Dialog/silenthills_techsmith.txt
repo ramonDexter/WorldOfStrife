@@ -4,6 +4,18 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 9;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Techsmith";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_techSmith1_opener";
 		Name = "\c[yellow]Techsmith";
@@ -38,8 +50,12 @@ Conversation {
 			NextPage = "SH_techSmith1_shop";
 		}
 		Choice {
-			Text = "Upgrade";
+			Text = "Upgrades";
 			NextPage = "SH_techSmith1_upgrades";
+		}
+		Choice {
+			Text = "I've got some questions";
+			NextPage = "SH_techSmith1_questions";
 		}
 	}
     Page {
@@ -166,6 +182,44 @@ Conversation {
             YesMessage = "No problem.";
             Special = 80;
             arg0 = 1505;
+        }
+    }
+    Page {
+        pageName = "SH_techSmith1_questions";
+        Name = "\c[yellow]Techsmith";
+        Dialog = "\c[white]Just ask.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Could you tell me about yourself?";
+            Nextpage = "SH_techSmith1_aboutyourself";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_techSmith1_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_techSmith1_opener";
+        }
+    }
+    Page {
+        pageName = "SH_techSmith1_aboutyourself";
+        Name = "\c[yellow]Techsmith";
+        Dialog = "\c[white]I am Roderick, and I am a techsmith. I make all the technical things, and I repair everything my customers bring here. I've graduated on the Millport TekGuild university fifteen years ago. Came to Silent Hills about ten years ago, when I left Millport.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_techSmith1_questions";
+        }
+    }
+    Page {
+        pageName = "SH_techSmith1_aboutsilenthills";
+        Name = "\c[yellow]Techsmith";
+        Dialog = "\c[white]Silent Hills is a nice small trading town. Most of the locals make their living as traders, the rest works in the mines or in the powerplant. Out town is peaceful community, faithful to the Church and the Imperial government. The city is governed by the Governor, who resides in his manor next to the riverbank.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_techSmith1_questions";
         }
     }
 }

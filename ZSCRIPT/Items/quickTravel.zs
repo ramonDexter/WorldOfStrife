@@ -31,13 +31,13 @@ class wosQuickTravel : CustomInventory {
 		Tag "$T_QTDEV";
 		height 10;
 		radius 10;
-		scale 0.5;
+		//scale 0.5;
 		inventory.icon "I_QTDB";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		inventory.InterHubAmount 1;
 		inventory.pickupmessage "$F_QTDEV";
-		Mass 45;
+		Mass quickTravelWeight;
 	}	
 	States {
 		Spawn:

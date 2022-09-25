@@ -4,13 +4,25 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 8;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Grocery vendor"; 
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
 	Page {
         pageName = "SH_groceryVendor_opener";
-		Name = "\c[yellow]Vendor";
+		Name = "\c[yellow]Grocery vendor";
 		Dialog = "\c[white]Hello, how may I serve you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy hamburger";
+			Text = "\c[gold]Buy hamburger";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_groceryVendor_opener";
@@ -22,7 +34,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy cheeseburger";
+			Text = "\c[gold]Buy cheeseburger";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_groceryVendor_opener";
@@ -34,7 +46,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy bigburger";
+			Text = "\c[gold]Buy bigburger";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_groceryVendor_opener";
@@ -46,7 +58,19 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy water bottle";
+			Text = "\c[gold]Buy food rations pack";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold!";
+			NextPage = "SH_groceryVendor_opener";
+			DisplayCost = true;
+			GiveItem = "wosFoodRation1";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy water bottle";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_groceryVendor_opener";
@@ -58,7 +82,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy bottle of beer";
+			Text = "\c[gold]Buy bottle of beer";
 			NextPage = "SH_groceryVendor_opener";
 			DisplayCost = true;
 			GiveItem = "wosbeerBottle";
@@ -69,6 +93,48 @@ Conversation {
 				amount = 10;
 			}
 		}
+		Choice {
+			Text = "I've got some questions.";
+			NextPage = "SH_groceryVendor_questions";
+		}
 	}
+    Page {
+        pageName = "SH_groceryVendor_questions";
+        Name = "\c[yellow]Grocery vendor"; 
+        Dialog = "\c[white]What did you wanted to know?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "How's business going?";
+            Nextpage = "SH_groceryVendor_businessgoing";
+        }
+        Choice {
+            Text = "Is this shop yours?";
+            Nextpage = "SH_groceryVendor_shopyours";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_groceryVendor_opener";
+        }
+    }
+    Page {
+        pageName = "SH_groceryVendor_businessgoing";
+        Name = "\c[yellow]Grocery vendor"; 
+        Dialog = "\c[white]Oh yeah, it's been good lately. Since we offer the best goods in town, our customers like to return. So the business is good, I guess.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_groceryVendor_questions";
+        }
+    }
+    Page {
+        pageName = "SH_groceryVendor_shopyours";
+        Name = "\c[yellow]Grocery vendor"; 
+        Dialog = "\c[white]Oh, no. I'm just an emplyee here. The shop's owned by mister Rothbert. He's a wealthy businessman, owns a lot of locals businesses.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_groceryVendor_questions";
+        }
+    }
 }
 //==================================================================================================================

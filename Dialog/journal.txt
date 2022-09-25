@@ -199,6 +199,18 @@ Conversation {
             }
         }
         /////////////////////////////////////////////////////////////
+        Choice {
+            Text = "[ Quest - Heretical base in Northern Territory ]";
+            NextPage = "journal_SQ_bishop_hereticBase_killed";
+            Require {
+                item = "twn_bishopQ02_killRebels_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_bishopQ02_killRebels_finished";
+                amount = 1;
+            }
+        }
 
         // tekguildmaster q01 Ore delivery //////////////////////////
         Choice {
@@ -1426,7 +1438,51 @@ Conversation {
     //##################################################################################################################
     
     //Bishop quest#02
-    //------------------------------------------------------------------------
+    //##################################################################################################################
+    Page {
+        link = "journal_SQ_bishop_hereticBase_killed";
+        IfItem {
+            item = "twn_bishopQ02_killRebels_rebelsKilled";
+            amount = 1;
+        }
+        pageName = "journal_SQ_bishop_hereticBase_opener";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[ ] Find heretical base and kill the heretics\n[ ] Return to Bishop";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        link = "journal_SQ_bishop_hereticBase_finished";
+        IfItem {
+            item = "twn_bishopQ02_killRebels_finished";
+            amount = 1;
+        }
+        pageName = "journal_SQ_bishop_hereticBase_killed";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[ ] Return to Bishop";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    Page {
+        pageName = "journal_SQ_bishop_hereticBase_finished";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[X] Return to Bishop";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "journal_quests";
+		}
+    }
+    //##################################################################################################################
     
     
     //tekguild master quests

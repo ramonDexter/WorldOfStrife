@@ -6,7 +6,7 @@ Conversation {
     ID = 35;
     Page {
         pageName = "SH_CityJudge_opener";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Hello, binder. How may I help you? Are you seeking information? Aro do you want to help me? I've got some cases to solve here.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -21,7 +21,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_questions";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Yes, what do you need to know?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -37,7 +37,7 @@ Conversation {
             item = "twn_judgeQs_solved";
             amount = 1;
         }
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Good, I have two unsolved cases here. I have an information that there is a rebel hiding amongst citizens. The second case is a case of murdered trader. So, which one would you pick?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -64,7 +64,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_worknomore";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Thanks to you I have no more work. Thank you, again.";
         Goodbye = "\c[red]Goodbye";
         Choice {
@@ -80,7 +80,7 @@ Conversation {
             amount = 1;
         }
         pageName = "SH_CityJudge_work_rebels_opener";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Yes, the rebel. My informants have told me that there is a rebel hiding amongst the citizens. I just can't figure out who is this outcast. I need you to ask the locals, if they know anything about this case. Try asking the traders, and especially the innkeepers. They always know a lot. When you find the rebel, slay him and report back to me. Is this clear?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -109,7 +109,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_rebels_searching";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]So, have you removed the rebel?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -134,7 +134,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_rebels_killed";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]So, have you removed the rebel?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -145,7 +145,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_rebels_finish";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Thank you. I have been trying to solve this case for a long time, but my resources are limited. You acknowledged yourself as a resourceful. Thank you again and here is your reward. You've earned it.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -169,7 +169,7 @@ Conversation {
     //murder quest ---------------------------------------------------------
     Page {
         pageName = "SH_CityJudge_work_muder_opener";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]I have been reported there had a murder happened in the city bath. Go to the place and find out what's going on. No time to explain, hurry up!";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -189,7 +189,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_muder_whatdidyoufound";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]I have been reported there had a murder happened in the city bath. Go to the place and find out what's going on. No time to explain, hurry up!";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -218,7 +218,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_muder_speakwithtechsmith";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Yes, show it to me? (he takes the detonator from you, takes a long look at it from all sides and then returns it back to you) Yes, this has been made by the city Techsmith. Take it and speak with him. We have some compromising info on him, so getting information from him should be an easy task. Go.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -233,7 +233,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_muder_whathetoldyou";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]So, what did the techsmith told you? What have you found out?";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
@@ -258,7 +258,7 @@ Conversation {
     }
     Page {
         pageName = "SH_CityJudge_work_muder_itwasmerchant";
-        Name = "\c[yellow]City Judge";
+        Name = "\c[yellow]Judge of Change";
         Dialog = "\c[white]Yes? Tell me how that happened. (You give the judge complete description of the case) So, it was after all a bunch of two warring traders? Nothing else? That's good. I was worried we are dealing with heretics here. I glad it ended this way. The convict will be execited according to law and this here is your reward. You've earned it.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";

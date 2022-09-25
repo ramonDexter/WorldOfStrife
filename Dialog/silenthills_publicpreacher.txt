@@ -87,7 +87,7 @@ Conversation {
     Page {
         pageName = "SH_publicPreacher_aboutcity";
         Name = "\c[yellow]Preacher";
-        Dialog = "\c[white]Silent Hills is a peaceful town on the edge of the Wilderness. The Order is keeping peace here and our work is to keep spiritual peace also.";
+        Dialog = "\c[white]Silent Hills is a peaceful town on the edge of the Northern Hillside. The Order is keeping peace here and our work is to keep spiritual peace also.";
         Goodbye = "\c[red]Goodbye";
         Choice {
             Text = "\c[yellow]<< BACK";

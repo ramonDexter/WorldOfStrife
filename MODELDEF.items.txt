@@ -1201,7 +1201,7 @@ model StrifeMap {
 model wosQuickTravel {
 	path "models/items/quicktravel/"
 	model 0 "dx_qtDevice.md3"
-	scale 8.32 8.32 8.32
+	scale 4.5 4.5 4.5
 	offset 0.0 0.0 0.0
 
 	surfaceskin 0 0 "tx_pmap1.png"

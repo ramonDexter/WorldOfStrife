@@ -263,7 +263,7 @@ Conversation {
     Page {
         pageName = "SH_tekGuildChief_Q3_details";
         Name = "\c[yellow]Norwick, chief of TekGuild";
-        Dialog = "\c[white]You can use our portal, that connects our base with the coastal outpost. I've marked the coastal windtrap powerplant on your map. Go there and find out what happened there.";
+        Dialog = "\c[white]You can use our air transporter, the pilot waits you on the heliport. I've marked the coastal windtrap powerplant on your map. Go there and find out what happened there. I've already notified our pilot about this.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_TGCHF";
         Choice {

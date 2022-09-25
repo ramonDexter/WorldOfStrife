@@ -91,13 +91,13 @@ Conversation {
 		Panel = "M_DCTR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK"; //\c[yellow]<< BACK ]
+			Text = "\c[yellow]<< BACK";
 			NextPage = 2;
 		}
-		Choice {
+		/*Choice {
 			Text = "Cybernetic implant? That sounds good.";
 			Nextpage = "binderSurgeon_staminaimplant";
-		}
+		}*/
 		Choice {
 			Text = "One Hypospray"; //One zscmedpatch
 			NextPage = "binderSurgeon_badgetrading";
@@ -139,7 +139,7 @@ Conversation {
 		}
 
 	}
-    Page {
+    /*Page {
         pageName = "binderSurgeon_staminaimplant";
         Name = "\c[yellow]Surgeon";
         Dialog = "\c[white]Oh yes, it is great enahncement for your body and health. Each implant will raise your health by 10 points until 200 points. I will sell you one stamina implant for one upgrade token.\nYou have to use the surgical unit to install the implant.";
@@ -164,7 +164,7 @@ Conversation {
 				amount = 1;
 			}
 		}
-    }
+    }*/
 	Page {
         pageName = "binderSurgeon_questions";
 		Name = "\c[yellow]Surgeon";

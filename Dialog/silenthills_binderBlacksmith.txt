@@ -15,14 +15,14 @@ Conversation {
 
 		}
 
-		Choice {
+		/*Choice {
 			Text = "Do you offer any other services?";
 			NextPage = "binderBlacksmith_otherservices";
 			Require {
 				item = "binderBadge";
 				amount = 1;
 			}
-		}
+		}*/
 
 	}
 	Page {
@@ -92,23 +92,11 @@ Conversation {
 			NextPage = "binderBlacksmith_opener";
 		}
 	}
-	Page {
+	/*Page {
         pageName = "binderBlacksmith_otherservices";
 		Name = "\c[yellow]Forgemaster";
 		Dialog = "\c[white]\c[white]Of course. I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade."; //\c[white]Of course. I can upgrade your staff, if you want.\nJust give me your staff, I'll install the upgrade right here and now.\nAlso, I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase the upgrade.
 		Goodbye = "\c[red]Goodbye";
-		/*Choice {
-			Text = "Ok, here is the staff."; //Ok, here is the staff.
-			NextPage = "binderBlacksmith_otherservices";
-			CloseDialog = true;
-			YesMessage = "Here you go. One small clip and we're done."; //Here you go. One small clip and we're done.
-			NoMessage = "You don't have the staff!"; //You don't have the staff!
-			GiveItem = "StaffBlasterUpgr";
-			Cost {
-				item = "staffBlaster";
-				amount = 1;
-			}
-		}*/
 		Choice {
 			Text = "Cybernetic implant? I like it.";//Cybernetic implant? I like it.
 			NextPage = "binderBlacksmith_implant";
@@ -139,6 +127,6 @@ Conversation {
 				amount = 1;
 			}
 		}
-    }
+    }*/
 }
 //==================================================================================================================

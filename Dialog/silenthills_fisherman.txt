@@ -1,0 +1,70 @@
+// silenthills fisherman Vic convID 54 ////////////////////////////////////////////////
+namespace = "GZDoom";
+Conversation {
+    ID =  54;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Vic, fisher";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    // SH_fisherman_opener
+    Page {
+        pageName = "SH_fisherman_opener";
+        Name = "\c[yellow]Vic, fisher";
+        Dialog = "\c[white]Hello, Binder. What brings you to my humble lodge?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Who are you?";
+            Nextpage = "SH_fisherman_whoareyou";
+        }
+        Choice {
+            Text = "How's life here, outside town's walls?";
+            Nextpage = "SH_fisherman_lifehere";
+        }
+        Choice {
+            Text = "Could you tell me about the surroundings?";
+            Nextpage = "SH_fisherman_aboutsurroundings";
+        }
+    }
+    Page {
+        pageName = "SH_fisherman_whoareyou";
+        Name = "\c[yellow]Vic, fisher";
+        Dialog = "\c[white]I am Vic. I am a fisher. I hunt for all that lives in the river.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "How's life here, outside town's walls?";
+            Nextpage = "SH_fisherman_lifehere";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_fisherman_opener";
+        }
+    }
+    Page {
+        pageName = "SH_fisherman_lifehere";
+        Name = "\c[yellow]Vic, fisher";
+        Dialog = "\c[white]Oh, I live a simple peaceful life here. Since my cottage here is pretty hidden from sight, I got no trouble from the wandering bands of criminals. And because I hunt fish, I got my living here pretty secured. The river is full of fish and other things that could be cooked, so I got even enough to sell. So living here is good, if you don't mind getting dirty and tired.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_fisherman_opener";
+        }
+    }
+    Page {
+        pageName = "SH_fisherman_aboutsurroundings";
+        Name = "\c[yellow]Vic, fisher";
+        Dialog = "\c[white]Well, the road here could dangerous, especially during nighttime. In the middle of the roads is the hill with the Chapel on top of it. You can visit it if you are need of prayer. The northern road leads to village Dubyanka, and further to the north is the city Norington. The western road leads to village Ridgewick. Bu careful around the south-western part. The heretics have their base there. And in the northern part of the road junction you can find some old ruins.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_fisherman_opener";
+        }
+    }
+}

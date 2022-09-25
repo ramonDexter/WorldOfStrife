@@ -1,0 +1,135 @@
+// binder receptionist recruiting center convid 55 ////////////////////////////////////
+namespace = "GZDoom";
+Conversation {
+    ID = 55;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Binder Receptionist";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "SH_binderReceptionist_opener";
+        Name = "\c[yellow]Binder Receptionist";
+        Dialog = "\c[white]Welcome, brother. What brings you here?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "How are you?";
+            Nextpage = "SH_binderReceptionist_howareyou";
+        }
+        Choice {
+            Text = "What are you doing here?";
+            Nextpage = "SH_binderReceptionist_doinghere";
+        }
+        Choice {
+            Text = "Could you tell me about Silent Hills?";
+            Nextpage = "SH_binderReceptionist_aboutsilenthills";
+        }
+    }
+    Page {
+        pageName = "SH_binderReceptionist_howareyou";
+        Name = "\c[yellow]Binder Receptionist";
+        Dialog = "\c[white]Oh, I'm fine, thanks for asking. Two duty here is not a hard one, so I think I'm starting to be a little lazy lately.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_binderReceptionist_opener";
+        }
+    }
+    Page {
+        pageName = "SH_binderReceptionist_doinghere";
+        Name = "\c[yellow]Binder Receptionist";
+        Dialog = "\c[white]As you can see, I'm the receptionist here in the Binder Recruitment Center. I write down names of those who are interested in joining our sacred order. Then I prepare them for the first briefeing up in the briefing room. Not a hrd job, if you ask.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_binderReceptionist_opener";
+        }
+    }
+    Page {
+        pageName = "SH_binderReceptionist_aboutsilenthills";
+        Name = "\c[yellow]Binder Receptionist";
+        Dialog = "\c[white]Oh, you're asking the right one. I was born here, and spent most of my life here. Silent Hills in a small town with everything you can imagine. We got plethora of shops and services here, most of them are on the eastern bank of river. The western bank is the residential part, where most of the locals live. We got even city bath and a TekGuild university here. These both are in the residential area on the western bank.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_binderReceptionist_opener";
+        }
+    }
+}
+Conversation {
+    ID = 56;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Binder Officer";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "SH_binderOfficer_opener";
+        Name = "\c[yellow]Binder Officer";
+        Dialog = "\c[white]Oh, hello brother. Sorry, I'm busy here. We can chat later.\nIf you want, use the teleporter pad to visit our base.";
+        Goodbye = "\c[red]Goodbye.";
+    }
+}
+Conversation {
+    ID = 57;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]Binder Preacher";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "SH_binderPreacher_opener";
+        Name = "\c[yellow]Binder Preacher";
+        Dialog = "\c[white]Hello, brother! Have you come to check our work here?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Oh, no. I just came for a little chat.";
+            Nextpage = "SH_binderPreacher_littlechat";
+        }
+        Choice {
+            Text = "Yes. How is the recruitment going?";
+            Nextpage = "SH_binderPreacher_howgoesrecruitment";
+        }
+    }
+    Page {
+        pageName = "SH_binderPreacher_howgoesrecruitment";
+        Name = "\c[yellow]Binder Preacher";
+        Dialog = "\c[white]Oh, Father bless, the recruitment goes well this year. We have twice more recruits than the later year.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_binderPreacher_opener";
+        }
+    }
+    Page {
+        pageName = "SH_binderPreacher_littlechat";
+        Name = "\c[yellow]Binder Preacher";
+        Dialog = "\c[white]Sorry, I'm preparing a new speech for new batch of recruits. Maybe later.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_binderPreacher_opener";
+        }
+    }
+}

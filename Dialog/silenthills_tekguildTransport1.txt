@@ -1,0 +1,64 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 52;
+    /*
+    Page {
+        pageName = "";
+        Name = "\c[yellow]TekGuild Pilot";
+        Dialog = "\c[white]";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "";
+            Nextpage = "";
+        }
+    }
+    */
+    Page {
+        pageName = "SH_tekguildPilot1_opener";
+        Name = "\c[yellow]TekGuild Pilot";
+        Dialog = "\c[white]Hello, Binder. How may I help you?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Your supervisor sends me to the coastal powerplant.";
+            Nextpage = "SH_tekguildPilot1_opener";
+            YesMessage = "\c[white]Sure, just hop in!";
+            Special = 80;
+            arg0 = 1603;
+            Closedialog = true;
+            Require {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_given";
+                cost = 1;
+            }
+            Exclude {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+                cost = 1;
+            }
+        }
+        Choice {
+            Text = "Where can you take me?";
+            Nextpage = "SH_tekguildPilot1_opener";
+            YesMessage = "\c[white]Sorry, without a permit I cannot take off.";
+            Exclude {
+                item = "twn_tekGuildMasterQ3_powerplantTrouble_given";
+                cost = 1;
+            }
+        }
+    }
+}
+Conversation {
+    ID = 53;
+    Page {
+        pageName = "SH_tekguildPilot2_opener";
+        Name = "\c[yellow]TekGuild Pilot";
+        Dialog = "\c[white]Hello, Binder. How may I help you?";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Can you take me to Silent Hills?";
+            Nextpage = "SH_tekguildPilot2_opener";
+            YesMessage = "\c[white]Sure, just hop in! Need to resupply?";
+            Special = 80;
+            arg0 = 1604;
+            Closedialog = true;
+        }
+    }
+}

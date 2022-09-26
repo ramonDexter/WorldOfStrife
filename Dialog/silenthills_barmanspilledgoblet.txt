@@ -87,7 +87,7 @@ Conversation
 			NextPage = "SH_barkeep1_aboutsilenthills";
 		}
 		Choice {
-			Text = "\c[yellow][ << BACK";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_barkeep1_opener";
 		}
 	}
@@ -97,7 +97,7 @@ Conversation
 		Dialog = "\c[white]You should look on the western bank in the residential quarter. I cannot tell you more, I've heard just that the rebel lives on the western bank.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow][ << BACK";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_barkeep1_questions";
 		}
 	}
@@ -107,7 +107,7 @@ Conversation
 		Dialog = "\c[white]Silent Hills is a small trading community hidden in the Northern Hillside. The town is controlled by the governor, who is representative of the Imperial government. The second important person is the Church Bishop. We got every service here, from pubs to techsmiths and even an city bath and a tekguild university.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow][ << BACK";
+			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_barkeep1_questions";
 		}
 	}

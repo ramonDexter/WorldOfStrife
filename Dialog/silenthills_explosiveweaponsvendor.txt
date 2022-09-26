@@ -110,16 +110,16 @@ Conversation {
         Dialog = "\c[white]Oh, you wanted a little chat. What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_explosiveGunsVendor_opener";
-        }
-        Choice {
             Text = "You make all these weapons?";
             Nextpage = "SH_explosiveGunsVendor_weapons";
         }
         Choice {
             Text = "Could you tell me about the town?";
             Nextpage = "SH_explosiveGunsVendor_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_explosiveGunsVendor_opener";
         }
     }
     Page {

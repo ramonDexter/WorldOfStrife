@@ -172,10 +172,6 @@ Conversation {
 		Panel = "M_DCTR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
-			NextPage = "binderSurgeon_openerwbadge";
-		}
-		Choice {
 			Text = "Tell me about yourself."; //Tell me about yourself.
 			NextPage = "binderSurgeon_aboutyourself";
 		}
@@ -183,7 +179,10 @@ Conversation {
 			Text = "What can you tell me about the city?"; //What can you tell me about the city?
 			NextPage = "binderSurgeon_aboutcity";
 		}
-
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "binderSurgeon_openerwbadge";
+		}
 	}
 	Page {
         pageName = "binderSurgeon_aboutyourself";
@@ -195,7 +194,6 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "binderSurgeon_questions";
 		}
-
 	}
 	Page {
         pageName = "binderSurgeon_aboutcity";

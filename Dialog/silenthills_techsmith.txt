@@ -150,6 +150,8 @@ Conversation {
             DisplayCost = false;
             CloseDialog = true;
             GiveItem = "wosBinderArmorAdvanced";
+            Special = 80;
+            arg0 = 109;
             Cost {
                 item = "Coin";
                 amount = 500;
@@ -162,8 +164,6 @@ Conversation {
                 item = "wosBinderArmorAdvanced";
                 amount = 1;
             }
-            Special = 80;
-            arg0 = 109;
         }
         Choice {
             Text = "\c[yellow]<< BACK";

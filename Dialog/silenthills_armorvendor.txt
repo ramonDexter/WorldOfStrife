@@ -71,10 +71,6 @@ Conversation {
         Dialog = "\c[white]What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_armorVendor_opener";
-        }
-        Choice {
             Text = "You make this armor?";
             Nextpage = "SH_armorVendor_armor";
         }
@@ -85,6 +81,10 @@ Conversation {
         Choice {
             Text = "Could you tell me about the locals?";
             Nextpage = "SH_armorVendor_abutlocals";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_armorVendor_opener";
         }
     }
     Page {

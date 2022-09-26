@@ -43,7 +43,7 @@ Conversation {
         Dialog = "\c[white]I have some beer, wine and some water. So your choice is pretty simple.What would you like to drink?";
         Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Give me bottle of vine";
+			Text = "\c[gold]Give me bottle of vine";
 			NextPage = "SH_workersinnkeeper_drinks";
 			DisplayCost = true;
 			GiveItem = "wosvineBottle";
@@ -55,7 +55,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Give me bottle of beer";
+			Text = "\c[gold]Give me bottle of beer";
 			NextPage = "SH_workersinnkeeper_drinks";
 			DisplayCost = true;
 			GiveItem = "wosbeerBottle";
@@ -67,7 +67,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Just a bottle of water";
+			Text = "\c[gold]Just a bottle of water";
 			NextPage = "SH_workersinnkeeper_drinks";
 			DisplayCost = true;
 			GiveItem = "woswaterBottle";

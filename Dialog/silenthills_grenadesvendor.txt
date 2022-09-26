@@ -22,7 +22,7 @@ Conversation {
 		Dialog = "\c[white]Welcome, how may I serve you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy HE grenade";
+			Text = "\c[gold]Buy HE grenade";
 			NextPage = "SH_grenadesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -34,7 +34,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Phosphorous grenade";
+			Text = "\c[gold]Buy Phosphorous grenade";
 			NextPage = "SH_grenadesVendor_opener";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold, man!";
@@ -42,9 +42,21 @@ Conversation {
 			DisplayCost = true;
 			Cost {
 				Item = "Coin";
-				Amount = 15;
+				Amount = 20;
 			}
 		} 
+		Choice {
+			Text = "\c[gold]Buy Gas grenade";
+			NextPage = "SH_grenadesVendor_opener";
+			YesMessage = "Here you go!";
+			NoMessage = "Not enough gold, man!";
+			GiveItem = "wosgrenadeG";
+			DisplayCost = true;
+			Cost {
+				Item = "Coin";
+				Amount = 15;
+			}
+		}
         Choice {
             Text = "I've got some questions.";
             Nextpage = "SH_grenadesVendor_questions";

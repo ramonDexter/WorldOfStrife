@@ -97,16 +97,16 @@ Conversation {
         Dialog = "\c[white]Yes?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_energyWeaponsVendor_opener";
-        }
-        Choice {
             Text = "This is your shop?";
             Nextpage = "SH_energyWeaponsVendor_yourshop";
         }
         Choice {
             Text = "Could you tell me about the city?";
             Nextpage = "SH_energyWeaponsVendor_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_energyWeaponsVendor_opener";
         }
     }
     Page {

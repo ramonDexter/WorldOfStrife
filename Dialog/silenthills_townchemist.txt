@@ -107,11 +107,8 @@ Conversation {
         pageName = "SH_townChemist_questions";
         Name = "\c[yellow]Chemist";
         Dialog = "\c[white]Yes, what did you wanted to know?";
+		PANEL = "M_QUINCY";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_townChemist_opener";
-        }
         Choice {
             Text = "Who are you?";
             Nextpage = "SH_townChemist_whoareyou";
@@ -124,11 +121,16 @@ Conversation {
             Text = "Could you tell me about Silent Hills?";
             Nextpage = "SH_townChemist_aboutsilenthills";
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_townChemist_opener";
+        }
     }
     Page {
         pageName = "SH_townChemist_whoareyou";
         Name = "\c[yellow]Chemist";
         Dialog = "\c[white]I'm Lucius, but everybody calls me Chemist, as I sell the medical chemicals. I also run this small hospital, competing a little with the city surgeon.";
+		PANEL = "M_QUINCY";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
@@ -139,6 +141,7 @@ Conversation {
         pageName = "SH_townChemist_going";
         Name = "\c[yellow]Chemist";
         Dialog = "\c[white]Oh, everything's fine. I've had some troubles few months ago, but everything's fine now. Father be praised.";
+		PANEL = "M_QUINCY";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
@@ -149,6 +152,7 @@ Conversation {
         pageName = "SH_townChemist_aboutsilenthills";
         Name = "\c[yellow]Chemist";
         Dialog = "\c[white]Silent Hills is a small trading community on the northern edge of the Kolyman peninsula. We're struggling hard to survive in this harsh climate. At least we got some good pubs here, and even city bath!";
+		PANEL = "M_QUINCY";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";

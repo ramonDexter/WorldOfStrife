@@ -146,38 +146,7 @@ class wosArmorBase : wosPickup {
 				////////////////////////////////////////////////////////////////
                 Invoker.armorselect++;
                 If( Invoker.armorselect == Invoker.armoramount.Size() )
-                { Invoker.armorselect=0; }
-				
-				////////////////////////////////////////////////////////////////
-				/*let pawn = binderPlayer(invoker.owner);
-				if( pawn.currentArmor > 0 && pawn.armorAmount > 0 && pawn.armorpower > 0 ) {
-					//int armorClass = pawn.currentArmor;
-					switch(pawn.currentArmor) {
-						Case 1:
-							GiveInventory("wosLeatherArmor", 1);
-						Break;
-						
-						Case 2:
-							GiveInventory("wosMetalArmor", 1);
-						Break;
-						
-						Case 3:
-							GiveInventory("wosBinderArmorBasic", 1);
-						Break;
-						
-						Case 4:
-							GiveInventory("wosBinderArmorAdvanced", 1);
-						Break;
-						
-						Case 5:
-							GiveInventory("wosKineticArmor", 1);
-						Break;
-					}
-					pawn.currentarmor = 0;
-                    pawn.armoramount = 0;
-                    pawn.armorpower = 0;
-				}*/
-				
+                { Invoker.armorselect=0; }				
             }            
 			Fail;
 	}

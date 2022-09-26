@@ -88,14 +88,6 @@ Conversation {
 		Panel = "M_LEDR";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Tell me about the Binder Order.";
-			NextPage = "binderLeader_aboutbinderorder";
-		}
-		Choice {
-			Text = "Tell me about yourself.";
-			NextPage = "binderLeader_aboutyourself";
-		}
-		Choice {
 			Require {
 				item = "BinderBadge";
 				amount = 1;
@@ -104,8 +96,16 @@ Conversation {
 				item = "quest02given";
 				amount = 1;
 			}
-			Text = "I am here for the information.";
+			Text = "\c[gold]I am here for the information.";
 			NextPage = "binderLeader_here4info";
+		}
+		Choice {
+			Text = "Tell me about the Binder Order.";
+			NextPage = "binderLeader_aboutbinderorder";
+		}
+		Choice {
+			Text = "Tell me about yourself.";
+			NextPage = "binderLeader_aboutyourself";
 		}
 
 	}
@@ -118,7 +118,7 @@ Conversation {
 		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = 6;
+			NextPage = "binderLeader_badgeopener";
 		}
 	}
 	Page {
@@ -130,7 +130,7 @@ Conversation {
 		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[yellow]<< BACK";
-			NextPage = 6;
+			NextPage = "binderLeader_badgeopener";
 		}
 
 	}

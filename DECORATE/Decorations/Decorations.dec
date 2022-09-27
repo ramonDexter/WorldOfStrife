@@ -9731,11 +9731,7 @@ actor wosD_chairsThrone 21566 {
 	radius 16
 	height 32
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
-	//+CANPASS
-	//+ACTLIKEBRIDGE
+	+ACTLIKEBRIDGE
 	+FLOORCLIP
 	+NOBLOOD
 	States {
@@ -9777,16 +9773,12 @@ actor wosD_queen 21568 {
 }
 actor wosD_chair3 21569 {
 	//$Category "Decorations/Wos/furniture/"
-	//$Title "chair 3"
+	//$Title "stone chair 3"
 	Tag "stone chair"
 	radius 16
 	height 32
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
-	//+CANPASS
-	//+ACTLIKEBRIDGE
+	+ACTLIKEBRIDGE
 	+FLOORCLIP
 	+NOBLOOD
 	States {
@@ -9797,16 +9789,12 @@ actor wosD_chair3 21569 {
 }
 actor wosD_chair2 21570 {
 	//$Category "Decorations/Wos/furniture/"
-	//$Title "chair 2"
+	//$Title "stone chair 2"
 	Tag "stone chair"
 	radius 16
 	height 32
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
-	//+CANPASS
-	//+ACTLIKEBRIDGE
+	+ACTLIKEBRIDGE
 	+FLOORCLIP
 	+NOBLOOD
 	States {
@@ -9817,7 +9805,7 @@ actor wosD_chair2 21570 {
 }
 actor wosD_chair1 21571 {
 	//$Category "Decorations/Wos/furniture/"
-	//$Title "chair 1"
+	//$Title "wooden chair"
 	Tag "wooden chair"
 	radius 12
 	height 32

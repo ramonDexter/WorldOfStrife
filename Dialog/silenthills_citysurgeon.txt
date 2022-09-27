@@ -33,16 +33,16 @@ Conversation {
         Dialog = "\c[white]Yes? What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_citySurgeon_opener";
-        }
-        Choice {
             Text = "Could you tell me about your patients?";
             Nextpage = "SH_citySurgeon_aboutpatients";
         }
         Choice {
             Text = "Could you tell me about the city?";
             Nextpage = "SH_citySurgeon_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_citySurgeon_opener";
         }
     }
     Page {

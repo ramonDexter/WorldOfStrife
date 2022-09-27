@@ -5,6 +5,7 @@ namespace = "GZDoom";
 Conversation {
 	ID = 19;
 	Page {
+		//kompletne predelat, doplnit script na pridani cca 500xp, ne primo zvyseni vlastnosti
         pageName = "SH_combatTutor_opener";
 		Name = "\c[yellow]Combat Tutor";
 		Dialog = "\c[white]Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens. And I can sell you upgrade tokens in exchange for beer. Ten bottles for one token. What do you say?";

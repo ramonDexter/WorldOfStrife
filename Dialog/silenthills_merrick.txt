@@ -37,10 +37,6 @@ Conversation {
         Dialog = "\c[white]All right, let's get some drink!\nThe beer and ale costs 3, wine costs 5 and fresh water is for 2 gold. What would you like?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_merrick_opener";
-        }
-        Choice {
             Text = "I'll take the beer ";
 			NextPage = "SH_merrick_drinks";
 			CloseDialog = false;
@@ -92,16 +88,16 @@ Conversation {
 				amount = 2;
 			}
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
+        }
     }
     Page {
         pageName = "SH_merrick_food";
         Name = "\c[yellow]Merrick, innkeeper";
         Dialog = "\c[white]Okay, so you're hungry. That could be easily solved.\nThe hambruger costs 4, cheeseburger is for 5 and the bigburger costs 6 gold. The grilled chicken is for 10 gold.";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_merrick_opener";
-        }
         Choice {
             Text = "I'll take the hamburger ";
 			NextPage = "SH_merrick_food";
@@ -154,6 +150,10 @@ Conversation {
 				amount = 10;
 			}
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
+        }
     }
     Page {
         pageName = "SH_merrick_questions";
@@ -161,16 +161,16 @@ Conversation {
         Dialog = "\c[white]Okay, what did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_merrick_opener";
-        }
-        Choice {
             Text = "This is your inn?";
             Nextpage = "SH_merrick_yourinn";
         }
         Choice {
             Text = "Could you tell me about Silent Hills?";
             Nextpage = "SH_merrick_aboutsilenthills";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_opener";
         }
     }
     Page {

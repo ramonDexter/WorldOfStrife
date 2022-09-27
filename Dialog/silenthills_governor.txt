@@ -170,10 +170,6 @@ Conversation {
 		Panel = "M_PEAS1";
 		Goodbye = "\c[red]Goodbye";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_governor_normalconv";
-        }
-        Choice {
             Text = "Tell me about the city.";
             Nextpage = "SH_governor_questions_city";
         }
@@ -184,6 +180,10 @@ Conversation {
         Choice {
             Text = "Tell me about yourself.";
             Nextpage = "SH_governor_questions_yourself";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_governor_normalconv";
         }
     }
     Page {

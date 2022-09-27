@@ -9064,6 +9064,7 @@ actor wosD_hugeTorchNewFlame 21524 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame huge torch"
 	+DONTTHRUST
+	+SOLID
 	tag "huge torch"
 	radius 10
 	height 80

@@ -11,7 +11,7 @@ Conversation {
 		Panel = "M_FALSP2";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy Night Eye Device";
+			Text = "\c[gold]Buy Night Eye Device";
 			NextPage = "SH_energyAmmoVendor_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -24,7 +24,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Blaster Turret";
+			Text = "\c[gold]Buy Blaster Turret";
 			NextPage = "SH_energyAmmoVendor_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -37,7 +37,7 @@ Conversation {
 			}
 		}
 		/*Choice {
-			Text = "Buy Flight Harness";
+			Text = "\c[gold]Buy Flight Harness";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "jetpack_item";
@@ -49,7 +49,7 @@ Conversation {
 			}
 		}*/
 		Choice {
-			Text = "Buy Deployable Shield";
+			Text = "\c[gold]Buy Deployable Shield";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosDeployableShield";

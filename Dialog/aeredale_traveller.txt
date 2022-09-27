@@ -29,10 +29,6 @@ Conversation {
         Dialog = "\c[white]I can take you to Millport, Eastcliff and Ravenrock.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_traveller_opener";
-        }
-        Choice {
             Text = "Take me to Millport.";
             Nextpage = "aeredale_traveller_travel_Millport";
         }
@@ -43,6 +39,10 @@ Conversation {
         Choice {
             Text = "Take me to Ravenrock.";
             Nextpage = "aeredale_traveller_travel_ravenrock";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_traveller_opener";
         }
     }
     Page {

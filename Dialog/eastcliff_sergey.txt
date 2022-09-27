@@ -1,144 +1,144 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 12;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "eastcliff_sergey_opener";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]Hello, how may I help you? Have you come to buy something? Or a little chat, maybe?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What do you sell?";
-            Nextpage = "eastcliff_sergey_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "eastcliff_sergey_questions";
-        }
-    }
-    Page {
-        pageName = "eastcliff_sergey_shop";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]I got some medical patches and kits, then some flares and armor repair kits.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_sergey_opener";
-        }
-        Choice {
-            Text = "\c[gold]Buy medpatch";
-            Nextpage = "eastcliff_sergey_shop";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "zscMedPatch";
-            Cost {
-                item = "Coin";
-                amount = 10;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Buy medical kit";
-            Nextpage = "eastcliff_sergey_shop";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "zscMedicalKit";
-            Cost {
-                item = "Coin";
-                amount = 25;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Buy flare";
-            Nextpage = "eastcliff_sergey_shop";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "Flare";
-            Cost {
-                item = "Coin";
-                amount = 5;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Buy armor repair kit";
-            Nextpage = "eastcliff_sergey_shop";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosArmorShard";
-            Cost {
-                item = "Coin";
-                amount = 15;
-            }
-        }
-    }
-    Page {
-        pageName = "eastcliff_sergey_questions";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]So, a little chat. What would you like to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_sergey_opener";
-        }
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "eastcliff_sergey_whoareyou";
-        }
-        Choice {
-            Text = "Where are you from?";
-            Nextpage = "eastcliff_sergey_wherefrom";
-        }
-    }
-    Page {
-        pageName = "eastcliff_sergey_whoareyou";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]I'm Sergey. I'm a techsmith on the road. I've found that I don't like to stay in one place, so I packed my workshop and went to the road. I like meeting new people.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_sergey_questions";
-        }
-    }
-    Page {
-        pageName = "eastcliff_sergey_wherefrom";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]Well, I grew up in Bodrov, but I left the city when I graduated from the local TechSmith university. That was like fourty years ago. And since that time, I'm on the road. I've travelled throught the whole Empire.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "You're from Bodrov?";
-            Nextpage = "eastcliff_sergey_bodrov";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_sergey_questions";
-        }
-    }
-    Page {
-        pageName = "eastcliff_sergey_bodrov";
-        Name = "\c[yellow]Sergey, trader";
-        Dialog = "\c[white]Oh yes. Huge city, spanning kilometres in the plains. Good place for a boy like me. We lived near the Main Lane, connecting the Imperial Palace and the Cathedral. My father was a TechSmith, one of the professors on local TechGuild University, s naturally, I've became a TechSmith like him.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_sergey_questions";
-        }
-    }
+	ID = 12;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "eastcliff_sergey_opener";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]Hello, how may I help you? Have you come to buy something? Or a little chat, maybe?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you sell?";
+			Nextpage = "eastcliff_sergey_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "eastcliff_sergey_questions";
+		}
+	}
+	Page {
+		pageName = "eastcliff_sergey_shop";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]I got some medical patches and kits, then some flares and armor repair kits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy medpatch";
+			Nextpage = "eastcliff_sergey_shop";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedPatch";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy medical kit";
+			Nextpage = "eastcliff_sergey_shop";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedicalKit";
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy flare";
+			Nextpage = "eastcliff_sergey_shop";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "Flare";
+			Cost {
+				item = "Coin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy armor repair kit";
+			Nextpage = "eastcliff_sergey_shop";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosArmorShard";
+			Cost {
+				item = "Coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_sergey_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_sergey_questions";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]So, a little chat. What would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "eastcliff_sergey_whoareyou";
+		}
+		Choice {
+			Text = "Where are you from?";
+			Nextpage = "eastcliff_sergey_wherefrom";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_sergey_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_sergey_whoareyou";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]I'm Sergey. I'm a techsmith on the road. I've found that I don't like to stay in one place, so I packed my workshop and went to the road. I like meeting new people.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_sergey_questions";
+		}
+	}
+	Page {
+		pageName = "eastcliff_sergey_wherefrom";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]Well, I grew up in Bodrov, but I left the city when I graduated from the local TechSmith university. That was like fourty years ago. And since that time, I'm on the road. I've travelled throught the whole Empire.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You're from Bodrov?";
+			Nextpage = "eastcliff_sergey_bodrov";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_sergey_questions";
+		}
+	}
+	Page {
+		pageName = "eastcliff_sergey_bodrov";
+		Name = "\c[yellow]Sergey, trader";
+		Dialog = "\c[white]Oh yes. Huge city, spanning kilometres in the plains. Good place for a boy like me. We lived near the Main Lane, connecting the Imperial Palace and the Cathedral. My father was a TechSmith, one of the professors on local TechGuild University, s naturally, I've became a TechSmith like him.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_sergey_questions";
+		}
+	}
 }

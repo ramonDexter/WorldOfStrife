@@ -1,167 +1,167 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 14;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "eastcliff_marcus_opener";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Hello, what brings you to my humble shack?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I'm looking for fish guts. You got any?";
-            Nextpage = "eastcliff_marcus_fishguts";
-            Require {
-                item = "m14q_cleanTheCellar_getFishGuts";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_gotfishguts";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "Jasmine from the Inn sends you this food.";
-            Nextpage = "eastcliff_marcus_sentfood";
-            require {
-                item = "wosq_ECdeliverFood_given";
-                amount = 1;
-            }
-            exclude {
-                item = "wosq_ECdeliverFood_delivered";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "eastcliff_marcus_whoareyou";
-        } 
-        Choice {
-            Text = "What's going on around here?";
-            Nextpage = "eastcliff_marcus_goingonaround";
-        } 
-        Choice {
-            Text = "Could you tell me about his place?";
-            Nextpage = "eastcliff_marcus_aboutthisplace";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_whoareyou";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]I am Marcus. I am a fisherman, living off the rich of the sea. I spend most of my days on the boat, catching only the best of the local fish. I'm a faithful follower of the Order, and I pay daily visits to the local temple.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_marcus_opener";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_goingonaround";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Well, this is peaceful place. If you know how to avoid the local aggresive fauna and flora, you can live a calm and peaceful life here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_marcus_opener";
-        }
-        Choice {
-            Text = "Aggresive flora?";
-            Nextpage = "eastcliff_marcus_aggresiveflora";
-        }
-        Choice {
-            Text = "Aggresive fauna?";
-            Nextpage = "eastcliff_marcus_aggresivefauna";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_aggresiveflora";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Well, I think you've already met the Carnivorous Plants on the way to my place. These are annoying pests, but getting rid of them is simply impossible. You kill and root out one and two other grow a week later. It's better to avoid them than trying to root them out.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_marcus_goingonaround";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_aggresivefauna";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]I think tou've already met the scorpions and the damned bloody flies. Those bastards are hard to kill, I just need to keep a sidearm here when one of those black bastrards come near.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_marcus_goingonaround";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_aboutthisplace";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]This is the outskrits of the Eastcliff village. I like to live lonely life, so I built my house here outside the village walls. It's little bit dangerous here, but I like the solitude here. The dusks here are simply beautiful.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_marcus_opener";
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    // quest clean the cellar /////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_marcus_fishguts";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Oh yeah, I got some fish guts. Right, take this bucket. It smells foul, I would be happy that you'll take it away.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Fatheralmighty...thank you.";
-            Nextpage = "eastcliff_marcus_opener";
-            Special = 80;
-            arg0 = 1414;
-            Yesmessage = "\c[white]No, I thank you.";
-            CloseDialog = true;
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    
-    ///////////////////////////////////////////////////////////////////////////////////
-    // quest eastcliff dones jidlo rybari /////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_marcus_sentfood";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Oh, does she? Nice girl. Pity she thinks she could be happy with me here in this poor shack. Did she wanted you to tell me something?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Oh, yeah. She said she'll visit you in the evening.";
-            Nextpage = "eastcliff_marcus_shellvisit";
-        }
-    }
-    Page {
-        pageName = "eastcliff_marcus_shellvisit";
-        Name = "\c[yellow]Marcus";
-        Dialog = "\c[white]Oh, that's a nice surprise! So I'll have to sweep this shack a little and make up the bed, he he he. Thank you, Binder. Tell her the food is good, at least I have something warm to eat.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Will do. See you.";
-            Nextpage = "eastcliff_marcus_opener";
-            YesMessage = "\c[white]See you too.";
-            CloseDialog = true;
-            Special = 80;
-            arg0 = 1421;
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
+	ID = 14;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "eastcliff_marcus_opener";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Hello, what brings you to my humble shack?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'm looking for fish guts. You got any?";
+			Nextpage = "eastcliff_marcus_fishguts";
+			Require {
+				item = "m14q_cleanTheCellar_getFishGuts";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_gotfishguts";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Jasmine from the Inn sends you this food.";
+			Nextpage = "eastcliff_marcus_sentfood";
+			require {
+				item = "wosq_ECdeliverFood_given";
+				amount = 1;
+			}
+			exclude {
+				item = "wosq_ECdeliverFood_delivered";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "eastcliff_marcus_whoareyou";
+		} 
+		Choice {
+			Text = "What's going on around here?";
+			Nextpage = "eastcliff_marcus_goingonaround";
+		} 
+		Choice {
+			Text = "Could you tell me about his place?";
+			Nextpage = "eastcliff_marcus_aboutthisplace";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_whoareyou";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]I am Marcus. I am a fisherman, living off the rich of the sea. I spend most of my days on the boat, catching only the best of the local fish. I'm a faithful follower of the Order, and I pay daily visits to the local temple.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_marcus_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_goingonaround";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Well, this is peaceful place. If you know how to avoid the local aggresive fauna and flora, you can live a calm and peaceful life here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Aggresive flora?";
+			Nextpage = "eastcliff_marcus_aggresiveflora";
+		}
+		Choice {
+			Text = "Aggresive fauna?";
+			Nextpage = "eastcliff_marcus_aggresivefauna";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_marcus_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_aggresiveflora";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Well, I think you've already met the Carnivorous Plants on the way to my place. These are annoying pests, but getting rid of them is simply impossible. You kill and root out one and two other grow a week later. It's better to avoid them than trying to root them out.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_marcus_goingonaround";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_aggresivefauna";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]I think tou've already met the scorpions and the damned bloody flies. Those bastards are hard to kill, I just need to keep a sidearm here when one of those black bastrards come near.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_marcus_goingonaround";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_aboutthisplace";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]This is the outskrits of the Eastcliff village. I like to live lonely life, so I built my house here outside the village walls. It's little bit dangerous here, but I like the solitude here. The dusks here are simply beautiful.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_marcus_opener";
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	// quest clean the cellar /////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_marcus_fishguts";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Oh yeah, I got some fish guts. Right, take this bucket. It smells foul, I would be happy that you'll take it away.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Fatheralmighty...thank you.";
+			Nextpage = "eastcliff_marcus_opener";
+			Special = 80;
+			arg0 = 1414;
+			Yesmessage = "\c[white]No, I thank you.";
+			CloseDialog = true;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	// quest eastcliff dones jidlo rybari /////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_marcus_sentfood";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Oh, does she? Nice girl. Pity she thinks she could be happy with me here in this poor shack. Did she wanted you to tell me something?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Oh, yeah. She said she'll visit you in the evening.";
+			Nextpage = "eastcliff_marcus_shellvisit";
+		}
+	}
+	Page {
+		pageName = "eastcliff_marcus_shellvisit";
+		Name = "\c[yellow]Marcus";
+		Dialog = "\c[white]Oh, that's a nice surprise! So I'll have to sweep this shack a little and make up the bed, he he he. Thank you, Binder. Tell her the food is good, at least I have something warm to eat.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Will do. See you.";
+			Nextpage = "eastcliff_marcus_opener";
+			YesMessage = "\c[white]See you too.";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 1421;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 }

@@ -1,433 +1,433 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 8;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "eastcliff_curtis_opener";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Hello, welcome to the White Cock Inn. What may I serve you? We got good beer from Ravenrock brewery, roasted steaks and grilled chicken, and also some burgers.";
-        Goodbye = "\c[red]Goodbye.";
-        // quest Clean the Cellar start ///////////////////////////////////////////////
-        Choice {
-            Text = "Do you need any help here?";
-            Nextpage = "eastcliff_curtis_help";
-            Exclude {
-                item = "m14q_cleanTheCellar_given";
-                amount = 1;
-            }
-        }
-        // navrat prvni nesplneny /////////////////////////////////////////////////////
-        Choice {
-            Text = "About those rats...";
-            Nextpage = "eastcliff_curtis_notyet";
-            Require {
-                item = "m14q_cleanTheCellar_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_killedRats";
-                amount = 1;
-            }
-        }
-        // navrat prvni splneny ///////////////////////////////////////////////////////
-        Choice {
-            Text = "About those rats...";
-            Nextpage = "eastcliff_curtis_killedRats";
-            Require {
-                item = "m14q_cleanTheCellar_killedRats";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_findNest";
-                amount = 1;
-            }
-        }
-        // navrat druhy nesplneny /////////////////////////////////////////////////////
-        Choice {
-            Text = "About those rats...";
-            Nextpage = "eastcliff_curtis_nestnotyet";
-            Require {
-                item = "m14q_cleanTheCellar_findNest";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_getPoison";
-                amount = 1;
-            }
-        }
-        // navrat s jedem /////////////////////////////////////////////////////////////
-        Choice {
-            Text = "I've got the rat poison here.";
-            Nextpage = "eastcliff_curtis_gotpoison";
-            Require {
-                item = "m14q_cleanTheCellar_gotpoison";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_destroyNest";
-                amount = 1;
-            }
-        }
-        // navrat hnizdo zniceno //////////////////////////////////////////////////////
-        Choice {
-            Text = "The rat nest is destroyed.";
-            Nextpage = "eastcliff_curtis_nestdestroyed";
-            Require {
-                item = "m14q_cleanTheCellar_destroyed";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_finished";
-                amount = 1;
-            }
-        } 
-        ///////////////////////////////////////////////////////////////////////////////
-        Choice {
-            Text = "Yeah, little snack would be good.";
-            Nextpage = "eastcliff_curtis_food";
-        }
-        Choice {
-            Text = "Actually, I'm a bit thirsty.";
-            Nextpage = "eastcliff_curtis_drinks";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "eastcliff_curtis_questions";
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_food";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Okay, your hunger will be satisified here! So, the steak costs 10, the grilled chicken is for 25 and the bigburger costs 6 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_curtis_opener";
-        }
-        Choice {
-            Text = "\c[gold]Give me the steak";
-            Nextpage = "eastcliff_curtis_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosfbMeat1";
-            Cost {
-                item = "Coin";
-                amount = 10;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the grilled chicken";
-            Nextpage = "eastcliff_curtis_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosGrilledChicken";
-            Cost {
-                item = "Coin";
-                amount = 25;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the burger";
-            Nextpage = "eastcliff_curtis_food";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBigburger";
-            Cost {
-                item = "Coin";
-                amount = 6;
-            }
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_drinks";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]We got the best beer straight from the Ravenrock brewery. Good refreshing beer and strong dark ale. Also, we got strong spirits Sliwowotz and some wine and if you want, some canned soda and some water. What would you like?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_curtis_opener";
-        }
-        Choice {
-            Text = "\c[gold]Give me the beer";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBeerBottle";
-            Cost {
-                item = "Coin";
-                amount = 3;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the ale";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosAleBottle";
-            Cost {
-                item = "Coin";
-                amount = 3;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the sliwowitz";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosSpiritsBottle";
-            Cost {
-                item = "Coin";
-                amount = 12;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the wine";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosVineBottle";
-            Cost {
-                item = "Coin";
-                amount = 8;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the canned soda";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosSodaCan";
-            Cost {
-                item = "Coin";
-                amount = 3;
-            }
-        }
-        Choice {
-            Text = "\c[gold]Give me the water";
-            Nextpage = "eastcliff_curtis_drinks";
-            CloseDialog = true;
-            DisplayCost = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosWaterBottle";
-            Cost {
-                item = "Coin";
-                amount = 2;
-            }
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_questions";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Okay, what would you like to know? I know a little about everything here in Eastcliff. Just ask.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_curtis_opener";
-        }
-        Choice {
-            Text = "What's going on around here?";
-            Nextpage = "eastcliff_curtis_goingon";
-        }
-        Choice {
-            Text = "How's business going?";
-            Nextpage = "eastcliff_curtis_howsbusiness";
-        }
-        Choice {
-            Text = "Could you tell me about your village?";
-            Nextpage = "eastcliff_curtis_abouteastcliff";
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_goingon";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Well, mostly nothing. Most of the days the village gets empty in the morning, when the fishermen go to hunt fish and the farmers go to the fields. The only excitement we have here is when the trade caravan arrives, or when the Shipping guild ships bring new goods to the port. Also, we have some fun on every sunday, when nobody works. The locals usually hang around or go travelling around.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_curtis_questions";
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_howsbusiness";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Oh yes, good, very good. The last sunday was connected to the Day of the Mourning on tuesday, so we got 4 free days. The locals like to drink, so ve got bigger sales than ever.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]That's good to hear.";
-            Nextpage = "eastcliff_curtis_questions";
-            YesMessage = "\c[white]Thanks for asking.";
-        }
-    }
-    Page {
-        pageName = "eastcliff_curtis_abouteastcliff";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Our little village lives from the rich of the sea. Most of our income comes from the fishhunting. The lesser part of our income of from the famers work. The farms are located up the cliff, where the soil is rich and gives good harvest. We also have some fortune from our location on the main road from Millport to the south. Trading caravans venture through our village, and exchanges lots of goods here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "eastcliff_curtis_questions";
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    // qeust Clean the Cellar /////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_help";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Oh yeah, there's always some work to do. Right now, I've got some rat problems.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Actually, I wanted something else.";
-            Nextpage = "eastcliff_curtis_opener";
-        }
-        Choice {
-            Text = "Rat problems?";
-            Nextpage = "eastcliff_curtis_ratproblems";
-        }
-    }
-    // zadani questu //////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_ratproblems";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Yeah, rats always mean problems. Those friggin vermin have flooded my cellar. I'm keeping food there, so it is a serious problem. Say, would you go down there and kill those rats? I will pay you good.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay, dealing with rats is my speciality.";
-            Nextpage = "eastcliff_curtis_opener";
-            Yesmessage = "\c[white]Be careful, the have sharp pointy teeth!";
-            Special = 80;
-            arg0 = 1410;
-            CloseDialog = true;
-        }
-        Choice {
-            Text = "Sorry, not interested.";
-            Nextpage = "eastcliff_curtis_opener";
-        }
-    }
-    // navrat bez splneni /////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_notyet";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]So, are those rats dead?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Not yet...";
-            Nextpage = "eastcliff_curtis_opener";
-            YesMessage = "\c[white]What are you waiting for?";
-            CloseDialog = true;
-        }
-    }
-    // navrat killed rats /////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_killedRats";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]So, are those rats dead?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Yep, they are dead.";
-            Nextpage = "eastcliff_curtis_findnest";
-            Special = 80;
-            arg0 = 1411;
-        }
-    }
-    // zadani hledani hnizda //////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_findnest";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Okay, here is smaller part of the reward for the easier task. Now you comes the hardest part. You have to find the nest of those bastards. Once you find it, pay a visit to the local medic and ask him if he has some poison to destroy the bastards nest. Then I'll give the rest of the reward plus somethig on top.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay, I'm on it.";
-            Nextpage = "eastcliff_curtis_opener";
-            Special = 80;
-            arg0 = 1412;
-            CloseDialog = true;
-        }
-    }
-    // navrat zatim nenasel hnizdo ////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_nestnotyet";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Have you found the rat nest?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Not yet.";
-            Nextpage = "eastcliff_curtis_opener";
-            YesMessage = "\c[white]What are you waiting for?";
-            CloseDialog = true;
-        }
-    }
-    // navrat found nest //////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_foundnest";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]Have you found the rat nest?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Yes, it's behind old cracked wall.";
-            Nextpage = "eastcliff_curtis_opener";
-            Yesmessage = "\c[white]No go get the poison from the medic.";
-            CloseDialog = true;
-        }
-    }
-    // navrat got poison //////////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_gotpoison";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]All right, so take it and use to finally get rid of the vermin once for all.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Will do.";
-            Nextpage = "eastcliff_curtis_opener";
-            Yesmessage = "\c[white]Good luck.";
-            CloseDialog = true;
-            Special = 80;
-            arg0 = 1417;
-        }
-    }
-    // navrat nest destroyed //////////////////////////////////////////////////////////
-    Page {
-        pageName = "eastcliff_curtis_nestdestroyed";
-        Name = "\c[yellow]Curtis, Innkeeper";
-        Dialog = "\c[white]That's good to hear. Here is the remaining part of the reward and some food and drink on top. You've done a geat work here. Thank you.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "You're welcome.";
-            Nextpage = "eastcliff_curtis_opener";
-            CloseDialog = true;
-            Special = 80;
-            arg0 = 1418;
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
+	ID = 8;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "eastcliff_curtis_opener";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Hello, welcome to the White Cock Inn. What may I serve you? We got good beer from Ravenrock brewery, roasted steaks and grilled chicken, and also some burgers.";
+		Goodbye = "\c[red]Goodbye.";
+		// quest Clean the Cellar start ///////////////////////////////////////////////
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "eastcliff_curtis_help";
+			Exclude {
+				item = "m14q_cleanTheCellar_given";
+				amount = 1;
+			}
+		}
+		// navrat prvni nesplneny /////////////////////////////////////////////////////
+		Choice {
+			Text = "About those rats...";
+			Nextpage = "eastcliff_curtis_notyet";
+			Require {
+				item = "m14q_cleanTheCellar_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_killedRats";
+				amount = 1;
+			}
+		}
+		// navrat prvni splneny ///////////////////////////////////////////////////////
+		Choice {
+			Text = "About those rats...";
+			Nextpage = "eastcliff_curtis_killedRats";
+			Require {
+				item = "m14q_cleanTheCellar_killedRats";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_findNest";
+				amount = 1;
+			}
+		}
+		// navrat druhy nesplneny /////////////////////////////////////////////////////
+		Choice {
+			Text = "About those rats...";
+			Nextpage = "eastcliff_curtis_nestnotyet";
+			Require {
+				item = "m14q_cleanTheCellar_findNest";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_getPoison";
+				amount = 1;
+			}
+		}
+		// navrat s jedem /////////////////////////////////////////////////////////////
+		Choice {
+			Text = "I've got the rat poison here.";
+			Nextpage = "eastcliff_curtis_gotpoison";
+			Require {
+				item = "m14q_cleanTheCellar_gotpoison";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_destroyNest";
+				amount = 1;
+			}
+		}
+		// navrat hnizdo zniceno //////////////////////////////////////////////////////
+		Choice {
+			Text = "The rat nest is destroyed.";
+			Nextpage = "eastcliff_curtis_nestdestroyed";
+			Require {
+				item = "m14q_cleanTheCellar_destroyed";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_finished";
+				amount = 1;
+			}
+		} 
+		///////////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "Yeah, little snack would be good.";
+			Nextpage = "eastcliff_curtis_food";
+		}
+		Choice {
+			Text = "Actually, I'm a bit thirsty.";
+			Nextpage = "eastcliff_curtis_drinks";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "eastcliff_curtis_questions";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_food";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Okay, your hunger will be satisified here! So, the steak costs 10, the grilled chicken is for 25 and the bigburger costs 6 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Give me the steak";
+			Nextpage = "eastcliff_curtis_food";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosfbMeat1";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the grilled chicken";
+			Nextpage = "eastcliff_curtis_food";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the burger";
+			Nextpage = "eastcliff_curtis_food";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "Coin";
+				amount = 6;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_curtis_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_drinks";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]We got the best beer straight from the Ravenrock brewery. Good refreshing beer and strong dark ale. Also, we got strong spirits Sliwowotz and some wine and if you want, some canned soda and some water. What would you like?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Give me the beer";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "Coin";
+				amount = 3;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the ale";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "Coin";
+				amount = 3;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the sliwowitz";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSpiritsBottle";
+			Cost {
+				item = "Coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the wine";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "Coin";
+				amount = 8;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the canned soda";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSodaCan";
+			Cost {
+				item = "Coin";
+				amount = 3;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Give me the water";
+			Nextpage = "eastcliff_curtis_drinks";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "Coin";
+				amount = 2;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_curtis_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_questions";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Okay, what would you like to know? I know a little about everything here in Eastcliff. Just ask.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What's going on around here?";
+			Nextpage = "eastcliff_curtis_goingon";
+		}
+		Choice {
+			Text = "How's business going?";
+			Nextpage = "eastcliff_curtis_howsbusiness";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "eastcliff_curtis_abouteastcliff";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_curtis_opener";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_goingon";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Well, mostly nothing. Most of the days the village gets empty in the morning, when the fishermen go to hunt fish and the farmers go to the fields. The only excitement we have here is when the trade caravan arrives, or when the Shipping guild ships bring new goods to the port. Also, we have some fun on every sunday, when nobody works. The locals usually hang around or go travelling around.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_curtis_questions";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_howsbusiness";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Oh yes, good, very good. The last sunday was connected to the Day of the Mourning on tuesday, so we got 4 free days. The locals like to drink, so ve got bigger sales than ever.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]That's good to hear.";
+			Nextpage = "eastcliff_curtis_questions";
+			YesMessage = "\c[white]Thanks for asking.";
+		}
+	}
+	Page {
+		pageName = "eastcliff_curtis_abouteastcliff";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Our little village lives from the rich of the sea. Most of our income comes from the fishhunting. The lesser part of our income of from the famers work. The farms are located up the cliff, where the soil is rich and gives good harvest. We also have some fortune from our location on the main road from Millport to the south. Trading caravans venture through our village, and exchanges lots of goods here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "eastcliff_curtis_questions";
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	// qeust Clean the Cellar /////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_help";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Oh yeah, there's always some work to do. Right now, I've got some rat problems.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Actually, I wanted something else.";
+			Nextpage = "eastcliff_curtis_opener";
+		}
+		Choice {
+			Text = "Rat problems?";
+			Nextpage = "eastcliff_curtis_ratproblems";
+		}
+	}
+	// zadani questu //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_ratproblems";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Yeah, rats always mean problems. Those friggin vermin have flooded my cellar. I'm keeping food there, so it is a serious problem. Say, would you go down there and kill those rats? I will pay you good.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, dealing with rats is my speciality.";
+			Nextpage = "eastcliff_curtis_opener";
+			Yesmessage = "\c[white]Be careful, the have sharp pointy teeth!";
+			Special = 80;
+			arg0 = 1410;
+			CloseDialog = true;
+		}
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "eastcliff_curtis_opener";
+		}
+	}
+	// navrat bez splneni /////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_notyet";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]So, are those rats dead?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Not yet...";
+			Nextpage = "eastcliff_curtis_opener";
+			YesMessage = "\c[white]What are you waiting for?";
+			CloseDialog = true;
+		}
+	}
+	// navrat killed rats /////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_killedRats";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]So, are those rats dead?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yep, they are dead.";
+			Nextpage = "eastcliff_curtis_findnest";
+			Special = 80;
+			arg0 = 1411;
+		}
+	}
+	// zadani hledani hnizda //////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_findnest";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Okay, here is smaller part of the reward for the easier task. Now you comes the hardest part. You have to find the nest of those bastards. Once you find it, pay a visit to the local medic and ask him if he has some poison to destroy the bastards nest. Then I'll give the rest of the reward plus somethig on top.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, I'm on it.";
+			Nextpage = "eastcliff_curtis_opener";
+			Special = 80;
+			arg0 = 1412;
+			CloseDialog = true;
+		}
+	}
+	// navrat zatim nenasel hnizdo ////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_nestnotyet";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Have you found the rat nest?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "eastcliff_curtis_opener";
+			YesMessage = "\c[white]What are you waiting for?";
+			CloseDialog = true;
+		}
+	}
+	// navrat found nest //////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_foundnest";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]Have you found the rat nest?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, it's behind old cracked wall.";
+			Nextpage = "eastcliff_curtis_opener";
+			Yesmessage = "\c[white]No go get the poison from the medic.";
+			CloseDialog = true;
+		}
+	}
+	// navrat got poison //////////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_gotpoison";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]All right, so take it and use to finally get rid of the vermin once for all.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Will do.";
+			Nextpage = "eastcliff_curtis_opener";
+			Yesmessage = "\c[white]Good luck.";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 1417;
+		}
+	}
+	// navrat nest destroyed //////////////////////////////////////////////////////////
+	Page {
+		pageName = "eastcliff_curtis_nestdestroyed";
+		Name = "\c[yellow]Curtis, Innkeeper";
+		Dialog = "\c[white]That's good to hear. Here is the remaining part of the reward and some food and drink on top. You've done a geat work here. Thank you.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You're welcome.";
+			Nextpage = "eastcliff_curtis_opener";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 1418;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 }

@@ -7,7 +7,7 @@ Conversation {
     Page {
         pageName = "SH_CityJudge_opener";
         Name = "\c[yellow]Judge of Change";
-        Dialog = "\c[white]Hello, binder. How may I help you? Are you seeking information? Aro do you want to help me? I've got some cases to solve here.";
+        Dialog = "\c[white]Hello, binder. How may I help you? Are you seeking information? Or do you want to help me? I've got some cases to solve here.";
         Goodbye = "\c[red]Goodbye";
         Panel = "M_JUDGE";
         Choice {

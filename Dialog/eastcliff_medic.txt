@@ -1,234 +1,234 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 1;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "EC_medic_opener";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Welcome to my humble shop, Binder. How may I serve you? Are you in need of medical attention?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "I'm looking for rat poison.";
-            Nextpage = "EC_medic_looking4ratpoison";
-            Require {
-                item = "m14q_cleanTheCellar_getPoison";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_getFishGuts";
-                amount = 1;
-            }
-        } 
-        Choice {
-            Text = "Here are the fish guts.";
-            Nextpage = "EC_medic_gotfisguts";
-            Require {
-                item = "wosq_fishGuts";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_gotpoison";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "I need help.";
-            Nextpage = "EC_medic_help";
-        }
-        Choice {
-            Text = "I need to resupply. Do you sell medical supplies?";
-            Nextpage = "EC_medic_shop";
-        }
-        Choice {
-            Text = "I have some questions.";
-            Nextpage = "EC_medic_questions";
-        }
-    }
-    Page {
-        pageName = "EC_medic_help";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Oh, I'm busy right now. Just use the autodoc over there.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay.";
-            Nextpage = "EC_medic_opener";
-        }
-    }
-    Page {
-        pageName = "EC_medic_shop";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Yeah, I do sell medical supplies. But nothing cheap.\nThe Hypospray costs 25, Kombopack costs 50 and the Instaheal costs 100 gold. Also, I've got the Medpatches for 10, Medical Kits for 25 annd Surgery Kits for 100 gold. What will you take?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_medic_opener";
-        }
-        Choice {
-            Text = "Give me the Hypospray. (pay 25 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosHyposprej";
-            Cost {
-                item = "Coin";
-                amount = 25;
-            }
-        }
-        Choice {
-            Text = "Give me the Combopack. (pay 50 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosKombopack";
-            Cost {
-                item = "Coin";
-                amount = 50;
-            }
-        }
-        Choice {
-            Text = "Give me the Instaheal. (pay 100 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosInstaLek";
-            Cost {
-                item = "Coin";
-                amount = 100;
-            }
-        }
-        Choice {
-            Text = "Give me the Medpatch. (pay 10 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "zscMedPatch";
-            Cost {
-                item = "Coin";
-                amount = 10;
-            }
-        }
-        Choice {
-            Text = "Give me the Medical Kit. (pay 25 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "zscMedicalKit";
-            Cost {
-                item = "Coin";
-                amount = 25;
-            }
-        }
-        Choice {
-            Text = "Give me the Surgery Kit. (pay 100 gold)";
-            Nextpage = "EC_medic_shop";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "zscSurgeryKit";
-            Cost {
-                item = "Coin";
-                amount = 100;
-            }
-        }
-    }
-    Page {
-        pageName = "EC_medic_questions";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]What did you wanted to know? As a local, I know lot of things about our village.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_medic_opener";
-        }
-        Choice {
-            Text = "Tell me about your village.";
-            Nextpage = "EC_medic_eastcliff";
-        }
-    }
-    Page {
-        pageName = "EC_medic_eastcliff";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Eastcliff's a peaceful place. Our position on the main road gives the local traders a good opportunity to make a good business. Besides that, the locals make their living by fishing and farming.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_medic_questions";
-        }
-        Choice {
-            Text = "Farms? I didn't saw any farm around?";
-            Nextpage = "EC_medic_farms";
-        }
-    }
-    Page {
-        pageName = "EC_medic_farms";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Because all the farms are located up the cliffs, on the plateau. There's a good rich soil there, so the local farmers are pretty rich.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I've got other questions.";
-            Nextpage = "EC_medic_questions";
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    // quest clean the cellar /////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "EC_medic_looking4ratpoison";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Yes, I can make a rat poison. But I need some pathogens. I think I could get some out of fish guts. Say, would you pay a visit to my friend Marcus, he is a fisherman, lives on the eastern coast near the village.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Fish guts from Marcus. Not a problem.";
-            Nextpage = "EC_medic_opener";
-            Special = 80;
-            arg0 = 1413;
-            CloseDialog = true;
-        }
-    }
-    Page {
-        pageName = "EC_medic_gotfisguts";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Okay, give it to me. Oh, what a smell!";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Just take it.";
-            Nextpage = "EC_medic_hereispoison";
-            Special = 80;
-            arg0 = 1415;
-        }
-    }
-    Page {
-        pageName = "EC_medic_hereispoison";
-        Name = "\c[yellow]Orin, Medic";
-        Dialog = "\c[white]Okay, just wait a while.\n...\n...\n...\nOkay, here it is. One rat poison.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Thank you.";
-            Nextpage = "EC_medic_opener";
-            Yesmessage = "You're welcome.";
-            Special = 80;
-            arg0 = 1416;
-            CloseDialog = true;
-        }
-    }
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////
-    
+	ID = 1;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_medic_opener";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Welcome to my humble shop, Binder. How may I serve you? Are you in need of medical attention?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "I'm looking for rat poison.";
+			Nextpage = "EC_medic_looking4ratpoison";
+			Require {
+				item = "m14q_cleanTheCellar_getPoison";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_getFishGuts";
+				amount = 1;
+			}
+		} 
+		Choice {
+			Text = "Here are the fish guts.";
+			Nextpage = "EC_medic_gotfisguts";
+			Require {
+				item = "wosq_fishGuts";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_gotpoison";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "I need help.";
+			Nextpage = "EC_medic_help";
+		}
+		Choice {
+			Text = "I need to resupply. Do you sell medical supplies?";
+			Nextpage = "EC_medic_shop";
+		}
+		Choice {
+			Text = "I have some questions.";
+			Nextpage = "EC_medic_questions";
+		}
+	}
+	Page {
+		pageName = "EC_medic_help";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Oh, I'm busy right now. Just use the autodoc over there.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay.";
+			Nextpage = "EC_medic_opener";
+		}
+	}
+	Page {
+		pageName = "EC_medic_shop";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Yeah, I do sell medical supplies. But nothing cheap.\nThe Hypospray costs 25, Kombopack costs 50 and the Instaheal costs 100 gold. Also, I've got the Medpatches for 10, Medical Kits for 25 annd Surgery Kits for 100 gold. What will you take?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Give me the Hypospray. (pay 25 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "Give me the Combopack. (pay 50 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "Coin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "Give me the Instaheal. (pay 100 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "Coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "Give me the Medpatch. (pay 10 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedPatch";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "Give me the Medical Kit. (pay 25 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscMedicalKit";
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "Give me the Surgery Kit. (pay 100 gold)";
+			Nextpage = "EC_medic_shop";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "zscSurgeryKit";
+			Cost {
+				item = "Coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_medic_opener";
+		}
+	}
+	Page {
+		pageName = "EC_medic_questions";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]What did you wanted to know? As a local, I know lot of things about our village.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Tell me about your village.";
+			Nextpage = "EC_medic_eastcliff";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_medic_opener";
+		}
+	}
+	Page {
+		pageName = "EC_medic_eastcliff";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Eastcliff's a peaceful place. Our position on the main road gives the local traders a good opportunity to make a good business. Besides that, the locals make their living by fishing and farming.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Farms? I didn't saw any farm around?";
+			Nextpage = "EC_medic_farms";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_medic_questions";
+		}
+	}
+	Page {
+		pageName = "EC_medic_farms";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Because all the farms are located up the cliffs, on the plateau. There's a good rich soil there, so the local farmers are pretty rich.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_medic_questions";
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	// quest clean the cellar /////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "EC_medic_looking4ratpoison";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Yes, I can make a rat poison. But I need some pathogens. I think I could get some out of fish guts. Say, would you pay a visit to my friend Marcus, he is a fisherman, lives on the eastern coast near the village.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Fish guts from Marcus. Not a problem.";
+			Nextpage = "EC_medic_opener";
+			Special = 80;
+			arg0 = 1413;
+			CloseDialog = true;
+		}
+	}
+	Page {
+		pageName = "EC_medic_gotfisguts";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Okay, give it to me. Oh, what a smell!";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Just take it.";
+			Nextpage = "EC_medic_hereispoison";
+			Special = 80;
+			arg0 = 1415;
+		}
+	}
+	Page {
+		pageName = "EC_medic_hereispoison";
+		Name = "\c[yellow]Orin, Medic";
+		Dialog = "\c[white]Okay, just wait a while.\n...\n...\n...\nOkay, here it is. One rat poison.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "EC_medic_opener";
+			Yesmessage = "You're welcome.";
+			Special = 80;
+			arg0 = 1416;
+			CloseDialog = true;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	
 }

@@ -1,79 +1,79 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 7;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Josephine, mayor's wife"; 
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "EC_josephine_opener";
-        Name = "\c[yellow]Josephine, mayor's wife";
-        Dialog = "\c[white]Hello, Binder. What brings you to my chambers?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "EC_josephine_whoareyou";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "EC_josephine_questions";
-        }
-    }
-    Page {
-        pageName = "EC_josephine_whoareyou";
-        Name = "\c[yellow]Josephine, mayor's wife";
-        Dialog = "\c[white]My name is Josephine. I am wife of Holden, the local mayor. I tend to the house, as family is my pride and honor.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Nice to meet you, Josephine.";
-            Nextpage = "EC_josephine_opener";
-        }
-    }
-    Page {
-        pageName = "EC_josephine_questions";
-        Name = "\c[yellow]Josephine, mayor's wife";
-        Dialog = "\c[white]Yes, a little chat would be nice. What did you wanted to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_josephine_opener";
-        }
-        Choice {
-            Text = "What do you know about Eastcliff?";
-            Nextpage = "EC_josephine_eastcliff";
-        }
-        Choice {
-            Text = "Could you tell me about locals?";
-            Nextpage = "EC_josephine_locals";
-        }
-    }
-    Page {
-        pageName = "EC_josephine_eastcliff";
-        Name = "\c[yellow]Josephine, mayor's wife";
-        Dialog = "\c[white]Our village is nice quiet place. We got great Temple here, which I visit often. People say that I'm very faithful. Also, we got a pub here. The White Cock has the best kitchen, even better than pubs in Millport.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_josephine_questions";
-        }
-    }
-    Page {
-        pageName = "EC_josephine_locals";
-        Name = "\c[yellow]Josephine, mayor's wife";
-        Dialog = "\c[white]The locals are nice people. The traders are rich and the fishermen and farmers too, thanks to local abundance of resources. The local waters are full of fish and the fields have rich soil.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_josephine_questions";
-        }
-    }
+	ID = 7;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Josephine, mayor's wife"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_josephine_opener";
+		Name = "\c[yellow]Josephine, mayor's wife";
+		Dialog = "\c[white]Hello, Binder. What brings you to my chambers?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "EC_josephine_whoareyou";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "EC_josephine_questions";
+		}
+	}
+	Page {
+		pageName = "EC_josephine_whoareyou";
+		Name = "\c[yellow]Josephine, mayor's wife";
+		Dialog = "\c[white]My name is Josephine. I am wife of Holden, the local mayor. I tend to the house, as family is my pride and honor.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Nice to meet you, Josephine.";
+			Nextpage = "EC_josephine_opener";
+		}
+	}
+	Page {
+		pageName = "EC_josephine_questions";
+		Name = "\c[yellow]Josephine, mayor's wife";
+		Dialog = "\c[white]Yes, a little chat would be nice. What did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you know about Eastcliff?";
+			Nextpage = "EC_josephine_eastcliff";
+		}
+		Choice {
+			Text = "Could you tell me about locals?";
+			Nextpage = "EC_josephine_locals";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_josephine_opener";
+		}
+	}
+	Page {
+		pageName = "EC_josephine_eastcliff";
+		Name = "\c[yellow]Josephine, mayor's wife";
+		Dialog = "\c[white]Our village is nice quiet place. We got great Temple here, which I visit often. People say that I'm very faithful. Also, we got a pub here. The White Cock has the best kitchen, even better than pubs in Millport.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_josephine_questions";
+		}
+	}
+	Page {
+		pageName = "EC_josephine_locals";
+		Name = "\c[yellow]Josephine, mayor's wife";
+		Dialog = "\c[white]The locals are nice people. The traders are rich and the fishermen and farmers too, thanks to local abundance of resources. The local waters are full of fish and the fields have rich soil.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_josephine_questions";
+		}
+	}
 
 }

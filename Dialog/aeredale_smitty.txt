@@ -57,10 +57,6 @@ Conversation {
         Dialog = "\c[white]You're at the right place if you need some sophisticated gear. I sell energy ammo, grenades, deployable shields and the swarmers grenades.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_opener";
-        }
-        Choice {
             Text = "I need some energy ammo.";
             Nextpage = "aeredale_smitty_shop_energyammo";
         }
@@ -76,16 +72,16 @@ Conversation {
             Text = "Let's take a look at the swarmers.";
             Nextpage = "aeredale_smitty_shop_swarmers";
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_opener";
+        }
     }
     Page {
         pageName = "aeredale_smitty_shop_energyammo";
         Name = "\c[yellow]Smitty, Techsmith";
         Dialog = "\c[white]Okay, you need energy ammo. So, the energycells cost 20, the energykit costs 30 and the energypack costs 50 gold.";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_shop";
-        }
         Choice {
             Text = "\c[gold]Buy energycell";
             Nextpage = "aeredale_smitty_shop_energyammo";
@@ -125,16 +121,16 @@ Conversation {
                 amount = 50;
             }
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_shop";
+        }
     }
     Page {
         pageName = "aeredale_smitty_shop_grenades";
         Name = "\c[yellow]Smitty, Techsmith";
         Dialog = "\c[white]Yeah, grenades can come in handy.\nExplosive grenade costs 5, phosphorous grenade costs 15 and the gas grenade costs 10 gold.";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_shop";
-        }
         Choice {
             Text = "\c[gold]Buy explosive grenade";
             Nextpage = "aeredale_smitty_shop_grenades";
@@ -174,16 +170,16 @@ Conversation {
                 amount = 10;
             }
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_shop";
+        }
     }
     Page {
         pageName = "aeredale_smitty_shop_shield";
         Name = "\c[yellow]Smitty, Techsmith";
         Dialog = "\c[white]Everyone needs little more protection. The deployable shield costs 150 gold, but it could save your life.";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_shop";
-        }
         Choice {
             Text = "\c[gold]Buy deployable shield";
             Nextpage = "aeredale_smitty_shop_shield";
@@ -197,16 +193,16 @@ Conversation {
                 amount = 150;
             }
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_shop";
+        }
     }
     Page {
         pageName = "aeredale_smitty_shop_swarmers";
         Name = "\c[yellow]Smitty, Techsmith";
         Dialog = "\c[white]Yeah, the swarmers grenade is my specialty. When you throw it and it hits the ground, it releases a swarm of small drones, armed with razor sharp blades. These drones could tear your opponent apart, so be careful with the thing.\nSwarmers grenade costs 35 gold.";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_shop";
-        }
         Choice {
             Text = "\c[gold]Buy swarmers grenade";
             Nextpage = "aeredale_smitty_shop_shield";
@@ -220,16 +216,16 @@ Conversation {
                 amount = 35;
             }
         }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_shop";
+        }
     }
     Page {
         pageName = "aeredale_smitty_questions";
         Name = "\c[yellow]Smitty, Techsmith";
         Dialog = "\c[white]Yeah, little chat would be nice. What would you like to know?";
         Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_opener";
-        }
         Choice {
             Text = "Who are you?";
             Nextpage = "aeredale_smitty_whoareyou";
@@ -241,6 +237,10 @@ Conversation {
         Choice {
             Text = "Could you tell me about your village?";
             Nextpage = "aeredale_smitty_aboutaeredale";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_opener";
         }
     }
     Page {
@@ -259,12 +259,12 @@ Conversation {
         Dialog = "\c[white]Oh, not much. We're small farming community, so basically, nothing happens here. But as you ask, we have a problem here. Water's gone bad in the local well. I tried to fix it, but I'm no chemist, so I had no luck. But, as I look at you, maybe you could lend me a helping hand. Say, would you like to help me out?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "aeredale_smitty_questions";
-        }
-        Choice {
             Text = "Sure, what do you need?";
             Nextpage = "aeredale_smitty_help";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "aeredale_smitty_questions";
         }
     }
     Page {

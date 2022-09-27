@@ -1,274 +1,274 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 2;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "EC_rebecca_opener";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]Hello and welcome to our Blacksmith Shop. Do you need something repaired? Or do you want to buy some tools?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Yes, I wanted to buy something.";
-            Nextpage = "EC_rebecca_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "EC_rebecca_questions";
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_shop";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]All right, all right. We got grenades, crossbow ammo and energypods. Oh, and my father makes laser pistols. And besides that, we also make the normal farming tools.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_opener";
-        }
-        Choice {
-            Text = "Grenades? You make grenades?";
-            Nextpage = "EC_rebecca_shop_grenades";
-        }
-        Choice {
-            Text = "I need some crossbow ammo.";
-            Nextpage = "EC_rebecca_shop_xbowammo";
-        }
-        Choice {
-            Text = "I need some energypods.";
-            Nextpage = "EC_rebecca_shop_energypods";
-        }
-        Choice {
-            Text = "Let me take a look at the laser pistol.";
-            Nextpage = "EC_rebecca_shop_laserpistol";
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_shop_grenades";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]Yeah, my pa's specialty. He makes explosive, fire and gas grenades.\nExplosive grenade costs 5, Fire grenade costs 15 and Gas grenade costs 10 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_shop";
-        }
-        Choice {
-            Text = "I'll take the explosive grenade. (pay 5 gold)";
-            Nextpage = "EC_rebecca_shop_grenades";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosGrenadeE";
-            Cost {
-                item = "Coin";
-                amount = 5;
-            }
-        }
-        Choice {
-            Text = "I'll take the fire grenade. (pay 15 gold)";
-            Nextpage = "EC_rebecca_shop_grenades";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosGrenadeF";
-            Cost {
-                item = "Coin";
-                amount = 15;
-            }
-        }
-        Choice {
-            Text = "I'll take the gas grenade. (pay 10 gold)";
-            Nextpage = "EC_rebecca_shop_grenades";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosGrenadeG";
-            Cost {
-                item = "Coin";
-                amount = 10;
-            }
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_shop_xbowammo";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]Who doesn't?\nWe got the arrow bundles and quivers.\nThe electric ammo bundle costs 15, quiver costs 25 gold. The poison bolts bundle costs 50, quiver costs 75 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_shop";
-        }
-        Choice {
-            Text = "I'll take the electric bolts bundle. (pay 15 gold)";
-            Nextpage = "EC_rebecca_shop_xbowammo";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBundleElectric";
-            Cost {
-                item = "Coin";
-                amount = 15;
-            }
-        }
-        Choice {
-            Text = "I'll take the electric bolts quiver. (pay 25 gold)";
-            Nextpage = "EC_rebecca_shop_xbowammo";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBoltsElectric";
-            Cost {
-                item = "Coin";
-                amount = 25;
-            }
-        }
-        Choice {
-            Text = "I'll take the poison bolts bundle. (pay 50 gold)";
-            Nextpage = "EC_rebecca_shop_xbowammo";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBundlePoison";
-            Cost {
-                item = "Coin";
-                amount = 50;
-            }
-        }
-        Choice {
-            Text = "I'll take the poison bolts quiver. (pay 75 gold)";
-            Nextpage = "EC_rebecca_shop_xbowammo";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosBoltsPoison";
-            Cost {
-                item = "Coin";
-                amount = 75;
-            }
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_shop_energypods";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]These are little bit pricey, but nothing you can't afford.\nThe Energypod costs 10, the Energykit costs 30 and the Energypack costs 50 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_shop";
-        }
-        Choice {
-            Text = "I'll take the energypod. (pay 10 gold)";
-            Nextpage = "EC_rebecca_shop_energypods";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosEnergyPod";
-            Cost {
-                item = "Coin";
-                amount = 10;
-            }
-        }
-        Choice {
-            Text = "I'll take the energykit. (pay 30 gold)";
-            Nextpage = "EC_rebecca_shop_energypods";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosEnergyKit";
-            Cost {
-                item = "Coin";
-                amount = 30;
-            }
-        }
-        Choice {
-            Text = "I'll take the energypack. (pay 50 gold)";
-            Nextpage = "EC_rebecca_shop_energypods";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "wosEnergyPack";
-            Cost {
-                item = "Coin";
-                amount = 50;
-            }
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_shop_laserpistol";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]That's another of my father specialties. Pretty accurate, but eats batteries faster that hungery dog eats his meal. Costs 200 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_shop";
-        }
-        Choice {
-            Text = "I'll take the laser pistol. (pay 200 gold)";
-            Nextpage = "EC_rebecca_shop_laserpistol";
-            CloseDialog = true;
-            YesMessage = "Here it is!";
-            NoMessage = "Not enough gold!";
-            GiveItem = "laserPistol";
-            Cost {
-                item = "Coin";
-                amount = 200;
-            }
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_questions";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]A little chat is always nice. What did you wanted to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_opener";
-        }
-        Choice {
-            Text = "Your father owns the shop?";
-            Nextpage = "EC_rebecca_fathershop";
-        }
-        Choice {
-            Text = "Could you tell me about Eastcliff?";
-            Nextpage = "EC_rebecca_abouteastcliff";
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_fathershop";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]Yes. The shop's been established by my ganrdfather, when he came to Eastcliff as a young apprentice of Tekguild. He passed his knowledge to my father and he does the same with me. My father's skilled artisan, and he showed me many tricks. We're making a good living here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_opener";
-        }
-        Choice {
-            Text = "Could you tell me about Eastcliff?";
-            Nextpage = "EC_rebecca_abouteastcliff";
-        }
-    }
-    Page {
-        pageName = "EC_rebecca_abouteastcliff";
-        Name = "\c[yellow]Rebecca";
-        Dialog = "\c[white]Our little village is a quiet and peaceful place. The locals make their living out of fishing and farming. The farms are on the top of the cliffs. The local inn has a good cook and the food is delicious, stop there for a snack if you're hungry.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_rebecca_opener";
-        }
-        Choice {
-            Text = "Your father owns the shop?";
-            Nextpage = "EC_rebecca_fathershop";
-        }
-    }
+	ID = 2;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_rebecca_opener";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Hello and welcome to our Blacksmith Shop. Do you need something repaired? Or do you want to buy some tools?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, I wanted to buy something.";
+			Nextpage = "EC_rebecca_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "EC_rebecca_questions";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_shop";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]All right, all right. We got grenades, crossbow ammo and energypods. Oh, and my father makes laser pistols. And besides that, we also make the normal farming tools.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Grenades? You make grenades?";
+			Nextpage = "EC_rebecca_shop_grenades";
+		}
+		Choice {
+			Text = "I need some crossbow ammo.";
+			Nextpage = "EC_rebecca_shop_xbowammo";
+		}
+		Choice {
+			Text = "I need some energypods.";
+			Nextpage = "EC_rebecca_shop_energypods";
+		}
+		Choice {
+			Text = "Let me take a look at the laser pistol.";
+			Nextpage = "EC_rebecca_shop_laserpistol";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_opener";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_shop_grenades";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Yeah, my pa's specialty. He makes explosive, fire and gas grenades.\nExplosive grenade costs 5, Fire grenade costs 15 and Gas grenade costs 10 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take the explosive grenade. (pay 5 gold)";
+			Nextpage = "EC_rebecca_shop_grenades";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrenadeE";
+			Cost {
+				item = "Coin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "I'll take the fire grenade. (pay 15 gold)";
+			Nextpage = "EC_rebecca_shop_grenades";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrenadeF";
+			Cost {
+				item = "Coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "I'll take the gas grenade. (pay 10 gold)";
+			Nextpage = "EC_rebecca_shop_grenades";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrenadeG";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_shop";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_shop_xbowammo";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Who doesn't?\nWe got the arrow bundles and quivers.\nThe electric ammo bundle costs 15, quiver costs 25 gold. The poison bolts bundle costs 50, quiver costs 75 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take the electric bolts bundle. (pay 15 gold)";
+			Nextpage = "EC_rebecca_shop_xbowammo";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBundleElectric";
+			Cost {
+				item = "Coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "I'll take the electric bolts quiver. (pay 25 gold)";
+			Nextpage = "EC_rebecca_shop_xbowammo";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBoltsElectric";
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "I'll take the poison bolts bundle. (pay 50 gold)";
+			Nextpage = "EC_rebecca_shop_xbowammo";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBundlePoison";
+			Cost {
+				item = "Coin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "I'll take the poison bolts quiver. (pay 75 gold)";
+			Nextpage = "EC_rebecca_shop_xbowammo";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBoltsPoison";
+			Cost {
+				item = "Coin";
+				amount = 75;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_shop";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_shop_energypods";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]These are little bit pricey, but nothing you can't afford.\nThe Energypod costs 10, the Energykit costs 30 and the Energypack costs 50 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take the energypod. (pay 10 gold)";
+			Nextpage = "EC_rebecca_shop_energypods";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyPod";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "I'll take the energykit. (pay 30 gold)";
+			Nextpage = "EC_rebecca_shop_energypods";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyKit";
+			Cost {
+				item = "Coin";
+				amount = 30;
+			}
+		}
+		Choice {
+			Text = "I'll take the energypack. (pay 50 gold)";
+			Nextpage = "EC_rebecca_shop_energypods";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosEnergyPack";
+			Cost {
+				item = "Coin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_shop";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_shop_laserpistol";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]That's another of my father specialties. Pretty accurate, but eats batteries faster that hungery dog eats his meal. Costs 200 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take the laser pistol. (pay 200 gold)";
+			Nextpage = "EC_rebecca_shop_laserpistol";
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "laserPistol";
+			Cost {
+				item = "Coin";
+				amount = 200;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_shop";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_questions";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]A little chat is always nice. What did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Your father owns the shop?";
+			Nextpage = "EC_rebecca_fathershop";
+		}
+		Choice {
+			Text = "Could you tell me about Eastcliff?";
+			Nextpage = "EC_rebecca_abouteastcliff";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_opener";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_fathershop";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Yes. The shop's been established by my ganrdfather, when he came to Eastcliff as a young apprentice of Tekguild. He passed his knowledge to my father and he does the same with me. My father's skilled artisan, and he showed me many tricks. We're making a good living here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about Eastcliff?";
+			Nextpage = "EC_rebecca_abouteastcliff";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_opener";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_abouteastcliff";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Our little village is a quiet and peaceful place. The locals make their living out of fishing and farming. The farms are on the top of the cliffs. The local inn has a good cook and the food is delicious, stop there for a snack if you're hungry.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Your father owns the shop?";
+			Nextpage = "EC_rebecca_fathershop";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_rebecca_opener";
+		}
+	}
 }

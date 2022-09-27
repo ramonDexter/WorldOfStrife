@@ -1,78 +1,78 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 5;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "EC_tucker_opener";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]Hello, Binder. What a blessed beautiful day! How may I help you?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What are you doing here?";
-            Nextpage = "EC_tucker_doinghere";
-        }
-        Choice {
-            Text = "Could you tell me about Eastcliff?";
-            Nextpage = "EC_tucker_eastcliff";
-        }
-        Choice {
-            Text = "Could you tell me about surroundings?";
-            Nextpage = "EC_tucker_surroundings";
-        }
-    }
-    Page {
-        pageName = "EC_tucker_doinghere";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]I came here to buy some supplies for my farm, and to exchange my produce. The prices are good this year, and I'm making a good trade. Right now, I've stopped here for a small break, before I'll head back to my farm.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_tucker_opener";
-        }
-        Choice {
-            Text = "Where is your farm?";
-            Nextpage = "EC_tucker_farm";
-        }
-    }
-    Page {
-        pageName = "EC_tucker_farm";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]Not far from here. About twenty kilometres to the north of Eastcliff, along the road to Kolyma.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_tucker_opener";
-        }
-    }
-    Page {
-        pageName = "EC_tucker_eastcliff";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]Well, I don't know much about the village besides where to sell my produce. I'm a simple farmer, not a scholar. Sorry.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_tucker_opener";
-        }
-    }
-    Page {
-        pageName = "EC_tucker_surroundings";
-        Name = "\c[yellow]Tucker, farmer";
-        Dialog = "\c[white]Well, the northern road climbs up to the cliffs and then heads mostly straight to the hills where lies the city of Kolyma. It's quite peacefule land, as the Imperial Army does good job of controlling the local bands of bandits.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_tucker_opener";
-        }
-    }
+	ID = 5;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_tucker_opener";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]Hello, Binder. What a blessed beautiful day! How may I help you?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What are you doing here?";
+			Nextpage = "EC_tucker_doinghere";
+		}
+		Choice {
+			Text = "Could you tell me about Eastcliff?";
+			Nextpage = "EC_tucker_eastcliff";
+		}
+		Choice {
+			Text = "Could you tell me about surroundings?";
+			Nextpage = "EC_tucker_surroundings";
+		}
+	}
+	Page {
+		pageName = "EC_tucker_doinghere";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]I came here to buy some supplies for my farm, and to exchange my produce. The prices are good this year, and I'm making a good trade. Right now, I've stopped here for a small break, before I'll head back to my farm.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Where is your farm?";
+			Nextpage = "EC_tucker_farm";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_tucker_opener";
+		}
+	}
+	Page {
+		pageName = "EC_tucker_farm";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]Not far from here. About twenty kilometres to the north of Eastcliff, along the road to Kolyma.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_tucker_opener";
+		}
+	}
+	Page {
+		pageName = "EC_tucker_eastcliff";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]Well, I don't know much about the village besides where to sell my produce. I'm a simple farmer, not a scholar. Sorry.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_tucker_opener";
+		}
+	}
+	Page {
+		pageName = "EC_tucker_surroundings";
+		Name = "\c[yellow]Tucker, farmer";
+		Dialog = "\c[white]Well, the northern road climbs up to the cliffs and then heads mostly straight to the hills where lies the city of Kolyma. It's quite peacefule land, as the Imperial Army does good job of controlling the local bands of bandits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_tucker_opener";
+		}
+	}
 }

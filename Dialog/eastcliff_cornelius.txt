@@ -1,120 +1,120 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 10;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "EC_cornelius_opener";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Hello my child, what brings to the house of the Father? Are you seeking spiritual salvation? Or have you come to meditate here?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "What services do you offer?";
-            Nextpage = "EC_cornelius_services";
-        } 
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "EC_cornelius_questions";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_services";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]You can confess your sins to me. Or, if some of your relatives is nearing his end, I can offer the funeral services. Also, I offer blessings of all kind, as well as other spiritual services.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_opener";
-        }
-        Choice {
-            Text = "Will you pray for my success on mission?";
-            Nextpage = "EC_cornelius_prayforme";
-        }
-        Choice {
-            Text = "Do you need any help here?";
-            Nextpage = "EC_cornelius_needhelphere";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_prayforme";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Certainly, yes.\nFather, who came from the void,\nplease, watch this Binder's steps\nas he is your most faithful servant.\nAmen.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Amen.";
-            Nextpage = "EC_cornelius_services";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_needhelphere";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Yes, I sure need help here.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_services";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_questions";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Oh yes, what would you like to know?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_opener";
-        }
-        Choice {
-            Text = "Could you tell me about this village?";
-            Nextpage = "EC_cornelius_abouteastcliff";
-        }
-        Choice {
-            Text = "This is sure impressive temple!";
-            Nextpage = "EC_cornelius_abouttemple";
-        }
-        Choice {
-            Text = "What's in the surroundings?";
-            Nextpage = "EC_cornelius_aboutsurroundings";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_abouteastcliff";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Eastcliff is a small village tucked to the cliffs of southern peninsula. The locals live from the rich of the sea, and from the rich soil on the cliffs. Our village is hospitable. We have all the services here, a medic, a techsmith and a trader. Also, local inn has good food and good drinks. Our mayor, mister Holden, is faithful and trustworthy man, a right person for a post of mayor.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_questions";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_abouttemple";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Our temple was built five hundred years ago, during the reign of first emperor Bodrik. It's built in the classic imperial style. This style is used by the Church of the Order for sacral buildings. The temple has underground floor and a Crypt, where we bury our dead. The Crypt's the oldest part of structure, where the bones of the builders are rest.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_questions";
-        }
-    }
-    Page {
-        pageName = "EC_cornelius_aboutsurroundings";
-        Name = "\c[yellow]Cornelius, Priest";
-        Dialog = "\c[white]Our village is located on the imperial road running around the Kolyma peninsula. It's a main travel route from city Millport to City Holden on the eastern coast. The road to the north leads to city Kolyma and further to the north, to Silent Hills. And in closer vicinity of the village are farms, that lies northern from the village, up the cliffs.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "EC_cornelius_questions";
-        }
-    }
+	ID = 10;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_cornelius_opener";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Hello my child, what brings to the house of the Father? Are you seeking spiritual salvation? Or have you come to meditate here?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "What services do you offer?";
+			Nextpage = "EC_cornelius_services";
+		} 
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "EC_cornelius_questions";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_services";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]You can confess your sins to me. Or, if some of your relatives is nearing his end, I can offer the funeral services. Also, I offer blessings of all kind, as well as other spiritual services.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Will you pray for my success on mission?";
+			Nextpage = "EC_cornelius_prayforme";
+		}
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "EC_cornelius_needhelphere";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_opener";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_prayforme";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Certainly, yes.\nFather, who came from the void,\nplease, watch this Binder's steps\nas he is your most faithful servant.\nAmen.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Amen.";
+			Nextpage = "EC_cornelius_services";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_needhelphere";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Yes, I sure need help here.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_services";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_questions";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Oh yes, what would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about this village?";
+			Nextpage = "EC_cornelius_abouteastcliff";
+		}
+		Choice {
+			Text = "This is sure impressive temple!";
+			Nextpage = "EC_cornelius_abouttemple";
+		}
+		Choice {
+			Text = "What's in the surroundings?";
+			Nextpage = "EC_cornelius_aboutsurroundings";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_opener";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_abouteastcliff";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Eastcliff is a small village tucked to the cliffs of southern peninsula. The locals live from the rich of the sea, and from the rich soil on the cliffs. Our village is hospitable. We have all the services here, a medic, a techsmith and a trader. Also, local inn has good food and good drinks. Our mayor, mister Holden, is faithful and trustworthy man, a right person for a post of mayor.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_questions";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_abouttemple";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Our temple was built five hundred years ago, during the reign of first emperor Bodrik. It's built in the classic imperial style. This style is used by the Church of the Order for sacral buildings. The temple has underground floor and a Crypt, where we bury our dead. The Crypt's the oldest part of structure, where the bones of the builders are rest.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_questions";
+		}
+	}
+	Page {
+		pageName = "EC_cornelius_aboutsurroundings";
+		Name = "\c[yellow]Cornelius, Priest";
+		Dialog = "\c[white]Our village is located on the imperial road running around the Kolyma peninsula. It's a main travel route from city Millport to City Holden on the eastern coast. The road to the north leads to city Kolyma and further to the north, to Silent Hills. And in closer vicinity of the village are farms, that lies northern from the village, up the cliffs.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_cornelius_questions";
+		}
+	}
 }

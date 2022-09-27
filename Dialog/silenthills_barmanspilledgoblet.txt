@@ -25,10 +25,6 @@ Conversation
 		Dialog = "\c[white]I can give you bottle of beer, vine or water. What would you like?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
-			NextPage = "SH_barkeep1_opener";
-		}
-		Choice {
 			Text = "Give me bottle of vine";
 			NextPage = "SH_barkeep1_drinks";
 			DisplayCost = true;
@@ -63,6 +59,10 @@ Conversation
 				item = "Coin";
 				amount = 5;
 			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			NextPage = "SH_barkeep1_opener";
 		}
 	}
 	Page {

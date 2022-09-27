@@ -110,13 +110,11 @@ Conversation {
 				item = "Coin";
 				amount = 100;
 			}
-
 		}
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "SH_techSmith1_opener";
 		}
-
 	}
 	Page {
         pageName = "SH_techSmith1_upgrades";

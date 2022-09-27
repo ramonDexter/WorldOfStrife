@@ -1163,6 +1163,9 @@ class wosBareHands : wosWeapon {
 		+WEAPON.MELEEWEAPON;
 		+WEAPON.NOALERT;
 		+WEAPON.WIMPY_WEAPON;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNCLEARABLE;
+		+INVENTORY.UNTOSSABLE;
 		weapon.selectionOrder 4000;
 		weapon.slotNumber 1;
 		Weapon.slotPriority 0.1;

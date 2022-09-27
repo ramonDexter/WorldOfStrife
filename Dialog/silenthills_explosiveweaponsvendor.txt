@@ -35,7 +35,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy HE grenades";
+			Text = "\c[gold]Buy HE grenades";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "HEGrenadeRounds";
@@ -48,7 +48,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Phosphorous grenades";
+			Text = "\c[gold]Buy Phosphorous grenades";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "PhosphorusGrenadeRounds";
@@ -74,7 +74,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy pack of Mini-missiles";
+			Text = "\c[gold]Buy pack of Mini-missiles";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "MiniMissiles";
@@ -87,7 +87,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy crate of Mini-missiles";
+			Text = "\c[gold]Buy crate of Mini-missiles";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "CrateOfMissiles";

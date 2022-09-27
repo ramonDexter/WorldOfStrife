@@ -4,8 +4,21 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 3;
+	/*
 	Page {
-        pageName = "SH_energyAmmoVendor_opener";
+		pageName = "";
+		Name = "\c[yellow]Technician";
+		Dialog = "\c[white]";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_energyAmmoVendor_opener";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]\c[white]Hello, how may I serve you?";
 		Panel = "M_FALSP2";
@@ -36,18 +49,6 @@ Conversation {
 				amount = 75;
 			}
 		}
-		/*Choice {
-			Text = "\c[gold]Buy Flight Harness";
-			YesMessage = "Here you go!";
-			NoMessage = "Not enough gold!";
-			GiveItem = "jetpack_item";
-			NextPage = "SH_energyAmmoVendor_opener";
-			DisplayCost = true;
-			Cost {
-				Item = "Coin";
-				Amount = 80;
-			}
-		}*/
 		Choice {
 			Text = "\c[gold]Buy Deployable Shield";
 			YesMessage = "Here you go!";
@@ -59,6 +60,70 @@ Conversation {
 				Item = "Coin";
 				Amount = 150;
 			}
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "SH_energyAmmoVendor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_energyAmmoVendor_questions";
+		Name = "\c[yellow]Technician";
+		Dialog = "\c[white]";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "SH_energyAmmoVendor_whoareyou";
+		}
+		Choice {
+			Text = "You make all this stuff?";
+			Nextpage = "SH_energyAmmoVendor_makeallthis";
+		}
+		Choice {
+			Text = "Could you tell me about Silent Hills?";
+			Nextpage = "SH_energyAmmoVendor_aboutsilenthills";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_energyAmmoVendor_opener";
+		}
+	}
+	Page {
+		pageName = "SH_energyAmmoVendor_whoareyou";
+		Name = "\c[yellow]Technician";
+		Dialog = "\c[white]My name's Godwin. I'm a certified technician with specialization in support gadgets.";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You make all this stuff?";
+			Nextpage = "SH_energyAmmoVendor_makeallthis";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_energyAmmoVendor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_energyAmmoVendor_makeallthis";
+		Name = "\c[yellow]Technician";
+		Dialog = "\c[white]Yes, I personally make all this stuff. That means everything you buy here is high quality and I guarantee 100% reliability of my equipment.";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_energyAmmoVendor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_energyAmmoVendor_aboutsilenthills";
+		Name = "\c[yellow]Technician";
+		Dialog = "\c[white]Well, I came here five years ago. I spend most of day in my workshop, so I'm not really into local rumors. But I can give you a rough description of out town.\nThe town is divided into two parts by the river. The western part is the residential area, where most of the locals home. The western part is the market part of town, where most of local businesses prosper.";
+		Panel = "M_FALSP2";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_energyAmmoVendor_questions";
 		}
 	}
 }

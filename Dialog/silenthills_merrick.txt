@@ -37,7 +37,7 @@ Conversation {
         Dialog = "\c[white]All right, let's get some drink!\nThe beer and ale costs 3, wine costs 5 and fresh water is for 2 gold. What would you like?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I'll take the beer ";
+            Text = "\c[gold]I'll take the beer ";
 			NextPage = "SH_merrick_drinks";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -50,7 +50,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the ale ";
+            Text = "\c[gold]I'll take the ale ";
 			NextPage = "SH_merrick_drinks";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -63,7 +63,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the wine ";
+            Text = "\c[gold]I'll take the wine ";
 			NextPage = "SH_merrick_drinks";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -76,7 +76,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the water ";
+            Text = "\c[gold]I'll take the water ";
 			NextPage = "SH_merrick_drinks";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -99,7 +99,7 @@ Conversation {
         Dialog = "\c[white]Okay, so you're hungry. That could be easily solved.\nThe hambruger costs 4, cheeseburger is for 5 and the bigburger costs 6 gold. The grilled chicken is for 10 gold.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "I'll take the hamburger ";
+            Text = "\c[gold]I'll take the hamburger ";
 			NextPage = "SH_merrick_food";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -112,7 +112,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the cheeseburger ";
+            Text = "\c[gold]I'll take the cheeseburger ";
 			NextPage = "SH_merrick_food";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -125,7 +125,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the bigburger ";
+            Text = "\c[gold]I'll take the bigburger ";
 			NextPage = "SH_merrick_food";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -138,7 +138,7 @@ Conversation {
 			}
         }
         Choice {
-            Text = "I'll take the grilled chicken ";
+            Text = "\c[gold]I'll take the grilled chicken ";
 			NextPage = "SH_merrick_food";
 			CloseDialog = false;
 			DisplayCost = true;
@@ -179,12 +179,12 @@ Conversation {
         Dialog = "\c[white]Oh yes, thanks for asking. I've bought this place ten years ago. I've always wanted to own a inn near a river, and when I saw a proposal to buy such a place, I left my last job and bought this magnificent place. And since that time, I'm improving this little inn. I've recently built the patio outside.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_merrick_questions";
-        }
-        Choice {
             Text = "So the trade is good I guess..";
             Nextpage = "SH_merrick_tradeisgood";
+        }
+        Choice {
+            Text = "\c[yellow]<< BACK";
+            Nextpage = "SH_merrick_questions";
         }
     }
     Page {

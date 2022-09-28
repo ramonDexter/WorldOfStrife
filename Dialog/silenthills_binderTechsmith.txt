@@ -69,7 +69,7 @@ Conversation {
 	Page {
 		pageName = "SH_energyAmmoVendor_questions";
 		Name = "\c[yellow]Technician";
-		Dialog = "\c[white]";
+		Dialog = "\c[white]What did you wanted to know_";
 		Panel = "M_FALSP2";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {

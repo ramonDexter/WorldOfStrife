@@ -75,8 +75,9 @@ Conversation {
         pageName = "SH_techSmith1_shop";
 		Name = "\c[yellow]Techsmith";
 		Dialog = "\c[white]What would you like? I make and sell the Night-Eye Device, Armor Repair kits and the Swarmers device.";
+        Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "Buy Night-Eye Device";
+			Text = "\c[gold]Buy Night-Eye Device";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_techSmith1_shop";
@@ -88,7 +89,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Armor Repair Kit";
+			Text = "\c[gold]Buy Armor Repair Kit";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_techSmith1_shop";
@@ -100,7 +101,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Swarmers";
+			Text = "\c[gold]Buy Swarmers";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			NextPage = "SH_techSmith1_shop";

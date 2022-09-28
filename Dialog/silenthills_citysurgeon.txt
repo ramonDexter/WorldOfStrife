@@ -29,7 +29,7 @@ Conversation {
 	}
     Page {
         pageName = "SH_citySurgeon_questions";
-        Name = "\c[yellow]Armor vendor";
+        Name = "\c[yellow]Medic";
         Dialog = "\c[white]Yes? What did you wanted to know?";
         Goodbye = "\c[red]Goodbye.";
         Choice {
@@ -47,22 +47,22 @@ Conversation {
     }
     Page {
         pageName = "SH_citySurgeon_aboutpatients";
-        Name = "\c[yellow]Armor vendor";
+        Name = "\c[yellow]Medic";
         Dialog = "\c[white]Well, I cannot tell you any personal information about my patients. Medical secret, sorry.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_citySurgeon_opener";
+            Nextpage = "SH_citySurgeon_questions";
         }
     }
     Page {
         pageName = "SH_citySurgeon_aboutsilenthills";
-        Name = "\c[yellow]Armor vendor";
+        Name = "\c[yellow]Medic";
         Dialog = "\c[white]Silent Hills is nice little town. I've been assigned here three years ago, so I really don't know much, yet. I've got lots of work here in the lab, so if you really want to know about the town's history, you have to ask someone else.";
         Goodbye = "\c[red]Goodbye.";
         Choice {
             Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_citySurgeon_opener";
+            Nextpage = "SH_citySurgeon_questions";
         }
     }
 }

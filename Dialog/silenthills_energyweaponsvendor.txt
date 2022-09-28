@@ -35,7 +35,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy EnergyPod";
+			Text = "\c[gold]Buy EnergyPod";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPod";
@@ -48,7 +48,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Energykit Pack";
+			Text = "\c[gold]Buy Energykit Pack";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyKit";
@@ -61,7 +61,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Buy Energy Pack";
+			Text = "\c[gold]Buy Energy Pack";
 			YesMessage = "Here you go!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPack";

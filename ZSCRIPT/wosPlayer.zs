@@ -1166,7 +1166,7 @@ class wosBareHands : wosWeapon {
 		+INVENTORY.UNDROPPABLE;
 		+INVENTORY.UNCLEARABLE;
 		+INVENTORY.UNTOSSABLE;
-		weapon.selectionOrder 4000;
+		weapon.selectionOrder 5000;
 		weapon.slotNumber 1;
 		Weapon.slotPriority 0.1;
 		Tag "Bare hands";

@@ -22,7 +22,7 @@ Conversation {
 		Dialog = "\c[white]\c[white]Hello, what can I offer you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Text = "\c[gold]Crossbow";
+			Text = "\c[gold]Buy Crossbow";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -35,7 +35,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Electric bolt satchel";
+			Text = "\c[gold]Buy Electric bolt satchel";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -48,7 +48,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Poisonous bolt satchel";
+			Text = "\c[gold]Buy Poisonous bolt satchel";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -61,7 +61,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[gold]Assault Gun";
+			Text = "\c[gold]Buy Assault Gun";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -74,7 +74,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Bullet Clip";
+			Text = "\c[gold]Buy Bullet Clip";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;
@@ -87,7 +87,7 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "Box of Bullets";
+			Text = "\c[gold]Buy Box of Bullets";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;
 			DisplayCost = true;

@@ -1,47 +1,127 @@
-//==================================================================================================================
-//combat tutor
-//==================================================================================================================
+//////////////////////////////////////////////////////////////////////////////////////////
+// combat tutor convid 19 ////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 namespace = "GZDoom";
 Conversation {
 	ID = 19;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
 	Page {
 		//kompletne predelat, doplnit script na pridani cca 500xp, ne primo zvyseni vlastnosti
-        pageName = "SH_combatTutor_opener";
+		pageName = "SH_combatTutor_opener";
 		Name = "\c[yellow]Combat Tutor";
-		Dialog = "\c[white]Hello Binder, I can offer you cybernetic implant that will improve your accuracy, if you have upgrade tokens. And I can sell you upgrade tokens in exchange for beer. Ten bottles for one token. What do you say?";
+		Dialog = "\c[white]Hello Binder, I can offer you training that will improve your skills. My services are the best in town, so some say my services are pricey. You decide.";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
-			Require {
-				item = "wosbeerBottle";
-				amount = 10;
-			}
-			Text = "Exchange ten beer bottles for one upgrade token";
-			GiveItem = "upgradeToken";
-			YesMessage = "Here you go.";
-			NoMessage = "Not enough beer, dude!";
-			NextPage = 1;
-			CloseDialog = true;
+			Text = "I'm interested in training.";
+			Nextpage = "SH_combatTutor_training";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "SH_combatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_training";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]Okay, training takes up two hours and costs 1000 gold. As I said, little bit pricey, but the training is the best in town. I'll teach you some special moves and tricks that will give you upper hand over your opponent.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, let's do it.";
+			Nextpage = "SH_combatTutor_opener";
+			Closedialog = true;
+			NoMessage = "\c[white]Not enough gold!";
+			Special = 80;
+			arg0 = 113;
 			Cost {
-				item = "wosbeerBottle";
-				amount = 10;
+				item = "Coin";
+				amount = 1000;
 			}
 		}
 		Choice {
-			Require {
-				item = "upgradeToken";
-				amount = 1;
-			}
-			Text = "Install me the accuracy bonus.";
-			NextPage = 1;
-			CloseDialog = true;
-			GiveItem = "upgradeAccuracy";
-			YesMessage = "Here you go. Just hold still.";
-			NoMessage = "You need the upgrade token!";
-			Cost {
-				item = "upgradeToken";
-				amount = 1;
-			}
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_opener";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_questions";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]Yes? What do you want to know? Informations is always valuable.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "SH_combatTutor_whoareyou";
+		}
+		Choice {
+			Text = "This workshop belongs to you?";
+			Nextpage = "SH_combatTutor_workshop";
+		}
+		Choice {
+			Text = "Do you know anything about Silent Hills?";
+			Nextpage = "SH_combatTutor_aboutsilenthills";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_opener";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_whoareyou";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]I am Virgil. I spent my life as a merc, contractor for hire. Got into situations where I believed that I would die, but I think I had my luck. After some time, I decided to retire. So I bought this workshop and established this small combat school.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "This workshop belongs to you?";
+			Nextpage = "SH_combatTutor_workshop";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_workshop";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]Oh yeah, and I'm proud of it. When I decided to retire, I was also thinking about how to make some better living. So I opened this small business. But later it turned out it was not so wise decision, as most of the locals are not interested in combat training. But my skills are known among the people, so I got enough customers. Mostly travellers, who came to visit my school to refine their skills.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Lots of people come here?";
+			Nextpage = "SH_combatTutor_peoplecomehere";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_peoplecomehere";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]Well, ten per month on average. But this amount of customers allows me to afford pretty comfortable life, so I good with that.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_combatTutor_aboutsilenthills";
+		Name = "\c[yellow]Combat Tutor"; 
+		Dialog = "\c[white]Well, I settled here ten years ago, so I'm newcomer. But this town is pretty small and one can get used to it quite fast. We've got all kinds of services here, and even better taverns. I like The Spilled Goblet, which is on the opposide side of the river, just in front of the bridge, up the stairs. They got best beer in town and offer good homely food.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_combatTutor_questions";
 		}
 	}
 }
-//==================================================================================================================
+//////////////////////////////////////////////////////////////////////////////////////////

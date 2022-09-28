@@ -94,7 +94,7 @@ Conversation {
     Page {
         pageName = "mp_publicPC_proclamations_001";
         Name = "\c[yellow]PUBLIC COMPUTER";
-        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]The City Authority announces extensioni of City Guard authority. Due to later difficulties with rebelous heretics, the city guard is allowed to search any individual's belongings. This authoritu is also applied upon members of the Binder Order.";
+        Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]The City Authority announces extension of City Guard authority. Due to later difficulties with rebelous heretics, the city guard is allowed to search any individual's belongings. This authoritu is also applied upon members of the Binder Order.";
         Goodbye = "\c[red]Goodbye."; 
         Choice {
             Text = "\c[yellow]<< BACK";

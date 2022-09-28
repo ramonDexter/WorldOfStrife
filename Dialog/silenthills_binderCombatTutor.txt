@@ -1,0 +1,105 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 60;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_binderCombatTutor_opener";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Hello, brother. Have you come for a training?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah, training would be nice.";
+			Nextpage = "SH_binderCombatTutor_training";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_training";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Okay, I'll show you some tricks. Follow my lead...";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sure.";
+			Nextpage = "SH_binderCombatTutor_opener2";
+            Closedialog = true;
+            Special = 80;
+            arg0 = 113;
+		}
+		Choice {
+			Text = "I've actually changed my mind.";
+			Nextpage = "SH_binderCombatTutor_opener";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_opener2";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Hello, brother. What brings you to my gym?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I wanted to ask...";
+			Nextpage = "SH_binderCombatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_questions";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Okay, what did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How are you today?";
+			Nextpage = "SH_binderCombatTutor_howareyou";
+		}
+		Choice {
+			Text = "Could you tell me about Binder Order?";
+			Nextpage = "SH_binderCombatTutor_aboutbinders";
+		}
+		Choice {
+			Text = "Do you know anything about Silent Hills?";
+			Nextpage = "SH_binderCombatTutor_aboutsilenthills";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCombatTutor_opener2";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_howareyou";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Well, I seen better days. I think I'm starting to fell my age. Well, I'm no youngster in my fifties. At least I can pass my knowledge to thers working as a combat trainer.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCombatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_aboutbinders";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Our sacred Order is protector of people of the Empire. Our sacred goal os to fight evil while protecting the faithful people of the Empire and followers of the one true faith.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCombatTutor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCombatTutor_aboutsilenthills";
+		Name = "\c[yellow]Lucas, Combat Tutor";
+		Dialog = "\c[white]Silent Hills looks peaceful. And the first look could be deceiving. It's a wretched hole of scum and villainy. Be ware when you visit the streets.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCombatTutor_questions";
+		}
+	}
+}

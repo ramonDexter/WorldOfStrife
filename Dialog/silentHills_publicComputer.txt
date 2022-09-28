@@ -1,0 +1,162 @@
+namespace = "GZDoom";
+Conversation {
+	ID = 61;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_publicPC_opener";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[white]Public Computer\n---------------\n- Public announcements\n- City Proclamations\n- News";
+		Goodbye = "\c[red]EXIT"; 
+		Choice {
+			Text = "Public announcements";
+			Nextpage = "SH_publicPC_publicAnnouncements";
+		} 
+		Choice {
+			Text = "City Proclamations";
+			Nextpage = "SH_publicPC_proclamations";
+		}
+		Choice {
+			Text = "News";
+			Nextpage = "SH_publicPC_news";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_publicAnnouncements";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[white]Public Announcements";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "# 001";
+			Nextpage = "SH_publicPC_publicAnnouncements_001";
+		}
+		Choice {
+			Text = "# 002";
+			Nextpage = "SH_publicPC_publicAnnouncements_002";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_opener";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_publicAnnouncements_001";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Imperial Decree # 042005643\n===========================\n\c[white]Announcement of the Imperial MedGuild:\nThe vaccination against the Red Plague will take place from 16. to 27. of the month of harvest. Each citizen will receive an invitation. The invitation is mandatory, vaccination is madnatory. Please, see your nearest medical center for more information.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_publicAnnouncements";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_publicAnnouncements_002";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Imperial Decree # 042005702\n===========================\n\c[white]Travelling merchants are being issued new tax. Payment of the Tax will be collected by local city authorities once they leave the city. The tax will be 1% of each merchants income in said city.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_publicAnnouncements";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_proclamations";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "# 001";
+			Nextpage = "SH_publicPC_proclamations_001";
+		} 
+		Choice {
+			Text = "# 002";
+			Nextpage = "SH_publicPC_proclamations_002";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_opener";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_proclamations_001";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Silent Hills Town Authority Proclamations\n=====================================\n\c[white]Due to later trouble in the powerplant, Town Authority announces shortages of electric supply. The shortage will take time every day from 5:00 to 10:00. Only emergency services will be supplied during this timeout. Town gates will be closed until the powerplant is fixed.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_proclamations";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_proclamations_002";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Silent Hills Town Authority Proclamations\n=====================================\n\c[white]Town Authority announces two days off for workers in the mines due to later pest problems. Normal work order will be restored once the pest problems are solved.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_proclamations";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_news";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[white]News";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "TekGuild offers new places for students.";
+			Nextpage = "SH_publicPC_news_01";
+		} 
+		Choice {
+			Text = "Tabit palace looks for new chamberlain.";
+			Nextpage = "SH_publicPC_news_02";
+		} 
+		Choice {
+			Text = "Later festive celebrations went worse than expected.";
+			Nextpage = "SH_publicPC_news_03";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_opener";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_news_01";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]TekGuild offers new places for students\n=====================================\n\c[white]The TekGuild announces openening of new places for students willing to learn technical skills. The newcomers should visit any TekGuild university, where they can sign in and start their studies.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_news";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_news_02";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Tabit palace looks for new chamberlain\n=====================================\n\c[white]Rumors say that the Tabit Palace looks for new chamberlain. We're not sure if this news is true. But a place of noble chamberlain is well paid, so this rumor can attract lots of people whose only interest is the salary. But the position of chamberlain requires primary maximal loayalty, which drives of many of these greedy ones.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_news";
+		}
+	}
+	Page {
+		pageName = "SH_publicPC_news_03";
+		Name = "\c[yellow]PUBLIC COMPUTER";
+		Dialog = "\c[yellow]Later festive celebrations went worse than expected\n=====================================\n\c[white]The later festival celebrations held on 17. Harvest, went worse than expected. Many of the attendees got drunk and trashed big part of the cermony grounds, which resulted in great arrest of many of the attendees. Most of them were later released.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_publicPC_news";
+		}
+	}
+}

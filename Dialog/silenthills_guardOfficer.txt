@@ -1,0 +1,100 @@
+namespace = "GZDoom";
+Conversation {
+    id = 34;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_cityGuardOfficer_opener";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]Hello, Binder. What business brings you to Town Guard offices?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Do you need any help?";
+			Nextpage = "SH_cityGuardOfficer_help";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "SH_cityGuardOfficer_questions";
+		}
+	}
+	Page {
+		pageName = "SH_cityGuardOfficer_questions";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'm looking for heretic activities in town.";
+			Nextpage = "SH_cityGuardOfficer_heretics";
+		}
+		Choice {
+			Text = "How are the locals?";
+			Nextpage = "SH_cityGuardOfficer_locals";
+		}
+		Choice {
+			Text = "Do you know anything about Silent Hills?";
+			Nextpage = "SH_cityGuardOfficer_aboutsilenthills";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_cityGuardOfficer_opener";
+		}
+	}
+	Page {
+		pageName = "SH_cityGuardOfficer_heretics";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]Well, our informants are bringing some informations about heretical activities in town, but most of these informations are vague messages and rumors. We are not able to conclude anything from such rumors. We've heard that there is hidden heretical base in town, but it looks more like a rumor than reality.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_cityGuardOfficer_questions";
+		}
+	}
+	Page {
+		pageName = "SH_cityGuardOfficer_locals";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]The locals are good hard working people. Most of them are faithful followers of the one true faith, but we got some black sheep. We're watching these foul individuals, but most of them are just drunks or low criminals. No dissidents or Father forbade, heretics.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_cityGuardOfficer_questions";
+		}
+	}
+	Page {
+		pageName = "SH_cityGuardOfficer_aboutsilenthills";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]Silent Hills is small trading community in the upper part of the Hillside. Out town offers all services required for comfortable living, including medics and town bath. We've got TekGuild university here. Also, we've got powerplant here in town, but this don't protect us from power shartages.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_cityGuardOfficer_questions";
+		}
+	}
+
+
+    ///////////////////////////////////////////////////////////////////////////////////
+    // help - small quest /////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "SH_cityGuardOfficer_help";
+		Name = "\c[yellow]Guard Officer"; 
+		Dialog = "\c[white]Hmm, when I think about your offer, yes, we could use your help.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_cityGuardOfficer_opener";
+		}
+	}
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////
+}

@@ -1,0 +1,264 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 59;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_binderCook_opener";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Hello. Do you want something to eat? Or a little chat maybe?";
+		Goodbye = "\c[red]Goodbye.";
+        // quest //////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "About that help...I arranged a local food delivery.";
+			Nextpage = "SH_binderCook_help_arrangeddelivery";
+			Require {
+				item = "twn_binderCook_sezensuroviny_sehnano";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_binderCook_sezensuroviny_finished";
+				amount = 1;
+			}
+		}
+		///////////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "Yeah, little snack would be nice.";
+			Nextpage = "SH_binderCook_snack";
+		}
+		Choice {
+			Text = "Yes, I've got some questions.";
+			Nextpage = "SH_binderCook_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_snack";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Okay, today we got bigburger, cheeseburger and grilled chicken. Your choice?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]One cheeseburger";
+			Nextpage = "SH_binderCook_snack";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "Coin";
+				amount = 3;
+			}
+		}
+		Choice {
+			Text = "\c[gold]One bigburger";
+			Nextpage = "SH_binderCook_snack";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "Coin";
+				amount = 4;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Grilled chicken";
+			Nextpage = "SH_binderCook_snack";
+			CloseDialog = false;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "Coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCook_opener";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_questions";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]A little chat, good. What would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How are you today?";
+			Nextpage = "SH_binderCook_howareyou";
+		}
+		Choice {
+			Text = "What's on the list for tomorrow?";
+			Nextpage = "SH_binderCook_tomorrowfood";
+		}
+		Choice {
+			Text = "Do you know anything about Silent Hills?";
+			Nextpage = "SH_binderCook_aboutsilenthills";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCook_opener";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_howareyou";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]I'm fine, thanks for asking. I got everything prepared for lunch, so now I got a little time off. Work here is not hard. But I would like to have some better source of cooking ingredients. Our supplies are not the best. Sometimes it's really hard to make a good meal out of the stuff suppliers bring me.";
+		Goodbye = "\c[red]Goodbye.";
+        // quest //////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "SH_binderCook_help";
+			Exclude {
+				item = "twn_binderCook_sezensuroviny_given";
+				amount = 1;
+			}
+		}
+		///////////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCook_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_tomorrowfood";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Well, I got some beef here. So some goulash maybe. Yeah, that will be good. But don't tell the others, I want to make it as a surprise.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCook_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_aboutsilenthills";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Well, this town is a peaceful little town. We've got all the services one would expect to find in a town like this. So, plenty of shops, some taverns, medics and even a town bath. I like to visit the bath after work, it's great for relaxation.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderCook_questions";
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	// help - quest sehnat lepsi suroviny /////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	/*
+		quest sehnat lepsi suroviny
+		rybar na severu u reky muze dodavat ryby
+		nebo rybar u reky ve meste
+		obchodnik v grocery store muze dodavat ostatni suroviny
+		tokeny:
+		twn_binderCook_sezensuroviny_given
+		twn_binderCook_sezensuroviny_sehnano
+		twn_binderCook_sezensuroviny_finished
+
+		zadani v dialogu u kucharky:
+		script 1605 (void) {
+			GiveInventory("twn_binderCook_sezensuroviny_given", 1);
+			displayQuest ("[ Find new food suppliers ]", 1);
+		}
+		v dialogu u obchodnika:
+		script 1606 (void) {
+			GiveInventory("twn_binderCook_sezensuroviny_sehnano20", 1);
+			displayQuest ("[ Find new food suppliers - food supplier found]", 2);
+		}
+		script 1607 (void) {
+			GiveInventory("twn_binderCook_sezensuroviny_sehnano10", 1);
+			displayQuest ("[ Find new food suppliers - food supplier found]", 2);
+		}
+		po navratu u kucharky:
+		script 1608 (void) {
+			GiveInventory("twn_binderCook_sezensuroviny_finished", 1);
+			GiveInventory("coin", 250);
+			rewardXP(250);
+			GiveInventory("wosBigburger", 1);
+			GiveInventory("wosCheeseburger", 1);
+			GiveInventory("wosGrilledChicken", 1);
+			displayQuest ("[ Find new food suppliers ]", 3);
+		}
+		script 1609 (void) {
+			GiveInventory("twn_binderCook_sezensuroviny_finished", 1);
+			GiveInventory("coin", 500);
+			rewardXP(350);
+			GiveInventory("wosBigburger", 1);
+			GiveInventory("wosCheeseburger", 1);
+			GiveInventory("wosGrilledChicken", 1);
+			displayQuest ("[ Find new food suppliers ]", 3);
+		}
+	
+	*/
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "SH_binderCook_help";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Oh, yeah. You would really help me by finding out some new local food suppliers. I'm looking for some local produce.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, I think I could help you. What exactly do you need?";
+			Nextpage = "SH_binderCook_help_interested";
+		}
+		Choice {
+			Text = "Sorry, not my cup of tea.";
+			YesMessage = "\c[white]Then don't brag about food quality!";
+			Nextpage = "SH_binderCook_questions";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_help_interested";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]Well, I'm looking for some good vegetables and some good meat. I think you could get some veggies in local grocery store. I just don't have the time to go shopping, so I would be really happy if you could arrange some kind of delivery service. That would be really great. I'm willing to pay for it, so that's not really problem. And I'll also pay you for arranging this for me. And for you, as this will improve your meals, I hope.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sorry, changed my mind.";
+			YesMessage = "\c[white]Then don't brag about food quality!";
+			Nextpage = "SH_binderCook_questions";
+		}
+		Choice {
+			Text = "Okay, I'll try my best.";
+			Nextpage = "SH_binderCook_opener";
+			Closedialog = true;
+			YesMessage = "\c[white]Good luck!";
+			Special = 80;
+			arg0 = 1605;
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_help_arrangeddelivery";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]That's great. Was it expensive?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "The vendor said delivery will cost 10% of whole price.";
+			Nextpage = "SH_binderCook_help_arrangeddelivery_2";
+		}
+	}
+	Page {
+		pageName = "SH_binderCook_help_arrangeddelivery_2";
+		Name = "\c[yellow]Elisa, cook";
+		Dialog = "\c[white]That's great. Here's your payment, 500 gold. And some food on top. Enjoy your meal. The next will be definitely better.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "SH_binderCook_opener";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 1608;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+}

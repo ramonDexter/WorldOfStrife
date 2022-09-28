@@ -37,6 +37,8 @@ class quest04_millport_given : tokenBase {}
 //doplnit
 class quest04_millport_finished : tokenBase {}
 
+// combat tutor training ///////////////////////////////////////////////////////
+//class m02_combatTutor_trainingDone : tokenBase {}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -91,28 +93,36 @@ class twn_bishopQ02_killRebels_rebelsKilled : tokenBase {}
 //lebka jejich velitele: hereticLeaderSkull
 class twn_bishopQ02_killRebels_finished : tokenBase {}
 
-//tekGuild master quest#01--------------------------------------
+//tekGuild master quest#01//////////////////////////////////////
 class twn_tekGuildMasterQ1_oreDelivery_given : tokenBase {}
 class twn_tekGuildMasterQ1_oreDelivery_pickOre : tokenBase {}
 class twn_tekGuildMasterQ1_oreDelivery_orePicked : tokenBase {}
 class twn_tekGuildMasterQ1_oreDelivery_finished : tokenBase {}
-//--------------------------------------------------------------
+////////////////////////////////////////////////////////////////
 
-//tekGuild master quest#02--------------------------------------
+//tekGuild master quest#02//////////////////////////////////////
 class twn_tekGuildMasterQ2_brokenMachinery_given : tokenBase {}
 class twn_tekGuildMasterQ2_brokenMachinery_needFilter : tokenBase {}
 //soucastky filter mineMachineFilter
 class twn_tekGuildMasterQ2_brokenMachinery_newfilter : tokenBase {}
 class twn_tekGuildMasterQ2_brokenMachinery_repaired : tokenBase {}
 class twn_tekGuildMasterQ2_brokenMachinery_finished : tokenBase {}
-//--------------------------------------------------------------
+////////////////////////////////////////////////////////////////
 
-//tekGuild master quest#03--------------------------------------
+//tekGuild master quest#03//////////////////////////////////////
 class twn_tekGuildMasterQ3_powerplantTrouble_given : tokenBase {}
 class twn_tekGuildMasterQ3_powerplantTrouble_blownTransformer : tokenBase {}
 class twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled : tokenBase {}
 class twn_tekGuildMasterQ3_powerplantTrouble_finished : tokenBase {}
-//--------------------------------------------------------------
+////////////////////////////////////////////////////////////////
+
+// binder cook sezen suroviny //////////////////////////////////
+class twn_binderCook_sezensuroviny_given : tokenBase {}
+class twn_binderCook_sezensuroviny_sehnano : tokenBase {}
+class twn_binderCook_sezensuroviny_finished : tokenBase {}
+////////////////////////////////////////////////////////////////
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

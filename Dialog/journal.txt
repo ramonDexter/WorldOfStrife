@@ -256,6 +256,21 @@ Conversation {
             }
         }
         /////////////////////////////////////////////////////////////
+        
+        /////////////////////////////////////////////////////////////
+        Choice {
+            Text = "[ Quest - Arrange food delivery ]";
+            NextPage = "journal_SQ_bindercook_sezensuroviny_given";
+            Require {
+                item = "twn_binderCook_sezensuroviny_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "twn_binderCook_sezensuroviny_finished";
+                amount = 1;
+            }
+        }        
+        /////////////////////////////////////////////////////////////
 
         //millport - najdi kuchare pro council club /////////////////
         Choice {
@@ -516,6 +531,14 @@ Conversation {
                 amount = 1;
             }
         }
+        Choice {
+            Text = "[ Quest - Arrange food delivery ]";
+            NextPage = "journal_SQ_bindercook_sezensuroviny_given";
+            Require {
+                item = "twn_binderCook_sezensuroviny_given";
+                amount = 1;
+            }
+        }
 
 
         
@@ -529,6 +552,7 @@ Conversation {
             }
         }
         */
+        //
     }
     //##################################################################################################################
     //##################################################################################################################
@@ -1694,6 +1718,57 @@ Conversation {
 		}
     }
     //##################################################################################################################
+    
+    // binder cook small quest //
+    //##################################################################################################################
+    Page {
+        link = "journal_SQ_bindercook_sezensuroviny_sehnano";
+        ifitem {
+            item = "twn_binderCook_sezensuroviny_sehnano";
+            amount = 1;
+        }
+        pageName = "journal_SQ_bindercook_sezensuroviny_given";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[ ] Arrange food delivery from local grocery store";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+    }
+    Page {
+        link = "journal_SQ_bindercook_sezensuroviny_finished";
+        ifitem {
+            item = "twn_binderCook_sezensuroviny_finished";
+            amount = 1;
+        }
+        pageName = "journal_SQ_bindercook_sezensuroviny_sehnano";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[ ] Report to Elisa";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+    }
+    Page {
+        pageName = "journal_SQ_bindercook_sezensuroviny_finished";
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[X] Report to Elisa";
+        Panel = "M_BLNK";
+        Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+    }
+    //##################################################################################################################
+    
 
 
     //##################################################################################################################

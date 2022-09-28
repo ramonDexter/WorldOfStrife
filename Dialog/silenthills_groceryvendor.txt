@@ -4,20 +4,20 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 8;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Grocery vendor"; 
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
+	/*
 	Page {
-        pageName = "SH_groceryVendor_opener";
+		pageName = "";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_groceryVendor_opener";
 		Name = "\c[yellow]Grocery vendor";
 		Dialog = "\c[white]Hello, how may I serve you?";
 		Goodbye = "\c[red]Goodbye";
@@ -98,43 +98,84 @@ Conversation {
 			NextPage = "SH_groceryVendor_questions";
 		}
 	}
-    Page {
-        pageName = "SH_groceryVendor_questions";
-        Name = "\c[yellow]Grocery vendor"; 
-        Dialog = "\c[white]What did you wanted to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "How's business going?";
-            Nextpage = "SH_groceryVendor_businessgoing";
-        }
-        Choice {
-            Text = "Is this shop yours?";
-            Nextpage = "SH_groceryVendor_shopyours";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_groceryVendor_opener";
-        }
-    }
-    Page {
-        pageName = "SH_groceryVendor_businessgoing";
-        Name = "\c[yellow]Grocery vendor"; 
-        Dialog = "\c[white]Oh yeah, it's been good lately. Since we offer the best goods in town, our customers like to return. So the business is good, I guess.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_groceryVendor_questions";
-        }
-    }
-    Page {
-        pageName = "SH_groceryVendor_shopyours";
-        Name = "\c[yellow]Grocery vendor"; 
-        Dialog = "\c[white]Oh, no. I'm just an emplyee here. The shop's owned by mister Rothbert. He's a wealthy businessman, owns a lot of locals businesses.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "SH_groceryVendor_questions";
-        }
-    }
+	Page {
+		pageName = "SH_groceryVendor_questions";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]What did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'm looking for food delivery.";
+			Nextpage = "SH_groceryVendor_fooddelivery";
+			Require {
+				item = "twn_binderCook_sezensuroviny_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_binderCook_sezensuroviny_sehnano";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "How's business going?";
+			Nextpage = "SH_groceryVendor_businessgoing";
+		}
+		Choice {
+			Text = "Is this shop yours?";
+			Nextpage = "SH_groceryVendor_shopyours";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_groceryVendor_opener";
+		}
+	}
+	Page {
+		pageName = "SH_groceryVendor_businessgoing";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]Oh yeah, it's been good lately. Since we offer the best goods in town, our customers like to return. So the business is good, I guess.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_groceryVendor_questions";
+		}
+	}
+	Page {
+		pageName = "SH_groceryVendor_shopyours";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]Oh, no. I'm just an emplyee here. The shop's owned by mister Rothbert. He's a wealthy businessman, owns a lot of locals businesses.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_groceryVendor_questions";
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	// quest sezen suroviny ///////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "SH_groceryVendor_fooddelivery";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]And what exactly are you looking for?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "<explain the situation>";
+			Nextpage = "SH_groceryVendor_fooddelivery2";
+		}
+	}
+	Page {
+		pageName = "SH_groceryVendor_fooddelivery2";
+		Name = "\c[yellow]Grocery vendor"; 
+		Dialog = "\c[white]Okay, so you need weekly delivery of local from my shop? That would be good deal, we can arrange some good price. Let's say, ten percent of whole price for the delivery. And my courier will bring the food right to your kitchen. What do you say?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Deal.";
+			Nextpage = "SH_groceryVendor_opener";
+			Special = 80;
+			arg0 = 1606;
+			CloseDialog = true;
+		}
+	}
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 }
 //==================================================================================================================

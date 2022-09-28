@@ -1,0 +1,64 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 58;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Ignatius, guard";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_binderGuard_opener";
+		Name = "\c[yellow]Ignatius, gate guard";
+		Dialog = "\c[white]Hello, brother. What brings you to my office?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How is service today?";
+			Nextpage = "SH_binderGuard_howisservice";
+		}
+		Choice {
+			Text = "Looks like the base is still sleeping.";
+			Nextpage = "SH_binderGuard_basesleeping";
+		}
+		Choice {
+			Text = "Could you tell me about Silent Hills?";
+			Nextpage = "SH_binderGuard_aboutsilenthills";
+		}
+	}
+	Page {
+		pageName = "SH_binderGuard_howisservice";
+		Name = "\c[yellow]Ignatius, guard";
+		Dialog = "\c[white]It's pretty the same like yesterday. And the day before. And before. Almost nothing happens, so the only thing I'm struggling with here is just boredom.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderGuard_opener";
+		}
+	}
+	Page {
+		pageName = "SH_binderGuard_basesleeping";
+		Name = "\c[yellow]Ignatius, guard";
+		Dialog = "\c[white]No, that's just how it normally looks. We're just a small assignement here. The base looks deserted, but that's because everyone works at their assigned places.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderGuard_opener";
+		}
+	}
+	Page {
+		pageName = "SH_binderGuard_aboutsilenthills";
+		Name = "\c[yellow]Ignatius, guard";
+		Dialog = "\c[white]Hey, don't take my word, but Silent Hills is small hole of nothing. This small peaceful town is just too boring to be of some interest. Literally nothing happens here, except for some visits from of travelling merchants. We've got all the services here including a town bathhouse. But this place is just not my vup of tea. I'm just waiting for reassignement.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_binderGuard_opener";
+		}
+	}
+}

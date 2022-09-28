@@ -9,7 +9,7 @@ Conversation {
 		pageName = "";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "";
@@ -21,7 +21,7 @@ Conversation {
 		pageName = "SH_energyAmmoVendor_opener";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]\c[white]Hello, how may I serve you?";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[gold]Buy Night Eye Device";
@@ -70,7 +70,7 @@ Conversation {
 		pageName = "SH_energyAmmoVendor_questions";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]What did you wanted to know_";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "Who are you?";
@@ -93,7 +93,7 @@ Conversation {
 		pageName = "SH_energyAmmoVendor_whoareyou";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]My name's Godwin. I'm a certified technician with specialization in support gadgets.";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "You make all this stuff?";
@@ -108,7 +108,7 @@ Conversation {
 		pageName = "SH_energyAmmoVendor_makeallthis";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]Yes, I personally make all this stuff. That means everything you buy here is high quality and I guarantee 100% reliability of my equipment.";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "\c[yellow]<< BACK";
@@ -119,7 +119,7 @@ Conversation {
 		pageName = "SH_energyAmmoVendor_aboutsilenthills";
 		Name = "\c[yellow]Technician";
 		Dialog = "\c[white]Well, I came here five years ago. I spend most of day in my workshop, so I'm not really into local rumors. But I can give you a rough description of out town.\nThe town is divided into two parts by the river. The western part is the residential area, where most of the locals home. The western part is the market part of town, where most of local businesses prosper.";
-		Panel = "M_FALSP2";
+		Panel = "M_TKSM1";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "\c[yellow]<< BACK";

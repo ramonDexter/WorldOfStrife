@@ -1,42 +1,42 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 33;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_yorick_opener";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Hello Binder. Welcome to my workshop. I'm Yorick the Techsmith. Have you come to resupply?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Yes, I need some supplies. What do you sell?";
-            Nextpage = "mp_yorick_shop";
-        } 
-        Choice {
-            Text = "No. But I've got some questions.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_shop";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]All right. I sell the energy ammunition. Energypods cost 12, Energykits cost 33 and Energypacks cost 55. Then I've got the Rebreather for 38 and the binocular for 130. And I cannot forget the deployable shield for 160. What would you like?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]Buy energypod ";
+	ID = 33;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_yorick_opener";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Hello Binder. Welcome to my workshop. I'm Yorick the Techsmith. Have you come to resupply?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Yes, I need some supplies. What do you sell?";
+			Nextpage = "mp_yorick_shop";
+		} 
+		Choice {
+			Text = "No. But I've got some questions.";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_shop";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]All right. I sell the energy ammunition. Energypods cost 12, Energykits cost 33 and Energypacks cost 55. Then I've got the Rebreather for 38 and the binocular for 130. And I cannot forget the deployable shield for 160. What would you like?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]Buy energypod ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPod";
@@ -44,12 +44,12 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }  
-        Choice {
-            Text = "\c[yellow]Buy energykit ";
+		}  
+		Choice {
+			Text = "\c[yellow]Buy energykit ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyKit";
@@ -57,12 +57,12 @@ Conversation {
 				item = "Coin";
 				amount = 33;
 			}
-        } 
-        Choice {
-            Text = "\c[yellow]Buy energypack ";
+		} 
+		Choice {
+			Text = "\c[yellow]Buy energypack ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosEnergyPack";
@@ -70,12 +70,12 @@ Conversation {
 				item = "Coin";
 				amount = 55;
 			}
-        } 
-        Choice {
-            Text = "\c[yellow]Buy rebreather ";
+		} 
+		Choice {
+			Text = "\c[yellow]Buy rebreather ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosRebreather";
@@ -83,12 +83,12 @@ Conversation {
 				item = "Coin";
 				amount = 38;
 			}
-        } 
-        Choice {
-            Text = "\c[yellow]Buy binocular ";
+		} 
+		Choice {
+			Text = "\c[yellow]Buy binocular ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBinocular";
@@ -96,12 +96,12 @@ Conversation {
 				item = "Coin";
 				amount = 130;
 			}
-        } 
-        Choice {
-            Text = "\c[yellow]Buy deployable shield ";
+		} 
+		Choice {
+			Text = "\c[yellow]Buy deployable shield ";
 			NextPage = "mp_yorick_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosDeployableShield";
@@ -109,104 +109,104 @@ Conversation {
 				item = "Coin";
 				amount = 160;
 			}
-        }
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_opener";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_questions";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]And what did you wanted to know?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "This is your workshop?";
-            Nextpage = "mp_yorick_workshop";
-        } 
-        Choice {
-            Text = "Could you tell me about the Commons?";
-            Nextpage = "mp_yorick_aboutcommons";
-        } 
-        Choice {
-            Text = "Could you tell me about Millport?";
-            Nextpage = "mp_yorick_aboutmillport";
-        }
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_opener";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_workshop";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Yes, this is my workshop. I've worked hard to buy this workshop, the previous owner was a greedy swine who wanted more than twice of the normal price.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_aboutcommons";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Well, life's not easy here. Others could say it's nice here, but the lack of natural sunlight is a thing that worries me the most. My head aches from the artificial lighting. Besides that, it's smelly and crowded here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Why did you moved here then?";
-            Nextpage = "mp_yorick_movedincommons";
-        }
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_movedincommons";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]It was the only free place when I left school! What should I do? Building my own place was even more expensive tha buying this flat here in this stinkhole.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_aboutmillport";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Millport is quite nice place to live, besides the Commons. I like the port, especially at sundusk. And the surrounding are nice, too.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What's in the surrounding area?";
-            Nextpage = "mp_yorick_surroundings";
-        }
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_surroundings";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Well, if you're into nice nature, you can find the western and eastern part pretty interesting. I like to spend my free time in the western part. The Aeredale village is nice place to hang around, they've got a good tavern there. And I cannot forget the Ravenrock brewery, if you're into beer and ale.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Ravenrock brewery? That sounds good.";
-            Nextpage = "mp_yorick_ravenrock";
-        }
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yorick_ravenrock";
-        Name = "\c[yellow]Yorick, Techsmith";
-        Dialog = "\c[white]Oh yes, it is sure great! Ravenrock is to the north, about fifty clicks from Millport. Just take the northern road, it will lead you there.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I wanted something else.";
-            Nextpage = "mp_yorick_questions";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_opener";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_questions";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]And what did you wanted to know?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "This is your workshop?";
+			Nextpage = "mp_yorick_workshop";
+		} 
+		Choice {
+			Text = "Could you tell me about the Commons?";
+			Nextpage = "mp_yorick_aboutcommons";
+		} 
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_yorick_aboutmillport";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_opener";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_workshop";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Yes, this is my workshop. I've worked hard to buy this workshop, the previous owner was a greedy swine who wanted more than twice of the normal price.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_aboutcommons";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Well, life's not easy here. Others could say it's nice here, but the lack of natural sunlight is a thing that worries me the most. My head aches from the artificial lighting. Besides that, it's smelly and crowded here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Why did you moved here then?";
+			Nextpage = "mp_yorick_movedincommons";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_movedincommons";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]It was the only free place when I left school! What should I do? Building my own place was even more expensive tha buying this flat here in this stinkhole.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_aboutmillport";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Millport is quite nice place to live, besides the Commons. I like the port, especially at sundusk. And the surrounding are nice, too.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What's in the surrounding area?";
+			Nextpage = "mp_yorick_surroundings";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_surroundings";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Well, if you're into nice nature, you can find the western and eastern part pretty interesting. I like to spend my free time in the western part. The Aeredale village is nice place to hang around, they've got a good tavern there. And I cannot forget the Ravenrock brewery, if you're into beer and ale.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Ravenrock brewery? That sounds good.";
+			Nextpage = "mp_yorick_ravenrock";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yorick_ravenrock";
+		Name = "\c[yellow]Yorick, Techsmith";
+		Dialog = "\c[white]Oh yes, it is sure great! Ravenrock is to the north, about fifty clicks from Millport. Just take the northern road, it will lead you there.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yorick_questions";
+		}
+	}
 }

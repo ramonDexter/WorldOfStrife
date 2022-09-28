@@ -1,96 +1,96 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 1;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_mayor_opener";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]Hello, Binder. Welcome to Ravenrock. What brings you to our humble village? My name's Gunther, I'm the local mayor.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What can you tell me about your village?";
-            Nextpage = "ravenrock_mayor_ravenrock";
-        }
-        Choice {
-            Text = "Could you tell me about locals?";
-            Nextpage = "ravenrock_mayor_locals";
-        }
-        Choice {
-            Text = "Do you need any help here?";
-            Nextpage = "ravenrock_mayor_help";
-        }
-    }
-    Page {
-        pageName = "ravenrock_mayor_else";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]Yes? What did you nwated to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What can you tell me about your village?";
-            Nextpage = "ravenrock_mayor_ravenrock";
-        }
-        Choice {
-            Text = "Could you tell me about locals?";
-            Nextpage = "ravenrock_mayor_locals";
-        }
-        Choice {
-            Text = "Do you need any help here?";
-            Nextpage = "ravenrock_mayor_help";
-        }
-    }
-    Page {
-        pageName = "ravenrock_mayor_ravenrock";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]Our humble village is known for the big brewery, over there in the center of village. Thanks to local farmers, our beer is good and strong, and the market demoand is sometimes so strong, that we hardly fulfill our guests orders. Besides that, locals live from farming or hunting in the surrounding areas. Be careful, as the local fauna os little bit aggresive.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_mayor_else";
-        }
-        Choice {
-            Text = "Could you tell me about surrounding area?";
-            Nextpage = "ravenrock_mayor_surroundings";
-        }
-    }
-    Page {
-        pageName = "ravenrock_mayor_surroundings";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]Oh, yes, certainly. The road leading south will take you straight to Millport. It's not far from here, around 40 kilometres. The road leading to the west will take you to Narfolk, but that's little bit further, like 500 kilometres or so. This area is dangerous, as wild fauna and bandits roam the area. Be careful especially around the old cemetery, not far from village western gate. The eastern road leads to Kolyma. These areas are little bit calmer, but your still need to be careful when travelling in these parts. The roads leads through plateau infected with carnivorous plants.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Thank you. \c[yellow]<< BACK";
-            Nextpage = "ravenrock_mayor_else";
-        }
-    }
-    Page {
-        pageName = "ravenrock_mayor_locals";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]The locals are mostly farmers. Around one third of the village population works in the brewery. ";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_mayor_else";
-        }
-    }
-    Page {
-        pageName = "ravenrock_mayor_help";
-        Name = "\c[yellow]Gunther, Mayor";
-        Dialog = "\c[white]Certainly, yes. Thanks for asking. I can always welcome any help offered.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_mayor_else";
-        }
-    }
+	ID = 1;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_mayor_opener";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Hello, Binder. Welcome to Ravenrock. What brings you to our humble village? My name's Gunther, I'm the local mayor.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What can you tell me about your village?";
+			Nextpage = "ravenrock_mayor_ravenrock";
+		}
+		Choice {
+			Text = "Could you tell me about locals?";
+			Nextpage = "ravenrock_mayor_locals";
+		}
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "ravenrock_mayor_help";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_else";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Yes? What did you nwated to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What can you tell me about your village?";
+			Nextpage = "ravenrock_mayor_ravenrock";
+		}
+		Choice {
+			Text = "Could you tell me about locals?";
+			Nextpage = "ravenrock_mayor_locals";
+		}
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "ravenrock_mayor_help";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_ravenrock";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Our humble village is known for the big brewery, over there in the center of village. Thanks to local farmers, our beer is good and strong, and the market demoand is sometimes so strong, that we hardly fulfill our guests orders. Besides that, locals live from farming or hunting in the surrounding areas. Be careful, as the local fauna os little bit aggresive.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about surrounding area?";
+			Nextpage = "ravenrock_mayor_surroundings";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_mayor_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_surroundings";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Oh, yes, certainly. The road leading south will take you straight to Millport. It's not far from here, around 40 kilometres. The road leading to the west will take you to Narfolk, but that's little bit further, like 500 kilometres or so. This area is dangerous, as wild fauna and bandits roam the area. Be careful especially around the old cemetery, not far from village western gate. The eastern road leads to Kolyma. These areas are little bit calmer, but your still need to be careful when travelling in these parts. The roads leads through plateau infected with carnivorous plants.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you. \c[yellow]<< BACK";
+			Nextpage = "ravenrock_mayor_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_locals";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]The locals are mostly farmers. Around one third of the village population works in the brewery. ";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_mayor_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_help";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Certainly, yes. Thanks for asking. I can always welcome any help offered.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_mayor_else";
+		}
+	}
 }

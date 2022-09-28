@@ -6,11 +6,11 @@ namespace = "GZDoom";
 Conversation {
 	ID = 11;
 	Page {
-        pageName = "MP_jonyWeaponsVendor_opener";
+		pageName = "MP_jonyWeaponsVendor_opener";
 		Name = "\c[yellow]Jony, weapons vendor";
 		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistols, Laser Pistols and Executor Rifles. You should visit my twin brother Tony, he sells heavy weapons.";
 		Panel = "M_JONY";
-        Goodbye = "\c[red]Goodbye";
+		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[yellow]Buy Storm Pistol";
 			NextPage = "MP_jonyWeaponsVendor_opener";
@@ -84,63 +84,63 @@ Conversation {
 				amount = 80;
 			}
 		}
-        Choice {
-            Text = "I have some questions.";
-            NextPage = "MP_jonyWeaponsVendor_questions";
-        }
+		Choice {
+			Text = "I have some questions.";
+			NextPage = "MP_jonyWeaponsVendor_questions";
+		}
 	}
-    Page {
-        pageName = "MP_jonyWeaponsVendor_questions";
+	Page {
+		pageName = "MP_jonyWeaponsVendor_questions";
 		Name = "\c[yellow]Jony, weapons vendor";
 		Dialog = "\c[white]And what did you wanted to know?";
 		Panel = "M_JONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_jonyWeaponsVendor_opener";
-        }
-        Choice {
-            Text = "Could you tell me about yourself?";
-            NextPage = "MP_jonyWeaponsVendor_aboutyourself";
-        }
-        Choice {
-            Text = "Could you tell me about the city? I'm new here and wanted to know the locals.";
-            NextPage = "MP_jonyWeaponsVendor_aboutcity";
-        }
-    }
-    Page {
-        pageName = "MP_jonyWeaponsVendor_aboutyourself";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Could you tell me about yourself?";
+			NextPage = "MP_jonyWeaponsVendor_aboutyourself";
+		}
+		Choice {
+			Text = "Could you tell me about the city? I'm new here and wanted to know the locals.";
+			NextPage = "MP_jonyWeaponsVendor_aboutcity";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_jonyWeaponsVendor_opener";
+		}
+	}
+	Page {
+		pageName = "MP_jonyWeaponsVendor_aboutyourself";
 		Name = "\c[yellow]Jony, weapons vendor";
 		Dialog = "\c[white]My name's Jony. As you already see, I am weapons vendor, my specialization is in light weapons. Pistols, Assault Rifles and Crossbows is what I make for most. And when I'm not working, I usually spend my time in one of the city Taverns.";
 		Panel = "M_JONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_jonyWeaponsVendor_questions";
-        }
-    }
-    Page {
-        pageName = "MP_jonyWeaponsVendor_aboutcity";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_jonyWeaponsVendor_questions";
+		}
+	}
+	Page {
+		pageName = "MP_jonyWeaponsVendor_aboutcity";
 		Name = "\c[yellow]Jony, weapons vendor";
 		Dialog = "\c[white]You want to better know our city? Go to pubs, speak with the locals. That's the best way to recognize our city. I'm not much into history, so I won't tell you much. Ask my brother, Tony. He'll tell you more.";
 		Panel = "M_JONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_jonyWeaponsVendor_questions";
-        }
-    }
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_jonyWeaponsVendor_questions";
+		}
+	}
 }
 //tony - heavy weapons id 12
 //##################################################################################################################
 Conversation {
 	ID = 12;
 	Page {
-        pageName = "MP_tonyWeaponsVendor_opener";
+		pageName = "MP_tonyWeaponsVendor_opener";
 		Name = "\c[yellow]Tony, weapons vendor";
 		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on heavy weapons. I sell Flamethrowers, Mini-Missile Launchers and Maulers. You should visit my twin brother Jony, he sells light weapons.";
 		Panel = "M_TONY";
-        Goodbye = "\c[red]Goodbye";
+		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[yellow]Buy Flamethrower";
 			NextPage = "MP_tonyWeaponsVendor_opener";
@@ -213,51 +213,51 @@ Conversation {
 				amount = 80;
 			}
 		}
-        Choice {
-            Text = "I have some questions.";
-            NextPage = "MP_tonyWeaponsVendor_questions";
-        }
+		Choice {
+			Text = "I have some questions.";
+			NextPage = "MP_tonyWeaponsVendor_questions";
+		}
 	}
-    Page {
-        pageName = "MP_tonyWeaponsVendor_questions";
+	Page {
+		pageName = "MP_tonyWeaponsVendor_questions";
 		Name = "\c[yellow]Tony, weapons vendor";
 		Dialog = "\c[white]Yes? What did you wanted to know?";
 		Panel = "M_TONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_tonyWeaponsVendor_opener";
-        }
-        Choice {
-            Text = "Could you tell me about yourself?";
-            NextPage = "MP_tonyWeaponsVendor_aboutyourself";
-        }
-        Choice {
-            Text = "Could you tell me about the city?";
-            NextPage = "MP_tonyWeaponsVendor_aboutcity";
-        }
-    }
-    Page {
-        pageName = "MP_tonyWeaponsVendor_aboutyourself";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Could you tell me about yourself?";
+			NextPage = "MP_tonyWeaponsVendor_aboutyourself";
+		}
+		Choice {
+			Text = "Could you tell me about the city?";
+			NextPage = "MP_tonyWeaponsVendor_aboutcity";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_tonyWeaponsVendor_opener";
+		}
+	}
+	Page {
+		pageName = "MP_tonyWeaponsVendor_aboutyourself";
 		Name = "\c[yellow]Tony, weapons vendor";
 		Dialog = "\c[white]My name is Tony. As you have already observed, I have a twin brother, Jony. We're weapons vendors. He specializes in light weapons, I work in heavy and energy weapons. I you need a flamethrower, missile launcher or mauler, you're at the right place.";
 		Panel = "M_TONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_tonyWeaponsVendor_questions";
-        }
-    }
-    Page {
-        pageName = "MP_tonyWeaponsVendor_aboutcity";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_tonyWeaponsVendor_questions";
+		}
+	}
+	Page {
+		pageName = "MP_tonyWeaponsVendor_aboutcity";
 		Name = "\c[yellow]Tony, weapons vendor";
 		Dialog = "\c[white]Yes, Millport. Me and my brother, we've spent our whole life here. Our father was a gunSmith, he built this store and gave it to us when he died. But, you wanted to know about the city, right? Millport is controlled by the Baron. He is the one who pulls all the strings here. If you don't want to get into trouble, don't mess with the Baron. Besides, the second main force here is the TekGuild. These guys act like a military force mixed with religious order. You can trust them, if you've got the guts.";
 		Panel = "M_TONY";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_tonyWeaponsVendor_questions";
-        }
-    }
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_tonyWeaponsVendor_questions";
+		}
+	}
 }
 //##################################################################################################################

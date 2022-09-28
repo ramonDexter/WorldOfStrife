@@ -1,59 +1,55 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 6;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Randolf, Medic";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_randolf_opener";
-        Name = "\c[yellow]Randolf, Medic";
-        Dialog = "\c[white]Hello, welcome to my office. If you are in need of immediate medical attention, please use the autodoc over there. And is you need to restock on supplies, I sell all types of medical stuff with fair prices.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I need to resupply.";
-            Nextpage = "ravenrock_randolf_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "ravenrock_randolf_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_randolf_else";
-        Name = "\c[yellow]Randolf, Medic";
-        Dialog = "\c[white]Yes?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I need to resupply.";
-            Nextpage = "ravenrock_randolf_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "ravenrock_randolf_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_randolf_shop";
-        Name = "\c[yellow]Randolf, Medic";
-        Dialog = "\c[white]So, the Hyspray costs 27, the Kombopack costs 55 and the Instaheal is for 125 gold. Then, the Medpatches are for 12, the Medical Kits are for 27 and the Surgery Kit costs 125 gold. Then I've got some stamina stims, these cost 28 gold. What will it be?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_randolf_else";
-        }
-        Choice {
-            Text = "Give me the hypospray";
+	ID = 6;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Randolf, Medic";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_randolf_opener";
+		Name = "\c[yellow]Randolf, Medic";
+		Dialog = "\c[white]Hello, welcome to my office. If you are in need of immediate medical attention, please use the autodoc over there. And is you need to restock on supplies, I sell all types of medical stuff with fair prices.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need to resupply.";
+			Nextpage = "ravenrock_randolf_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ravenrock_randolf_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_randolf_else";
+		Name = "\c[yellow]Randolf, Medic";
+		Dialog = "\c[white]Yes?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need to resupply.";
+			Nextpage = "ravenrock_randolf_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ravenrock_randolf_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_randolf_shop";
+		Name = "\c[yellow]Randolf, Medic";
+		Dialog = "\c[white]So, the Hyspray costs 27, the Kombopack costs 55 and the Instaheal is for 125 gold. Then, the Medpatches are for 12, the Medical Kits are for 27 and the Surgery Kit costs 125 gold. Then I've got some stamina stims, these cost 28 gold. What will it be?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Give me the hypospray";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -62,11 +58,11 @@ Conversation {
 				item = "Coin";
 				amount = 27;
 			}
-        }
-        Choice {
-            Text = "Give me the kombopack";
+		}
+		Choice {
+			Text = "Give me the kombopack";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -75,11 +71,11 @@ Conversation {
 				item = "Coin";
 				amount = 55;
 			}
-        }
-        Choice {
-            Text = "Give me the instaheal";
+		}
+		Choice {
+			Text = "Give me the instaheal";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -88,11 +84,11 @@ Conversation {
 				item = "Coin";
 				amount = 125;
 			}
-        }
-        Choice {
-            Text = "Give me the medpatch";
+		}
+		Choice {
+			Text = "Give me the medpatch";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -101,11 +97,11 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }
-        Choice {
-            Text = "Give me the medical kit";
+		}
+		Choice {
+			Text = "Give me the medical kit";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -114,11 +110,11 @@ Conversation {
 				item = "Coin";
 				amount = 27;
 			}
-        }
-        Choice {
-            Text = "Give me the surgery kit";
+		}
+		Choice {
+			Text = "Give me the surgery kit";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -127,11 +123,11 @@ Conversation {
 				item = "Coin";
 				amount = 125;
 			}
-        }
-        Choice {
-            Text = "Give me the stamina stim";
+		}
+		Choice {
+			Text = "Give me the stamina stim";
 			NextPage = "ravenrock_randolf_shop";
-            DisplayCost = true;
+			DisplayCost = true;
 			CloseDialog = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
@@ -140,16 +136,20 @@ Conversation {
 				item = "Coin";
 				amount = 28;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_randolf_questions";
-        Name = "\c[yellow]Randolf, Medic";
-        Dialog = "\c[white]Sorry, I've got some work to finish here. Maybe later.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_randolf_else";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_randolf_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_randolf_questions";
+		Name = "\c[yellow]Randolf, Medic";
+		Dialog = "\c[white]Sorry, I've got some work to finish here. Maybe later.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_randolf_else";
+		}
+	}
 }

@@ -1,46 +1,42 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 39;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "MP_ignatius_opener";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]Hello, welcome to my grill. I'm Ignatius. Would you like some grilled chicken? Or some fresh beer?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Yeah, I'd like a little snack.";
-            Nextpage = "MP_ignatius_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "MP_ignatius_questions";
-        }
-    }
-    Page {
-        pageName = "MP_ignatius_shop";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]Okay, okay. The grilled chicken costs 22 gold and gottle of beer comes for 5 gold.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_ignatius_opener";
-        } 
-        Choice {
-            Text = "I'll take the chicken";
+	ID = 39;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "MP_ignatius_opener";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]Hello, welcome to my grill. I'm Ignatius. Would you like some grilled chicken? Or some fresh beer?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Yeah, I'd like a little snack.";
+			Nextpage = "MP_ignatius_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "MP_ignatius_questions";
+		}
+	}
+	Page {
+		pageName = "MP_ignatius_shop";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]Okay, okay. The grilled chicken costs 22 gold and gottle of beer comes for 5 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take the chicken";
 			NextPage = "MP_ignatius_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrilledChicken";
@@ -48,12 +44,12 @@ Conversation {
 				item = "Coin";
 				amount = 22;
 			}
-        } 
-        Choice {
-            Text = "I'll take the beer";
+		} 
+		Choice {
+			Text = "I'll take the beer";
 			NextPage = "MP_ignatius_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosBeerBottle";
@@ -61,44 +57,48 @@ Conversation {
 				item = "Coin";
 				amount = 5;
 			}
-        }
-    }
-    Page {
-        pageName = "MP_ignatius_questions";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]Yeah, little chat would be nice. What would you like to know?";
-        Goodbye = "\c[red]Goodbye.";  
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_ignatius_opener";
-        }
-        Choice {
-            Text = "How's the business going?";
-            Nextpage = "MP_ignatius_business";
-        }
-        Choice {
-            Text = "Could you tell me about Millport?";
-            Nextpage = "MP_ignatius_aboutmillport";
-        }
-    }
-    Page {
-        pageName = "MP_ignatius_business";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]Oh, the business is great. Most of my income is from the students from the nearby TekGuild university, who like to come for a snack during their school hours.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_ignatius_questions";
-        }
-    }
-    Page {
-        pageName = "MP_ignatius_aboutmillport";
-        Name = "\c[yellow]Ignatius";
-        Dialog = "\c[white]Well, I'm a newcomer here. I came here a year ago, so I don't know much. The city could get busy when the Shipping guild ships arrive and bring sailors and goods.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_ignatius_questions";
-        }
-    }
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_ignatius_opener";
+		} 
+	}
+	Page {
+		pageName = "MP_ignatius_questions";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]Yeah, little chat would be nice. What would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How's the business going?";
+			Nextpage = "MP_ignatius_business";
+		}
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "MP_ignatius_aboutmillport";
+		}  
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_ignatius_opener";
+		}
+	}
+	Page {
+		pageName = "MP_ignatius_business";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]Oh, the business is great. Most of my income is from the students from the nearby TekGuild university, who like to come for a snack during their school hours.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_ignatius_questions";
+		}
+	}
+	Page {
+		pageName = "MP_ignatius_aboutmillport";
+		Name = "\c[yellow]Ignatius";
+		Dialog = "\c[white]Well, I'm a newcomer here. I came here a year ago, so I don't know much. The city could get busy when the Shipping guild ships arrive and bring sailors and goods.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_ignatius_questions";
+		}
+	}
 }

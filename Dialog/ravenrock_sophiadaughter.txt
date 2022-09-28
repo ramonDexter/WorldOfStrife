@@ -1,92 +1,92 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 2;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_sophiadaughter_opener";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]Hello, Binder. What brings you here? Have you come for a little chat? Our do you want have some fun?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Yes, a chat would be nice.";
-            Nextpage = "ravenrock_sophiadaughter_questions";
-        }
-        Choice {
-            Text = "Fun? What do you mean?";
-            Nextpage = "ravenrock_sophiadaughter_havesomefun";
-        }
-    }
-    Page {
-        pageName = "ravenrock_sophiadaughter_havesomefun";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]You know, a girls could get lonely, sometimes. You look like a handy man, so strong and all. Say, would you like to make a little bit less lonely?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_sophiadaughter_opener";
-        }
-    }
-    Page {
-        pageName = "ravenrock_sophiadaughter_questions";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]Yeah, a chat would be nice. But fun would be better. So, what did you wanted to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_sophiadaughter_opener";
-        }
-        Choice {
-            Text = "Could you tell me about yourself?";
-            Nextpage = "ravenrock_sophiadaughter_aboutyourself";
-        }
-        Choice {
-            Text = "Could you tell me about Ravenrock?";
-            Nextpage = "ravenrock_sophiadaughter_aboutravenrock";
-        }
-        Choice {
-            Text = "What's in the surrounding area?";
-            Nextpage = "ravenrock_sophiadaughter_surroundings";
-        }
-    }
-    Page {
-        pageName = "ravenrock_sophiadaughter_aboutyourself";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]Thank's for asking. At least somebody notices I'm here. I'm Sophia, daughter of the local mayor. I'm 19 years old. And a bit lonely here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_sophiadaughter_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_sophiadaughter_aboutravenrock";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]Ravenrock's a boring little hole of nothing. Yeah, we got the brewery here. Wooow. Really, only drunks are enjoying this little place here. Except I'm not into heavy drinking, you know.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_sophiadaughter_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_sophiadaughter_surroundings";
-        Name = "\c[yellow]Sophia";
-        Dialog = "\c[white]Well, nothing much than here in village. There's this nice little cemetery to the west and the old tower. To the east is the plateau with the old castle ruins. Be sure to cisit the place, it's cool. Little bit mazey, but I like it. Just watch out for the wild beasts and carnivorous plants.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_sophiadaughter_questions";
-        }
-    }
+	ID = 2;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_sophiadaughter_opener";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]Hello, Binder. What brings you here? Have you come for a little chat? Our do you want have some fun?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, a chat would be nice.";
+			Nextpage = "ravenrock_sophiadaughter_questions";
+		}
+		Choice {
+			Text = "Fun? What do you mean?";
+			Nextpage = "ravenrock_sophiadaughter_havesomefun";
+		}
+	}
+	Page {
+		pageName = "ravenrock_sophiadaughter_havesomefun";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]You know, a girls could get lonely, sometimes. You look like a handy man, so strong and all. Say, would you like to make a little bit less lonely?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_sophiadaughter_opener";
+		}
+	}
+	Page {
+		pageName = "ravenrock_sophiadaughter_questions";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]Yeah, a chat would be nice. But fun would be better. So, what did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about yourself?";
+			Nextpage = "ravenrock_sophiadaughter_aboutyourself";
+		}
+		Choice {
+			Text = "Could you tell me about Ravenrock?";
+			Nextpage = "ravenrock_sophiadaughter_aboutravenrock";
+		}
+		Choice {
+			Text = "What's in the surrounding area?";
+			Nextpage = "ravenrock_sophiadaughter_surroundings";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_sophiadaughter_opener";
+		}
+	}
+	Page {
+		pageName = "ravenrock_sophiadaughter_aboutyourself";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]Thank's for asking. At least somebody notices I'm here. I'm Sophia, daughter of the local mayor. I'm 19 years old. And a bit lonely here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_sophiadaughter_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_sophiadaughter_aboutravenrock";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]Ravenrock's a boring little hole of nothing. Yeah, we got the brewery here. Wooow. Really, only drunks are enjoying this little place here. Except I'm not into heavy drinking, you know.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_sophiadaughter_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_sophiadaughter_surroundings";
+		Name = "\c[yellow]Sophia";
+		Dialog = "\c[white]Well, nothing much than here in village. There's this nice little cemetery to the west and the old tower. To the east is the plateau with the old castle ruins. Be sure to cisit the place, it's cool. Little bit mazey, but I like it. Just watch out for the wild beasts and carnivorous plants.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_sophiadaughter_questions";
+		}
+	}
 }

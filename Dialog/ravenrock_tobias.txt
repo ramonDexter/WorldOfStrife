@@ -1,87 +1,83 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 5;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_tobias_opener";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Hello, Binder. Welcome to my workshop. Do you need to resupply? Or do you seek some information? Oh, I'm Lewis, by the way.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I need some supplies.";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "I need some information.";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_else";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Yes? Do you need to resupply? Or do you seek some information?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I need some supplies.";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "I need some information.";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]I sell grenades, then I've got here a laser pistol and some energy ammo. And also the normal bullets and crossbow bolts. But, only the electric bolts.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_else";
-        }
-        Choice {
-            Text = "I need some grenades.";
-            Nextpage = "ravenrock_tobias_shop_grenades";
-        }
-        Choice {
-            Text = "Let's take a look at the laser pistol.";
-            Nextpage = "ravenrock_tobias_shop_laserpistol";
-        }
-        Choice {
-            Text = "I need the energy ammo.";
-            Nextpage = "ravenrock_tobias_shop_energypods";
-        }
-        Choice {
-            Text = "I need some bullets.";
-            Nextpage = "ravenrock_tobias_shop_bullets";
-        }
-        Choice {
-            Text = "How much for the electric bolts?";
-            Nextpage = "ravenrock_tobias_shop_bolts";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop_grenades";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]The grenades are finest quality.\nExplosive grande costs 5, fire grenade costs 15 and gas grenade costs 10 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "I'll take explosive grenade. (pay 5 gold)";
+	ID = 5;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_tobias_opener";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Hello, Binder. Welcome to my workshop. Do you need to resupply? Or do you seek some information? Oh, I'm Lewis, by the way.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need some supplies.";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+		Choice {
+			Text = "I need some information.";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_else";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Yes? Do you need to resupply? Or do you seek some information?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need some supplies.";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+		Choice {
+			Text = "I need some information.";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]I sell grenades, then I've got here a laser pistol and some energy ammo. And also the normal bullets and crossbow bolts. But, only the electric bolts.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need some grenades.";
+			Nextpage = "ravenrock_tobias_shop_grenades";
+		}
+		Choice {
+			Text = "Let's take a look at the laser pistol.";
+			Nextpage = "ravenrock_tobias_shop_laserpistol";
+		}
+		Choice {
+			Text = "I need the energy ammo.";
+			Nextpage = "ravenrock_tobias_shop_energypods";
+		}
+		Choice {
+			Text = "I need some bullets.";
+			Nextpage = "ravenrock_tobias_shop_bullets";
+		}
+		Choice {
+			Text = "How much for the electric bolts?";
+			Nextpage = "ravenrock_tobias_shop_bolts";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop_grenades";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]The grenades are finest quality.\nExplosive grande costs 5, fire grenade costs 15 and gas grenade costs 10 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take explosive grenade. (pay 5 gold)";
 			NextPage = "ravenrock_tobias_shop_grenades";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -91,9 +87,9 @@ Conversation {
 				item = "Coin";
 				amount = 5;
 			}
-        }
-        Choice {
-            Text = "I'll take fire grenade. (pay 15 gold)";
+		}
+		Choice {
+			Text = "I'll take fire grenade. (pay 15 gold)";
 			NextPage = "ravenrock_tobias_shop_grenades";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -103,9 +99,9 @@ Conversation {
 				item = "Coin";
 				amount = 15;
 			}
-        }
-        Choice {
-            Text = "I'll take gas grenade. (pay 10 gold)";
+		}
+		Choice {
+			Text = "I'll take gas grenade. (pay 10 gold)";
 			NextPage = "ravenrock_tobias_shop_grenades";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -115,19 +111,19 @@ Conversation {
 				item = "Coin";
 				amount = 10;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop_laserpistol";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]My speciality. Combines good precision with high rate of fire. The fine tuned optics allows to place all hits in 20 centimeter ring on 50 metres. Only eats batteries too much. Costs 210 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "I'll take it. (pay 210 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop_laserpistol";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]My speciality. Combines good precision with high rate of fire. The fine tuned optics allows to place all hits in 20 centimeter ring on 50 metres. Only eats batteries too much. Costs 210 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take it. (pay 210 gold)";
 			NextPage = "ravenrock_tobias_shop_laserpistol";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -137,19 +133,19 @@ Conversation {
 				item = "Coin";
 				amount = 210;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop_energypods";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]The energyammo comes in handy. Energy packed efficiently.\nThe Energypod costs 12, the Energykit costs 32 and the Energypack costs 55 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "Give me energypod. (pay 12 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop_energypods";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]The energyammo comes in handy. Energy packed efficiently.\nThe Energypod costs 12, the Energykit costs 32 and the Energypack costs 55 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Give me energypod. (pay 12 gold)";
 			NextPage = "ravenrock_tobias_shop_energypods";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -159,9 +155,9 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }
-        Choice {
-            Text = "Give me energykit. (pay 32 gold)";
+		}
+		Choice {
+			Text = "Give me energykit. (pay 32 gold)";
 			NextPage = "ravenrock_tobias_shop_energypods";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -171,9 +167,9 @@ Conversation {
 				item = "Coin";
 				amount = 32;
 			}
-        }
-        Choice {
-            Text = "Give me energypack. (pay 55 gold)";
+		}
+		Choice {
+			Text = "Give me energypack. (pay 55 gold)";
 			NextPage = "ravenrock_tobias_shop_energypods";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -183,19 +179,19 @@ Conversation {
 				item = "Coin";
 				amount = 55;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop_bullets";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]The bullet cartridge costs 13 and the bullets box costs 55 gold. Finest quality and highest accuracy.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "I'll take one cartridge. (pay 13 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop_bullets";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]The bullet cartridge costs 13 and the bullets box costs 55 gold. Finest quality and highest accuracy.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take one cartridge. (pay 13 gold)";
 			NextPage = "ravenrock_tobias_shop_bullets";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -205,9 +201,9 @@ Conversation {
 				item = "Coin";
 				amount = 13;
 			}
-        }
-        Choice {
-            Text = "I'll take one box, please. (pay 55 gold)";
+		}
+		Choice {
+			Text = "I'll take one box, please. (pay 55 gold)";
 			NextPage = "ravenrock_tobias_shop_bullets";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -217,19 +213,19 @@ Conversation {
 				item = "Coin";
 				amount = 55;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_shop_bolts";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Bundle of electric bolts costs 17 and quiver of bolts costs 27 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_shop";
-        }
-        Choice {
-            Text = "Give me the bundle. (pay 17 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_shop_bolts";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Bundle of electric bolts costs 17 and quiver of bolts costs 27 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Give me the bundle. (pay 17 gold)";
 			NextPage = "ravenrock_tobias_shop_bolts";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -239,9 +235,9 @@ Conversation {
 				item = "Coin";
 				amount = 17;
 			}
-        }
-        Choice {
-            Text = "Give me the quiver. (pay 27 gold)";
+		}
+		Choice {
+			Text = "Give me the quiver. (pay 27 gold)";
 			NextPage = "ravenrock_tobias_shop_bolts";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -251,72 +247,76 @@ Conversation {
 				item = "Coin";
 				amount = 27;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_questions";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Yes, informations are always valuable. What did you wanted to know?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_else";
-        }
-        Choice {
-            Text = "Could you tell me about Ravenrock?";
-            Nextpage = "ravenrock_tobias_aboutravenrock";
-        }
-        Choice {
-            Text = "Could you tell me about surroundings?";
-            Nextpage = "ravenrock_tobias_surroundings";
-        }
-        Choice {
-            Text = "This is your workshop?";
-            Nextpage = "ravenrock_tobias_workshop";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_aboutravenrock";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Ravenrock is a quite small village. We're famous thanks to the brewery, and I can say it's the only notable place here in the village.The beer is good, but it could get boring pretty quickly. If you're looking for a good meal, visit the Smatrt Squirell Inn.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_surroundings";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Well, area surrounding the village could be wild sometimes. The local fauna is pretty agressive, so watch your back when travelling around. The western road leads to Narfolk, but that's little bit far away. The eastern road leads to Kolyma, and that is also little bit far from here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_workshop";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Yes, the workshop's mine. I'm not a franchise of TekGuild, is you ask for this. I even employ two local guys, so the trade's good. I've built this workshop 15 years ago when I settled here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-        Choice {
-            Text = "I see three guys over there.";
-            Nextpage = "ravenrock_tobias_thirdone";
-        }
-    }
-    Page {
-        pageName = "ravenrock_tobias_thirdone";
-        Name = "\c[yellow]Tobias, Techsmith";
-        Dialog = "\c[white]Yeah, the third one's my son, Arlan. He's a handy and smart, soon he'll take my place as the master here.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_tobias_questions";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_questions";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Yes, informations are always valuable. What did you wanted to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about Ravenrock?";
+			Nextpage = "ravenrock_tobias_aboutravenrock";
+		}
+		Choice {
+			Text = "Could you tell me about surroundings?";
+			Nextpage = "ravenrock_tobias_surroundings";
+		}
+		Choice {
+			Text = "This is your workshop?";
+			Nextpage = "ravenrock_tobias_workshop";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_aboutravenrock";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Ravenrock is a quite small village. We're famous thanks to the brewery, and I can say it's the only notable place here in the village.The beer is good, but it could get boring pretty quickly. If you're looking for a good meal, visit the Smatrt Squirell Inn.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_surroundings";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Well, area surrounding the village could be wild sometimes. The local fauna is pretty agressive, so watch your back when travelling around. The western road leads to Narfolk, but that's little bit far away. The eastern road leads to Kolyma, and that is also little bit far from here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_workshop";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Yes, the workshop's mine. I'm not a franchise of TekGuild, is you ask for this. I even employ two local guys, so the trade's good. I've built this workshop 15 years ago when I settled here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I see three guys over there.";
+			Nextpage = "ravenrock_tobias_thirdone";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_tobias_thirdone";
+		Name = "\c[yellow]Tobias, Techsmith";
+		Dialog = "\c[white]Yeah, the third one's my son, Arlan. He's a handy and smart, soon he'll take my place as the master here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_tobias_questions";
+		}
+	}
 }

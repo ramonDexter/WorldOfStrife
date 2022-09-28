@@ -305,7 +305,7 @@ Conversation {
 		Dialog = "\c[white]Oh yeah, there's always some work to do. Right now, I've got some rat problems.";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "Actually, I wanted something else.";
+			Text = "Actually, \c[yellow]<< BACK";
 			Nextpage = "eastcliff_curtis_opener";
 		}
 		Choice {

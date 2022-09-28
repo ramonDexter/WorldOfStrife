@@ -1,46 +1,42 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 36;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_charlie_opener";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Hello, would you like a grilled chicken? I'm Charlie and I make the best grilled chicken in Millport!";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Yeah, I would like some grilled chicken.";
-            Nextpage = "mp_charlie_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "mp_charlie_questions";
-        }
-    }
-    Page {
-        pageName = "mp_charlie_shop";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Great, I've got one fresh just taken from the grill. One chicken costs 25 gold.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_charlie_opener";
-        } 
-        Choice {
-            Text = "Buy grilled chicken ";
+	ID = 36;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_charlie_opener";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Hello, would you like a grilled chicken? I'm Charlie and I make the best grilled chicken in Millport!";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah, I would like some grilled chicken.";
+			Nextpage = "mp_charlie_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "mp_charlie_questions";
+		}
+	}
+	Page {
+		pageName = "mp_charlie_shop";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Great, I've got one fresh just taken from the grill. One chicken costs 25 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Buy grilled chicken ";
 			NextPage = "mp_charlie_shop";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrilledChicken";
@@ -48,58 +44,62 @@ Conversation {
 				item = "Coin";
 				amount = 25;
 			}
-        }
-    }
-    Page {
-        pageName = "mp_charlie_questions";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Okay, what would you like to know?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_charlie_opener";
-        }
-        Choice {
-            Text = "How are you today?";
-            Nextpage = "mp_charlie_howareyou";
-        }
-        Choice {
-            Text = "Is this stand of yours?";
-            Nextpage = "mp_charlie_yourstand";
-        }
-        Choice {
-            Text = "Could you tell me about Millport?";
-            Nextpage = "mp_charlie_aboutmillport";
-        }
-    }
-    Page {
-        pageName = "mp_charlie_howareyou";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Oh, I'm all right, I guess. Thanks for asking, anyway. And you?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "I'm okay. Thanks too.";
-            Nextpage = "mp_charlie_questions";
-        }
-    }
-    Page {
-        pageName = "mp_charlie_yourstand";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Yes, It eblongs to me. I live in the commons, in the northern part. I spend my day here in my stand, grilling the chicks. Locals love it.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_charlie_questions";
-        }
-    }
-    Page {
-        pageName = "mp_charlie_aboutmillport";
-        Name = "\c[yellow]Charlie";
-        Dialog = "\c[white]Well, Millport's Tabitian main city. It's local market center and it serves as the main port on the southern coast. Quite a lots of task for quite a minor city, I guess. The soutehrn territory's been governed by the Governor, who seats here in the Castle. Keep distance from him.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_charlie_questions";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_charlie_opener";
+		}
+	}
+	Page {
+		pageName = "mp_charlie_questions";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Okay, what would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How are you today?";
+			Nextpage = "mp_charlie_howareyou";
+		}
+		Choice {
+			Text = "Is this stand of yours?";
+			Nextpage = "mp_charlie_yourstand";
+		}
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_charlie_aboutmillport";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_charlie_opener";
+		}
+	}
+	Page {
+		pageName = "mp_charlie_howareyou";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Oh, I'm all right, I guess. Thanks for asking, anyway. And you?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "I'm okay. Thanks too.";
+			Nextpage = "mp_charlie_questions";
+		}
+	}
+	Page {
+		pageName = "mp_charlie_yourstand";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Yes, It eblongs to me. I live in the commons, in the northern part. I spend my day here in my stand, grilling the chicks. Locals love it.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_charlie_questions";
+		}
+	}
+	Page {
+		pageName = "mp_charlie_aboutmillport";
+		Name = "\c[yellow]Charlie";
+		Dialog = "\c[white]Well, Millport's Tabitian main city. It's local market center and it serves as the main port on the southern coast. Quite a lots of task for quite a minor city, I guess. The soutehrn territory's been governed by the Governor, who seats here in the Castle. Keep distance from him.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_charlie_questions";
+		}
+	}
 }

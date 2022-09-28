@@ -1,117 +1,117 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 999;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_traveller_opener";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]Hello, how may I help you? I'm the Traveller, I can take you to other surrounding places for a small fee. We'll make a special trip just for you, same low price!";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Where can you take me?";
-            Nextpage = "ravenrock_traveller_places";
-        }
-    }
-    Page {
-        pageName = "ravenrock_traveller_places";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]I can take you to Aeredale, Eastcliff and Millport.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_traveller_opener";
-        }
-        Choice {
-            Text = "Take me to Aeredale.";
-            Nextpage = "ravenrock_traveller_travel_Aeredale";
-        }
-        Choice {
-            Text = "Take me to Eastcliff.";
-            Nextpage = "ravenrock_traveller_travel_Eastcliff";
-        }
-        Choice {
-            Text = "Take me to Millport.";
-            Nextpage = "ravenrock_traveller_travel_Millport";
-        }
-    }
-    Page {
-        pageName = "ravenrock_traveller_travel_Aeredale";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]The trip to Aeredale costs 24 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay. \c[gold](pay 24 gold)";
-            Nextpage = "ravenrock_traveller_opener";
-            CloseDialog = true;
-            YesMessage = "Take your seat, let's go!";
-            NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 991;
-            Cost {
-                item = "Coin";
-                amount = 24;
-            }
-        }
-        Choice {
-            Text = "I've changed my mind.";
-            Nextpage = "ravenrock_traveller_places";
-        }
-    }
-    Page {
-        pageName = "ravenrock_traveller_travel_Eastcliff";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]The trip to Eastcliff costs 26 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay. \c[gold](pay 26 gold)";
-            Nextpage = "ravenrock_traveller_opener";
-            CloseDialog = true;
-            YesMessage = "Take your seat, let's go!";
-            NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 992;
-            Cost {
-                item = "Coin";
-                amount = 26;
-            }
-        }
-        Choice {
-            Text = "I've changed my mind.";
-            Nextpage = "ravenrock_traveller_places";
-        }
-    }
-    Page {
-        pageName = "ravenrock_traveller_travel_Millport";
-        Name = "\c[yellow]Traveller"; 
-        Dialog = "\c[white]The trip to Millport costs 14 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "Okay. \c[gold](pay 14 gold)";
-            Nextpage = "ravenrock_traveller_opener";
-            CloseDialog = true;
-            YesMessage = "Take your seat, let's go!";
-            NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 993;
-            Cost {
-                item = "Coin";
-                amount = 14;
-            }
-        }
-        Choice {
-            Text = "I've changed my mind.";
-            Nextpage = "ravenrock_traveller_places";
-        }
-    }
+	ID = 999;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_traveller_opener";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]Hello, how may I help you? I'm the Traveller, I can take you to other surrounding places for a small fee. We'll make a special trip just for you, same low price!";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Where can you take me?";
+			Nextpage = "ravenrock_traveller_places";
+		}
+	}
+	Page {
+		pageName = "ravenrock_traveller_places";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]I can take you to Aeredale, Eastcliff and Millport.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Take me to Aeredale.";
+			Nextpage = "ravenrock_traveller_travel_Aeredale";
+		}
+		Choice {
+			Text = "Take me to Eastcliff.";
+			Nextpage = "ravenrock_traveller_travel_Eastcliff";
+		}
+		Choice {
+			Text = "Take me to Millport.";
+			Nextpage = "ravenrock_traveller_travel_Millport";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_traveller_opener";
+		}
+	}
+	Page {
+		pageName = "ravenrock_traveller_travel_Aeredale";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]The trip to Aeredale costs 24 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay. \c[gold](pay 24 gold)";
+			Nextpage = "ravenrock_traveller_opener";
+			CloseDialog = true;
+			YesMessage = "Take your seat, let's go!";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 991;
+			Cost {
+				item = "Coin";
+				amount = 24;
+			}
+		}
+		Choice {
+			Text = "I've changed my mind.";
+			Nextpage = "ravenrock_traveller_places";
+		}
+	}
+	Page {
+		pageName = "ravenrock_traveller_travel_Eastcliff";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]The trip to Eastcliff costs 26 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay. \c[gold](pay 26 gold)";
+			Nextpage = "ravenrock_traveller_opener";
+			CloseDialog = true;
+			YesMessage = "Take your seat, let's go!";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 992;
+			Cost {
+				item = "Coin";
+				amount = 26;
+			}
+		}
+		Choice {
+			Text = "I've changed my mind.";
+			Nextpage = "ravenrock_traveller_places";
+		}
+	}
+	Page {
+		pageName = "ravenrock_traveller_travel_Millport";
+		Name = "\c[yellow]Traveller"; 
+		Dialog = "\c[white]The trip to Millport costs 14 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay. \c[gold](pay 14 gold)";
+			Nextpage = "ravenrock_traveller_opener";
+			CloseDialog = true;
+			YesMessage = "Take your seat, let's go!";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 993;
+			Cost {
+				item = "Coin";
+				amount = 14;
+			}
+		}
+		Choice {
+			Text = "I've changed my mind.";
+			Nextpage = "ravenrock_traveller_places";
+		}
+	}
 }

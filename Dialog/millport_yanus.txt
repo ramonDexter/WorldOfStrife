@@ -1,106 +1,106 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 37;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_yanus_opener";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]Hello mister Binder. What brings you to my school? Have you come to refine your skills? Or does your duty brings you here with questions?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "I'd like to refine my skills.";
-            Nextpage = "mp_yanus_skills";
-        }
-        Choice {
-            Text = "I've got some questions";
-            Nextpage = "mp_yanus_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yanus_skills";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]Good, good. I can offer you training of overall skill. One lesson costs 1000 gold. Not a cheap one, but I'm the only trainer in town.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_yanus_opener";
-        }
-        Choice {
-            Text = "Okay, let's train. \c[gold](pay 1000 gold)";
+	ID = 37;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_yanus_opener";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]Hello mister Binder. What brings you to my school? Have you come to refine your skills? Or does your duty brings you here with questions?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "I'd like to refine my skills.";
+			Nextpage = "mp_yanus_skills";
+		}
+		Choice {
+			Text = "I've got some questions";
+			Nextpage = "mp_yanus_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yanus_skills";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]Good, good. I can offer you training of overall skill. One lesson costs 1000 gold. Not a cheap one, but I'm the only trainer in town.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yanus_opener";
+		}
+		Choice {
+			Text = "Okay, let's train. \c[gold](pay 1000 gold)";
 			NextPage = "mp_yanus_skills";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Okay, let's start with the training!";
 			NoMessage = "Not enough gold!";
-            Special = 80;
-            arg0 = 1802;
-            Cost {
-                item = "Coin";
-                amount = 1000;
-            }
-        }
-    }
-    Page {
-        pageName = "mp_yanus_questions";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]Yes, what would you like to know, mister Binder?";
-        Goodbye = "\c[red]Goodbye.";  
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_yanus_opener";
-        } 
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "mp_yanus_whoareyou";
-        } 
-        Choice {
-            Text = "What is this place?";
-            Nextpage = "mp_yanus_aboutthisplace";
-        } 
-        Choice {
-            Text = "Could you tell me about Millport?";
-            Nextpage = "mp_yanus_aboutmillport";
-        }
-    }
-    Page {
-        pageName = "mp_yanus_whoareyou";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]My name is Yanus Cicero, and I'm a martial arts master. I train students and everyone who wants to learn how to defend himself.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_yanus_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yanus_aboutthisplace";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]This is my martial artis school. Students come here to refine their skills under my supervision.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_yanus_questions";
-        }
-    }
-    Page {
-        pageName = "mp_yanus_aboutmillport";
-        Name = "\c[yellow]Yanus, Martial Arts master";
-        Dialog = "\c[white]Well, I won't tell you much. I'm not into history, so I know only the publically known things, as that Millport's a trading center of the south and that the Governor of the southern territory resides here in the Castle. All I know that Millport's a pretty old town, with history dating back to the oldest times.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_yanus_questions";
-        }
-    }
+			Special = 80;
+			arg0 = 1802;
+			Cost {
+				item = "Coin";
+				amount = 1000;
+			}
+		}
+	}
+	Page {
+		pageName = "mp_yanus_questions";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]Yes, what would you like to know, mister Binder?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "mp_yanus_whoareyou";
+		} 
+		Choice {
+			Text = "What is this place?";
+			Nextpage = "mp_yanus_aboutthisplace";
+		} 
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_yanus_aboutmillport";
+		}  
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yanus_opener";
+		}
+	}
+	Page {
+		pageName = "mp_yanus_whoareyou";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]My name is Yanus Cicero, and I'm a martial arts master. I train students and everyone who wants to learn how to defend himself.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yanus_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yanus_aboutthisplace";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]This is my martial artis school. Students come here to refine their skills under my supervision.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yanus_questions";
+		}
+	}
+	Page {
+		pageName = "mp_yanus_aboutmillport";
+		Name = "\c[yellow]Yanus, Martial Arts master";
+		Dialog = "\c[white]Well, I won't tell you much. I'm not into history, so I know only the publically known things, as that Millport's a trading center of the south and that the Governor of the southern territory resides here in the Castle. All I know that Millport's a pretty old town, with history dating back to the oldest times.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_yanus_questions";
+		}
+	}
 }

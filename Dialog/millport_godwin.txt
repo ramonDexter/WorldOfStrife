@@ -1,50 +1,50 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 41;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_godwin_opener";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]Welcome to the promenade buffet. Would you like something to freshen up. Or maybe anything to eat?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "I want some drink.";
-            Nextpage = "mp_godwin_drinks";
-        }
-        Choice {
-            Text = "I'm hungry.";
-            Nextpage = "mp_godwin_food";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "mp_godwin_questions";
-        }
-    }
-    Page {
-        pageName = "mp_godwin_drinks";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]I got some fresh water, some soda and some wine. All drinks are served cold. Water costs 2, soda is for 3 and wine is for 6 gold. What would you like?";
-        Goodbye = "\c[red]Goodbye.";   
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_opener";
-        }
-        Choice {
-            Text = "\c[gold]Buy bottle of water";
-            Nextpage = "mp_godwin_drinks";
+	ID = 41;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_godwin_opener";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]Welcome to the promenade buffet. Would you like something to freshen up. Or maybe anything to eat?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I want some drink.";
+			Nextpage = "mp_godwin_drinks";
+		}
+		Choice {
+			Text = "I'm hungry.";
+			Nextpage = "mp_godwin_food";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "mp_godwin_questions";
+		}
+	}
+	Page {
+		pageName = "mp_godwin_drinks";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]I got some fresh water, some soda and some wine. All drinks are served cold. Water costs 2, soda is for 3 and wine is for 6 gold. What would you like?";
+		Goodbye = "\c[red]Goodbye.";   
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_opener";
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of water";
+			Nextpage = "mp_godwin_drinks";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosWaterBottle";
@@ -52,12 +52,12 @@ Conversation {
 				item = "Coin";
 				amount = 2;
 			}
-        }
-        Choice {
-            Text = "\c[gold]Buy soda can";
-            Nextpage = "mp_godwin_drinks";
+		}
+		Choice {
+			Text = "\c[gold]Buy soda can";
+			Nextpage = "mp_godwin_drinks";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosSodaCan";
@@ -65,12 +65,12 @@ Conversation {
 				item = "Coin";
 				amount = 3;
 			}
-        }
-        Choice {
-            Text = "\c[gold]Buy bottle of wine";
-            Nextpage = "mp_godwin_drinks";
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of wine";
+			Nextpage = "mp_godwin_drinks";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosVineBottle";
@@ -78,22 +78,18 @@ Conversation {
 				item = "Coin";
 				amount = 6;
 			}
-        }
-    }
-    Page {
-        pageName = "mp_godwin_food";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]I got some grilled chicken and some cheeseburgers. The grilled chicken costs 25, the cheesebruger costs 7 gold.";
-        Goodbye = "\c[red]Goodbye.";   
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_opener";
-        }
-        Choice {
-            Text = "\c[gold]Buy grilled chicken";
-            Nextpage = "mp_godwin_food";
+		}
+	}
+	Page {
+		pageName = "mp_godwin_food";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]I got some grilled chicken and some cheeseburgers. The grilled chicken costs 25, the cheesebruger costs 7 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy grilled chicken";
+			Nextpage = "mp_godwin_food";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosGrilledChicken";
@@ -101,12 +97,12 @@ Conversation {
 				item = "Coin";
 				amount = 25;
 			}
-        }
-        Choice {
-            Text = "\c[gold]Buy cheeseburger";
-            Nextpage = "mp_godwin_food";
+		}
+		Choice {
+			Text = "\c[gold]Buy cheeseburger";
+			Nextpage = "mp_godwin_food";
 			CloseDialog = true;
-            DisplayCost = true;
+			DisplayCost = true;
 			YesMessage = "Here it is!";
 			NoMessage = "Not enough gold!";
 			GiveItem = "wosCheeseburgerDouble";
@@ -114,72 +110,76 @@ Conversation {
 				item = "Coin";
 				amount = 7;
 			}
-        }
-    }
-    Page {
-        pageName = "mp_godwin_questions";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]What would you like to know?";
-        Goodbye = "\c[red]Goodbye.";   
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_opener";
-        } 
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "mp_godwin_whoareyou";
-        } 
-        Choice {
-            Text = "This tavern belongs to you?";
-            Nextpage = "mp_godwin_tavern";
-        } 
-        Choice {
-            Text = "How's it going?";
-            Nextpage = "mp_godwin_howsgoing";
-        } 
-        Choice {
-            Text = "Do you know any rumors?";
-            Nextpage = "mp_godwin_rumors";
-        }
-    }
-    Page {
-        pageName = "mp_godwin_whoareyou";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]I'm Godwin. I'm a cook and tavernist.";
-        Goodbye = "\c[red]Goodbye.";   
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_questions";
-        } 
-    }
-    Page {
-        pageName = "mp_godwin_tavern";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]Oh yeah. Bought it five years ago. The previous owner was a terrible cook and bad bartender, so I got to deal with bad reputation. Hopefully, I got some secrets down my sleeve. So i have to say the trade's good and the bad reputation's gone.";
-        Goodbye = "\c[red]Goodbye.";   
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_questions";
-        } 
-    }
-    Page {
-        pageName = "mp_godwin_howsgoing";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]Oh, pretty good, I think. Thanks for asking.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_questions";
-        }
-    }
-    Page {
-        pageName = "mp_godwin_rumors";
-        Name = "\c[yellow]Godwin";
-        Dialog = "\c[white]Sorry, I'm not into rumors. I got enough work in the kitchen, so I'm staying away from gossip.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_godwin_questions";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_opener";
+		}
+	}
+	Page {
+		pageName = "mp_godwin_questions";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]What would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "mp_godwin_whoareyou";
+		} 
+		Choice {
+			Text = "This tavern belongs to you?";
+			Nextpage = "mp_godwin_tavern";
+		} 
+		Choice {
+			Text = "How's it going?";
+			Nextpage = "mp_godwin_howsgoing";
+		} 
+		Choice {
+			Text = "Do you know any rumors?";
+			Nextpage = "mp_godwin_rumors";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_opener";
+		}
+	}
+	Page {
+		pageName = "mp_godwin_whoareyou";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]I'm Godwin. I'm a cook and tavernist.";
+		Goodbye = "\c[red]Goodbye.";   
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_questions";
+		} 
+	}
+	Page {
+		pageName = "mp_godwin_tavern";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]Oh yeah. Bought it five years ago. The previous owner was a terrible cook and bad bartender, so I got to deal with bad reputation. Hopefully, I got some secrets down my sleeve. So i have to say the trade's good and the bad reputation's gone.";
+		Goodbye = "\c[red]Goodbye.";   
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_questions";
+		} 
+	}
+	Page {
+		pageName = "mp_godwin_howsgoing";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]Oh, pretty good, I think. Thanks for asking.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_questions";
+		}
+	}
+	Page {
+		pageName = "mp_godwin_rumors";
+		Name = "\c[yellow]Godwin";
+		Dialog = "\c[white]Sorry, I'm not into rumors. I got enough work in the kitchen, so I'm staying away from gossip.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_godwin_questions";
+		}
+	}
 }

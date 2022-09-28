@@ -1,77 +1,73 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 4;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "ravenrock_lewis_opener";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]Hello, welcome to my grocery store. How may I serve you?";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "What do you sell?";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "ravenrock_lewis_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]You're at the right place. My prices are fair and I've got everything you could need.\nI've got the travel rations, water, vine, beer and ale, flares, binocular, the hazard suits and armor repair kits.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_opener";
-        }
-        Choice {
-            Text = "I need some food. Are those rations good?";
-            Nextpage = "ravenrock_lewis_shop_rations";
-        }
-        Choice {
-            Text = "Hmm, I need something to drink. How much for the drinks?";
-            Nextpage = "ravenrock_lewis_shop_drinks";
-        }
-        Choice {
-            Text = "How much for the flares?";
-            Nextpage = "ravenrock_lewis_shop_flares";
-        }
-        Choice {
-            Text = "Binocular? How much for this one?";
-            Nextpage = "ravenrock_lewis_shop_binoc";
-        }
-        Choice {
-            Text = "I need the hazard suit.";
-            Nextpage = "ravenrock_lewis_shop_hazardsuit";
-        }
-        Choice {
-            Text = "How much for the repair kits?";
-            Nextpage = "ravenrock_lewis_shop_armorshard";
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_rations";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]Yes, the rations are the latest stock. All cost the same, 12 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I'll take ration number 1. (pay 12 gold)";
+	ID = 4;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ravenrock_lewis_opener";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]Hello, welcome to my grocery store. How may I serve you?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you sell?";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ravenrock_lewis_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]You're at the right place. My prices are fair and I've got everything you could need.\nI've got the travel rations, water, vine, beer and ale, flares, binocular, the hazard suits and armor repair kits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need some food. Are those rations good?";
+			Nextpage = "ravenrock_lewis_shop_rations";
+		}
+		Choice {
+			Text = "Hmm, I need something to drink. How much for the drinks?";
+			Nextpage = "ravenrock_lewis_shop_drinks";
+		}
+		Choice {
+			Text = "How much for the flares?";
+			Nextpage = "ravenrock_lewis_shop_flares";
+		}
+		Choice {
+			Text = "Binocular? How much for this one?";
+			Nextpage = "ravenrock_lewis_shop_binoc";
+		}
+		Choice {
+			Text = "I need the hazard suit.";
+			Nextpage = "ravenrock_lewis_shop_hazardsuit";
+		}
+		Choice {
+			Text = "How much for the repair kits?";
+			Nextpage = "ravenrock_lewis_shop_armorshard";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_opener";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_rations";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]Yes, the rations are the latest stock. All cost the same, 12 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take ration number 1. (pay 12 gold)";
 			NextPage = "ravenrock_lewis_shop_rations";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -81,9 +77,9 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }
-        Choice {
-            Text = "I'll take ration number 2. (pay 12 gold)";
+		}
+		Choice {
+			Text = "I'll take ration number 2. (pay 12 gold)";
 			NextPage = "ravenrock_lewis_shop_rations";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -93,9 +89,9 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }
-        Choice {
-            Text = "I'll take ration number 3. (pay 12 gold)";
+		}
+		Choice {
+			Text = "I'll take ration number 3. (pay 12 gold)";
 			NextPage = "ravenrock_lewis_shop_rations";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -105,19 +101,19 @@ Conversation {
 				item = "Coin";
 				amount = 12;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_drinks";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "Give me bottle of water. (pay 4 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_drinks";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Give me bottle of water. (pay 4 gold)";
 			NextPage = "ravenrock_lewis_shop_drinks";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -127,9 +123,9 @@ Conversation {
 				item = "Coin";
 				amount = 4;
 			}
-        }
-        Choice {
-            Text = "Give me bottle of beer. (pay 5 gold)";
+		}
+		Choice {
+			Text = "Give me bottle of beer. (pay 5 gold)";
 			NextPage = "ravenrock_lewis_shop_drinks";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -139,9 +135,9 @@ Conversation {
 				item = "Coin";
 				amount = 5;
 			}
-        }
-        Choice {
-            Text = "Give me bottle of ale. (pay 5 gold)";
+		}
+		Choice {
+			Text = "Give me bottle of ale. (pay 5 gold)";
 			NextPage = "ravenrock_lewis_shop_drinks";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -151,9 +147,9 @@ Conversation {
 				item = "Coin";
 				amount = 5;
 			}
-        }
-        Choice {
-            Text = "Give me bottle of vine. (pay 6 gold)";
+		}
+		Choice {
+			Text = "Give me bottle of vine. (pay 6 gold)";
 			NextPage = "ravenrock_lewis_shop_drinks";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -163,19 +159,19 @@ Conversation {
 				item = "Coin";
 				amount = 6;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_flares";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]Flares are always handy. Especially when you need to light some area.\nOne flare costs 7, box of flares costs 30 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I'll take one flare. (pay 7 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_flares";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]Flares are always handy. Especially when you need to light some area.\nOne flare costs 7, box of flares costs 30 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take one flare. (pay 7 gold)";
 			NextPage = "ravenrock_lewis_shop_flares";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -185,9 +181,9 @@ Conversation {
 				item = "Coin";
 				amount = 7;
 			}
-        }
-        Choice {
-            Text = "I'll take box of flares. (pay 30 gold)";
+		}
+		Choice {
+			Text = "I'll take box of flares. (pay 30 gold)";
 			NextPage = "ravenrock_lewis_shop_flares";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -197,19 +193,19 @@ Conversation {
 				item = "Coin";
 				amount = 30;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_binoc";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]Good binocular with sturdy outer shell and oil-stabilised lens. Comes in handy when you want to scout some area. Costs 130 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I'll take it. (pay 130 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_binoc";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]Good binocular with sturdy outer shell and oil-stabilised lens. Comes in handy when you want to scout some area. Costs 130 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take it. (pay 130 gold)";
 			NextPage = "ravenrock_lewis_shop_binoc";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -219,19 +215,19 @@ Conversation {
 				item = "Coin";
 				amount = 130;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_hazardsuit";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]Yes, hazard suit could come in handy.\nHazard suit costs 80 gold.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I'll take one. (pay 80 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_hazardsuit";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]Yes, hazard suit could come in handy.\nHazard suit costs 80 gold.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take one. (pay 80 gold)";
 			NextPage = "ravenrock_lewis_shop_hazardsuit";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -241,19 +237,19 @@ Conversation {
 				item = "Coin";
 				amount = 80;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_shop_armorshard";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]The armor repair kits are cheap. Just 20 gold for each.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_shop";
-        }
-        Choice {
-            Text = "I'll take one. (pay 20 gold)";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_shop_armorshard";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]The armor repair kits are cheap. Just 20 gold for each.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'll take one. (pay 20 gold)";
 			NextPage = "ravenrock_lewis_shop_armorshard";
 			CloseDialog = true;
 			YesMessage = "Here it is!";
@@ -263,44 +259,48 @@ Conversation {
 				item = "Coin";
 				amount = 20;
 			}
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_questions";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]What did you wanted to know? I know a little bit about the village, but I rarely leave the place. So if you want to know about surrounding area, you have to ask someone else.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_opener";
-        }
-        Choice {
-            Text = "What do you know about Ravenrock?";
-            Nextpage = "ravenrock_lewis_aboutravenrock";
-        }
-        Choice {
-            Text = "Could you tell me about the locals?";
-            Nextpage = "ravenrock_lewis_aboutlocals";
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_aboutravenrock";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]The village of Ravenrock is a peaceful place, thank to the Order's Acolytes. I can thank them for guarding my shop, yeah. Our place on the road from Narfolk to Kolyma and Millport gives us good opportunity for trading and exchanging our produce. The brewery makes good beer and ale, and the kitchen at the Smart Squirell Inn is quite good.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_questions";
-        }
-    }
-    Page {
-        pageName = "ravenrock_lewis_aboutlocals";
-        Name = "\c[yellow]Lewis, grocery vendor";
-        Dialog = "\c[white]The locals are pretty wealthy. Most of them are farmers, but some work in the brewery. Nice poeple, but little bit simple. Farmers, you know. Bt they work hard and the hard work gives plentiful fruits.";
-        Goodbye = "\c[red]Goodbye.";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "ravenrock_lewis_questions";
-        }
-    }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_shop";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_questions";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]What did you wanted to know? I know a little bit about the village, but I rarely leave the place. So if you want to know about surrounding area, you have to ask someone else.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you know about Ravenrock?";
+			Nextpage = "ravenrock_lewis_aboutravenrock";
+		}
+		Choice {
+			Text = "Could you tell me about the locals?";
+			Nextpage = "ravenrock_lewis_aboutlocals";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_opener";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_aboutravenrock";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]The village of Ravenrock is a peaceful place, thank to the Order's Acolytes. I can thank them for guarding my shop, yeah. Our place on the road from Narfolk to Kolyma and Millport gives us good opportunity for trading and exchanging our produce. The brewery makes good beer and ale, and the kitchen at the Smart Squirell Inn is quite good.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_questions";
+		}
+	}
+	Page {
+		pageName = "ravenrock_lewis_aboutlocals";
+		Name = "\c[yellow]Lewis, grocery vendor";
+		Dialog = "\c[white]The locals are pretty wealthy. Most of them are farmers, but some work in the brewery. Nice poeple, but little bit simple. Farmers, you know. Bt they work hard and the hard work gives plentiful fruits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ravenrock_lewis_questions";
+		}
+	}
 }

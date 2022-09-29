@@ -33,7 +33,7 @@ class PeasantGray : peasantBase {
 }
 class PeasantBrightGreen : peasantBase {
 	Default {
-		//$Title "Peasant Gray"						
+		//$Title "Peasant Bright Green"						
 		+FRIENDLY		
 		Translation 5;
 	}
@@ -47,14 +47,14 @@ class PeasantRust : peasantBase {
 }
 class PeasantGold : peasantBase {
 	Default {
-		//$Title "Peasant Gray"						
+		//$Title "Peasant Gold"						
 		+FRIENDLY		
 		Translation 4;
 	}
 }
 class PeasantBlue : peasantBase {
 	Default {
-		//$Title "Peasant Gray"						
+		//$Title "Peasant Blue"						
 		+FRIENDLY		
 		Translation 6;
 	}

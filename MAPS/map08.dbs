@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -51.41791f;
-		defaulttoptexture = "BRKGRY17";
+		viewpositionx = -1492.752f;
+		defaulttoptexture = "BLACK";
 		overrideceilheight = false;
-		viewpositiony = -1201.867f;
+		viewpositiony = -1330.194f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -48,13 +48,13 @@ maps
 		}
 		overridetoptexture = false;
 		overridebottomtexture = false;
-		defaultbottomtexture = "BRKGRY17";
+		defaultbottomtexture = "BLACK";
 		defaultfloortexture = "F_NAT04";
-		defaultwalltexture = "BRKGRY17";
+		defaultwalltexture = "BLACK";
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.2784248f;
+		viewscale = 0.2141729f;
 		
 		plugins
 		{

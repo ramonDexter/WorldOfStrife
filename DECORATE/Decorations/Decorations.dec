@@ -11120,6 +11120,35 @@ actor wosD_FS_gtbArtemis 21709 {
 			Stop
 	}
 }
+actor wosD_floorWaterDrip 21710 {
+	//$Category "Decorations/WoS"
+	//$Title "wos floor water drip"
+	+NOBLOCKMAP
+	States {
+		Spawn:
+			DRIP A 6
+			DRIP BC 4
+			DRIP D 4
+			DRIP EF 4
+			DRIP G 4
+			DRIP H 4
+			Loop
+	}
+}
+actor wosD_ceilingWaterDrip 21711 {
+	//$Category "Decorations/WoS"
+	//$Title "wos ceiling water drip"
+	Height 1
+	+NOBLOCKMAP
+	+SPAWNCEILING
+	+NOGRAVITY
+	States {
+		Spawn:
+			CDRP A 10
+			CDRP BCD 8
+			Loop
+	}
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

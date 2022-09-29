@@ -1,0 +1,64 @@
+namespace = "GZDoom";
+Conversation {
+	ID = 62;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]TekGuild Technician";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "SH_tekguildTechnician_opener";
+		Name = "\c[yellow]TekGuild Technician";
+		Dialog = "\c[white]Hello Binder, what brings you to our special lab?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What is this place?";
+			Nextpage = "SH_tekguildTechnician_thisplace";
+		}
+		Choice {
+			Text = "What are you doing here?";
+			Nextpage = "SH_tekguildTechnician_doinghere";
+		}
+	}
+	Page {
+		pageName = "SH_tekguildTechnician_thisplace";
+		Name = "\c[yellow]TekGuild Technician";
+		Dialog = "\c[white]You're in TekGuild special purposes lab. We're working here on a brand new portal technology, that should replace the old and limited teleports.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Portal? What's that?";
+			Nextpage = "SH_tekguildTechnician_portaltech";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_tekguildTechnician_opener";
+		}
+	}
+	Page {
+		pageName = "SH_tekguildTechnician_portaltech";
+		Name = "\c[yellow]TekGuild Technician";
+		Dialog = "\c[white]The portal technology is a brand new invention developed by our technicians. Basically, it's a portal connecting two places. Walking through such a portal is like walking through a door. The details are highly technological and require a longer lecture, so I won't waste your time here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_tekguildTechnician_opener";
+		}
+	}
+	Page {
+		pageName = "SH_tekguildTechnician_doinghere";
+		Name = "\c[yellow]TekGuild Technician";
+		Dialog = "\c[white]We're working here on a brand new portal technology, that should replace the old and limited teleports. The portal technology is a brand new invention developed by our technicians. Basically, it's a portal connecting two places. Walking through such a portal is like walking through a door. The details are highly technological and require a longer lecture, so I won't waste your time here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "SH_tekguildTechnician_opener";
+		}
+	}
+}

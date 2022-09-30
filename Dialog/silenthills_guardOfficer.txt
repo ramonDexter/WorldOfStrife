@@ -72,7 +72,7 @@ Conversation {
 	Page {
 		pageName = "SH_cityGuardOfficer_aboutsilenthills";
 		Name = "\c[yellow]Guard Officer"; 
-		Dialog = "\c[white]Silent Hills is small trading community in the upper part of the Hillside. Out town offers all services required for comfortable living, including medics and town bath. We've got TekGuild university here. Also, we've got powerplant here in town, but this don't protect us from power shartages.";
+		Dialog = "\c[white]Silent Hills is small trading community in the upper part of the Hillside. Out town offers all services required for comfortable living, including medics and town bath. We've got TekGuild university here. Also, we've got powerplant here in town, but this don't protect us from power shortages.";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "\c[yellow]<< BACK";

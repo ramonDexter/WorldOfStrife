@@ -2,7 +2,9 @@
 /////////////////////  World of Strife ANIMDEFS file  //////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 //   camera  ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 CAMERATEXTURE CAMTX01 64 64 fit 32 32 worldpanning
 CAMERATEXTURE CAMTX02 64 64 fit 32 32 worldpanning
 CAMERATEXTURE CAMTX03 64 64 fit 32 32 worldpanning
@@ -13,17 +15,31 @@ CAMERATEXTURE CAMTX07 64 64 fit 32 32 worldpanning
 CAMERATEXTURE CAMTX08 64 64 fit 32 32 worldpanning
 CAMERATEXTURE CAMTX09 64 64 fit 32 32 worldpanning
 CAMERATEXTURE CAMTX10 64 64 fit 32 32 worldpanning
+// camera //////////////////////////////////////////////////////////////////////
+cameratexture	DPCAMTEX	64 64	fit	64 64
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 //  flats  /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 flat X_009 range X_011 tics 8
 flat X_005 range X_008 tics 8
 flat X_001 range X_004 tics 8
 Flat SWATER1 Range SWATERG Tics 2
 flat CWATR01 range CWATR24 tics 3
+flat DPSCR80 range DPSCR85 tics 8
+flat BLGRAM01 range BLGRAM02 tics 8
+flat FIREP01 range FIREP04 tics 8
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 //  textures  //////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 texture CMP_12_1 range CMP_12_4 tics 6
 texture CMP_10_1 range CMP_10_4 tics 6
 texture CMP_11_1 range CMP_11_3 tics 6
@@ -54,10 +70,33 @@ texture SURGUNT1 range SURGUNT2 tics 6
 texture WATRMSL1 range WATRMSL8 tics 3
 texture WATRSSL1 range WATRSSL8 tics 3
 
-switch LRSW1_0 on sound switches/bolt pic LRSW1_1 tics 0
+texture	P_1COMP1		range	P_1COMP4	tics 8
+texture	P_2COMP1		range	P_2COMP4	tics 8
+texture	P_3COMP1		range	P_3COMP4	tics 8
+texture	P_4COMP1		range	P_4COMP4	tics 8
+texture P_FAN1			range 	P_FAN2		tics 8
+texture	P_FORCE1		range	P_FORCE4	tics 8
+texture P_FORCE5		range 	P_FORCE8	tics 8
+texture	P_MCOM01		range	P_MCOM04	tics 8
+texture	P_MCOM05		range	P_MCOM08	tics 8
+texture P_MCOM09		range 	P_MCOM12	tics 8
+texture P_TMOGR1		range	P_TMOGR3	tics 8
+texture	DPSCR63			range	DPSCR65		tics 8
+texture	DPSCR80			range	DPSCR85		tics 8
+texture CIRKCF1			range	CIRKCF3		tics 8
+texture CIRKCB1			range	CIRKCB3		tics 8
+texture CIRKDF1			range	CIRKDF3		tics 8
+texture	CIRKDB1			range	CIRKDB3		tics 8
+texture M1CSTON1		range 	M1CSTON2	tics 8
+texture WFALL1			range 	WFALL4		tics 8
+texture DNXFAN01 range DNXFAN04 tics 2
 
 
+
+
+////////////////////////////////////////////////////////////////////////////////
 //  system shock animated doors  ///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 animateddoor  SYSD1_1
 	opensound DoorOpenSmallMetal
 	closesound DoorCloseSmallMetal
@@ -205,66 +244,10 @@ animateddoor  SYSDC_1
 		pic SYSDC_5  
 		pic SYSDC_6
 
-//  diabolusEX animdefs  ///////////////////////////////////////////////////////
-texture DESKC
-    pic DESKC00 tics 4
-    pic DESKC01 tics 4
-    pic DESKC02 tics 4
-    pic DESKC03 tics 4
-    pic DESKC04 tics 4
-    pic DESKC05 tics 4
-    pic DESKC06 tics 4
-    pic DESKC07 tics 4 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-texture HOLOB
-    pic HOLOB00 tics 3
-	pic HOLOB01 tics 3
-	pic HOLOB02 tics 3
-	pic HOLOB03 tics 3
-	pic HOLOB04 tics 3
-	pic HOLOB05 tics 3
-	pic HOLOB06 tics 3
-	pic HOLOB07 tics 3
-	pic HOLOB08 tics 3
-	pic HOLOB09 tics 3
-	pic HOLOB10 tics 3
-
-texture HOLOH
-    pic HOLOH00 tics 3
-	pic HOLOH01 tics 3
-	pic HOLOH02 tics 3
-	pic HOLOH03 tics 3
-	pic HOLOH04 tics 3
-	pic HOLOH05 tics 3
-	pic HOLOH06 tics 3
-	pic HOLOH07 tics 3
-	pic HOLOH08 tics 3
-	pic HOLOH09 tics 3
-	pic HOLOH10 tics 3
-	pic HOLOH11 tics 3
-	pic HOLOH12 tics 3
-	pic HOLOH13 tics 3
-	pic HOLOH14 tics 3
-	pic HOLOH15 tics 3
-	pic HOLOH16 tics 3
-	pic HOLOH17 tics 3
-
-texture SRVRA00
-    pic SRVRA00 tics 6
-	pic SRVRA01 tics 6
-	pic SRVRA02 tics 6
-	pic SRVRA03 tics 6
-	pic SRVRA04 tics 6
-	pic SRVRA05 tics 6
-
-switch SWTCHA on sound Switch1 pic SWTCHB tics 0
-switch SWTCHC on sound Switch1 pic SWTCHD tics 0
-switch SWTCHE on sound Switch1 pic SWTCHF tics 0
-switch SWTCHF on pic SWTCHE tics 0
-switch SWTCHG on pic SWTCHH tics 0
-switch SWTCHI on sound Switch1 pic SWTCHJ tics 0
-
-texture VENDNA00 range VENDNA03 tics 16
 
 
 texture GCVIAL1 range GCVIAL3 tics 6
@@ -280,7 +263,9 @@ switch TEXTURE
 	pic TEXTURE tics 0 // pokud ma switch vice obrazku nez dva	
 */
 
+////////////////////////////////////////////////////////////////////////////////
 // cybermage switches //////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 switch CMSW01
 	on sound "switch/lever" pic CMSW02 tics  0
 
@@ -328,35 +313,22 @@ switch CMSW29
 	pic CMSW30 tics 3 
 	pic CMSW31 tics 0
 ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-//flats
-flat	DPSCR80			range 	DPSCR85		tics 8
-flat 	BLGRAM01		range 	BLGRAM02	tics 8
-flat	FIREP01			range	FIREP04		tics 8
+////////////////////////////////////////////////////////////////////////////////
+// flats ///////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-//textures
-texture	P_1COMP1		range	P_1COMP4	tics 8
-texture	P_2COMP1		range	P_2COMP4	tics 8
-texture	P_3COMP1		range	P_3COMP4	tics 8
-texture	P_4COMP1		range	P_4COMP4	tics 8
-texture P_FAN1			range 	P_FAN2		tics 8
-texture	P_FORCE1		range	P_FORCE4	tics 8
-texture P_FORCE5		range 	P_FORCE8	tics 8
-texture	P_MCOM01		range	P_MCOM04	tics 8
-texture	P_MCOM05		range	P_MCOM08	tics 8
-texture P_MCOM09		range 	P_MCOM12	tics 8
-texture P_TMOGR1		range	P_TMOGR3	tics 8
-texture	DPSCR63			range	DPSCR65		tics 8
-texture	DPSCR80			range	DPSCR85		tics 8
-texture CIRKCF1			range	CIRKCF3		tics 8
-texture CIRKCB1			range	CIRKCB3		tics 8
-texture CIRKDF1			range	CIRKDF3		tics 8
-texture	CIRKDB1			range	CIRKDB3		tics 8
-texture M1CSTON1		range 	M1CSTON2	tics 8
-texture WFALL1			range 	WFALL4		tics 8
-texture DNXFAN01 range DNXFAN04 tics 2
 
-//switches
+////////////////////////////////////////////////////////////////////////////////
+// textures ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// switches ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 switch P_LEVER1 on sound Switch1 pic P_LEVER2 tics 0
 switch P_LEVER3 on sound Switch1 pic P_LEVER4 tics 0
 switch P_PIPSW1 on sound Switch1 pic P_PIPSW2 tics 0
@@ -365,9 +337,13 @@ switch P_BIGSW1 on sound Switch1 pic P_BIGSW2 tics 0
 switch P_EXIT1 on sound Switch1 pic P_EXIT2 tics 0
 switch P_COORD1 on sound Switch1 pic P_COORD2 tics 0
 switch BLSWIOF on sound Switch1 pic BLSWION	tics 0
-
-//camera
-cameratexture	DPCAMTEX	64 64	fit	64 64
+switch LRSW1_0 on sound switches/bolt pic LRSW1_1 tics 0
+// breakable glass /////////////////////////////////////////////////////////////
+switch strife FGLAS01 on sound world/glassbreak pic FGLAS02 tics 0
+switch strife FGLAS03 on sound world/glassbreak pic FGLAS04 tics 0
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 //blood gramophone
 texture BLGRAM01		range BLGRAM02	tics 8
@@ -394,17 +370,11 @@ texture CMP5_1 			range 	CMP5_5 		rand 8 14
 texture LOCK2_1			range	LOCK2_4		tics 4
 
 texture WFALL_1 range WFALL_8 tics 2 //waterfall
-
 texture QCANDL_1 range QCANDL_3 rand 3 5 //candle-lit decoration
-
 texture GARG_1 range GARG_4 tics 7 oscillate //glowing gargoyle
-
 texture GLOW_1 range GLOW_5 tics 8 oscillate //glowing runes
-
 texture QSYMB1_1 range QSYMB1_3 tics 6 oscillate //glowing quake symbol
-
 texture QSYMB2_1 range QSYMB2_3 tics 6 oscillate //another glowing quake symbol
-
 texture SLATGL_1 range SLATGL_7 tics 8 oscillate //glowing grate
 
 //I seem to have misplaced most of the liquid flats >_> not really a big deal, here's the cool ones
@@ -426,7 +396,9 @@ I didn't define the buttons, but that's just because I'm lazy. Have fun, kids! -
 PS: Yes, Q1EX is intentional. It means Quake 1 + Expansions. :P
 */
 
-// blood textures //
+////////////////////////////////////////////////////////////////////////////////
+// blood textures //////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 texture WIRE_1 
 	pic WIRE_1 tics 6
 	pic WIRE_2 tics 3
@@ -498,3 +470,98 @@ texture WCOMPAA range WCOMPAB tics 8
 texture WCOMPBA range WCOMPBB tics 8
 texture WCOMPCA range WCOMPCB tics 8
 texture WCOMPDA range WCOMPDB tics 8
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// diabolus ex animdefs ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+texture BILLB
+    pic BILLB00 tics 7
+	pic BILLB01 tics 4
+	pic BILLB02 tics 4
+	pic BILLB03 tics 4
+	pic BILLB04 tics 4
+	pic BILLB05 tics 4
+	pic BILLB06 tics 4
+	pic BILLB07 tics 4
+	pic BILLB08 tics 7
+	pic BILLB09 tics 4
+	pic BILLB10 tics 4
+	pic BILLB11 tics 4
+	pic BILLB12 tics 4
+
+texture BILLA
+    pic BILLA00 tics 3
+	pic BILLA01 tics 3
+	pic BILLA02 tics 3
+	pic BILLA03 tics 3
+	pic BILLA04 tics 3
+	pic BILLA05 tics 3
+	pic BILLA06 tics 3
+	pic BILLA07 tics 3
+
+texture DESKC
+    pic DESKC00 tics 4
+    pic DESKC01 tics 4
+    pic DESKC02 tics 4
+    pic DESKC03 tics 4
+    pic DESKC04 tics 4
+    pic DESKC05 tics 4
+    pic DESKC06 tics 4
+    pic DESKC07 tics 4 
+
+texture HOLOB
+    pic HOLOB00 tics 3
+	pic HOLOB01 tics 3
+	pic HOLOB02 tics 3
+	pic HOLOB03 tics 3
+	pic HOLOB04 tics 3
+	pic HOLOB05 tics 3
+	pic HOLOB06 tics 3
+	pic HOLOB07 tics 3
+	pic HOLOB08 tics 3
+	pic HOLOB09 tics 3
+	pic HOLOB10 tics 3
+
+texture HOLOH
+    pic HOLOH00 tics 3
+	pic HOLOH01 tics 3
+	pic HOLOH02 tics 3
+	pic HOLOH03 tics 3
+	pic HOLOH04 tics 3
+	pic HOLOH05 tics 3
+	pic HOLOH06 tics 3
+	pic HOLOH07 tics 3
+	pic HOLOH08 tics 3
+	pic HOLOH09 tics 3
+	pic HOLOH10 tics 3
+	pic HOLOH11 tics 3
+	pic HOLOH12 tics 3
+	pic HOLOH13 tics 3
+	pic HOLOH14 tics 3
+	pic HOLOH15 tics 3
+	pic HOLOH16 tics 3
+	pic HOLOH17 tics 3
+
+texture SRVRA00
+    pic SRVRA00 tics 6
+	pic SRVRA01 tics 6
+	pic SRVRA02 tics 6
+	pic SRVRA03 tics 6
+	pic SRVRA04 tics 6
+	pic SRVRA05 tics 6
+
+switch SWTCHA on sound Switch1 pic SWTCHB tics 0
+switch SWTCHC on sound Switch1 pic SWTCHD tics 0
+switch SWTCHE on sound Switch1 pic SWTCHF tics 0
+switch SWTCHF on pic SWTCHE tics 0
+switch SWTCHG on pic SWTCHH tics 0
+switch SWTCHI on sound Switch1 pic SWTCHJ tics 0
+
+texture VENDNA00 range VENDNA03 tics 16
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

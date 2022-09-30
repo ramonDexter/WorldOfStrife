@@ -72,7 +72,7 @@ Conversation {
 	Page {
 		pageName = "SH_publicPC_proclamations";
 		Name = "\c[yellow]PUBLIC COMPUTER";
-		Dialog = "\c[yellow]Millport City Authority Proclamations\n=====================================\n\c[white]";
+		Dialog = "\c[yellow]Silent Hills Town Authority Proclamations\n=====================================\n\c[white]";
 		Goodbye = "\c[red]Goodbye."; 
 		Choice {
 			Text = "# 001";

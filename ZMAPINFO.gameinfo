@@ -17,17 +17,12 @@ GameInfo {
 	AddEventHandlers = "TiltPlusPlusHandler"
 	AddEventHandlers = "SpriteShadowHandler"
 	AddEventHandlers = "UseToPickup"
-	AddEventHandlers = "m8f_hn_EventHandler"
-                   , "m8f_hn_FootstepHandler"
-                   , "m8f_hn_UseMarkerEventHandler"
-                   , "m8f_hn_AutoSwitchEventHandler"
-                   , "m8f_hn_MapTunerEventHandler"
-                   , "m8f_hn_BacktrackEventHandler"
+	AddEventHandlers = "m8f_hn_EventHandler", "m8f_hn_FootstepHandler", "m8f_hn_UseMarkerEventHandler", "m8f_hn_AutoSwitchEventHandler", "m8f_hn_MapTunerEventHandler", "m8f_hn_BacktrackEventHandler"
 	AddEventHandlers = "LowDetailHandler"
 	AddEventHandlers = "MWR_LanguageHandler" //Required by DescriberProvider
 	AddEventHandlers = "MWR_DescriberProvider" //Required by LookCursorHandler
 	AddEventHandlers = "MWR_LookCursorHandler" //Required for LookCursor to function 
-	//AddEventHandlers = "m8f_tl_KeyboardHandler"
+	//AddEventHandlers = "m8f_tl_DoomTradeSetup", "m8f_tl_KeyboardHandler"
 	
 	
 	quitsound = "silence" // Sound effects handled by message box code

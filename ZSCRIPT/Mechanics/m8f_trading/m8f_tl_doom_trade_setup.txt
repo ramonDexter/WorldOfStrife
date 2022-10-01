@@ -9,11 +9,13 @@ class m8f_tl_DoomTradeSetup : EventHandler
 
     string doomCurrency = "Clip";
     string hereCurrency = "GoldWandAmmo";
+    string strifeCurrency = "Coin";
     double priceFactor  = 1.0;
     double greedyPriceFactor = 2.0;
 
     if      (thing is "DoomPlayer")    { MakeTrader(thing, doomCurrency, priceFactor, false); }
     else if (thing is "HereticPlayer") { MakeTrader(thing, hereCurrency, priceFactor, false); }
+    else if (thing is "binderPlayer") { MakeTrader(thing, strifeCurrency, priceFactor, false); }
     else if (thing is "DoomImp")
     {
       MakeTrader(thing, doomCurrency, greedyPriceFactor, true );
@@ -30,6 +32,13 @@ class m8f_tl_DoomTradeSetup : EventHandler
       thing.GiveInventory("ArtiTomeOfPower",  1);
       thing.GiveInventory("ArtiTimeBomb",     1);
       thing.GiveInventory("SuperMap",         1);
+    }
+    else if (thing is "vendor_m8fTrading") {
+      MakeTrader(thing, strifeCurrency, greedyPriceFactor, true );
+      thing.GiveInventory("wosEnergyPod", 1);
+      thing.GiveInventory("wosEnergyCell", 1);
+      thing.GiveInventory("wosEnergyKit", 1);
+      thing.GiveInventory("wosEnergyPack", 1);
     }
   }
 

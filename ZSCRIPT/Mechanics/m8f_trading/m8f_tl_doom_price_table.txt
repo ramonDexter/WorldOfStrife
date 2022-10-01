@@ -34,6 +34,21 @@ class m8f_tl_DoomPriceTable : m8f_tl_CPT
     goldPriceTable.push("KeyBlue",             1);
     goldPriceTable.push("KeyYellow",           1);
 
+    // Strife 
+    let coinPriceTable = new("m8f_tl_PriceTable");
+    push("Coin", coinPriceTable);
+
+    coinPriceTable.push("wosBlasterTurret",     75);
+    coinPriceTable.push("wosDeployableShield",  150);
+    coinPriceTable.push("wosEnvSuit",           75);
+    coinPriceTable.push("wosInterceptorDrone",  150);
+    coinPriceTable.push("wosNightEyeDevice",    50);
+    coinPriceTable.push("wosEnergyPod",         10);
+    coinPriceTable.push("wosEnergyCell",        20);
+    coinPriceTable.push("wosEnergyKit",         30);
+    coinPriceTable.push("wosEnergyPack",        50);
+
+
     return self;
   }
 

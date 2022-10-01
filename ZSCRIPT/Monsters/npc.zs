@@ -129,6 +129,12 @@ class vendor_red : vendorBase {
 	}
 }
 
+class vendor_m8fTrading : vendorBase {
+	Default {
+		//$Title "Vendor Tan tradingLicense"
+	}
+}
+
 class tekGuildMaster_01 : actor {
 	Default {
 		//$Category "Other NPCs/WoS"

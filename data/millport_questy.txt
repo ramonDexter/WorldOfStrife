@@ -27,7 +27,7 @@ quest:
 # starosta mesta Flavius Nefarius convID 21
 2 questy:
 1) vyber najemne od obyvatel Commons
-2) najdi ztraceneho urednika
+2) najdi ztraceneho urednika - urednik utekl do eastcliffu
 
 # guverner convID 22
 - spolupracuje s bindery

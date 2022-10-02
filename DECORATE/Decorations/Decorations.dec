@@ -4056,7 +4056,7 @@ actor dxGuillotine 21228 {
 	
 	Tag "Guillotine"
 	height 24
-	radius 16
+	radius 20
 	
 	States {
 		Spawn:
@@ -11148,6 +11148,28 @@ actor wosD_ceilingWaterDrip 21711 {
 			CDRP BCD 8
 			Loop
 	}
+}
+
+actor wos_dxGuillotineBridge20 : InvisibleBridge16 21712 {
+	//$Category "Bridges"
+	//$Title "bridge - guillotine 20"
+	Tag "Guillotine"
+	radius 20
+	height 24
+}
+actor wos_dxGuillotineBridge8 : InvisibleBridge16 21713 {
+	//$Category "Bridges"
+	//$Title "bridge - guillotine 4"
+	Tag "Guillotine"
+	radius 4
+	height 80
+}
+actor wos_dxTortureRackBridge16 : InvisibleBridge16 21714 {
+	//$Category "Bridges"
+	//$Title "bridge - torture rack"
+	Tag "torture rack"
+	radius 16
+	height 32
 }
 
 

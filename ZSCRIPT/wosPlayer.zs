@@ -48,7 +48,8 @@ class binderPlayer : StrifePlayer {
 	
 	// main player def /////////////////////////////////////////////////////////
 	Default {	
-		+FLOORCLIP		
+		+FLOORCLIP;	
+		+SHOOTABLE;	
 		//  various player properties  /////////////////////////////////////////
 		Player.ForwardMove 1.0, 1.0;
 		Player.SideMove 0.75, 0.75;

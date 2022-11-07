@@ -74,7 +74,7 @@ extend class PDAMenu
 			(640, 400),
 
 			// Set PDA menu font
-			"PDAFONT",
+			"smallfont",
 
 			// Overall UI colour theme (in RGB)
 			(66, 119, 58),

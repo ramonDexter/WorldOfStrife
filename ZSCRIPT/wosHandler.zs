@@ -165,7 +165,9 @@ class wosEventHandler : EventHandler {
             }
 			// armor screen hit display by heydoomer ///////////////////////////
 			armor = pawn.armoramount;
-			if ( armor > 0 && pawn.currentarmor == 5 ) {
+			if ( armor > 0 && pawn.currentarmor == 5 && e.DamageType == "Bleeding" ) {
+				
+			} else {
 				//pawn.A_print("!!!HIT!!!");
 				pawn.A_StartSound("sounds/armorhit", CHAN_BODY, CHANF_OVERLAP);
 				bGrid = true;

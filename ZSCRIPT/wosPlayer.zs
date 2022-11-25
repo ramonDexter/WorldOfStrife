@@ -589,7 +589,7 @@ class binderPlayer : StrifePlayer {
 				player.deltaviewheight = -8;
 				stamin -= 35;
 				A_StartSound("weapons/swing",CHAN_BODY);
-				bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
+				//bSHOOTABLE=0; bNONSHOOTABLE=1; bDONTTHRUST=1;
 				If ( player.cmd.buttons & BT_FORWARD ) {
 					Thrust(slideBase*slideBonus,angle);
 				}

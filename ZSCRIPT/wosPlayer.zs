@@ -833,8 +833,60 @@ class binderPlayer : StrifePlayer {
 		else if ( name ~== "items" ) {			
 			if ( !amount ) {
 				//A_GiveInventory("", 1);
+				A_GiveInventory("wosArmorShard", 1);
+				A_GiveInventory("wosPortableMap", 1);
+				A_GiveInventory("wosBinocular", 1); //
+				A_GiveInventory("wosBlasterTurret", 1);
+				A_GiveInventory("wosDeployableShield", 1);
+				A_GiveInventory("wosEnvSuit", 1); //
+				A_GiveInventory("wosFlameTurret", 1);
+				A_GiveInventory("Flare", 1);
+				A_GiveInventory("wosHyposprej", 1);
+				A_GiveInventory("wosKombopack", 1);
+				A_GiveInventory("wosInstaLek", 1);
+				A_GiveInventory("zscMedPatch", 1);
+				A_GiveInventory("zscMedicalKit", 1);
+				A_GiveInventory("zscSurgeryKit", 1);
+				A_GiveInventory("wosi_StimDevice", 1);
+				A_GiveInventory("wosInterceptorDrone", 1);
+				A_GiveInventory("wosLandMine", 1);
+				A_GiveInventory("wosNightEyeDevice", 1); //
+				A_GiveInventory("wosQuickTravel", 1); //
+				A_GiveInventory("wosRebreather", 1); //
+				A_GiveInventory("wosRegenModule", 1); //
+				A_GiveInventory("wosShadowArmor", 1);
+				A_GiveInventory("wosSpringMine", 1);
+				A_GiveInventory("wosStealthBoy", 1); //
+				A_GiveInventory("wosSwarmers", 1); 
+				A_GiveInventory("wosTargeter", 1); //
 			} else {
 				//A_GiveInventory("", amount);
+				A_GiveInventory("wosArmorShard", amount);
+				A_GiveInventory("wosPortableMap", amount);
+				//A_GiveInventory("wosBinocular", amount); //
+				A_GiveInventory("wosBlasterTurret", amount);
+				A_GiveInventory("wosDeployableShield", amount);
+				//A_GiveInventory("wosEnvSuit", 1); //
+				A_GiveInventory("wosFlameTurret", amount);
+				A_GiveInventory("Flare", amount);
+				A_GiveInventory("wosHyposprej", amount);
+				A_GiveInventory("wosKombopack", amount);
+				A_GiveInventory("wosInstaLek", amount);
+				A_GiveInventory("zscMedPatch", amount);
+				A_GiveInventory("zscMedicalKit", amount);
+				A_GiveInventory("zscSurgeryKit", amount);
+				A_GiveInventory("wosi_StimDevice", amount);
+				A_GiveInventory("wosInterceptorDrone", amount);
+				A_GiveInventory("wosLandMine", amount);
+				//A_GiveInventory("wosNightEyeDevice", 1); //
+				//A_GiveInventory("wosQuickTravel", 1); //
+				//A_GiveInventory("wosRebreather", 1); //
+				//A_GiveInventory("wosRegenModule", 1); //
+				A_GiveInventory("wosShadowArmor", amount);
+				A_GiveInventory("wosSpringMine", amount);
+				//A_GiveInventory("wosStealthBoy", 1); //
+				A_GiveInventory("wosSwarmers", amount); 
+				//A_GiveInventory("wosTargeter", 1); //
 			}
 		} 
 		else if ( name ~== "armor" ) {

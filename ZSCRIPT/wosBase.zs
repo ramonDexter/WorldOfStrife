@@ -447,6 +447,30 @@ class wosD_css_base : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// optimisation hack for grass and other  objects //////////////////////////////
+class wosOptDeco_base : actor {
+	bool ticked;
+	override void Tick(void) {
+		if (!ticked) {
+			Super.Tick();
+			ticked = true;
+		}
+	}
+	Default {
+		+NOINTERACTION
+	}
+}
+class wosOptDeco2_base : actor {
+	bool ticked;
+	override void Tick(void) {
+		if (!ticked) {
+			Super.Tick();
+			ticked = true;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
 
 
 

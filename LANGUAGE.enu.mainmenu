@@ -1,0 +1,288 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// american english ////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[enu Default]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//##################################################################################################################
+//  Universal sway  ////////////////////////////////////////////////////////////
+//##################################################################################################################
+MENU_TITLE = "Weapon Sway Options";
+
+HEADER_GEN = "General";
+HEADER_VERT = "Vertical Offset";
+HEADER_HSWAY = "Horizontal Sway";
+HEADER_VSWAY = "Vertical Sway";
+HEADER_MSWAY = "Movement Sway";
+
+OPTION_FIRE = "No Sway When Firing";
+OPTION_BOB = "Bob Sway";
+OPTION_NOBOB = "No Sway When Bobbing";
+
+OPTION_EXTEND = "Extend Sprite";
+OPTION_READYEXT = "Only Extend When Idle";
+OPTION_INVVERT = "Invert Offset";
+OPTION_CROUCHINVVERT = "Invert Crouch Offset";
+OPTION_VERTSCALE = "Offset Scale";
+OPTION_CROUCHVERTSCALE = "Crouch Offset Scale";
+
+OPTION_INVERT = "Invert Sway";
+OPTION_CUMUL = "Cumulative Sway";
+OPTION_SCALE = "Sway Scale";
+OPTION_CROUCHSCALE = "Crouch Sway Scale";
+OPTION_SPEED = "Sway Speed";
+OPTION_ACCURACY = "Sway Accuracy";
+
+OPTION_HSWAY = "No Horizontal Sway";
+OPTION_VSWAY = "No Vertical Sway";
+OPTION_FSWAY = "No Falling Sway";
+
+VALUE_ENABLED = "on";
+VALUE_DISABLED = "off";
+
+HELP_FIRE = "Sway is disabled while firing";
+HELP_BOB = "Sway is only enabled if the current weapon can bob";
+HELP_NOBOB = "If the weapon is bobbing sway is disabled";
+
+HELP_EXTEND = "Allows sprites to extend beyond their usual top (note: requires taller sprites to avoid cutoff)";
+HELP_READYEXT = "Only extend sprites when the weapon isn't doing anything";
+HELP_INVVERT = "Inverts the offset of the weapon";
+HELP_CROUCHINVVERT = "Inverts the direction of the offset when crouching";
+HELP_VERTSCALE = "Scales the offset of the weapon";
+HELP_CROUCHVERTSCALE = "Scales the offset from crouching";
+
+HELP_INVERT = "Inverts the direction of the sway";
+HELP_CUMUL = "Makes sway cumulative instead of inertia based";
+HELP_SCALE = "Scales the range of the sway";
+HELP_CROUCHSCALE = "Scales the range of the sway when crouching";
+HELP_SPEED = "How quickly the sway moves";
+HELP_ACCURACY = "Defines a deadzone in degrees for the sway where angle changes below that value are ignored";
+
+HELP_HSWAY = "Disables horizontal swaying from movement";
+HELP_VSWAY = "Disables vertical swaying from movement";
+HELP_FSWAY = "Disables vertical swaying from falling";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+//##################################################################################################################
+//  hellscape navigator  ///////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+// colors:
+// a - reddish brick
+// b - tan
+// c - gray
+// d - green
+// e - brown
+// f - gold
+// g - red
+// h - blue
+// i - orange
+// j - white
+// k - yellow
+// l - use original colors
+// m - black
+// n - light blue
+// o - cream
+// p - olive
+// q - dark green
+// r - dark red
+// s - dark brown
+// t - purple
+// u - dark gray
+// v - cyan
+// w - ice
+// x - fire
+// y - sapphire
+// z - teal
+
+// - - Default color for Print messages  *   Default color for chat messages
+// + - Default color for PrintBold messages  !   Default color for team chat messages
+
+// Doom
+
+GOTBLUECARD = "\chPicked up a blue keycard.";
+GOTYELWCARD = "\ckPicked up a yellow keycard.";
+GOTREDCARD  = "\cgPicked up a red keycard.";
+
+GOTBLUESKUL = "\chPicked up a blue skull key.";
+GOTYELWSKUL = "\ckPicked up a yellow skull key.";
+GOTREDSKUL  = "\cgPicked up a red skull key.";
+
+PD_BLUEO    = "\chBlue key required!";
+PD_REDO     = "\cgRed key required!";
+PD_YELLOWO  = "\ckYellow key required!";
+
+PD_BLUEK    = "\chBlue key required!";
+PD_REDK     = "\cgRed key required!";
+PD_YELLOWK  = "\ckYellow key required!";
+
+PD_BLUECO   = "\chBlue card required!";
+PD_REDCO    = "\cgRed card required!";
+PD_YELLOWCO = "\ckYellow card required!";
+
+PD_BLUESO   = "\chBlue skull required!";
+PD_REDSO    = "\cgRed skull required!";
+PD_YELLOWSO = "\ckYellow skull required!";
+
+// Heretic
+
+TXT_NEEDBLUEKEY   = "You need a \chBlue Key\c- to open this door";
+TXT_NEEDGREENKEY  = "You need a \cdGreen Key\c- to open this door";
+TXT_NEEDYELLOWKEY = "You need a \ckYellow Key\c- to open this door";
+
+TXT_GOTBLUEKEY    = "\chBlue Key";
+TXT_GOTYELLOWKEY  = "\ckYellow Key";
+TXT_GOTGREENKEY   = "\cdGreen Key";
+
+// Hexen
+
+TXT_KEY_STEEL   = "\ccSteel Key";
+Txt_Key_Cave    = "\csCave Key";
+Txt_Key_Axe     = "\cuAxe Key";
+Txt_Key_Fire    = "\cgFire Key";
+Txt_Key_Emerald = "\cdEmerald Key";
+Txt_Key_Dungeon = "\cuDungeon Key";
+Txt_Key_Silver  = "\cjSilver Key";
+Txt_Key_Rusted  = "\ceRusted Key";
+Txt_Key_Horn    = "\ceHorn Key";
+Txt_Key_Swamp   = "\cpSwamp Key";
+Txt_Key_Castle  = "\cfCastle Key";
+
+Txt_Need_Key_Steel   = "You need the \ccSteel Key";
+Txt_Need_Key_Cave    = "You need the \csCave Key";
+Txt_Need_Key_Axe     = "You need the \cuAxe Key";
+Txt_Need_Key_Fire    = "You need the \cgFire Key";
+Txt_Need_Key_Emerald = "You need the \cdEmerald Key";
+Txt_Need_Key_Dungeon = "You need the \cuDungeon Key";
+Txt_Need_Key_Silver  = "You need the \cjSilver Key";
+Txt_Need_Key_Rusted  = "You need the \ceRusted Key";
+Txt_Need_Key_Horn    = "You need the \ceHorn Key";
+Txt_Need_Key_Swamp   = "You need the \cpSwamp Key";
+Txt_Need_Key_Castle  = "You need the \cfCastle Key";
+
+// CVar descriptions
+
+m8f_hn_sign_note1            = "Note:";
+m8f_hn_sign_note2            = ":";
+m8f_hn_sign_note3            = ":";
+
+m8f_hn_area_name             = "Area Name";
+m8f_hn_area_radius           = "Area Radius";
+m8f_hn_sign_type             = "Sign Type";
+m8f_hn_sign_clear_after_make = "Clear note on Done";
+
+m8f_hn_sign_add_time         = "Add level time to note";
+m8f_hn_sign_shootable        = "Make this sign shootable";
+m8f_hn_sign_with_pointer     = "Add to Compass";
+m8f_hn_sign_map_scale        = "Automap Sign Marker Size";
+
+// Command descriptions
+
+m8f_hn_make_sign_close  = "Done";
+m8f_hn_make_sign_cancel = "Cancel";
+m8f_hn_make_sign_clear  = "Clear note now";
+m8f_hn_remove_signs     = "Remove all signs";
+
+// Menu strings
+
+m8f_hn_new_sign         = "New Sign";
+m8f_hn_options          = "Options";
+m8f_hn_remove_sign_note = "Shoot below sign to remove it.";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+//##################################################################################################################
+//  Tilt++ menu definition  ////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+OPTMNU_TILTPLUSPLUS = "Customize Tilt++";
+
+TILTPLUSPLUSMNU_TITLE = "Tilt++ Options";
+
+TILTPLUSPLUSMNU_STRAFETILT_TITLE = "Strafe Tilting";
+TILTPLUSPLUSMNU_MOVETILT_TITLE = "Movement Tilting";
+TILTPLUSPLUSMNU_UNDERWATERTILT_TITLE = "Underwater Tilting";
+TILTPLUSPLUSMNU_DEATHTILT_TITLE = "Death Tilting";
+
+// Generic reusable labels
+TILTPLUSPLUSMNU_ENABLED = "Enabled";
+TILTPLUSPLUSMNU_SPEED = "Speed";
+TILTPLUSPLUSMNU_ANGLE = "Angle";
+TILTPLUSPLUSMNU_SCALAR = "Intensity";
+
+// Specific labels
+TILTPLUSPLUSMNU_STRAFETILT_REVERSED = "Reversed";
+
+
+// Help text
+TILTPLUSPLUSMNU_HELPTEXT_STRAFETILT = "Enable strafe tilting.";
+TILTPLUSPLUSMNU_HELPTEXT_STRAFETILT_REVERSED = "Reverse an strafe tilting direction.";
+TILTPLUSPLUSMNU_HELPTEXT_STRAFETILT_SPEED = "How fast strafe tilting occurs.";
+TILTPLUSPLUSMNU_HELPTEXT_STRAFETILT_ANGLE = "Maximum angle to tilt an view while strafing.";
+
+TILTPLUSPLUSMNU_HELPTEXT_MOVETILT = "Enable movement tilting.";
+TILTPLUSPLUSMNU_HELPTEXT_MOVETILT_SPEED = "How fast to tilt an view while moving.";
+TILTPLUSPLUSMNU_HELPTEXT_MOVETILT_ANGLE = "Maximum movement tilting angle.";
+TILTPLUSPLUSMNU_HELPTEXT_MOVETILT_SCALAR = "Overall movement tilting intensity.";
+
+TILTPLUSPLUSMNU_HELPTEXT_UNDERWATERTILT = "Enable slow tilting while submerged underwater.";
+TILTPLUSPLUSMNU_HELPTEXT_UNDERWATERTILT_SPEED = "How fast to tilt an view while underwater.";
+TILTPLUSPLUSMNU_HELPTEXT_UNDERWATERTILT_ANGLE = "Maximum underwater tilting angle.";
+TILTPLUSPLUSMNU_HELPTEXT_UNDERWATERTILT_SCALAR = "Overall underwater tilting intensity.";
+
+TILTPLUSPLUSMNU_HELPTEXT_DEATHTILT = "Tilt an view when player is dead.";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+//##################################################################################################################
+//  use2pickup  ////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+U2P_PickUpText = "Pickup";
+U2P_KeyBindMenu_Push = "Push Item Away";
+//U2P_OptionsMenu_Title = "Use To Pickup Options";
+//U2P_OptionsMenu_Enable = "Povolit";
+//U2P_OptionsMenu_FullUseRange = "Allow full Use range";
+//U2P_KeyBindMenu_Heading = "Use To Pickup";
+//U2P_KeyBindMenu_EnableToggle = "Toggle Enabled";
+U2P_PickUpText = "Pick up";
+U2P_OptionsMenu_Title = "Use 2 Pickup Settings";
+U2P_OptionsMenu_Enable = "Allow";
+U2P_OptionsMenu_FullUseRange = "Allow full range";
+U2P_OptionsMenu_ScanFreq = "Scanning frequency";
+U2P_OptionsMenu_HighlightColor = "Frame color";
+U2P_OptionsMenu_HighlightOpacity = "Frame alpha (0 to 1)";
+U2P_OptionsMenu_HighlightOpacityUnfocused = "Display when item is not in crosshair";
+U2P_OptionsMenu_FadeInTime = "Display speed (s)";
+U2P_OptionsMenu_FadeOutTime = "Fade speed (s)";
+U2P_OptionsMenu_PickupDelay = "Rychlost povoleni zvednuti (s)";
+U2P_OptionsMenu_ResetDefaultConfirm = "Return to defaults, except key settings. Are you sure?";
+U2P_OptionsMenu_HighlightRange = "Highlight all items in range";
+U2P_OptionsMenu_FocusedOnly = "Disable";
+U2P_KeyBindMenu_Heading = "Use 2 Pickup key settings";
+U2P_KeyBindMenu_EnableToggle = "Switch Use2Pickup";
+U2P_KeyBindMenu_Push = "Item push away";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+//##################################################################################################################
+//  MAIN MENU  /////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+MM_NEW = "[ Begin game ]";
+MM_OPTIONS = "[ Settings ]";
+MM_LOAD = "[ LOAD ]";
+MM_SAVE = "[ SAVE ]";
+MM_EXIT = "[ EXIT ]";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################

@@ -1,0 +1,265 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// american english ////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[enu Default]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//##################################################################################################################
+// RANDOM CONVERSATIONS ////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+// 
+// random moznosti musi byt alespon 10, jinak to dela problemy!!!
+//
+TXT_RANDOM_INQUISITOR_01 = "\c[white]Hello Arius, what a beautiful day! Have you slept well?";
+
+
+
+
+TXT_RANDOM_PWPLNT_WORKER_01 = "\c[white]So much work...";
+TXT_RANDOM_PWPLNT_WORKER_02 = "\c[white]I'm sorry, but I don't have time to talk.";
+TXT_RANDOM_PWPLNT_WORKER_03 = "\c[white]Are you supposed to be here?";
+TXT_RANDOM_PWPLNT_WORKER_04 = "\c[white]Please, leave this area.";
+TXT_RANDOM_PWPLNT_WORKER_05 = "\c[white]I'm really tired. Good it's almost end of shift.";
+TXT_RANDOM_PWPLNT_WORKER_06 = "\c[white]I'm not into talking.";
+TXT_RANDOM_PWPLNT_WORKER_07 = "\c[white]What are you doing here?";
+
+TXT_RANDOM_GUARD_01 = "\c[white]The Order will cleanse the world and usher it into the new era.";
+TXT_RANDOM_GUARD_02 = "\c[white]Only through death can one be truly reborn.";
+TXT_RANDOM_GUARD_03 = "\c[white]If the alarm goes off, just stay out of our way!";
+TXT_RANDOM_GUARD_04 = "\c[white]Go and annoy someone else!";
+TXT_RANDOM_GUARD_05 = "\c[white]Move along, peasant!";
+TXT_RANDOM_GUARD_06 = "\c[white]Follow the true faith, only then will you begin to understand.";
+TXT_RANDOM_GUARD_07 = "\c[white]Keep moving.";
+TXT_RANDOM_GUARD_08 = "\c[white]Problem? No, I thought not.";
+TXT_RANDOM_GUARD_09 = "\c[white]I'm not interested in your useless drivel.";
+TXT_RANDOM_GUARD_10 = "\c[white]If I had wanted to talk to you I would have told you so.";
+
+N_COMMONER = "Commoner";
+//silent hills commoners
+TXT_RANDOM_SILENTHILLS_COMMONER_01 = "\c[white]Leave me alone.";
+TXT_RANDOM_SILENTHILLS_COMMONER_02 = "\c[white]I'm sorry, but I don't have time to talk.";
+TXT_RANDOM_SILENTHILLS_COMMONER_03 = "\c[white]What? Do you need something? Or not?";
+TXT_RANDOM_SILENTHILLS_COMMONER_04 = "\c[white]What a good day today!";
+TXT_RANDOM_SILENTHILLS_COMMONER_05 = "\c[white]Sorry, I'm not into talking right now.";
+TXT_RANDOM_SILENTHILLS_COMMONER_06 = "\c[white]I'm busy, sorry.";
+TXT_RANDOM_SILENTHILLS_COMMONER_07 = "\c[white]Hello, how are you? I'm okay. So I hope you're also okay.";
+TXT_RANDOM_SILENTHILLS_COMMONER_08 = "\c[yellow]< silently stares at you >";
+TXT_RANDOM_SILENTHILLS_COMMONER_09 = "\c[white]Just leave me alone, okay?";
+TXT_RANDOM_SILENTHILLS_COMMONER_10 = "\c[white]Clouds...I like clouds. No, really, I need some drink.";
+
+//millport commoners
+TXT_RANDOM_MILLPORT_COMMONER_01 = "\c[white]Heading on today's shift, no time to talk...";
+TXT_RANDOM_MILLPORT_COMMONER_02 = "\c[white]What? Do you need something? Or not?";
+TXT_RANDOM_MILLPORT_COMMONER_03 = "\c[white]What a good day today!";
+TXT_RANDOM_MILLPORT_COMMONER_04 = "\c[white]Hello, how are you? I'm okay. So I hope you're also okay.";
+TXT_RANDOM_MILLPORT_COMMONER_05 = "\c[white]Just leave me alone, okay?";
+TXT_RANDOM_MILLPORT_COMMONER_06 = "\c[white]< silently stares at you >";
+TXT_RANDOM_MILLPORT_COMMONER_07 = "\c[white]Yes? You need something?";
+TXT_RANDOM_MILLPORT_COMMONER_08 = "\c[white]Clouds...I like clouds. No, really, I need some drink.";
+TXT_RANDOM_MILLPORT_COMMONER_09 = "\c[white]Are you supposed to be here?";
+TXT_RANDOM_MILLPORT_COMMONER_10 = "\c[white]I'm sorry, but I don't have time to talk.";
+TXT_RANDOM_MILLPORT_COMMONER_11 = "\c[white]Hallowed is the Father!";
+TXT_RANDOM_MILLPORT_COMMONER_12 = "\c[white]Father be with you!";
+TXT_RANDOM_MILLPORT_COMMONER_13 = "\c[white]May Father guide your steps!";
+TXT_RANDOM_MILLPORT_COMMONER_14 = "\c[white]What have I done?";
+TXT_RANDOM_MILLPORT_COMMONER_15 = "\c[white]These droids are not those you are looking for. Keep going.";
+
+//millport lazensky hostesky
+TXT_RANDOM_MILLPORT_BATHHOSTESS_01 = "\c[white]Hello, welcome to the city bath. How may I serve you?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_02 = "\c[white]Oh hello, welcome to the city bath, handsome. Are you in need of company?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_03 = "\c[white]Hello and welcome to the city bath, where are you desires will be satisfied!";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_04 = "\c[white]Be welcome, stanger. The city bath are here to fill all you needs and dreams.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_05 = "\c[white]I bid you welcome. The city bath welcomes you.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_06 = "\c[white]Hello, welcome to the city bath. How may I serve you?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_07 = "\c[white]Oh hello, welcome to the city bath, handsome. Are you in need of company?";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_08 = "\c[white]Hello and welcome to the city bath, where are you desires will be satisfied!";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_09 = "\c[white]Be welcome, stanger. The city bath are here to fill all you needs and dreams.";
+TXT_RANDOM_MILLPORT_BATHHOSTESS_10 = "\c[white]I bid you welcome. The city bath welcomes you.";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+//##################################################################################################################
+//  DIALOGY  ///////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Inquisitor blacksmith  /////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//p01
+M01_FORGEMASTER = "Forgemaster";
+M01_FORGEMASTER_P01 = "\c[white]Hello, what may I get you?";
+M01_FORGEMASTER_P01_CH01 = "One EnergyPod";
+M01_FORGEMASTER_P01_CH02 = "One EnergyKit";
+M01_FORGEMASTER_P01_CH03 = "One EnergyPack";
+M01_FORGEMASTER_P01_CH04 = "Do you offer oanr services?";
+M01_FORGEMASTER_P01_YES = "Here it is!";
+M01_FORGEMASTER_P01_NO = "Not enough gold!";
+//p02
+M01_FORGEMASTER_P02 = "\c[white]Of course. I can upgrade your staff, if you want.\nJust give me your staff, I'll install an upgrade right here and now.\nAlso, I can sell you cybernetic implants that will improve your accuracy. You'll need upgrade tokens to purchase an upgrade.";
+M01_FORGEMASTER_P02_CH01 = "Ok, here is the staff.";
+M01_FORGEMASTER_P02_YES1 = "Here you go. One small clip and we're done.";
+M01_FORGEMASTER_P02_NO1 = "You don't have an staff!";
+M01_FORGEMASTER_P02_CH02 = "Cybernetic implant? I like it.";
+M01_FORGEMASTER_P02_YES2 = "Just hold still and we're right done!";
+M01_FORGEMASTER_P02_NO2 = "You don't have an upgrade token!";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Inquisitor Surgeon //////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//p01
+M01_INQSURGEON = "Surgeon";
+M01_INQSURGEON_P01 = "Hello, how can I help you?";
+//p02
+M01_INQSURGEON_P02 = "Hello Inquisitor, how may I be of service?";
+M01_INQSURGEON_P02_CH01 = "What can you offer me?";
+M01_INQSURGEON_P02_CH02 = "I have some questions.";
+//p03
+M01_INQSURGEON_P03 = "I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff.";
+M01_INQSURGEON_P03_CH01 = "\c[yellow]<< BACK ]";
+M01_INQSURGEON_P03_CH02 = "Buy an cybernetic implant";
+M01_INQSURGEON_P03_CH02_YES = "Here you go. Just stand still and everything will be okay.";
+M01_INQSURGEON_P03_CH02_NO = "You don't have an upgrade token!";
+M01_INQSURGEON_YES = "Here it is!";
+M01_INQSURGEON_NO = "Not enough gold!";
+M01_INQSURGEON_P03_CH03 = "One MedPatch";
+M01_INQSURGEON_P03_CH04 = "One Medical Kit";
+M01_INQSURGEON_P03_CH05 = "One Surgery Kit";
+//p04
+M01_INQSURGEON_P04 = "Well, I can take a little break for a small talk. What are you interested in?";
+//M01_INQSURGEON_P04_CH01 = "";
+M01_INQSURGEON_P04_CH02 = "Tell me about yourself.";
+M01_INQSURGEON_P04_CH03 = "What can you tell me about the city?";
+//p05
+M01_INQSURGEON_P05 = "My name is Gregor. I'm an Inquisition surgeon, as you know. I've come here when the local base was grounded, fifteen years ago. it were hars times, but I was young. How, when I'm older, I want to settle down, marry and have a family. Maybe.";
+//p06
+M01_INQSURGEON_P06 = "Well, Silent Hills is a sleepy hollow. Not, really, it's a small trading community on a big river. Two pubs, lots of shops, bathouse and a port with a market.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//##################################################################################################################
+// old & unused & obsolete /////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+T_wosscanner = "Scanner";
+F_wosscanner = "You picked up the Scanner!";
+T_OLDLANTERN = "Oil Lantern";
+F_OLDLANTERN = "You picked up the oil lantern!";
+T_HOOKSHOT = "Hookshot";
+F_HOOKSHOT = "You picked up the Hookshot!";
+
+
+//camping gear
+//------------------------------------------------------------------------
+//spacak
+T_BEDROLL = ":[ Bedroll ]:";
+M_BEDROLLOPTS =  "[ BEDROLL OPTIONS ]";
+M_BEDROLL_OPT01 = "\c[gray]Press \c[green]'FORWARD' \c[gray]to sleep.";
+M_BEDROLL_OPT02 = "\c[gray]Press \c[green]'BACKWARD' \c[gray]to pack up the bedroll.";
+M_BEDROLL_OPT03 = "\c[gray]Press \c[green]'JUMP' \c[gray]to leave.";
+//ohen
+T_CAMPFIRE = ":[ Portable campfire ]:";
+
+////////////////////////////////////////////////////////////////////////////////
+//  QUIT MESSAGES  /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//QUITMSG1 = "Press Y to signal \nfiring squad.";
+//QUITMSG2 = "Press Y to activate \nguillotine.";
+//QUITMSG3 = "Press Y to release \nthe cyanide gas.";
+//QUITMSG4 = "Press Y to open \ntrap door.";
+//QUITMSG5 = "Press Y to drive your \ncar off the cliff.";
+//QUITMSG6 = "Press Y to pull \nyour plug.";
+//QUITMSG7 = "Press Y to activate \nelectric chair.";
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################

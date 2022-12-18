@@ -5119,7 +5119,7 @@ actor dx_mikrovlnka 21290 {
 			Stop
 	}
 }
-actor dx_grass01 21291 {
+actor dx_grass01 : wosOptDeco_base 21291 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava01 zelena"
 	
@@ -5136,7 +5136,7 @@ actor dx_grass01 21291 {
 			Stop
 	}
 }
-actor dx_grass02 21292 {
+actor dx_grass02 : wosOptDeco_base 21292 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava02 zelena"
 	
@@ -5153,7 +5153,7 @@ actor dx_grass02 21292 {
 			Stop
 	}
 }
-actor dx_grass03 21293 {
+actor dx_grass03 : wosOptDeco_base 21293 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava03 zelena"
 	
@@ -5170,7 +5170,7 @@ actor dx_grass03 21293 {
 			Stop
 	}
 }
-actor dx_grass04 21294 {
+actor dx_grass04 : wosOptDeco_base 21294 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava01 washed"
 	
@@ -5187,7 +5187,7 @@ actor dx_grass04 21294 {
 			Stop
 	}
 }
-actor dx_grass05 21295 {
+actor dx_grass05 : wosOptDeco_base 21295 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava02 washed"
 	
@@ -5204,7 +5204,7 @@ actor dx_grass05 21295 {
 			Stop
 	}
 }
-actor dx_grass06 21296 {
+actor dx_grass06 : wosOptDeco_base 21296 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "trava03 washed"
 	
@@ -5221,7 +5221,7 @@ actor dx_grass06 21296 {
 			Stop
 	}
 }
-actor dx_grassPatch01 21297 {
+actor dx_grassPatch01 : wosOptDeco_base 21297 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 01 zelena"
 	
@@ -5238,7 +5238,7 @@ actor dx_grassPatch01 21297 {
 			Stop
 	}
 }
-actor dx_grassPatch02 21298 {
+actor dx_grassPatch02 : wosOptDeco_base 21298 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 02 zelena"
 	
@@ -5255,7 +5255,7 @@ actor dx_grassPatch02 21298 {
 			Stop
 	}
 }
-actor dx_grassPatch03 21299 {
+actor dx_grassPatch03 : wosOptDeco_base 21299 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 01 washed"
 	
@@ -5272,7 +5272,7 @@ actor dx_grassPatch03 21299 {
 			Stop
 	}
 }
-actor dx_grassPatch04 21300 {
+actor dx_grassPatch04 : wosOptDeco_base 21300 {
 	//$Category "Trees and Rocks/WoS/"
 	//$Title "travaPatch 02 washed"
 	
@@ -6971,7 +6971,7 @@ actor wosD_dexTree4 21401 {
 			Stop
 	}
 }
-actor wosD_dexBushes1 21402 {
+actor wosD_dexBushes1 : wosOptDeco_base 21402 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes1"
 	+SOLID
@@ -6987,7 +6987,7 @@ actor wosD_dexBushes1 21402 {
 			Stop
 	}
 }
-actor wosD_dexBushes2 21403 {
+actor wosD_dexBushes2 : wosOptDeco_base 21403 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes2"
 	+SOLID
@@ -7003,7 +7003,7 @@ actor wosD_dexBushes2 21403 {
 			Stop
 	}
 }
-actor wosD_dexBushes3 21404 {
+actor wosD_dexBushes3 : wosOptDeco_base 21404 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes3"
 	+SOLID
@@ -10912,7 +10912,7 @@ actor wosD_css_winch : wosD_css_base 21666 {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // tek street lamps by ramon.dexter ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-actor wosD_tekStreetLamp 21667 {
+actor wosD_tekStreetLamp : wosOptDeco2_base 21667 {
 	//$Category "Light Sources/WoS/"
 	//$Title "tek street lamp"
 	+SOLID
@@ -10927,7 +10927,7 @@ actor wosD_tekStreetLamp 21667 {
 			Stop
 	}
 }
-actor wosD_tekStreetLamp2 21668 {
+actor wosD_tekStreetLamp2 : wosOptDeco2_base 21668 {
 	//$Category "Light Sources/WoS/"
 	//$Title "tek street lamp 2"
 	+SOLID
@@ -10942,7 +10942,7 @@ actor wosD_tekStreetLamp2 21668 {
 			Stop
 	}
 }
-actor wosD_tekStreetLamp2c 21669 {
+actor wosD_tekStreetLamp2c : wosOptDeco2_base 21669 {
 	//$Category "Light Sources/WoS/"
 	//$Title "tek street lamp 2c"
 	+SOLID
@@ -10957,7 +10957,7 @@ actor wosD_tekStreetLamp2c 21669 {
 			Stop
 	}
 }
-actor wosD_tekStreetLamp4 21700 {
+actor wosD_tekStreetLamp4 : wosOptDeco2_base 21700 {
 	//$Category "Light Sources/WoS/"
 	//$Title "tek street lamp 4"
 	+SOLID
@@ -10972,7 +10972,7 @@ actor wosD_tekStreetLamp4 21700 {
 			Stop
 	}
 }
-actor wosD_tekStreetPole 21701 {
+actor wosD_tekStreetPole : wosOptDeco2_base 21701 {
 	//$Category "Light Sources/WoS/"
 	//$Title "tek street post"
 	+SOLID

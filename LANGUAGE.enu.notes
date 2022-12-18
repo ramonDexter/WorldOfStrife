@@ -1,0 +1,395 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// american english ////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[enu Default]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+//##################################################################################################################
+// personal computer - game info ///////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+M01_PC_RPG_SYSTEM = "";
+
+
+M01_PC_WEAPONS = "\c[yellow][ WEAPONS INFORMATION ]\n"
+				"\c[green]==-------------------==\n"
+				"\c[yellow]Crossbow\c[white] Basic weapon of choice. Has two modes.\n"
+				"    One fires electric bolts, second fires poisoned bolts.\n"
+				"\c[yellow]Pistol\c[white] Reliable personal sidearm.\n"
+				"\c[yellow]Assault Gun\c[white] SMG produced in hundreds.\n"
+				"    Popular amongst all sorts of people.\n"
+				"\c[yellow]Binder Staff\c[white] Energy based weapon used by the Binders.\n"
+				"    Powerful weapon. Can be upgraded.\n"
+				"\c[yellow]Mini Missile Launcher\c[white] Personal Rocket launcher.\n"
+				"    Upgraded launcher uses homing rockets.\n"
+				"\c[yellow]Flamethrower\c[white] Standard issue military flamethrower.\n"
+				"\c[yellow]Grenade Launcher\c[white] Heavy duty weapon.\n"
+				"    Fires explosive and phosphoroues grenades.\n"
+				"\c[yellow]Mauler\c[white] Powerful energy based weapon.\n"
+				"    In use mainly by the Order forces.\n";
+
+
+//##################################################################################################################
+// journal PDA /////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+TAG_journalitem = "Personal Journal";
+
+name_personalJournal = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";
+page_journal_opener = "\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.";
+bye_EXIT = "\c[red][ EXIT ]";
+page_journal_opener_cNotes = "\c[yellow][ NOTES ]";
+page_journal_opener_cQuests = "\c[yellow][ QUESTS ]";
+page_journal_opener_cARCHIVE = "\c[yellow][ ARCHIVE ]";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+// PDA system by nash muhandes /////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+PDA_READER = "Note Reader";
+PDA_PICKUP = "Note found!";
+PDA_DEFAULT_TITLE = "[Untitled PDA]";
+PDA_EMPTY = "-EMPTY-";
+//PDA_<object>_TITLE = "object title";
+//PDA_<object>_TEXT = "pda text";
+
+//##################################################################################################################
+//  NOTES  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_notePrayers_Title = "Common Prayers";
+PDA_notePrayers_TEXT = "\c[yellow]Basic prayer for protection and guidance:\n"
+						"\c[yellow]-------------------------------\n"
+						"\c[white]Our Father from the void,\n"
+						"hallowed be your name,\n"
+						"your kingdom come,\n"
+						"your will be done,\n"
+						"on earth as it is in the void.\n"
+						"Give us today our daily bread.\n"
+						"And forgive us our debts,\n"
+						"as we also have forgiven our debtors.\n"
+						"And lead us not into temptation,\n"
+						"but deliver us into your grace.\n"
+						"Amen.\n"
+						"\n\n"
+						"\c[yellow]More powerful prayer:\n"
+						"\c[yellow]-------------------------------\n"
+						"\c[white]Our Father from the void,\n"
+						"Reveal who you are.\n"
+						"Set the world right.\n"
+						"Do what's best-\n"
+						"as above, so below.\n"
+						"Keep us alive with three square meals.\n"
+						"Keep us forgiven with you and forgiving others.\n"
+						"Keep us safe from ourselves and the Devil.\n"
+						"You're in charge!\n"
+						"You can do anything you want!\n"
+						"You're ablaze in beauty!\n"
+						"Yes. Yes. Yes.\n"
+						"Amen.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHmedical_TITLE = "Medical notes";
+PDA_noteSHmedical_TEXT = 	"\c[yellow]Medical Notes\n"
+							"-------------------------------\n"
+							"\c[white]- the implants are working properly when installed under state 4\n"
+							"- keep in mind that you have to re-calibrate the autoDoc after each surgery of level 6\n"
+							"- the control circuits have to kept clean, remember to set the auto-cleaners to full automatic\n"
+							"- the FEV juice if espeacially dangerous, be careful with that stuff\n"
+							"- doctor Gray sends his best regards\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHbinderstaves_TITLE = "Binder Staves";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHbinderNote01_TITLE = "Personal diary";
+PDA_noteSHbinderNote01_TEXT = 	"\c[yellow]Personal diary\n"
+								"-------------------------------\n"
+								"12.4.\n"
+								"\c[white]I have been sent on a mission. Father, what a terrible mission. I was tasked with finding a stolen device from the Order's factory. Mission turned out complete mess, after false taret indetification. As I found out later, I killed completely innocent guy, who was just passing by. Now I just have to live with it, no thing can return it. Superior just said 'that's just the way it goes' and that I should forget it.\n"
+								"\n"
+								"\c[yellow]7.5.\n"
+								"\c[white]I have been rewarded with special reward for completion of another mission. This time successful.\n"
+								"\n"
+								"\c[yellow]14.5.\n"
+								"\c[white]Another mission that ended completely wrong. Superior still says I shouldn't worry, but I'm starting to have a feeling something's not good. It's just a feeling, but it leaves me with sleepless nights.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHbinderStavesTechnical_TITLE = "Binder Staves Technical Notes";
+PDA_noteSHbinderStavesTechnical_TEXT = 	"\c[yellow]Binder Staves Technical Notes\n"
+										"\c[yellow]-------------------------------\n"
+										"\c[white]The Mauler Staff is a Binder's personal weapon and a symbol of Binder Order. It is designed and built exclusively by the TekGuild in requisition of the Binder Order. The Staff is a trustworthy sidearm capable of disposal of targets over long range due to the focused mauler dispenser, using magnetic coils for fine tuning weapon's range and precision. The Staff is well balanced and could be also used as a short range melee weapon. The melle damage output is multiplied by the hardened metalic bottom of the staff. The Mauler Staff uses standard Energy Pods as an ammunition.\nMagazine of the Mauler Staff holds 48 charges. Uses EnergyPods as ammunition.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHshouldergun_Title = "ShoulderGun Tech Notes";
+PDA_noteSHshouldergun_TEXT = "\c[yellow]ShoulderGun Technical Notes\n"
+										"\c[yellow]-------------------------------\n"
+										"\c[white]The ShoulderGun is a trustworthy sidearm of the Binder Order's forces. It is a left shoulder mounted mauler energy spread cannon shooting short range arcs of mauler energy. It was developed by the Binder order scientists and is exclusively used by the field operatives of the Binder Order. It is automatically aimed and follows the user's firearm aim. The energy reserve of the ShoulderGun holds 32 charges. A ShoulderGun Charger is used to replenish the ammo of the ShoulderGun. EnergyPods are used to charge the ShoulderGun ammo. \n\n(\c[yellow]Assign a key in the Options menu to quickly use the ShoulderGun OR use it as a normal inventory item.\c[white])";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHsilentHillsTouristGuide_TITLE = "Silent Hills Tourist Guide";
+PDA_noteSHsilentHillsTouristGuide_TEXT = 	"\c[yellow]Silent Hills Tourist Guide\n"
+											"-------------------------------\n"
+											"\c[white]Welcome tourist to the beautiful city of \c[red]Silent Hills\c[white]!\n\n"
+											"Our city offers all kinds of services to anyone willing to spend his gold. In Silent Hills you can find services of blacksmiths and techsmiths, grocery market and open market, both located on the eastern bank of river Wesa. The river itself is a landmark, dividing the city into two halves, the eastern one and the western one. The eastern bank is devoted to trading and markets, most of the city shops and traders are located here. The western bank of river is residential, with the City Bath and the TekGuild Outpost.\n\n"
+											"Peace in our city is guarded by \c[red]The City Watch\c[white], whose officers are vigorously watching over citizens peace throught day and night. The City Watch is sometimes supported by \c[red]The Binders\c[white], who have their base on the western bank of river.\n\n"
+											"\c[white]You should also visit the magnificent \c[red]City Bath\c[white] located in northwestern corner of city, near the Western Gate. The City Bath are built in classical imperial style, with big swimming pool and other spa services. The pool is found to the left, whereas a colonnade is found to the right, which leads to the men's quarters, which are split into the apodyterium (dressing room), with the frigidarium (for cold baths), which leads to the tepidarium (for medium temperature baths) and then to the calidarium (hot sauna). The heating is guaranteed by a piping system in the walls and double floors that circulate the hot air coming from the furnaces and from mobile braziers. The women's quarters, close to the men's quarters, are split the same way in the apodyterium, tepidarium and calidarium. However, all arew smaller and has no rich decorations as the men's quarters. Women enters through a separate door, on which “Mulier” (woman) is written. Isn't a relaxing bath all what a tired traveller needs?";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHminesReport_TITLE = "Silent Hills Mines report";
+PDA_noteSHminesReport_TEXT = 	"\c[yellow]Silent Hills Mines report\n"
+								"-------------------------------\n"
+								"\c[white]15.6.\n"
+								"- Excavation works are going as planned.\n"
+								"- Ore mining rise in 10 percent.\n"
+								"- Minor damage on machine nr.4. Might need future repair. Hetman has been notified.\n"
+								"- Miners reported repeating attacks from some spiders that inhabit one of the cave openings. Might need to call the Binders to clean the mines.\n"
+								"- Explosive material stocks are near depletion. Urgent replenish requested at TekGuild on 13.6., no reply yet.\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteSHbindersOath_TITLE = "Binders Oath";
+PDA_noteSHbindersOath_TEXT = "\c[yellow]Binder's Oath\n"
+								"-------------------------------\n"
+								"\c[white]I swear to serve the Binder Order and the father with all my mind and might.\n"
+								"I swear to the Father that I will be faithfull in my actions and fullfill his will through my whole life.\n"
+								"I swear obedience to the Binder Elders and to superiors, who guide my actions with their best will, so do I.\n"
+								"I swear that I will protect every single brother and sister and that I will help those in need.\n"
+								"As a Binder, I will serve anyone anywhere.\n"
+								"\n"
+								"\c[yellow]-------------------------------\n"
+								"\n"
+								"\c[white]A Binder is the judge and executioner of Order's law. Words of a Binder shape the the lives of commons and may inspire justice and loyalty... or fear and cruelty. The Binder's word is law, and they decide the fate or the regions. Even the smallest of choices shape the land and it's people. ";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteCommonDogmas_Title = "Common Dogmas";
+PDA_noteCommonDogmas_Text = "\c[yellow]Common Dogmas\n"
+							"-------------------------------\n"
+							"\c[white]Hallowed is the Father.\n\n"
+							"Truth is the beginning of the Path.\n\n"
+							"Blessed are those that deliver us from evil.\n\n"
+							"Hallowed are those who walk in unison.\n\n"
+							"Fear not the Father, fear the darkness that would conceal the knowledge of the universe. Believe in the truth of all things, and you too may find the Path to enlightenment.\n\n"
+							"Lessons of days gone by teach us what will come to pass.\n\n"
+							"Guide us on the Path so that we may triumph over the enemy of our salvation, and be with you in the End of Ends on the planes of enlightenment.\n\n"
+							"The only true darkness lives in the hearts of those who do not follow the Path. Otherwise, there is always some measure of light. And where there is light, the Father see all!\n\n"
+							"Verily, the corrupted sinner will be cleansed from within.\n\n"
+							"Make yourself one with the Path, and the journey will lead you to eternity.\n\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteCoastalRegion_title = "Coastal Region";
+PDA_noteCoastalRegion_text = 	"\c[yellow]Coastal Region\n"
+								"-------------------------------\n"
+								"The Coastal Region is the area located eastward of city Millport. The region is known for its mild climate and lush landscape, overgrown with green foliage.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteTheGreatHouses_Title = "The Great Houses";
+PDA_noteTheGreatHouses_Text = "\c[yellow]Great Houses of the Empire\n"
+									"===============================\n"
+									"\n"
+								"\c[yellow]House Burgerich\n"
+									"-------------------------------\n"
+								"\c[white]The House of Burgerich appears around 539. The first Prince of Burgerich takes possession of the city of Eldham and quickly takes control of the northern part of the Windy Plains and the Tar Swamp to the town of Westmarch. The reign of all the Princes of Burgerich is characterised by aggressive attacks against their neighbours, which are only ended by marriage. The future Emperor Bodric marries the daughter of Prince Burgerich, making him heir to the Burgerich estate. After the death of the last Prince of Burgerich, the territory is annexed to the Empire and becomes the main territory of the Empire.\n\n"
+								"\c[yellow]House Angara\n"
+									"-------------------------------\n"
+								"\c[white]The House of Angara settles on a peninsula in the west of the Continent around the year 442. A group of nomadic tribes quickly dominate the territory of the peninsula. But the fertile territory provides refuge for only a limited number of people, and so the House soon begins to lash out at its neighbours, giving them a reputation for invading and invading.\n\n"
+								"\c[yellow]House Tabit\n"
+									"-------------------------------\n"
+								"\c[white]The just house of Tabit, or so it is said of the rulers of the South Coast. The Duke of Tabit has ruled the territory of the South Coast since about 520, when his ancestors came to the settlement of Millport and converted it into a town. With the help of the Binder order, who settled in the town, the Tabites were able to use peaceful methods to control the South Coast and later the Kolyma and Tabit Plains, which they had acquired from the Narfolians.\n\n"
+								"\c[yellow]House Bodrik\n"
+									"-------------------------------\n"
+								"\c[white]The House of Bodrik founded the imperial dynasty that governs the Empire to the present day. Bodrik, the founder of the dynasty, was born in 958. The Empire is founded in 1020 and Bodrik proclaims himself Emperor as a powerful behind-the-scenes support of the Church.\n\n"
+								"\c[yellow]House Connel\n"
+									"-------------------------------\n"
+								"\c[white]Mentions of the Connel family appear around 547, when the family comes under the leadership of Westmarch, which has just broken away from the Principality of Burgerich. The merchant family runs Westmarch until 1047, when it is gradually replaced in the leadership of Westmarch by a puppet government installed by the Empire.\n\n"
+								"\c[yellow]House Narfolk\n"
+									"-------------------------------\n"
+								"\c[white]The House of Narfolk appears around 525, when it establishes the town of Narfolk in the Gulf of Kalan. The family quickly becomes wealthy, mainly through the acquisition of a monopoly in shipping. Gradually they displace or buy all competition, and the merchants soon discover that they cannot transport goods without fat commissions to the Shipping Guild, which is controlled by Prince Narfolk.\n\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteTekGuildNotes_Title = "Technical Notes";
+PDA_noteTekGuildNotes_Text = "\c[yellow]TekGuild Notes\n"
+									"-------------------------------\n"
+									"\c[yellow]Mauler\n"
+									"\c[white]Energy in its raw form is a destructive force, capable of influencing the very nature of matter. As it is channelled, pulses occur, causing decay and death. The result is the total destruction of the target. Mauler weapons are a destructive alternative to conventional firearms and explosives. Mauler technology is slowly replacing firearms in the arsenal of the Army of the Order, mainly due to the low weight and high efficiency of energy sources for weapons that replace conventional ammunition.\n\n"
+									"\c[yellow]Healing Gel\n"
+									"\c[white]The TekGild Faculty of Medicine has created many interesting technologies. The Healing Gel is one of these technologies. The dense structure of the Gel allows the recovery of tissues and muscles, as well as bones and nerves in an incredibly low time. The exact composition of the Gel is the secret of the TekGild that protects under the Edict of Death.\n\n"
+									"\c[yellow]Cybernetic Implants\n"
+									"\c[white]Cybernetic implants serve a variety of purposes. Whether it's to replace malfunctioning or damaged limbs and organs, to enhance a variety of properties and senses. Cyber implants provide all of these. The Order provides implants to its servants so they can better perform their duties.\n\n"
+									"\c[yellow]Nanotechnology\n"
+									"\c[white]The nanotechnology family harbours a wide range of technologies, from implants to personal protective equipment to various tools. Personal protective equipment is a variety of armour that can adapt to the wearer and provide protection against a wide range of pathogens and hazards that the wearer of such armour may encounter.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteMillport_Title = "Millport";
+PDA_noteMillport_Text = "\c[yellow]Millport\n"
+						"-------------------------------\n"
+						"\c[white]A port city on the South Coast. Millport is the center of commerce and government here. The city is controlled by the Baron, a merchant who bought a title of nobility from the Emperor and now runs the city with a firm hand. As long as he pays his taxes, the Imperial power is uninterested in what happens in the city, so the Baron has free rein. The city was founded 300 years ago by Narfol merchants who sought a quiet anchorage while traveling around the Continent. But after about 70 years, the city became independent from the Narfol government and subsequently entered the emerging Bodric Empire. About 70 years ago, the TekGuild established its headquarters here, making the sleepy port city a university city of major importance, which was matched by the subsequent development of the city. The city now pays for the center of the South Coast, where farmers and merchants from near and far come to sell their goods.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteEmperorsList_Title = "List of Emperors";
+PDA_noteEmperorsList_Text = "\c[yellow]List of Emperors\n"
+						"-------------------------------\n"
+						"Bodrik\n"
+						"\c[white]The founder of the Bodrik dynasty, the first king and later the first Emperor of the Holy Empire.\n"
+						"\c[yellow]Valtmar\n"
+						"\c[white]Emperor Valtmar is fundamentally expanding the Empire. The territory of the Empire expands during his reign to include the territories of Tabit and Westmarch.\n"
+						"\c[yellow]Valtredd\n"
+						"\c[white]The reign of Emperor Valtdredd is known mainly for the great famine that affected the entire Empire.\n"
+						"\c[yellow]Berthold\n"
+						"\c[white]The Emperor also known as Berthold the Builder. He built many important buildings. But many of them fell victim to later wars.\n"
+						"\c[yellow]Larissa\n"
+						"\c[white]The First Empress at the head of the Holy Empire. Her reign is associated with the blossoming of science and industry.\n"
+						"\c[yellow]Nahas\n"
+						"\c[white]Emperor Nahas wanted to go down in history as a builder, but is better known as the 'Destroyer'. He had part of the capital demolished for his building plans.\n"
+						"\c[yellow]Aurik\n"
+						"\c[white]The winner of the Successor Wars. He has begun to rebuild a country destroyed by the War of Succession.\n"
+						"\c[yellow]Ranan\n"
+						"\c[white]The Emperor Priest built many new shrines, but also introduced new religious laws and established a religious police.\n"
+						"\c[yellow]Alrik\n"
+						"\c[white]The Bloody Emperor. The madness of the Emperor brought the Empire its worst years, with even human sacrifice. The Bloody Emperor's reign was ended by his brother, Avahid.\n"
+						"\c[yellow]Avahid\n"
+						"\c[white]Emperor Avahid ended the bloody reign of his brother, former Emperor Alrik. His reign is linked to reforms linked to the end of aggressive doctrine.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteEastcliff_Title = "Eastcliff village";
+PDA_noteEastcliff_Text = "\c[yellow]Eastcliff village\n"
+						"-------------------------------\n"
+						"\c[white]The village of Eastcliff lies roughly thirty kilometres east of the town of Millport on the seashore. The village was founded before 589, when it is first mentioned in the Chronicles of the Monastery. The village was established as a supply station for traders travelling along the South Coast further inland. The old settlement no longer exists, it was completely rebuilt to its present form sometime around 876. The rebuilding was funded by the Transport Guild, which has its port and branch here. The village lies on the edge of a high cliff. On the western edge of the settlement stands a tall lighthouse, warning ships of the dangerous rocks that line the local coast. At the eastern end of the settlement lies the Church Temple, where the footsteps of pilgrims from far away go. The local inn provides excellent cuisine and favourable prices, as do the local traders. The Imperial Employment Office is also based here.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteTekGuild_Title = "The TekGuild";
+PDA_noteTekGuild_Text = "\c[yellow]The Tekguild\n"
+						"-------------------------------\n"
+						"\c[white]Twenty years or so before the creation of the Holy Empire, the Tech Guild emerges in its capital, and twenty years later, the mighty TekGuild emerges. Over time, the original guild organization is transformed into a corporate-type company, which, through its contacts, quickly dominates the entire technology market and has acquired from the king the exclusive right to produce, develop, and distribute technology. Even from the Church of the Order, TekGuild gains certain advantages, for a simple reason. The Church of the Order is TekGuild's largest customer.\n"
+						"The Tekguild is the main technology manufacturer in the Holy Empire. Also, it serves as the main imperial supplier, which means the Tekguild gains many advantages from such a relationship. The present superior of the TekGuild is Lord Walther Tabit, brother of Duke of Tabit.\n"
+						"The Tekguild offers education for everybody for small or no fee, when the student has good study results. Also, the Tekguild's university offers accomodation for the students in the form of student colleges, located in the university campus. The colleges offers everything including food and clothing.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteBinderOrder_Title = "The Binder Order";
+PDA_noteBinderOrder_Text = "\c[yellow]The Binder Order\n"
+							"-------------------------------\n"
+							"\c[white]The Binders originally emerged as a organization independent of the Order Church. A group of ardent believers wanted to devote themselves to the study of the doctrine of the Order in seclusion. So they founded a monk group of Binders, dedicated to the study of the teachings of the Order. They chose a remote abandoned school on the edge of the northern wastelands as their headquarters. The harsh climate and constant attacks by mutants shaped the Binders into fierce fighters. As their numbers grew, the Binders began to expand their influence.\n"
+							"Over time, the Binders became a respected organization, dedicated to protecting the inhabitants from all forms of iniquity. Among the Binders' main tasks is to protect the inhabitants from mutants that appeared after the comet hit. The bands of mutants made some parts of the continent uninhabitable. As a result, the Binders have their own base in most cities, from which they set out to hunt. The actions of the Binders are known among the common people, who are always happy to help the Binders.\n"
+							"The Order Church began to cooperate with the Binders, and over time incorporated them into their structures. Even so, the Binders have maintained a high level of independence, which is reflected in the Binders' organizational structure. For there is no central authority, each base is independent, and each base commander is his own master. While these commanders consult with each other on more important matters, they have no higher authority above them.\n"
+							"\n"
+							"Hierarchy:\n"
+							"1. Layman\n"
+							"2. Novice\n"
+							"3. Acolyte\n"
+							"4. Disciple\n"
+							"5. Invoker\n"
+							"6. Oracle\n"
+							"7. Evoker\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_notePlayerPersonal_Title = "Personal ID info";
+PDA_notePlayerPersonal_Text = 	"\c[yellow]Personal ID\n"
+								"-------------------------------\n"
+								"\c[yellow]Name:\c[white] Arius Augurius Zeno\n"
+								"\c[yellow]Age:\c[white] 35\n"
+								"\c[yellow]Height:\c[white] 185cm\n"
+								"\c[yellow]Eye color:\c[white] Brown\n"
+								"\c[yellow]Hair Color:\c[white] Light brown\n"
+								"\c[yellow]Place of birth:\c[white] Silent Hills\n"
+								"\c[yellow]Place of living:\c[white] Varies, see occupation\n"
+								"\c[yellow]Occupation:\c[white] Binder Disciple\n"
+								"\c[yellow]ID number:\c[white] 042.25624230985\n"
+								"\c[yellow]C.V.:\n"
+								"\c[white]Arius Augurius Zeno was born in 1453 in Silent Hills. Zeno attended school in Silent Hills, after school attended TekGuild university in Millport. Zeno joined the Binder order in 1473. His exceptional skills allowed him to quickly raise ranks to the rank of Disciple, which gains him full Binder authority.\n"
+								"Arius Augurius Zeno is a faithful follower of the Church of the Order. Zeno recevied his confirmation on his age of 7 in Silent Hills temple from the hands of local Bishop. His service in the Binder order show his true dedication to the Church of the Order.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteLustyKolymanMaid1_Title = "Lusty Kolyman Maid v1";
+PDA_noteLustyKolymanMaid1_Text = 	"\c[yellow]Lusty Kolyman Maid v.1\n"
+									"-------------------------------\n"
+									"\c[yellow]ACT IV, SCENE III, CONTINUED\n\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] Certainly not, kind sir! I am here but to clean your chambers.\n"
+									"\c[yellow]Crantius Colto:\c[white] Is that all you have come here for, little one? My chambers?\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] I have no idea what it is you imply, master. I am but a poor Kolyman maid.\n"
+									"\c[yellow]Crantius Colto:\c[white] So you are, my dumpling. And a good one at that. Such strong legs and shapely chest.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] You embarrass me, sir!\n"
+									"\c[yellow]Crantius Colto:\c[white] Fear not. You are safe here with me.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] I must finish my cleaning, sir. The mistress will have my head if I do not!\n"
+									"\c[yellow]Crantius Colto:\c[white] Cleaning, eh? I have something for you. Here, polish my spear.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] But it is huge! It could take me all night!\n"
+									"\c[yellow]Crantius Colto:\c[white] Plenty of time, my sweet. Plenty of time...\n\n"
+									"\c[yellow]END OF ACT IV, SCENE III\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteLustyKolymanMaid2_Title = "Lusty Kolyman Maid v2";
+PDA_noteLustyKolymanMaid2_Text = 	"\c[yellow]Lusty Kolyman Maid v.2\n"
+									"-------------------------------\n"
+									"\c[yellow]ACT VII, SCENE II, CONTINUED\n\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] My goodness, that's quite a loaf! But how ever shall it fit my oven?\n"
+									"\c[yellow]Crantius Colto:\c[white] This loaf isn't ready for baking, my sweet. It has yet to rise.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] If only we could hurry that along. How would I accomplish such a task?\n"
+									"\c[yellow]Crantius Colto:\c[white] Oh, my foolish little kolyman maid, you must use your hands.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] You wish me to kneed the loaf? Here?\n"
+									"\c[yellow]Crantius Colto:\c[white] Of course.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] But what if the mistress catches me? Your loaf was meant to satisfy her appetite.\n"
+									"\c[yellow]Crantius Colto:\c[white] Don't fret, my delicate flower. I'll satisfy the mistress's cravings later.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] Very well, but I'm afraid my oven isn't hot enough. It could take hours!\n"
+									"\c[yellow]Crantius Colto:\c[white] Plenty of time, my sweet. Plenty of time...\n\n"
+									"\c[yellow]END OF ACT VII, SCENE II\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PDA_noteLustyKolymanMaid3_Title = "Lusty Kolyman Maid v3";
+PDA_noteLustyKolymanMaid3_Text = 	"\c[yellow]Lusty Kolyman Maid v.3\n"
+									"-------------------------------\n"
+									"\c[yellow]ACT X, SCENE IV, CONTINUED\n\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] My heavens, I know I agreed to help you with your mouse problem, master Colto, but I was not expecting it to be so...driven!\n"
+									"\c[yellow]Crantius Colto:\c[white] I knew ever since I saw you that my mouse was eager to greet you. Oh-ho, my dear, isn't it a cocksure little fellow? Perhaps it would be best to proceed with haste?\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] Indeed, sir, but this mouse... never have I felt such a driven, hungry, ravenous beast.\n"
+									"\c[yellow]Crantius Colto:\c[white] There are many more of these feelings to come, my sweet. Now, if it is not too burdensome, I ask that you tug on it. That will surely lift its mood.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] Oh, but sir, that might hurt it! I dare not hurt such a wonderful mouse, my lord.\n"
+									"\c[yellow]Crantius Colto:\c[white] It is a...necessary action, my sweet - the preamble to a much greater effort, no? Once that is done, we can proceed to the meat of the job.\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] Why not do this yourself, my lord? I feel intimidated, tugging on a mouse of such girth.\n"
+									"\c[yellow]Crantius Colto:\c[white] That would ruin the fun, my dearest, sweet kolyman maid. Come. why not tug on this mouse's tail? Just pull vigorously, and it will all come peeling back. Besides, if you truly wish to receive discharge-\n"
+									"\c[yellow]Lifts-Her-Skirt:\c[white] This mouse has a very pungent aroma. It smells very, very fishy, my noble lord Crantius. I'm not sure I will be able to finish this very quickly.\n"
+									"\c[yellow]Crantius Colto:\c[white] Plenty of time, my sweet. Plenty of time...\n\n"
+									"\c[yellow]END OF ACT X, SCENE IV\n";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+

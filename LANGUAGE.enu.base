@@ -1,0 +1,288 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// american english ////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[enu Default]
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//##################################################################################################################
+//  ITEMS  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// gold ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+TAG_goldCOIN = "Coin";
+TXT_goldCOIN = "You picked up the coin.";
+TAG_10GOLDcoins = "10 Gold";
+TXT_10GOLDcoins = "You picked up 10 gold.";
+TAG_25GOLDcoins = "25 Gold";
+TXT_25GOLDcoins = "You picked up 25 gold.";
+TAG_50GOLDcoins = "50 Gold";
+TXT_50GOLDcoins = "You picked up 50 gold.";
+TAG_goldChest_item = "Chest with coins";
+TXT_goldChest_item = "You picked up the Chest with coins.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// weapons /////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+T_PUNCHDAGGER = "Punch Dagger";
+
+TAG_StormPistol = "Storm Pistol";
+FND_StormPistol = "You picked up the Storm pistol!";
+OBI_StormPistol = "%o was bolted by %k's storm pistol.";
+
+T_CROSSBOW = "Crossbow";
+F_CROSSBOW = "You picked up the crossbow!";
+
+T_ASSAULTGUN = "Assault Gun";
+F_ASSAULTGUN = "You picked up the Assault gun!";
+OBI_wosAssaultGun = "%o was drilled full of holes by %k's assault gun.";
+
+TAG_executorRifle = "ER-15 Executor Rifle";
+FND_executorRifle = "You picked up the Executor Rifle!";
+OBI_executorRifle = "%o was drilled full of holes by %k's executor rifle.";
+
+TAG_staffBlaster = "Binder Staff";
+FND_staffBlaster = "You picked up the Binder Staff!";
+OBI_staffBlaster = "%o was splattered by %k Mauler Staff";
+
+T_STAFFBLASTER2 = "Upgraded Binder Staff";
+F_STAFFBLASTER2 = "You picked up the Upgraded Binder Staff!";
+
+T_MISSILELAUNCHER = "Mini-missile Launcher";
+F_MISSILELAUNCHER = "You picked up the Mini-missile Launcher!";
+
+T_FLAMER = "Flamethrower";
+F_FLAMER = "ou picked up the Flamethrower!";
+
+T_GRENADELAUNCHER = "Grenade Launcher";
+F_GRENADELAUNCHER = "You picked up the Grenade launcher!";
+
+T_MAULER = "Mauler";
+F_MAULER = "You picked up the mauler!";
+
+TAG_laserPistol = "Omega Beam Pistol";
+FND_laserPistol = "You picked up the Omega Beam Pistol!";
+OBI_laserPistol = "%o was burned to ashes by %k Omega Beam Pistol";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// medical items ///////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+T_HYPOSPREJ = "Hypospray";
+F_HYPOSPREJ = "You picked up the Hypospray!";
+
+T_KOMBOPACK = "Combopack";
+F_KOMBOPACK = "You picked up the Combopack!";
+
+T_INSTALEK = "InstaHeal";
+F_INSTALEK = "You picked up the InstaHeal!";
+
+T_MEDPATCH = "Med patch";
+F_MEDPATCH = "You picked up the Med patch.";
+
+T_MEDICALKIT = "Medical kit";
+F_MEDICALKIT = "You picked up the Medical kit.";
+
+T_SURGERYKIT = "Surgery Kit";
+F_SURGERYKIT = "You picked up the Surgery Kit.";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// powerups ////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+T_NIGHTEYEDEVICE = "Night Eye Device";
+F_NIGHTEYEDEVICE = "You picked up the Night Eye Device!";
+
+T_SHIELDDEVICE = "Shield Device";
+F_SHIELDDEVICE = "You picked up the Shield Device!";
+
+T_GRENADEEXPL = "Explosive Grenade";
+F_GRENADEEXPL = "You picked up the Explosive Grenade!";
+
+T_GRENADEFIRE = "Phosphorous Grenade";
+F_GRENADEFIRE = "You picked up the Phosphorous Grenade!";
+
+T_grenadeGas = "Gas Grenade";
+F_grenadeGas = "You picked up the Gas Grenade!";
+
+T_QTDEV = "Quick Travel Device";
+F_QTDEV = "You picked up the Quick Travel Device!";
+
+T_FLARES = "Flares";
+F_FLARES = "You picked up the Flare!";
+T_FlareBox = "Box of Flares";
+F_FlareBox = "You picked up the Box of Flares!";
+
+T_FLAMETURRET = "Flame Turret";
+F_FLAMETURRET = "You picked up the Flame Turret!";
+
+T_DEPLSHIELD = "Deployable Shield";
+F_DEPLSHIELD = "You picked up the Deployable Shield!";
+
+T_JETPACK = "Flight Harness";
+F_JETPACK = "You picked up the Flight Harness!";
+
+T_ELEBOLTS = "Electric Bolts";
+F_ELEBOLTS = "You picked up the Electric Bolts!";
+
+T_POISONBOLTS = "Poison Bolts";
+F_POISONBOLTS = "You picked up the Poison Bolts!";
+
+T_BOXOFBULLETS = "Box of Bullets";
+F_BOXOFBULLETS = "You picked up the Box of Bullets!";
+
+T_ENERGYPOD = "Energy pod";
+F_ENERGYPOD = "You picked up the Energypod!";
+
+T_ENERGYPODPACK = "Energy pod Pack";
+F_ENERGYPODPACK = "You picked up the Energypod Pack!";
+
+T_ENERGYPACK = "Energypack";
+F_ENERGYPACK = "You picked up the Energypack!";
+
+T_LAMPOIL = "Lamp Oil";
+F_LAMPOIL = "You picked up the Lamp Oil!";
+
+T_AUTOMAP = "Portable Map";
+F_AUTOMAP = "You picked up the Portable Map!";
+
+T_SPRINGMINE = "Spring Mine";
+F_SPRINGMINE = "You picked up the Spring Mine!";
+
+T_SWARMERS = "Swarmers";
+F_SWARMERS = "You picked up the Swarmers!";
+
+T_INQHELMET = "Binder Helmet";
+F_INQHELMET = "You picked up the Binder Helmet!";
+
+T_CYBERARMOR1 = "Cybernetic Armor";
+F_CYBERARMOR1 = "You picked up the Cybernetic Armor!";
+W_CYBERARMOR1 = "Cybernetic armor worn!";
+
+T_CYBERARMOR2 = "Heavy Cybernetic Armor";
+F_CYBERARMOR2 = "You picked up the Heavy Cybernetic Armor!";
+W_CYBERARMOR2 = "Heavy Cybernetic Armor worn!";
+
+T_UberArmor = "Kinetic Armor";
+W_UberArmor = "Kinetic Armor worn!";
+F_UberArmor = "You picked up the Kinetic Armor!";
+
+T_ARMORSHARD = "Armor Repair Kit";
+F_ARMORSHARD = "You picked up the Armor Repair Kit.";
+
+T_RGNMDL = "Regeneration Module";
+F_RGNMDL = "You picked up the Regeneration Module.";
+
+T_ENVSUIT = "Environmental Suit";
+F_ENVSUIT = "You picked up the Environmental Suit!";
+M_ENVSUIT_filtersUsedUp = "\c[red][ The filters are used up! ]";
+M_ENVSUIT_filtersLeft1 = "\c[yellow][ ";
+M_ENVSUIT_filtersLeft2 = "\c[yellow]% filters left ]";
+
+T_SHADOWARMOR = "Shadow Armor";
+F_SHADOWARMOR = "You picked up the Shadow Armor!";
+
+T_TARGETER = "Targeter";
+F_TARGETER = "You picked up the Targeter!";
+
+T_REBREATHER = "Rebreather";
+F_REBREATHER = "You picked up the Rebreather!";
+M_REBREATHER_filtersUsedUp = "\c[red][ The filters are used up! ]";
+M_REBREATHER_filtersLeft1 = "\c[yellow][ ";
+M_REBREATHER_filtersLeft2 = "\c[yellow]% filters left ]";
+
+T_wosStealthBoy = "Stealth device";
+F_wosStealthBoy = "You picked up the Stealth device!";
+
+TAG_shoulderGun = "ShoulderGun";
+PICKUP_shoulderGun = "You picked up the ShoulderGun!";
+TAG_shldrGunMag = "ShoulderGun Cell";
+PICKUP_shldrGunMag = "You picked up the ShoulderGun Cell!";
+TAG_shoulderGunMag_item = "ShoulderGun Cell Pack";
+PICKUP_shoulderGunMag_item = "You picked up the ShoulderGun Cell Pack";
+T_shoulderGun_charger = "ShoulderGun Charger";
+F_shoulderGun_charger = "You picked up the ShoulderGun Charger!";
+M_shouldergunReload1 = "\c[yellow][ Recharged  ";
+M_shouldergunReload2 = "\c[yellow] ShoulderGun charges! ]";
+M_shouldergunmagfull = "\c[green][ ShoulderGun magazine full, no need to recharge! ]";
+M_notenoughenergypods = "\c[red][ Not enough Energypods to recharge! ]";
+
+
+T_interceptorDrone = "Interceptor Drone";
+F_interceptorDrone = "You picked up the Interceptor Drone!";
+
+M_item_battsDepleted = "\c[red][ Battery is depleted! ]";
+M_item_battsReload1 = "\c[yellow][ ";
+M_item_battsReload2 = "\c[yellow]% battery reloaded ]";
+M_item_battsCantReload = "\c[red][ Can't reload batteries! ]";
+M_item_battsLeft1 = "\c[yellow][ ";
+M_item_battsLeft2 = "\c[yellow]% battery left ]";
+
+T_wosStimDevice = "Stamina Stim";
+F_wosStimDevice = "You picked up the Stamina Stim!";
+
+T_Binocular = "Binocular";
+F_Binocular = "You picked up the Binocular!";
+
+T_LandMine = "Land Mine";
+F_LandMine = "You picked up the Land Mine!";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################
+
+
+
+//##################################################################################################################
+// MONSTERS ////////////////////////////////////////////////////////////////////////////////////////////////////////
+//##################################################################################################################
+T_YoungCarnivorousWeed = "Carnivorous Weed - Young";
+T_CarnivorousWeed = "Carnivorous Weed";
+T_wosGiantEel = "Giant Eel";
+T_FieryBeast = "Fiery Beast";
+T_LizardSmall = "Lizard - Small";
+T_LizardMiddle = "Lizard - Middle";
+T_LizardLarge = "Lizard - Large";
+T_Ophidiant = "Snakeman";
+T_wosPitLord = "Pit Lord";
+T_wosPitFiend = "Pit Fiend";
+T_wosPlagueFiend = "Plague Fiend";
+T_MiniDragon = "Drake";
+T_ascSerpentFly = "Serpent Fly";
+TAG_ascImpFlesh = "Red Flyer";
+OBI_ascImpFlesh = "%o was bitten by a Green Flyer.";
+TAG_ShieldRebel = "Shield Heretic";
+TAG_spider_leader = "Spider Leader";
+TAG_EliteRebel = "Elite Rebel";
+TAG_GrenadeRebel = "Grenade Heretic";
+TAG_MaulerRebel = "Mauler Heretic";
+TAG_tgPowerPlant_hereticCaptain = "Heretic Captain";
+TAG_FlamerRebel = "Flamethrower Heretic";
+TAG_RangerRebel = "Heretic Ranger";
+TAG_hereticCaptain = "Heretic Captain";
+TAG_hackedSentinel = "Hacked Sentinel";
+T_ZOMBIEFODDER = "Zombie Mutant";
+TAG_fodderGhoul = "Ghoul Mutant";
+TAG_MiniSentinel = "Mini Sentinel";
+TAG_Paladin = "Paladin";
+TAG_binderNPC = "Binder";
+TAG_shootingStalker = "Advanced Stalker";
+T_NUCLEARMUTANT = "Nuclear Mutant";
+T_wosLiquidator = "Liquidator";
+TAG_spikerTrap = "Spiker Trap";
+T_GiantRat = "Giant Rat";
+OBI_GiantRat = "%o was gnawed on by a giant rat.";
+//##################################################################################################################
+//##################################################################################################################
+//##################################################################################################################

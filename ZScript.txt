@@ -137,6 +137,7 @@ version "4.6.0"
 #include "zscript/Items/binoculars.zs"
 #include "zscript/Items/stealthboy.zs"
 #include "zscript/Items/quicktravel.zs"
+#include "zscript/Items/landmine.zs"
 
 ////////////////////////////////////////////////////////////////////////////////
 

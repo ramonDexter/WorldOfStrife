@@ -5369,4 +5369,21 @@ Sprite "TFOGI0", 17, 59
 	Patch "TELEPORT", -53, -170
 }
 
+Sprite "LMINA0", 27, 12
+{
+	Offset 13, 12
+	Patch "MINEA", 0, 0
+}
+
+Sprite "LMINB0", 27, 12
+{
+	Offset 13, 12
+	Patch "MINEB", 0, 0
+}
+
+Sprite "I_LMIN", 36, 30
+{
+	Patch "MINEI", 8, 4
+}
+
 // End of texture definitions

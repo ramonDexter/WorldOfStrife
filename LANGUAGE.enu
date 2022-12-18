@@ -995,6 +995,9 @@ F_wosStimDevice = "You picked up the Stamina Stim!";
 
 T_Binocular = "Binocular";
 F_Binocular = "You picked up the Binocular!";
+
+T_LandMine = "Land Mine";
+F_LandMine = "You picked up the Land Mine!";
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //##################################################################################################################

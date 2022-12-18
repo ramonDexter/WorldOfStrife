@@ -55,6 +55,7 @@ const StealthBoyWeight = 85;
 const swarmersWeight = 13;
 const targeterWeight = 25;
 const quickTravelWeight = 45;
+const landMineWeight = 12;
 // shouldergun /////////////////////////////////////////////////////////////////
 const shoulderGunWeight = 75;
 const shoulderGunMagWeight = 1;

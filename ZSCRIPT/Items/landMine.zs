@@ -70,7 +70,7 @@ class landMinePlaced : SwitchableDecoration {
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
 			stop;
-		Activate:
+		Active:
 			TNT1 A 0 A_spawnItemEx("wosLandMine");
 			stop;
 	}
@@ -122,7 +122,7 @@ class landMineTrap : SwitchableDecoration {
 			TNT1 AAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnProjectile ("ExplosionParticle1", 3, 0, random (0, 360), 2, random (0, 360));	
 			TNT1 AAAAAAAAAAAAAAA 6 A_SpawnProjectile ("PlasmaSmoke", 1, 0, random (0, 360), 2, random (0, 160));
 			stop;
-		Activate:
+		Active:
 			TNT1 A 0 A_spawnItemEx("wosLandMine");
 			stop;
 	}

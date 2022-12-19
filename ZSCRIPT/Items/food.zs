@@ -28,7 +28,7 @@ class wosWaterBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Water Bottle"
 		
-		Tag "Water Bottle";
+		Tag "$T_WaterBottle";
 		height 24;
 		Inventory.PickupMessage "You picked up the Water Bottle!";
 		Inventory.Icon "I_WATR";
@@ -49,9 +49,9 @@ class wosBeerBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Beer Bottle"
 		
-		Tag "Beer Bottle";
+		Tag "$T_BeerBottle";//Beer Bottle
 		height 24;
-		Inventory.PickupMessage "You picked up the Beer Bottle!";
+		Inventory.PickupMessage "$F_BeerBottle";//You picked up the Beer Bottle!
 		Inventory.Icon "I_SBER";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
@@ -73,9 +73,9 @@ class wosAleBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Ale Bottle"
 		
-		Tag "Ale Bottle";
+		Tag "$T_AleBottle";
 		height 24;
-		Inventory.PickupMessage "You picked up the Ale Bottle!";
+		Inventory.PickupMessage "$F_AleBottle";
 		Inventory.Icon "I_MS12";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
@@ -98,9 +98,9 @@ class wosVineBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Vine Bottle"	
 		
-		Tag "Wine Bottle";
+		Tag "$T_VineBottle";
 		height 24;
-		Inventory.PickupMessage "You picked up the Vine Bottle!";
+		Inventory.PickupMessage "$F_VineBottle";
 		Inventory.Icon "I_SVIN";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
@@ -122,9 +122,9 @@ class wosSpiritsBottle : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Spirits Bottle"
 
-		Tag "Spirits Bottle";
+		Tag "$T_SpiritsBottle";
 		height 24;
-		Inventory.PickupMessage "You picked up the Spirits Bottle!";
+		Inventory.PickupMessage "$F_SpiritsBottle";
 		Inventory.Icon "I_SPIB";
 		Inventory.useSound "sounds/dukeDrink";
 		Mass BottleWeight;
@@ -146,9 +146,9 @@ class wosHamburger : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Hamburger"
 		
-		Tag "Hamburger";
+		Tag "$T_Hamburger";
 		inventory.icon "I_BRG1";
-		Inventory.PickupMessage "You picked up the Hamburger!";
+		Inventory.PickupMessage "$F_Hamburger";
 		inventory.usesound "sounds/eat";
 		Mass burgerweight;
 	}	
@@ -166,9 +166,9 @@ class wosCheeseburger : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Cheeseburger"
 		
-		Tag "Cheeseburger";
+		Tag "$T_Cheeseburger";
 		inventory.icon "I_BRG3";
-		Inventory.PickupMessage "You picked up the Cheeseburger!";
+		Inventory.PickupMessage "$F_Cheeseburger";
 		inventory.usesound "sounds/eat";
 		Mass cheeseBurgerWeight;
 	}	
@@ -186,9 +186,9 @@ class wosBigburger : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Bigburger"
 		
-		Tag "Bigburger";
+		Tag "$T_Bigburger";
 		inventory.icon "I_BRG2";
-		Inventory.PickupMessage "You picked up the Bigburger!";
+		Inventory.PickupMessage "$F_Bigburger";
 		inventory.usesound "sounds/eat";
 		Mass bigBurgerWeight;
 	}	
@@ -206,9 +206,9 @@ class wosCheeseburgerDouble : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Double Cheeseburger"
 		
-		Tag "Double Cheeseburger";
+		Tag "$T_CheeseburgerDouble";
 		inventory.icon "I_BRG4";
-		Inventory.PickupMessage "You picked up the Double Cheeseburger!";
+		Inventory.PickupMessage "$F_CheeseburgerDouble";
 		inventory.usesound "sounds/eat";
 		Mass dblCheeBWeight;
 	}	
@@ -226,9 +226,9 @@ class wosHotdog01 : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Hotdog 01"
 		
-		Tag "Hotdog";
+		Tag "$T_Hotdog";
 		inventory.icon "I_HTD1";
-		Inventory.PickupMessage "You picked up the Hotdog!";
+		Inventory.PickupMessage "$F_Hotdog";
 		inventory.usesound "sounds/eat";
 		Mass hotdogWeight;
 	}	
@@ -246,9 +246,9 @@ class wosHotdog02 : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Hotdog 02"
 		
-		Tag "Hotdog";
+		Tag "$T_Hotdog";
 		inventory.icon "I_HTD2";
-		Inventory.PickupMessage "You picked up the Hotdog!";
+		Inventory.PickupMessage "$F_Hotdog";
 		inventory.usesound "sounds/eat";
 		Mass hotdogWeight;
 	}	
@@ -266,9 +266,9 @@ class wosDonuts : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Donuts"
 		
-		Tag "Donuts";
+		Tag "$T_Donuts";
 		inventory.icon "I_DNTS";
-		Inventory.PickupMessage "You picked up the Donuts!";
+		Inventory.PickupMessage "$F_Donuts";
 		inventory.usesound "sounds/eat";
 		Mass donutsWeight;
 	}	
@@ -286,9 +286,9 @@ class wosFoodBox : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Foodbox"
 		
-		Tag "Foodbox";
+		Tag "$T_FoodBox";
 		inventory.icon "I_DBOX";
-		Inventory.PickupMessage "You picked up the Foodbox!";
+		Inventory.PickupMessage "$F_FoodBox";
 		inventory.usesound "sounds/eat";
 		Mass foodBoxWeight;
 	}	
@@ -306,9 +306,9 @@ class wosFoodRation1 : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations I"
 		
-		Tag "Food Rations I";
+		Tag "$T_FoodRation1";
 		inventory.icon "I_FR01";
-		Inventory.PickupMessage "You picked up the Food Rations I!";
+		Inventory.PickupMessage "$F_FoodRation1";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
 	}	
@@ -326,9 +326,9 @@ class wosFoodRation2 : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations II"
 		
-		Tag "Food Rations II";
+		Tag "$T_FoodRation2";
 		inventory.icon "I_FR02";
-		Inventory.PickupMessage "You picked up the Food Rations II!";
+		Inventory.PickupMessage "$F_FoodRation2";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
 	}	
@@ -346,9 +346,9 @@ class wosFoodRation3 : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "food rations III"
 		
-		Tag "Food Rations III";
+		Tag "$T_FoodRation3";
 		inventory.icon "I_FR03";
-		Inventory.PickupMessage "You picked up the Food Rations III!";
+		Inventory.PickupMessage "$F_FoodRation3";
 		inventory.usesound "sounds/eat";
 		Mass foodRationWeight;
 	}	
@@ -365,9 +365,9 @@ class wosGrilledChicken : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "grilled chicken"
-		Tag "Grilled Chicken";
+		Tag "$T_GrilledChicken";
 		inventory.icon "I_CHKN";
-		Inventory.PickupMessage "You picked up the Grilled Chicken!";
+		Inventory.PickupMessage "$F_GrilledChicken";
 		inventory.usesound "sounds/eat";
 		Mass grilledChickenWeight;
 	}
@@ -385,10 +385,10 @@ class wosVegie1 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Strange Fruit"
-		Tag "Strange Fruit";
+		Tag "$T_strangeFruit";
 		inventory.icon "I_FRTA";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Chewed a strange fruit, WTF?.";
+		Inventory.PickupMessage "$F_strangeFruit";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -399,7 +399,10 @@ class wosVegie1 : wosPickup {
 			FRUT A -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(10);
+			TNT1 A 0 {
+				A_Log("$eat_strangeFruit");
+				W_foodHeal(10);
+			}
 			Stop;
 	}
 }
@@ -407,10 +410,10 @@ class wosVegie2 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Apple"
-		Tag "Apple";
+		Tag "$T_apple";
 		inventory.icon "I_FRTB";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten an apple, Good.";
+		Inventory.PickupMessage "$F_apple";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -421,7 +424,10 @@ class wosVegie2 : wosPickup {
 			FRUT B -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(15);
+			TNT1 A 0 {
+				A_Log("$eat_apple");
+				W_foodHeal(15);
+			}
 			Stop;
 	}
 }
@@ -429,10 +435,10 @@ class wosVegie3 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Lettuce"
-		Tag "Lettuce";
+		Tag "$T_lettuce";
 		inventory.icon "I_FRTD";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten a Lecttuce, Humn...";
+		Inventory.PickupMessage "$F_lettuce";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -443,7 +449,10 @@ class wosVegie3 : wosPickup {
 			FRUT D -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(10);
+			TNT1 A 0 {
+				A_Log("$eat_lettuce");
+				W_foodHeal(10);
+			}
 			Stop;
 	}
 }
@@ -451,10 +460,10 @@ class wosVegie4 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Carrots"
-		Tag "Carrots";
+		Tag "$T_carrots";
 		inventory.icon "I_FRTE";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten some Carrots,...";
+		Inventory.PickupMessage "$F_carrots";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -465,7 +474,10 @@ class wosVegie4 : wosPickup {
 			FRUT E -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(15);
+			TNT1 A 0 {
+				A_Log("$eat_carrots");
+				W_foodHeal(15);
+			}
 			Stop;
 	}
 }
@@ -473,10 +485,10 @@ class wosVegie5 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Onion"
-		Tag "Onion";
+		Tag "$T_onion";
 		inventory.icon "I_FRTG";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten some Onions, Yuck!.";
+		Inventory.PickupMessage "$F_onion";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -487,7 +499,10 @@ class wosVegie5 : wosPickup {
 			FRUT G -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(10);
+			TNT1 A 0 {
+				A_Log("$eat_onion");
+				W_foodHeal(10);
+			}
 			Stop;
 	}
 }
@@ -495,10 +510,10 @@ class wosfbMeat1 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Beef"
-		Tag "Beef";
+		Tag "$T_beef";
 		inventory.icon "I_FRTC";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten a Beef, Tasty.";
+		Inventory.PickupMessage "$F_beef";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -509,7 +524,10 @@ class wosfbMeat1 : wosPickup {
 			FRUT C -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(25);
+			TNT1 A 0 {
+				A_Log("$eat_beef");
+				W_foodHeal(25);
+			}
 			Stop;
 	}
 }
@@ -517,10 +535,10 @@ class wosfbMeat2 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Cheese"
-		Tag "Cheese";
+		Tag "$T_cheese";
 		inventory.icon "I_FRTF";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten a Cheese, Yum..";
+		Inventory.PickupMessage "$F_cheese";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -531,7 +549,10 @@ class wosfbMeat2 : wosPickup {
 			FRUT F -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(20);
+			TNT1 A 0 {
+				A_Log("$eat_cheese");
+				W_foodHeal(20);
+			}
 			Stop;
 	}
 }
@@ -539,10 +560,10 @@ class wosfbMeat3 : wosPickup {
 	Default {
 		//$Category "Decorations/WoS/food barrels"
 		//$Title "Fish"
-		Tag "Fish";
+		Tag "$T_fish";
 		inventory.icon "I_FRTH";
 		Inventory.PickupFlash "Pickupflash";
-		Inventory.PickupMessage "Eaten a Fish, Gulp..";
+		Inventory.PickupMessage "$F_fish";
 		inventory.usesound "sounds/eat";
 		+DOOMBOUNCE
 		Speed 4;
@@ -553,7 +574,10 @@ class wosfbMeat3 : wosPickup {
 			FRUT H -1;
 			Stop;
 		Use:
-			TNT1 A 0 W_foodHeal(20);
+			TNT1 A 0 {
+				A_Log("$eat_fish");
+				W_foodHeal(20);
+			}
 			Stop;
 	}
 }
@@ -562,9 +586,9 @@ class wosSoyFood : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Soy Food"
 		
-		Tag "Soy Food";
+		Tag "$T_SoyFood";
 		inventory.icon "I_SYFD";
-		Inventory.PickupMessage "You picked up the Soy Food!";
+		Inventory.PickupMessage "$F_SoyFood";
 		inventory.usesound "sounds/eat";
 		Mass wosSoyFoodWeight;
 	}
@@ -582,9 +606,9 @@ class wosSodaCan : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "soda can"
 		
-		Tag "NRG Soda";
+		Tag "$T_SodaCan";
 		inventory.icon "I_SDCN";
-		Inventory.PickupMessage "You picked up the NRG Soda!";
+		Inventory.PickupMessage "$F_SodaCan";
 		inventory.usesound "sounds/eat";
 		Mass wosSodaCanWeight;
 	}
@@ -602,9 +626,9 @@ class wosCandyBar : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "candy bar"
 		
-		Tag "Chocolate Candybar";
+		Tag "$T_CandyBar";
 		inventory.icon "I_CDBR";
-		Inventory.PickupMessage "You picked up the Chocolate Candybar!";
+		Inventory.PickupMessage "$F_CandyBar";
 		inventory.usesound "sounds/eat";
 		Mass wosCandyBarWeight;
 	}
@@ -621,9 +645,9 @@ class wosFoodTrayEmpty : wosPickup {
 	Default {
 		//$Category "Health and Armor/Food"
 		//$Title "Empty Food Tray"
-		Tag "Empty Food Tray";
+		Tag "$T_FoodTrayEmpty";
 		inventory.icon "I_FDTE";
-		Inventory.PickupMessage "You picked up the Empty Food Tray!";
+		Inventory.PickupMessage "$F_FoodTrayEmpty";
 		inventory.usesound "sounds/eat";
 		Mass wosCandyBarWeight;
 	}
@@ -649,9 +673,9 @@ class wosFoodTray : wosPickup {
 		//$Category "Health and Armor/Food"
 		//$Title "Food Tray"
 		
-		Tag "Food Tray";
+		Tag "$T_FoodTray";
 		inventory.icon "I_FDTR";
-		Inventory.PickupMessage "You picked up the Food Tray!";
+		Inventory.PickupMessage "$F_FoodTray";
 		inventory.usesound "sounds/eat";
 		Mass wosCandyBarWeight;
 	}

@@ -11175,13 +11175,13 @@ actor wos_dxTortureRackBridge16 : InvisibleBridge16 21714 {
 actor wosD_ss_centrifuge 21715 {
 	//$Category "Decorations/WoS"
 	//$Title "centrifuge"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "centrifuge"
-	radius 8
-	height 24
+	radius 12
+	height 26
 	States {
 		Spawn:
 			DUMM A -1
@@ -11191,7 +11191,7 @@ actor wosD_ss_centrifuge 21715 {
 actor wosD_ss_examTable 21716 {
 	//$Category "Decorations/WoS"
 	//$Title "exam table"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
@@ -11207,7 +11207,7 @@ actor wosD_ss_examTable 21716 {
 actor wosD_ss_labWorkStation 21717 {
 	//$Category "Decorations/WoS"
 	//$Title "lab workstation"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
@@ -11223,13 +11223,13 @@ actor wosD_ss_labWorkStation 21717 {
 actor wosD_ss_loungeChairs1 21718 {
 	//$Category "Decorations/WoS"
 	//$Title "lounge chairs 1"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "lounge chairs"
 	radius 16
-	height 32
+	height 24
 	States {
 		Spawn:
 			DUMM A -1
@@ -11239,13 +11239,13 @@ actor wosD_ss_loungeChairs1 21718 {
 actor wosD_ss_loungeChairs2 21719 {
 	//$Category "Decorations/WoS"
 	//$Title "lounge chairs 2"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "lounge chairs"
 	radius 16
-	height 32
+	height 24
 	States {
 		Spawn:
 			DUMM A -1
@@ -11255,18 +11255,32 @@ actor wosD_ss_loungeChairs2 21719 {
 actor wodD_ss_surgeryTray 21720 {
 	//$Category "Decorations/WoS"
 	//$Title "surgery tray table"
-	-SOLID
+	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "tray table"
 	radius 16
-	height 32
+	height 24
 	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
+}
+actor wos_ss_labWorkStationBridge24x24 : InvisibleBridge16 21721 {
+	//$Category "Bridges"
+	//$Title "bridge - lab workstation 24x24"
+	Tag "lab workstation"
+	radius 24
+	height 24
+}
+actor wos_ss_labWorkStationBridge16x72 : InvisibleBridge16 21722 {
+	//$Category "Bridges"
+	//$Title "bridge - lab workstation 16x72"
+	Tag "lab workstation"
+	radius 16
+	height 72
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

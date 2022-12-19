@@ -481,8 +481,8 @@ DoomEdNums {
 	20476 = wos_switch_doorKnob_1
 	20477 = wos_switch_button1_1
 	20478 = wosQuickTravel
+	20479 = wosCustomBridge
 	/*
-	20479 = 
 	20480 = 
 	20481 = 
 	20482 = 

@@ -1,18 +1,14 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// american english ////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// american english ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 [enu Default]
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-//##################################################################################################################
-//  ITEMS  /////////////////////////////////////////////////////////////////////////////////////////////////////////
-//##################################################################################################################
+////////////////////////////////////////////////////////////////////////////////
+//  ITEMS  /////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// gold ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// gold ////////////////////////////////////////////////////////////////////////
 TAG_goldCOIN = "Coin";
 TXT_goldCOIN = "You picked up the coin.";
 TAG_10GOLDcoins = "10 Gold";
@@ -23,83 +19,73 @@ TAG_50GOLDcoins = "50 Gold";
 TXT_50GOLDcoins = "You picked up 50 gold.";
 TAG_goldChest_item = "Chest with coins";
 TXT_goldChest_item = "You picked up the Chest with coins.";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// weapons /////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// weapons /////////////////////////////////////////////////////////////////////
+// dagger //
 T_PUNCHDAGGER = "Punch Dagger";
-
+// pistol //
 TAG_StormPistol = "Storm Pistol";
 FND_StormPistol = "You picked up the Storm pistol!";
 OBI_StormPistol = "%o was bolted by %k's storm pistol.";
-
+// xbow //
 T_CROSSBOW = "Crossbow";
 F_CROSSBOW = "You picked up the crossbow!";
-
+// assaultgun //
 T_ASSAULTGUN = "Assault Gun";
 F_ASSAULTGUN = "You picked up the Assault gun!";
 OBI_wosAssaultGun = "%o was drilled full of holes by %k's assault gun.";
-
+// assault rifle //
 TAG_executorRifle = "ER-15 Executor Rifle";
 FND_executorRifle = "You picked up the Executor Rifle!";
 OBI_executorRifle = "%o was drilled full of holes by %k's executor rifle.";
-
+// binder staff //
 TAG_staffBlaster = "Binder Staff";
 FND_staffBlaster = "You picked up the Binder Staff!";
 OBI_staffBlaster = "%o was splattered by %k Mauler Staff";
 
 T_STAFFBLASTER2 = "Upgraded Binder Staff";
 F_STAFFBLASTER2 = "You picked up the Upgraded Binder Staff!";
-
+// missile launcher //
 T_MISSILELAUNCHER = "Mini-missile Launcher";
 F_MISSILELAUNCHER = "You picked up the Mini-missile Launcher!";
-
+// flamethrower //
 T_FLAMER = "Flamethrower";
 F_FLAMER = "ou picked up the Flamethrower!";
-
+// grenade launcher //
 T_GRENADELAUNCHER = "Grenade Launcher";
 F_GRENADELAUNCHER = "You picked up the Grenade launcher!";
-
+// mauler //
 T_MAULER = "Mauler";
 F_MAULER = "You picked up the mauler!";
-
+// laser pistol //
 TAG_laserPistol = "Omega Beam Pistol";
 FND_laserPistol = "You picked up the Omega Beam Pistol!";
 OBI_laserPistol = "%o was burned to ashes by %k Omega Beam Pistol";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// medical items ///////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// medical items ///////////////////////////////////////////////////////////////
+// hypospray //
 T_HYPOSPREJ = "Hypospray";
-F_HYPOSPREJ = "You picked up the Hypospray!";
-
+F_HYPOSPREJ = ":: You picked up the Hypospray!";
+// combopack //
 T_KOMBOPACK = "Combopack";
 F_KOMBOPACK = "You picked up the Combopack!";
-
+// instaheal //
 T_INSTALEK = "InstaHeal";
 F_INSTALEK = "You picked up the InstaHeal!";
-
+// medpatch //
 T_MEDPATCH = "Med patch";
 F_MEDPATCH = "You picked up the Med patch.";
-
+// medkit //
 T_MEDICALKIT = "Medical kit";
 F_MEDICALKIT = "You picked up the Medical kit.";
-
+// surgery kit //
 T_SURGERYKIT = "Surgery Kit";
 F_SURGERYKIT = "You picked up the Surgery Kit.";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// powerups ////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// powerups ////////////////////////////////////////////////////////////////////
 T_NIGHTEYEDEVICE = "Night Eye Device";
 F_NIGHTEYEDEVICE = "You picked up the Night Eye Device!";
 
@@ -236,17 +222,84 @@ F_Binocular = "You picked up the Binocular!";
 
 T_LandMine = "Land Mine";
 F_LandMine = "You picked up the Land Mine!";
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// food ////////////////////////////////////////////////////////////////////////
+T_WaterBottle = "Water Bottle";
+F_WaterBottle = "You picked up the Water Bottle!";
+T_BeerBottle = "Beer Bottle";
+F_BeerBottle = "You picked up the Beer Bottle!";
+T_AleBottle = "Ale Bottle";
+F_AleBottle = "You picked up the Ale Bottle!";
+T_VineBottle = "Wine Bottle";
+F_VineBottle = "You picked up the Vine Bottle!";
+T_SpiritsBottle = "Spirits Bottle";
+F_SpiritsBottle = "You picked up the Spirits Bottle!";
+T_Hamburger = "Hamburger";
+F_Hamburger = "You picked up the Hamburger!";
+T_Cheeseburger = "Cheeseburger";
+F_Cheeseburger = "You picked up the Cheeseburger!";
+T_Bigburger = "Bigburger";
+F_Bigburger = "You picked up the Bigburger!";
+T_CheeseburgerDouble = "Double Cheeseburger";
+F_CheeseburgerDouble = "You picked up the Double Cheeseburger!";
+T_Hotdog = "Hotdog";
+F_Hotdog = "You picked up the Hotdog!";
+T_Donuts = "Donuts";
+F_Donuts = "You picked up the Donuts!";
+T_FoodBox = "Foodbox";
+F_FoodBox = "You picked up the Foodbox!";
+T_FoodRation1 = "Food Rations I";
+F_FoodRation1 = "You picked up the Food Rations I!";
+T_FoodRation2 = "Food Rations II";
+F_FoodRation2 = "You picked up the Food Rations II!";
+T_FoodRation3 = "Food Rations III";
+F_FoodRation3 = "You picked up the Food Rations III!";
+T_GrilledChicken = "Grilled Chicken";
+F_GrilledChicken = "You picked up the Grilled Chicken!";
+T_strangeFruit = "Strange Fruit";
+F_strangeFruit = "You picked up the Strange Fruit!";
+eat_strangeFruit = "Chewed a strange fruit, WTF?";
+T_apple = "Apple";
+F_apple = "You picked up the Apple!";
+eat_apple = "Eaten an apple, Good.";
+T_lettuce = "Lettuce";
+F_lettuce = "You picked up the Lettuce!";
+eat_lettuce = "Eaten a Lecttuce, Humn...";
+T_carrots = "Carrots";
+F_carrots = "You picked up the Carrots!";
+eat_carrots = "Eaten some Carrots...";
+T_onion = "Onion";
+F_onion = "You picked up the Onion!";
+eat_onion = "Eaten some Onions, Yuck!.";
+T_beef = "Beef";
+F_beef = "You picked up the Beef!";
+eat_beef = "Eaten a Beef, Tasty.";
+T_cheese = "Cheese";
+F_cheese = "You picked up the Cheese!";
+eat_cheese = "Eaten a Cheese, Yum..";
+T_fish = "Fish";
+F_fish = "You picked up the Fish!";
+eat_fish = "Eaten a Fish, Gulp..";
+T_SoyFood = "Soy Food";
+F_SoyFood = "You picked up the Soy Food!";
+T_SodaCan = "NRG Soda";
+F_SodaCan = "You picked up the NRG Soda can!";
+T_CandyBar = "Chocolate Candybar";
+F_CandyBar = "You picked up the Chocolate Candybar!";
+T_FoodTrayEmpty = "Empty Food Tray";
+F_FoodTrayEmpty = "You picked up the Empty Food Tray!";
+T_FoodTray = "Food Tray";
+F_FoodTray = "You picked up the Food Tray!";
 
-//##################################################################################################################
-//##################################################################################################################
-//##################################################################################################################
 
+////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
-//##################################################################################################################
-// MONSTERS ////////////////////////////////////////////////////////////////////////////////////////////////////////
-//##################################################################################################################
+////////////////////////////////////////////////////////////////////////////////
+// MONSTERS ////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 T_YoungCarnivorousWeed = "Carnivorous Weed - Young";
 T_CarnivorousWeed = "Carnivorous Weed";
 T_wosGiantEel = "Giant Eel";
@@ -283,6 +336,32 @@ T_wosLiquidator = "Liquidator";
 TAG_spikerTrap = "Spiker Trap";
 T_GiantRat = "Giant Rat";
 OBI_GiantRat = "%o was gnawed on by a giant rat.";
-//##################################################################################################################
-//##################################################################################################################
-//##################################################################################################################
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// old & unused & obsolete /////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+T_wosscanner = "Scanner";
+F_wosscanner = "You picked up the Scanner!";
+T_OLDLANTERN = "Oil Lantern";
+F_OLDLANTERN = "You picked up the oil lantern!";
+T_HOOKSHOT = "Hookshot";
+F_HOOKSHOT = "You picked up the Hookshot!";
+
+
+//camping gear
+//------------------------------------------------------------------------
+//spacak
+T_BEDROLL = ":[ Bedroll ]:";
+M_BEDROLLOPTS =  "[ BEDROLL OPTIONS ]";
+M_BEDROLL_OPT01 = "\c[gray]Press \c[green]'FORWARD' \c[gray]to sleep.";
+M_BEDROLL_OPT02 = "\c[gray]Press \c[green]'BACKWARD' \c[gray]to pack up the bedroll.";
+M_BEDROLL_OPT03 = "\c[gray]Press \c[green]'JUMP' \c[gray]to leave.";
+//ohen
+T_CAMPFIRE = ":[ Portable campfire ]:";
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

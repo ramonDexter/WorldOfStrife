@@ -471,7 +471,26 @@ class wosOptDeco2_base : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-
+class wosCustomBridge : CustomBridge {
+	Default {
+		//$Category "Bridges"
+		//$Title "wos Custom Bridge"
+	}
+	States {
+		Spawn:
+			TNT1 ABCDE 3 Bright;
+			Loop;
+		See:
+			TNT1 A 2;
+			TNT1 A 2 A_BridgeInit;
+			TNT1 A -1;
+			Stop;
+		Death:
+			TNT1 A 2;
+			TNT1 A 300;
+			Stop;
+	}
+}
 
 
 

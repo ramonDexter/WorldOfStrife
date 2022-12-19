@@ -1,0 +1,33 @@
+namespace = "GZDoom";
+// infoscreeny v recruitment center convid 47, 48 //////////////////////////////
+Conversation {
+	ID = 47;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]INFOSCREEN";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]:: Leave ::"; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_infoscreenBinder_opener";
+		Name = "\c[yellow]INFOSCREEN";
+		Dialog = "\c[white]The Binder is a protector of peace and faith. The Binder Order protects all faithful followers of the Church and the Empire. Anyone willing to enter the Binder Order should contact the local Binder representative.";
+		Goodbye = "\c[red]:: Leave ::";
+	}
+}
+Conversation {
+	ID = 48;
+	Page {
+		pageName = "mp_infoscreenBinderTools_opener";
+		Name = "\c[yellow]INFOSCREEN";
+		Dialog = "\c[white]These tools help the Binders in rooting out the evil and wicked forces, that would threaten the Church and the Empire. These tools are:\n- the Binder's Staff, mighty weapon and symbol of the Binder's authority.\n- the Shouldergun, a handy offhand weapon, that gains a Binder an upper hand.\n- Binder's helmet and armor, a trustworthy protection, crafted by the TekGuild.";
+		Goodbye = "\c[red]:: Leave ::";
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

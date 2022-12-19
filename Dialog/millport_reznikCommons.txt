@@ -1,0 +1,64 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 49;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Butcher";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_commonsButcher_opener";
+		Name = "\c[yellow]Butcher";
+		Dialog = "\c[white]Welcome to my humble shop. Sorry, but actually I'm out of stock. I've got to visit the market to buy some meat to sell.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Where do you get your meat?";
+			Nextpage = "mp_commonsButcher_meat";
+		}
+		Choice {
+			Text = "Could you tell me about the Commons?";
+			Nextpage = "mp_commonsButcher_aboutcommons";
+		}
+		Choice {
+			Text = "Could you tell me about the city?";
+			Nextpage = "mp_commonsButcher_aboutmillport";
+		}
+	}
+	Page {
+		pageName = "mp_commonsButcher_meat";
+		Name = "\c[yellow]Butcher";
+		Dialog = "\c[white]Usually I travel to the farm around town and buy the meat from the farmers. Sometimes, when the shpping guild imports some fine meat, I buy from the shipping guild.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_commonsButcher_opener";
+		}
+	}
+	Page {
+		pageName = "mp_commonsButcher_aboutcommons";
+		Name = "\c[yellow]Butcher";
+		Dialog = "\c[white]Well, I'm not much into history. As I heard, the Commons were originally built as a accommodation for the working class, and as time advanced, the Commons grew to the present form.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_commonsButcher_opener";
+		}
+	}
+	Page {
+		pageName = "mp_commonsButcher_aboutmillport";
+		Name = "\c[yellow]Butcher";
+		Dialog = "\c[white]You've got to ask somebody else, as I'm not local and history is not my hobby. Sorry, but I know only the local pubs and the Bath.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_commonsButcher_opener";
+		}
+	}
+}

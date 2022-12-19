@@ -1,0 +1,65 @@
+namespace = "GZDoom";
+// knihovnik v commons convid 50 ///////////////////////////////////////////////
+Conversation {
+    ID = 50;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Willford, librarian";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_librarianCommons_opener";
+		Name = "\c[yellow]Willford, librarian";
+		Dialog = "\c[white]Hello, welcome to the Commons Library. If you want to read, fell free to browse our shelves. If you're looking for a specific title, just use our library computer over there.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How many titles you got here?";
+			Nextpage = "mp_librarianCommons_titleshere";
+		}
+		Choice {
+			Text = "Do you know anything about the Commons?";
+			Nextpage = "mp_librarianCommons_aboutcommons";
+		}
+		Choice {
+			Text = "COuld you tell me about the city?";
+			Nextpage = "mp_librarianCommons_aboutmillport";
+		}
+	}
+	Page {
+		pageName = "mp_librarianCommons_titleshere";
+		Name = "\c[yellow]Willford, librarian";
+		Dialog = "\c[white]Oh, when you ask about it, I think I have around 1000 titles here. Some are in duplicates, tho, because some books are more popular than the others.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_librarianCommons_opener";
+		}
+	}
+	Page {
+		pageName = "mp_librarianCommons_aboutcommons";
+		Name = "\c[yellow]Willford, librarian";
+		Dialog = "\c[white]You're asking the right person, Binder! The Commons are known as a housing for most of the locals. The Commons were originally built for the workers, but since these times expanded and become a city landmark. And you can forget the bad reputation, these times are long gone. The Commons are safe now.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_librarianCommons_opener";
+		}
+	}
+	Page {
+		pageName = "mp_librarianCommons_aboutmillport";
+		Name = "\c[yellow]Willford, librarian";
+		Dialog = "\c[white]MIllport is a harbor city, a big trading point on the southern coast. It was built by the house Tabit, and it belongs to the Tabit famile as their heir.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_librarianCommons_opener";
+		}
+	}
+}

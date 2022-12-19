@@ -4224,6 +4224,49 @@ model wosD_FS_gtbArtemis {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+////////////////////////////////////////////////////////////////////////////////
+model wosD_ss_centrifuge {
+	path "models/props/systemshock/"
+	model 0 "centrifuge.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_ss_examTable {
+	path "models/props/systemshock/"
+	model 0 "examTable.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_ss_labWorkStation {
+	path "models/props/systemshock/"
+	model 0 "labworkstation.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_ss_loungeChairs1 {
+	path "models/props/systemshock/"
+	model 0 "loungeChairs1.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_ss_loungeChairs2 {
+	path "models/props/systemshock/"
+	model 0 "loungeChairs2.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wodD_ss_surgeryTray {
+	path "models/props/systemshock/"
+	model 0 "surgeryTray.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

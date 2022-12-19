@@ -11172,6 +11172,102 @@ actor wos_dxTortureRackBridge16 : InvisibleBridge16 21714 {
 	height 32
 }
 
+actor wosD_ss_centrifuge 21715 {
+	//$Category "Decorations/WoS"
+	//$Title "centrifuge"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "centrifuge"
+	radius 8
+	height 24
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_ss_examTable 21716 {
+	//$Category "Decorations/WoS"
+	//$Title "exam table"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "examination table"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_ss_labWorkStation 21717 {
+	//$Category "Decorations/WoS"
+	//$Title "lab workstation"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "lab workstation"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_ss_loungeChairs1 21718 {
+	//$Category "Decorations/WoS"
+	//$Title "lounge chairs 1"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "lounge chairs"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_ss_loungeChairs2 21719 {
+	//$Category "Decorations/WoS"
+	//$Title "lounge chairs 2"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "lounge chairs"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wodD_ss_surgeryTray 21720 {
+	//$Category "Decorations/WoS"
+	//$Title "surgery tray table"
+	-SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	Tag "tray table"
+	radius 16
+	height 32
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

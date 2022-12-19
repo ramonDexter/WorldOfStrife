@@ -165,19 +165,19 @@ Txt_Need_Key_Castle  = "You need the \cfCastle Key";
 
 // CVar descriptions
 
-m8f_hn_sign_note1            = "Note:";
-m8f_hn_sign_note2            = ":";
-m8f_hn_sign_note3            = ":";
+m8f_woshn_sign_note1            = "Note:";
+m8f_woshn_sign_note2            = ":";
+m8f_woshn_sign_note3            = ":";
 
-m8f_hn_area_name             = "Area Name";
-m8f_hn_area_radius           = "Area Radius";
-m8f_hn_sign_type             = "Sign Type";
-m8f_hn_sign_clear_after_make = "Clear note on Done";
+m8f_woshn_area_name             = "Area Name";
+m8f_woshn_area_radius           = "Area Radius";
+m8f_woshn_sign_type             = "Sign Type";
+m8f_woshn_sign_clear_after_make = "Clear note on Done";
 
-m8f_hn_sign_add_time         = "Add level time to note";
-m8f_hn_sign_shootable        = "Make this sign shootable";
-m8f_hn_sign_with_pointer     = "Add to Compass";
-m8f_hn_sign_map_scale        = "Automap Sign Marker Size";
+m8f_woshn_sign_add_time         = "Add level time to note";
+m8f_woshn_sign_shootable        = "Make this sign shootable";
+m8f_woshn_sign_with_pointer     = "Add to Compass";
+m8f_woshn_sign_map_scale        = "Automap Sign Marker Size";
 
 // Command descriptions
 

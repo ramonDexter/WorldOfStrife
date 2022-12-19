@@ -1019,7 +1019,7 @@ class m8f_hn_EventHandler : EventHandler
   void ThrowSign()
   {
     string signType = "m8f_hn_WoodenSign";
-    switch (m8f_hn_sign_type)
+    switch (m8f_woshn_sign_type)
     {
     case 0: signType = "m8f_hn_WoodenSign"     ; break;
     case 1: signType = "m8f_hn_TransparentSign"; break;

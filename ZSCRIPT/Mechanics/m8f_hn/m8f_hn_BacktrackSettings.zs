@@ -32,7 +32,7 @@ class m8f_hn_BacktrackSettings : m8f_hn_SettingsPack
 
     clear();
 
-    push(_isCrumbsEnabled = new("m8f_hn_BoolSetting").init("m8f_hn_crumbs_enabled", _player));
+    push(_isCrumbsEnabled = new("m8f_hn_BoolSetting").init("m8f_woshn_crumbs_enabled", _player));
 
     _isInitialized = true;
   }

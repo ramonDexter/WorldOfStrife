@@ -1,4 +1,4 @@
-flickerlight2 m8f_hn_sign_candle_light
+flickerlight2 m8f_woshn_sign_candle_light
 {
     color 1.0 1.0 0.0
     offset 0 10 0
@@ -9,7 +9,7 @@ flickerlight2 m8f_hn_sign_candle_light
 
 object m8f_hn_WoodenSign
 {
-  frame HNWSA { light m8f_hn_sign_candle_light }
+  frame HNWSA { light m8f_woshn_sign_candle_light }
 }
 
 brightmap sprite hnmsa0

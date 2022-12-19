@@ -47,12 +47,12 @@ class m8f_hn_FootstepSettings : m8f_hn_SettingsPack
 
     clear();
 
-    push(_footstepPeriod = new("m8f_hn_IntSetting"   ).init("m8f_hn_marker_spawn_period", _player));
-    push(_markerType     = new("m8f_hn_IntSetting"   ).init("m8f_hn_marker_type"        , _player));
-    push(_markerLifetime = new("m8f_hn_IntSetting"   ).init("m8f_hn_marker_lifetime"    , _player));
-    push(_markerAlpha    = new("m8f_hn_DoubleSetting").init("m8f_hn_marker_alpha"       , _player));
-    push(_markerForever  = new("m8f_hn_BoolSetting"  ).init("m8f_hn_marker_forever"     , _player));
-    push(_markerScale    = new("m8f_hn_DoubleSetting").init("m8f_hn_marker_scale"       , _player));
+    push(_footstepPeriod = new("m8f_hn_IntSetting"   ).init("m8f_woshn_marker_spawn_period", _player));
+    push(_markerType     = new("m8f_hn_IntSetting"   ).init("m8f_woshn_marker_type"        , _player));
+    push(_markerLifetime = new("m8f_hn_IntSetting"   ).init("m8f_woshn_marker_lifetime"    , _player));
+    push(_markerAlpha    = new("m8f_hn_DoubleSetting").init("m8f_woshn_marker_alpha"       , _player));
+    push(_markerForever  = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_marker_forever"     , _player));
+    push(_markerScale    = new("m8f_hn_DoubleSetting").init("m8f_woshn_marker_scale"       , _player));
 
     _isInitialized = true;
   }
@@ -104,7 +104,7 @@ class m8f_hn_FootstepHandler : EventHandler
 
     if (playerActor == NULL) { return; }
 
-    if (CVar.GetCvar("m8f_hn_mark_start", player).getBool())
+    if (CVar.GetCvar("m8f_woshn_mark_start", player).getBool())
     {
       Actor.Spawn("hn_StartMarker", playerActor.pos);
     }
@@ -300,7 +300,7 @@ class hn_StartMarker : MapMarker
 
   override void BeginPlay()
   {
-    double mapScale = CVar.GetCVar("m8f_hn_marker_scale", players[consolePlayer]).GetFloat();
+    double mapScale = CVar.GetCVar("m8f_woshn_marker_scale", players[consolePlayer]).GetFloat();
     scale.x = mapScale * 0.1;
     scale.y = mapScale * 0.1;
     super.BeginPlay();

@@ -8,9 +8,9 @@ class m8f_hn_MapTunerSettings
 
   void read(PlayerInfo player)
   {
-    isExitHighlightEnabled = CVar.GetCVar("m8f_hn_exit_highlight_enabled"  , player).GetInt();
-    shootableExitSwitches  = CVar.GetCVar("m8f_hn_shootable_exit_switches" , player).GetInt();
-    shootableSwitches      = CVar.GetCVar("m8f_hn_shootable_switches"      , player).GetInt();
+    isExitHighlightEnabled = CVar.GetCVar("m8f_woshn_exit_highlight_enabled"  , player).GetInt();
+    shootableExitSwitches  = CVar.GetCVar("m8f_woshn_shootable_exit_switches" , player).GetInt();
+    shootableSwitches      = CVar.GetCVar("m8f_woshn_shootable_switches"      , player).GetInt();
   }
 
   m8f_hn_MapTunerSettings init(PlayerInfo player)

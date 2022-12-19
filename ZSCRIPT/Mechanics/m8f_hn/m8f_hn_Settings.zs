@@ -69,44 +69,44 @@ class m8f_hn_Settings : m8f_hn_SettingsPack
     clear();
     _isInitialized = true;
 
-    push(_xStart             = new("m8f_hn_DoubleSetting").init("m8f_hn_compass_x"              , _player));
-    push(_yStart             = new("m8f_hn_DoubleSetting").init("m8f_hn_compass_y"              , _player));
-    push(_showCompass        = new("m8f_hn_BoolSetting"  ).init("m8f_hn_compass_show"           , _player));
-    push(_levelName          = new("m8f_hn_BoolSetting"  ).init("m8f_hn_compass_level_name"     , _player));
-    push(_showGridCoords     = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_grid_coords"       , _player));
-    push(_showOnAutomap      = new("m8f_hn_BoolSetting"  ).init("m8f_hn_compass_automap"        , _player));
-    push(_showAreaName       = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_area"              , _player));
-    push(_hideAutoAreaNames  = new("m8f_hn_BoolSetting"  ).init("m8f_hn_hide_auto_names"        , _player));
-    push(_showExplored       = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_explored"          , _player));
-    push(_showSwitches       = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_switches"          , _player));
+    push(_xStart             = new("m8f_hn_DoubleSetting").init("m8f_woshn_compass_x"              , _player));
+    push(_yStart             = new("m8f_hn_DoubleSetting").init("m8f_woshn_compass_y"              , _player));
+    push(_showCompass        = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_compass_show"           , _player));
+    push(_levelName          = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_compass_level_name"     , _player));
+    push(_showGridCoords     = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_grid_coords"       , _player));
+    push(_showOnAutomap      = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_compass_automap"        , _player));
+    push(_showAreaName       = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_area"              , _player));
+    push(_hideAutoAreaNames  = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_hide_auto_names"        , _player));
+    push(_showExplored       = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_explored"          , _player));
+    push(_showSwitches       = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_switches"          , _player));
 
-    push(_compassScale       = new("m8f_hn_DoubleSetting").init("m8f_hn_compass_scale"          , _player));
-    push(_compassDegrees     = new("m8f_hn_DoubleSetting").init("m8f_hn_compass_degrees"        , _player));
-    push(_compassStyle       = new("m8f_hn_IntSetting"   ).init("m8f_hn_compass_style"          , _player));
-    push(_textAboveCompass   = new("m8f_hn_BoolSetting"  ).init("m8f_hn_compass_under"          , _player));
+    push(_compassScale       = new("m8f_hn_DoubleSetting").init("m8f_woshn_compass_scale"          , _player));
+    push(_compassDegrees     = new("m8f_hn_DoubleSetting").init("m8f_woshn_compass_degrees"        , _player));
+    push(_compassStyle       = new("m8f_hn_IntSetting"   ).init("m8f_woshn_compass_style"          , _player));
+    push(_textAboveCompass   = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_compass_under"          , _player));
 
-    push(_showLockAccess     = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_access"            , _player));
-    push(_showIntroLevelName = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_level_name"        , _player));
+    push(_showLockAccess     = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_access"            , _player));
+    push(_showIntroLevelName = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_level_name"        , _player));
 
-    push(_isTextSeparate     = new("m8f_hn_BoolSetting"  ).init("m8f_hn_text_separate"          , _player));
-    push(_textX              = new("m8f_hn_DoubleSetting").init("m8f_hn_text_x"                 , _player));
-    push(_textY              = new("m8f_hn_DoubleSetting").init("m8f_hn_text_y"                 , _player));
+    push(_isTextSeparate     = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_text_separate"          , _player));
+    push(_textX              = new("m8f_hn_DoubleSetting").init("m8f_woshn_text_x"                 , _player));
+    push(_textY              = new("m8f_hn_DoubleSetting").init("m8f_woshn_text_y"                 , _player));
 
-    push(_revealExploredMap  = new("m8f_hn_BoolSetting"  ).init("m8f_hn_reveal_when_explored"   , _player));
-    push(_scannerExploredMap = new("m8f_hn_BoolSetting"  ).init("m8f_hn_reveal_scanner"         , _player));
-    push(_revealOnStart      = new("m8f_hn_BoolSetting"  ).init("m8f_hn_reveal_on_start"        , _player));
-    push(_scannerOnStart     = new("m8f_hn_BoolSetting"  ).init("m8f_hn_scanner_start"          , _player));
+    push(_revealExploredMap  = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_reveal_when_explored"   , _player));
+    push(_scannerExploredMap = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_reveal_scanner"         , _player));
+    push(_revealOnStart      = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_reveal_on_start"        , _player));
+    push(_scannerOnStart     = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_scanner_start"          , _player));
 
-    push(_nTranslocator      = new("m8f_hn_IntSetting"   ).init("m8f_hn_n_translocator"         , _player));
-    push(_nTranslocatorExp   = new("m8f_hn_IntSetting"   ).init("m8f_hn_n_translocator_explored", _player));
+    push(_nTranslocator      = new("m8f_hn_IntSetting"   ).init("m8f_woshn_n_translocator"         , _player));
+    push(_nTranslocatorExp   = new("m8f_hn_IntSetting"   ).init("m8f_woshn_n_translocator_explored", _player));
 
-    push(_nTunneling         = new("m8f_hn_IntSetting"   ).init("m8f_hn_n_tunneling"            , _player));
-    push(_nTunnelingExp      = new("m8f_hn_IntSetting"   ).init("m8f_hn_n_tunneling_explored"   , _player));
+    push(_nTunneling         = new("m8f_hn_IntSetting"   ).init("m8f_woshn_n_tunneling"            , _player));
+    push(_nTunnelingExp      = new("m8f_hn_IntSetting"   ).init("m8f_woshn_n_tunneling_explored"   , _player));
 
-    push(_showSpeed          = new("m8f_hn_BoolSetting"  ).init("m8f_hn_show_speed"             , _player));
-    push(_speedometerScale   = new("m8f_hn_DoubleSetting").init("m8f_hn_speedometer_scale"      , _player));
-    push(_speedometerX       = new("m8f_hn_DoubleSetting").init("m8f_hn_speedometer_x"          , _player));
-    push(_speedometerY       = new("m8f_hn_DoubleSetting").init("m8f_hn_speedometer_y"          , _player));
+    push(_showSpeed          = new("m8f_hn_BoolSetting"  ).init("m8f_woshn_show_speed"             , _player));
+    push(_speedometerScale   = new("m8f_hn_DoubleSetting").init("m8f_woshn_speedometer_scale"      , _player));
+    push(_speedometerX       = new("m8f_hn_DoubleSetting").init("m8f_woshn_speedometer_x"          , _player));
+    push(_speedometerY       = new("m8f_hn_DoubleSetting").init("m8f_woshn_speedometer_y"          , _player));
   }
 
   // private: //////////////////////////////////////////////////////////////////

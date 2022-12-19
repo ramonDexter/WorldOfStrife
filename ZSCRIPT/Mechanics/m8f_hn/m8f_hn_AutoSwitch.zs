@@ -115,8 +115,8 @@ class m8f_hn_AutoSwitchSettings : m8f_hn_SettingsPack
 
     clear();
 
-    push(_isEnabled     = new("m8f_hn_BoolSetting").init("m8f_hn_auto_switch_enabled" , _player));
-    push(_isMarkEnabled = new("m8f_hn_BoolSetting").init("m8f_hn_auto_switch_mark"    , _player));
+    push(_isEnabled     = new("m8f_hn_BoolSetting").init("m8f_woshn_auto_switch_enabled" , _player));
+    push(_isMarkEnabled = new("m8f_hn_BoolSetting").init("m8f_woshn_auto_switch_mark"    , _player));
 
     _isInitialized = true;
   }

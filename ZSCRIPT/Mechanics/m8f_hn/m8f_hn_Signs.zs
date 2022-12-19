@@ -52,9 +52,9 @@ class m8f_hn_Sign : Actor
   override
   void BeginPlay()
   {
-    string line1 = CVar.GetCVar("m8f_hn_sign_note1").GetString();
-    string line2 = CVar.GetCVar("m8f_hn_sign_note2").GetString();
-    string line3 = CVar.GetCVar("m8f_hn_sign_note3").GetString();
+    string line1 = CVar.GetCVar("m8f_woshn_sign_note1").GetString();
+    string line2 = CVar.GetCVar("m8f_woshn_sign_note2").GetString();
+    string line3 = CVar.GetCVar("m8f_woshn_sign_note3").GetString();
 
     note = line1;
     if (line2.Length() != 0) { note.AppendFormat("\n%s", line2); }
@@ -62,17 +62,17 @@ class m8f_hn_Sign : Actor
 
     spawnTime = level.time;
 
-    bool shootable = CVar.GetCVar("m8f_hn_sign_shootable").GetInt();
+    bool shootable = CVar.GetCVar("m8f_woshn_sign_shootable").GetInt();
     bSHOOTABLE = shootable;
 
-    CVar areaNameCVar = CVar.GetCVar("m8f_hn_area_name");
+    CVar areaNameCVar = CVar.GetCVar("m8f_woshn_area_name");
     areaName          = areaNameCVar.GetString();
     areaNameCVar.setString("");
 
-    double areaRadius = CVar.GetCVar("m8f_hn_area_radius").GetFloat();
+    double areaRadius = CVar.GetCVar("m8f_woshn_area_radius").GetFloat();
     areaRadiusSq      = areaRadius * areaRadius;
 
-    mapMarkerScale = Cvar.GetCVar("m8f_hn_sign_map_scale").GetFloat();
+    mapMarkerScale = Cvar.GetCVar("m8f_woshn_sign_map_scale").GetFloat();
     marker = null;
 
     id = 0;
@@ -85,7 +85,7 @@ class m8f_hn_Sign : Actor
   {
     string text    = note;
     int    sec     = Thinker.Tics2Seconds(spawnTime);
-    bool   addTime = CVar.GetCVar("m8f_hn_sign_add_time").GetInt();
+    bool   addTime = CVar.GetCVar("m8f_woshn_sign_add_time").GetInt();
     if (addTime)
       {
         text.AppendFormat("\n\n        %02d:%02d:%02d",
@@ -127,7 +127,7 @@ class m8f_hn_WoodenSign : m8f_hn_Sign
     marker = m8f_hn_SignMarker(Spawn("m8f_hn_WoodenSignMarker", pos));
     marker.init(mapMarkerScale, self);
 
-    bool addToCompass = CVar.GetCVar("m8f_hn_sign_with_pointer").GetInt();
+    bool addToCompass = CVar.GetCVar("m8f_woshn_sign_with_pointer").GetInt();
     if (addToCompass)
     {
       let eventHandler = m8f_hn_EventHandler(EventHandler.Find("m8f_hn_EventHandler"));
@@ -186,7 +186,7 @@ class m8f_hn_TransparentSign : m8f_hn_Sign
     marker = m8f_hn_SignMarker(Spawn("m8f_hn_TransparentSignMarker", pos));
     marker.init(mapMarkerScale, self);
 
-    bool addToCompass = CVar.GetCVar("m8f_hn_sign_with_pointer").GetInt();
+    bool addToCompass = CVar.GetCVar("m8f_woshn_sign_with_pointer").GetInt();
     if (addToCompass)
     {
       let eventHandler = m8f_hn_EventHandler(EventHandler.Find("m8f_hn_EventHandler"));
@@ -213,7 +213,7 @@ class m8f_hn_MetalSign : m8f_hn_Sign
     marker = m8f_hn_SignMarker(Spawn("m8f_hn_MetalSignMarker", pos));
     marker.init(mapMarkerScale, self);
 
-    bool addToCompass = CVar.GetCVar("m8f_hn_sign_with_pointer").GetInt();
+    bool addToCompass = CVar.GetCVar("m8f_woshn_sign_with_pointer").GetInt();
     if (addToCompass)
     {
       let eventHandler = m8f_hn_EventHandler(EventHandler.Find("m8f_hn_EventHandler"));

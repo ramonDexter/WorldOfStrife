@@ -19,17 +19,17 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = 1096.316f;
+		viewpositionx = -2183.687f;
 		defaulttoptexture = "BRKGRY17";
 		overrideceilheight = false;
-		viewpositiony = 541.9277f;
+		viewpositiony = -8934.108f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -42,19 +42,73 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 32;
+			gridsize = 8;
 			background = "";
 			backoffsety = 0;
 		}
 		overridebottomtexture = false;
 		defaultbottomtexture = "BRKGRY17";
-		defaultfloortexture = "F_GRASS";
+		defaultfloortexture = "BRKBRN04";
 		defaultwalltexture = "BRKGRY17";
 		overridetoptexture = false;
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.1442932f;
+		viewscale = 0.8650348f;
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -30016;
+					outertop = 32704;
+					outerbottom = -22976;
+				}
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+			}
+		}
 		
 		scriptdocuments
 		{
@@ -66,7 +120,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 131;
+				caretposition = 261;
 			}
 			
 			document1
@@ -76,7 +130,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 51;
+				caretposition = 23731;
+				firstvisibleline = 679;
 				activetab = true;
 			}
 		}

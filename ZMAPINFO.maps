@@ -212,6 +212,18 @@ map MAP14 "Eastcliff Village" {
 	NoInfighting
 	
 }
+map MAP15 "Tabitian Castle" {
+	sky1 = "SKYRGGR"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	//flags
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	NoInfighting
+}
 
 
 map MAP909 "Southern Plains" {

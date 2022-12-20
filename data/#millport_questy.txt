@@ -1,0 +1,208 @@
+////////////////////////////////////////////////////////////////////////////////
+// millport common questy: /////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+# Derwin, Strife items vendor convID 13
+1 quest:
+1) sezen nahradni dily k 3D tiskarne
+	>> derwin shani dily k 3D tiskarne, ale zadny z mistnich techmisthu takove dily nema
+	>> dily se daji sehnat u techsmithe v eastcliffu, ale ten za ne chce soucastky od techsmithe v aeredale
+	>> techsmith dily v aeredale preda dily
+	>> techsmith v eastcliffu preda dily
+	>> po navratu odmena
+
+# Quincy, energy ammo vendor convID 10
+quest:
+1) najdi Quincyho sestru, ktera zmizela nekde v okoli Ravenrocku
+	>> quincy te pozada o nalezeni sestry, ktera se nevratila z vyletu do ravenrocku
+	>> vydej se do ravenrocku 
+	>> mistni hostinskej si na ni matne pamatuje, byla tady s posledni vypravou pivnich turistu, pry odels nekam na zapad ozrala jak delo
+	>> quincyho sestra je u mistniho poustevnika, ktery ji nasel, jak lezi nedaleko stare veze
+	>> bohuzel, sestra to prepiskla a zemrela na otravu alkoholem
+	>> tak skoncil smutny pribeh jedne alkoholicky
+	>> bratr podekuje, odmena
+
+# Gregory, techsmith, convID 14
+quest:
+1) sezen dodavatele soucastek 
+	>> dodavatele sezenes v Aeredale, mistni techmisth si rad privydela
+
+# soudce zmeny Afer Valgus Reberio convID 38
+4 questy:
+1) dones zpravu starostovi Ravenrocku
+2) ziskej priznani nebo dukazy proti kaciri v Commons >> cerny doktor
+3) najdi ztraceneho syna farmare z Ravenrocku
+4) zlikviduj kacire v Eastcliffu
+
+# reznik Ian convID 46
+1) sezen lepsi dodavatele masa 
+	>> farmar cestou k eastcliffu muze dodavat maso NEBO farma v Aeredale muze dodavat maso
+
+# starosta mesta Flavius Nefarius convID 21
+2 questy:
+1) vyber najemne od obyvatel Commons
+2) najdi ztraceneho urednika - urednik utekl do eastcliffu
+
+# guverner convID 22
+	- spolupracuje s bindery
+	- hleda spiklence proti Cisari
+	- 3 questy: 
+1) najdi ztraceneho spiona
+2) ziskej informace o obchodnikovi Hagenovi
+3) nech se od Hagena najmout >> primo se dostan do jeho organizace
+4) ziskej dukazy proti hagenovi
+
+# obchodnik Herbert Ignacius Hagen  convID
+	- sefuje mistnimu podsveti
+	- guverner se ho snazi dostat
+	- je jednim z osnovatelu spiknuti proti Cisari
+4 questy:
+1) Vyber vypalne od stankaru na promenade
+2) najdi a zabij zradce Eugena Lloyda
+3) vloupej se k shipping gilde a ukradni uredni zaznamy
+4) zabij mistniho zastupce shipping gildy >> tady napojeni na questy od guvernera
+
+# biskup v katedrale Albus Valerius convID
+- spolupracuje s bindery
+- hleda kacire ve meste a v okolnich vesnicich
+1) najdi kacire v aeredale 
+	>> starosta aeredale pozadal biskupa o zaslani inkvizitora, aby nalezl kacire ve vsi
+	>> je potreba vyzpovidat obyvatele ve vsi, promyslet dialogy tak aby to nebyla prima linka, ale vyptavani se na detaily
+	>> kacir se proste usvedci sam, ze vsechno vykeca
+	>> kacire zatknout 
+		> mozna nejakej script na teleport stranych a odvedeni za roh, kde je odspawnovat
+2) najdi kacire v ravenrocku
+	>> jeden z mistnich se zabyva studiem zakazanych umeni, zije ve stodole za pivovarem (!!DODELAT!!)
+	>> ukryva nejruznejsi kacirske artefakty >> artefakty posbirat (kacir nebude doma)
+	>> artefakty odevzdat biskupovi, odmena
+3) najdi kacire v eastcliffu
+	>> mistni slechtic je kacir, zabyva se studiem zakazanych znalosti
+	>> slechticnechce s inkvizici nic mit, nabizi biskupovi darek, jeho dum v millportu (zamcenej dum naproti hospode)
+	>> biskup souhlasi, odmena
+	>> pokud se hrac vrati ke slechtici, druha odmena
+
+# cerny doktor v commons Richards convID 32
+1) shani lepsiho dodavatele ilegalnich chemikalii
+	>> pozada hrace o sehnani urcitych ne uplne legalnich chemikalii
+	>> dodavatele lze najit v ravenrocku
+
+# techmisth Yorick convid 33
+1) chybi mu naradi, potrebuje sehnat lepsi naradi; 
+	>> lepsi naradi je k sehnani u technika v elektrarne u Ravenrocku, tam je ale potreba ziskat pristup od starosty, ktery chce vymenou pomoct s problemem dodavek proudu
+
+# reznik v commons convid 49
+1) shani lepsiho dodavatele masa 
+	>> dodavatele sezenes v eastcliffu, doplnit do dialogu u jednoho z farmaru
+
+# velitel policie - town guard convID
+1) zlikviduj kraminalniky v docich - nove je vyspawnovat, ne ty co uz jsou v mape
+2) vysetri serii kradezi v commons
+	>> v commons dochazi ke kradezim, mistni podeziraji jednoho z mistnich
+	>> kdyz se hraci podari vloupat do jeho bytu (script na zamceny dvere)
+	>> najde tam ukradeny veci jednotlivych lidi
+	>> veci muze vzit a vratit
+	>> kdzy sebere posledni vec, spawn majitele a dialog, pak spawn straznych a zlodeje odvest + despawn
+	>> konec u sefa, odmena
+3) vysetri zmizeni v commons
+	>> jeden z obyvatel commons zmizel
+	>> vypatat se sousedu, pak
+	>> prohledat jeho byt, najdes papir s poznamkami o aeredale
+	>> v aeredale ho videli, ale neni tam, sel nekam smerem k tabitskemu hradu
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// aeredale questy /////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+# techmisth:
+- zamorena studna - HOTOVO
+
+# starosta
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// ravenrock questy ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+# spravce pivovaru:
+1) dones kontrakt na dodavky piva do okolnich vesnic
+	>> dones smlouvu do eastliffu
+	>> dones smlouvu do aeredale
+2) zjisti co se deje na pude
+	>> pracovnici slysi z pudy podivne zvuky, sef pivovaru te pozada o prosetreni
+		-- udelat mensi fade script
+			> hrac se jako nekde na pude ukryje, 
+			> fade out, 
+			> teleportovat actory mladeze, 
+			> fade in, 
+			> start conversation
+	>> na pude se schazi mistni mladez, objevili tam stare zasoby lezaku
+	>> sef pivovaru ti podekuje za nalezeni starych zasob archivniho lezaku
+
+# starosta: 
+1) vypadky elektriny - zjisti co stoji za vypadky dodavek elektriny do mesta
+	>> starosta hrace pozada o zjisteni co pusobuje vypadky proudu do mesta. Vedeni je zakopane v zemi, takze by ho nic nemelo ohrozovat.
+	>> hrac zjisti, ze vedeni poskodili kaciri, kteri tabori nedaleko mesta ve skalach
+	>> za odmenu da hraci klice od elektrarny, ktere hrac potrebuje ke splneni dalsiho questu
+2) zajisti u tekgildy v millportu opravu vedeni do mesta
+	>> starosta pozada hrace, aby zajistil opravu vedeni u tekgildy v millportu
+	>> tekgilda vedeni opravi, pokud hrac zajisti dodavku materialu od techsmithu ve meste
+	>> dodavky materialu zajisti dva techmisthove z millportu a jeden z eastcliffu
+
+# mistni slechtic:
+1) co se deje ve sklepe
+	>> klasika -  ze sklepa se ozyvaji divne zvuky, zjisti co se tam deje
+	>> jedna ze sten ve sklepe se zhroutila, do sklepa zacalay lezt potvory ze starych chodeb
+	>> vycisti sklepeni a stare chodby
+	>> u mistniho techsmithe opatri jed na likvidaci hnizda potvor
+	>> pomoci jedu znic hnizdo potvor
+2) dones vzkaz bratranci v eastcliffu
+	>> dones balicek bratranci v eastcliffu (slechtic u vstupu)
+	>> po navratu odmena
+3) kam zmizela dcera
+	>> slechticova dcera zmizela
+	>> prozkoumej jeji pokoj
+	>> najdes denik, v nem poznamky o aeredale
+	>> dcera v aeredale neni, ale mistni mluvi o eastcliffu
+	>> dcera se ukryva v eastcliffu u slechticova bratrance, jeji otec ji bil a ona od nej utekla, bratranec ji ukryva
+	>> pokusit se napsat dialog tak, aby se tatik tvaril jako milius, ze jako milovana dcerka zmizela a on se o ni boji, atp.
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// eastcliff questy ////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+# hospodsky:
+1) vycisti sklep od potvor - HOTOVO
+# dcera hospodskeho
+1) dones jidlo a vzkaz milemu - HOTOVO
+
+# starosta:
+1) vycisti farmy od pavouku a znic tri hnizda - HOTOVO
+2) zlikviduj bandity ve vodarne - HOTOVO
+
+# sef mistni shipping gildy
+1) dones vzkaz do shpping guildy v ravenrocku
+	>> sef ti preda balicek
+	>> v ravenrocku udelat script: pokud hrac vstoupi do mapu po svych, udelat prepadeni nekde u vstupu do mapy / pokud hrac pouzije fast travel pomoci travellera, upravit travel script >> transport hrace do mapy a pokracovat jako by sel po svych >> v kratkosti modifikovat transport script, nebo !upravit dialog s travellerem!
+2) zjisti, kam zmizela posledni lod z millportu
+	>> sef shipping guildy v eastcliffu postrada posledni lod z millportu, ktera nedoplula. Pozada hrace o jeji nalezeni
+	>> v intermission mape je stary hrad na pobrezi, kde sidli pirati, kteri lod odlakali a vykradli. Lod je zakotvena nedaleko hradu
+		-- promyslet: bud umistit lod rovnou, nebo ji umistit na mapspot pri zadani questu...
+	>> pobit piraty, zajisti vzacny naklad a vratit se k sefovi shipping guildy v eastcliffu
+
+# mistni knez
+1) 
+2)
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+

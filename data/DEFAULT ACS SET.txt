@@ -1,0 +1,404 @@
+#include "zcommon.acs"
+
+//Functions
+//===============================================================================================
+//script "polyDRswing_Right" (int poly, int spd)
+//script "polyDRswing_Right" (int poly, int spd)
+/*
+SOA_LockedpolyDoor_Right(int poly, int spd, str inv_key)
+SOA_LockedpolyDoor_Left(int poly, int spd, str inv_key)
+SOA_LockedDoor(int doorID, str inv_key)
+*/
+
+function void SOA_LockedpolyDoor_Right(int poly, int spd, str inv_key)
+{
+
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		ACS_NamedExecuteAlways("polyDRswing_Right", 0, poly, spd);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void SOA_LockedpolyDoor_Left(int poly, int spd, str inv_key)
+{
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		ACS_NamedExecuteAlways("polyDRswing_Left", 0, poly, spd);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void SOA_LockedDoor(int doorID, str inv_key)
+{
+	if(CheckActorInventory(0, inv_key) == true)
+	{
+		Print(l:"Door unlocked!");
+		TakeActorInventory(0, inv_key, 1);
+		Generic_Door(doorID, 16, 0, 105, 0);
+	}
+	else
+	{
+		Print(l:":[ Potrebujes klic: ", s:inv_key, s:" ]:");
+	}
+}
+function void printSprite(str msgSprite, int msgID, int msgX, int msgY, int delayX)
+{
+    SetFont(msgSprite);
+    HudMessage(s:"A"; HUDMSG_PLAIN, msgID, CR_UNTRANSLATED, msgX, msgY, delayX);
+}
+
+function void eraseHudmsg(int msgID)
+{
+	HudMessage(s:""; HUDMSG_PLAIN, msgID, CR_UNTRANSLATED, 0, 0, 0);
+}
+
+function void hudMsgCenter(str msgText,int msgInt, int msgID, int delayX)
+{
+	HUDMessage(s:msgText; HUDMSG_PLAIN, msgID, CR_Yellow, 0.5, 0.45, delayX);
+}
+
+//Custom menu functions
+//==--------------------------------------------------==
+function void displayMenuHeader(str headerText)
+{
+	SetFont("SMALLFONT");
+    HUDMessage(s:headerText;
+			HUDMSG_PLAIN, 1, CR_GREEN, 0.5, 0.3, 0.0);
+    HUDMessage(s:"Use 'weapon state key1' to cycle through options\nUse 'weapon state key2' to select an option";
+			HUDMSG_PLAIN, 2, CR_Yellow, 0.5, 0.36, 0.0);
+}
+
+function void displayIndicator(int msgNr, int coordX, int coordY)
+{
+	SetFont("BigFont");
+	//Selection indicator (At "OPEN DOOR" by default)
+    HUDMessage(s:">";
+			HUDMSG_PLAIN, msgNr, CR_RED, coordX, coordY, 0.0);
+}
+
+function void choiceText(str choiceTxt, int msgNr, int coordX, int coordY)
+{
+	SetFont("SMALLFONT");
+	HUDMessage(s:choiceTxt;
+			HUDMSG_PLAIN, msgNr, CR_WHITE, coordX, coordY, 0.0);
+
+}
+//==--------------------------------------------------==
+
+//Original code by Isle
+//sprite - passing -1 will not draw sprite
+//must be in loop, so it redraws
+/*
+script 1234 (void)
+{
+	while(true)
+	{
+		HudMessageOnActor(1234, 5566, 0, 0, 0, 0, 1024, -1, "OBJECT", 35*10, "CR_GOLD");
+		delay(1);
+	}
+}
+*/
+function void HudMessageOnActor(int tid, int msgID, int hudX, int hudY, int xOffset, int yOffset, int range, str sprite, str text, int holdTime, str colour)
+{
+
+	int dist, angle, vang, pitch, x, y;
+
+	if (holdTime == 0) { holdTime = 0.1; }
+	if (hudX == 0) { hudX = 640; }
+	if (hudY == 0) { hudY = 480; }
+
+	if(sprite != -1)
+	{
+
+		SetFont(sprite);
+		text = "A";
+
+	}
+
+	SetHudSize(hudX, hudY, 1);
+	x = GetActorX(tid) - GetActorX(0);
+	y = GetActorY(tid) - GetActorY(0);
+
+	vang = VectorAngle(x,y);
+	angle = (vang - GetActorAngle(0) + 1.0) % 1.0;
+
+	if(((vang+0.125)%0.5) > 0.25) dist = FixedDiv(y, sin(vang));
+	else dist = FixedDiv(x, cos(vang));
+
+	if ((angle < 0.23 || angle > 0.85) && (dist >> 16) < range)
+	{
+
+		if (GetActorPitch(0) >= -0.5 && GetActorPitch(0) <= 0.5)
+		{
+
+			pitch = VectorAngle(dist, GetActorZ(tid) - (GetActorZ(0) + GetActorViewHeight(0)));
+			pitch += FixedMul(GetActorPitch(0), 1.2) % 1.0;
+
+			if ((hudX/2) * sin(angle) != 0 && cos(angle) != 0 && (hudX/2) * sin(pitch) != 0 && cos(pitch) != 0)
+			{
+
+				x = hudX/2 - ((hudX/2) * sin(angle) / cos(angle));
+				y = hudY/2 - ((HUDX/2) * sin(pitch) / cos(pitch));
+
+				x+=xOffset;
+				y+=yOffset;
+
+				HudMessage(l:text; HUDMSG_PLAIN, msgID, colour, (x << 16), (y << 16), holdTime);
+
+			}
+
+		}
+
+	}
+
+}
+//===============================================================================================
+
+
+
+
+//Variables declaration
+//global scope
+//--------------------------------------------------------------
+global int 01: minesPower;
+global int 02: poachersLeft;
+global int 03: poachersKilled;
+global int 04: mapNumber;
+
+//world scope
+//--------------------------------------------------------------
+world int 01: killedSpider;
+
+
+script "enter" ENTER
+{
+	ACS_NamedExecute("HUDswitchScript", 0);
+	//hide quest markers upon startup
+	//---------------------------------------
+	Thing_activate(44);
+	Thing_Activate(46);
+	Thing_Activate(47);
+	Thing_Activate(48);
+	Thing_Activate(49);
+	//---------------------------------------
+}
+
+script "sectorColorsInit" OPEN
+{
+	//watercolor - hexen water
+    sector_setColor(8008,0,50,150);
+	//watercolor - strife water
+	sector_setColor(8009, 75, 139, 155);
+	//watercolor - strife waste water
+	sector_setColor(8010, 63, 71, 23);
+
+	//radiation glow
+    sector_setfade(9009, 38,105,21);
+
+}
+
+
+//ACS HUD scripts
+//=====================================================================================
+//Main HUD - switchable
+//==----------------------------------------------------------------==
+//variables
+bool HUDswitch = true;
+str location = "Silent Hills, Inquisitor base";
+//script
+script "HUDswitchScript" (void)
+{
+	if(HUDswitch == true)
+	{
+		Print(s:"\c[green]-=> INFO HUD ON <=-");
+		ACS_NamedExecute("mainHUDswitchable",0);
+		HUDswitch = false;
+
+	}
+	else if(HUDswitch == false)
+	{
+		Print(s:"\c[red]-=> INFO HUD OFF <=-");
+		ACS_NamedTerminate("mainHUDswitchable", 0);
+		eraseHudmsg(991);
+		HUDswitch = true;
+	}
+
+}
+script "mainHUDswitchable" (void)
+{
+    While(True)
+    {
+
+        HUDMessage(s: "LOC: ", l:location;
+			HUDMSG_PLAIN, 991, CR_YELLOW, 0.5, 0.01, 0);
+		Delay(1);
+    }
+}
+//==----------------------------------------------------------------==
+
+
+//LOCATION CHANGER
+//==--------------------------------------------------==
+script "locator" (int locID)
+{
+	str locationArray[99] = {
+		"", //0
+        "", //1
+		};
+
+		/*
+	str infoItemsArray[9] = {
+		"m33infoLoc00",
+		"m33infoLoc01",
+		"m33infoLoc02",
+		"m33infoLoc03",
+		"m33infoLoc04",
+		"m33infoLoc05",
+		"m33infoLoc06",
+		"m33infoLoc07",
+		"m33infoLoc08",
+	};*/
+
+	if(locID == locID)
+	{
+		location = locationArray[locID];
+		/*
+		if(!CheckActorInventory(0, infoItemsArray[locID]))
+		{
+			GiveActorInventory(0, infoItemsArray[locID], 1);
+		}
+		*/
+	}
+}
+//==--------------------------------------------------==
+
+
+//POLYOBJECT DOORS
+//=============================================================================================
+//universal door script - one script to rule dem all
+//==--------------------------------------------------==
+#define MAX_SWINGING_DOORS 1000
+bool polyDoor[MAX_SWINGING_DOORS]; //'dynamic' variable = array
+//==--------------------------------------------------==
+//universal door script with variable sound
+//==--------------------------------------------------==
+script "polyDRswing_Right" (int poly, int spd)
+{
+	if(!polyDoor[poly])
+	{
+		Polyobj_RotateRight(poly, spd, 64);
+		if(spd  < 16)
+		{
+			AmbientSound("DoorCreak", 127);
+		}
+		else if(spd >= 16)
+		{
+			AmbientSound("sounds/officeDopen", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly])
+	{
+		Polyobj_RotateLeft(poly, spd, 64);
+		if(spd  < 16)
+		{
+			AmbientSound("DoorCreak", 127);
+		}
+		else if(spd >= 16)
+		{
+			AmbientSound("sounds/officeDclose", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+script "polyDRswing_Left" (int poly, int spd)
+{
+	if(!polyDoor[poly])
+	{
+		Polyobj_RotateLeft(poly, spd, 64);
+		if(spd  < 16)
+		{
+			AmbientSound("DoorCreak", 127);
+		}
+		else if(spd >= 16)
+		{
+			AmbientSound("sounds/officeDopen", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly])
+	{
+		Polyobj_RotateRight(poly, spd, 64);
+		if(spd  < 16)
+		{
+			AmbientSound("DoorCreak", 127);
+		}
+		else if(spd >= 16)
+		{
+			AmbientSound("sounds/officeDclose", 127);
+		}
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+script "polyDRSlide" (int poly, int angle, int dist)
+{
+	if(!polyDoor[poly])
+	{
+		Polyobj_Move(poly, 24, angle, dist);
+		PolyWait(poly);
+		polyDoor[poly] = true;
+	}
+	else if(polyDoor[poly])
+	{
+		Polyobj_Move(poly, 24, -angle, dist);
+		PolyWait(poly);
+		polyDoor[poly] = false;
+	}
+}
+//==--------------------------------------------------==
+//=============================================================================================
+
+
+
+
+
+//journal
+//==--------------------------------------------------==
+script "journal" (void)
+{
+	StartConversation(777, 0);
+}
+//==--------------------------------------------------==
+
+
+
+
+
+//surgical unit
+//----------------------------------------------------------------------
+script "surgUnit" (void)
+{
+	StartConversation(701, 0);
+}
+script 701 (void)
+{
+	int activatorHealth;
+	activatorHealth = (GetActorProperty(0, APROP_SpawnHealth));
+
+	SetActorProperty(0, APROP_Health, activatorHealth);
+}
+//----------------------------------------------------------------------
+

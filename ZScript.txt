@@ -3,30 +3,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 version "4.6.0"
 
-// statusbar ///////////////////////////////////////////////////////////////////
-#include "zscript/wosSTATUSBAR.zs"
-////////////////////////////////////////////////////////////////////////////////
-
-// game ////////////////////////////////////////////////////////////////////////
-//#include "zscript/wosCollision.zs"
-#include "zscript/wosBase.zs"
-#include "zscript/wosWeapons.zs"
-#include "zscript/wosPlayer.zs"
-#include "zscript/wosItems.zs"
-#include "zscript/wosTokens.zs"
-#include "zscript/wosKeys.zs"
-#include "zscript/areaNames.zs"
-#include "zscript/projectile.zs"
-#include "zscript/destructibledeco.zs"
-#include "zscript/mapMarkers.zs"
-#include "zscript/wosHandler.zs"
-#include "zscript/neoworm.zs"
-#include "zscript/wosdebug.zs"
-#include "zscript/zcasing.zs"
-#include "zscript/wosmonsters.zs"
-#include "zscript/wosswitches.zs"
-
-////////////////////////////////////////////////////////////////////////////////
 
 //  mechanics  /////////////////////////////////////////////////////////////////
 #include "zscript/mechanics/tilt_ini.zs"
@@ -76,6 +52,33 @@ version "4.6.0"
 #include "zscript/mechanics/m8f_trading/m8f_tl_acs_helper.txt"
 */
 ////////////////////////////////////////////////////////////////////////////////
+
+// statusbar ///////////////////////////////////////////////////////////////////
+#include "zscript/wosSTATUSBAR.zs"
+////////////////////////////////////////////////////////////////////////////////
+
+// game ////////////////////////////////////////////////////////////////////////
+//#include "zscript/wosCollision.zs"
+#include "zscript/wosBase.zs"
+#include "zscript/wosWeapons.zs"
+#include "zscript/wosPlayer.zs"
+#include "zscript/wosItems.zs"
+#include "zscript/wosTokens.zs"
+#include "zscript/wosKeys.zs"
+#include "zscript/areaNames.zs"
+#include "zscript/projectile.zs"
+#include "zscript/destructibledeco.zs"
+#include "zscript/mapMarkers.zs"
+#include "zscript/wosHandler.zs"
+#include "zscript/neoworm.zs"
+#include "zscript/wosdebug.zs"
+#include "zscript/zcasing.zs"
+#include "zscript/wosmonsters.zs"
+#include "zscript/wosswitches.zs"
+#include "zscript/wosdecorations.zs"
+
+////////////////////////////////////////////////////////////////////////////////
+
 
 //  monsters  //////////////////////////////////////////////////////////////////
 #include "zscript/monsters/acolyte.zs"

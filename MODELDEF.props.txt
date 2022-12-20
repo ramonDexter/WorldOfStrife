@@ -4267,6 +4267,39 @@ model wodD_ss_surgeryTray {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+////////////////////////////////////////////////////////////////////////////////
+model wosD_hl2_combineBinocular {
+	path "models/props/hl2/"
+	model 0 "combineBinocular.md3"
+	scale 1.05 1.05 1.05
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_combineBinocular2 {
+	path "models/props/hl2/"
+	model 0 "combineBinocular2.md3"
+	scale 1.15 1.15 1.15
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+/*
+model soaD_hl2_combineBinocularItem {
+	path "models/props/hl2/"
+	model 0 "combineBinocularitem.md3"
+	scale 1.55 1.55 1.55
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+*/
+////////////////////////////////////////////////////////////////////////////////
+
+model wosD_luminorb {
+	path "models/props/luminorb/"
+	model 0 "luminorb.md3"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 4.0
+	frameindex DUMM A 0 0
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

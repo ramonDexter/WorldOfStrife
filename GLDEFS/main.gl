@@ -266,3 +266,10 @@ object wosD_tekStreetLamp2c {
 	frame DUMM { light tekStreetLamp2cLight1 }
 	frame DUMMA { light tekStreetLamp2cLight2 }
 }
+
+pointlight luminorbLight {
+	color 1.0 1.0 0.98
+	size 96
+	offset 0.0 0.0 0.0
+	attenuate 1
+}

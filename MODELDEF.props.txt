@@ -239,7 +239,7 @@ model wosD_dexBenchlibrary {
 	path "models/props/librarybench/"
 	model 0 "dx_benchlibrary.md3"
 	skin 0 "WHBenchLibraryTex1.png"
-	scale 0.75 0.75 0.75
+	scale 0.56 0.56 0.56
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
@@ -4293,6 +4293,7 @@ model soaD_hl2_combineBinocularItem {
 */
 ////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////
 model wosD_luminorb {
 	path "models/props/luminorb/"
 	model 0 "luminorb.md3"
@@ -4300,6 +4301,63 @@ model wosD_luminorb {
 	offset 0.0 0.0 4.0
 	frameindex DUMM A 0 0
 }
+model wosD_luminorb2 {
+	path "models/props/luminorb/"
+	model 0 "luminorb.md3"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 4.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+Model wosD_asc_Palm01 {
+	path "models/props/palmtree/"
+   	Model 0 "palm1.md3" 
+   	Skin 0 "palm1a.png"
+   	Scale 20.0 20.0 20.0
+   	FrameIndex DUMM A 0 0
+}
+Model wosD_asc_Palm02b {
+	path "models/props/palmtree/"
+	Model 0 "palm1.md3" 
+	Skin 0 "palm3a.png"
+	Scale 20.0 20.0 20.0
+	FrameIndex DUMM A 0 0
+}
+
+Model wosD_asc_Palm05 {
+	path "models/props/palmtree/"
+	Model 0 "palm2.md3" 
+	Skin 0 "palm2a.png"
+	Scale 1.0 1.0 1.0
+	FrameIndex DUMM A 0 0
+}
+
+Model wosD_asc_Palm08 {
+	path "models/props/palmtree/"
+	Model 0 "palm2.md3" 
+	Skin 0 "palm2b.png"
+	Scale 1.0 1.0 1.0
+	FrameIndex DUMM A 0 0
+}
+
+Model wosD_asc_Palm04 {
+	path "models/props/palmtree/"
+	Model 0 "palm3.md3" 
+	Skin 0 "palm3b.png"
+	Scale 0.5 0.5 0.5
+	FrameIndex DUMM A 0 0
+}
+
+Model wosD_asc_Palm07 {
+   	path "models/props/palmtree/"
+	Model 0 "palm3.md3" 
+	Skin 0 "palm3c.png"
+	Scale 0.5 0.5 0.5
+	FrameIndex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

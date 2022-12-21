@@ -468,6 +468,11 @@ class wosOptDeco2_base : actor {
 			ticked = true;
 		}
 	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////
 

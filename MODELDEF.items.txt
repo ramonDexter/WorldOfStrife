@@ -1844,7 +1844,7 @@ model wosShadowArmor {
 model wosBinocular {
 	path "models/items/binocular/"
 	model 0 "dx_binocular.md3"
-	skin 0 "tx_binocular.png"
+	skin 0 "tx_binocular2.png"
 	scale 3.0 3.0 3.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
@@ -1852,7 +1852,7 @@ model wosBinocular {
 model dummy_binoc {
 	path "models/items/binocular/"
 	model 0 "dx_binocular.md3"
-	skin 0 "tx_binocular.png"
+	skin 0 "tx_binocular2.png"
 	scale 3.0 3.0 3.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0

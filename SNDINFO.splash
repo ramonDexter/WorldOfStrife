@@ -1,10 +1,9 @@
-//Splashes
-//=======================================================//
-$ifdoom
+// Splashes ////////////////////////////////////////////////////////////////////
+//$ifdoom
 
 world/watersplash		"sounds/splash/dssplash.wav"
 world/sludgegloop		"sounds/splash/dsploosh.wav"
 world/lavasizzle		"sounds/splash/dslvsiz.wav"
 world/drip				"sounds/splash/dsdrip.wav"
 world/hotsiz			"sounds/splash/dshtsiz.wav"
-//=======================================================//
+////////////////////////////////////////////////////////////////////////////////

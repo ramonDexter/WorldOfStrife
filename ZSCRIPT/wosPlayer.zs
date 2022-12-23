@@ -955,6 +955,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosi_StimDevice", 5);
 			//quicktravel
 			A_GiveInventory("wosQuickTravel", 1);
+			//binocular
+			A_GiveInventory("wosBinocular", 1);
 			//BlasterTurret_item
 			A_GiveInventory("wosInterceptordrone", 5);	
 			//DeployableShieldItem
@@ -988,6 +990,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosInstaLek", 5);
 			//quicktravel
 			A_GiveInventory("wosQuickTravel", 1);
+			//binocular
+			A_GiveInventory("wosBinocular", 1);
 			// gold
 			A_GiveInventory("Coin", 2500);
 		}

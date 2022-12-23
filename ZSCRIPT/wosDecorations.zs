@@ -58,12 +58,13 @@ class wosD_luminorb : actor {
 		+NOGRAVITY
 		+NOTARGET
 		+NEVERTARGET
+		Tag "luminorb";
 		Radius 4;
 		Height 8;
 	}
 	States {
 		Spawn:
-			DUMM A 1 bright light("luminorbLight");
+			DUMM A -1 bright light("luminorbLight");
 			Stop;
 	}
 }
@@ -75,6 +76,7 @@ class wosD_luminorb2 : actor {
 		+NOGRAVITY
 		+NOTARGET
 		+NEVERTARGET
+		Tag "luminorb";
 		Monster;
 		Speed 0.5;
 		Health 9999999;

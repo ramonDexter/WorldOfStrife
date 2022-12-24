@@ -57,6 +57,8 @@ class wosEnvSuit : wosPickup replaces EnvironmentalSuit {
                 invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("sounds/armorLight", CHAN_BODY, 0);
+				textureID txID_I_MSK2 = TexMan.CheckForTexture("I_MSK2", 0, 0);
+				invoker.icon = txID_I_MSK2;
             }
             Fail;
         UseEnd:
@@ -64,10 +66,19 @@ class wosEnvSuit : wosPickup replaces EnvironmentalSuit {
                 invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StopSound(CHAN_5);
+				textureID txID_I_MASK = TexMan.CheckForTexture("I_MASK", 0, 0);
+				invoker.icon = txID_I_MASK;
             }
             Fail;
         UseNot:
             TNT1 A 0 A_log("$M_ENVSUIT_filtersUsedUp");
+            TNT1 A 0 {
+                invoker.inUse = 0;
+                invoker.bUNDROPPABLE = 0;
+				A_StopSound(CHAN_5);
+				textureID txID_I_MASK = TexMan.CheckForTexture("I_MASK", 0, 0);
+				invoker.icon = txID_I_MASK;
+            }
             Fail;
         Usecheck:
             TNT1 A 0 A_log(String.Format("%s%i%s", stringtable.localize("$M_ENVSUIT_filtersLeft1"), invoker.charge, stringtable.localize("$M_ENVSUIT_filtersLeft2")));
@@ -77,14 +88,18 @@ class wosEnvSuit : wosPickup replaces EnvironmentalSuit {
 
 class wosPowerMask : PowerIronFeet {
 	
-	Override void AbsorbDamage(int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags) {
-		If(damageType=="Fire"||damageType=="Drowning"||damageType=="Gas") {
+	Override void AbsorbDamage(int damage, Name damageType, out int newdamage, Actor inflictor, Actor source, int flags)
+	{
+		If(damageType=="Fire"||damageType=="Drowning"||damageType=="Gas")
+		{
 			newdamage = 0;
 		}
 	}
-	Override void DoEffect() {
+	Override void DoEffect()
+	{
 		Super.DoEffect();
-		If(!(Level.maptime & 0x3f)) {
+		If(!(Level.maptime & 0x3f))
+		{
 			Owner.A_StartSound("misc/mask", CHAN_5);
 		}
 	}

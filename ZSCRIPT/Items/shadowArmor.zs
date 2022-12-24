@@ -56,6 +56,8 @@ class wosShadowArmor : wosPickup replaces ShadowArmor {
 				invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("flashlight/on", CHAN_BODY);
+				textureID txID_I_SHD2 = TexMan.CheckForTexture("I_SHD2", 0, 0);
+				invoker.icon = txID_I_SHD2;
 			}
 			Fail;
 		UseEnd:
@@ -63,11 +65,18 @@ class wosShadowArmor : wosPickup replaces ShadowArmor {
 				invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_SHD1 = TexMan.CheckForTexture("I_SHD1", 0, 0);
+				invoker.icon = txID_I_SHD1;
 			}
 			Fail;
 		UseNot:
 			TNT1 A 0 {
 				A_Log("$M_item_battsDepleted");
+				invoker.inUse = 0;
+                invoker.bUNDROPPABLE = 0;
+				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_SHD1 = TexMan.CheckForTexture("I_SHD1", 0, 0);
+				invoker.icon = txID_I_SHD1;
 			}
 			Fail;
 		UseReload:

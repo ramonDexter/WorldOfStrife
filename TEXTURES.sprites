@@ -5386,4 +5386,80 @@ Sprite "I_LMIN", 36, 30
 	Patch "MINEI", 8, 4
 }
 
+Sprite "I_BNCA", 36, 30
+{
+	Patch "BNCLIC", 4, 1
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_MSK2", 36, 30
+{
+	Patch "SXMASK", 6, 7
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_NDV2", 36, 30
+{
+	Patch "NEDEVA", 7, 7
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_RBR2", 36, 30
+{
+	Patch "RBRTHRI", 7, 9
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_RGN2", 36, 30
+{
+	Patch "RGNMOD1", 1, 7
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_SHD2", 36, 30
+{
+	Patch "SXSHD1", 10, 7
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_STL2", 36, 30
+{
+	Patch "STLTI", 6, 6
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_TRG2", 36, 30
+{
+	Patch "SXTARG", 10, 11
+	Patch "BODR", 29, 23
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
+Sprite "I_XXXX", 36, 30
+{
+}
+
 // End of texture definitions

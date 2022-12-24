@@ -58,6 +58,8 @@ class wosRegenModule : wosPickup {
                 invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("pickups/slowmo", CHAN_5);
+				textureID txID_I_RGN2 = TexMan.CheckForTexture("I_RGN2", 0, 0);
+				invoker.icon = txID_I_RGN2;
             }
             Fail;
 		UseReload:
@@ -86,10 +88,19 @@ class wosRegenModule : wosPickup {
                 invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StopSound(CHAN_5);
+				textureID txID_I_RGNM = TexMan.CheckForTexture("I_RGNM", 0, 0);
+				invoker.icon = txID_I_RGNM;
             }
             Fail;
 		UseNot:
             TNT1 A 0 A_Log("$M_item_battsDepleted");
+            TNT1 A 0 {
+                invoker.inUse = 0;
+                invoker.bUNDROPPABLE = 0;
+				A_StopSound(CHAN_5);
+				textureID txID_I_RGNM = TexMan.CheckForTexture("I_RGNM", 0, 0);
+				invoker.icon = txID_I_RGNM;
+            }
             Fail;
         Usecheck:
             TNT1 A 0 A_Log(String.Format("%s%i%s", stringtable.localize("$M_item_battsLeft1"), invoker.charge, stringtable.localize("$M_item_battsLeft2")));

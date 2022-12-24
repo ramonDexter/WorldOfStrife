@@ -60,6 +60,8 @@ class wosTargeter : wosPickup replaces Targeter {
 				invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("flashlight/on", CHAN_BODY);
+				textureID txID_I_TRG2 = TexMan.CheckForTexture("I_TRG2", 0, 0);
+				invoker.icon = txID_I_TRG2;
 			}
 			Fail;
 		UseEnd:
@@ -67,6 +69,8 @@ class wosTargeter : wosPickup replaces Targeter {
 				invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_TARG = TexMan.CheckForTexture("I_TARG", 0, 0);
+				invoker.icon = txID_I_TARG;
 			}
 			Fail;
 		UseNot:

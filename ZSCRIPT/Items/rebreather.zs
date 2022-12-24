@@ -65,6 +65,8 @@ class wosRebreather : wosPickup {
 				invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("sounds/armorLight", CHAN_BODY, 0);
+				textureID txID_I_RBR2 = TexMan.CheckForTexture("I_RBR2", 0, 0);
+				invoker.icon = txID_I_RBR2;
 			}
 			Fail;
 		UseEnd:
@@ -72,10 +74,19 @@ class wosRebreather : wosPickup {
 				invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StopSound(CHAN_5);
+				textureID txID_I_RBRT = TexMan.CheckForTexture("I_RBRT", 0, 0);
+				invoker.icon = txID_I_RBRT;
 			}
 			Fail;
 		UseNot:
             TNT1 A 0 A_Log("$M_REBREATHER_filtersUsedUp");
+			TNT1 A 0 {
+				invoker.inUse = 0;
+                invoker.bUNDROPPABLE = 0;
+				A_StopSound(CHAN_5);
+				textureID txID_I_RBRT = TexMan.CheckForTexture("I_RBRT", 0, 0);
+				invoker.icon = txID_I_RBRT;
+			}
             Fail;
 		UseCheck:
             TNT1 A 0 A_Log(String.Format("%s%i%s", stringtable.localize("$M_REBREATHER_filtersLeft1"), invoker.charge, stringtable.localize("$M_REBREATHER_filtersLeft2")));

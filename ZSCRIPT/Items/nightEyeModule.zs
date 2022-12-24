@@ -62,6 +62,8 @@ class wosNightEyeDevice : wosPickup {
                 invoker.inUse = 1;
                 invoker.bUNDROPPABLE = 1;
 				A_StartSound("flashlight/on", CHAN_BODY);
+				textureID txID_I_NDV2 = TexMan.CheckForTexture("I_NDV2", 0, 0);
+				invoker.icon = txID_I_NDV2;
             }
             Fail;
 		UseEnd:
@@ -69,10 +71,19 @@ class wosNightEyeDevice : wosPickup {
                 invoker.inUse = 0;
                 invoker.bUNDROPPABLE = 0;
 				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_NEDV = TexMan.CheckForTexture("I_NEDV", 0, 0);
+				invoker.icon = txID_I_NEDV;
             }
             Fail;
 		UseNot:
             TNT1 A 0 A_Log("$M_item_battsDepleted");
+            TNT1 A 0 {
+                invoker.inUse = 0;
+                invoker.bUNDROPPABLE = 0;
+				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_NEDV = TexMan.CheckForTexture("I_NEDV", 0, 0);
+				invoker.icon = txID_I_NEDV;
+            }
             Fail;
 		UseReload:
 			TNT1 A 0 {

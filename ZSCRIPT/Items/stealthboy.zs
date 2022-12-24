@@ -5,31 +5,31 @@
 ///////////////////////////////////////////////////
 
 class wosStealthBoy : wosPickup {
-    int depleteTimer;
+	int depleteTimer;
 	bool inUse;
 	
 	override void Tick() {
 		Super.Tick();
 		if ( owner != null && owner.player && owner.player.health < 1 ) { inUse = 0; }
-        if ( inUse == 1 ) {
-            if( self.charge == 0 ) { 
-                useInventory(self); 
-            } else if ( depletetimer >= 105 ) { //every 3 seconds >> 3*35tics
-                self.charge--;
-                depletetimer = 0;
-            } else {
-                depleteTimer++;
-            }
-            owner.GiveInventory("wosPowerStealth", 1); //power item
-        } else {
-            if ( owner != null ) {
-                owner.TakeInventory("wosPowerStealth", 1); //power item
-            }
-        }
+		if ( inUse == 1 ) {
+			if( self.charge == 0 ) { 
+				useInventory(self); 
+			} else if ( depletetimer >= 105 ) { //every 3 seconds >> 3*35tics
+				self.charge--;
+				depletetimer = 0;
+			} else {
+				depleteTimer++;
+			}
+			owner.GiveInventory("wosPowerStealth", 1); //power item
+		} else {
+			if ( owner != null ) {
+				owner.TakeInventory("wosPowerStealth", 1); //power item
+			}
+		}
 	}
 
-    Default {
-        //$Category "Powerups/WoS"
+	Default {
+		//$Category "Powerups/WoS"
 		//$Title "wos stealthboy"
 		-SOLID
 		+INVENTORY.INVBAR
@@ -42,10 +42,10 @@ class wosStealthBoy : wosPickup {
 		inventory.PickupMessage "$F_wosStealthBoy";
 		Mass StealthBoyWeight;
 		wosPickup.charge 100;
-    }
+	}
 
-    States {
-        Spawn:
+	States {
+		Spawn:
 			DUMM A -1;
 			Stop;
 		Use:
@@ -63,21 +63,29 @@ class wosStealthBoy : wosPickup {
 		UseStart:
 			TNT1 A 0 {
 				invoker.inUse = 1;
-                invoker.bUNDROPPABLE = 1;
+				invoker.bUNDROPPABLE = 1;
 				A_StartSound("flashlight/on", CHAN_BODY);
+				textureID txID_I_STL2 = TexMan.CheckForTexture("I_STL2", 0, 0);
+				invoker.icon = txID_I_STL2;
 			}
 			Fail;
 		UseEnd:
 			TNT1 A 0 {
 				invoker.inUse = 0;
-                invoker.bUNDROPPABLE = 0;
+				invoker.bUNDROPPABLE = 0;
 				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_STLT = TexMan.CheckForTexture("I_STLT", 0, 0);
+				invoker.icon = txID_I_STLT;
 			}
 			Fail;
 		UseNot:
 			TNT1 A 0 {
 				A_Log("$M_item_battsDepleted");
+				invoker.inUse = 0;
+				invoker.bUNDROPPABLE = 0;
 				A_StartSound("flashlight/off", CHAN_BODY);
+				textureID txID_I_STLT = TexMan.CheckForTexture("I_STLT", 0, 0);
+				invoker.icon = txID_I_STLT;
 			}
 			Fail;
 		UseReload:
@@ -104,16 +112,16 @@ class wosStealthBoy : wosPickup {
 		UseCheck:
 			TNT1 A 0 A_Log(String.Format("%s%i%s", stringtable.localize("$M_item_battsLeft1"), invoker.charge, stringtable.localize("$M_item_battsLeft2")));
 			Fail;
-    }
+	}
 }
 class wosPowerStealth : PowerInvisibility {
-    Default {
-        +INVENTORY.HUBPOWER
-        Powerup.Duration 0x7FFFFFFD;
-        Powerup.Strength 75;
-        Powerup.Mode "Cumulative";
+	Default {
+		+INVENTORY.HUBPOWER
+		Powerup.Duration 0x7FFFFFFD;
+		Powerup.Strength 75;
+		Powerup.Mode "Cumulative";
 		Inventory.Icon "";
-    }
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

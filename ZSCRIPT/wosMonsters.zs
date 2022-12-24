@@ -400,6 +400,145 @@ class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
 }*/
 ///////////////////////////////////////////////////////////////////////////////////////
 
+// base monster fancy projectile ///////////////////////////////////////////////
+/*	
+	TRACER SYSTEM FOR ZSCRIPT 2.4 | APRIL 7TH 2017
+	AUTHOR: (DENIS) BELMONDO
+	
+	USAGE: make a new class, inherit from soa_monsterTracer and change the properties as
+		   you wish.
+	
+	you may use this in your project. just leave this comment at the top of 
+	this script and give credit please! thank you :^)	
+*/
+class wosMonsterTracer : FastProjectile {
+
+	const TRACERDURATION	= 1; // tics
+	const TRACERFANCY		= 0; // fake bool
+	const TRACERLENGTH		= 96.0; // float
+	const TRACERSCALE		= 4.0; // float
+	const TRACERSTEP		= 0.01; // float
+	const TRACERFANCYSTEP	= 0.01; // float
+	const TRACERACTOR		= "wos_monsterTracerTrail"; // actor name
+
+	float x1, y1, z1;
+	float x2, y2, z2;
+	
+	// intentional briticism to avoid conflicts with "color" keyword.
+	static const color colours[] = {
+		"9b 5b 13",
+		"af 7b 1f",
+		"c3 9b 2f",
+		"d7 bb 43",
+		"ff ff 73",
+		"ff ff 73" /* appears twice so a segment of this color is longer
+					than the others. */
+	};
+	
+	// literally just stole this from wikipedia
+	float lerp(float v0, float v1, float t) {
+		return (1 - t) * v0 + t * v1;
+	}
+	
+	override void BeginPlay() {
+		// we don't want to lerp into weird coordinates
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x;
+		y2 = pos.y;
+		z2 = pos.z;
+	}
+	
+	override void Tick() {	
+		if (Level.isFrozen()) return;
+		
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x + vel.x / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		y2 = pos.y + vel.y / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		z2 = pos.z + vel.z / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		
+		if (TRACERFANCY == 0) {
+			for(float i = 0; i < 1; i += TRACERSTEP) {
+				A_SpawnParticle (
+					colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
+					SPF_FULLBRIGHT,
+					TRACERDURATION,
+					TRACERSCALE * i,
+					0,
+					(-pos.x) + lerp(x1, x2, i),
+					(-pos.y) + lerp(y1, y2, i),
+					(-pos.z) + lerp(z1, z2, i),
+					0, 0, 0,
+					0, 0, 0,
+					1.0
+				);
+			} 
+		}
+		else {
+			for(float i = 0; i < 1; i += TRACERFANCYSTEP) {
+				A_SpawnItemEx (
+					TRACERACTOR,
+					(-pos.x) + lerp(x1, x2, i),
+					(-pos.y) + lerp(y1, y2, i),
+					(-pos.z) + lerp(z1, z2, i),
+					0, 0, 0, 0,
+					SXF_ABSOLUTEPOSITION
+				);
+			}
+		}
+		Super.Tick();
+	}
+	Default {
+		//Damage (random(5,9));
+		DamageType "Bullet";
+		Height 1;
+		Radius 1;
+		Speed 125;
+		fastspeed 160;
+		+BLOODSPLATTER;
+	}
+	States {
+		Spawn:
+			TNT1 A 1;
+			Loop;
+		Death:
+			TNT1 A 0 A_SpawnItemEx("BulletPuff");
+		XDeath:
+			TNT1 A -1 A_Jump(256, "Null");
+			Stop;
+	}	
+}
+class wos_monsterTracerTrail : Actor {
+	Default {
+		Alpha 0.5;
+		RenderStyle "Add";
+		Scale 0.25;
+		+NOINTERACTION;
+	}
+	States {
+		Spawn:
+			PUFF A 2 Bright;
+			TNT1 A -1 A_Jump(256, "Null");
+			Stop;
+	}
+}
+// damage type for different types of enemies //
+class wosMonsterTracer_Acolyte : wosMonsterTracer {
+	Default {
+		DamageFunction (3*random(2,8));
+	}
+}
+class wosMonsterTracer_Rebel : wosMonsterTracer {
+	Default {
+		DamageFunction (3*random(1,4));
+	}
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////
 // monster XP replacers ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////

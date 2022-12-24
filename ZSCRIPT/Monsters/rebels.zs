@@ -99,9 +99,9 @@ class rebelEnemy : Rebel replaces Rebel {
 			Loop;
 		Missile:
 			HMN1 E 10 A_FaceTarget;
-			HMN1 F 5 BRIGHT A_ShootGun;
-			HMN1 E 3 A_ShootGun;
-			HMN1 F 5 BRIGHT A_ShootGun;
+			HMN1 F 5 BRIGHT A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			HMN1 E 3 A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			HMN1 F 5 BRIGHT A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			Goto See;
 		Pain:
 			HMN1 O 3;
@@ -178,11 +178,11 @@ class ShieldRebel : rebelEnemy {
 			Goto See;
 		Missile:
 			SREB E 7 A_FaceTarget();
-			SREB F 1 Bright A_ShootGun();
+			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			SREB E 2 A_FaceTarget();
-			SREB F 1 Bright A_ShootGun();
+			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			SREB E 2 A_FaceTarget();
-			SREB F 1 Bright A_ShootGun();
+			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			SREB E 3;
 			Goto See;
 		Pain:
@@ -298,14 +298,14 @@ class EliteRebel : rebelEnemy {
 		Melee:
 		Missile:
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_ShootGun();
-			RAVW F 2 Bright A_ShootGun();
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_ShootGun();
-			RAVW F 2 Bright A_ShootGun();
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_ShootGun();
-			RAVW F 2 Bright A_ShootGun();
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			RAVW E 20;
 			RAVW E 0 A_CPosRefire();
 			Goto Missile;
@@ -356,9 +356,9 @@ class GrenadeRebel : rebelEnemy {
 		Missile:
 			GREB E 0 A_JumpIfCloser(200, "Gun");
 			GREB E 10 A_FaceTarget();
-			GREB F 5 Bright A_SpawnProjectile("RebelGrenade");
+			GREB F 5 Bright A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));//
 			GREB E 10 A_FaceTarget();
-			GREB F 5 Bright A_SpawnProjectile("RebelGrenade");
+			GREB F 5 Bright A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			Goto See;
 		Gun:
 			GREB E 6 A_FaceTarget();
@@ -543,7 +543,7 @@ class RangerRebel : rebelEnemy {
 			Goto See;
 		Missile:
 			RANG E 35 A_FaceTarget();
-			RANG F 4 Bright A_CustomBulletAttack(1, 1, 1, random(1, 5)*8);
+			RANG F 4 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			RANG E 10 A_FaceTarget();
 			Goto See;
 		Pain:

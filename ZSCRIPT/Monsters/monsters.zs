@@ -170,23 +170,30 @@ class RV_CeilingTurret : CeilingTurret {
 	
 	States {
 		Spawn:
-			TURT Z 1 BRIGHT {
-				A_TurretLook(); 
-				A_SpawnItemEx("RV_TurretBase");
-			}
-			TURT ZZZZ 1 BRIGHT A_SpawnItemEx("RV_TurretBase");
+			TURT A 1 BRIGHT A_TurretLook(); 
+			TURT AAAA 1 BRIGHT;
 			Loop;
 		See:
-			TURT Z 1 BRIGHT {
-				A_Chase(); 
-				A_SpawnItemEx("RV_TurretBase");
+			TURT A 1 BRIGHT A_Chase();
+			TURT A 1 BRIGHT;
+			Loop;
+		Missile:
+		Pain:
+			TURT B 4 Slow {
+				A_SpawnProjectile("wosMonsterTracer_Acolyte", -1.0, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound ("monsters/rifle");
 			}
-			TURT Z 1 BRIGHT A_SpawnItemEx("RV_TurretBase");
+			TURT B 4 {
+				A_SpawnProjectile("wosMonsterTracer_Acolyte", -1.0);
+				A_StartSound ("monsters/rifle");
+			}
+			TURT D 3 Slow A_SentinelRefire();
+			TURT A 4 A_SentinelRefire();
 			Loop;
 		Death:
 			BALL A 6 Bright A_Scream();
 			BALL BCDE 6 Bright;
-            //TNT1 A 0 W_rewardXPturret(SpawnHealth());
+            TNT1 A 0 W_rewardXPturret(SpawnHealth());
 			TURT C -1;
 			Stop;
 	}

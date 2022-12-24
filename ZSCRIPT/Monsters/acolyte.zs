@@ -111,8 +111,8 @@ class wosAcolyte : Acolyte replaces Acolyte {
 			Loop;
 		Missile:
 			AGRD E 8 Fast Slow A_FaceTarget();
-			AGRD FE 4 Fast Slow W_shootGun_Acolyte(); //A_ShootGun();
-			AGRD F 6 Fast Slow W_shootGun_Acolyte(); //A_ShootGun();
+			AGRD FE 4 Fast Slow A_SpawnProjectile("wosMonsterTracer_Acolyte", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			AGRD F 6 Fast Slow A_SpawnProjectile("wosMonsterTracer_Acolyte", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
 			Goto See;
 		Pain:
 			AGRD O 8 Fast Slow A_Pain();

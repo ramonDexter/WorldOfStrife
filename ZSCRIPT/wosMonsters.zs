@@ -862,6 +862,125 @@ class wosReaver : Reaver replaces Reaver {
 	}
 }
 // sentinel XP replacer ///////////////////////////////////////////////////////////////
+class sentinelLaserTracer : FastProjectile {
+	/*const TRACERSPEED 		= 40;
+	const TRACERLENGTH		= 256.0; // float
+	const TRACERSCALE		= 8.0; // float
+	Default {
+		Damage 1;
+		Speed TRACERSPEED;
+	}*/
+	const TRACERDURATION	= 1; // tics
+	const TRACERLENGTH		= 256.0; // float
+	const TRACERSCALE		= 8.0; // float
+	const TRACERSTEP		= 0.005; // float
+	//const TRACERACTOR		= "laserTracerTrail"; // actor name
+	const TRACERSPEED		= 40;
+
+	float x1, y1, z1;
+	float x2, y2, z2;
+	
+	// intentional briticism to avoid conflicts with "color" keyword.
+	// modified with strife fitting colors
+	static const color colours[] = {
+		
+		// reversed order
+		"db 2b 2b",
+		"cb 23 23",
+		"bf 1f 1f",
+		"af 1b 1b",
+		"af 1b 1b",
+		"93 13 13"
+		// reversed order
+
+		/*"13 3f 0b",
+		"23 57 13",
+		"37 73 23",
+		"4f 8f 37",
+		"6b ab 4b",
+		"8b c7 67"*/ /* appears twice so a segment of this color is longer
+					than the others. */
+	};
+	
+	// literally just stole this from wikipedia
+	float lerp(float v0, float v1, float t) {
+		return (1 - t) * v0 + t * v1;
+	}
+	
+	override void BeginPlay() {
+		// we don't want to lerp into weird coordinates
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x;
+		y2 = pos.y;
+		z2 = pos.z;
+	}
+
+	void W_spawnLaserParticleTrail() {
+		if (level.frozen || globalfreeze) return;
+		
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x + vel.x / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
+		y2 = pos.y + vel.y / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
+		z2 = pos.z + vel.z / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;		
+		
+		for(float i = 0; i < 1; i += TRACERSTEP) {
+			A_SpawnParticle (
+				colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
+				SPF_FULLBRIGHT,
+				TRACERDURATION,
+				TRACERSCALE * (1 - i),
+				0,
+				pos.x - lerp(x1, x2, i),
+				pos.y - lerp(y1, y2, i),
+				pos.z - lerp(z1, z2, i),
+				0, 0, 0,
+				0, 0, 0,
+				1.0
+			);
+			/*A_SpawnItemEx (
+				TRACERACTOR,
+				pos.x - lerp(x1, x2, i),
+				pos.y - lerp(y1, y2, i),
+				pos.z - lerp(z1, z2, i),
+				0, 0, 0, 0,
+				SXF_ABSOLUTEPOSITION
+			);	*/		
+		}		
+	}
+
+    Default {
+        Radius 2;
+        Height 2;
+		Speed TRACERSPEED;
+        Damage 1;
+        Decal "redShotScorch";        
+		SeeSound "weapons/laserProj";
+		DeathSound "weapons/lasProjDeath";
+		+NOEXTREMEDEATH;
+    }
+    States {
+        Spawn:
+            LSTR A 1 Bright W_spawnLaserParticleTrail();
+            Loop;
+        Death:
+            TNT1 A 0 A_AlertMonsters();
+            TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 2.5, 0, frandom(-1,1),  frandom(-1,1), frandom(-1,1), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.05);
+			TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 1.75, 0, frandom(-0.5,0.5),  frandom(-0.5,0.5), frandom(-0.5,0.5), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.025);
+			TNT1 A 0 A_SpawnItemEx("lasPisFlashLong", 0, 0, 0, 0);			
+			TNT1 A 0 A_SpawnItemEx("laserExplosion", 0, 0, 0, 0);
+            TNT1 A 2 Light("BLASTERSHOT2");
+            TNT1 A 2 Light("BLASTERSHOT3");
+            TNT1 A 2 Light("BLASTERSHOT4");
+            TNT1 A 2 Light("BLASTERSHOT5");
+            Stop;
+	}
+}
 class wosSentinel : Sentinel replaces Sentinel {
     Default {
         //$Category "Monsters/WoS"
@@ -908,7 +1027,7 @@ class wosSentinel : Sentinel replaces Sentinel {
             goto See;
         Missile2:
             DUMA B 4 A_FaceTarget();
-            DUMA C 8 A_SentinelAttack();
+            DUMA C 8 A_SpawnProjectile("sentinelLaserTracer", 8, 0, frandom(-6.0, 6.0), 0, frandom(-6.0, 6.0));//A_SentinelAttack();
             DUMA C 4 A_SentinelRefire();
             Goto Missile+1;
         

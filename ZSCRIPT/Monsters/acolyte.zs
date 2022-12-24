@@ -195,6 +195,7 @@ Class wosAcolyteShield : Actor {
 		+NOBLOOD;
 		+DONTTHRUST; 
 		+NODAMAGE;
+		+GHOST;
 		Radius 22;
 		Height 20;
 		Mass 200;

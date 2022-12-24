@@ -6971,7 +6971,7 @@ actor wosD_dexTree4 21401 {
 			Stop
 	}
 }
-actor wosD_dexBushes1 : wosOptDeco_base 21402 {
+actor wosD_dexBushes1 : wosOptDeco2_base 21402 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes1"
 	+SOLID
@@ -6987,7 +6987,7 @@ actor wosD_dexBushes1 : wosOptDeco_base 21402 {
 			Stop
 	}
 }
-actor wosD_dexBushes2 : wosOptDeco_base 21403 {
+actor wosD_dexBushes2 : wosOptDeco2_base 21403 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes2"
 	+SOLID
@@ -7003,7 +7003,7 @@ actor wosD_dexBushes2 : wosOptDeco_base 21403 {
 			Stop
 	}
 }
-actor wosD_dexBushes3 : wosOptDeco_base 21404 {
+actor wosD_dexBushes3 : wosOptDeco2_base 21404 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex bushes3"
 	+SOLID

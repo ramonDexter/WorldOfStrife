@@ -23,10 +23,274 @@ class wosMonsterBase : actor {
 
 }
 
-///////////////////////////////////////////////////////////////////////////////////////
-// spawner base definition ////////////////////////////////////////////////////////////
-// by jarewill ////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////
+// monster projectile bases, etc. //////////////////////////////////////////////
+class sentinelLaserTracer : FastProjectile {
+	/*const TRACERSPEED 		= 40;
+	const TRACERLENGTH		= 256.0; // float
+	const TRACERSCALE		= 8.0; // float
+	Default {
+		Damage 1;
+		Speed TRACERSPEED;
+	}*/
+	const TRACERDURATION	= 1; // tics
+	const TRACERLENGTH		= 256.0; // float
+	const TRACERSCALE		= 8.0; // float
+	const TRACERSTEP		= 0.005; // float
+	//const TRACERACTOR		= "laserTracerTrail"; // actor name
+	const TRACERSPEED		= 40;
+
+	float x1, y1, z1;
+	float x2, y2, z2;
+	
+	// intentional briticism to avoid conflicts with "color" keyword.
+	// modified with strife fitting colors
+	static const color colours[] = {
+		
+		// reversed order
+		"db 2b 2b",
+		"cb 23 23",
+		"bf 1f 1f",
+		"af 1b 1b",
+		"af 1b 1b",
+		"93 13 13"
+		// reversed order
+
+		/*"13 3f 0b",
+		"23 57 13",
+		"37 73 23",
+		"4f 8f 37",
+		"6b ab 4b",
+		"8b c7 67"*/ /* appears twice so a segment of this color is longer
+					than the others. */
+	};
+	
+	// literally just stole this from wikipedia
+	float lerp(float v0, float v1, float t) {
+		return (1 - t) * v0 + t * v1;
+	}
+	
+	override void BeginPlay() {
+		// we don't want to lerp into weird coordinates
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x;
+		y2 = pos.y;
+		z2 = pos.z;
+	}
+
+	void W_spawnLaserParticleTrail() {
+		if (level.frozen || globalfreeze) return;
+		
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x + vel.x / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
+		y2 = pos.y + vel.y / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
+		z2 = pos.z + vel.z / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;		
+		
+		for(float i = 0; i < 1; i += TRACERSTEP) {
+			A_SpawnParticle (
+				colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
+				SPF_FULLBRIGHT,
+				TRACERDURATION,
+				TRACERSCALE * (1 - i),
+				0,
+				pos.x - lerp(x1, x2, i),
+				pos.y - lerp(y1, y2, i),
+				pos.z - lerp(z1, z2, i),
+				0, 0, 0,
+				0, 0, 0,
+				1.0
+			);
+			/*A_SpawnItemEx (
+				TRACERACTOR,
+				pos.x - lerp(x1, x2, i),
+				pos.y - lerp(y1, y2, i),
+				pos.z - lerp(z1, z2, i),
+				0, 0, 0, 0,
+				SXF_ABSOLUTEPOSITION
+			);	*/		
+		}		
+	}
+
+    Default {
+        Radius 2;
+        Height 2;
+		Speed TRACERSPEED;
+        Damage 1;
+        Decal "redShotScorch";        
+		SeeSound "weapons/laserProj";
+		DeathSound "weapons/lasProjDeath";
+		+NOEXTREMEDEATH;
+    }
+    States {
+        Spawn:
+            LSTR A 1 Bright W_spawnLaserParticleTrail();
+            Loop;
+        Death:
+            TNT1 A 0 A_AlertMonsters();
+            TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 2.5, 0, frandom(-1,1),  frandom(-1,1), frandom(-1,1), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.05);
+			TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 1.75, 0, frandom(-0.5,0.5),  frandom(-0.5,0.5), frandom(-0.5,0.5), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.025);
+			TNT1 A 0 A_SpawnItemEx("lasPisFlashLong", 0, 0, 0, 0);			
+			TNT1 A 0 A_SpawnItemEx("laserExplosion", 0, 0, 0, 0);
+            TNT1 A 2 Light("BLASTERSHOT2");
+            TNT1 A 2 Light("BLASTERSHOT3");
+            TNT1 A 2 Light("BLASTERSHOT4");
+            TNT1 A 2 Light("BLASTERSHOT5");
+            Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// base monster fancy projectile ///////////////////////////////////////////////
+/*	
+	TRACER SYSTEM FOR ZSCRIPT 2.4 | APRIL 7TH 2017
+	AUTHOR: (DENIS) BELMONDO
+	
+	USAGE: make a new class, inherit from soa_monsterTracer and change the properties as
+		   you wish.
+	
+	you may use this in your project. just leave this comment at the top of 
+	this script and give credit please! thank you :^)	
+*/
+class wosMonsterTracer : FastProjectile {
+
+	const TRACERDURATION	= 1; // tics
+	const TRACERFANCY		= 0; // fake bool
+	const TRACERLENGTH		= 96.0; // float
+	const TRACERSCALE		= 4.0; // float
+	const TRACERSTEP		= 0.01; // float
+	const TRACERFANCYSTEP	= 0.01; // float
+	const TRACERACTOR		= "wos_monsterTracerTrail"; // actor name
+
+	float x1, y1, z1;
+	float x2, y2, z2;
+	
+	// intentional briticism to avoid conflicts with "color" keyword.
+	static const color colours[] = {
+		"9b 5b 13",
+		"af 7b 1f",
+		"c3 9b 2f",
+		"d7 bb 43",
+		"ff ff 73",
+		"ff ff 73" /* appears twice so a segment of this color is longer
+					than the others. */
+	};
+	
+	// literally just stole this from wikipedia
+	float lerp(float v0, float v1, float t) {
+		return (1 - t) * v0 + t * v1;
+	}
+	
+	override void BeginPlay() {
+		// we don't want to lerp into weird coordinates
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x;
+		y2 = pos.y;
+		z2 = pos.z;
+	}
+	
+	override void Tick() {	
+		if (Level.isFrozen()) return;
+		
+		x1 = pos.x;
+		y1 = pos.y;
+		z1 = pos.z;
+		
+		x2 = pos.x + vel.x / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		y2 = pos.y + vel.y / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		z2 = pos.z + vel.z / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
+		
+		if (TRACERFANCY == 0) {
+			for(float i = 0; i < 1; i += TRACERSTEP) {
+				A_SpawnParticle (
+					colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
+					SPF_FULLBRIGHT,
+					TRACERDURATION,
+					TRACERSCALE * i,
+					0,
+					(-pos.x) + lerp(x1, x2, i),
+					(-pos.y) + lerp(y1, y2, i),
+					(-pos.z) + lerp(z1, z2, i),
+					0, 0, 0,
+					0, 0, 0,
+					1.0
+				);
+			} 
+		}
+		else {
+			for(float i = 0; i < 1; i += TRACERFANCYSTEP) {
+				A_SpawnItemEx (
+					TRACERACTOR,
+					(-pos.x) + lerp(x1, x2, i),
+					(-pos.y) + lerp(y1, y2, i),
+					(-pos.z) + lerp(z1, z2, i),
+					0, 0, 0, 0,
+					SXF_ABSOLUTEPOSITION
+				);
+			}
+		}
+		Super.Tick();
+	}
+	Default {
+		//Damage (random(5,9));
+		DamageType "Bullet";
+		Height 1;
+		Radius 1;
+		Speed 125;
+		fastspeed 160;
+		+BLOODSPLATTER;
+		+THRUGHOST;
+	}
+	States {
+		Spawn:
+			TNT1 A 1;
+			Loop;
+		Death:
+			TNT1 A 0 A_SpawnItemEx("BulletPuff");
+		XDeath:
+			TNT1 A -1 A_Jump(256, "Null");
+			Stop;
+	}	
+}
+class wos_monsterTracerTrail : Actor {
+	Default {
+		Alpha 0.5;
+		RenderStyle "Add";
+		Scale 0.25;
+		+NOINTERACTION;
+	}
+	States {
+		Spawn:
+			PUFF A 2 Bright;
+			TNT1 A -1 A_Jump(256, "Null");
+			Stop;
+	}
+}
+// damage type for different types of enemies //
+class wosMonsterTracer_Acolyte : wosMonsterTracer {
+	Default {
+		DamageFunction (3*random(2,8));
+	}
+}
+class wosMonsterTracer_Rebel : wosMonsterTracer {
+	Default {
+		DamageFunction (3*random(1,4));
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////
+// spawner base definition /////////////////////////////////////////////////////
+// by jarewill /////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 Class wosMonsterSpawner : Actor { //This is the base class that deals with respawning
 	string montype; 
 	Property MonsterType : montype; //This is the monster type property
@@ -400,145 +664,7 @@ class wosMonsterSpawner_Ophidiant : wosMonsterSpawner {
 }*/
 ///////////////////////////////////////////////////////////////////////////////////////
 
-// base monster fancy projectile ///////////////////////////////////////////////
-/*	
-	TRACER SYSTEM FOR ZSCRIPT 2.4 | APRIL 7TH 2017
-	AUTHOR: (DENIS) BELMONDO
-	
-	USAGE: make a new class, inherit from soa_monsterTracer and change the properties as
-		   you wish.
-	
-	you may use this in your project. just leave this comment at the top of 
-	this script and give credit please! thank you :^)	
-*/
-class wosMonsterTracer : FastProjectile {
 
-	const TRACERDURATION	= 1; // tics
-	const TRACERFANCY		= 0; // fake bool
-	const TRACERLENGTH		= 96.0; // float
-	const TRACERSCALE		= 4.0; // float
-	const TRACERSTEP		= 0.01; // float
-	const TRACERFANCYSTEP	= 0.01; // float
-	const TRACERACTOR		= "wos_monsterTracerTrail"; // actor name
-
-	float x1, y1, z1;
-	float x2, y2, z2;
-	
-	// intentional briticism to avoid conflicts with "color" keyword.
-	static const color colours[] = {
-		"9b 5b 13",
-		"af 7b 1f",
-		"c3 9b 2f",
-		"d7 bb 43",
-		"ff ff 73",
-		"ff ff 73" /* appears twice so a segment of this color is longer
-					than the others. */
-	};
-	
-	// literally just stole this from wikipedia
-	float lerp(float v0, float v1, float t) {
-		return (1 - t) * v0 + t * v1;
-	}
-	
-	override void BeginPlay() {
-		// we don't want to lerp into weird coordinates
-		x1 = pos.x;
-		y1 = pos.y;
-		z1 = pos.z;
-		
-		x2 = pos.x;
-		y2 = pos.y;
-		z2 = pos.z;
-	}
-	
-	override void Tick() {	
-		if (Level.isFrozen()) return;
-		
-		x1 = pos.x;
-		y1 = pos.y;
-		z1 = pos.z;
-		
-		x2 = pos.x + vel.x / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
-		y2 = pos.y + vel.y / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
-		z2 = pos.z + vel.z / GetDefaultSpeed("wosMonsterTracer") * TRACERLENGTH;
-		
-		if (TRACERFANCY == 0) {
-			for(float i = 0; i < 1; i += TRACERSTEP) {
-				A_SpawnParticle (
-					colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
-					SPF_FULLBRIGHT,
-					TRACERDURATION,
-					TRACERSCALE * i,
-					0,
-					(-pos.x) + lerp(x1, x2, i),
-					(-pos.y) + lerp(y1, y2, i),
-					(-pos.z) + lerp(z1, z2, i),
-					0, 0, 0,
-					0, 0, 0,
-					1.0
-				);
-			} 
-		}
-		else {
-			for(float i = 0; i < 1; i += TRACERFANCYSTEP) {
-				A_SpawnItemEx (
-					TRACERACTOR,
-					(-pos.x) + lerp(x1, x2, i),
-					(-pos.y) + lerp(y1, y2, i),
-					(-pos.z) + lerp(z1, z2, i),
-					0, 0, 0, 0,
-					SXF_ABSOLUTEPOSITION
-				);
-			}
-		}
-		Super.Tick();
-	}
-	Default {
-		//Damage (random(5,9));
-		DamageType "Bullet";
-		Height 1;
-		Radius 1;
-		Speed 125;
-		fastspeed 160;
-		+BLOODSPLATTER;
-		+THRUGHOST;
-	}
-	States {
-		Spawn:
-			TNT1 A 1;
-			Loop;
-		Death:
-			TNT1 A 0 A_SpawnItemEx("BulletPuff");
-		XDeath:
-			TNT1 A -1 A_Jump(256, "Null");
-			Stop;
-	}	
-}
-class wos_monsterTracerTrail : Actor {
-	Default {
-		Alpha 0.5;
-		RenderStyle "Add";
-		Scale 0.25;
-		+NOINTERACTION;
-	}
-	States {
-		Spawn:
-			PUFF A 2 Bright;
-			TNT1 A -1 A_Jump(256, "Null");
-			Stop;
-	}
-}
-// damage type for different types of enemies //
-class wosMonsterTracer_Acolyte : wosMonsterTracer {
-	Default {
-		DamageFunction (3*random(2,8));
-	}
-}
-class wosMonsterTracer_Rebel : wosMonsterTracer {
-	Default {
-		DamageFunction (3*random(1,4));
-	}
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // monster XP replacers ///////////////////////////////////////////////////////////////
@@ -841,7 +967,32 @@ class wosReaver : Reaver replaces Reaver {
 			A_Log(string.format("\c[yellow][ %s%i%s ]", "Received ", rewardXP, " XP!"));
 		}
 	}*/
+	action void W_shootReaver() {
+		A_StartSound("reaver/attack", CHAN_WEAPON);
+		A_SpawnProjectile("wosMonsterTracer_Acolyte", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+		A_SpawnProjectile("wosMonsterTracer_Acolyte", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+		A_SpawnProjectile("wosMonsterTracer_Acolyte", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+	}
 	States {
+		Spawn:
+			ROB1 A 10 A_Look();
+			Loop;
+		See:
+			ROB1 BBCCDDEE 3 A_Chase();
+			Loop;
+		Melee:
+			ROB1 H 6 Slow A_FaceTarget();
+			ROB1 I 8 Slow A_CustomMeleeAttack(random[ReaverMelee](1, 8)*3, "reaver/blade");
+			ROB1 H 6 Slow;
+			Goto See;
+		Missile:
+			ROB1 F 8 Slow A_FaceTarget();
+			ROB1 G 11 Slow Bright W_shootReaver();
+			Goto See;
+		Pain:
+			ROB1 A 2 Slow;
+			ROB1 A 2 A_Pain();
+			Goto See;
 		Death:
 			ROB1 J 6;
 			ROB1 K 6 A_Scream;
@@ -863,125 +1014,7 @@ class wosReaver : Reaver replaces Reaver {
 	}
 }
 // sentinel XP replacer ///////////////////////////////////////////////////////////////
-class sentinelLaserTracer : FastProjectile {
-	/*const TRACERSPEED 		= 40;
-	const TRACERLENGTH		= 256.0; // float
-	const TRACERSCALE		= 8.0; // float
-	Default {
-		Damage 1;
-		Speed TRACERSPEED;
-	}*/
-	const TRACERDURATION	= 1; // tics
-	const TRACERLENGTH		= 256.0; // float
-	const TRACERSCALE		= 8.0; // float
-	const TRACERSTEP		= 0.005; // float
-	//const TRACERACTOR		= "laserTracerTrail"; // actor name
-	const TRACERSPEED		= 40;
 
-	float x1, y1, z1;
-	float x2, y2, z2;
-	
-	// intentional briticism to avoid conflicts with "color" keyword.
-	// modified with strife fitting colors
-	static const color colours[] = {
-		
-		// reversed order
-		"db 2b 2b",
-		"cb 23 23",
-		"bf 1f 1f",
-		"af 1b 1b",
-		"af 1b 1b",
-		"93 13 13"
-		// reversed order
-
-		/*"13 3f 0b",
-		"23 57 13",
-		"37 73 23",
-		"4f 8f 37",
-		"6b ab 4b",
-		"8b c7 67"*/ /* appears twice so a segment of this color is longer
-					than the others. */
-	};
-	
-	// literally just stole this from wikipedia
-	float lerp(float v0, float v1, float t) {
-		return (1 - t) * v0 + t * v1;
-	}
-	
-	override void BeginPlay() {
-		// we don't want to lerp into weird coordinates
-		x1 = pos.x;
-		y1 = pos.y;
-		z1 = pos.z;
-		
-		x2 = pos.x;
-		y2 = pos.y;
-		z2 = pos.z;
-	}
-
-	void W_spawnLaserParticleTrail() {
-		if (level.frozen || globalfreeze) return;
-		
-		x1 = pos.x;
-		y1 = pos.y;
-		z1 = pos.z;
-		
-		x2 = pos.x + vel.x / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
-		y2 = pos.y + vel.y / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;
-		z2 = pos.z + vel.z / GetDefaultSpeed("BlasterTracer") * TRACERLENGTH;		
-		
-		for(float i = 0; i < 1; i += TRACERSTEP) {
-			A_SpawnParticle (
-				colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
-				SPF_FULLBRIGHT,
-				TRACERDURATION,
-				TRACERSCALE * (1 - i),
-				0,
-				pos.x - lerp(x1, x2, i),
-				pos.y - lerp(y1, y2, i),
-				pos.z - lerp(z1, z2, i),
-				0, 0, 0,
-				0, 0, 0,
-				1.0
-			);
-			/*A_SpawnItemEx (
-				TRACERACTOR,
-				pos.x - lerp(x1, x2, i),
-				pos.y - lerp(y1, y2, i),
-				pos.z - lerp(z1, z2, i),
-				0, 0, 0, 0,
-				SXF_ABSOLUTEPOSITION
-			);	*/		
-		}		
-	}
-
-    Default {
-        Radius 2;
-        Height 2;
-		Speed TRACERSPEED;
-        Damage 1;
-        Decal "redShotScorch";        
-		SeeSound "weapons/laserProj";
-		DeathSound "weapons/lasProjDeath";
-		+NOEXTREMEDEATH;
-    }
-    States {
-        Spawn:
-            LSTR A 1 Bright W_spawnLaserParticleTrail();
-            Loop;
-        Death:
-            TNT1 A 0 A_AlertMonsters();
-            TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 2.5, 0, frandom(-1,1),  frandom(-1,1), frandom(-1,1), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.05);
-			TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnParticle ("red", SPF_FULLBRIGHT|SPF_RELATIVE, 15, 1.75, 0, frandom(-0.5,0.5),  frandom(-0.5,0.5), frandom(-0.5,0.5), frandom(-4,4), frandom(-4,4), frandom(-4,4), 0, 0, 0, 1.0, -0.1, 0.025);
-			TNT1 A 0 A_SpawnItemEx("lasPisFlashLong", 0, 0, 0, 0);			
-			TNT1 A 0 A_SpawnItemEx("laserExplosion", 0, 0, 0, 0);
-            TNT1 A 2 Light("BLASTERSHOT2");
-            TNT1 A 2 Light("BLASTERSHOT3");
-            TNT1 A 2 Light("BLASTERSHOT4");
-            TNT1 A 2 Light("BLASTERSHOT5");
-            Stop;
-	}
-}
 class wosSentinel : Sentinel replaces Sentinel {
     Default {
         //$Category "Monsters/WoS"

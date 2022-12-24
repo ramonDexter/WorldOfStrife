@@ -94,7 +94,7 @@ Class LaserScout : wosMonsterBase {
 		Melee:
 		Missile:
 			MECH E 2 A_FaceTarget();
-			MECH F 4 Bright A_SpawnProjectile("SentinelFX3", 48, -8) ;
+			MECH F 4 Bright A_SpawnProjectile("sentinelLaserTracer", 48, -8, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0)) ;
 			MECH E 2 A_FaceTarget();
 			MECH E 0 A_MonsterRefire(30, "See");
 			Goto Missile+1;

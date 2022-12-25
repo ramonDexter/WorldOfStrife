@@ -580,9 +580,9 @@ class wosStatusBar : BaseStatusBar {
 				// health implant display //////////////////////////////////////
 				item = CPlayer.mo.FindInventory ("implant_health");
 				if ( item != NULL ) {
-					textureID implantName = TexMan.CheckForTexture("HLTRGN", 0, 0);
+					textureID implantName = TexMan.CheckForTexture("THLTRGN", 0, 0);
 					screen.DrawTexture (implantName, true,
-						left + 128*xscale,
+						left + 131*xscale,
 						top + 62*yscale,
 						DTA_CleanNoMove, true);
 					screen.DrawTexture (item.Icon, true,
@@ -594,9 +594,9 @@ class wosStatusBar : BaseStatusBar {
  				// stamina implant display /////////////////////////////////////
 				item = CPlayer.mo.FindInventory ("implant_stamina");
 				if ( item != NULL ) {
-					textureID implantName = TexMan.CheckForTexture("ENRGY", 0, 0);
+					textureID implantName = TexMan.CheckForTexture("TENERGY", 0, 0);
 					screen.DrawTexture (implantName, true,
-						left + 129*xscale,
+						left + 131*xscale,
 						top + 91*yscale,
 						DTA_CleanNoMove, true);
 					screen.DrawTexture (item.Icon, true,

@@ -26,10 +26,10 @@ maps
 			}
 		}
 		overrideceiltexture = false;
-		viewpositionx = -1111.676f;
-		defaulttoptexture = "BRKGRY17";
+		viewpositionx = 6985.868f;
+		defaulttoptexture = "BLACK";
 		overrideceilheight = false;
-		viewpositiony = 9779.293f;
+		viewpositiony = 13194.7f;
 		overridebrightness = false;
 		overridefloortexture = false;
 		
@@ -47,14 +47,14 @@ maps
 			backoffsety = 0;
 		}
 		overridebottomtexture = false;
-		defaultbottomtexture = "BRKGRY17";
+		defaultbottomtexture = "BLACK";
 		defaultfloortexture = "BRKBRN04";
-		defaultwalltexture = "BRKGRY17";
+		defaultwalltexture = "BLACK";
 		overridetoptexture = false;
 		customceilheight = 128;
 		overridemiddletexture = false;
 		custombrightness = 196;
-		viewscale = 0.6653959f;
+		viewscale = 0.02856062f;
 		
 		reloadresourceprecommand
 		{

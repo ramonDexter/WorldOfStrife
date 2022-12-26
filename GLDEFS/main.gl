@@ -273,3 +273,10 @@ pointlight luminorbLight {
 	offset 0.0 0.0 0.0
 	attenuate 1
 }
+
+pointlight landMineLight {
+	color 1.0 0.0 0.0
+	size 16
+	offset 0.0 2.0 0.0
+	attenuate 1
+}

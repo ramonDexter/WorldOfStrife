@@ -56,10 +56,10 @@ class landMinePlaced : SwitchableDecoration {
 		Spawn:
 			LMIN A 0 A_Gravity();
 			LMIN A 25;
-			LMIN B 5;
+			LMIN B 5 light("landMineLight");
 			Loop;
 		Xdeath:
-			LMIN B 15 A_Scream();
+			LMIN B 15 light("landMineLight") A_Scream();
 		Death:
 			TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 A 0 A_Explode(192, 192, 1, 1);
@@ -110,10 +110,10 @@ class landMineTrap : SwitchableDecoration {
 		Spawn:
 			LMIN A 0 A_Gravity();
 			LMIN A 25;
-			LMIN B 5;
+			LMIN B 5 light("landMineLight");
 			Loop;
 		Xdeath:
-			LMIN B 15 A_Scream();
+			LMIN B 15 light("landMineLight") A_Scream();
 		Death:
 			TNT1 AAAAAAA 0 A_SpawnProjectile ("ExplosionFire", 3, 0, random (0, 360), 2, random (0, 360));
 			TNT1 A 0 A_Explode(192, 192, 1, 1);

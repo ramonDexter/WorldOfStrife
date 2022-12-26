@@ -12,7 +12,7 @@ class wosLandMine : wosPickup {
 		inventory.PickupMessage "$F_LandMine";
 		Inventory.Icon "I_LMIN";
 		Mass landMineWeight;
-		Scale 0.75;
+		//Scale 0.75;
 	}
 	States {
 		Spawn:
@@ -39,7 +39,7 @@ class landMinePlaced : SwitchableDecoration {
 		ExplosionDamage 192;
 		ExplosionRadius 128;
 		Speed 0;
-		Scale 0.5;
+		//Scale 0.5;
 		-SOLID
 		+USESPECIAL
 		+NOBLOOD
@@ -56,7 +56,7 @@ class landMinePlaced : SwitchableDecoration {
 		Spawn:
 			LMIN A 0 A_Gravity();
 			LMIN A 25;
-			LMIN B 3;
+			LMIN B 5;
 			Loop;
 		Xdeath:
 			LMIN B 15 A_Scream();
@@ -80,6 +80,8 @@ class landMinePlaced : SwitchableDecoration {
 // land mine trap //////////////////////////////////////////////////////////////
 class landMineTrap : SwitchableDecoration {
 	Default {
+		//$Category "Powerups/WoS"
+		//$Title "land mine trap"
 		Radius 12;
 		Height 16;
 		Mass 1000000;
@@ -91,7 +93,7 @@ class landMineTrap : SwitchableDecoration {
 		ExplosionDamage 192;
 		ExplosionRadius 128;
 		Speed 0;
-		Scale 0.5;
+		//Scale 0.5;
 		+USESPECIAL
 		+NOBLOOD
 		+SHOOTABLE
@@ -108,7 +110,7 @@ class landMineTrap : SwitchableDecoration {
 		Spawn:
 			LMIN A 0 A_Gravity();
 			LMIN A 25;
-			LMIN B 3;
+			LMIN B 5;
 			Loop;
 		Xdeath:
 			LMIN B 15 A_Scream();

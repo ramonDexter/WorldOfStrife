@@ -28,10 +28,10 @@ quest:
 
 # soudce zmeny Afer Valgus Reberio convID 38
 4 questy:
-1) dones zpravu starostovi Ravenrocku
+1) Dones prikaz Ediktu starostovi Ravenrocku.
 2) ziskej priznani nebo dukazy proti kaciri v Commons >> cerny doktor
 3) najdi ztraceneho syna farmare z Ravenrocku
-4) zlikviduj kacire v Eastcliffu
+4) Najdi ukradene artefakty.
 
 # reznik Ian convID 46
 1) sezen lepsi dodavatele masa 

@@ -487,8 +487,8 @@ DoomEdNums {
 	20482 = wosD_luminorb
 	20483 = wosD_luminorb2
 	20484 = wosD_asc_Palm01
-	//20485 = wosD_asc_Palm02aLarge
-	//20486 = wosD_asc_Palm02aMedium
+	20485 = wosLandMine
+	20486 = landMineTrap
 	20487 = wosD_asc_Palm02b
 	20488 = wosD_asc_Palm04
 	20489 = wosD_asc_Palm05

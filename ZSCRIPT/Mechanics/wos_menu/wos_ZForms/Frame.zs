@@ -29,7 +29,7 @@ class wos_ZF_Frame : wos_ZF_ElementContainer {
 	/// Elements with higher indices are drawn on top of elements with lower indices.
 	///
 	///If the element isn't inside this frame, an index equal to [`elementCount`]`()` is returned.
-	uint indexOfElement(wos_ZF_Element elem) { return elements.find(elem); }
+	int indexOfElement(wos_ZF_Element elem) { return elements.find(elem); }
 	/// Swaps the elements at the given indices in the frame.
 	///
 	/// To get the indices needed, see [`indexOfElement`].

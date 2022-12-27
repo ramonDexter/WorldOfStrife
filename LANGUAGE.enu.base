@@ -62,6 +62,10 @@ F_MAULER = "You picked up the mauler!";
 TAG_laserPistol = "Omega Beam Pistol";
 FND_laserPistol = "You picked up the Omega Beam Pistol!";
 OBI_laserPistol = "%o was burned to ashes by %k Omega Beam Pistol";
+// phaeston rifle //
+TAG_PhaestonRifle = "ER-15 Executor Rifle";
+FND_PhaestonRifle = "You picked up the Executor Rifle!";
+OBI_PhaestonRifle = "%o was drilled full of holes by %k's executor rifle.";
 ////////////////////////////////////////////////////////////////////////////////
 
 // medical items ///////////////////////////////////////////////////////////////

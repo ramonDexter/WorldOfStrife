@@ -4,30 +4,30 @@
 
 // weapon //////////////////////////////////////////////////////////////////////
 class executorRifle : wosWeapon {
-    Default {
+	Default {
 		//$Category "weapons"
 		//$Title "Executor Rifle (weapon)"
-        +WEAPON.AMMO_OPTIONAL;
-        +FLOORCLIP;
+		+WEAPON.AMMO_OPTIONAL;
+		+FLOORCLIP;
 
-        radius 24;
-        height 16;
-        Tag "$TAG_executorRifle";
-        Inventory.PickupMessage "$FND_executorRifle";
-        obituary "$OBI_executorRifle";
-        inventory.icon "H_ERMD";
-        weapon.SlotNumber 3;
+		radius 24;
+		height 16;
+		Tag "$TAG_executorRifle";
+		Inventory.PickupMessage "$FND_executorRifle";
+		obituary "$OBI_executorRifle";
+		inventory.icon "H_ERMD";
+		weapon.SlotNumber 3;
 		Weapon.SelectionOrder 400;
-        weapon.kickBack 40;
-        Mass executorRifleWeight;
+		weapon.kickBack 40;
+		Mass executorRifleWeight;
 		wosWeapon.Magazine 32;
 		wosWeapon.magazineMax 32;
 		wosWeapon.magazineType "ClipOfBullets";
-    }	
-    States {
-        Spawn:
-            ERMP A -1;
-            Stop;			
+	}	
+	States {
+		Spawn:
+			ERMP A -1;
+			Stop;			
 		Nope:
 			TNT1 A 1 {
 				A_WeaponReady(WRF_NOFIRE); 
@@ -35,24 +35,24 @@ class executorRifle : wosWeapon {
 			}
 			TNT1 A 0 A_ClearReFire();
 			Goto Ready;
-        Select:
-            ERMD B 1 A_Raise();
-            Loop;
-        Deselect:
-            ERMD B 1 A_Lower();
-            Loop;
-        Ready:
-            ERMD B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
-            Loop;
-        Fire:
+		Select:
+			ERMD B 1 A_Raise();
+			Loop;
+		Deselect:
+			ERMD B 1 A_Lower();
+			Loop;
+		Ready:
+			ERMD B 1 A_WeaponReady(WRF_ALLOWRELOAD|WRF_ALLOWUSER1|WRF_ALLOWUSER4);
+			Loop;
+		Fire:
 			TNT1 A 0 W_CheckAmmo();
 			//DUMM A 0 A_JumpIfNoAmmo("Reload");
-            ERMD B 1 A_JumpIfNoAmmo("Reload");
-            ERMD C 2 W_ShootFireArm2(8, "weapons/execRiflShoot");
-            TNT1 A 0 A_AlertMonsters();
-            ERMD D 2;
-            TNT1 A 0 {
-                ZWL_EjectCasing(
+			ERMD B 1 A_JumpIfNoAmmo("Reload");
+			ERMD C 2 W_ShootFireArm2(8, "weapons/execRiflShoot");
+			TNT1 A 0 A_AlertMonsters();
+			ERMD D 2;
+			TNT1 A 0 {
+				ZWL_EjectCasing(
 					"rifleCasing",//class<Actor> casingType
 					false,//bool left
 					-45,//double ejectPitch
@@ -60,84 +60,84 @@ class executorRifle : wosWeapon {
 					8,//double accuracy
 					(24, 16, -10)//Vector3 offset
 				);
-            }
-            ERMD E 1 A_Refire();
-            goto Ready;
-        Reload:
+			}
+			ERMD E 1 A_Refire();
+			goto Ready;
+		Reload:
 			TNT1 A 0 W_reloadCheck2();
 			goto Ready;
 		DoReload:
-            ERMD B 2;
-            ERMD E 3;
-            ERMD F 2;
-            ERMD G 2 A_StartSound("weapons/RLpistolRLout", 1);
-            ERMD HI 2;
-            ERMD J 8;
-            TNT1 A 16 {
-                //A_StartSound("weapons/RLpistolRLin", 1);
-                W_reload2();
-            }
-            ERMD J 8;
-            ERMD IH 2;
-            ERMD G 2 A_StartSound("weapons/RLpistolRLin", 1);
-            ERMD F 3;
-            ERMD B 1;
-            goto Ready;
-    }
+			ERMD B 2;
+			ERMD E 3;
+			ERMD F 2;
+			ERMD G 2 A_StartSound("weapons/RLpistolRLout", 1);
+			ERMD HI 2;
+			ERMD J 8;
+			TNT1 A 16 {
+				//A_StartSound("weapons/RLpistolRLin", 1);
+				W_reload2();
+			}
+			ERMD J 8;
+			ERMD IH 2;
+			ERMD G 2 A_StartSound("weapons/RLpistolRLin", 1);
+			ERMD F 3;
+			ERMD B 1;
+			goto Ready;
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////
 
 // dummy actors ////////////////////////////////////////////////////////////////
 class dummy_executorRifle01 : actor {
-    Default {
-        //$Category "Decorations/Wos"
-	    //$Title "deco executor rifle 01"
-        tag "executor rifle";
-        radius 10;
-        height 8;
-        +SOLID
-        +USESPECIAL
-        +NOGRAVITY
-    }
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-    }
+	Default {
+		//$Category "Decorations/Wos"
+		//$Title "deco executor rifle 01"
+		tag "executor rifle";
+		radius 10;
+		height 8;
+		+SOLID
+		+USESPECIAL
+		+NOGRAVITY
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }
 class dummy_executorRifle02 : actor {
-    Default {
-        //$Category "Decorations/Wos"
-	    //$Title "deco executor rifle 02"
-        tag "executor rifle";
-        radius 6;
-        height 32;
-        +SOLID
-        +USESPECIAL
-        +NOGRAVITY
-    }
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-    }
+	Default {
+		//$Category "Decorations/Wos"
+		//$Title "deco executor rifle 02"
+		tag "executor rifle";
+		radius 6;
+		height 32;
+		+SOLID
+		+USESPECIAL
+		+NOGRAVITY
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }
 class dummy_executorRifle03 : actor {
-    Default {
-        //$Category "Decorations/Wos"
-	    //$Title "deco executor rifle 03"
-        tag "executor rifle";
-        radius 10;
-        height 8;
-        +SOLID
-        +USESPECIAL
-        +NOGRAVITY
-    }
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-    }
+	Default {
+		//$Category "Decorations/Wos"
+		//$Title "deco executor rifle 03"
+		tag "executor rifle";
+		radius 10;
+		height 8;
+		+SOLID
+		+USESPECIAL
+		+NOGRAVITY
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -148,21 +148,21 @@ class dummy_executorRifle03 : actor {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-        //weapon.ammoType1 "magazine_executorRifle";
-        //weapon.ammoUse1 1;
-        //weapon.ammoGive1 0;
-        //weapon.ammoType2 "ClipOfBullets";
-        //weapon.ammoUse2 0;
-        //weapon.ammoGive2 32;
+		//weapon.ammoType1 "magazine_executorRifle";
+		//weapon.ammoUse1 1;
+		//weapon.ammoGive1 0;
+		//weapon.ammoType2 "ClipOfBullets";
+		//weapon.ammoUse2 0;
+		//weapon.ammoGive2 32;
 
 //const executorRifleWeight = 250;
 
 /*class magazine_executorRifle : ammo {
-    Default {
-        +INVENTORY.IGNORESKILL
-        inventory.maxamount 32;
-        Mass 0;
-    }
+	Default {
+		+INVENTORY.IGNORESKILL
+		inventory.maxamount 32;
+		Mass 0;
+	}
 }*/
 
 /*

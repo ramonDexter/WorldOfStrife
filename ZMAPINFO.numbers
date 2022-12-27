@@ -258,9 +258,9 @@ DoomEdNums {
 	20253 = wosCandyBar
 	20254 = ascTramp
 	20255 = ascRogue
-	20256 = dummy_executorRifle01
-	20257 = dummy_executorRifle02
-	20258 = dummy_executorRifle03
+	20256 = wosPhaestonRifle_dummy1
+	20257 = wosPhaestonRifle_dummy2
+	20258 = wosPhaestonRifle_dummy3
 	20259 = wosSpiritsBottle
 	20260 = spiderQueen01
 	20261 = spiderQueen02
@@ -494,8 +494,8 @@ DoomEdNums {
 	20489 = wosD_asc_Palm05
 	20490 = wosD_asc_Palm07
 	20491 = wosD_asc_Palm08
+	20492 = wosPhaestonRifle
 	/*
-	20492 = 
 	20493 = 
 	20494 = 
 	20495 = 

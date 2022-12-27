@@ -11283,6 +11283,20 @@ actor wos_ss_labWorkStationBridge16x72 : InvisibleBridge16 21722 {
 	height 72
 }
 
+actor wos_jkja_bunkbedBridge : InvisibleBridge16 21723 {
+	//$Category "Bridges"
+	//$Title "bridge - bunk bed H40"
+	Tag "bunk bed"
+	radius 24
+	height 40
+}
+actor wos_jkja_bunkbedBridge2 : wos_jkja_bunkbedBridge 21724 {
+	//$Category "Bridges"
+	//$Title "bridge - bunk bed H80"
+	Tag "bunk bed"
+	radius 24
+	height 72
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

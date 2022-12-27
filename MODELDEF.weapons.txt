@@ -703,9 +703,69 @@ model mauler_dummy {
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
-//  rlPistol  //////////////////////////////////////////////////////////////////
+//  stormPistol  ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model StormPistol {
+	//NOINTERPOLATION
+	path "models/weapons/scorpion/"
+	model 0 "pistol_scorpion.md3"
+	//model 1 "flash_scorp_1.md3"
+	//model 2 "flash_scorp_2.md3"
+	scale -0.5 0.5 0.5
+	offset 8.0 -20.0 -8.0
+	// idle & fire frames //
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	//frameindex DUMM B 1 0
+	frameindex DUMM C 0 2
+	//frameindex DUMM C 2 0
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+	frameindex DUMM F 0 5
+	// reload //
+	frameindex DUMM G 0 6
+	frameindex DUMM H 0 7
+	frameindex DUMM I 0 8
+	frameindex DUMM J 0 9
+	frameindex DUMM K 0 10
+	frameindex DUMM L 0 10
+	frameindex DUMM M 0 10 
+	frameindex DUMM N 0 10 
+	frameindex DUMM O 0 10 
+	frameindex DUMM P 0 10 
+	frameindex DUMM Q 0 10
+}
+model StormPistol {
+	path "models/weapons/scorpion/"
+	model 0 "scorpion_pickup.md3"
+	scale 0.5 0.5 0.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM Z 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+model dummy_stormPistol_0 {
+	path "models/weapons/scorpion/"
+	model 0 "scorpion_pickup.md3"
+	scale 0.5 0.5 0.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model dummy_stormPistol_1 {
+	path "models/weapons/scorpion/"
+	model 0 "scorpion_pickup.md3"
+	scale 0.5 0.5 0.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 2
+}
+model dummy_stormPistol_2 {
+	path "models/weapons/scorpion/"
+	model 0 "scorpion_pickup.md3"
+	scale 0.5 0.5 0.5
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 3
+}
+////////////////////////////////////////////////////////////////////////////////
+/*model StormPistol {
 	path "models/weapons/pistol/"
 	model 0 "w_pistol2.md3"
 	surfaceskin 0 0 "tx_pistol2.png"
@@ -786,7 +846,7 @@ model dummy_stormPistol_2 {
 	scale 1.35 1.35 1.35
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 2
-}
+}*/
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -810,7 +870,65 @@ model CasingStaff {
 ////////////////////////////////////////////////////////////////////////////////
 //  executor rifle  ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-model executorRifle {
+model wosPhaestonRifle {
+	USEACTORPITCH
+	USEACTORROLL
+	//NOINTERPOLATION
+	path "models/weapons/phaeston/"
+	model 0 "AR_phaeston.md3"
+	scale -0.5 0.5 0.5
+	offset 8.0 -20.0 -8.0
+
+	frameindex DUMM A 0 0
+	frameindex DUMM B 0 1
+	frameindex DUMM C 0 2
+	frameindex DUMM D 0 3
+	frameindex DUMM E 0 4
+	frameindex DUMM F 0 5
+	frameindex DUMM G 0 6
+	frameindex DUMM H 0 7
+	frameindex DUMM I 0 8
+	frameindex DUMM J 0 9
+}
+model wosPhaestonRifle {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/phaeston/"
+	model 0 "phaeston_pickup.md3"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM Z 0 1
+}
+////////////////////////////////////////////////////////////////////////////////
+model wosPhaestonRifle_dummy1 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/phaeston/"
+	model 0 "phaeston_pickup.md3"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+}
+model wosPhaestonRifle_dummy2 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/phaeston/"
+	model 0 "phaeston_pickup.md3"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 2
+}
+model wosPhaestonRifle_dummy3 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/phaeston/"
+	model 0 "phaeston_pickup.md3"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 4
+}
+////////////////////////////////////////////////////////////////////////////////
+/*model executorRifle {
 	//pickup model
 	path "models/weapons/executorRifle/"
 	model 0 "p_executorRifle.md3"
@@ -830,15 +948,7 @@ model executorRifle {
 	surfaceskin 0 4 "tx_handgrenade.png"
 	surfaceskin 0 5 "tx_handgrenade.png"
 	surfaceskin 0 6 "tx_pxStaffBlaster.png"
-	/*surfaceskin 0 0 "tx_executorRifle.png"
-	surfaceskin 0 1 "tx_executorRifle.png"
-	surfaceskin 0 2 "tx_executorRifle.png"
-	surfaceskin 0 3 "tx_executorRifle.png"
-	surfaceskin 0 4 "tx_executorRifle.png"
-	surfaceskin 0 5 "tx_handgrenade.png"
-	surfaceskin 0 6 "tx_handgrenade.png"
-	surfaceskin 0 7 "tx_handgrenade.png"
-	surfaceskin 0 8 "tx_pxStaffBlaster.png"*/
+	
 	scale -1.5 1.5 1.5
 	offset 10.0 -25.0 -10.0	
 	//idle
@@ -883,7 +993,7 @@ model dummy_executorRifle03 {
 	scale 0.75 0.75 0.75
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 3
-}
+}*/
 
 /*
 model executorRifle_ground01 {
@@ -1202,7 +1312,7 @@ model test_ar15 {
 	frameindex DUMM A 0 0
 }
 
-
+// 
 
 
 

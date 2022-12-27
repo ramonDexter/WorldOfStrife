@@ -70,7 +70,7 @@ class binderPlayer : StrifePlayer {
 		//  weaponslots  ///////////////////////////////////////////////////////
 		Player.WeaponSlot 1, "wosBareHands", "wosPunchDagger";
 		Player.WeaponSlot 2, "StormPistol", "laserPistol", "wosStrifeXbow";
-		Player.WeaponSlot 3, "wosAssaultGun", "executorRifle", "staffBlaster";
+		Player.WeaponSlot 3, "wosAssaultGun", "wosPhaestonRifle", "staffBlaster";
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
 		Player.WeaponSlot 5, "wosGrenadeLauncher";
 		Player.WeaponSlot 6, "wosFlamethrower";
@@ -823,7 +823,7 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("laserPistol", 1);
 			A_GiveInventory("wosStrifeXbow", 1);
 			A_GiveInventory("wosAssaultGun", 1);
-			A_GiveInventory("executorRifle", 1);
+			A_GiveInventory("wosPhaestonRifle", 1);
 			A_GiveInventory("staffBlaster", 1);
 			A_GiveInventory("wosMinimissileLauncher", 1);
 			A_GiveInventory("wosGrenadeLauncher", 1);
@@ -932,13 +932,13 @@ class binderPlayer : StrifePlayer {
 		}
 		else if ( name ~== "binderpack" ) {
 			A_GiveInventory("binder_helmet", 1);
+			//armor
+			A_GiveInventory("wosKineticArmor", 1);
 			// weapons
 			A_GiveInventory("shoulderGun", 1);
 			A_GiveInventory("magazine_shoulderGun", 32);
 			A_GiveInventory("StaffBlaster", 1);
 			A_GiveInventory("laserpistol", 1);
-			//armor
-			A_GiveInventory("wosKineticArmor", 1);
 			//ammo
 			A_GiveInventory("EnergyPod", 400);
 			A_GiveInventory("wosenergykit", 10);
@@ -968,12 +968,12 @@ class binderPlayer : StrifePlayer {
 		}
 		else if ( name ~== "binderpacklight" ) {
 			A_GiveInventory("binder_helmet", 1);
+			//armor
+			A_GiveInventory("wosKineticArmor", 1);
 			// weapons
 			A_GiveInventory("shoulderGun", 1);
 			A_GiveInventory("magazine_shoulderGun", 32);
 			A_GiveInventory("StaffBlaster", 1);
-			// armor
-			A_GiveInventory("wosKineticArmor", 1);
 			// ammo
 			A_GiveInventory("EnergyPod", 400);
 			A_GiveInventory("wosenergykit", 10);

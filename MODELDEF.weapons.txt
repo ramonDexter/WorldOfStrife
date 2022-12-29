@@ -929,6 +929,17 @@ model wosPhaestonRifle_dummy3 {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 4
 }
+model wosPhaestonRifle_dummy0 {
+	USEACTORPITCH
+	USEACTORROLL
+	path "models/weapons/phaeston/"
+	model 0 "phaeston_pickup.md3"
+	scale 0.35 0.35 0.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 1
+	frameindex DUMM B 0 2
+	frameindex DUMM C 0 4
+}
 ////////////////////////////////////////////////////////////////////////////////
 /*model executorRifle {
 	//pickup model

@@ -111,8 +111,8 @@ class wosBoltsElectric : wosPickup {
 		//$Title "Quirell of electric bolts (item)"
 		+INVENTORY.INVBAR
 		
-		//radius 10;
-		//height 16;
+		radius 10;
+		height 16;
 		Tag "$T_ELEBOLTS";
 		inventory.icon "I_EQRL";
 		Inventory.PickupMessage "$F_ELEBOLTS";
@@ -124,7 +124,10 @@ class wosBoltsElectric : wosPickup {
 			XQRL A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("ElectricBolts", 24);
+			TNT1 A 0 {
+				A_GiveInventory("ElectricBolts", 24);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -132,7 +135,7 @@ class wosBoltsElectric : wosPickup {
 class wosBoltsPoison : wosPickup {
 	Default {
 		//$Category "Ammunition/WoS"
-		//$Title "Quirell of poison bolts (item)"
+		//$Title "Quirell of electric bolts (item)"
 		+INVENTORY.INVBAR
 		
 		Tag "$T_POISONBOLTS";
@@ -146,7 +149,10 @@ class wosBoltsPoison : wosPickup {
 			PQRL A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("PoisonBolts", 12);
+			TNT1 A 0 {
+				A_GiveInventory("PoisonBolts", 12);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -176,7 +182,10 @@ class wosBundlePoison : wosPickup {
 			MPAR A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("ElectricBolts", 5);
+			TNT1 A 0 {
+				A_GiveInventory("ElectricBolts", 5);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -206,7 +215,10 @@ class wosBundleElectric : wosPickup {
 			MEAR A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("ElectricBolts", 10);
+			TNT1 A 0 {
+				A_GiveInventory("ElectricBolts", 10);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -230,7 +242,10 @@ class wosBulletsBox : wosPickup {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("ClipOfBullets", 50);
+			TNT1 A 0 {
+				A_GiveInventory("ClipOfBullets", 50);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -257,7 +272,10 @@ class wosEnergyPod : wosPickup {
 			DUMM BB 6 Bright;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("EnergyPod", 20);
+			TNT1 A 0 {
+				A_GiveInventory("EnergyPod", 20);
+				A_StartSound("sounds/batteryuse", CHAN_AUTO);
+			}
 			Stop;	
 	}
 }
@@ -279,7 +297,10 @@ class wosEnergyCell : wosPickup {
 			DUMM BCDEEDCB 6;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("energyPod", 45);
+			TNT1 A 0 {
+				A_GiveInventory("energyPod", 45);
+				A_StartSound("sounds/batteryuse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -310,7 +331,10 @@ class wosEnergyKit : wosPickup {
 			DUMM BB 6 Bright;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("energyPod", 60);
+			TNT1 A 0 {
+				A_GiveInventory("energyPod", 60);
+				A_StartSound("sounds/batteryuse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -332,7 +356,10 @@ class wosEnergyPack : wosPickup {
 			DUMM BB 6 Bright;
 			Loop;
 		Use:
-			TNT1 A 0 A_GiveInventory("EnergyPod", 120);
+			TNT1 A 0 {
+				A_GiveInventory("EnergyPod", 120);
+				A_StartSound("sounds/batteryuse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -402,7 +429,10 @@ class wosBulletCartridge : wosPickup replaces ClipOfBullets {
 			DUMM A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("ClipOfBullets", 25);
+			TNT1 A 0 {
+				A_GiveInventory("ClipOfBullets", 25);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -434,7 +464,10 @@ class wosBundleMiniMissile : wosPickup {
 			MMMB A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("MiniMissiles", 5);
+			TNT1 A 0 {
+				A_GiveInventory("MiniMissiles", 5);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -466,7 +499,10 @@ class wosHEGrenadeBox : wosPickup {
 			LHEG A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("HEGrenadeRounds", 5);
+			TNT1 A 0 {
+				A_GiveInventory("HEGrenadeRounds", 5);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -496,7 +532,10 @@ class wosPhosphorusGrenadeBox : wosPickup {
 			LPHG A -1;
 			Stop;
 		Use:
-			TNT1 A 0 A_GiveInventory("PhosphorusGrenadeRounds", 5);
+			TNT1 A 0 {
+				A_GiveInventory("PhosphorusGrenadeRounds", 5);
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
+			}
 			Stop;
 	}
 }
@@ -533,6 +572,7 @@ class ammoSatchel_item : wosPickup {
             Stop;
         Use:
             TNT1 A 0 {
+				A_StartSound("sounds/ammouse", CHAN_AUTO);
                 A_GiveInventory("ElectricBolts", 20);
                 A_GiveInventory("PoisonBolts", 5);
                 A_GiveInventory("ClipOfBullets", 50);

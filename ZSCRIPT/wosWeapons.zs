@@ -828,7 +828,7 @@ class zscStrifePuff : StrifePuff {
 		Decal "SVEbulletScorch";
 	}
 }
-class wosSparkPuff : StrifeSpark {
+class wosPhaestonPuff : StrifeSpark {
 	Default {
 		//+NODECAL
 		RenderStyle "Translucent";

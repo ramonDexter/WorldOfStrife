@@ -44,7 +44,7 @@ class wosPhaestonRifle : wosWeapon {
 			Loop;
 		Fire:
 			DUMM A 1 W_CheckAmmo();
-			DUMM B 2 Bright W_ShootFireArm3(8, "weapons/executorRifle/Fire", "wosSparkPuff");
+			DUMM B 2 Bright W_ShootFireArm3(8, "weapons/executorRifle/Fire", "wosPhaestonPuff");
 			DUMM C 1 Bright;
 			DUMM D 1 A_Refire();
             goto Ready;
@@ -118,6 +118,47 @@ class wosPhaestonRifle_dummy3 : actor {
 	States {
 		Spawn:
 			DUMM A -1;
+			Stop;
+	}
+}
+class wosPhaestonRifle_dummy0 : actor {
+	Default {
+		//$Category "Decorations/Wos"
+		//$Title "deco executor rifle 00"
+		//$arg0 "spawn position"
+		//$arg0tooltip "0- ground\n1- front\n3- standing"
+		tag "executor rifle";
+		radius 8;
+		height 8;
+		+SOLID
+		+USESPECIAL
+		+NOGRAVITY
+	}
+	States {
+		Spawn:
+			TNT1 A 0 {
+				if(args[0] == 0) {
+					return resolveState("POS0");
+					self.height = 8;
+				} 
+				else if(args[0] == 1) {
+					return resolveState("POS1");
+					self.height = 16;
+				}
+				else if(args[0] == 2) {
+					return resolveState("POS2");
+					self.height = 24;
+				}
+				return resolveState(null);
+			}
+		POS0:
+			DUMM A -1;
+			Stop;
+		POS1:
+			DUMM B -1;
+			Stop;
+		POS2:
+			DUMM C -1;
 			Stop;
 	}
 }

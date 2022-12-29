@@ -1,7 +1,7 @@
 //  BASE SNDINFO  //////////////////////////////////////////////////////////////
 
 // menu sounds /////////////////////////////////////////////////////////////////
-menu/choose "sounds/menutick/dsradio.wav"
+menu/choose "sounds/menu/buttonclickrelease.wav"
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Items  /////////////////////////////////////////////////////////////////////
@@ -47,12 +47,15 @@ sounds/drink  "sounds/mwsound/drink.wav"
 
 //medicals use
 sounds/med  "sounds/various/DSMEDPAK.ogg"
+sounds/medicaluse "sounds/various/smallmedkit1.wav"
 
 //batteries use
-sounds/battery  "sounds/various/BATTRECH.wav"
+sounds/battery  "sounds/various/suitchargeok1.wav"
+sounds/batteryuse "sounds/various/battery_pickup.wav"
+
 
 //ammo use
-sounds/ammouse  "sounds/various/DSAMPKUP.wav"
+sounds/ammouse  "sounds/various/ammo_pickup.wav"
 
 //lantern oil use
 sounds/lanternOilUse  "sounds/various/OILPICK1.ogg"

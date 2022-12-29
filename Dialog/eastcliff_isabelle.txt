@@ -1,0 +1,105 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 16;
+	/*
+	Page {
+		pageName = "EC_isabelle_";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "EC_isabelle_";
+		}
+	}
+	*/
+	Page {
+		pageName = "EC_isabelle_opener";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]Hell Binder, how may I help you?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "EC_isabelle_whoareyou";
+		}
+		Choice {
+			Text = "What are you doing here?";
+			Nextpage = "EC_isabelle_whatareyoudoinghere";
+		}
+	}
+	Page {
+		pageName = "EC_isabelle_whoareyou";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]I'm Isabelle. I'm a traveller looking for work.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Where do you hail from, Isabelle?";
+			Nextpage = "EC_isabelle_wherefrom";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_isabelle_opener";
+		}
+	}
+	Page {
+		pageName = "EC_isabelle_whatareyoudoinghere";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]I'm a traveller. I help people as I travel around. I got paid by food or bed, so that's ok, I think. Better than how I lived before.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How you lived before?";
+			Nextpage = "EC_isabelle_wherefrom";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_isabelle_opener";
+		}
+	}
+	Page {
+		pageName = "EC_isabelle_wherefrom";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]Well, I lived in a village called Aeredale. You've probably never heard about it. I lived with my father. Better said, Master. He used me as a slave, for all his desires. And when I say all his desires, I mean ALL. It all started when mother died. Something changed in him. Started heavy drinking, and you can pretty imagine the rest. I hoped he will forget, he will be the good daddy he used to be. After a year, I just left. Cannot bear it anymore.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Your father is looking for you.";
+			Nextpage = "EC_isabelle_lookingforyou";
+            Require {
+                item = "m10q_lostDaughter_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m10q_lostDaughter_found";
+                amount = 1;
+            }
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "EC_isabelle_opener";
+		}
+	}
+	Page {
+		pageName = "EC_isabelle_lookingforyou";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]Oh, is he? So what? He wants me to return, to have his sex slave girl back? No way, forget it. I'm not coming back, no sir.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I just understand you. I'll tell him.";
+			Nextpage = "EC_isabelle_tellhim";
+		}
+	}
+	Page {
+		pageName = "EC_isabelle_tellhim";
+		Name = "\c[yellow]Isabelle";
+		Dialog = "\c[white]If he wants, tell him I will never return. And I will never forget what he did to me.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You're welcome.";
+			Nextpage = "EC_isabelle_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 1102;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

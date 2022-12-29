@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////////////////
+// quest aeredale ztracena dcera ///////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// dcera farmare curtise zmizela
+// farmar te pozada o jeji nalezeni
+// dcera ve skutecnosti utekla, protoze  ji rodice pouzivali pouze jako sluzku
+// dcera je k nalezeni nedaleko Eastcliffu, v tabore obchodniku
+
+// tokeny: /////////////////////////////////////////////////////////////////////
+// aeredale ztracena dcera /////////////////////////////////////////////////////
+// class m10q_lostDaughter_given : tokenBase {}
+// class m10q_lostDaughter_found : tokenBase {}
+// class m10q_lostDaughter_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// text strings //
+// TXT_m10q_lostDaughter
+
+// journal entry DONE
+
+
+// zadani v dialogu u farmare
+// dat hraci token _given
+script 1101 (void) {
+	GiveInventory("m10q_lostDaughter_given", 1);
+	DisplayQuest("TXT_m10q_lostDaughter", 1);
+}
+
+// v dialogu u doktorovy dcery hint ze dcera utekla nekam k Eastcliffu
+Require {
+	item = "m10q_lostDaughter_given";
+	amount = 1;
+}
+Exclude {
+	item = "m10q_lostDaughter_found";
+	amount = 1;
+}
+
+// map14 ///////////////////////////////////////////////////////////////////////
+// v dialogu u dcery u eastcliffu
+// dat hraci token _found
+script 1102 (void) {
+	GiveInventory("m10q_lostDaughter_found", 1);
+	DisplayQuest("TXT_m10q_lostDaughter", 2);
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// v dialogu u farmare
+// ukonceni
+// dat hraci token _finished
+// dat hraci odmenu
+script 1103 (void) {
+	GiveInventory("coin", 250);
+	GiveInventory("m10q_lostDaughter_finished", 1);
+	DisplayQuest("TXT_m10q_lostDaughter", 3);
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

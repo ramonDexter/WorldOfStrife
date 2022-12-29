@@ -187,6 +187,22 @@ class wosWeapon : StrifeWeapon {
 		invoker.magazine--;
 		A_AlertMonsters();
 	}
+	action void W_ShootFirearm3(int damageMultiplier, string weapsnd, string bulletPuff) {
+		if(player == null) {
+			return;
+		}
+		player.mo.PlayAttacking2 ();
+		int damage = damageMultiplier*(random[StrifeGun]() % 3 + 1);
+		double ang = angle;
+		if(player.refire) {
+			ang += Random2[StrifeGun]() * (22.5 / 256) * AccuracyFactor();
+		}
+		A_StartSound (weapsnd, CHAN_WEAPON); //default "weapons/assaultgun"
+		LineAttack (ang, PLAYERMISSILERANGE, BulletSlope (), damage, 'Hitscan', bulletPuff);	
+		//take away ammo from magazine
+		invoker.magazine--;
+		A_AlertMonsters();
+	}
 	////////////////////////////////////////////////////////////////////////////
 	
 	////////////////////////////////////////////////////////////////////////////
@@ -810,6 +826,20 @@ class nodecalStrifeSpark : StrifeSpark {
 class zscStrifePuff : StrifePuff {
 	Default {
 		Decal "SVEbulletScorch";
+	}
+}
+class wosSparkPuff : StrifeSpark {
+	Default {
+		//+NODECAL
+		RenderStyle "Translucent";
+		Alpha 0.5;
+		scale 0.5;
+		//Decal "SVEbulletScorch";	
+	}
+	States {
+		Crash:
+			POW2 ABCDE 1 Bright;
+			Stop;
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////

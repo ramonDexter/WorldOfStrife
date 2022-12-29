@@ -26,8 +26,8 @@ maps
 				notfortesting = 0;
 			}
 		}
-		viewpositiony = -2987.258f;
-		viewpositionx = 4250.696f;
+		viewpositiony = -942.2272f;
+		viewpositionx = 1445.33f;
 		
 		testprecommand
 		{
@@ -47,11 +47,11 @@ maps
 			gridrotate = 0;
 			backscalex = 100;
 			gridoriginx = 0;
-			gridsize = 8;
+			gridsize = 4;
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 2.470625f;
+		viewscale = 0.02856096f;
 		
 		reloadresourceprecommand
 		{
@@ -93,10 +93,10 @@ maps
 				controlsectorarea
 				{
 					usecustomtagrange = false;
-					outerleft = -32704;
-					outerright = -30592;
-					outertop = 28096;
-					outerbottom = -8832;
+					outerleft = -4928;
+					outerright = -832;
+					outertop = 16640;
+					outerbottom = 7872;
 				}
 			}
 		}
@@ -131,8 +131,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 2698;
-				firstvisibleline = 68;
+				caretposition = 2838;
+				firstvisibleline = 14;
 			}
 			
 			document1
@@ -142,8 +142,8 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 28491;
-				firstvisibleline = 899;
+				caretposition = 24105;
+				firstvisibleline = 772;
 				activetab = true;
 			}
 		}

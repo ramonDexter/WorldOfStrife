@@ -116,9 +116,25 @@ quest:
 // aeredale questy /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 # techmisth:
-- zamorena studna - HOTOVO
+1) zamorena studna - HOTOVO
 
 # starosta
+1) ukradene veci
+2) banditi ve starem hrade
+
+
+# zastupce shipping gildy
+1)
+2)
+
+# farmar Curtis 
+1) dcera zmizela 
+
+# sef drevorubcu
+1) opravit zarizeni na pile
+2) najit ztraceneho delnika
+
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -185,7 +201,7 @@ quest:
 2) zlikviduj bandity ve vodarne - HOTOVO
 
 # sef mistni shipping gildy
-1) dones vzkaz do shpping guildy v ravenrocku
+1) dones vzkaz do shipping guildy v ravenrocku
 	>> sef ti preda balicek
 	>> v ravenrocku udelat script: pokud hrac vstoupi do mapu po svych, udelat prepadeni nekde u vstupu do mapy / pokud hrac pouzije fast travel pomoci travellera, upravit travel script >> transport hrace do mapy a pokracovat jako by sel po svych >> v kratkosti modifikovat transport script, nebo !upravit dialog s travellerem!
 2) zjisti, kam zmizela posledni lod z millportu

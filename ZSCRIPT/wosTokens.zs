@@ -188,3 +188,9 @@ class m10q_troubledWaters_haveSolution : tokenBase {}
 class m10q_troubledWaters_cleanedWater : tokenBase {}
 class m10q_troubledWaters_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
+
+// aeredale ztracena dcera /////////////////////////////////////////////////////
+class m10q_lostDaughter_given : tokenBase {}
+class m10q_lostDaughter_found : tokenBase {}
+class m10q_lostDaughter_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////

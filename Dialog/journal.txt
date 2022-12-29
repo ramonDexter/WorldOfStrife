@@ -5,7 +5,7 @@ namespace = "GZDoom";
 Conversation {
 	ID = 777;
 	Page {
-        pageName = "journal_opener";
+		pageName = "journal_opener";
 		Name = "\c[yellow]::[   PERSONAL  JOURNAL   ]::";//\c[yellow]::[   PERSONAL  JOURNAL   ]::
 		Dialog = "\c[white]Your personal journal lists notes and active quests.";//\c[yellow]-------------------------------\n\n\c[white]Your personal journal lists notes and active quests.
 		Panel = "M_BLNK";
@@ -26,19 +26,19 @@ Conversation {
 			Text = "$page_journal_opener_cQuests";//\c[yellow][ QUESTS ]
 			NextPage = "journal_quests";
 		}
-        Choice {
-            Text = "$page_journal_opener_cARCHIVE";//\c[yellow][ ARCHIVE ]
-            Nextpage = "journal_questArchive";
-        }
+		Choice {
+			Text = "$page_journal_opener_cARCHIVE";//\c[yellow][ ARCHIVE ]
+			Nextpage = "journal_questArchive";
+		}
 	}
 	
-    //##################################################################################################################
-    // page - quests ###################################################################################################
-    //##################################################################################################################
+	//##################################################################################################################
+	// page - quests ###################################################################################################
+	//##################################################################################################################
 	Page {
 		PageName = "journal_quests";
 		Name = "\c[yellow]\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Active quests will be listed here.";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Active quests will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		
@@ -47,8 +47,8 @@ Conversation {
 			NextPage = "journal_opener";
 		}
 		
-        //main quest
-        //-----------------------------------------------------------
+		//main quest
+		////////////////////////////////////////////////////////////////////////
 		Choice {
 			Text = "[ Main Quest - Destroy Rebel Base ]";
 			NextPage = "journal_mainQuest_01_given";
@@ -61,513 +61,533 @@ Conversation {
 				amount = 1;
 			}
 		}
-        //-----------------------------------------------------------
-        
-        //main quest 02
-        //-----------------------------------------------------------
-        Choice {
-            Text = "[ Main Quest - Bring the ancient artifact ]";
-            NextPage = "journal_mainQuest_bringArtifact_given";
-            Require {
-                item = "quest02given";
-                amount = 1;
-            }
-            Exclude {
-                item = "quest02_finished";
-                amount = 1;
-            }
-        }
-        //-----------------------------------------------------------
-
-        Choice {
-            Text = "[ Main Quest - Go to Millport ]";
-            NextPage = "journal_mainQuest_millport_given";
-            Require {
-                item = "quest03_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "quest03_finished";
-                amount = 1;
-            }
-        }
-
-        Choice {
-            Text = "[ Main Quest - Millport Situation ]";
-            NextPage = "journal_mainQuest_millportBlues_given";
-            Require {
-                item = "quest04_millport_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "quest04_millport_finished";
-                amount = 1;
-            }
-        }
-       
-
-        //town quest 01
-        //-----------------------------------------------------------
-        Choice {
-            Text = "[ Town Quest #01 - Clean the waste treatment plant ]";
-            NextPage = "journal_SQ_q_spiders_given";
-            Require {
-                item = "twn_quest01_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_quest01_finished";
-                amount = 1;
-            }
-        }
-        //-----------------------------------------------------------
-
-        //town quest 02
-        //-----------------------------------------------------------
-        Choice {
-            Text = "[ Town Quest #02 - Purge the waste treatment and find the device ]";
-            NextPage = "journal_SQ_q_poachers_given";
-            Require {
-                item = "twn_quest02_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_quest02_finished";
-                amount = 1;
-            }
-        }
-        //-----------------------------------------------------------
-
-        //town quest 03
-        //-----------------------------------------------------------
-        Choice {
-            Text = "[ Town Quest #03 - Fix the powerplant ]";
-            NextPage = "journal_SQ_q_fixpowerplant_given";
-            Require {
-                item = "twn_quest03_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_quest03_finished";
-                amount = 1;
-            }
-        }
-        //-----------------------------------------------------------
-
-        //quest - find rebel in town
-        //-----------------------------------------------------------
-        Choice {
-            Text = "[ Quest - Find rebel in town ]";
-            NextPage = "journal_SQ_q_rebels_given";
-            Require {
-                item = "twn_judgeQ01_rebels_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_judgeQ01_rebels_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
-
-        // quest - murder in city bath //////////////////////////////
-        Choice {
-            Text = "[ Quest - Murder in City Bath ]";
-            NextPage = "journal_SQ_q_murderInBath_given";
-            Require {
-                item = "twn_judgeQ01_vrazdaVlaznich_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_judgeQ01_vrazdaVlaznich_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////
 		
-        /////////////////////////////////////////////////////////////
-        Choice {
-            Text = "[ Quest - Heretical hideout in Silent Hills ]";
-            NextPage = "journal_SQ_bishop_hereticHideout_opener";
-            Require {
-                item = "twn_bishopQ01_skrysRebelu_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_bishopQ01_skrysRebelu_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
-        Choice {
-            Text = "[ Quest - Heretical base in Northern Territory ]";
-            NextPage = "journal_SQ_bishop_hereticBase_killed";
-            Require {
-                item = "twn_bishopQ02_killRebels_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_bishopQ02_killRebels_finished";
-                amount = 1;
-            }
-        }
+		//main quest 02
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Main Quest - Bring the ancient artifact ]";
+			NextPage = "journal_mainQuest_bringArtifact_given";
+			Require {
+				item = "quest02given";
+				amount = 1;
+			}
+			Exclude {
+				item = "quest02_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
 
-        // tekguildmaster q01 Ore delivery //////////////////////////
-        Choice {
-            Text = "[ Quest - Ore Delivery ]";
-            NextPage = "journal_SQ_tekguildmaster_quest01_opener";
-            Require {
-                item = "twn_tekGuildMasterQ1_oreDelivery_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_tekGuildMasterQ1_oreDelivery_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Main Quest - Go to Millport ]";
+			NextPage = "journal_mainQuest_millport_given";
+			Require {
+				item = "quest03_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "quest03_finished";
+				amount = 1;
+			}
+		}
 
-        // tekguildmaster q02 Broken Machinery //////////////////////
-        Choice {
-            Text = "[ Quest - Broken Machinery ]";
-            NextPage = "journal_SQ_tekguildmaster_quest02_opener";
-            Require {
-                item = "twn_tekGuildMasterQ2_brokenMachinery_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Main Quest - Millport Situation ]";
+			NextPage = "journal_mainQuest_millportBlues_given";
+			Require {
+				item = "quest04_millport_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "quest04_millport_finished";
+				amount = 1;
+			}
+		}
+	   
 
-        // tekguildmaster q03 Powerplant Trouble ////////////////////
-        Choice {
-            Text = "[ Quest - Trouble in coastal powerplant ]";
-            NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
-            Require {
-                item = "twn_tekGuildMasterQ3_powerplantTrouble_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
-        
-        /////////////////////////////////////////////////////////////
-        Choice {
-            Text = "[ Quest - Arrange food delivery ]";
-            NextPage = "journal_SQ_bindercook_sezensuroviny_given";
-            Require {
-                item = "twn_binderCook_sezensuroviny_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "twn_binderCook_sezensuroviny_finished";
-                amount = 1;
-            }
-        }        
-        /////////////////////////////////////////////////////////////
+		//town quest 01
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Town Quest #01 - Clean the waste treatment plant ]";
+			NextPage = "journal_SQ_q_spiders_given";
+			Require {
+				item = "twn_quest01_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_quest01_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
 
-        //millport - najdi kuchare pro council club /////////////////
-        Choice {
-            Text = "[ Quest - Find a cook for the Council Club ]";
-            NextPage = "journal_MPquest_councilClubCook_given";
-            Require {
-                item = "m08q_CCinnkeeper_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m08q_CCinnkeeper_finished";
-                amount = 1;
-            }
-        }
-        /////////////////////////////////////////////////////////////
+		//town quest 02
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Town Quest #02 - Purge the waste treatment and find the device ]";
+			NextPage = "journal_SQ_q_poachers_given";
+			Require {
+				item = "twn_quest02_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_quest02_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
 
-		// eastcliff - Destroy Spider Nests /////////////////////////
-        Choice {
+		//town quest 03
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Town Quest #03 - Fix the powerplant ]";
+			NextPage = "journal_SQ_q_fixpowerplant_given";
+			Require {
+				item = "twn_quest03_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_quest03_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+
+		//quest - find rebel in town
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Find rebel in town ]";
+			NextPage = "journal_SQ_q_rebels_given";
+			Require {
+				item = "twn_judgeQ01_rebels_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_judgeQ01_rebels_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+
+		// quest - murder in city bath /////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Murder in City Bath ]";
+			NextPage = "journal_SQ_q_murderInBath_given";
+			Require {
+				item = "twn_judgeQ01_vrazdaVlaznich_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_judgeQ01_vrazdaVlaznich_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+		
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Heretical hideout in Silent Hills ]";
+			NextPage = "journal_SQ_bishop_hereticHideout_opener";
+			Require {
+				item = "twn_bishopQ01_skrysRebelu_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_bishopQ01_skrysRebelu_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Heretical base in Northern Territory ]";
+			NextPage = "journal_SQ_bishop_hereticBase_killed";
+			Require {
+				item = "twn_bishopQ02_killRebels_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_bishopQ02_killRebels_finished";
+				amount = 1;
+			}
+		}
+
+		// tekguildmaster q01 Ore delivery /////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Ore Delivery ]";
+			NextPage = "journal_SQ_tekguildmaster_quest01_opener";
+			Require {
+				item = "twn_tekGuildMasterQ1_oreDelivery_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_tekGuildMasterQ1_oreDelivery_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+
+		// tekguildmaster q02 Broken Machinery /////////////////////////////////
+		Choice {
+			Text = "[ Quest - Broken Machinery ]";
+			NextPage = "journal_SQ_tekguildmaster_quest02_opener";
+			Require {
+				item = "twn_tekGuildMasterQ2_brokenMachinery_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+
+		// tekguildmaster q03 Powerplant Trouble ///////////////////////////////
+		Choice {
+			Text = "[ Quest - Trouble in coastal powerplant ]";
+			NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
+			Require {
+				item = "twn_tekGuildMasterQ3_powerplantTrouble_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+		
+		////////////////////////////////////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Arrange food delivery ]";
+			NextPage = "journal_SQ_bindercook_sezensuroviny_given";
+			Require {
+				item = "twn_binderCook_sezensuroviny_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "twn_binderCook_sezensuroviny_finished";
+				amount = 1;
+			}
+		}        
+		////////////////////////////////////////////////////////////////////////
+
+		//millport - najdi kuchare pro council club ////////////////////////////
+		Choice {
+			Text = "[ Quest - Find a cook for the Council Club ]";
+			NextPage = "journal_MPquest_councilClubCook_given";
+			Require {
+				item = "m08q_CCinnkeeper_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_CCinnkeeper_finished";
+				amount = 1;
+			}
+		}
+		////////////////////////////////////////////////////////////////////////
+
+		// eastcliff - Destroy Spider Nests ////////////////////////////////////
+		Choice {
 			Text = "[ Quest - Destroy Spider Nests ]";
 			NextPage = "journal_ECquest_killSpiders_given";
-            Require {
-                item = "m14q_killQueens_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_killQueens_finished";
-                amount = 1;
-            }
+			Require {
+				item = "m14q_killQueens_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_killQueens_finished";
+				amount = 1;
+			}
 		}
-        /////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////
 
-		// eastcliff - Raided Waterplant ////////////////////////////
+		// eastcliff - Raided Waterplant ///////////////////////////////////////
 		Choice {
 			Text = "[ Quest - Raided Waterplant ]";
 			NextPage = "journal_ECquest_raidedwaterplant_given";
 			Require {
-                item = "m14q_raidedWaterplant_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_raidedWaterplant_finished";
-                amount = 1;
-            }
+				item = "m14q_raidedWaterplant_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_raidedWaterplant_finished";
+				amount = 1;
+			}
 		}
-        /////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////
 
-        // aeredale - troubled waters ///////////////////////////////
-        Choice {
+		// aeredale - troubled waters //////////////////////////////////////////
+		Choice {
 			Text = "[ Quest - Troubled Waters ]";
 			NextPage = "journal_AEquest_troubledWaters_given";
 			Require {
-                item = "m10q_troubledWaters_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m10q_troubledWaters_finished";
-                amount = 1;
-            }
+				item = "m10q_troubledWaters_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m10q_troubledWaters_finished";
+				amount = 1;
+			}
 		}
-        /////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////
 
-        // eastscliff - vycisti sklep hospody ///////////////////////
-        Choice {
-            Text = "[ Quest - Clean the Cellar ]";
-            NextPage = "journal_ECquest_cleanTheCellar_given";
-            Require {
-                item = "m14q_cleanTheCellar_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "m14q_cleanTheCellar_finished";
-                amount = 1;
-            }
-        }
-        // eastcliff - food delivery ////////////////////////////////
-        Choice {
-            Text = "[ Quest - Food Delivery ]";
-            NextPage = "journal_ECquest_fooddelivery_given";
-            Require {
-                item = "wosq_ECdeliverFood_given";
-                amount = 1;
-            }
-            Exclude {
-                item = "wosq_ECdeliverFood_finished";
-                amount = 1;
-            }
-        }
-
+		// eastscliff - vycisti sklep hospody //////////////////////////////////
+		Choice {
+			Text = "[ Quest - Clean the Cellar ]";
+			NextPage = "journal_ECquest_cleanTheCellar_given";
+			Require {
+				item = "m14q_cleanTheCellar_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m14q_cleanTheCellar_finished";
+				amount = 1;
+			}
+		}
+		// eastcliff - food delivery ///////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Food Delivery ]";
+			NextPage = "journal_ECquest_fooddelivery_given";
+			Require {
+				item = "wosq_ECdeliverFood_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "wosq_ECdeliverFood_finished";
+				amount = 1;
+			}
+		}
+		// aeredale ztracena dcera /////////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Lost Daughter ]";
+			NextPage = "journal_m10q_lostDaughter_given";
+			Require {
+				item = "m10q_lostDaughter_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m10q_lostDaughter_finished";
+				amount = 1;
+			}
+		}
 
 	}
-    //##################################################################################################################
-    //##################################################################################################################
-    //##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
 
-    //##################################################################################################################
-    // quest archive //
-    // list here all finished quests //
-    //##################################################################################################################
-    Page {
-        PageName = "journal_questArchive";
+	//##################################################################################################################
+	// quest archive //
+	// list here all finished quests //
+	//##################################################################################################################
+	Page {
+		PageName = "journal_questArchive";
 		Name = "\c[yellow]\c[yellow]::[   Q U E S T   A R C H I V E   ]::";
-        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Finished quests will be listed here.";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Finished quests will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";		
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_opener";
 		}
-        Choice {
-            Text = "[ Main Quest - Destroy Rebel Base ]";
+		Choice {
+			Text = "[ Main Quest - Destroy Rebel Base ]";
 			NextPage = "journal_mainQuest_01_given";
-            Require {
-                item = "quest01finished";
+			Require {
+				item = "quest01finished";
 				amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Main Quest - Bring the ancient artifact ]";
-            NextPage = "journal_mainQuest_bringArtifact_given";
-            Require {
-                item = "quest02_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Main Quest - Go to Millport ]";
-            NextPage = "journal_mainQuest_millport_given";
-            Require {
-                item = "quest03_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Main Quest - Millport Situation ]";
-            NextPage = "journal_mainQuest_millportBlues_given";
-            Require {
-                item = "quest04_millport_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Town Quest #01 - Clean the waste treatment plant ]";
-            NextPage = "journal_SQ_q_spiders_given";
-            Require {
-                item = "twn_quest01_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Town Quest #02 - Purge the waste treatment and find the device ]";
-            NextPage = "journal_SQ_q_poachers_given";
-            Require {
-                item = "twn_quest02_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Town Quest #03 - Fix the powerplant ]";
-            NextPage = "journal_SQ_q_fixpowerplant_given";
-            Require {
-                item = "twn_quest03_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Find rebel in town ]";
-            NextPage = "journal_SQ_q_rebels_given";
-            Require {
-                item = "twn_judgeQ01_rebels_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Murder in City Bath ]";
-            NextPage = "journal_SQ_q_murderInBath_given";
-            Require {
-                item = "twn_judgeQ01_vrazdaVlaznich_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Heretical hideout in Silent Hills ]";
-            NextPage = "journal_SQ_bishop_hereticHideout_opener";
-            Require {
-                item = "twn_bishopQ01_skrysRebelu_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Ore Delivery ]";
-            NextPage = "journal_SQ_tekguildmaster_quest01_opener";
-            Require {
-                item = "twn_tekGuildMasterQ1_oreDelivery_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Broken Machinery ]";
-            NextPage = "journal_SQ_tekguildmaster_quest02_opener";
-            Require {
-                item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Trouble in coastal powerplant ]";
-            NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
-            Require {
-                item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Find a cook for the Council Club ]";
-            NextPage = "journal_MPquest_councilClubCook_given";
-            Require {
-                item = "m08q_CCinnkeeper_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Destroy Spider Nests ]";
+			}
+		}
+		Choice {
+			Text = "[ Main Quest - Bring the ancient artifact ]";
+			NextPage = "journal_mainQuest_bringArtifact_given";
+			Require {
+				item = "quest02_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Main Quest - Go to Millport ]";
+			NextPage = "journal_mainQuest_millport_given";
+			Require {
+				item = "quest03_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Main Quest - Millport Situation ]";
+			NextPage = "journal_mainQuest_millportBlues_given";
+			Require {
+				item = "quest04_millport_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Town Quest #01 - Clean the waste treatment plant ]";
+			NextPage = "journal_SQ_q_spiders_given";
+			Require {
+				item = "twn_quest01_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Town Quest #02 - Purge the waste treatment and find the device ]";
+			NextPage = "journal_SQ_q_poachers_given";
+			Require {
+				item = "twn_quest02_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Town Quest #03 - Fix the powerplant ]";
+			NextPage = "journal_SQ_q_fixpowerplant_given";
+			Require {
+				item = "twn_quest03_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Find rebel in town ]";
+			NextPage = "journal_SQ_q_rebels_given";
+			Require {
+				item = "twn_judgeQ01_rebels_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Murder in City Bath ]";
+			NextPage = "journal_SQ_q_murderInBath_given";
+			Require {
+				item = "twn_judgeQ01_vrazdaVlaznich_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Heretical hideout in Silent Hills ]";
+			NextPage = "journal_SQ_bishop_hereticHideout_opener";
+			Require {
+				item = "twn_bishopQ01_skrysRebelu_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Ore Delivery ]";
+			NextPage = "journal_SQ_tekguildmaster_quest01_opener";
+			Require {
+				item = "twn_tekGuildMasterQ1_oreDelivery_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Broken Machinery ]";
+			NextPage = "journal_SQ_tekguildmaster_quest02_opener";
+			Require {
+				item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Trouble in coastal powerplant ]";
+			NextPage = "journal_SQ_tekguildmaster_quest03_blowntransformer";
+			Require {
+				item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Find a cook for the Council Club ]";
+			NextPage = "journal_MPquest_councilClubCook_given";
+			Require {
+				item = "m08q_CCinnkeeper_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Destroy Spider Nests ]";
 			NextPage = "journal_ECquest_killSpiders_given";
-            Require {
-                item = "m14q_killQueens_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Raided Waterplant ]";
+			Require {
+				item = "m14q_killQueens_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Raided Waterplant ]";
 			NextPage = "journal_ECquest_raidedwaterplant_given";
-            Require {
-                item = "m14q_raidedWaterplant_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Troubled Waters ]";
+			Require {
+				item = "m14q_raidedWaterplant_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Troubled Waters ]";
 			NextPage = "journal_AEquest_troubledWaters_given";
-            Require {
-                item = "m10q_troubledWaters_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Clean the Cellar ]";
-            NextPage = "journal_ECquest_cleanTheCellar_given";
-            Require {
-                item = "m14q_cleanTheCellar_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Food Delivery ]";
-            NextPage = "journal_ECquest_fooddelivery_given";
-            Require {
-                item = "wosq_ECdeliverFood_finished";
-                amount = 1;
-            }
-        }
-        Choice {
-            Text = "[ Quest - Arrange food delivery ]";
-            NextPage = "journal_SQ_bindercook_sezensuroviny_given";
-            Require {
-                item = "twn_binderCook_sezensuroviny_given";
-                amount = 1;
-            }
-        }
+			Require {
+				item = "m10q_troubledWaters_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Clean the Cellar ]";
+			NextPage = "journal_ECquest_cleanTheCellar_given";
+			Require {
+				item = "m14q_cleanTheCellar_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Food Delivery ]";
+			NextPage = "journal_ECquest_fooddelivery_given";
+			Require {
+				item = "wosq_ECdeliverFood_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Arrange food delivery ]";
+			NextPage = "journal_SQ_bindercook_sezensuroviny_given";
+			Require {
+				item = "twn_binderCook_sezensuroviny_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "[ Quest - Lost Daughter ]";
+			NextPage = "journal_m10q_lostDaughter_given";
+			Require {
+				item = "m10q_lostDaughter_finished";
+				amount = 1;
+			}
+		}
 
 
-        
-        /*
-        Choice {
-            Text = "";
-            NextPage = "";
-            Require {
-                item = "";
-                amount = 1;
-            }
-        }
-        */
-        //
-    }
-    //##################################################################################################################
-    //##################################################################################################################
-    //##################################################################################################################
+		
+		/* 
+		Choice {
+			Text = "";
+			NextPage = "";
+			Require {
+				item = "";
+				amount = 1;
+			}
+		}
+		*/
+		//
+	}
+	//##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
 
 
-    //##################################################################################################################
+	//##################################################################################################################
 	//##########################################[  NOTES  ]#############################################################
-    //##################################################################################################################
+	//##################################################################################################################
 	/*
-    // page 1 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// page 1 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 	Page {
 		pageName = "journal_notes";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
-        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -646,17 +666,17 @@ Conversation {
 				amount = 1;
 			}
 		}
-        Choice {
-            Text = "\c[yellow][ NEXT >> ]";
-            NextPage = "journal_notes2";
-        }
+		Choice {
+			Text = "\c[yellow][ NEXT >> ]";
+			NextPage = "journal_notes2";
+		}
 		
 	}
-    // page 2 //////////////////////////////////////////////////////////////////////////////////////////////////////////
-    Page {
-        pageName = "journal_notes2";
+	// page 2 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "journal_notes2";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
-        Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
+		Dialog = "\c[yellow]-------------------------------\n\n\c[white]Found notes and datadisks will be listed here.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -703,11 +723,11 @@ Conversation {
 				amount = 1;
 			}
 		}
-    }
-    //##################################################################################################################
-    //## notes pages ###################################################################################################
-    //##################################################################################################################
-    
+	}
+	//##################################################################################################################
+	//## notes pages ###################################################################################################
+	//##################################################################################################################
+	
 	Page {
 		pageName = "journal_notes_notePrayers";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
@@ -856,8 +876,8 @@ Conversation {
 			NextPage = "journal_notes";
 		}
 	}
-    Page {
-        pageName = "journal_notes_noteCoastalRegion";
+	Page {
+		pageName = "journal_notes_noteCoastalRegion";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteCoastalRegion_text";
 		Panel = "M_BLNK";
@@ -866,9 +886,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses1";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses1";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text1";
 		Panel = "M_BLNK";
@@ -901,9 +921,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses2";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses2";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text2";
 		Panel = "M_BLNK";
@@ -916,9 +936,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses3";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses3";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text3";
 		Panel = "M_BLNK";
@@ -931,9 +951,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses4";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses4";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text4";
 		Panel = "M_BLNK";
@@ -946,9 +966,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses5";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses5";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text5";
 		Panel = "M_BLNK";
@@ -961,9 +981,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses6";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses6";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text6";
 		Panel = "M_BLNK";
@@ -976,9 +996,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTheGreatHouses7";
+	}
+	Page {
+		pageName = "journal_notes_noteTheGreatHouses7";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTheGreatHouses_Text7";
 		Panel = "M_BLNK";
@@ -991,9 +1011,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTekGuildNotes1";
+	}
+	Page {
+		pageName = "journal_notes_noteTekGuildNotes1";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTekGuildNotes_Text1";
 		Panel = "M_BLNK";
@@ -1006,9 +1026,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteTekGuildNotes2";
+	}
+	Page {
+		pageName = "journal_notes_noteTekGuildNotes2";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteTekGuildNotes_Text2";
 		Panel = "M_BLNK";
@@ -1021,9 +1041,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteMillport";
+	}
+	Page {
+		pageName = "journal_notes_noteMillport";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteMillport_Text";
 		Panel = "M_BLNK";
@@ -1032,9 +1052,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteEmperorsList1";
+	}
+	Page {
+		pageName = "journal_notes_noteEmperorsList1";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteEmperorsList_Text1";
 		Panel = "M_BLNK";
@@ -1047,9 +1067,9 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    Page {
-        pageName = "journal_notes_noteEmperorsList2";
+	}
+	Page {
+		pageName = "journal_notes_noteEmperorsList2";
 		Name = "\c[yellow]\c[yellow]::[   N O T E S   ]::";
 		Dialog = "$PDA_noteEmperorsList_Text2";
 		Panel = "M_BLNK";
@@ -1062,24 +1082,24 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_notes2";
 		}
-    }
-    //##################################################################################################################
-    //##################################################################################################################
-    //##################################################################################################################
+	}
+	//##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
 	*/
 
 
 
-    
 	
-    //##################################################################################################################
-    //####################################[ QUESTS ]####################################################################
-    //##################################################################################################################
+	
+	//##################################################################################################################
+	//####################################[ QUESTS ]####################################################################
+	//##################################################################################################################
 
-    //main quest 01
-    //##################################################################################################################
+	//main quest 01
+	//##################################################################################################################
 	Page {
-        pageName = "journal_mainQuest_01_given";
+		pageName = "journal_mainQuest_01_given";
 		link = "journal_mainQuest_01_finished";
 		IfItem {
 			item = "leaderskull";
@@ -1095,7 +1115,7 @@ Conversation {
 		}
 	}
 	Page {
-        pageName = "journal_mainQuest_01_finished";
+		pageName = "journal_mainQuest_01_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
 		Dialog = "\c[yellow]Quest #01 - Destroy Rebel Base\n\c[green]==---------------------==\n\c[white]Inquisitor surveilance has found hidden rebel base not far from the Sanctuary. The heretics have settled in old deserted castle.\nFind them and banish all of them.\nBring the skull of their leader as a proof.\n\n[X] Kill the heretic leader";
 		Panel = "M_BLNK";
@@ -1106,1163 +1126,1214 @@ Conversation {
 			NextPage = "journal_questArchive";
 		}
 	}
-    //##################################################################################################################	
+	//##################################################################################################################	
 
-    //town quest#1
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_q_spiders_given";
-        link = "journal_SQ_q_spiders_spiderskilled";
-        IfItem {
-            item = "twn_quest01_spidersKilled";
-            amount = 1;
-        }
+	//town quest#1
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_q_spiders_given";
+		link = "journal_SQ_q_spiders_spiderskilled";
+		IfItem {
+			item = "twn_quest01_spidersKilled";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[ ] Kill all spiders\n[ ] Find the poachers";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[ ] Kill all spiders\n[ ] Find the poachers";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_spiders_spiderskilled";
-        link = "journal_SQ_q_spiders_finished";
-        IfItem {
-            item = "twn_quest01_cacheFound";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_spiders_spiderskilled";
+		link = "journal_SQ_q_spiders_finished";
+		IfItem {
+			item = "twn_quest01_cacheFound";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[ ] Find the poachers";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[ ] Find the poachers";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_spiders_finished";
+	}
+	Page {
+		pageName = "journal_SQ_q_spiders_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[X] Find the poachers";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[X] Find the poachers";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //Town quest#02 - find the poachers
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_q_poachers_given";
-        link = "journal_SQ_q_poachers_poacherskilled";
-        IfItem {
-            item = "twn_quest02_poachersKilled";
-            amount = 1;
-        }
+	//Town quest#02 - find the poachers
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_q_poachers_given";
+		link = "journal_SQ_q_poachers_poacherskilled";
+		IfItem {
+			item = "twn_quest02_poachersKilled";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[ ] Kill the poachers\n[ ] Find the device from the powerplant";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[ ] Kill the poachers\n[ ] Find the device from the powerplant";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_poachers_poacherskilled";
-        link = "journal_SQ_q_poachers_finished";
-        IfItem {
-            item = "powerPlant_powerCoupling";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_poachers_poacherskilled";
+		link = "journal_SQ_q_poachers_finished";
+		IfItem {
+			item = "powerPlant_powerCoupling";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[ ] Find the device from the powerplant";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[ ] Find the device from the powerplant";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}        
-    }
-    Page {
-        pageName = "journal_SQ_q_poachers_finished";
+	}
+	Page {
+		pageName = "journal_SQ_q_poachers_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[X] Find the device from the powerplant";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[X] Find the device from the powerplant";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}   
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //town quest 03 - fix the powerplant
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_q_fixpowerplant_given";
-        link = 11;
-        IfItem {
-            item = "twn_quest03_powerPlantFixed";
-            amount = 1;
-        }
+	//town quest 03 - fix the powerplant
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_q_fixpowerplant_given";
+		link = 11;
+		IfItem {
+			item = "twn_quest03_powerPlantFixed";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[ ] Fix the powerplant";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[ ] Fix the powerplant";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_fixpowerplant_finished";
+	}
+	Page {
+		pageName = "journal_SQ_q_fixpowerplant_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[X] Fix the powerplant";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[X] Fix the powerplant";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		} 
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
 
-    //judge quest rebels
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_q_rebels_given";
-        link = "journal_SQ_q_rebels_rowanisrebel";
-        IfItem {
-            item = "twn_judgeQ01_rebels_rowanIsrebel";
-            amount = 1;
-        }
+	//judge quest rebels
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_q_rebels_given";
+		link = "journal_SQ_q_rebels_rowanisrebel";
+		IfItem {
+			item = "twn_judgeQ01_rebels_rowanIsrebel";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[ ] Find out who the rebel is\n[ ] Deal with the outcast";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[ ] Find out who the rebel is\n[ ] Deal with the outcast";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_rebels_rowanisrebel";
-        link = "journal_SQ_q_rebels_killed";
-        IfItem {
-            item = "twn_judgeQ01_rebels_rowanKilled";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_rebels_rowanisrebel";
+		link = "journal_SQ_q_rebels_killed";
+		IfItem {
+			item = "twn_judgeQ01_rebels_rowanKilled";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[ ] Deal with the outcast";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[ ] Deal with the outcast";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_rebels_killed";
-        link = "journal_SQ_q_rebels_finished";
-        IfItem {
-            item = "twn_judgeQ01_rebels_finished";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_rebels_killed";
+		link = "journal_SQ_q_rebels_finished";
+		IfItem {
+			item = "twn_judgeQ01_rebels_finished";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[X] Deal with the outcast\n[ ] Return for your reward";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[X] Deal with the outcast\n[ ] Return for your reward";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_rebels_finished";
+	}
+	Page {
+		pageName = "journal_SQ_q_rebels_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[X] Deal with the outcast\n[X] Return for your reward";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Rebels in town\n\c[green]==---------------------==\n\c[white]City Judge asked you to find a rebel hiding in the city. and deal with this outcast.\n\n[X] Find out who the rebel is\n[X] Deal with the outcast\n[X] Return for your reward";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //judge quest murder in city bath
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_q_murderInBath_given";
-        link = "journal_SQ_q_murderInBath_searchDressingroom";
-        IfItem {
-            item = "twn_judgeQ01_vrazdaVlaznich_prohledejPrevlekarnu";
-            amount = 1;
-        }
+	//judge quest murder in city bath
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_q_murderInBath_given";
+		link = "journal_SQ_q_murderInBath_searchDressingroom";
+		IfItem {
+			item = "twn_judgeQ01_vrazdaVlaznich_prohledejPrevlekarnu";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[ ] Search the place of murder for evidence";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[ ] Search the place of murder for evidence";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_searchDressingroom";
-        link = "journal_SQ_q_murderInBath_detonatorFound";
-        IfItem {
-            item = "cityBathMurder_Detonator";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_searchDressingroom";
+		link = "journal_SQ_q_murderInBath_detonatorFound";
+		IfItem {
+			item = "cityBathMurder_Detonator";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[ ] Gatekeeper told you to search the dressing room";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[ ] Gatekeeper told you to search the dressing room";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_detonatorFound";
-        link = "journal_SQ_q_murderInBath_techsmith";
-        IfItem {
-            item = "twn_judgeQ01_vrazdaVlaznich_techsmith";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_detonatorFound";
+		link = "journal_SQ_q_murderInBath_techsmith";
+		IfItem {
+			item = "twn_judgeQ01_vrazdaVlaznich_techsmith";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[ ] You've found suspicious detonator. Go speak with the judge.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[ ] You've found suspicious detonator. Go speak with the judge.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_techsmith";
-        link = "journal_SQ_q_murderInBath_wealthymerchant";
-        IfItem {
-            item = "twn_judgeQ01_vrazdaVlaznich_obchodnik";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_techsmith";
+		link = "journal_SQ_q_murderInBath_wealthymerchant";
+		IfItem {
+			item = "twn_judgeQ01_vrazdaVlaznich_obchodnik";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[ ] Speak with the techsmith";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[ ] Speak with the techsmith";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_wealthymerchant";
-        link = "journal_SQ_q_murderInBath_wealthymerchant_usvedcen";
-        IfItem {
-            item = "twn_judgeQ01_vrazdaVlaznich_usvedcen";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_wealthymerchant";
+		link = "journal_SQ_q_murderInBath_wealthymerchant_usvedcen";
+		IfItem {
+			item = "twn_judgeQ01_vrazdaVlaznich_usvedcen";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[ ] Speak with the wealthy merchant.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[ ] Speak with the wealthy merchant.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_wealthymerchant_usvedcen";
-        link = "journal_SQ_q_murderInBath_finished";
-        IfItem {
-            item = "twn_judgeQ01_vrazdaVlaznich_finished";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_wealthymerchant_usvedcen";
+		link = "journal_SQ_q_murderInBath_finished";
+		IfItem {
+			item = "twn_judgeQ01_vrazdaVlaznich_finished";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\n- The merchant admitted he's behind the murder. He accepts the punishment.\n[ ] Return to the judge.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\n- The merchant admitted he's behind the murder. He accepts the punishment.\n[ ] Return to the judge.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_q_murderInBath_finished";
+	}
+	Page {
+		pageName = "journal_SQ_q_murderInBath_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\n[ ] The merchant admitted he's behind the murder. He accepts the punishment.\n[X] Return to the judge.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\n[ ] The merchant admitted he's behind the murder. He accepts the punishment.\n[X] Return to the judge.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
 	//Bishop quest#01
-    //##################################################################################################################
-    Page {
-        pageName = "journal_SQ_bishop_hereticHideout_opener";
-        link = "journal_SQ_bishop_hereticHideout_hideoutRaided";
-        IfItem {
-            item = "hereticalRelic";
-            amount = 1;
-        }
+	//##################################################################################################################
+	Page {
+		pageName = "journal_SQ_bishop_hereticHideout_opener";
+		link = "journal_SQ_bishop_hereticHideout_hideoutRaided";
+		IfItem {
+			item = "hereticalRelic";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[ ] Find heretical hideout and acquire anything of value there\n[ ] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[ ] Find heretical hideout and acquire anything of value there\n[ ] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_bishop_hereticHideout_hideoutRaided";
-        link = "journal_SQ_bishop_hereticHideout_finished";
-        IfItem {
-            item = "twn_bishopQ01_skrysRebelu_finished";
-            amount = 1;
-        }
+	}
+	Page {
+		pageName = "journal_SQ_bishop_hereticHideout_hideoutRaided";
+		link = "journal_SQ_bishop_hereticHideout_finished";
+		IfItem {
+			item = "twn_bishopQ01_skrysRebelu_finished";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[X] Find heretical hideout and acquire anything of value there\n[ ] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[X] Find heretical hideout and acquire anything of value there\n[ ] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_bishop_hereticHideout_finished";
+	}
+	Page {
+		pageName = "journal_SQ_bishop_hereticHideout_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[X] Find heretical hideout and acquire anything of value there\n[X] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretical hideout in Silent Hills\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical shelter hidden somewhere in the city and bring anything of value back to him. You have to ask around the city to find this place.\n\n[X] Find heretical hideout and acquire anything of value there\n[X] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
-    
-    //Bishop quest#02
-    //##################################################################################################################
-    Page {
-        link = "journal_SQ_bishop_hereticBase_killed";
-        IfItem {
-            item = "twn_bishopQ02_killRebels_rebelsKilled";
-            amount = 1;
-        }
-        pageName = "journal_SQ_bishop_hereticBase_opener";
+	}
+	//##################################################################################################################
+	
+	//Bishop quest#02
+	//##################################################################################################################
+	Page {
+		link = "journal_SQ_bishop_hereticBase_killed";
+		IfItem {
+			item = "twn_bishopQ02_killRebels_rebelsKilled";
+			amount = 1;
+		}
+		pageName = "journal_SQ_bishop_hereticBase_opener";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[ ] Find heretical base and kill the heretics\n[ ] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[ ] Find heretical base and kill the heretics\n[ ] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_bishop_hereticBase_finished";
-        IfItem {
-            item = "twn_bishopQ02_killRebels_finished";
-            amount = 1;
-        }
-        pageName = "journal_SQ_bishop_hereticBase_killed";
+	}
+	Page {
+		link = "journal_SQ_bishop_hereticBase_finished";
+		IfItem {
+			item = "twn_bishopQ02_killRebels_finished";
+			amount = 1;
+		}
+		pageName = "journal_SQ_bishop_hereticBase_killed";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[ ] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[ ] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_bishop_hereticBase_finished";
+	}
+	Page {
+		pageName = "journal_SQ_bishop_hereticBase_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[X] Return to Bishop";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Heretic base in Northern Territory\n\c[green]==---------------------==\n\c[white]City Bishop asked you to locate a heretical base hidden in the Northern Territory. Find the base and purge the heretics.\n\n[X] Find heretical base and kill the heretics\n[X] Return to Bishop";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    //##################################################################################################################
-    
-    
-    //tekguild master quests
-    //##################################################################################################################
-    //quest 01
-    //##################################################################################################################
-    Page {
-        link = "journal_SQ_tekguildmaster_quest01_collectOre";
-        IfItem {
-            item = "twn_tekGuildMasterQ1_oreDelivery_pickOre";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest01_opener";
+	}
+	//##################################################################################################################
+	
+	
+	//tekguild master quests
+	//##################################################################################################################
+	//quest 01
+	//##################################################################################################################
+	Page {
+		link = "journal_SQ_tekguildmaster_quest01_collectOre";
+		IfItem {
+			item = "twn_tekGuildMasterQ1_oreDelivery_pickOre";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest01_opener";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[ ] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[ ] Return to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[ ] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[ ] Return to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }    
-    Page {
-        link = "journal_SQ_tekguildmaster_quest01_orecollected";
-        IfItem {
-            item = "twn_tekGuildMasterQ1_oreDelivery_orePicked";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest01_collectOre";
+	}    
+	Page {
+		link = "journal_SQ_tekguildmaster_quest01_orecollected";
+		IfItem {
+			item = "twn_tekGuildMasterQ1_oreDelivery_orePicked";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest01_collectOre";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[ ] Search the mines for 7 pieces of Degnin Ore\n[ ] Return to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[ ] Search the mines for 7 pieces of Degnin Ore\n[ ] Return to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest01_finished";
-        IfItem {
-            item = "twn_tekGuildMasterQ1_oreDelivery_finished";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest01_orecollected";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest01_finished";
+		IfItem {
+			item = "twn_tekGuildMasterQ1_oreDelivery_finished";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest01_orecollected";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[X] Search the mines for 7 pieces of Degnin Ore\n[ ] Return to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[X] Search the mines for 7 pieces of Degnin Ore\n[ ] Return to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_tekguildmaster_quest01_finished";
+	}
+	Page {
+		pageName = "journal_SQ_tekguildmaster_quest01_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[X] Search the mines for 7 pieces of Degnin Ore\n[X] Return to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Ore delivery\n\c[green]==---------------------==\n\c[white]Local TekGuild Master wants you to bring him some Degnin Ore from the mines.\n\n[X] Go to the mines and collect 7 pieces of Degnin Ore from the foreman\n[X] Search the mines for 7 pieces of Degnin Ore\n[X] Return to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //quest02
-    //##################################################################################################################
-    Page {
-        link = "journal_SQ_tekguildmaster_quest02_filterneeded";
-        IfItem {
-            item = "twn_tekGuildMasterQ2_brokenMachinery_needFilter";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest02_opener";
+	//quest02
+	//##################################################################################################################
+	Page {
+		link = "journal_SQ_tekguildmaster_quest02_filterneeded";
+		IfItem {
+			item = "twn_tekGuildMasterQ2_brokenMachinery_needFilter";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest02_opener";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\n\n[ ] Investigate what is need to be done\n";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\n\n[ ] Investigate what is need to be done\n";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest02_installnewfilter";
-        IfItem {
-            item = "twn_tekGuildMasterQ2_brokenMachinery_newfilter";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest02_filterneeded";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest02_installnewfilter";
+		IfItem {
+			item = "twn_tekGuildMasterQ2_brokenMachinery_newfilter";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest02_filterneeded";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[ ] Broken machinery needs new air filter";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[ ] Broken machinery needs new air filter";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest02_reportback";
-        IfItem {
-            item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest02_installnewfilter";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest02_reportback";
+		IfItem {
+			item = "twn_tekGuildMasterQ2_brokenMachinery_repaired";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest02_installnewfilter";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[ ] Install new air filter";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[ ] Install new air filter";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest02_finished";
-        IfItem {
-            item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest02_reportback";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest02_finished";
+		IfItem {
+			item = "twn_tekGuildMasterQ2_brokenMachinery_finished";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest02_reportback";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[X] Install new air filter\n[ ] Report back to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[X] Install new air filter\n[ ] Report back to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_tekguildmaster_quest02_finished";
+	}
+	Page {
+		pageName = "journal_SQ_tekguildmaster_quest02_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[X] Install new air filter\n[X] Report back to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Broken machinery\n\c[green]==---------------------==\n\c[white]One of the mine machines has broken down recently. TekGuild Master wants you to investigate and if possible, repair the machine. Go to the mines and speak with the foreman, he'll tell you more.\nThe broken machinery needs a new filter. Go to the City TechSmith.\n\n[X] Investigate what is need to be done\n[X] Broken machinery needs new air filter\n[X] Install new air filter\n[X] Report back to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //quest 03
-    //##################################################################################################################
-    Page {
-        link = "journal_SQ_tekguildmaster_quest03_blowntransformer";
-        ifitem {
-            item = "twn_tekGuildMasterQ3_powerplantTrouble_blownTransformer";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest03_opener";
+	//quest 03
+	//##################################################################################################################
+	Page {
+		link = "journal_SQ_tekguildmaster_quest03_blowntransformer";
+		ifitem {
+			item = "twn_tekGuildMasterQ3_powerplantTrouble_blownTransformer";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest03_opener";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\n\n[ ] Go to the TekGuild Coastal powerplant and investigate what happened";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\n\n[ ] Go to the TekGuild Coastal powerplant and investigate what happened";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest03_killedhereticleader";
-        ifitem {
-            item = "twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest03_blowntransformer";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest03_killedhereticleader";
+		ifitem {
+			item = "twn_tekGuildMasterQ3_powerplantTrouble_hereticLeaderKilled";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest03_blowntransformer";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[ ] Go inside the powerplant and investigate what happened\n";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[ ] Go inside the powerplant and investigate what happened\n";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_SQ_tekguildmaster_quest03_finished";
-        ifitem {
-            item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
-            amount = 1;
-        }
-        pageName = "journal_SQ_tekguildmaster_quest03_killedhereticleader";
+	}
+	Page {
+		link = "journal_SQ_tekguildmaster_quest03_finished";
+		ifitem {
+			item = "twn_tekGuildMasterQ3_powerplantTrouble_finished";
+			amount = 1;
+		}
+		pageName = "journal_SQ_tekguildmaster_quest03_killedhereticleader";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\nThe heretics killed the powerplant staff. You've disposed of them. Report back to the TekGuild Master.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[X] Go inside the powerplant and investigate what happened\n[ ] Report back to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\nThe heretics killed the powerplant staff. You've disposed of them. Report back to the TekGuild Master.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[X] Go inside the powerplant and investigate what happened\n[ ] Report back to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_tekguildmaster_quest03_finished";
+	}
+	Page {
+		pageName = "journal_SQ_tekguildmaster_quest03_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\nThe heretics killed the powerplant staff. You've disposed of them. Report back to the TekGuild Master.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[X] Go inside the powerplant and investigate what happened\n[X] Report back to the TekGuild Master";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Powerplant Trouble\n\c[green]==---------------------==\n\c[white]The TekGuild Master needs you to investaigate what happened in their coastal powerplant. The place cut off all communications two days ago, also the power supply dropped, so there might be some problem.\nThe Heretics have blown up one of the transformers. That caused the power drop. Also, they've broken inside the powerplant. Investigate what happened inside.\nThe heretics killed the powerplant staff. You've disposed of them. Report back to the TekGuild Master.\n\n[X] Go to the TekGuild Coastal powerplant and investigate what happened\n[X] Go inside the powerplant and investigate what happened\n[X] Report back to the TekGuild Master";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
-    
-    // binder cook small quest //
-    //##################################################################################################################
-    Page {
-        link = "journal_SQ_bindercook_sezensuroviny_sehnano";
-        ifitem {
-            item = "twn_binderCook_sezensuroviny_sehnano";
-            amount = 1;
-        }
-        pageName = "journal_SQ_bindercook_sezensuroviny_given";
+	}
+	//##################################################################################################################
+	
+	// binder cook small quest //
+	//##################################################################################################################
+	Page {
+		link = "journal_SQ_bindercook_sezensuroviny_sehnano";
+		ifitem {
+			item = "twn_binderCook_sezensuroviny_sehnano";
+			amount = 1;
+		}
+		pageName = "journal_SQ_bindercook_sezensuroviny_given";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[ ] Arrange food delivery from local grocery store";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[ ] Arrange food delivery from local grocery store";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    Page {
-        link = "journal_SQ_bindercook_sezensuroviny_finished";
-        ifitem {
-            item = "twn_binderCook_sezensuroviny_finished";
-            amount = 1;
-        }
-        pageName = "journal_SQ_bindercook_sezensuroviny_sehnano";
+	}
+	Page {
+		link = "journal_SQ_bindercook_sezensuroviny_finished";
+		ifitem {
+			item = "twn_binderCook_sezensuroviny_finished";
+			amount = 1;
+		}
+		pageName = "journal_SQ_bindercook_sezensuroviny_sehnano";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[ ] Report to Elisa";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[ ] Report to Elisa";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    Page {
-        pageName = "journal_SQ_bindercook_sezensuroviny_finished";
+	}
+	Page {
+		pageName = "journal_SQ_bindercook_sezensuroviny_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[X] Report to Elisa";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]Arrange food delivery\n\c[green]==---------------------==\n\c[white]Cook in Binder base asks you to arrange local food delivery, because quality of food supplied by Binder suppliers isn't good enough.\n\n[X] Arrange food delivery from local grocery store\n[X] Report to Elisa";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
-    
+	}
+	//##################################################################################################################
+	
 
 
-    //##################################################################################################################
-    //##################################################################################################################
-    //##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
+	//##################################################################################################################
 
-    //main quest 02 - bring the stolen atifact
-    //##################################################################################################################
-    Page {
-        pageName = "journal_mainQuest_bringArtifact_given";
-        link = "journal_mainQuest_bringArtifact_finished";
-        IfItem {
-            item = "quest02_artifact_stolen";
-            amount = 1;
-        }
+	//main quest 02 - bring the stolen atifact
+	//##################################################################################################################
+	Page {
+		pageName = "journal_mainQuest_bringArtifact_given";
+		link = "journal_mainQuest_bringArtifact_finished";
+		IfItem {
+			item = "quest02_artifact_stolen";
+			amount = 1;
+		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n[ ] Bring the ancient artifact";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n[ ] Bring the ancient artifact";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		} 
-    }
-    Page {    
-        pageName = "journal_mainQuest_bringArtifact_finished"; 
+	}
+	Page {    
+		pageName = "journal_mainQuest_bringArtifact_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n- the artifact has been stolen, report it to the Supreme";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n- the artifact has been stolen, report it to the Supreme";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		} 
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //main quest 03 - go to millport
-    //##################################################################################################################
-    Page {
-        pageName = "journal_mainQuest_millport_given"; 
+	//main quest 03 - go to millport
+	//##################################################################################################################
+	Page {
+		pageName = "journal_mainQuest_millport_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]MAIN QUEST\n- Go to Millport\n\c[green]==---------------------==\n\c[white]The superior send you to city of Millport with information regarding the stolen artifact. You have to deliver the data to Binder Superiors in Binder main base located in Millport. You will receive further orders there.";   
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]MAIN QUEST\n- Go to Millport\n\c[green]==---------------------==\n\c[white]The superior send you to city of Millport with information regarding the stolen artifact. You have to deliver the data to Binder Superiors in Binder main base located in Millport. You will receive further orders there.";   
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}     
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //main quest 04 - situation in millport
-    //##################################################################################################################
-    Page {
-        pageName = "journal_mainQuest_millportBlues_given";
+	//main quest 04 - situation in millport
+	//##################################################################################################################
+	Page {
+		pageName = "journal_mainQuest_millportBlues_given";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]MAIN QUEST\n- Millport Situation\n\c[green]==---------------------==\n\c[white]You have to settle down relations between the Binder Order and the local government in the city of Millport. Be careful, as the city is under control of criminal warlord, the Baron.";   
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]MAIN QUEST\n- Millport Situation\n\c[green]==---------------------==\n\c[white]You have to settle down relations between the Binder Order and the local government in the city of Millport. Be careful, as the city is under control of criminal warlord, the Baron.";   
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //##################################################################################################################
-    // millport quests #################################################################################################
-    //##################################################################################################################
+	//##################################################################################################################
+	// millport quests #################################################################################################
+	//##################################################################################################################
 
-    //find a cook for the Council Club
-    //##################################################################################################################
-    Page {
-        link = "journal_MPquest_councilClubCook_naselKuchare";
-        ifitem {
-            item = "m08q_CCinnkeeper_naselkuchare";
-            amount = 1;
-        }
-        pageName = "journal_MPquest_councilClubCook_given"; 
+	//find a cook for the Council Club
+	//##################################################################################################################
+	Page {
+		link = "journal_MPquest_councilClubCook_naselKuchare";
+		ifitem {
+			item = "m08q_CCinnkeeper_naselkuchare";
+			amount = 1;
+		}
+		pageName = "journal_MPquest_councilClubCook_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[ ] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[ ] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_MPquest_councilClubCook_finished";
-        ifitem {
-            item = "m08q_CCinnkeeper_finished";
-            amount = 1;
-        }
-        pageName = "journal_MPquest_councilClubCook_naselKuchare"; 
+	}
+	Page {
+		link = "journal_MPquest_councilClubCook_finished";
+		ifitem {
+			item = "m08q_CCinnkeeper_finished";
+			amount = 1;
+		}
+		pageName = "journal_MPquest_councilClubCook_naselKuchare"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_MPquest_councilClubCook_finished"; 
+	}
+	Page {
+		pageName = "journal_MPquest_councilClubCook_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[X] Return back to the innkeeper";   
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[X] Return back to the innkeeper";   
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 	
-    //##################################################################################################################
-    // eastcliff quests ################################################################################################
-    //##################################################################################################################
+	//##################################################################################################################
+	// eastcliff quests ################################################################################################
+	//##################################################################################################################
 	
 	// starosta quest 1 Destroy Spider Nests
-    //##################################################################################################################
+	//##################################################################################################################
 	Page {
-        link = "journal_ECquest_killSpiders_killed";
-        ifitem {
-            item = "m14q_killQueens_killed";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_killSpiders_given"; 
+		link = "journal_ECquest_killSpiders_killed";
+		ifitem {
+			item = "m14q_killQueens_killed";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_killSpiders_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[ ] Destroy the spider nests\n[ ] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[ ] Destroy the spider nests\n[ ] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_killSpiders_finished";
-        ifitem {
-            item = "m14q_killQueens_finished";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_killSpiders_killed"; 
+	}
+	Page {
+		link = "journal_ECquest_killSpiders_finished";
+		ifitem {
+			item = "m14q_killQueens_finished";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_killSpiders_killed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[ ] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[ ] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_ECquest_killSpiders_finished"; 
+	}
+	Page {
+		pageName = "journal_ECquest_killSpiders_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[X] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[X] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 	
 	// starosta quest 2 raided waterplant
-    //##################################################################################################################
-    Page {
-        link = "journal_ECquest_raidedwaterplant_killed";
-        ifitem {
-            item = "m14q_raidedWaterplant_killed";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_raidedwaterplant_given"; 
+	//##################################################################################################################
+	Page {
+		link = "journal_ECquest_raidedwaterplant_killed";
+		ifitem {
+			item = "m14q_raidedWaterplant_killed";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_raidedwaterplant_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[ ] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[ ] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_raidedwaterplant_finished";
-        ifitem {
-            item = "m14q_raidedWaterplant_finished";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_raidedwaterplant_killed"; 
+	}
+	Page {
+		link = "journal_ECquest_raidedwaterplant_finished";
+		ifitem {
+			item = "m14q_raidedWaterplant_finished";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_raidedwaterplant_killed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_ECquest_raidedwaterplant_finished"; 
+	}
+	Page {
+		pageName = "journal_ECquest_raidedwaterplant_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[X] Return back to mayor Holden";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[X] Return back to mayor Holden";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    // quest aeredale - zamorena studna //
-    //##################################################################################################################    
-    Page {
-        link = "journal_AEquest_troubledWaters_go4ore";
-        ifitem {
-            item = "m10q_troubledWaters_go4ore";
-            amount = 1;
-        }
-        pageName = "journal_AEquest_troubledWaters_given"; 
+	// quest aeredale - zamorena studna //
+	//##################################################################################################################    
+	Page {
+		link = "journal_AEquest_troubledWaters_go4ore";
+		ifitem {
+			item = "m10q_troubledWaters_go4ore";
+			amount = 1;
+		}
+		pageName = "journal_AEquest_troubledWaters_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[ ] Take a sample of infected water and show it to medic in Millport";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[ ] Take a sample of infected water and show it to medic in Millport";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_AEquest_troubledWaters_havesolution";
-        ifitem {
-            item = "m10q_troubledWaters_haveSolution";
-            amount = 1;
-        }
-        pageName = "journal_AEquest_troubledWaters_go4ore"; 
+	}
+	Page {
+		link = "journal_AEquest_troubledWaters_havesolution";
+		ifitem {
+			item = "m10q_troubledWaters_haveSolution";
+			amount = 1;
+		}
+		pageName = "journal_AEquest_troubledWaters_go4ore"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[ ] Medic in Millport needs copper ore";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[ ] Medic in Millport needs copper ore";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_AEquest_troubledWaters_cleanedwater";
-        ifitem {
-            item = "m10q_troubledWaters_cleanedWater";
-            amount = 1;
-        }
-        pageName = "journal_AEquest_troubledWaters_havesolution"; 
+	}
+	Page {
+		link = "journal_AEquest_troubledWaters_cleanedwater";
+		ifitem {
+			item = "m10q_troubledWaters_cleanedWater";
+			amount = 1;
+		}
+		pageName = "journal_AEquest_troubledWaters_havesolution"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[ ] Use the solution to clean the water";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[ ] Use the solution to clean the water";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_AEquest_troubledWaters_finished";
-        ifitem {
-            item = "m10q_troubledWaters_finished";
-            amount = 1;
-        }
-        pageName = "journal_AEquest_troubledWaters_cleanedwater"; 
+	}
+	Page {
+		link = "journal_AEquest_troubledWaters_finished";
+		ifitem {
+			item = "m10q_troubledWaters_finished";
+			amount = 1;
+		}
+		pageName = "journal_AEquest_troubledWaters_cleanedwater"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_AEquest_troubledWaters_finished"; 
+	}
+	Page {
+		pageName = "journal_AEquest_troubledWaters_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //##################################################################################################################
-    // quest eastcliff - vycisti sklep //
-    //##################################################################################################################
-    Page {
-        link = "journal_ECquest_cleanTheCellar_killedRats";
-        ifitem {
-            item = "m14q_cleanTheCellar_killedRats";
-            amount = 1;
-        }
-        
-        pageName = "journal_ECquest_cleanTheCellar_given"; 
+	//##################################################################################################################
+	// quest eastcliff - vycisti sklep //
+	//##################################################################################################################
+	Page {
+		link = "journal_ECquest_cleanTheCellar_killedRats";
+		ifitem {
+			item = "m14q_cleanTheCellar_killedRats";
+			amount = 1;
+		}
+		
+		pageName = "journal_ECquest_cleanTheCellar_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_findNest";
-        ifitem {
-            item = "m14q_cleanTheCellar_findNest";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_killedRats"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_findNest";
+		ifitem {
+			item = "m14q_cleanTheCellar_findNest";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_killedRats"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_getPoison";
-        ifitem {
-            item = "m14q_cleanTheCellar_getPoison";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_findNest"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_getPoison";
+		ifitem {
+			item = "m14q_cleanTheCellar_getPoison";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_findNest"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[ ] Find the rat nest";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[ ] Find the rat nest";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_getFishGuts";
-        ifitem {
-            item = "m14q_cleanTheCellar_getFishGuts";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_getPoison"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_getFishGuts";
+		ifitem {
+			item = "m14q_cleanTheCellar_getFishGuts";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_getPoison"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_gotGuts";
-        ifitem {
-            item = "m14q_cleanTheCellar_gotfishguts";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_getFishGuts"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_gotGuts";
+		ifitem {
+			item = "m14q_cleanTheCellar_gotfishguts";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_getFishGuts"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[ ] Get fish guts so the medic can brew the rat poison";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[ ] Get fish guts so the medic can brew the rat poison";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_destroyNest";
-        ifitem {
-            item = "m14q_cleanTheCellar_gotpoison";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_gotGuts"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_destroyNest";
+		ifitem {
+			item = "m14q_cleanTheCellar_gotpoison";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_gotGuts"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_destroyed";
-        ifitem {
-            item = "m14q_cleanTheCellar_destroyed";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_destroyNest"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_destroyed";
+		ifitem {
+			item = "m14q_cleanTheCellar_destroyed";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_destroyNest"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[ ] Destroy the rat nest";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[ ] Destroy the rat nest";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_cleanTheCellar_finished";
-        ifitem {
-            item = "m14q_cleanTheCellar_finished";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_cleanTheCellar_destroyed"; 
+	}
+	Page {
+		link = "journal_ECquest_cleanTheCellar_finished";
+		ifitem {
+			item = "m14q_cleanTheCellar_finished";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_cleanTheCellar_destroyed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[ ] Return to the inkkeper.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[ ] Return to the inkkeper.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_ECquest_cleanTheCellar_finished"; 
+	}
+	Page {
+		pageName = "journal_ECquest_cleanTheCellar_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[X] Return to the inkkeper.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[X] Return to the inkkeper.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
 
-    //##################################################################################################################
-    // quest dones jidlo rybari //
-    //##################################################################################################################
-    Page {
-        link = "journal_ECquest_fooddelivery_delivered";
-        ifitem {
-            item = "wosq_ECdeliverFood_delivered";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_fooddelivery_given"; 
+	//##################################################################################################################
+	// quest dones jidlo rybari //
+	//##################################################################################################################
+	Page {
+		link = "journal_ECquest_fooddelivery_delivered";
+		ifitem {
+			item = "wosq_ECdeliverFood_delivered";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_fooddelivery_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[ ] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[ ] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        link = "journal_ECquest_fooddelivery_finished";
-        ifitem {
-            item = "wosq_ECdeliverFood_finished";
-            amount = 1;
-        }
-        pageName = "journal_ECquest_fooddelivery_delivered"; 
+	}
+	Page {
+		link = "journal_ECquest_fooddelivery_finished";
+		ifitem {
+			item = "wosq_ECdeliverFood_finished";
+			amount = 1;
+		}
+		pageName = "journal_ECquest_fooddelivery_delivered"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "journal_quests";
 		}
-    }
-    Page {
-        pageName = "journal_ECquest_fooddelivery_finished"; 
+	}
+	Page {
+		pageName = "journal_ECquest_fooddelivery_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-        Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[X] Return to Jasmine.";
-        Panel = "M_BLNK";
-        Goodbye = "\c[red][ EXIT ]";
+		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[X] Return to Jasmine.";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			//NextPage = "journal_quests";
 			NextPage = "journal_questArchive";
 		}
-    }
-    //##################################################################################################################
+	}
+	//##################################################################################################################
+	
+	//##################################################################################################################
+	// quest aeredale ztracena dcera ///////////////////////////////////////////////
+	//##################################################################################################################
+	Page {
+		link = "journal_m10q_lostDaughter_found";
+		ifitem {
+			item = "m10q_lostDaughter_found";
+			amount = 1;
+		}
+		pageName = "journal_m10q_lostDaughter_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[ ] Find Isabelle\n[ ] Return to Curtis";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m10q_lostDaughter_finished";
+		ifitem {
+			item = "m10q_lostDaughter_finished";
+			amount = 1;
+		}
+		pageName = "journal_m10q_lostDaughter_found"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[ ] Return to Curtis";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m10q_lostDaughter_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[X] Return to Curtis";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
 
 }
 //##################################################################################################################

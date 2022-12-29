@@ -92,6 +92,14 @@ weapons/laserProj  		"sounds/pistolLaser/F_LASER4.wav"
 weapons/lasProjDeath	"sounds/pistolLaser/F_MKSHOT.wav"
 ////////////////////////////////////////////////////////////////////////////////
 
+// phaeston - executor rifle ///////////////////////////////////////////////////
+weapons/executorRifle/Fire "sounds/phaestonRifle/ar2_fire1.wav"
+weapons/executorRifle/FireDry "sounds/phaestonRifle/ar2_empty.wav"
+weapons/executorRifle/Reload "sounds/phaestonRifle/ar2_reload.wav"
+weapons/executorRifle/ReloadPush "sounds/phaestonRifle/ar2_reload_push.wav"
+weapons/executorRifle/ReloadRotate "sounds/phaestonRifle/ar2_reload_rotate.wav"
+////////////////////////////////////////////////////////////////////////////////
+
 
 
 ////////////////////////////////////////////////////////////////////////////////

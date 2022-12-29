@@ -25,115 +25,113 @@ Another major guild is the Guild of Builders. In most towns, the builders have g
 ////////////////////////////////////////////////////////////////////////////////
 ČASOVÁ OSA:
 
--30 (2064)
+-90 
 // csy // 
 Začíná projekt Záchrana, jehož cílem bylo vybudování sítě úkrytů a automatizovaných terraformačních systémů pro případ zničení života na Zemi.
 // enu //
 The Rescue project begins, the aim of which was to build a network of shelters and automated terraforming systems in case of destruction of life on Earth.
 
-0 (2094)
+0 
 // csy // 
 Dopad asteroidu strženého zbloudilou kometou. Dochází k takřka kompletnímu vyhlazení života.
 // enu //
 The impact of an asteroid torn down by a stray comet. Almost complete extinction of life.
 
-128
+560
 // csy //
 Aktivují se kryty ukrývající terraformační zařízení. Obnova ekosystému začíná. Lidé i většina zvířat bude během staletí obnoveno za pomoci zařízení v krytech. Celé automatizované tovární linky, umělé dělohy a další technologie později upadnou v zapomnění, stejně jako znalosti o světě před dopadem asteroidu.
 // enu //
 The shelters housing the terraforming facilities are activated. The ecosystem restoration begins. Humans and most animals will be restored over the centuries with the help of the facilities in the shelters. Whole automated factory lines, artificial wombs and other technologies will later be forgotten, as will knowledge of the world before the asteroid impact. 
 
-280
+1280
 // csy // 
 Terraformace je dokončena. Na povrch je vypuštěna většina původní fauny, včetně lidí. Kvůli chybě v terraformačních zařízeních však dojde ke ztrátě rozsáhlých databází objahujících veškeré znalosti lidstva. Lidé tak opět začínají od nuly. Vznikají první kmeny, které pojmenují významná místa Kontinentu.
 // enu //
 The shelters housing the human clones that were supposed to populate the restored land are opening and releasing their 'products' into the new world.
 
-320 Na jihu kontinentu se objevují nomádské kmeny, které si začnou říkat Kolymové, zřejmě podle nějakého prapředka jednoho z kmenů. Podle těchto kmenů bude jižní poloostrov později znám jako Kolyma.
+1520 Na jihu kontinentu se objevují nomádské kmeny, které si začnou říkat Kolymové, zřejmě podle nějakého prapředka jednoho z kmenů. Podle těchto kmenů bude jižní poloostrov později znám jako Kolyma.
 
-322 Mocné kmeny na západním poloostrově kontinentu uzavírají dohodu, na jejímž základně vzniká první království na Kontinentu. V historii bude toto království známé jako království Angar. Podle angarského království bude pojmenován i poloostrov.
+1522 Mocné kmeny na západním poloostrově kontinentu uzavírají dohodu, na jejímž základně vzniká první království na Kontinentu. V historii bude toto království známé jako království Angar. Podle angarského království bude pojmenován i poloostrov.
 
-327 Na východním pobřeží se objevuje Církev, zprvu jako skupina potulných mnichů, hlásajících učení kosmického Otce.
-
-338
+1530
 // csy // 
 Ve středu kontinentu se usazují nomádské skupiny přeživších. Sídliště bude později známo jako město Brod.
 // enu //
 In the center of the continent, nomadic groups of survivors settle. The settlement will later be known as the town of Bodrov.
 
-332 Na jihozápadním poloostrově se usazují kmeny Tabitů.
+1532 Na jihozápadním poloostrově se usazují kmeny Tabitů.
 
-334 Větrné pláně se stávají domovem nomádských kmenů. 
+1534 Větrné pláně se stávají domovem nomádských kmenů. 
 
-335 Angarské králoství se kvůli vnitřním neshodám rozpadá.
+1535 Angarské králoství se kvůli vnitřním neshodám rozpadá.
 
-336 Na východním úpatí vrcholku Aton, tyčícího se ve středu Kontinentu, vznikají zárodky osady, která se jednoho dne stane hlavním městem Říše.
+1536 Na východním úpatí vrcholku Aton, tyčícího se ve středu Kontinentu, vznikají zárodky osady, která se jednoho dne stane hlavním městem Říše.
 
-338 Církev na východním pobřeží zakládá město Holden, které se má stát hlavním sídlem Církve a nejsvětějším místem zdejšího náboženství.
+1540 Na jižním pobřeží vzniká osada, která později vejde ve známost jako město Millport.
 
-340 Na jižním pobřeží vzniká osada, která později vejde ve známost jako město Millport.
+1542 První válka mezi Tabitskými a Kolymskými. Osada Millport se dostává pod kontrolu Kolymských.
 
-342 První válka mezi Tabitskými a Kolymskými. Osada Millport se dostává pod kontrolu Kolymských.
+1545 Rozsáhlé sucho. Keralské kmeny sídlící na západním úpatí pohoří Aton sestupují do nížin na severu Angarského poloostrova, odkud vytlačují angarské kmeny. Začíná dlouhé období pohraničních válek, které končí vítězstvím Keralských kmenů.
 
-345 Rozsáhlé sucho. Keralské kmeny sídlící na západním úpatí pohoří Aton sestupují do nížin na severu Angarského poloostrova, odkud vytlačují angarské kmeny. Začíná dlouhé období pohraničních válek, které končí vítězstvím Keralských kmenů.
+1547 V zálivu, oddělujícím poloostrov Angar od tabitského poloostrova se usazuje kmen Kalanů, podle kterého bude později záliv pojmenován. Kalanové jsou rybáři, takže v zálivu nacházejí bohaté zdroje potravy.
 
-347 V zálivu, oddělujícím poloostrov Angar od tabitského poloostrova se usazuje kmen Kalanů, podle kterého bude později záliv pojmenován. Kalanové jsou rybáři, takže v zálivu nacházejí bohaté zdroje potravy.
+1548 Na nejzápadnějším cípu severního poloostrova vzniká království Westmarch. Místní vládci se starají o svoje záležitosti a nijak se nesnaží o kontakty s okolním světem. Bude tak po sto následujícíh let prosperovat skryté v ústraní.
 
-348 Na nejzápadnějším cípu severního poloostrova vzniká království Westmarch. Místní vládci se starají o svoje záležitosti a nijak se nesnaží o kontakty s okolním světem. Bude tak po sto následujícíh let prosperovat skryté v ústraní.
+1549 Nomádské kmeny zakládají na severozápadním okraji větrných plání osadu Eldham. Původní nomádi se zde ve větší míře začínají usazovat a proměňují pláně v okolí osady v úrodná pole, poskytující bohatou úrodu.
 
-349 Nomádské kmeny zakládají na severozápadním okraji větrných plání osadu Eldham. Původní nomádi se zde ve větší míře začínají usazovat a proměňují pláně v okolí osady v úrodná pole, poskytující bohatou úrodu.
+1550 Na východním pobřeží vzniká malá osada Bournemouth, která má sloužit rybářům jako útočiště před špatným počasím, které je na zdejším pobřeží velmi časté.
 
-350 Na východním pobřeží vzniká malá osada Bournemouth, která má sloužit rybářům jako útočiště před špatným počasím, které je na zdejším pobřeží velmi časté.
+1552 Na severním okraji Kolymského poloostrova, v místech kde končí Velký Hvozd, vzniká osada Silent Hills.
 
-352 Na severním okraji Kolymského poloostrova, v místech kde končí Velký Hvozd, vzniká osada Silent Hills.
+1553 Na západě angarského poloostrova, v místě malé zátoky, vzniká město Relond. Vzniká na deltě řeky, takže se sestává z mnoha oddělených ostrovů a ostrůvků, propojených mosty. Hned po svém vzniku začne představovat významný obchodní uzel, přitahující všechny obchodníky z blízka i z daleka.
 
-353 Na západě angarského poloostrova, v místě malé zátoky, vzniká město Relond. Vzniká na deltě řeky, takže se sestává z mnoha oddělených ostrovů a ostrůvků, propojených mosty. Hned po svém vzniku začne představovat významný obchodní uzel, přitahující všechny obchodníky z blízka i z daleka.
-
-355
+1555 (C: 0)
 // csy // 
 Vznik církve Řádu. Původně šlo o přeživší z jednoho z Krytů. AI řídící kryt získala vědomí a začala ke svým svěřencům mluvit jako jejich duch, nebo spíše Bůh. Přeživší vystoupili na povrch a začali budovat novou civilizaci, řízenou z pozadí prastarou AI. Tak vzniká Církev, a jde zároveň o nejsvětější tajemství, které zná v podstatě pouze Nejvyšší Velekněz a Nejvyšší Knihovník. 
 // enu //
 The Church of the Order. Originally, it was a survivor from one of the Shelters. The AI controlling the shelter gained consciousness and began to speak to its charges as their spirit, or rather God. The survivors came to the surface and began to build a new civilization, controlled from the background by the ancient AI. Thus the Church is formed, and it is also the holiest secret, known essentially only to the Supreme High Priest and the Supreme Librarian.
 
-360 V Kalanském zálivu vzniká město Narfolk, jako přímá konkurence Relondu a Angarských.
+1558 (C: 3) Církev na východním pobřeží zakládá město Holden, které se má stát hlavním sídlem Církve a nejsvětějším místem zdejšího náboženství.
 
-363 Začátek obchodní války mezi angarským Relondem a kalanským Narfolkem. 
+1560 (C: 5) V Kalanském zálivu vzniká město Narfolk, jako přímá konkurence Relondu a Angarských.
 
-365 Na jižním okraji větrných plání vzniká království Sylvania. Od pobřeží ho odděluje území Jarského knížectví. Oba státy sousedí na severu s územím Tarského Principátu a na jihu s územím Marrebského království, ležícího na území Velkého Hvozdu.
+1563 (C: 8) Začátek obchodní války mezi angarským Relondem a kalanským Narfolkem. 
 
-366 První z potyček tzv. období válčících států, které bude trvat následujících padesát let. Během této doby se území čtyř výše zmínených státním útvarů promění, některé zcela zaniknou, aby později znovu povstaly z popela.
+1565 (C: 10) Na jižním okraji větrných plání vzniká království Sylvania. Od pobřeží ho odděluje území Jarského knížectví. Oba státy sousedí na severu s územím Tarského Principátu a na jihu s územím Marrebského království, ležícího na území Velkého Hvozdu.
 
-375 Bitva pod Hvozdem. východní území Jarského knížectví je zničeno nekonečnými oddíly Sylvanských, kteří postupují směrem k pobřeží.
+1566 (C: 11) První z potyček tzv. období válčících států, které bude trvat následujících padesát let. Během této doby se území čtyř výše zmínených státním útvarů promění, některé zcela zaniknou, aby později znovu povstaly z popela.
 
-378 Jarské knížectví se dostává pod kontrolu Sylvanských. 
+1575 (C: 20) Bitva pod Hvozdem. východní území Jarského knížectví je zničeno nekonečnými oddíly Sylvanských, kteří postupují směrem k pobřeží.
 
-379 Na severu území okupovaného Sylvanskými se objevuje samostatné území Jarských, bráněné jedním ze synů knížete Jara. ǔzemí se drží po dva roky.
+1578 (C: 23) Jarské knížectví se dostává pod kontrolu Sylvanských. 
 
-381 Druhá válka mezi Tabitskými a Kolymskými končí kompletní porážkou Kolymských. Území poloostrova Kolyma se stává součástí Tabitského knížectví.
+1579 (C: 24) Na severu území okupovaného Sylvanskými se objevuje samostatné území Jarských, bráněné jedním ze synů knížete Jara. ǔzemí se drží po dva roky.
 
-391 Území bývalého jarského knížectví je připojeno k Sylvanskému území.
+1581 (C: 26) Druhá válka mezi Tabitskými a Kolymskými končí kompletní porážkou Kolymských. Území poloostrova Kolyma se stává součástí Tabitského knížectví.
 
-392 Sylvanští jsou zahnáni na ústup při pokusu o obsazení jednoho z měst Tarského Principátu. Zjevně lépe vybavené tarské oddíly pronikají hluboko na území Sylvanských, kde způsobují chaos a zkásu.
+1591 (C: 36) Území bývalého jarského knížectví je připojeno k Sylvanskému území.
 
-395 Území Sylvanských se dostává pod plnou kontrolu Tarského principátu. Velení tarské armády zajímá knížete Sylvana, kterého nechává popravit společně se všemi zajatými členy jeho rodiny.
+1592 (C: 37) Sylvanští jsou zahnáni na ústup při pokusu o obsazení jednoho z měst Tarského Principátu. Zjevně lépe vybavené tarské oddíly pronikají hluboko na území Sylvanských, kde způsobují chaos a zkásu.
 
-402 Tarský principát si podmaňuje zbývající území Sylvanských.
+1595 Území Sylvanských se dostává pod plnou kontrolu Tarského principátu. Velení tarské armády zajímá knížete Sylvana, kterého nechává popravit společně se všemi zajatými členy jeho rodiny.
 
-403 Tarský principát začíná postupovat na území Marrebského knížectví.
+1602 Tarský principát si podmaňuje zbývající území Sylvanských.
 
-408 Velká většina Marrebského knížectví se dostává pod kontrolu Tarského Principátu.
+1603 Tarský principát začíná postupovat na území Marrebského knížectví.
 
-410 Na Angarském poloostrově vzniká Angarské Království.
+1608 Velká většina Marrebského knížectví se dostává pod kontrolu Tarského Principátu.
 
-420 Tarský principát ukončuje své výboje ovládanutím zbytku Marrubského území. Území principátu nyní sahá na východě od pobřeží až po území Keralie na západě. Na severu pak hraničí s územím větrných plání, na jihu pak dosahuje do poloviny Velkého Hvozdu.
+1610 Na Angarském poloostrově vzniká Angarské Království.
 
-433 Začátek tzv. Pohraničních Válek mezi Tarským Principátem a Keralií.
+1620 Tarský principát ukončuje své výboje ovládanutím zbytku Marrubského území. Území principátu nyní sahá na východě od pobřeží až po území Keralie na západě. Na severu pak hraničí s územím větrných plání, na jihu pak dosahuje do poloviny Velkého Hvozdu.
 
-439 První z velkých bitev Pohraničních válek končí zničením města Oldenu na území Keralie. Pro keralské to znamená citelnou ztrátu.
+1633 Začátek tzv. Pohraničních Válek mezi Tarským Principátem a Keralií.
 
-443 Pohraniční Války končí dohodou mezi oběma stranami. Alespoň na oko. Ve skutečnosti dochází k ovládnutí Keralie Tarským Principátem. Keralie se stává Tarským protektorátem, a úkolem dosazených guvernérů je hlavně zisk na přírodním a nerostném bohatství kraje.
+1639 První z velkých bitev Pohraničních válek končí zničením města Oldenu na území Keralie. Pro keralské to znamená citelnou ztrátu.
 
-445 Tarský Principát začíná s pronikáním na území Větrných Plání. 
+1643 Pohraniční Války končí dohodou mezi oběma stranami. Alespoň na oko. Ve skutečnosti dochází k ovládnutí Keralie Tarským Principátem. Keralie se stává Tarským protektorátem, a úkolem dosazených guvernérů je hlavně zisk na přírodním a nerostném bohatství kraje.
+
+1645 Tarský Principát začíná s pronikáním na území Větrných Plání. 
 
 447 Jižní území Větrných plání až po Pahorkatinu se stává severní výspou Tarského Principátu. Nomádské kmeny obývající území s Principátem spíše spolupracují a zabírání vlastního území se nijak nebrání. Pokud s novými pány nesouhlasí, jednoduše území opustí a usadí se jinde.
 

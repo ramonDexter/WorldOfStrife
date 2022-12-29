@@ -711,7 +711,7 @@ model StormPistol {
 	model 0 "pistol_scorpion.md3"
 	//model 1 "flash_scorp_1.md3"
 	//model 2 "flash_scorp_2.md3"
-	scale -0.5 0.5 0.5
+	scale -0.55 0.55 0.55
 	offset 8.0 -20.0 -8.0
 	// idle & fire frames //
 	frameindex DUMM A 0 0
@@ -880,8 +880,10 @@ model wosPhaestonRifle {
 	offset 8.0 -20.0 -8.0
 
 	frameindex DUMM A 0 0
+	surfaceskin 0 0 "tx_phaestonRifle2.png"
 	frameindex DUMM B 0 1
 	frameindex DUMM C 0 2
+	surfaceskin 0 0 "tx_phaestonRifle.png"
 	frameindex DUMM D 0 3
 	frameindex DUMM E 0 4
 	frameindex DUMM F 0 5

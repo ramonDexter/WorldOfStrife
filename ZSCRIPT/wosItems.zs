@@ -607,10 +607,8 @@ class zscScanner : Scanner replaces Scanner {
 
 
 
-class travelTicket : CustomInventory
-{
-	Default
-	{			
+class travelTicket : CustomInventory {
+	Default {			
 		//$Category "Quest things/WoS"
 		//$Title "Travel Ticket"
 		
@@ -626,10 +624,8 @@ class travelTicket : CustomInventory
 		Inventory.PickupMessage "You picked up the Transportation Ticket!";
 		Inventory.PickupSound "misc/i_pkup";
 		Mass 0;
-	}
-	
-	States
-	{
+	}	
+	States {
 		Spawn:
 			TRTK A -1;
 			Stop;
@@ -649,10 +645,8 @@ class millPortTransportTicket : travelTicket {
 	}
 }
 
-class powerPlant_powerCoupling : CustomInventory
-{
-	Default
-	{			
+class powerPlant_powerCoupling : CustomInventory {
+	Default {			
 		//$Category "Quest things/WoS"
 		//$Title "Power Coupling (wos)"
 		
@@ -664,10 +658,8 @@ class powerPlant_powerCoupling : CustomInventory
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 		Mass 0;
-	}
-	
-	States
-	{
+	}	
+	States {
 		Spawn:
 			COUP AB 5;
 			Loop;
@@ -677,10 +669,8 @@ class powerPlant_powerCoupling : CustomInventory
 	}
 }
 
-class hereticDatapad1 : CustomInventory
-{
-	Default
-	{			
+class hereticDatapad1 : CustomInventory {
+	Default {			
 		//$Category "Quest things/WoS"
 		//$Title "Heretic Datapad #1"
 		
@@ -692,10 +682,8 @@ class hereticDatapad1 : CustomInventory
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 		Mass 0;
-	}
-	
-	States
-	{
+	}	
+	States {
 		Spawn:
 			HDPD A -1;
 			Stop;
@@ -707,10 +695,8 @@ class hereticDatapad1 : CustomInventory
 
 
 
-class caseInformationDisk : CustomInventory
-{
-	Default
-	{			
+class caseInformationDisk : CustomInventory {
+	Default {			
 		//$Category "Quest things/WoS"
 		//$Title "Lost artifact information disk"
 		
@@ -722,10 +708,8 @@ class caseInformationDisk : CustomInventory
 		inventory.maxamount 1;
 		inventory.interhubamount 1;
 		Mass 0;
-	}
-	
-	States	
-	{
+	}	
+	States {
 		Spawn:
 			HDPD A -1;
 			Stop;
@@ -1364,164 +1348,6 @@ class wosq_ratPoison : wosPickup {
 	}
 }
 
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////
-//  deprecated&&unused stuff  //////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-/*class wosi_implant_accuracy : CustomInventory {
-	Default {
-		//$Category "Quest things/WoS"
-		//$Title "Accuracy Implant"
-				
-		+INVENTORY.INVBAR
-		Tag "Accuracy Implant";
-		Inventory.Icon "I_UPAC";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 10;
-		Inventory.InterHubAmount 10;		
-		Inventory.PickupMessage "Accuracy Implant Acquired!";
-		Inventory.PickupSound "misc/p_pkup";
-		Mass 0;
-	}
-	States {
-		Spawn:
-			UPAC A -1;
-			Stop;
-		Use:
-			TNT1 A 0;
-			Fail;
-	}
-}
-class wosi_implant_stamina : CustomInventory {
-	Default {
-		//$Category "Quest things/WoS"
-		//$Title "Stamina Implant"
-				
-		+INVENTORY.INVBAR
-		Tag "Stamina Implant";
-		Inventory.Icon "I_UPST";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 10;
-		Inventory.InterHubAmount 10;		
-		Inventory.PickupMessage "Stamina Implant Acquired!";
-		Inventory.PickupSound "misc/p_pkup";
-		Mass 0;
-	}
-	States {
-		Spawn:
-			UPST A -1;
-			Stop;
-		Use:
-			TNT1 A 0;
-			Fail;
-	}
-}*/
-
-/*
-class flatCoin : coin replaces coin {
-	Default {
-		+FLATSPRITE
-	}
-	States {
-		Spawn:
-			ZCON A -1;
-			Stop;
-	}
-}
-
-class modelCoin : coin replaces coin {
-	States {
-		
-	}
-}
-*/
-//energy cell >> to power powerups
-//==---------------------------------------------------
-/*
-class EnergyCell : CustomInventory
-{
-	Default
-	{
-		//$Category "Ammunition"
-		//$Color 5
-		//$Title "energy Cell"
-				
-		+Inventory.invbar
-		+Inventory.AlwaysPickup
-		-SOLID
-		+SHOOTABLE
-		+NODAMAGE
-		+NOBLOOD
-		+CANPASS
-		+NOGRAVITY
-		
-		Tag "Battery Cell";
-		Inventory.PickupMessage "$ENERGCELLFND";
-		Inventory.PickupSound "misc/i_pkup";
-		inventory.amount 1;
-		inventory.maxamount 999;
-		inventory.interhubamount 999;
-		inventory.icon "I_ENCL";	
-		
-		height 24;
-		radius 8;
-		scale 0.5;		
-	}
-	
-	States
-	{
-		Spawn:
-			ENCL AB 8;
-			loop;		
-		Use:
-			TNT1 A -1;
-			Stop;
-	}
-}
-*/
-//==---------------------------------------------------
-/*
-class shoulderLamp : CustomInventory
-{
-	Default
-	{
-		//$Category "Powerups/WoS"
-		//$Title "Shoulder Lamp"
-		
-		+INVENTORY.INVBAR
-		+INVENTORY.UNDROPPABLE
-		+INVENTORY.UNTOSSABLE
-		
-		radius 6;
-		height 16;
-		scale 0.5;
-		
-		Tag "Shoulder Lamp";
-		inventory.icon "I_SHLM";
-		inventory.amount 1;
-		inventory.maxamount 1;
-		inventory.interhubamount 1;
-	}
-	
-	States
-	{
-		Spawn:
-			SHLM P -1;
-			Stop;
-		Use:
-			TNT1 A 0
-			{
-				ACS_NamedExecute("toggleFlashlight", 0);
-				A_GiveInventory("shoulderLamp",1);
-			}
-			Stop;
-	}
-}
-*/
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

@@ -1,5 +1,5 @@
 
-actor rangerHelmDummy 21001 {
+actor rangerHelmDummy : wosOptDeco2_base 21001 {
 	//$Category "Decorations/WoS"
 	//$Title "deco binder helmet"
 	+USESPECIAL
@@ -14,7 +14,7 @@ actor rangerHelmDummy 21001 {
 		Stop
 	}
 }
-actor rangerArmor1Dummy 21002 {
+actor rangerArmor1Dummy : wosOptDeco2_base 21002 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Ranger armor 1"
 	+USESPECIAL
@@ -29,7 +29,7 @@ actor rangerArmor1Dummy 21002 {
 			Stop
 	}
 }
-actor rangerArmor2Dummy 21003 {
+actor rangerArmor2Dummy : wosOptDeco2_base 21003 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Ranger armor 2"
 	+USESPECIAL
@@ -44,7 +44,7 @@ actor rangerArmor2Dummy 21003 {
 			Stop
 	}
 }
-actor dummyHyposprej 21004 {
+actor dummyHyposprej : wosOptDeco2_base 21004 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Hyposprej"
 	+USESPECIAL
@@ -59,7 +59,7 @@ actor dummyHyposprej 21004 {
 			Stop
 	}
 }
-actor dummyKombopak 21005 {
+actor dummyKombopak : wosOptDeco2_base 21005 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Kombopak"
 	+USESPECIAL
@@ -74,7 +74,7 @@ actor dummyKombopak 21005 {
 			Stop
 	}
 }
-actor dummyInstaHeal 21006 {
+actor dummyInstaHeal : wosOptDeco2_base 21006 {
 	//$Category "Decorations/WoS"
 	//$Title "deco InstaHeal"
 	+USESPECIAL
@@ -89,7 +89,7 @@ actor dummyInstaHeal 21006 {
 			Stop
 	}
 }
-actor medicalCrab2 21007 {
+actor medicalCrab2 : wosOptDeco2_base 21007 {
 	//$Category "Decorations/WoS"
 	//$Title "Medical crab ceiling"
 	+SpawnCeiling
@@ -104,7 +104,7 @@ actor medicalCrab2 21007 {
 		Stop
 	}
 }
-actor RelicDummy 21008 {
+actor RelicDummy : wosOptDeco2_base 21008 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Relic"
 	+useSpecial
@@ -118,7 +118,7 @@ actor RelicDummy 21008 {
 		Stop
 	}
 }
-actor CommunicatorDummy 21009 {
+actor CommunicatorDummy : wosOptDeco2_base 21009 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Communicator"
 	+useSpecial
@@ -133,7 +133,7 @@ actor CommunicatorDummy 21009 {
 		Stop
 	}
 }
-actor TargetterDummy 21010 {
+actor TargetterDummy : wosOptDeco2_base 21010 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Targetter"
 	+useSpecial
@@ -148,7 +148,7 @@ actor TargetterDummy 21010 {
 		Stop
 	}
 }
-actor scannerDummy 21011 {
+actor scannerDummy : wosOptDeco2_base 21011 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Scanner"
 	+useSpecial
@@ -163,12 +163,12 @@ actor scannerDummy 21011 {
 		Loop
 	}
 }
-ACTOR bloodKapacka1 21012 {
+ACTOR bloodKapacka1 : wosOptDeco2_base 21012 {
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 1"
 	+SOLID
 	Tag "Drip pole"
-	scale .5
+	scale 0.5
 	height 64
 	radius 12
 	States {
@@ -177,12 +177,12 @@ ACTOR bloodKapacka1 21012 {
 		Stop
 	}
 }
-ACTOR bloodKapacka2 21013 {
+ACTOR bloodKapacka2 : wosOptDeco2_base 21013 {
 	//$Category "Decorations/WoS"
 	//$Title "BL Drip pole 2"
 	+SOLID
 	Tag "Drip pole"
-	scale .5
+	scale 0.5
 	height 64
 	radius 12
 	States {
@@ -218,7 +218,7 @@ actor bloodCandleFire {
 			Loop
 	}
 }
-actor modelBloodCandle : bloodCandle replaces bloodCandle 21014 {
+actor modelBloodCandle : wosOptDeco2_base replaces bloodCandle 21014 {
 	//$Category "Decorations/WoS"
 	//$Title "BL candle"
 	+SOLID
@@ -233,7 +233,7 @@ actor modelBloodCandle : bloodCandle replaces bloodCandle 21014 {
 			Stop
 	}
 }
-actor voxTortureRack 21015 {
+actor voxTortureRack : wosOptDeco2_base 21015 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox Torture Rack"
 	+Solid
@@ -248,7 +248,7 @@ actor voxTortureRack 21015 {
 			Stop
 	}
 }
-actor voxPillory 21016 {
+actor voxPillory : wosOptDeco2_base 21016 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "voxPillory"
 	+Solid
@@ -263,7 +263,7 @@ actor voxPillory 21016 {
 			Stop
 	}
 }
-actor voxHeadCrusher 21017 {
+actor voxHeadCrusher : wosOptDeco2_base 21017 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox head crusher"
 	+Solid
@@ -278,7 +278,7 @@ actor voxHeadCrusher 21017 {
 			Stop
 	}
 }
-actor voxGuillotine 21018 {
+actor voxGuillotine : wosOptDeco2_base 21018 {
 	//$Category "Decorations/WoS/torture"
 	//$Title "vox Guillotine"
 	+Solid
@@ -341,7 +341,7 @@ actor skynetFire3 21021 {
 			Loop
 	}
 }
-actor skynetBones1 21022 {
+actor skynetBones1 : wosOptDeco2_base 21022 {
 	//$Category "Decorations/WoS"
 	//$Title "skynet Bones 1"
 	Tag "Bones"
@@ -356,7 +356,7 @@ actor skynetBones1 21022 {
 			Stop
 	}
 }
-actor skynetBones2 21023 {
+actor skynetBones2 : wosOptDeco2_base 21023 {
 	//$Category "Decorations/WoS"
 	//$Title "skynet Bones 2"
 	Tag "Bones"
@@ -371,7 +371,7 @@ actor skynetBones2 21023 {
 			Stop
 	}
 }
-actor skynetBones3 21024 {
+actor skynetBones3 : wosOptDeco2_base 21024 {
 	//$Category "Decorations/WoS"
 	//$Title "skynet Bones 3"
 	Tag "Bones"
@@ -406,7 +406,7 @@ Actor FirePitSmall 21025 {
 			Loop
 	}
 }
-actor voxMicroscrope2 21026 {
+actor voxMicroscrope2 : wosOptDeco2_base 21026 {
 	//$Category "Decorations/WoS"
 	//$Title "Microscope"
 	+Solid
@@ -422,7 +422,7 @@ actor voxMicroscrope2 21026 {
 			Stop
 	}
 }
-actor voxPillarDrill 21027 {
+actor voxPillarDrill : wosOptDeco2_base 21027 {
 	//$Category "Decorations/WoS"
 	//$Title "Pillar Drill"
 	+Solid
@@ -438,7 +438,7 @@ actor voxPillarDrill 21027 {
 			Stop
 	}
 }
-actor voxStojanovaBruska 21028 {
+actor voxStojanovaBruska : wosOptDeco2_base 21028 {
 	//$Category "Decorations/WoS"
 	//$Title "Bruska"
 	+Solid
@@ -454,7 +454,7 @@ actor voxStojanovaBruska 21028 {
 			Stop
 	}
 }
-actor voxChicken 21029 {
+actor voxChicken : wosOptDeco2_base 21029 {
 	//$Category "Decorations/WoS"
 	//$Title "deco Chicken"
 	+Solid
@@ -471,7 +471,7 @@ actor voxChicken 21029 {
 			Stop
 	}
 }
-actor voxSoustruh2 29198 {
+actor voxSoustruh2 : wosOptDeco2_base 29198 {
 	//$Category "Decorations/WoS"
 	//$Title "Lathe-Soustruh"
 	+Solid
@@ -487,7 +487,7 @@ actor voxSoustruh2 29198 {
 			Stop
 	}
 }
-ACTOR blueRelicDecoration 21030 {
+ACTOR blueRelicDecoration : wosOptDeco2_base 21030 {
 	//$Category "Decorations/WoS"
 	//$Title "Blue Relic Decoration"	
 	+Solid
@@ -504,7 +504,7 @@ ACTOR blueRelicDecoration 21030 {
 			Stop
 	}
 }
-ACTOR HPipe1 21031 {
+ACTOR HPipe1 : wosOptDeco2_base 21031 {
 	//$Category "Decorations/WoS"
 	//$Title Pipe 1	
 	+SOLID
@@ -519,7 +519,7 @@ ACTOR HPipe1 21031 {
 		Stop
 	}
 }
-ACTOR HPipe2 21032 {
+ACTOR HPipe2 : wosOptDeco2_base 21032 {
 	//$Category "Decorations/WoS"
 	//$Title Pipe 2	
 	+SOLID
@@ -534,7 +534,7 @@ ACTOR HPipe2 21032 {
 		Stop
 	}
 }
-ACTOR HPipe3 21033 {
+ACTOR HPipe3 : wosOptDeco2_base 21033 {
 	//$Category "Decorations/WoS"
 	//$Title Pipe 3	
 	+SOLID
@@ -549,7 +549,7 @@ ACTOR HPipe3 21033 {
 		Stop
 	}
 }
-ACTOR HPipe4 21034 {
+ACTOR HPipe4 : wosOptDeco2_base 21034 {
 	//$Category "Decorations/WoS"
 	//$Title Pipe 4	
 	+SOLID
@@ -564,7 +564,7 @@ ACTOR HPipe4 21034 {
 		Stop
 	}
 }
-ACTOR HPipe5 21035 {
+ACTOR HPipe5 : wosOptDeco2_base 21035 {
 	//$Category "Decorations/WoS"
 	//$Title Pipe 5	
 	+SOLID
@@ -579,7 +579,7 @@ ACTOR HPipe5 21035 {
 		Stop
 	}
 }
-ACTOR falloutCornBase {
+ACTOR falloutCornBase : wosOptDeco2_base {
 	+USESPECIAL
 	-SOLID
 	+DONTTHRUST
@@ -661,14 +661,14 @@ ACTOR falloutCorn7 : falloutCornBase 21042 {
 }
 //MarlboroMike's Sprites
 //------------------------------------------------------------------------------
-actor MMofficeChair 21043 {
+actor MMofficeChair : wosOptDeco2_base 21043 {
 	//Default	
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair"	
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -1592,14 +1592,14 @@ Actor khaki_shirt : RebelShirt 21094
 	tag "linen shirt"
 	Translation "128:143=48:63"
 }
-Actor officeChair 21095
+Actor officeChair : wosOptDeco2_base 21095
 {  	
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -1616,11 +1616,14 @@ Actor officeChair 21095
 	}
 }
 //Reikall voxels special definition
-ACTOR RV_PoleLantern : PoleLantern 21096
+ACTOR RV_PoleLantern : wosOptDeco2_base 21096 // : wosOptDeco2_base
 {  	
 	//$Category "Light Sources"
 	//$Title "Pole Lantern X"
 	tag "pole lantern"
+	Radius 3
+  	Height 80
+  	+SOLID
 	States
 	{
 		Spawn:
@@ -1927,8 +1930,7 @@ ACTOR DMYstaffBlaster03 21112
 
 //blasterStaff parts
 //==--------------------------------------------------------------------------==
-actor staffPartsBase
-{
+actor staffPartsBase : wosOptDeco2_base {
 	-SOLID
 	+NODAMAGE
 	+NOBLOOD
@@ -1941,86 +1943,74 @@ actor staffPartsBase
 }
 
 
-actor DMY_blasterStaffParts_01 : staffPartsBase 21113
-{
+actor DMY_blasterStaffParts_01 : staffPartsBase 21113 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. complete"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
 
-actor DMY_blasterStaffParts_02 : staffPartsBase 21114
-{
+actor DMY_blasterStaffParts_02 : staffPartsBase 21114 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. party disemboweled"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
 
-actor DMY_blasterStaffParts_03 : staffPartsBase 21115
-{
+actor DMY_blasterStaffParts_03 : staffPartsBase 21115 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. objimka"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
 
-actor DMY_blasterStaffParts_04 : staffPartsBase 21116
-{
+actor DMY_blasterStaffParts_04 : staffPartsBase 21116 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. barrel disemboweled"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
 
-actor DMY_blasterStaffParts_05 : staffPartsBase 21117
-{
+actor DMY_blasterStaffParts_05 : staffPartsBase 21117 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. underthing"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
 
-actor DMY_blasterStaffParts_06 : staffPartsBase 21118
-{
+actor DMY_blasterStaffParts_06 : staffPartsBase 21118 {
 	//$Category "Decorations/WoS"
 	//$Title "staff - bl.p. wood"
 	tag "staff parts"
-	States
-	{
+	States {
 		Spawn:
-		DUMM A -1
-		Stop
+			DUMM A -1
+			Stop
 	}
 
 }
@@ -2048,7 +2038,7 @@ actor specimenTankXX 21119
 	}
 }
 
-actor binderStatue_left 21120
+actor binderStatue_left : wosOptDeco2_base 21120
 {	
 	//$Category "Decorations/WoS"
 	//$Title "Binder statue - left"
@@ -2065,7 +2055,7 @@ actor binderStatue_left 21120
 			Stop
 	}
 }
-actor binderStatue_right 21121
+actor binderStatue_right : wosOptDeco2_base 21121
 {	
 	//$Category "Decorations/WoS"
 	//$Title "Binder statue - right"
@@ -2083,7 +2073,7 @@ actor binderStatue_right 21121
 			Stop
 	}
 }
-actor binderStatue_front 21122
+actor binderStatue_front : wosOptDeco2_base 21122
 {	
 	//$Category "Decorations/WoS"
 	//$Title "Binder statue - front"
@@ -2101,7 +2091,7 @@ actor binderStatue_front 21122
 			Stop
 	}
 }
-actor binderStatue_rotated 21123
+actor binderStatue_rotated : wosOptDeco2_base 21123
 {	
 	//$Category "Decorations/WoS"
 	//$Title "Binder statue - rotated"
@@ -2120,7 +2110,7 @@ actor binderStatue_rotated 21123
 	}
 }
 
-actor guardUniform_decoration 21124
+actor guardUniform_decoration : wosOptDeco2_base 21124
 {	
 	//$Category "Decorations/WoS"
 	//$Title "guard uniform decoration"
@@ -2137,7 +2127,7 @@ actor guardUniform_decoration 21124
 			Stop
 	}
 }
-actor officerUniform_decoration 21125
+actor officerUniform_decoration : wosOptDeco2_base 21125
 {
 	//$Category "Decorations/WoS"
 	//$Title "officer uniform decoration"
@@ -2244,13 +2234,13 @@ actor DummyRangerLeaderStanding 21129
 	}
 }
 
-actor officeChair2 21130 {
+actor officeChair2 : wosOptDeco2_base 21130 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "office chair 2"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -4133,13 +4123,13 @@ actor dx_penBlock 21231 {
 			Stop
 	}
 }
-actor strifeChair01 21232 {
+actor strifeChair01 : wosOptDeco2_base 21232 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 01"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -4155,13 +4145,13 @@ actor strifeChair01 21232 {
 			Stop
 	}
 }
-actor strifeChair02 21233 {
+actor strifeChair02 : wosOptDeco2_base 21233 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 02"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -4295,13 +4285,13 @@ actor strifeNightStand01 21240 {
 			Stop
 	}
 }
-actor strifeChair03 21241 {
+actor strifeChair03 : wosOptDeco2_base 21241 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx chair 03"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -4316,7 +4306,7 @@ actor strifeChair03 21241 {
 			Stop
 	}
 }
-actor strifeCouch01 21242 {
+actor strifeCouch01 : wosOptDeco2_base 21242 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx couch 01"
 	+SOLID
@@ -4333,14 +4323,14 @@ actor strifeCouch01 21242 {
 			Stop
 	}
 }
-actor strifeCoffeeTable01 21243 {
+actor strifeCoffeeTable01 : wosOptDeco2_base 21243 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx coffee table 01"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
-	+CANPASS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
+	//+CANPASS
 	+ACTLIKEBRIDGE
 	+FLOORCLIP
 	+NOBLOOD
@@ -4354,7 +4344,7 @@ actor strifeCoffeeTable01 21243 {
 			Stop
 	}
 }
-actor strifeCoffeeTable02 21244 {
+actor strifeCoffeeTable02 : wosOptDeco2_base 21244 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx coffee table 02"
 	+SOLID
@@ -4370,7 +4360,7 @@ actor strifeCoffeeTable02 21244 {
 			Stop
 	}	
 }
-actor strifeTable01 21245 {
+actor strifeTable01 : wosOptDeco2_base 21245 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx table 01"
 	+SOLID
@@ -4387,7 +4377,7 @@ actor strifeTable01 21245 {
 			Stop
 	}
 }
-actor strifeNightStand02 21246 {
+actor strifeNightStand02 : wosOptDeco2_base 21246 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 02"
 	+SOLID
@@ -4404,7 +4394,7 @@ actor strifeNightStand02 21246 {
 			Stop
 	}
 }
-actor strifeNightStand03 21247 {
+actor strifeNightStand03 : wosOptDeco2_base 21247 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 03"
 	+SOLID
@@ -4421,7 +4411,7 @@ actor strifeNightStand03 21247 {
 			Stop
 	}
 }
-actor strifeNightStand04 21248 {
+actor strifeNightStand04 : wosOptDeco2_base 21248 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx night stand 04"
 	+SOLID
@@ -5290,7 +5280,7 @@ actor dx_grassPatch04 : wosOptDeco_base 21300 {
 			Stop
 	}
 }
-actor dx_klavesnice02 21301 {
+actor dx_klavesnice02 : wosOptDeco2_base 21301 {
 	//$Category "Decorations/WoS"
 	//$Title "klavesnice 02"
 	
@@ -5307,7 +5297,7 @@ actor dx_klavesnice02 21301 {
 			Stop
 	}
 }
-actor dx_comp01 21302 {
+actor dx_comp01 : wosOptDeco2_base 21302 {
 	//$Category "Decorations/WoS"
 	//$Title "comp 01"
 	
@@ -5324,7 +5314,7 @@ actor dx_comp01 21302 {
 			Stop
 	}
 }
-actor dx_comp02 21303 {
+actor dx_comp02 : wosOptDeco2_base 21303 {
 	//$Category "Decorations/WoS"
 	//$Title "comp 02"
 	
@@ -5341,7 +5331,7 @@ actor dx_comp02 21303 {
 			Stop
 	}
 }
-actor dx_compBase 21304 {
+actor dx_compBase : wosOptDeco2_base 21304 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base"
 	
@@ -5358,7 +5348,7 @@ actor dx_compBase 21304 {
 			Stop
 	}
 }
-actor dx_compKybd 21305 {
+actor dx_compKybd : wosOptDeco2_base 21305 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd"
 	
@@ -5375,7 +5365,7 @@ actor dx_compKybd 21305 {
 			Stop
 	}
 }
-actor dx_compB3 21306 {
+actor dx_compB3 : wosOptDeco2_base 21306 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base03"
 	
@@ -5392,7 +5382,7 @@ actor dx_compB3 21306 {
 			Loop
 	}
 }
-actor dx_compB4 21307 {
+actor dx_compB4 : wosOptDeco2_base 21307 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base04"
 	
@@ -5409,7 +5399,7 @@ actor dx_compB4 21307 {
 			Loop
 	}
 }
-actor dx_compB5 21308 {
+actor dx_compB5 : wosOptDeco2_base 21308 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base05"
 	
@@ -5426,7 +5416,7 @@ actor dx_compB5 21308 {
 			Loop
 	}
 }
-actor dx_compK3 21309 {
+actor dx_compK3 : wosOptDeco2_base 21309 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd03"
 	
@@ -5443,7 +5433,7 @@ actor dx_compK3 21309 {
 			Loop
 	}
 }
-actor dx_compK4 21310 {
+actor dx_compK4 : wosOptDeco2_base 21310 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd04"
 	
@@ -5460,7 +5450,7 @@ actor dx_compK4 21310 {
 			Loop
 	}
 }
-actor dx_compK5 21311 {
+actor dx_compK5 : wosOptDeco2_base 21311 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd05"
 	
@@ -5477,7 +5467,7 @@ actor dx_compK5 21311 {
 			Loop
 	}
 }
-actor dx_compXB1 21312 {
+actor dx_compXB1 : wosOptDeco2_base 21312 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase01"
 	
@@ -5494,7 +5484,7 @@ actor dx_compXB1 21312 {
 			Loop
 	}
 }
-actor dx_compXB2 21313 {
+actor dx_compXB2 : wosOptDeco2_base 21313 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase02"
 	
@@ -5511,7 +5501,7 @@ actor dx_compXB2 21313 {
 			Loop
 	}
 }
-actor dx_compXK1 21314 {
+actor dx_compXK1 : wosOptDeco2_base 21314 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd01"
 	
@@ -5528,7 +5518,7 @@ actor dx_compXK1 21314 {
 			Loop
 	}
 }
-actor dx_compXK2 21315 {
+actor dx_compXK2 : wosOptDeco2_base 21315 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd02"
 	
@@ -5545,7 +5535,7 @@ actor dx_compXK2 21315 {
 			Loop
 	}
 }
-actor dx_compBase_mmHolo03 21316 {
+actor dx_compBase_mmHolo03 : wosOptDeco2_base 21316 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Base h03"
 	
@@ -5562,7 +5552,7 @@ actor dx_compBase_mmHolo03 21316 {
 			Stop
 	}
 }
-actor dx_compBase_mmHolo04 21317 {
+actor dx_compBase_mmHolo04 : wosOptDeco2_base 21317 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Base h04"
 	
@@ -5579,7 +5569,7 @@ actor dx_compBase_mmHolo04 21317 {
 			Stop
 	}
 }
-actor dx_compKybd_mmHolo03 21318 {
+actor dx_compKybd_mmHolo03 : wosOptDeco2_base 21318 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Kybd h03"
 	
@@ -5596,7 +5586,7 @@ actor dx_compKybd_mmHolo03 21318 {
 			Stop
 	}
 }
-actor dx_compKybd_mmHolo04 21319 {
+actor dx_compKybd_mmHolo04 : wosOptDeco2_base 21319 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Kybd h04"
 	
@@ -6509,7 +6499,7 @@ actor wosD_wosMinimissileLauncher 21373 {
 			Stop
 	}
 }
-actor dx_compB6 21374 {
+actor dx_compB6 : wosOptDeco2_base 21374 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base06"
 	
@@ -6526,7 +6516,7 @@ actor dx_compB6 21374 {
 			Loop
 	}
 }
-actor dx_compK6 21375 {
+actor dx_compK6 : wosOptDeco2_base 21375 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd06"
 	
@@ -6543,7 +6533,7 @@ actor dx_compK6 21375 {
 			Loop
 	}
 }
-actor dx_compXB3 21376 {
+actor dx_compXB3 : wosOptDeco2_base 21376 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase03"
 	
@@ -6560,7 +6550,7 @@ actor dx_compXB3 21376 {
 			Loop
 	}
 }
-actor dx_compXB4 21377 {
+actor dx_compXB4 : wosOptDeco2_base 21377 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase04"
 	
@@ -6577,7 +6567,7 @@ actor dx_compXB4 21377 {
 			Loop
 	}
 }
-actor dx_compXK3 21378 {
+actor dx_compXK3 : wosOptDeco2_base 21378 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd03"
 	
@@ -6594,7 +6584,7 @@ actor dx_compXK3 21378 {
 			Loop
 	}
 }
-actor dx_compXK4 21379 {
+actor dx_compXK4 : wosOptDeco2_base 21379 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd04"
 	
@@ -6611,7 +6601,7 @@ actor dx_compXK4 21379 {
 			Loop
 	}
 }
-actor wosD_dxPicnicTable 21380 {
+actor wosD_dxPicnicTable : wosOptDeco2_base 21380 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "picnic table"
 	
@@ -6628,7 +6618,7 @@ actor wosD_dxPicnicTable 21380 {
 			Stop
 	}
 }
-actor wosD_dxBeerTap 21381 {
+actor wosD_dxBeerTap : wosOptDeco2_base 21381 {
 	//$Category "Decorations/WoS"
 	//$Title "beer tap - pipa"
 	
@@ -6807,7 +6797,7 @@ actor wosD_dexCigaretteMachine 21391 {
 			Stop
 	}
 }
-actor wosD_dexCoffeeTable 21392 {
+actor wosD_dexCoffeeTable : wosOptDeco2_base 21392 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex coffeeTable"
 	+SOLID
@@ -6824,7 +6814,7 @@ actor wosD_dexCoffeeTable 21392 {
 			Stop
 	}
 }
-actor wosD_dexCouchLeather 21393 {
+actor wosD_dexCouchLeather : wosOptDeco2_base 21393 {
 	//$Category "Decorations/WoS/deusEx"
 	//$Title "dex couchLeather"
 	+SOLID
@@ -6872,13 +6862,13 @@ actor wosD_dexBookOpen 21395 {
 			Stop
 	}
 }
-actor wosD_dexOfficeChair 21396 {
+actor wosD_dexOfficeChair : wosOptDeco2_base 21396 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex officeChair"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -7192,13 +7182,13 @@ actor wosD_dexDeskNobleOffice 21416 {
 			Stop
 	}
 }
-actor wosD_dexChairNobleOffice 21417 {
+actor wosD_dexChairNobleOffice : wosOptDeco2_base 21417 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dex chairNobleOffice"
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -8351,7 +8341,7 @@ actor wosD_dxTablet04 21482 {
 	}
 }
 
-actor wosD_stool 21483 {
+actor wosD_stool : wosOptDeco2_base 21483 {
 	//$Category "Decorations/WoS/furniture/"
 	//$Title "dx stool"
 	Tag "wooden stool"
@@ -9061,7 +9051,7 @@ actor strifeBurningBarrelFlameNew : NewFlameHuge {
 	tag "burning barrel"
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-actor wosD_hugeTorchNewFlame 21524 {
+actor wosD_hugeTorchNewFlame : wosOptDeco2_base 21524 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame huge torch"
 	+DONTTHRUST
@@ -9078,7 +9068,7 @@ actor wosD_hugeTorchNewFlame 21524 {
 			Stop
 	}
 }
-actor wosD_mediumTorchNewFlame 21525 {
+actor wosD_mediumTorchNewFlame : wosOptDeco2_base 21525 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame medium torch"
 	+DONTTHRUST
@@ -9095,7 +9085,7 @@ actor wosD_mediumTorchNewFlame 21525 {
 			Stop
 	}
 }
-actor wosD_largeTorchNewFlame 21526 {
+actor wosD_largeTorchNewFlame : wosOptDeco2_base 21526 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame large torch"
 	+DONTTHRUST
@@ -9113,7 +9103,7 @@ actor wosD_largeTorchNewFlame 21526 {
 			Stop
 	}
 }
-actor wosD_burningBrazierNewFlame 21527 {
+actor wosD_burningBrazierNewFlame : wosOptDeco2_base 21527 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame burning brazier"
 	+SOLID
@@ -9130,7 +9120,7 @@ actor wosD_burningBrazierNewFlame 21527 {
 			Stop
 	}
 }
-actor wosD_burningBowlNewFlame 21528 {
+actor wosD_burningBowlNewFlame : wosOptDeco2_base 21528 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame burning bowl"
 	+SOLID
@@ -9148,7 +9138,7 @@ actor wosD_burningBowlNewFlame 21528 {
 			Stop
 	}
 }
-actor wosD_StrifeBurningBarrelNewFlame 21529 {
+actor wosD_StrifeBurningBarrelNewFlame : wosOptDeco2_base 21529 {
 	//$Category "Decorations/Wos"
 	//$Title "newFlame burning barrel"
 	tag "burning barrel"
@@ -9725,7 +9715,7 @@ actor wosD_wheel 21565 {
 			Stop
 	}
 }
-actor wosD_chairsThrone 21566 {
+actor wosD_chairsThrone : wosOptDeco2_base 21566 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "throne"
 	Tag "throne"
@@ -9741,7 +9731,7 @@ actor wosD_chairsThrone 21566 {
 			Stop
 	}
 }
-actor wosD_smallChair 21567 {
+actor wosD_smallChair : wosOptDeco2_base 21567 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "small chair"
 	Tag "small chair"
@@ -9750,14 +9740,14 @@ actor wosD_smallChair 21567 {
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
-	+PUSHABLE
+	//+PUSHABLE
 	States {
 		Spawn:
 			DUMM A -1
 			Stop
 	}
 }
-actor wosD_queen 21568 {
+actor wosD_queen : wosOptDeco2_base 21568 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "throne queen"
 	Tag "throne queen"
@@ -9772,7 +9762,7 @@ actor wosD_queen 21568 {
 			Stop
 	}
 }
-actor wosD_chair3 21569 {
+actor wosD_chair3 : wosOptDeco2_base 21569 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "stone chair 3"
 	Tag "stone chair"
@@ -9788,7 +9778,7 @@ actor wosD_chair3 21569 {
 			Stop
 	}
 }
-actor wosD_chair2 21570 {
+actor wosD_chair2 : wosOptDeco2_base 21570 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "stone chair 2"
 	Tag "stone chair"
@@ -9804,16 +9794,16 @@ actor wosD_chair2 21570 {
 			Stop
 	}
 }
-actor wosD_chair1 21571 {
+actor wosD_chair1 : wosOptDeco2_base 21571 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "wooden chair"
 	Tag "wooden chair"
 	radius 12
 	height 32
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -9824,7 +9814,7 @@ actor wosD_chair1 21571 {
 			Stop
 	}
 }
-actor wosD_bench 21572 {
+actor wosD_bench : wosOptDeco2_base 21572 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "stone bench"
 	Tag "stone bench"
@@ -9839,16 +9829,16 @@ actor wosD_bench 21572 {
 			Stop
 	}
 }
-actor wosD_chair 21573 {
+actor wosD_chair : wosOptDeco2_base 21573 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "wooden chair"
 	Tag "wooden chair"
 	radius 8
 	height 32
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP
@@ -9859,7 +9849,7 @@ actor wosD_chair 21573 {
 			Stop
 	}
 }
-actor wosD_grilledChicken 21574 {
+actor wosD_grilledChicken : wosOptDeco2_base 21574 {
 	//$Category "Decorations/Wos"
 	//$Title "grilled chicken"
 	Tag "grilled chicken"
@@ -10067,7 +10057,7 @@ actor wosD_jkjaHeater 21585 {
 			Stop
 	}
 }
-actor wosD_jkjaChairHoth 21586 {
+actor wosD_jkjaChairHoth : wosOptDeco2_base 21586 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair hoth"
 	Tag "metal chair"
@@ -10082,7 +10072,7 @@ actor wosD_jkjaChairHoth 21586 {
 			Stop
 	}
 }
-actor wosD_jkjaChairImperial 21587 {
+actor wosD_jkjaChairImperial : wosOptDeco2_base 21587 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair imperial"
 	Tag "comfort chair"
@@ -10326,7 +10316,7 @@ actor wosD_jkjaStatue 21602 {
 			Stop
 	}
 }
-actor wosD_jkjaChairBig 21603 {
+actor wosD_jkjaChairBig : wosOptDeco2_base 21603 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "seater"
 	Tag "seater"
@@ -10341,7 +10331,7 @@ actor wosD_jkjaChairBig 21603 {
 			Stop
 	}
 }
-actor wosD_jkjaChairWide 21604 {
+actor wosD_jkjaChairWide : wosOptDeco2_base 21604 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "wide seater"
 	Tag "wide seater"
@@ -10524,16 +10514,16 @@ actor wosD_fnvCookingStove 21618 {
 			Stop
 	}
 }
-actor wosD_fnvChairVault 21619 {
+actor wosD_fnvChairVault : wosOptDeco2_base 21619 {
 	//$Category "Decorations/Wos/furniture/"
 	//$Title "chair vault"
 	Tag "chair metal"
 	radius 12
 	height 24
 	+SOLID
-	+PUSHABLE
-	+DROPOFF
-	+SLIDESONWALLS
+	//+PUSHABLE
+	//+DROPOFF
+	//+SLIDESONWALLS
 	//+CANPASS
 	//+ACTLIKEBRIDGE
 	+FLOORCLIP

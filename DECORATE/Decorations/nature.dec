@@ -978,7 +978,7 @@ ACTOR Plant19 22135
 //---------------------------Fir Trees-------------------------------------//
 //-------------------------------------------------------------------------//
 
-ACTOR Tree01 22141
+ACTOR Tree01 : wosOptDeco2_base 22141
 {
 //$Category "Trees and Rocks/NatureTree/"
 
@@ -1116,7 +1116,7 @@ ACTOR Larch4_dry : Larch4 {}
 //----------------------------Green Trees---------------------------------//
 //------------------------------------------------------------------------//
 
-ACTOR Tree04 22144
+ACTOR Tree04 : wosOptDeco2_base 22144
 {
 //$Category "Trees and Rocks/NatureTree/"
   Tag "pine tree"
@@ -1159,7 +1159,7 @@ ACTOR Tree05Spawner : RandomSpawner 22146
     DropItem "Tree05Large"
 }
 
-ACTOR Tree05Large 22161
+ACTOR Tree05Large : wosOptDeco2_base 22161
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "large oak"
@@ -1201,7 +1201,7 @@ ACTOR Tree06Spawner : RandomSpawner 22147
     DropItem "Tree06Large"
 }
 
-ACTOR Tree06Large
+ACTOR Tree06Large : wosOptDeco2_base
 {
 //$Category "Trees and Rocks/NatureTree/"
   radius 24
@@ -1224,7 +1224,7 @@ ACTOR Tree06Medium : Tree06Large
   scale 0.8
 }
 
-ACTOR Tree07 22148
+ACTOR Tree07 : wosOptDeco2_base 22148
 {
 //$Category "Trees and Rocks/NatureTree/"
   Tag "small dry tree"
@@ -1310,7 +1310,7 @@ ACTOR Tree08SpawnerB : RandomSpawner 22152
     DropItem "Tree08BLarge"
 }
 
-ACTOR Tree08BLarge
+ACTOR Tree08BLarge : wosOptDeco2_base
 {
   radius 28
   height 192
@@ -1343,7 +1343,7 @@ ACTOR Tree09SpawnerA : RandomSpawner 22153
     DropItem "Tree09ALarge"
 }
 
-ACTOR Tree09ALarge
+ACTOR Tree09ALarge : wosOptDeco2_base
 {
   radius 16
   height 192
@@ -1377,7 +1377,7 @@ ACTOR Tree09SpawnerB : RandomSpawner 22154
     DropItem "Tree09BLarge"
 }
 
-ACTOR Tree09BLarge
+ACTOR Tree09BLarge : wosOptDeco2_base
 {
   radius 16
   height 192
@@ -1412,7 +1412,7 @@ ACTOR Tree10Spawner : RandomSpawner 22155
     DropItem "Tree10Small"
 }
 
-ACTOR Tree10Large
+ACTOR Tree10Large : wosOptDeco2_base
 {
   radius 48
   height 180
@@ -1441,7 +1441,7 @@ ACTOR Tree10Small : Tree10Large
   scale 0.6
 }
 
-ACTOR Tree11 22156
+ACTOR Tree11 : wosOptDeco2_base 22156
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "tall tree"
@@ -1459,7 +1459,7 @@ ACTOR Tree11 22156
          }
   }
 
-ACTOR Tree12 22157
+ACTOR Tree12 : wosOptDeco2_base 22157
 {
 //$Category "Trees and Rocks/NatureTree/"
   radius 16
@@ -1476,7 +1476,7 @@ ACTOR Tree12 22157
          }
   }
 
-ACTOR Tree13 22158
+ACTOR Tree13 : wosOptDeco2_base 22158
 {
 //$Category "Trees and Rocks/NatureTree/"
   radius 24
@@ -1495,7 +1495,7 @@ ACTOR Tree13 22158
 
 //-----------------------------Big Tree With Leaves------------------//  
   
-ACTOR Tree14Leaves 22159
+ACTOR Tree14Leaves : wosOptDeco2_base 22159
 {
 //$Category "Trees and Rocks/NatureTree/"
   //RenderRadius 2048
@@ -1537,7 +1537,7 @@ ACTOR ALeaf2 : Leaf2
   height 3
 }
 
-ACTOR Tree15 22160
+ACTOR Tree15 : wosOptDeco2_base 22160
 {
 //$Category "Trees and Rocks/NatureTree/"
   //RenderRadius 2048
@@ -1555,7 +1555,7 @@ ACTOR Tree15 22160
   		Stop
   }
 }
-ACTOR Tree14Green 22175
+ACTOR Tree14Green : wosOptDeco2_base 22175
 {
 //$Category "Trees and Rocks/NatureTree/"
   //RenderRadius 2048
@@ -1656,7 +1656,7 @@ ACTOR Tree17Skull : Tree17 22163
   	}
   }*/
 
-ACTOR Tree18 22164
+ACTOR Tree18 : wosOptDeco2_base 22164
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1674,7 +1674,7 @@ ACTOR Tree18 22164
   	}
   }
 
-ACTOR Tree19 22165
+ACTOR Tree19 : wosOptDeco2_base 22165
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1692,7 +1692,7 @@ ACTOR Tree19 22165
   	}
   }
 
-ACTOR Tree20 22166
+ACTOR Tree20 : wosOptDeco2_base 22166
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1709,7 +1709,7 @@ ACTOR Tree20 22166
   	}
   }
 
-ACTOR Tree21 22167
+ACTOR Tree21 : wosOptDeco2_base 22167
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1726,7 +1726,7 @@ ACTOR Tree21 22167
   	}
   }
   
-ACTOR Tree22 22168
+ACTOR Tree22 : wosOptDeco2_base 22168
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1759,7 +1759,7 @@ ACTOR Tree22 22168
   	}
   }*/
 
-ACTOR Tree24 22170
+ACTOR Tree24 : wosOptDeco2_base 22170
 {
 //$Category "Trees and Rocks/NatureTree/"
   tag "dead tree"
@@ -1884,7 +1884,7 @@ ACTOR Tree28Small : Tree28Large
 //----------------------------PALMS-----------------------------------------//
 //==========================================================================//
 
-ACTOR Palm01 22181
+ACTOR Palm01 : wosOptDeco2_base 22181
 {
 //$category NaturePalm
   radius 8
@@ -1907,7 +1907,7 @@ ACTOR Palm02aSpawner : RandomSpawner 22182
     DropItem "Palm02aMedium"
 }
 
-ACTOR Palm02aLarge 
+ACTOR Palm02aLarge : wosOptDeco2_base
 {
   radius 16
   height 180
@@ -1927,7 +1927,7 @@ ACTOR Palm02aMedium : Palm02aLarge
   height 144
 }
 
-ACTOR Palm02b 22183
+ACTOR Palm02b : wosOptDeco2_base 22183
 {
 //$category NaturePalm
   radius 14
@@ -1955,7 +1955,7 @@ ACTOR Palm02b 22183
   	}
   }*/
 
-ACTOR Palm04 22185
+ACTOR Palm04 : wosOptDeco2_base 22185
 {
 //$category NaturePalm
   radius 12

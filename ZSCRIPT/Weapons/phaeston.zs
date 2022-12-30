@@ -126,7 +126,7 @@ class wosPhaestonRifle_dummy0 : actor {
 		//$Category "Decorations/Wos"
 		//$Title "deco executor rifle 00"
 		//$arg0 "spawn position"
-		//$arg0tooltip "0- ground\n1- front\n3- standing"
+		//$arg0tooltip "Model spawn position:\n\n0 - ground\n1 - front\n2 - standing\n\nDefault '0'."
 		tag "executor rifle";
 		radius 8;
 		height 8;
@@ -136,21 +136,9 @@ class wosPhaestonRifle_dummy0 : actor {
 	}
 	States {
 		Spawn:
-			TNT1 A 0 {
-				if(args[0] == 0) {
-					return resolveState("POS0");
-					self.height = 8;
-				} 
-				else if(args[0] == 1) {
-					return resolveState("POS1");
-					self.height = 16;
-				}
-				else if(args[0] == 2) {
-					return resolveState("POS2");
-					self.height = 24;
-				}
-				return resolveState(null);
-			}
+			TNT1 A 0 A_JumpIf(args[0] == 0, "POS0");
+			TNT1 A 0 A_JumpIf(args[0] == 1, "POS1");
+			TNT1 A 0 A_JumpIf(args[0] == 2, "POS2");
 		POS0:
 			DUMM A -1;
 			Stop;

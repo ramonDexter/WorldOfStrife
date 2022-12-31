@@ -7,7 +7,7 @@ DoomEdNums {
 	20001 = staffBlaster
 	20002 = zscScanner
 	20003 = wosgrenadeG_3
-	20005 = StormPistol
+	//20005 = StormPistol
 	20006 = wosNightEyeDevice
 	20007 = laserPistol
 	20008 = wosMinimissileLauncher
@@ -496,10 +496,10 @@ DoomEdNums {
 	20491 = wosD_asc_Palm08
 	20492 = wosPhaestonRifle
 	20493 = wosPhaestonRifle_dummy0
+	20494 = wos_healthCharger
+	20495 = wosD_interceptorDroneDummy
+	20496 = wosD_DeployableShieldDummy
 	/*
-	20494 = 
-	20495 = 
-	20496 = 
 	20497 = 
 	20498 = 
 	20499 = 

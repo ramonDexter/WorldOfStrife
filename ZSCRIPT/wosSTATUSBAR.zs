@@ -680,21 +680,21 @@ class wosStatusBar : BaseStatusBar {
 
 				//  What weapons does the player have?  ////////////////////////
 				static const class<Weapon> WeaponList[] = {
-					"StormPistol", //x32y-9
-					"laserPistol", //x68y12
-					"wosStrifeXbow", //x22y43
-					"wosAssaultGun", //x63y72
-					"wosPhaestonRifle", //x31y28
-					"staffBlaster", //x19y13
-					"wosMinimissileLauncher", //x60y48
-					"wosFlamethrower", //x19y75
-					"wosGrenadeLauncher", //x54y83
-					"wosMauler" //x19y57
+					//"StormPistol", //x23 y-9
+					"laserPistol", //x68 y12
+					"wosStrifeXbow", //x24 y-7
+					"wosAssaultGun", //x20 y43
+					"wosPhaestonRifle", //x31 y28
+					"staffBlaster", //x19 y13
+					"wosMinimissileLauncher", //x60 y48
+					"wosFlamethrower", //x19 y75
+					"wosGrenadeLauncher", //x54 y83
+					"wosMauler" //x19 y57
 				};
-				static const int WeaponX[] = {23, 68, 22, 63, 31, 19, 60, 19, 54, 19};
-				static const int WeaponY[] = {-9, 12, 43, 72, 28, 13, 48, 75, 83, 57};
+				static const int WeaponX[] = {/*23,*/ 68, 24, 20, 31, 19, 60, 19, 54, 19};
+				static const int WeaponY[] = {/*-9,*/ 12, -7, 43, 28, 13, 48, 75, 83, 57};
 
-				for (i = 0; i < 10; ++i) {
+				for (i = 0; i < 9; ++i) {
 					item = CPlayer.mo.FindInventory (WeaponList[i]);
 					if (item != NULL) {						
 						screen.DrawTexture (item.Icon, true,

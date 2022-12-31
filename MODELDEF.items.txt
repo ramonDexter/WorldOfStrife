@@ -775,6 +775,15 @@ model ActiveShield {
 	skin 0 "tx_deps_E.png"
 	frameindex DUMM E 0 0	
 }
+model wosD_DeployableShieldDummy {
+	path "models/items/deplshield/"
+	model 0 "deployableShield.md3"
+	skin 0 "tx_deps_A.png"
+	scale 3.5 3.5 3.5
+	offset 0.0 0.0 0.0
+	
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1792,6 +1801,8 @@ model wosarmorShard {
 //  interceptor drone  /////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 model wosInterceptorDrone {
+	USEACTORROLL
+	USEACTORPITCH
 	path "models/npc/spydrone/"
 	model 0 "spyDrone.md3"
 	skin 0 "SpyDroneTex1.png"
@@ -1813,6 +1824,16 @@ model interceptorDrone {
 	skin 0 "SpyDroneTex1.png"
 	scale 0.65 0.65 0.65
 	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_interceptorDroneDummy {
+	USEACTORROLL
+	USEACTORPITCH
+	path "models/npc/spydrone/"
+	model 0 "spyDrone.md3"
+	skin 0 "SpyDroneTex1.png"
+	scale 0.65 0.65 0.65
+	offset 0.0 0.0 2.0
 	frameindex DUMM A 0 0
 }
 ////////////////////////////////////////////////////////////////////////////////

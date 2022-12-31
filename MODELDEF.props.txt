@@ -4360,5 +4360,78 @@ Model wosD_asc_Palm07 {
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
+model wosD_hl2_cmbnInterface001 {
+	path "models/props/hl2/"
+	model 0 "combineInterface001.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnInterface002 {
+	path "models/props/hl2/"
+	model 0 "combineInterface002.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnInterface003 {
+	path "models/props/hl2/"
+	model 0 "combineInterface003.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnInterfaceMonitor {
+	path "models/props/hl2/"
+	model 0 "combineInterfaceMonitor001.md3"
+	scale 1.0 1.0 1.0
+	offset 1.55 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_healthCharger {
+	path "models/props/hl2/"
+	model 0 "healthCharger.md3"
+	scale 1.0 1.0 1.0
+	offset -8.0 0.0 8.0
+	frameindex DUMM A 0 0
+}
+model wos_healthCharger {
+	path "models/props/hl2/"
+	model 0 "healthCharger.md3"
+	scale 1.0 1.0 1.0
+	offset -8.0 0.0 8.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_suitCharger {
+	path "models/props/hl2/"
+	model 0 "suitCharger.md3"
+	scale 1.0 1.0 1.0
+	offset -8.0 0.0 8.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnThumper001 {
+	path "models/props/hl2/"
+	model 0 "thumper001.md3"
+	scale 2.0 2.0 2.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnThumper002 {
+	path "models/props/hl2/"
+	model 0 "thumper002.md3"
+	scale 1.0 1.0 1.0
+	offset 16.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_hl2_cmbnGenerator {
+	path "models/props/hl2/"
+	model 0 "combineGenerator.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

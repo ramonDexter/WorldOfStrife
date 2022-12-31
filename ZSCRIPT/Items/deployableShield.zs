@@ -36,6 +36,26 @@ class wosDeployableShield : wosPickup {
   }
 }
 
+// dummy decoration ////////////////////////////////////////////////////////////
+class wosD_DeployableShieldDummy : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "Deployable Shield dummy"
+		Tag "$T_DEPLSHIELD";
+		Radius 4;
+		Height 8;
+		+SOLID;
+		+NOGRAVITY;
+		+USESPECIAL;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+
 // shield mechanics ////////////////////////////////////////////////////////////
 class PShieldPart : actor {
 	Default {

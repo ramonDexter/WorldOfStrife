@@ -69,7 +69,7 @@ class binderPlayer : StrifePlayer {
 		MaxStepHeight 20;
 		//  weaponslots  ///////////////////////////////////////////////////////
 		Player.WeaponSlot 1, "wosBareHands", "wosPunchDagger";
-		Player.WeaponSlot 2, "StormPistol", "laserPistol", "wosStrifeXbow";
+		Player.WeaponSlot 2, "wosStrifeXbow","laserPistol";
 		Player.WeaponSlot 3, "wosAssaultGun", "wosPhaestonRifle", "staffBlaster";
 		Player.WeaponSlot 4, "wosMinimissileLauncher";
 		Player.WeaponSlot 5, "wosGrenadeLauncher";
@@ -819,7 +819,7 @@ class binderPlayer : StrifePlayer {
 		} 
 		else if ( name ~== "weapons" ) {
 			//A_GiveInventory("", 1);
-			A_GiveInventory("StormPistol", 1);
+			//A_GiveInventory("StormPistol", 1);
 			A_GiveInventory("laserPistol", 1);
 			A_GiveInventory("wosStrifeXbow", 1);
 			A_GiveInventory("wosAssaultGun", 1);

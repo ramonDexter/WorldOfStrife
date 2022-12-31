@@ -11289,6 +11289,157 @@ actor wos_jkja_bunkbedBridge2 : wos_jkja_bunkbedBridge 21724 {
 	height 72
 }
 
+actor wosD_hl2_cmbnInterface001 21725 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn interface 001"
+	Tag "interface"
+	radius 16
+	height 48
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnInterface002 21726 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn interface 002"
+	Tag "interface"
+	radius 16
+	height 48
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnInterface003 21727 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn interface 003"
+	Tag "interface"
+	radius 16
+	height 48
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnInterfaceMonitor 21728 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn interface monitor"
+	Tag "interface monitor"
+	radius 8
+	height 32
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_healthCharger 21729 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn health charger"
+	Tag "health charger"
+	radius 8
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_suitCharger 21730 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn suit charger"
+	Tag "energy charger"
+	radius 8
+	height 24
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnThumper001 21731 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn thumper 01"
+	Tag "pillar"
+	radius 56
+	height 256
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnThumper002 21732 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn thumper 02"
+	Tag "pillar"
+	radius 44
+	height 192
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wosD_hl2_cmbnGenerator 21733 {
+	//$Category "Decorations/WoS"
+	//$Title "cmbn generator"
+	Tag "generator"
+	radius 32
+	height 128
+	+SOLID
+	+USESPECIAL
+	+NOGRAVITY
+	+DONTTHRUST
+	States {
+		Spawn:
+			DUMM A -1
+			Stop
+	}
+}
+actor wos_interface00xBridge : InvisibleBridge16 21734 {
+	//$Category "Bridges"
+	//$Title "bridge - cmbn interface"
+	Tag "interface"
+	radius 16
+	height 48
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

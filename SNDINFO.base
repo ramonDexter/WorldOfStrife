@@ -47,11 +47,11 @@ sounds/drink  "sounds/mwsound/drink.wav"
 
 //medicals use
 sounds/med  "sounds/various/DSMEDPAK.ogg"
-sounds/medicaluse "sounds/various/smallmedkit1.wav"
+sounds/medicaluse "sounds/various/medshot4.wav"
 
 //batteries use
-sounds/battery  "sounds/various/suitchargeok1.wav"
-sounds/batteryuse "sounds/various/battery_pickup.wav"
+sounds/battery  "sounds/various/battery_pickup.wav"
+sounds/batteryuse "sounds/various/suitchargeok1.wav"
 
 
 //ammo use
@@ -68,6 +68,10 @@ sounds/armorHeavy  "sounds/armor/MWARHVY.wav"
 sounds/armorMedium  "sounds/armor/MWARMED.wav"
 sounds/armorLight  "sounds/armor/MWARLGT.wav"
 sound/wearClothing "sounds/mwsound/clothes.wav"
+
+// health charger //
+sounds/healthCharger "sounds/various/medcharge4.wav"
+sounds/healthChargerNo "sounds/various/suitchargeno1.wav"
 ////////////////////////////////////////////////////////////////////////////////
 
 //  armorshard-armor repair kit  ///////////////////////////////////////////////

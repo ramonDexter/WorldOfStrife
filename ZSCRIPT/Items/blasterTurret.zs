@@ -18,10 +18,10 @@ zscript: ramon.dexter
 //const blasterTurretWeight = 135;
 
 class wosBlasterTurret : wosPickup {
-    Default {
+	Default {
 		//$Category "Powerups/WoS"
 		//$Title "Blaster Turret"		
-        +inventory.INVBAR;
+		+inventory.INVBAR;
 		+inventory.alwayspickup;
 		+FLOORCLIP;		
 		Tag "Mauler Turret";
@@ -30,100 +30,102 @@ class wosBlasterTurret : wosPickup {
 		radius 10;
 		height 10;		
 		Mass blasterTurretWeight;
-    }
+	}
 
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-        Use:
-            TNT1 A 0 A_ThrowGrenade("blasterTurretSet", 4, 8, 3, 0);
-            Stop;
-    }
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+		Use:
+			TNT1 A 0 A_ThrowGrenade("blasterTurretSet", 4, 8, 3, 0);
+			Stop;
+	}
 }
+
+
 //turret spawner----------------------------------------------------------------
 class blasterTurretSet : actor {
-    Default {
-        +DROPOFF;
-        +CANBOUNCEWATER;
-        +Missile;
+	Default {
+		+DROPOFF;
+		+CANBOUNCEWATER;
+		+Missile;
 
-        Tag "Mauler Turret";
-        DontHurtShooter;
-        Radius 10;
-        Height 8;
-        Speed 15;
-    }
+		Tag "Mauler Turret";
+		DontHurtShooter;
+		Radius 10;
+		Height 8;
+		Speed 15;
+	}
 
-    States {
-        Spawn:
-            DUMM A 1;
-            Loop;
-        Death:
-            DUMM A 1;
-            TNT1 A 0 {
-                A_SpawnItemEx("Blaster_turret",1,0,0);
-                A_SpawnItemEx("blasterTurretStand",1,0,0);
-            }
-            Stop;
-    }
+	States {
+		Spawn:
+			DUMM A 1;
+			Loop;
+		Death:
+			DUMM A 1;
+			TNT1 A 0 {
+				A_SpawnItemEx("Blaster_turret",1,0,0);
+				A_SpawnItemEx("blasterTurretStand",1,0,0);
+			}
+			Stop;
+	}
 }
 //turret actor with aggresive behavior------------------------------------------
 class blasterTurretStand : actor {
-    Default {
-        +INCOMBAT;
-        +FRIENDLY;
-	    +DontThrust;
-	    +LOOKALLAROUND;
-	    +NOBLOOD;
-	    +NOTARGET;
-	    +NOINFIGHTING;
-	    +NOFEAR;
-	    +DONTMORPH;
-	    +NOICEDEATH;
-        Radius 10;
-        height 56;
-        Speed 0;
-    }
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-    }
+	Default {
+		+INCOMBAT;
+		+FRIENDLY;
+		+DontThrust;
+		+LOOKALLAROUND;
+		+NOBLOOD;
+		+NOTARGET;
+		+NOINFIGHTING;
+		+NOFEAR;
+		+DONTMORPH;
+		+NOICEDEATH;
+		Radius 10;
+		height 56;
+		Speed 0;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }
 class Blaster_turret : actor {
 	int turretCount;	
 
-    Default {
-        +INCOMBAT;
-        +FRIENDLY;
-	    +DontThrust;
-	    +LOOKALLAROUND;
-	    +NOBLOOD;
-	    +NOTARGET;
-	    +NOINFIGHTING;
-	    +NOFEAR;
-	    +DONTMORPH;
-	    +NOICEDEATH;
+	Default {
+		+INCOMBAT;
+		+FRIENDLY;
+		+DontThrust;
+		+LOOKALLAROUND;
+		+NOBLOOD;
+		+NOTARGET;
+		+NOINFIGHTING;
+		+NOFEAR;
+		+DONTMORPH;
+		+NOICEDEATH;
 
-        Tag "Blaster Turret";
-        Monster;
+		Tag "Blaster Turret";
+		Monster;
 		Species "blasterTurret";
-        Health 160;
-        Radius 10;
-        height 56;
-        Speed 0;
-        MinMissileChance 16;
-        MaxTargetRange 768;
+		Health 160;
+		Radius 10;
+		height 56;
+		Speed 0;
+		MinMissileChance 16;
+		MaxTargetRange 768;
 
-    }
+	}
 
-    States {
-        Spawn:
-            DUMM A 2;
-            DUMM A 0 A_StartSound("FTRSET", 0);
-            DUMM BCDE 4;
-        Spawned:
+	States {
+		Spawn:
+			DUMM A 2;
+			DUMM A 0 A_StartSound("FTRSET", 0);
+			DUMM BCDE 4;
+		Spawned:
 			TNT1 A 0 {
 				self.turretCount++;				
 				if(self.turretCount == 350) {  //lifespan limited to 350 tics == 10 secs
@@ -132,9 +134,9 @@ class Blaster_turret : actor {
 				}
 				return ResolveState(null);
 			}
-            DUMM E 4 A_Look();
-            Loop;
-        See:
+			DUMM E 4 A_Look();
+			Loop;
+		See:
 			TNT1 A 0 {
 				self.turretCount++;				
 				if(self.turretCount == 350) {
@@ -143,25 +145,25 @@ class Blaster_turret : actor {
 				}
 				return ResolveState(null);
 			}
-            DUMM E 2 A_Chase();
-            Loop;
-        Missile:
-            DUMM E 4 A_FaceTarget();
-            DUMM F 3 Bright A_SpawnProjectile("blasterTurretTracer");
-            DUMM F 2 Bright;
-            DUMM E 4 ;
-            DUMM E 4 A_MonsterRefire(130, "See");
-            goto Spawned;
-        Death:
-            TNT1 A 0;
-            DUMM ED 2;
-            TNT1 A 0 A_StartSound("FTRSET", 0);
-            DUMM CB 2;
-            DUMM AAA 5;
-            TNT1 A 0;
-            TNT1 A 0 A_SpawnItemEx("FlmTurretExplosion",0,0,5,0,0,0,0,32);
-            Stop;
-    }
+			DUMM E 2 A_Chase();
+			Loop;
+		Missile:
+			DUMM E 4 A_FaceTarget();
+			DUMM F 3 Bright A_SpawnProjectile("blasterTurretTracer");
+			DUMM F 2 Bright;
+			DUMM E 4 ;
+			DUMM E 4 A_MonsterRefire(130, "See");
+			goto Spawned;
+		Death:
+			TNT1 A 0;
+			DUMM ED 2;
+			TNT1 A 0 A_StartSound("FTRSET", 0);
+			DUMM CB 2;
+			DUMM AAA 5;
+			TNT1 A 0;
+			TNT1 A 0 A_SpawnItemEx("FlmTurretExplosion",0,0,5,0,0,0,0,32);
+			Stop;
+	}
 }
 //turret projectile-------------------------------------------------------------
 class blasterTurretTracer : BlasterTracer {
@@ -170,21 +172,22 @@ class blasterTurretTracer : BlasterTracer {
 	}
 }
 //------------------------------------------------------------------------------
+
 // dummy decorative model //////////////////////////////////////////////////////
 class wosD_blasterTurret : actor {
-    Default {
-        //$Category "Decorations/Wos/"
-        //$Title "deco blaster turret"
-        Tag "Mauler Turret";
-        radius 12;
-        height 24;
-        +SOLID;
-        +USESPECIAL;
-        +NOGRAVITY;
-    }
-    States {
-        Spawn:
-            DUMM A -1;
-            Stop;
-    }
+	Default {
+		//$Category "Decorations/Wos/"
+		//$Title "deco blaster turret"
+		Tag "Mauler Turret";
+		radius 12;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
 }

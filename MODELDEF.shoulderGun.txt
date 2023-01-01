@@ -62,14 +62,7 @@ model shoulderGun {
 	//////////////////////////////
 }
 */
-model shoulderGun {	
-	path "models/weapons/shoulderGun/"
-	model 0 "p_shoulderGun.md3"
-	skin 0 "tx_shoulderGun2_px.png"
-	scale 1.35 1.35 1.35
-	offset 0.0 0.0 0.0
-	frameindex DUMM A 0 0
-	
+model shoulderGun {		
 	//  show/hide  ///////////////
 	path "models/weapons/shoulderGun/"
 	model 0 "shoulderGun2.md3"
@@ -105,6 +98,14 @@ model shoulderGun {
 	offset -13.0 -19.0 5.0		
 	frameindex DUMF C 0 2	
 	//////////////////////////////
+}
+model shoulderGun {
+	path "models/weapons/shoulderGun/"
+	model 0 "p_shoulderGun.md3"
+	skin 0 "tx_shoulderGun2_px.png"
+	scale 1.35 1.35 1.35
+	offset 0.0 0.0 0.0
+	frameindex DUMM Z 0 0
 }
 model shoulderGunMag_item {
 	path "models/weapons/shoulderGun/"

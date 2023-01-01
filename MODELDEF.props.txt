@@ -4430,6 +4430,13 @@ model wosD_hl2_cmbnGenerator {
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
+model wosD_hl2_cmbnMonitorBay {
+	path "models/props/hl2/"
+	model 0 "combineMonitorBay.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -22,6 +22,19 @@ Conversation {
 		Dialog = "\c[white]\c[white]Hello, what can I offer you?";
 		Goodbye = "\c[red]Goodbye";
 		Choice {
+			Text = "\c[gold]Buy Laser Pistol";
+			NextPage = "SH_townWeaponsmith_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "laserPistol";
+			Cost {
+				Item = "Coin";
+				Amount = 200;
+			}
+		}
+		Choice {
 			Text = "\c[gold]Buy Crossbow";
 			NextPage = "SH_townWeaponsmith_opener";
 			CloseDialog = true;

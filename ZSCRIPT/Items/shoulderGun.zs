@@ -67,7 +67,7 @@ class shoulderGun : wosPickup {
 	
 	States {
 		Spawn:
-			DUMM A -1;
+			DUMM Z -1;
 			Stop;
 		Use:
 			TNT1 A 0 {

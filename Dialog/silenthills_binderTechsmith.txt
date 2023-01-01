@@ -37,6 +37,19 @@ Conversation {
 			}
 		}
 		Choice {
+			Text = "\c[gold]Buy INterceptor Drone";
+			NextPage = "SH_energyAmmoVendor_opener";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosblasterTurret";
+			Cost {
+				item = "Coin";
+				amount = 150;
+			}
+		}
+		Choice {
 			Text = "\c[gold]Buy Blaster Turret";
 			NextPage = "SH_energyAmmoVendor_opener";
 			CloseDialog = true;

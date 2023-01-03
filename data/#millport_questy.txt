@@ -1,25 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 // millport common questy: /////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-# Derwin, Strife items vendor convID 13
-1 quest:
-1) sezen nahradni dily k 3D tiskarne
-	>> derwin shani dily k 3D tiskarne, ale zadny z mistnich techmisthu takove dily nema
-	>> dily se daji sehnat u techsmithe v eastcliffu, ale ten za ne chce soucastky od techsmithe v aeredale
-	>> techsmith dily v aeredale preda dily
-	>> techsmith v eastcliffu preda dily
-	>> po navratu odmena
-
-# Quincy, energy ammo vendor convID 10
-quest:
-1) najdi Quincyho sestru, ktera zmizela nekde v okoli Ravenrocku
-	>> quincy te pozada o nalezeni sestry, ktera se nevratila z vyletu do ravenrocku
-	>> vydej se do ravenrocku 
-	>> mistni hostinskej si na ni matne pamatuje, byla tady s posledni vypravou pivnich turistu, pry odels nekam na zapad ozrala jak delo
-	>> quincyho sestra je u mistniho poustevnika, ktery ji nasel, jak lezi nedaleko stare veze
-	>> bohuzel, sestra to prepiskla a zemrela na otravu alkoholem
-	>> tak skoncil smutny pribeh jedne alkoholicky
-	>> bratr podekuje, odmena
 
 # Gregory, techsmith, convID 14
 quest:
@@ -28,7 +9,7 @@ quest:
 
 # soudce zmeny Afer Valgus Reberio convID 38
 4 questy:
-1) Dones prikaz Ediktu starostovi Ravenrocku.
+1) Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest
 2) ziskej priznani nebo dukazy proti kaciri v Commons >> cerny doktor
 3) najdi ztraceneho syna farmare z Ravenrocku
 4) Najdi ukradene artefakty.
@@ -115,8 +96,7 @@ quest:
 ////////////////////////////////////////////////////////////////////////////////
 // aeredale questy /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-# techmisth:
-1) zamorena studna - HOTOVO
+
 
 # starosta
 1) ukradene veci
@@ -191,14 +171,7 @@ quest:
 ////////////////////////////////////////////////////////////////////////////////
 // eastcliff questy ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-# hospodsky:
-1) vycisti sklep od potvor - HOTOVO
-# dcera hospodskeho
-1) dones jidlo a vzkaz milemu - HOTOVO
 
-# starosta:
-1) vycisti farmy od pavouku a znic tri hnizda - HOTOVO
-2) zlikviduj bandity ve vodarne - HOTOVO
 
 # sef mistni shipping gildy
 1) dones vzkaz do shipping guildy v ravenrocku
@@ -222,3 +195,60 @@ quest:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// HOTOVO //////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// millport ////////////////////////////////////////////////////////////////////
+HOTOVO - # Derwin, Strife items vendor convID 13
+1 quest:
+1) sezen nahradni dily k 3D tiskarne
+	>> derwin shani dily k 3D tiskarne, ale zadny z mistnich techmisthu takove dily nema
+	>> dily se daji sehnat u techsmithe v eastcliffu, ale ten za ne chce soucastky od techsmithe v aeredale
+	>> techsmith aeredale preda dily
+	>> techsmith v eastcliffu preda dily
+	>> po navratu odmena
+
+HOTOVO - # Quincy, energy ammo vendor convID 10 / dopsat slechitce v ravenrocku
+quest:
+1) najdi Quincyho sestru, ktera zmizela nekde v okoli Ravenrocku
+	>> quincy te pozada o nalezeni sestry, ktera se nevratila z vyletu do ravenrocku
+	>> vydej se do ravenrocku 
+	>> mistni hostinskej si na ni matne pamatuje, byla tady s posledni vypravou pivnich turistu, pry odels nekam na zapad ozrala jak delo
+	>> quincyho sestra je u mistniho poustevnika, ktery ji nasel, jak lezi nedaleko stare veze
+	>> bohuzel, sestra to prepiskla a zemrela na otravu alkoholem
+	>> tak skoncil smutny pribeh jedne alkoholicky
+	>> bratr podekuje, odmena
+// aeredale ////////////////////////////////////////////////////////////////////
+# techmisth:
+1) zamorena studna - HOTOVO
+// eastcliff ///////////////////////////////////////////////////////////////////
+# hospodsky:
+1) vycisti sklep od potvor - HOTOVO
+# dcera hospodskeho
+1) dones jidlo a vzkaz milemu - HOTOVO
+
+# starosta:
+1) vycisti farmy od pavouku a znic tri hnizda - HOTOVO
+2) zlikviduj bandity ve vodarne - HOTOVO
+// ravenrock ///////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

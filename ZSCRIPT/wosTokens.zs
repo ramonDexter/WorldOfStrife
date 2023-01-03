@@ -194,3 +194,18 @@ class m10q_lostDaughter_given : tokenBase {}
 class m10q_lostDaughter_found : tokenBase {}
 class m10q_lostDaughter_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
+
+// millport derwin sezen soucastky /////////////////////////////////////////////
+class m08q_derwin_sezensoucastky_given : tokenBase {}
+class m08q_derwin_sezensoucastky_aeredale : tokenBase {}
+class m08q_derwin_sezensoucastky_sehnaltools : tokenBase {}
+class m08q_derwin_sezensoucastky_sehnal : tokenBase {}
+class m08q_derwin_sezensoucastky_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// millport quincy ztracena sestra /////////////////////////////////////////////
+class m08q_quincy_lostsister_given : tokenBase {}
+class m08q_quincy_lostsister_found : tokenBase {}
+class m08q_quincy_lostsister_payed : tokenBase {}
+class m08q_quincy_lostsister_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////

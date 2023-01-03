@@ -499,9 +499,9 @@ DoomEdNums {
 	20494 = wos_healthCharger
 	20495 = wosD_interceptorDroneDummy
 	20496 = wosD_DeployableShieldDummy
+	20497 = woq_tools
+	20498 = wosq_spareparts
 	/*
-	20497 = 
-	20498 = 
 	20499 = 
 	20500 = 
 	20501 = 

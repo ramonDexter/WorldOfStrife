@@ -4,13 +4,26 @@
 namespace = "GZDoom";
 Conversation {
 	ID = 13;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	\c[yellow]<< BACK
+	*/
 
 	Page {
-        pageName = "MP_strifeItemsVendor_opener";
+		pageName = "MP_strifeItemsVendor_opener";
 		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]Hello, welcome to my humble shop.\nI sell support items - Environmental suit, Scanner, Portable Map, Targeter and Shadow Armor. What will be your choice?";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
+		Goodbye = "\c[red]Goodbye";
 		Choice {
 			Text = "\c[yellow]Buy Environmental Suit ";
 			NextPage = "MP_strifeItemsVendor_opener";
@@ -71,81 +84,182 @@ Conversation {
 				amount = 350;
 			}
 		}
-        Choice {
-            Text = "I wanted to ask something.";
-            NextPage = "MP_strifeItemsVendor_questions";
-        }
+		Choice {
+			Text = "I wanted to ask something.";
+			NextPage = "MP_strifeItemsVendor_questions";
+		}
+		Choice {
+			Text = "Do you need any help?";
+			NextPage = "MP_strifeItemsVendor_help";
+			Exclude {
+				item = "m08q_derwin_sezensoucastky_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "About the job...";
+			Nextpage = "MP_strifeItemsVendor_helpnotyet";
+			Require {
+				item = "m08q_derwin_sezensoucastky_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_derwin_sezensoucastky_finished";
+				amount = 1;
+			}
+		}
 	}
-    Page {
-        pageName = "MP_strifeItemsVendor_questions";
+	Page {
+		pageName = "MP_strifeItemsVendor_questions";
 		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]And what is it you wanted to know?";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "Could you tell me about yourself?";
-            NextPage = "MP_strifeItemsVendor_aboutyourself";
-        }
-        Choice {
-            Text = "I wanted to know more about the city.";
-            NextPage = "MP_strifeItemsVendor_aboutcity";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_strifeItemsVendor_opener";
-        }
-    }
-    Page {
-        pageName = "MP_strifeItemsVendor_aboutyourself";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Could you tell me about yourself?";
+			NextPage = "MP_strifeItemsVendor_aboutyourself";
+		}
+		Choice {
+			Text = "I wanted to know more about the city.";
+			NextPage = "MP_strifeItemsVendor_aboutcity";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_strifeItemsVendor_opener";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_aboutyourself";
 		Name = "\c[yellow]Derwin, techsmith";
-	    Dialog = "\c[white]I am Derwin, techSmith. I make and sell the support equipment. If you're looking for a protective suit, targetter or maybe a shadow armor, ask me. I've got the best stuff in the town.";
+		Dialog = "\c[white]I am Derwin, techSmith. I make and sell the support equipment. If you're looking for a protective suit, targetter or maybe a shadow armor, ask me. I've got the best stuff in the town.";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_strifeItemsVendor_questions";
-        }
-    }
-    Page {
-        pageName = "MP_strifeItemsVendor_aboutcity";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_strifeItemsVendor_questions";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_aboutcity";
 		Name = "\c[yellow]Derwin, techsmith";
 		Dialog = "\c[white]Well, Millport's my home for most of my life. I came here right after graduating in Silent Hills TekGuild. Well, what could I say about Millport...it looks nice on the surface, but it's rotten inside. Have you heard about the Baron? You don't want to deal with him, trust me. He controls everything here. Every shop owner must pay special monthly tax to him. That's fot the local relationships.\nIf you're tourist type, you can visit the port or the Commons. But, visiting the port isn't that easy.";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "Why visiting port is not easy?";
-            NextPage = "MP_strifeItemsVendor_visitingport";
-        }
-        Choice {
-            Text = "The Commons? What's that?";
-            NextPage = "MP_strifeItemsVendor_commons";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_strifeItemsVendor_questions";
-        }
-    }
-    Page {
-        pageName = "MP_strifeItemsVendor_visitingport";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "Why visiting port is not easy?";
+			NextPage = "MP_strifeItemsVendor_visitingport";
+		}
+		Choice {
+			Text = "The Commons? What's that?";
+			NextPage = "MP_strifeItemsVendor_commons";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_strifeItemsVendor_questions";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_visitingport";
 		Name = "\c[yellow]Derwin, techsmith";
-	    Dialog = "\c[white]Well, the port's under control of the Port Authority. The port area is overrun by long fence with locked gates. You need an authorization from the Port Authority, which is not cheap. They are keeping the scum away by using these measures.";
+		Dialog = "\c[white]Well, the port's under control of the Port Authority. The port area is overrun by long fence with locked gates. You need an authorization from the Port Authority, which is not cheap. They are keeping the scum away by using these measures.";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_strifeItemsVendor_aboutcity";
-        }
-    }
-    Page {
-        pageName = "MP_strifeItemsVendor_commons";
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_strifeItemsVendor_aboutcity";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_commons";
 		Name = "\c[yellow]Derwin, techsmith";
-	    Dialog = "\c[white]'The Commons' is the name of local residential comples. It's located on the eastern edge of the city, better said it's the eastern edge of the city. It's the housing for most of the local people. It was originally built for the dock workers, but it has grown since that times.";
+		Dialog = "\c[white]'The Commons' is the name of local residential comples. It's located on the eastern edge of the city, better said it's the eastern edge of the city. It's the housing for most of the local people. It was originally built for the dock workers, but it has grown since that times.";
 		Panel = "M_DRWN";
-        Goodbye = "\c[red]Goodbye";
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "MP_strifeItemsVendor_aboutcity";
-        }
-    }
+		Goodbye = "\c[red]Goodbye";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_strifeItemsVendor_aboutcity";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_help";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]Oh yeah, you come in the right time. I'm looking for some spare parts for my 3D printer. And as I have found out, my colleagues here in town cannot spare any parts. So, I would like to ask you if you could ask my colleagues in surrounding villages. I'll give you 150 gold for this. What do you say?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "MP_strifeItemsVendor_opener";
+		}
+		Choice {
+			Text = "This sounds easy. Could you tell me more?";
+			Nextpage = "MP_strifeItemsVendor_helptellmore";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_helptellmore";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]Well, there's not much. As I have said, local techsmithes don't have any spare parts, so don't waste your time asking around town. I've already done that. But there are techsmithes in surrounding villages. So, please, go to Aeredale, or Raven Rock, or Eastcliff and ask local etchsmithes, if they have any parts for 3D printer. I'll pay you 150 gold for this simple task.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Okay, I'll do it.";
+			Nextpage = "MP_strifeItemsVendor_opener";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8201;
+		}
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "MP_strifeItemsVendor_opener";
+		}
+	}
+	Page {
+		link = "MP_strifeItemsVendor_havespareparts";
+		ifitem {
+			item = "m08q_derwin_sezensoucastky_sehnal";
+			amount = 1;
+		}
+		pageName = "MP_strifeItemsVendor_helpnotyet";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]Have you brought me the spare parts?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "MP_strifeItemsVendor_opener";
+			Closedialog = true;
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_havespareparts";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]Have you brought me the spare parts?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Yes, here they are.";
+			Nextpage = "MP_strifeItemsVendor_havespareparts2";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_havespareparts2";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]That's great. If you give them to me, I'll give you your reward.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Here they are.";
+			Nextpage = "MP_strifeItemsVendor_helpfinish";
+		}
+	}
+	Page {
+		pageName = "MP_strifeItemsVendor_helpfinish";
+		Name = "\c[yellow]Derwin, techsmith";
+		Dialog = "\c[white]Oh, they are in prefect shape, great! Here's your reward, I thank you, good sir!";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "MP_strifeItemsVendor_opener";
+			YesMessage = "\c[white]You're welcome.";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8205;
+		}
+	}
 }
 //##################################################################################################################

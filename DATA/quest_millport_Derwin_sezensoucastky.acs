@@ -1,0 +1,73 @@
+//# Derwin, Strife items vendor convID 13 //////////////////////////////////////
+//1 quest:
+//1) sezen nahradni dily k 3D tiskarne
+//	>> derwin shani dily k 3D tiskarne, ale zadny z mistnich techmisthu takove dily nema
+//	>> dily se daji sehnat u techsmithe v eastcliffu, ale ten za ne chce nastroje od techsmithe v aeredale
+//	>> techsmith aeredale preda dily
+//	>> techsmith v eastcliffu preda dily
+//	>> po navratu odmena
+
+// tokeny:
+// class m08q_derwin_sezensoucastky_given : tokenBase {}
+// class m08q_derwin_sezensoucastky_aeredale : tokenBase {}
+// class m08q_derwin_sezensoucastky_sehnaltools : tokenBase {}
+// class m08q_derwin_sezensoucastky_sehnal : tokenBase {}
+// class m08q_derwin_sezensoucastky_finished : tokenBase {}
+
+//predmety:
+// woq_tools
+// wosq_spareparts
+
+// zadani v dialogu
+// hrac dostane token _given
+script 8201 (void) {
+	GiveInventory("m08q_derwin_sezensoucastky_given", 1);
+	DisplayQuest("$TXT_m08q_derwin_sezensoucastky", 1);
+}
+
+// v map14
+// v dialogu u techsmithe v eastcliffu
+// hrac dostane token _aeredale
+script 8202 (void) {
+	GiveInventory("m08q_derwin_sezensoucastky_aeredale", 1);
+	DisplayQuest("$TXT_m08q_derwin_sezensoucastky", 2);
+}
+
+// v map10
+//v dialogu v aeredale
+// hrac dostane soucastky1
+script 8203 (void) {
+	GiveInventory("woq_tools", 1);
+	GiveInventory("m08q_derwin_sezensoucastky_sehnaltools", 1);
+	DisplayQuest("$TXT_m08q_derwin_sezensoucastky", 2);
+}
+
+// po navratu v eastcliffu
+// check na m08q_derwin_sezensoucastky_sehnaltools
+// hrac dostane token m08q_derwin_sezensoucastky_sehnal
+// hrac dostane item soucastky2
+script 8204 (void) {
+	TakeInventory("woq_tools", 1);
+	GiveInventory("m08q_derwin_sezensoucastky_sehnal", 1);
+	GiveInventory("wosq_spareparts", 1);
+	DisplayQuest("$TXT_m08q_derwin_sezensoucastky", 2);
+}
+
+// NEBO:
+// hrac muze v eastcliffu soucastky ukrast
+
+// po navratu v dialogu u derwina:
+// odebrat soucastky2
+// dat token m08q_derwin_sezensoucastky_finished
+// dat odmenu
+script 8205 (void) {
+	TakeInventory("wosq_spareparts", 1);
+	GiveInventory("m08q_derwin_sezensoucastky_finished", 1);
+	GiveInventory("coin", 150);
+	DisplayQuest("$TXT_m08q_derwin_sezensoucastky", 3);
+	// aby nebyly chyby v dialogu u techmisthe v aeredale
+	if (!CheckInventory("m08q_derwin_sezensoucastky_sehnaltools")) {
+		GiveInventory("m08q_derwin_sezensoucastky_sehnaltools", 1);
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

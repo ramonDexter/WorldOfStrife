@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////
+//# Gregory, energy ammo vendor convID 10
+////////////////////////////////////////////////////////////////////////////////
+//quest:
+//1) najdi Gregoryho sestru, ktera zmizela nekde v okoli Ravenrocku
+// >> gregory te pozada o nalezeni sestry, ktera se nevratila z vyletu do ravenrocku
+// >> vydej se do ravenrocku 
+// >> mistni hostinskej si na ni matne pamatuje, byla tady s posledni vypravou pivnich turistu, pry odels nekam na zapad ozrala jak delo
+// >> quincyho sestra je zavrena u mistniho slechtice, kteremu poskodila zarizeni a znecistila vybaveni domu
+// >> hrac musi zaplatit 500 zlatych, jinak sestru nepropusti
+// >> reseni1: hrac sestru nevyplati, pouze se vrati gragorymu rict, kde sestra je >> mensi odmena
+// >> reseni2: hrac sestru vyplati, ta se vrati ke gregorymu >> vetsi odmena
+
+// tokeny:
+// millport quincy ztracena sestra /////////////////////////////////////////////
+// class m08q_quincy_lostsister_given : tokenBase {}
+// class m08q_quincy_lostsister_found : tokenBase {}
+// class m08q_quincy_lostsister_payed : tokenBase {}
+// class m08q_quincy_lostsister_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+// TXT_m08q_quincy_lostsister
+
+// zadani v dialogu u gregoryho
+script 8301 (void) {
+	GiveInventory("m08q_quincy_lostsister_given", 1);
+	DisplayQuest("$TXT_m08qslostsister", 1);
+}
+
+// do dialogu u hospodskych v ravenrocku dat check a exclude
+// dat i predani tokenu found
+script 8302 (void) {
+	GiveInventory("m08q_quincy_lostsister_found", 1);
+	DisplayQuest("$TXT_m08q_quincy_lostsister", 2);
+}
+Require {
+	item = "m08q_quincy_lostsister_given";
+	amount = 1;
+}
+Exclude {
+	item = "m08q_quincy_lostsister_found";
+	amount = 1;
+}
+
+// v dialogu u slechtice
+script 8303 (void) {
+	TakeInventory("coin", 500);
+	GiveInventory("m08q_quincy_lostsister_payed", 1);
+	DisplayQuest("$TXT_m08q_quincy_lostsister", 2);
+}
+
+// po navratu v dialogu u gregoryho - nevyplatil sestru
+script 8304 (void) {
+	GiveInventory("coin", 150);
+	GiveInventory("m08q_quincy_lostsister_payed", 1);
+	DisplayQuest("$TXT_m08q_quincy_lostsister", 2);
+}
+// - vyplatil sestru
+script 8305 (void) {
+	GiveInventory("coin", 800);
+	GiveInventory("m08q_quincy_lostsister_payed", 1);
+	DisplayQuest("$TXT_m08q_quincy_lostsister", 2);
+}
+////////////////////////////////////////////////////////////////////////////////

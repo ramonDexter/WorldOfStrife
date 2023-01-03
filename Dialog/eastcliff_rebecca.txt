@@ -6,7 +6,7 @@ Conversation {
 		pageName = "";
 		Name = "\c[yellow]Rebecca";
 		Dialog = "\c[white]";
-		Goodbye = "\c[red]Goodbye."; 
+		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "";
 			Nextpage = "";
@@ -25,6 +25,30 @@ Conversation {
 		Choice {
 			Text = "I've got some questions.";
 			Nextpage = "EC_rebecca_questions";
+		}
+		Choice {
+			Text = "I'm looking for 3D printer spare parts.";
+			Nextpage = "EC_rebecca_spareparts1";
+			Require {
+				item = "m08q_derwin_sezensoucastky_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_derwin_sezensoucastky_aeredale";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "I got the tools.";
+			Nextpage = "EC_rebecca_gottools";
+			Require {
+				item = "m08q_derwin_sezensoucastky_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_derwin_sezensoucastky_aeredale";
+				amount = 1;
+			}
 		}
 	}
 	Page {
@@ -269,6 +293,42 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			Nextpage = "EC_rebecca_opener";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_spareparts1";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]3D printer spare parts you say? Well I got some here, but they aren't cheap. In fact, I would trade them for special tools.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I knew it wouldn't be this easy. Any suggestion where should I get the fine tools?";
+			Nextpage = "EC_rebecca_spareparts2";
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_spareparts2";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Well, my nephew in Aeredale has these fine tools. But I don't have the time to travel there.So, if you bring me these tools, I'll give you the spare parts you want. Deal?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah, deal.";
+			Nextpage = "EC_rebecca_opener";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 8202;
+		}
+	}
+	Page {
+		pageName = "EC_rebecca_gottools";
+		Name = "\c[yellow]Rebecca";
+		Dialog = "\c[white]Oh, great. Here are the spare parts. Thank you.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "EC_rebecca_opener";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 8204;
 		}
 	}
 }

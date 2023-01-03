@@ -1348,6 +1348,49 @@ class wosq_ratPoison : wosPickup {
 	}
 }
 
+class woq_tools : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "tools"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Tools";
+		Inventory.Icon "I_QTLS";
+		Inventory.PickupMessage "You picked up the Tools.";
+		Mass woq_toolsWeight;
+	}
+	States {
+		Spawn:
+			QTLS A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosq_spareparts : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "spare parts"
+		+SOLID
+		+INVENTORY.INVBAR
+
+		Tag "Spare Parts";
+		Inventory.Icon "I_QSPS";
+		Inventory.PickupMessage "You picked up the Spare Parts.";
+		Mass woq_toolsWeight;
+	}
+	States {
+		Spawn:
+			QSPS A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

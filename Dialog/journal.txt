@@ -371,6 +371,32 @@ Conversation {
 				amount = 1;
 			}
 		}
+		// millport derwin sezen soucastky /////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Spare Parts for Derwin ]";
+			NextPage = "journal_m08q_derwin_sezensoucastky_given";
+			Require {
+				item = "m08q_derwin_sezensoucastky_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_derwin_sezensoucastky_finished";
+				amount = 1;
+			}
+		}
+		// millport quincy ztracena sestra /////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Quincy's Lost Sister ]";
+			NextPage = "journal_m08q_quincy_lostsister_given";
+			Require {
+				item = "m08q_quincy_lostsister_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_quincy_lostsister_finished";
+				amount = 1;
+			}
+		}
 
 	}
 	//##################################################################################################################
@@ -2325,6 +2351,142 @@ Conversation {
 		pageName = "journal_m10q_lostDaughter_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
 		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[X] Return to Curtis";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+
+	//##################################################################################################################
+	// quest derwin sezen soucastky ////////////////////////////////////////////
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_derwin_sezensoucastky_sezentools";
+		ifitem {
+			item = "m08q_derwin_sezensoucastky_aeredale";
+			amount = 1;
+		}
+		pageName = "journal_m08q_derwin_sezensoucastky_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\n\n[ ] Find and bring 3D printer spare parts\n[ ] Return to Derwin";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_derwin_sezensoucastky_sehnaltools";
+		ifitem {
+			item = "m08q_derwin_sezensoucastky_sehnaltools";
+			amount = 1;
+		}
+		pageName = "journal_m08q_derwin_sezensoucastky_sezentools"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[ ] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_derwin_sezensoucastky_sehnalsoucastky";
+		ifitem {
+			item = "m08q_derwin_sezensoucastky_sehnal";
+			amount = 1;
+		}
+		pageName = "journal_m08q_derwin_sezensoucastky_sehnaltools"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_derwin_sezensoucastky_finished";
+		ifitem {
+			item = "m08q_derwin_sezensoucastky_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_derwin_sezensoucastky_sehnalsoucastky"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_derwin_sezensoucastky_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[X] Return to Derwin";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+
+	//##################################################################################################################
+	// quincys' lost sister ////////////////////////////////////////////////////
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_quincy_lostsister_found";
+		ifitem {
+			item = "m08q_quincy_lostsister_found";
+			amount = 1;
+		}
+		pageName = "journal_m08q_quincy_lostsister_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[ ] Find Quincy's sister Janice\n[ ] Return to Quincy";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}	
+	Page {
+		link = "journal_m08q_quincy_lostsister_finished";
+		ifitem {
+			item = "m08q_quincy_lostsister_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_quincy_lostsister_found"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[ ] Return to Quincy";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_quincy_lostsister_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[X] Return to Quincy";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {

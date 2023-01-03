@@ -50,6 +50,30 @@ Conversation {
             Text = "I've got some questions.";
             Nextpage = "aeredale_smitty_questions";
         }
+        Choice {
+            Text = "I'm looking for 3D printer spare parts.";
+            Nextpage = "aeredale_smitty_spareparts";
+            Require {
+                item = "m08q_derwin_sezensoucastky_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_derwin_sezensoucastky_sehnal";
+                amount = 1;
+            }
+        }
+        Choice {
+            Text = "I came here for some fine tools.";
+            Nextpage = "aeredale_smitty_finetools";
+            Require {
+                item = "m08q_derwin_sezensoucastky_aeredale";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_derwin_sezensoucastky_sehnaltools";
+                amount = 1;
+            }
+        }
     }
     Page {
         pageName = "aeredale_smitty_shop";
@@ -333,6 +357,31 @@ Conversation {
             CloseDialog = true;
             Special = 80;
             arg0 = 1005;
+        }
+    }
+    Page {
+        pageName = "aeredale_smitty_spareparts";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Sorry, I spent my last spare parts on repairs last month. But you could go ask my nephew Becky in Eastcliff. She surely has some.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Thank you.";
+            Nextpage = "aeredale_smitty_opener";
+            YesMessage = "\c[white]You're welcome.";
+            CloseDialog = true;
+        }
+    }
+    Page {
+        pageName = "aeredale_smitty_finetools";
+        Name = "\c[yellow]Smitty, Techsmith";
+        Dialog = "\c[white]Did becky sent you? I've invited her here numerous times, and no, she sends a remote. No problem, tho. She's just little bit lazy, you know? Here are the fine tools and tell Becky my regards.";
+        Goodbye = "\c[red]Goodbye.";
+        Choice {
+            Text = "Will do. Thank you.";
+            Nextpage = "aeredale_smitty_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8203;
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////

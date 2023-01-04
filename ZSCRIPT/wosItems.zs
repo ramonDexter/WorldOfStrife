@@ -97,6 +97,8 @@ const wosDegninOreWeight = 10;
 const wosq_chemicalOreWeight = 5;
 const wosq_chemicalSolutionWeight = 15;
 const wosq_rottenWaterWeight = 5;
+const woq_toolsWeight = 85;
+const wosq_sparepartsWeight = 65;
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -1379,7 +1381,7 @@ class wosq_spareparts : wosPickup {
 		Tag "Spare Parts";
 		Inventory.Icon "I_QSPS";
 		Inventory.PickupMessage "You picked up the Spare Parts.";
-		Mass woq_toolsWeight;
+		Mass wosq_sparepartsWeight;
 	}
 	States {
 		Spawn:

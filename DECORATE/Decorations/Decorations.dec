@@ -5331,7 +5331,7 @@ actor dx_comp02 : wosOptDeco2_base 21303 {
 			Stop
 	}
 }
-actor dx_compBase : wosOptDeco2_base 21304 {
+actor dx_compBase 21304 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base"
 	
@@ -5348,7 +5348,7 @@ actor dx_compBase : wosOptDeco2_base 21304 {
 			Stop
 	}
 }
-actor dx_compKybd : wosOptDeco2_base 21305 {
+actor dx_compKybd 21305 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd"
 	
@@ -5365,7 +5365,7 @@ actor dx_compKybd : wosOptDeco2_base 21305 {
 			Stop
 	}
 }
-actor dx_compB3 : wosOptDeco2_base 21306 {
+actor dx_compB3 21306 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base03"
 	
@@ -5382,7 +5382,7 @@ actor dx_compB3 : wosOptDeco2_base 21306 {
 			Loop
 	}
 }
-actor dx_compB4 : wosOptDeco2_base 21307 {
+actor dx_compB4 21307 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base04"
 	
@@ -5399,7 +5399,7 @@ actor dx_compB4 : wosOptDeco2_base 21307 {
 			Loop
 	}
 }
-actor dx_compB5 : wosOptDeco2_base 21308 {
+actor dx_compB5 21308 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base05"
 	
@@ -5416,7 +5416,7 @@ actor dx_compB5 : wosOptDeco2_base 21308 {
 			Loop
 	}
 }
-actor dx_compK3 : wosOptDeco2_base 21309 {
+actor dx_compK3 21309 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd03"
 	
@@ -5433,7 +5433,7 @@ actor dx_compK3 : wosOptDeco2_base 21309 {
 			Loop
 	}
 }
-actor dx_compK4 : wosOptDeco2_base 21310 {
+actor dx_compK4 21310 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd04"
 	
@@ -5450,7 +5450,7 @@ actor dx_compK4 : wosOptDeco2_base 21310 {
 			Loop
 	}
 }
-actor dx_compK5 : wosOptDeco2_base 21311 {
+actor dx_compK5 21311 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd05"
 	
@@ -5467,7 +5467,7 @@ actor dx_compK5 : wosOptDeco2_base 21311 {
 			Loop
 	}
 }
-actor dx_compXB1 : wosOptDeco2_base 21312 {
+actor dx_compXB1 21312 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase01"
 	
@@ -5484,7 +5484,7 @@ actor dx_compXB1 : wosOptDeco2_base 21312 {
 			Loop
 	}
 }
-actor dx_compXB2 : wosOptDeco2_base 21313 {
+actor dx_compXB2 21313 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase02"
 	
@@ -5501,7 +5501,7 @@ actor dx_compXB2 : wosOptDeco2_base 21313 {
 			Loop
 	}
 }
-actor dx_compXK1 : wosOptDeco2_base 21314 {
+actor dx_compXK1 21314 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd01"
 	
@@ -5518,7 +5518,7 @@ actor dx_compXK1 : wosOptDeco2_base 21314 {
 			Loop
 	}
 }
-actor dx_compXK2 : wosOptDeco2_base 21315 {
+actor dx_compXK2 21315 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd02"
 	
@@ -6499,7 +6499,7 @@ actor wosD_wosMinimissileLauncher 21373 {
 			Stop
 	}
 }
-actor dx_compB6 : wosOptDeco2_base 21374 {
+actor dx_compB6 21374 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp base06"
 	
@@ -6516,7 +6516,7 @@ actor dx_compB6 : wosOptDeco2_base 21374 {
 			Loop
 	}
 }
-actor dx_compK6 : wosOptDeco2_base 21375 {
+actor dx_compK6 21375 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp kybd06"
 	
@@ -6533,7 +6533,7 @@ actor dx_compK6 : wosOptDeco2_base 21375 {
 			Loop
 	}
 }
-actor dx_compXB3 : wosOptDeco2_base 21376 {
+actor dx_compXB3 21376 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase03"
 	
@@ -6550,7 +6550,7 @@ actor dx_compXB3 : wosOptDeco2_base 21376 {
 			Loop
 	}
 }
-actor dx_compXB4 : wosOptDeco2_base 21377 {
+actor dx_compXB4 21377 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xbase04"
 	
@@ -6567,7 +6567,7 @@ actor dx_compXB4 : wosOptDeco2_base 21377 {
 			Loop
 	}
 }
-actor dx_compXK3 : wosOptDeco2_base 21378 {
+actor dx_compXK3 21378 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd03"
 	
@@ -6584,7 +6584,7 @@ actor dx_compXK3 : wosOptDeco2_base 21378 {
 			Loop
 	}
 }
-actor dx_compXK4 : wosOptDeco2_base 21379 {
+actor dx_compXK4 21379 {
 	//$Category "Decorations/WoS"
 	//$Title "D3comp Xkybd04"
 	

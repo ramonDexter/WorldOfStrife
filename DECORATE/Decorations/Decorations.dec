@@ -7375,7 +7375,7 @@ actor wosD_flowerYellow 21428 {
     //$Category "Trees and Rocks/WoS"
 	//$Title "flower yellow"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	Tag "yellow flower"
@@ -7393,7 +7393,7 @@ actor wosD_flowerWhite 21429 {
     //$Category "Trees and Rocks/WoS"
 	//$Title "flower white"
 	
-	+SOLID
+	-SOLID
 	+USESPECIAL
 	+DONTTHRUST
 	Tag "white flower"

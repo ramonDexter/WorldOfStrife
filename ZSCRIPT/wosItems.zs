@@ -1382,6 +1382,7 @@ class wosq_spareparts : wosPickup {
 		Inventory.Icon "I_QSPS";
 		Inventory.PickupMessage "You picked up the Spare Parts.";
 		Mass wosq_sparepartsWeight;
+		Scale 0.5;
 	}
 	States {
 		Spawn:

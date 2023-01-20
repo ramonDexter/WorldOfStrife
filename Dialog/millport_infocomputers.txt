@@ -1,7 +1,7 @@
 namespace = "GZDoom";
 // infoscreeny v recruitment center convid 47, 48 //////////////////////////////
 Conversation {
-	ID = 47;
+	ID = 471;
 	/*
 	Page {
 		pageName = "";
@@ -22,7 +22,7 @@ Conversation {
 	}
 }
 Conversation {
-	ID = 48;
+	ID = 481;
 	Page {
 		pageName = "mp_infoscreenBinderTools_opener";
 		Name = "\c[yellow]INFOSCREEN";

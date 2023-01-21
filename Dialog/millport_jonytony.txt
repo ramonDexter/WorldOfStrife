@@ -8,33 +8,9 @@ Conversation {
 	Page {
 		pageName = "MP_jonyWeaponsVendor_opener";
 		Name = "\c[yellow]Jony, weapons vendor";
-		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Pistols, Laser Pistols and Executor Rifles. You should visit my twin brother Tony, he sells heavy weapons.";
+		Dialog = "\c[white]Hello Binder and welcome to Jony&Tony weapons Emporium. My part of shop is specialized on light weapons. I sell Laser Pistols and Executor Rifles. You should visit my twin brother Tony, he sells heavy weapons.";
 		Panel = "M_JONY";
 		Goodbye = "\c[red]Goodbye";
-		Choice {
-			Text = "\c[yellow]Buy Storm Pistol";
-			NextPage = "MP_jonyWeaponsVendor_opener";
-			GiveItem = "StormPistol";
-			YesMessage = "Here is one Storm Pistol!";
-			NoMessage = "Not enough coins!";
-			DisplayCost = true;
-			Cost {
-				item = "Coin";
-				amount = 150;
-			}
-		}
-		Choice {
-			Text = "Buy Clip of Bullets";
-			NextPage = "MP_jonyWeaponsVendor_opener";
-			GiveItem = "ClipOfBullets";
-			YesMessage = "Here is one Clip of Bullets!";
-			NoMessage = "Not enough coins!";
-			DisplayCost = true;
-			Cost {
-				item = "Coin";
-				amount = 5;
-			}
-		}
 		Choice {
 			Text = "\c[yellow]Buy Laser Pistol";
 			NextPage = "MP_jonyWeaponsVendor_opener";
@@ -72,14 +48,25 @@ Conversation {
 			}
 		}
 		Choice {
+			Text = "Buy Clip of Bullets";
+			NextPage = "MP_jonyWeaponsVendor_opener";
+			GiveItem = "ClipOfBullets";
+			YesMessage = "Here is one Clip of Bullets!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "Coin";
+				amount = 5;
+			}
+		}
+		Choice {
 			Text = "Buy Box of Bullets";
 			NextPage = "MP_jonyWeaponsVendor_opener";
 			GiveItem = "wosBulletsBox";
 			YesMessage = "Here is one Box of Bullets!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 80;
 			}

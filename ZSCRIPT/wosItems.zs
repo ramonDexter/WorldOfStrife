@@ -124,7 +124,7 @@ class wosPickup : CustomInventory {
         }
     }
     override void AttachToOwner (Actor other) {
-        super.AttachToOwner(other);
+        super.AttachToOwner(other);		
         let pawn = binderPlayer(owner);
         pawn.encumbrance+=self.mass;
     }

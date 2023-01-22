@@ -1,111 +1,154 @@
 //explosives vendor id 15
 namespace = "GZDoom";
-Conversation
-{
+Conversation {
 	ID = 15;
-	Page//1
-	{
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Gadwin, explosives vendor";
+		Dialog = "\c[white]";
+		Panel = "M_GDWN";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_gadwin_opener";
 		Name = "\c[yellow]Gadwin, explosives vendor";
 		Dialog = "\c[white]Hello my good fellow. Would you like to blow something up? I have everything you would need when you want to blow something up - Rockets, Grenades and Hand Grenades.";
 		Panel = "M_GDWN";
         Goodbye = "\c[red]Goodbye";
-		Choice
-		{
-			Text = "\c[yellow]Buy Pack of Mini Missiles ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy Landmine";
+			NextPage = "mp_gadwin_opener";
+			GiveItem = "wosLandMine";
+			YesMessage = "Here is one Pack of Mini Missiles!";
+			NoMessage = "Not enough coins!";
+			DisplayCost = true;
+			Cost {
+				item = "Coin";
+				amount = 45;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]Buy Pack of Mini Missiles";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "MiniMissiles";
 			YesMessage = "Here is one Pack of Mini Missiles!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 40;
 			}
 		}
-		Choice
-		{
-			Text = "\c[yellow]Buy Bundle of Mini Missiles ";
-			NextPage = 1;
-			GiveItem = "wosBundleMiniMissile";
-			YesMessage = "Here is one Bundle of Mini Missiles!";
-			NoMessage = "Not enough coins!";
-			DisplayCost = true;
-			Cost
-			{
-				item = "Coin";
-				amount = 80;
-			}
-		}
-		Choice
-		{
-			Text = "\c[yellow]Buy Crate of Mini Missiles ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy Crate of Mini Missiles";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "CrateOfMissiles";
 			YesMessage = "Here is one Crate of Mini Missiles!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 150;
 			}
 		}
-		Choice
-		{
-			Text = "\c[yellow]Buy HE Grenades Pack ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy HE Grenades Pack";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "HEGrenadeRounds";
 			YesMessage = "Here is one HE Grenades Pack!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 60;
 			}
 		}
-		Choice
-		{
-			Text = "\c[yellow]Buy Phosphorous Grenades Pack ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy Phosphorous Grenades Pack";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "PhosphorusGrenadeRounds";
 			YesMessage = "Here is one Phosphorous Grenades Pack!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 60;
 			}
 		}
-		Choice
-		{
-			Text = "\c[yellow]Buy HE Hand Grenade ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy HE Hand Grenade";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "wosgrenadeE";
 			YesMessage = "Here is one HE Hand Grenade!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 30;
 			}
 		}
-		Choice
-		{
-			Text = "\c[yellow]Buy Phosphorous Hand Grenade ";
-			NextPage = 1;
+		Choice {
+			Text = "\c[yellow]Buy Phosphorous Hand Grenade";
+			NextPage = "mp_gadwin_opener";
 			GiveItem = "wosgrenadeF";
 			YesMessage = "Here is one Phosphorous Hand Grenade!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
-			Cost
-			{
+			Cost {
 				item = "Coin";
 				amount = 25;
 			}
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "mp_gadwin_questions";
+		}
+	}
+	Page {
+		pageName = "mp_gadwin_questions";
+		Name = "\c[yellow]Gadwin, explosives vendor";
+		Dialog = "\c[white]Yes, what did you wanted to know?";
+		Panel = "M_GDWN";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How's the trade?";
+			Nextpage = "mp_gadwin_howtrade";
+		}
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_gadwin_aboutmillport";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_gadwin_opener";
+		}
+	}
+	Page {
+		pageName = "mp_gadwin_howtrade";
+		Name = "\c[yellow]Gadwin, explosives vendor";
+		Dialog = "\c[white]Oh, trade's good. Thanks for asking. I've got the best goods, so I got many customers. I'm the local military supplier, so I've got my back covered.";
+		Panel = "M_GDWN";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_gadwin_questions";
+		}
+	}
+	Page {
+		pageName = "mp_gadwin_aboutmillport";
+		Name = "\c[yellow]Gadwin, explosives vendor";
+		Dialog = "\c[white]Well, I spend most of my time here in my workshop. So if you're looking for rumors, you're asking the wrong person. Sorry, I keep my head low and just tend to my shop. Besides that, I go to local bath to let off steam. You should visit it sometimes, nice place to relax. Also, we got some nice pubs here, I like the Black Pub, they offer good beer and food.";
+		Panel = "M_GDWN";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_gadwin_questions";
 		}
 	}
 }

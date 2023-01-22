@@ -52,6 +52,26 @@ Conversation {
 			Text = "I have some questions.";
 			NextPage = "MP_energyAmmoVendor_questions";
 		}
+		Choice {
+			Text = "Do you need any help?";
+			NextPage = "MP_energyAmmoVendor_help";
+			Exclude {
+				item = "m08q_quincy_lostsister_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "About your sister...";
+			NextPage = "MP_energyAmmoVendor_helpnotyet";
+			Require {
+				item = "m08q_quincy_lostsister_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_quincy_lostsister_finished";
+				amount = 1;
+			}
+		}
 
 	}
 	Page {
@@ -83,7 +103,6 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_energyAmmoVendor_questions";
 		}
-
 	}
 	Page {
         pageName = "MP_energyAmmoVendor_aboutcity";
@@ -95,7 +114,111 @@ Conversation {
 			Text = "\c[yellow]<< BACK";
 			NextPage = "MP_energyAmmoVendor_questions";
 		}
+	}
 
+	
+	// quest ///////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "MP_energyAmmoVendor_help";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]When you ask, yeah, I could use some help. My sister got missing. She went to a tourist trip to Ravenrock and hasn't returned yet. I'm worried about her.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sorry, I don't have time for this.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+		}
+		Choice {
+			Text = "Tell me more.";
+			Nextpage = "MP_energyAmmoVendor_helpmore";
+		}
+	}
+	Page {
+		pageName = "MP_energyAmmoVendor_helpmore";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]Well, my sister likes beer. Better said, she drinks a lot. So, she went to one of these drinking trips to ravenrock brewery. Usually, she returned as usual, after the weekend. But not this time. It's been a week now and I haven't heard about her yet. I starting to worry, if something happened to her.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Ok, I'll look for her.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+			Closedialog = true;
+			YesMessage = "\c[white]Her name's Janice.";
+			Special = 80;
+			arg0 = 8301;
+		}
+		Choice {
+			Text = "Sorry, I'm not interested.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+		}
+	}
+	Page {
+		link = "MP_energyAmmoVendor_helpfound";
+		ifitem {
+			item = "m08q_quincy_lostsister_found";
+			amount = 1;
+		}
+		pageName = "MP_energyAmmoVendor_helpnotyet";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]Have you found Janice?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+			YesMessage = "\c[white]Please, keep looking for her.";
+			Closedialog = true;
+		}
+	}
+	Page {
+		link = "MP_energyAmmoVendor_helppayed";
+		ifitem {
+			item = "m08q_quincy_lostsister_payed";
+			amount = 1;
+		}
+		pageName = "MP_energyAmmoVendor_helpfound";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]Have you found Janice?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, she's being held in revanerock by local noble. She damaged something that belong to this noble.";
+			Nextpage = "MP_energyAmmoVendor_helpfoundfinish";
+		}
+	}
+	Page {
+		pageName = "MP_energyAmmoVendor_helpfoundfinish";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]Oh, again this story. She drunkenly damages somehting, and now I have to pay for her. Great. Here's your reward, and thank you for your help.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+			Closedialog = true;
+			YesMessage = "\c[white]You're welcome.";
+			Special = 80;
+			arg0 = 8304;
+		}
+	}
+	Page {
+		pageName = "MP_energyAmmoVendor_helppayed";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]Have you found Janice?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah. It's a long story. (tell him her story)";
+			Nextpage = "MP_energyAmmoVendor_helppayed2";
+		}
+	}
+	Page {
+		pageName = "MP_energyAmmoVendor_helppayed2";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]So, you had to pay what she destroyed, to get her free? No problem, I'll pay you your expenses. I just have to take care of her, her little drinking problem is getting out of hand as I see. Thank you, Binder.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You're welcome.";
+			Nextpage = "MP_energyAmmoVendor_opener";
+			Closedialog = true;
+			YesMessage = "\c[white]You're welcome.";
+			Special = 80;
+			arg0 = 8305;
+		}
 	}
 }
 //##################################################################################################################

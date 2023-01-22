@@ -47,7 +47,7 @@ sounds/drink  "sounds/mwsound/drink.wav"
 
 //medicals use
 sounds/med  "sounds/various/DSMEDPAK.ogg"
-sounds/medicaluse "sounds/various/medshot4.wav"
+sounds/medicaluse "sounds/deusex/medicalHiss.wav"
 
 //batteries use
 sounds/battery  "sounds/various/battery_pickup.wav"

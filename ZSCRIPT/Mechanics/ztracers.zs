@@ -54,7 +54,7 @@ class blaster_ZTracer : FastProjectile {
 	}
 
 	void W_SpawnParticleTrail() {
-		if (level.frozen || globalfreeze) return;
+		if (Level.isFrozen() /*|| Actor.isFrozen()*/) return;
 		
 		x1 = pos.x;
 		y1 = pos.y;

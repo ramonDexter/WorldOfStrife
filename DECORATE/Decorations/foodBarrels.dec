@@ -94,8 +94,8 @@ Actor SmallBarrel2 25102
     Stop
   Death:
     NULL A 0 A_Scream 
-    FOMI E 0 A_SpawnItemEx("fbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
-    FOMI E 0 A_SpawnItemEx("fbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    //FOMI E 0 A_SpawnItemEx("fbMeat1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
+    //FOMI E 0 A_SpawnItemEx("fbMeat3", 0, 0,1, 1, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem2", 0, 0,1, 2, 0, 0,Random(-179,179), 128)
     FOMI E 0 A_SpawnItemEx("Woodrem1", 0, 0,1, 1, 0, 0,Random(-179,179), 128)

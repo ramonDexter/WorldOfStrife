@@ -22,6 +22,9 @@ TXT_goldChest_item = "You picked up the Chest with coins.";
 ////////////////////////////////////////////////////////////////////////////////
 
 // weapons /////////////////////////////////////////////////////////////////////
+// bare hands //
+T_bareHands = "Bare Hands";
+T_sprinting = "Sprinting";
 // dagger //
 T_PUNCHDAGGER = "Punch Dagger";
 // pistol //
@@ -482,6 +485,7 @@ TXT_m08q_CCinnkeeper = "[ Find cook for Council Club ]";
 TXT_m08q_CCinnkeeper_cookfound = "[ Find cook for Council Club - return to the innkeeper. You've found a new cook. ]";
 TXT_m10q_lostDaughter = "[ Lost Daughter ]";
 TXT_m08q_derwin_sezensoucastky = "[ Spare Parts for Derwin ]";
+TXT_m08q_gregory_sezenDodavatele = "[ Spare parts for Gregory ]";
 TXT_m08q_quincy_lostsister = "[ Quincy's Lost Sister ]";
 TXT_m08q_soudceZmeny_01_deliverEdict = "[ Judge of Change - Deliver Edict ]";
 TXT_m08q_soudceZmeny_02_plantDevice = "[ Judge of Change - Plant Recording Device ]";

@@ -272,7 +272,7 @@ class ExplosionParticle1 : actor {
     }
     States {
         Spawn:
-            SPRK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 BRIGHT A_SetScale(scalex*0.97);
+            SPRK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 BRIGHT A_SetScale(Scale.X*0.97);
             Stop;
     }
 }

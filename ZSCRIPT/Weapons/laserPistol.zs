@@ -146,7 +146,7 @@ class laserTracer : FastProjectile {
 	}
 
 	void W_spawnLaserParticleTrail() {
-		if (level.frozen || globalfreeze) return;
+		if (Level.isFrozen() /*|| Actor.isFrozen()*/) return;
 		
 		x1 = pos.x;
 		y1 = pos.y;

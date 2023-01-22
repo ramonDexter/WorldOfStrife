@@ -105,12 +105,12 @@ class wosSecuriBot : wosMonsterBase {
 		//High look arounds
 		//Stand tall
 		LookAroundUp:
-			DUMA I 0 A_PlaySound ("ED209/Whine2", CHAN_BODY);
+			DUMA I 0 A_StartSound ("ED209/Whine2", CHAN_BODY);
 			DUMA I 10 A_Look2(); 
 			DUMA D 0 A_Look2(); 
 			//Stand up
 			DUMB AB 10 A_Look2(); 
-			DUMB C 0 A_PlaySound ("ED209/Tiss1", CHAN_AUTO);
+			DUMB C 0 A_StartSound ("ED209/Tiss1", CHAN_AUTO);
 			DUMB CC 10 A_Look2(); 
 			DUMB C 0 {
 				if (random(1,4)==1) {
@@ -164,10 +164,10 @@ class wosSecuriBot : wosMonsterBase {
 		
 		//back down
 		LookAroundDown:
-			DUMB C 0 A_PlaySound ("ED209/Whine1", CHAN_BODY);
+			DUMB C 0 A_StartSound ("ED209/Whine1", CHAN_BODY);
 			DUMB CCB 10 A_Look2(); 
 			//interpolation fix
-			DUMB A 0 A_PlaySound ("ED209/Tiss2", CHAN_AUTO);
+			DUMB A 0 A_StartSound ("ED209/Tiss2", CHAN_AUTO);
 			DUMA D 5 A_Look2(); 
 			DUMA I 0 A_Look2(); 
 			Goto Spawn;
@@ -177,13 +177,13 @@ class wosSecuriBot : wosMonsterBase {
 			DUMC BB 2 A_Chase(); 
 			DUMC CC 2 A_Chase();
 			DUMC DD 2 A_Chase(); 
-			DUMC D 0 A_PlaySound("ED209/Walk", CHAN_BODY, 0.6, 0, 1.2);
+			DUMC D 0 A_StartSound("ED209/Walk", CHAN_BODY, 0.6, 0, 1.2);
 			DUMC EE 2 A_Chase();
 			DUMC FF 2 A_Chase(); 
 			DUMC GG 2 A_Chase();
 			DUMC HH 2 A_Chase(); 
 			DUMC II 2 A_Chase(); 
-			DUMC I 0 A_PlaySound("ED209/Walk", CHAN_BODY, 0.6, 0, 1.2);
+			DUMC I 0 A_StartSound("ED209/Walk", CHAN_BODY, 0.6, 0, 1.2);
 			loop;
 		Missile:
 			DUMD B 0 A_CheckLOF ("Missile2", CLOFF_JUMP_ON_MISS|CLOFF_MUSTBESOLID, 2048, 0, 0, 0, 24, 0, AAPTR_DEFAULT);
@@ -196,8 +196,8 @@ class wosSecuriBot : wosMonsterBase {
 			DUMD C 0 A_SpawnItemEx ("MuzzleFlashMedium", 50.0, 23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD C 0 A_SpawnItemEx ("MuzzleFlashSmall", 58.0, 23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD C 0 A_FaceTarget(); 
-			//DUMD C 0 bright A_PlaySound("ED209/Shot");
-			DUMD C 0 bright A_PlaySound("securibot/shoot"); //weapons/assaultgun // weapons/execRiflShoot
+			//DUMD C 0 bright A_StartSound("ED209/Shot");
+			DUMD C 0 bright A_StartSound("securibot/shoot"); //weapons/assaultgun // weapons/execRiflShoot
 			DUMD C 1 bright A_CustomBulletAttack(16.0, 8.0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM);
 			DUMD D 1 A_FaceTarget(); 
 			//fake attack to look scarier
@@ -208,8 +208,8 @@ class wosSecuriBot : wosMonsterBase {
 			DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 50.0, -23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD E 0 A_SpawnItemEx ("MuzzleFlashSmall", 58.0, -23.0, 57.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMD E 1 A_FaceTarget(); 
-			//DUMD C 0 bright A_PlaySound("ED209/Shot");
-			DUMD C 0 bright A_PlaySound("securibot/shoot");
+			//DUMD C 0 bright A_StartSound("ED209/Shot");
+			DUMD C 0 bright A_StartSound("securibot/shoot");
 			DUMD E 1 bright A_CustomBulletAttack(16.0, 8.0, 3, random(1,5)*3, "BulletPuff", 0, CBAF_NORANDOM);
 			DUMD E 1 A_FaceTarget(); 
 			DUMD E 0 A_SpawnItemEx ("MuzzleFlashMedium", 52.0, (frandom(-24.0,-22.0)), (frandom(54.0,58.0)), 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
@@ -230,20 +230,20 @@ class wosSecuriBot : wosMonsterBase {
 			DUME A 3 A_Quake(9,8,0,192,"NJMT");
 			DUME B 3 A_TossGib(); 		
 			DUME B 0 A_SpawnItemEx ("wosExplosion_medium", -8.0, 32.0, 48.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			DUME B 0 A_PlaySound ("inquisitor/atkexplode");		
+			DUME B 0 A_StartSound ("inquisitor/atkexplode");		
 			DUME CD 3 A_TossGib(); 
 			DUME B 0 A_SpawnItemEx ("wosExplosion_medium", -8.0, -32.0, 56.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			DUME B 0 A_PlaySound ("inquisitor/atkexplode");		
+			DUME B 0 A_StartSound ("inquisitor/atkexplode");		
 			DUME E 0 A_Scream(); 
 			DUME EFG 3 A_TossGib();		
 			DUME G 0 A_SpawnItemEx ("wosExplosion_medium", 0.0, 0.0, 72.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			//DUME G 0 A_SpawnItemEx ("ModelSmoke1Medium", 0.0, 0.0, 72.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUME H 3 A_Fall(); 
 			DUME IJKLM 3;		
-			DUME M 0 A_PlaySound ("inquisitor/atkexplode");
+			DUME M 0 A_StartSound ("inquisitor/atkexplode");
 			DUME M 0 A_SpawnItemEx ("wosExplosion_medium", -24.0, 24.0, 96.0, 0.0, 0.0, -2.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			//DUME M 0 A_SpawnItemEx ("ModelSmoke1Small", -24.0, 24.0, 88.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			DUME M 0 A_PlaySound ("inquisitor/atkexplode");
+			DUME M 0 A_StartSound ("inquisitor/atkexplode");
 			//TNT1 A 0 W_rewardXP(SpawnHealth());		
 			DUME NOPQRSTUVWX 3;
 			DUME Y 350;
@@ -258,12 +258,12 @@ class wosSecuriBot : wosMonsterBase {
 			DUMF A 0 A_Scream(); 
 			DUMF AA 3 A_Quake(9,8,0,192,"NJMT");
 			DUMF B 0 A_SpawnItemEx ("wosExplosion_medium", -8.0, 32.0, 48.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			DUMF B 0 A_PlaySound ("inquisitor/atkexplode");
+			DUMF B 0 A_StartSound ("inquisitor/atkexplode");
 			DUMF BBBCC 1 A_TossGib(); 
 			DUMF C 0 A_SpawnItemEx ("wosExplosion_medium", -16.0, -32.0, 56.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
-			DUMF C 0 A_PlaySound ("inquisitor/atkexplode");   
+			DUMF C 0 A_StartSound ("inquisitor/atkexplode");   
 			DUMF CDDD 1 A_TossGib(); 
-			DUMF D 0 A_PlaySound ("boomexplosion");
+			DUMF D 0 A_StartSound ("boomexplosion");
 			DUMF D 0 A_SpawnItemEx ("wosExplosion_medium", 0.0, 0.0, 72.0, 0.0, 0.0, 0.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			//DUMF D 0 A_SpawnItemEx ("ModelSmoke1Medium", 0.0, 0.0, 72.0, 0.0, 0.0, 1.0, 0.0, SXF_NOCHECKPOSITION, 0);
 			DUMF EEEFFF 1 A_TossGib(); 

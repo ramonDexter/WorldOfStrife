@@ -83,28 +83,28 @@ Conversation {
 			}
 		}
 		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "MP_gregoryTechsmith_help";
+			Exclude {
+				item = "m08q_gregory_sezenDodavatele_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "About the work...";
+			NextPage = "MP_gregoryTechsmith_helpNotYet";
+			Require {
+				item = "m08q_gregory_sezenDodavatele_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_gregory_sezenDodavatele_finished";
+				amount = 1;
+			}
+		}
+		Choice {
 			Text = "I wanted to ask you something.";
 			NextPage = "MP_gregoryTechsmith_questions";
-		}
-		Choice {
-			Text = "Do you need any help?";
-			NextPage = "MP_gregoryTechsmith_help";
-			Exclude {
-				item = "m08q_gregory_lostsister_given";
-				amount = 1;
-			}
-		}
-		Choice {
-			Text = "About your sister...";
-			NextPage = "MP_gregoryTechsmith_helpnotyet";
-			Require {
-				item = "m08q_gregory_lostsister_given";
-				amount = 1;
-			}
-			Exclude {
-				item = "m08q_gregory_lostsister_finished";
-				amount = 1;
-			}
 		}
 	}
 	Page {
@@ -178,108 +178,122 @@ Conversation {
 			Nextpage = "MP_gregoryTechsmith_questions";
 		}
 	}
-	// quest ///////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	// quest: 1) sezen dodavatele soucastek ////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 	Page {
 		pageName = "MP_gregoryTechsmith_help";
 		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]When you ask, yeah, I could use some help. My sister got missing. She went to a tourist trip to Ravenrock and hasn't returned yet. I'm owrried about her.";
+		Dialog = "\c[white]You're offering a help to me? Well, when I think about it, yes, I might have something. But I'm not sure if that's proper work for a Binder.";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "Sorry, I don't have time for this.";
-			Nextpage = "MP_gregoryTechsmith_opener";
+			Text = "I do everything. What you got?";
+			Nextpage = "MP_gregoryTechsmith_helpTellMore";
 		}
 		Choice {
-			Text = "Tell me more.";
-			Nextpage = "MP_gregoryTechsmith_helpmore";
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_gregoryTechsmith_opener";
 		}
 	}
 	Page {
-		pageName = "MP_gregoryTechsmith_helpmore";
+		pageName = "MP_gregoryTechsmith_helpTellMore";
 		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]Well, my sister likes beer. Better said, she drinks a lot. So, she went to one of these drinking trips to ravenrock brewery. Usually, she returned as usual, after the weekend. But not this time. It's been a week now and I haven't heard about her yet. I starting to worry, if something happened to her.";
+		Dialog = "\c[white]Okay, okay. My workshop and my trade requires a lots of supplies. And I got a little shortage of thyrium resistors required for the energy ammunition. So, I would like to ask you if you would look for a supplier of thyrium resistors. Don't bother asking my local colleagues, already done that. Nobody here in town could share their supply, so you should ask my colleagues in the surrounding villages. ";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "Ok, I'll look for her.";
-			Nextpage = "MP_gregoryTechsmith_opener";
-			Closedialog = true;
-			YesMessage = "\c[white]Her name's Janice.";
-			Special = 80;
-			arg0 = 8301;
+			Text = "And what for this struggle?";
+			Nextpage = "MP_gregoryTechsmith_helpPayment";
 		}
 		Choice {
-			Text = "Sorry, I'm not interested.";
+			Text = "\c[yellow]<< BACK";
 			Nextpage = "MP_gregoryTechsmith_opener";
 		}
 	}
 	Page {
-		link = "MP_gregoryTechsmith_helpfound";
+		pageName = "MP_gregoryTechsmith_helpPayment";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]I can give you 50 gold for any travel expenses and 150 gold more, is you arrange the supply.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sounds fair. Again, what should I ask for?";
+			Nextpage = "MP_gregoryTechsmith_helpRepeat";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_gregoryTechsmith_opener";
+		}
+	}
+	Page {
+		pageName = "MP_gregoryTechsmith_helpRepeat";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]I'm looking for thyrium resistors. I'll give you 50 and 150 gold. Ask the techsmith around millport, the locals don't have them.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, I'll do it.";
+			Nextpage = "MP_gregoryTechsmith_opener";
+			YesMessage = "\c[white]Good luck.";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8601;
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "MP_gregoryTechsmith_opener";
+		}
+	}
+	Page {
+		link = "MP_gregoryTechsmith_helpFound";
 		ifitem {
-			item = "m08q_gregory_lostsister_found";
+			item = "m08q_gregory_sezenDodavatele_domluvil";
 			amount = 1;
 		}
-		pageName = "MP_gregoryTechsmith_helpnotyet";
+		pageName = "MP_gregoryTechsmith_helpNotYet";
 		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]Have you found Janice?";
+		Dialog = "\c[white]Have you found supplier of thyrium resistors?";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
 			Text = "Not yet.";
 			Nextpage = "MP_gregoryTechsmith_opener";
-			YesMessage = "\c[white]Please, keep looking for her.";
+			YesMessage = "\c[white]What are you waiting for?";
 			Closedialog = true;
 		}
 	}
 	Page {
-		link = "MP_gregoryTechsmith_helppayed";
-		ifitem {
-			item = "m08q_gregory_lostsister_payed";
-			amount = 1;
-		}
-		pageName = "MP_gregoryTechsmith_helpfound";
+		pageName = "MP_gregoryTechsmith_helpFound";
 		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]Have you found Janice?";
+		Dialog = "\c[white]Have you found supplier of thyrium resistors?";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "Yes, she's being held in revanerock by local noble. She damaged something that belong to this noble.";
-			Nextpage = "MP_gregoryTechsmith_helpfoundfinish";
+			Text = "Yes, techsmith in Aeredale wants to raise his income.";
+			Nextpage = "MP_gregoryTechsmith_helpFoundGreat";
 		}
 	}
 	Page {
-		pageName = "MP_gregoryTechsmith_helpfoundfinish";
+		pageName = "MP_gregoryTechsmith_helpFoundGreat";
 		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]Oh, again this story. She drunkenly damages somehting, and now I have to pay for her. Great. Here's your reward, and thank you for your help.";
+		Dialog = "\c[white]Oh, that's great! When will first supply arrive?";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
-			Text = "Thank you.";
+			Text = "He said he can send first shipment in three days.";
+			Nextpage = "MP_gregoryTechsmith_helpFoundGreat2";
+		}
+	}
+	Page {
+		pageName = "MP_gregoryTechsmith_helpFoundGreat2";
+		Name = "\c[yellow]Gregory, techSmith";
+		Dialog = "\c[white]That fast? That's even better. Here's your pay, I owe you. Thank you.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You're welcome. I thank you.";
 			Nextpage = "MP_gregoryTechsmith_opener";
+			YesMessage = "\c[white]You're welcome. Good luck, Binder.";
 			Closedialog = true;
-			YesMessage = "\c[white]You're welcome.";
 			Special = 80;
-			arg0 = 8304;
+			arg0 = 8603;
 		}
 	}
-	Page {
-		pageName = "MP_gregoryTechsmith_helppayed";
-		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]Have you found Janice?";
-		Goodbye = "\c[red]Goodbye.";
-		Choice {
-			Text = "Yeah. It's a long story. (tell him her story)";
-			Nextpage = "MP_gregoryTechsmith_helppayed2";
-		}
-	}
-	Page {
-		pageName = "MP_gregoryTechsmith_helppayed2";
-		Name = "\c[yellow]Gregory, techSmith";
-		Dialog = "\c[white]So, you had to pay what she destroyed, to get her free? No problem, I'll pay you your expenses. I just have to take care of her, her little drinking problem is getting out of hand as I see. Thank you, Binder.";
-		Goodbye = "\c[red]Goodbye.";
-		Choice {
-			Text = "You're welcome.";
-			Nextpage = "MP_gregoryTechsmith_opener";
-			Closedialog = true;
-			YesMessage = "\c[white]You're welcome.";
-			Special = 80;
-			arg0 = 8305;
-		}
-	}
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
 }
 //##################################################################################################################

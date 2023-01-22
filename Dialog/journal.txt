@@ -397,6 +397,46 @@ Conversation {
 				amount = 1;
 			}
 		}
+		// millport quest deliver edict ////////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Judge of Change - Deliver Edict ]";
+			NextPage = "journal_m08q_soudceZmeny_01_deliverEdict_given";
+			Require {
+				item = "m08q_soudceZmeny_01_deliverEdict_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_01_deliverEdict_finished";
+				amount = 1;
+			}
+		}
+		// millport plant recording device /////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Judge of Change - Plant recording device ]";
+			NextPage = "journal_m08q_soudceZmeny_02_plantDevice_given";
+			Require {
+				item = "m08q_soudceZmeny_02_plantDevice_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_02_plantDevice_finished";
+				amount = 1;
+			}
+		}
+		// millport gregory sezen dodavatele soucastek /////////////////////////
+		Choice {
+			Text = "[ Quest - Spare parts for Gregory ]";
+			NextPage = "journal_m08q_gregory_sezenDodavatele_given";
+			Require {
+				item = "m08q_gregory_sezenDodavatele_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_gregory_sezenDodavatele_finished";
+				amount = 1;
+			}
+		}
+
 
 	}
 	//##################################################################################################################
@@ -1164,7 +1204,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[ ] Kill all spiders\n[ ] Find the poachers";
+		Dialog = "\c[yellow]Governor's Task#1\nClean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[ ] Kill all spiders\n[ ] Find the poachers";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1180,7 +1220,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[ ] Find the poachers";
+		Dialog = "\c[yellow]Governor's Task#1\nClean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[ ] Find the poachers";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1191,7 +1231,7 @@ Conversation {
 	Page {
 		pageName = "journal_SQ_q_spiders_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#1\n- Clean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[X] Find the poachers";
+		Dialog = "\c[yellow]Governor's Task#1\nClean the waste treatment plant\n\c[green]==---------------------==\n\c[white]The governor needs the waste treatment plant cleaned off the spiders.\nAlso, look for the poachers that stole the device from powerplant.\n\n[X] Kill all spiders\n[X] Find the poachers";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1212,7 +1252,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[ ] Kill the poachers\n[ ] Find the device from the powerplant";
+		Dialog = "\c[yellow]Governor's Task#2\nFind the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[ ] Kill the poachers\n[ ] Find the device from the powerplant";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1228,7 +1268,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[ ] Find the device from the powerplant";
+		Dialog = "\c[yellow]Governor's Task#2\nFind the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[ ] Find the device from the powerplant";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1239,7 +1279,7 @@ Conversation {
 	Page {
 		pageName = "journal_SQ_q_poachers_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#2\n- Find the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[X] Find the device from the powerplant";
+		Dialog = "\c[yellow]Governor's Task#2\nFind the poachers and deal with them\n\c[green]==---------------------==\n\c[white]The poachers are hiding somewhere in the mines. The have the device from powerplant with them. The governor's infomants are sure now.\n\n[X] Kill the poachers\n[X] Find the device from the powerplant";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1260,7 +1300,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[ ] Fix the powerplant";
+		Dialog = "\c[yellow]Governor's Task#3\nUse the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[ ] Fix the powerplant";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1271,7 +1311,7 @@ Conversation {
 	Page {
 		pageName = "journal_SQ_q_fixpowerplant_finished";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Governor's Task#3\n- Use the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[X] Fix the powerplant";
+		Dialog = "\c[yellow]Governor's Task#3\nUse the power coupling to fix the powerplant\n\c[green]==---------------------==\n\c[white]Now that you found the power coupling, you have to fix the powerplant. Go to the plant, the technicians will guide you.\n\n[X] Fix the powerplant";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1437,7 +1477,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\n- The merchant admitted he's behind the murder. He accepts the punishment.\n[ ] Return to the judge.";
+		Dialog = "\c[yellow]Murder in city bath\n\c[green]==---------------------==\n\c[white]Dead body of a wealthy merchant has been found in the city bath. The Judge ordered you to find the murderer and solve this complicated case.\nThe detoantor has been ordered by a wealthy merchant who lives on western bank next to the governor's mansion. Speak with him.\n\n[X] Search the place of murder for evidence\n[X] Gatekeeper told you to search the dressing room\n[X] You've found suspicious detonator. Go speak with the judge.\n[X] Speak with the techsmith\n[X] Speak with the wealthy merchant.\nThe merchant admitted he's behind the murder. He accepts the punishment.\n[ ] Return to the judge.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1831,7 +1871,7 @@ Conversation {
 			amount = 1;
 		}
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n[ ] Bring the ancient artifact";
+		Dialog = "\c[yellow]MAIN QUEST:\nBring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n[ ] Bring the ancient artifact";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1842,7 +1882,7 @@ Conversation {
 	Page {    
 		pageName = "journal_mainQuest_bringArtifact_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]MAIN QUEST\n- Bring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\n- the artifact has been stolen, report it to the Supreme";
+		Dialog = "\c[yellow]MAIN QUEST:\nBring the ancient artifact\n\c[green]==---------------------==\n\c[white]The scientists have discovered some kind of ancient powerful artifact. I dont know what it is exactly, but I can certainly say the heretics will be interested in this artifact. The dig is located on top of the hill in the eastern highlands.\n\nthe artifact has been stolen, report it to the Supreme";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1858,7 +1898,7 @@ Conversation {
 	Page {
 		pageName = "journal_mainQuest_millport_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]MAIN QUEST\n- Go to Millport\n\c[green]==---------------------==\n\c[white]The superior send you to city of Millport with information regarding the stolen artifact. You have to deliver the data to Binder Superiors in Binder main base located in Millport. You will receive further orders there.";   
+		Dialog = "\c[yellow]MAIN QUEST:\nGo to Millport\n\c[green]==---------------------==\n\c[white]The superior send you to city of Millport with information regarding the stolen artifact. You have to deliver the data to Binder Superiors in Binder main base located in Millport. You will receive further orders there.";   
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1873,7 +1913,7 @@ Conversation {
 	Page {
 		pageName = "journal_mainQuest_millportBlues_given";
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]MAIN QUEST\n- Millport Situation\n\c[green]==---------------------==\n\c[white]You have to settle down relations between the Binder Order and the local government in the city of Millport. Be careful, as the city is under control of criminal warlord, the Baron.";   
+		Dialog = "\c[yellow]MAIN QUEST:\nMillport Situation\n\c[green]==---------------------==\n\c[white]You have to settle down relations between the Binder Order and the local government in the city of Millport. Be careful, as the city is under control of criminal warlord, the Baron.";   
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1897,7 +1937,7 @@ Conversation {
 		}
 		pageName = "journal_MPquest_councilClubCook_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[ ] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
+		Dialog = "\c[yellow]QUEST:\nFind a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[ ] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1913,7 +1953,7 @@ Conversation {
 		}
 		pageName = "journal_MPquest_councilClubCook_naselKuchare"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
+		Dialog = "\c[yellow]QUEST:\nFind a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[ ] Return back to the innkeeper";   
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1924,7 +1964,7 @@ Conversation {
 	Page {
 		pageName = "journal_MPquest_councilClubCook_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Find a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[X] Return back to the innkeeper";   
+		Dialog = "\c[yellow]QUEST:\nFind a cook for the Council Club\n\c[green]==---------------------==\n\c[white]Owner of the Council Club asked yu to find a cook for his inn. You should look around the city and ask the locals. Maybe you will find a new cook.\n\n[X] Find a new cook for the Council Club\n[X] Return back to the innkeeper";   
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1949,7 +1989,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_killSpiders_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[ ] Destroy the spider nests\n[ ] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nDestroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[ ] Destroy the spider nests\n[ ] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1965,7 +2005,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_killSpiders_killed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[ ] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nDestroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[ ] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1976,7 +2016,7 @@ Conversation {
 	Page {
 		pageName = "journal_ECquest_killSpiders_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Destroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[X] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nDestroy Spider Nests\n\c[green]==---------------------==\n\c[white]The mayor of Eastcliff, Holden, wants you to destroy three spider nests. I have to be especially careful about the bomb order, as theya re carefully created to seal shut each of the caves. Bomb 1 for nest 1 and so on.\n\n[X] Destroy the spider nests\n[X] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -1997,7 +2037,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_raidedwaterplant_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[ ] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nRaided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[ ] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2013,7 +2053,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_raidedwaterplant_killed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nRaided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[ ] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2024,7 +2064,7 @@ Conversation {
 	Page {
 		pageName = "journal_ECquest_raidedwaterplant_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Raided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[X] Return back to mayor Holden";
+		Dialog = "\c[yellow]QUEST:\nRaided Waterplant\n\c[green]==---------------------==\n\c[white]Some foul bandits have taken control of the Eastcliff waterplant. Mayor Holden wants you to get rid of them.\n\n[X] Kill all bandits inside the waterplant\n[X] Return back to mayor Holden";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2045,7 +2085,7 @@ Conversation {
 		}
 		pageName = "journal_AEquest_troubledWaters_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[ ] Take a sample of infected water and show it to medic in Millport";
+		Dialog = "\c[yellow]QUEST:\nTroubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[ ] Take a sample of infected water and show it to medic in Millport";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2061,7 +2101,7 @@ Conversation {
 		}
 		pageName = "journal_AEquest_troubledWaters_go4ore"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[ ] Medic in Millport needs copper ore";
+		Dialog = "\c[yellow]QUEST:\nTroubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[ ] Medic in Millport needs copper ore";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2077,7 +2117,7 @@ Conversation {
 		}
 		pageName = "journal_AEquest_troubledWaters_havesolution"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[ ] Use the solution to clean the water";
+		Dialog = "\c[yellow]QUEST:\nTroubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[ ] Use the solution to clean the water";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2093,7 +2133,7 @@ Conversation {
 		}
 		pageName = "journal_AEquest_troubledWaters_cleanedwater"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+		Dialog = "\c[yellow]QUEST:\nTroubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2104,7 +2144,7 @@ Conversation {
 	Page {
 		pageName = "journal_AEquest_troubledWaters_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Troubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
+		Dialog = "\c[yellow]QUEST:\nTroubled Waters\n\c[green]==---------------------==\n\c[white]The water in the main village well in Aeredale got infected. The local techmisth is unable to clean the water. But maybe, medic in Millport will know how to clean the water.\n\n[X] Take a sample of infected water and show it to medic in Millport\n[X] Medic in Millport needs copper ore\n[X] Use the solution to clean the water\n[ ] Report to techmisth";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2127,7 +2167,7 @@ Conversation {
 		
 		pageName = "journal_ECquest_cleanTheCellar_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[ ] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2143,7 +2183,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_killedRats"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 300 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[ ] return to the innkeeper";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2159,7 +2199,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_findNest"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[ ] Find the rat nest";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[ ] Find the rat nest";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2175,7 +2215,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_getPoison"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2191,7 +2231,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_getFishGuts"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[ ] Get fish guts so the medic can brew the rat poison";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[ ] Get fish guts so the medic can brew the rat poison";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2207,7 +2247,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_gotGuts"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[ ] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2223,7 +2263,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_destroyNest"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[ ] Destroy the rat nest";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[ ] Destroy the rat nest";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2239,7 +2279,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_cleanTheCellar_destroyed"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[ ] Return to the inkkeper.";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[ ] Return to the inkkeper.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2250,7 +2290,7 @@ Conversation {
 	Page {
 		pageName = "journal_ECquest_cleanTheCellar_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Clean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[X] Return to the inkkeper.";
+		Dialog = "\c[yellow]QUEST:\nClean the Cellar\n\c[green]==---------------------==\n\c[white]The innkeeper in Eastcliff asks you to get rid of rats in his cellar. He'll pay you 800 gold for the job.\n\n[X] Kill the rats in White Cock Inn cellar\n[X] return to the innkeeper\n[X] Find the rat nest\n[X] Get rat poison from local medic\n[X] Get fish guts so the medic can brew the rat poison\n[X] Destroy the rat nest\n[X] Return to the inkkeper.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2272,7 +2312,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_fooddelivery_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[ ] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+		Dialog = "\c[yellow]QUEST:\nFood Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[ ] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2288,7 +2328,7 @@ Conversation {
 		}
 		pageName = "journal_ECquest_fooddelivery_delivered"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
+		Dialog = "\c[yellow]QUEST:\nFood Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[ ] Return to Jasmine.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2299,7 +2339,7 @@ Conversation {
 	Page {
 		pageName = "journal_ECquest_fooddelivery_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Food Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[X] Return to Jasmine.";
+		Dialog = "\c[yellow]QUEST:\nFood Delivery\n\c[green]==---------------------==\n\c[white]Jasmine, daughter of the innkeeper in Eastcliff asks you to deliver food to her lover, fisherman Marcus. He lives in small hut eastern of Eastcliff on the coast.\n\n[X] Deliver food to Marcus the fisherman\n[X] Return to Jasmine.";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2321,7 +2361,7 @@ Conversation {
 		}
 		pageName = "journal_m10q_lostDaughter_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[ ] Find Isabelle\n[ ] Return to Curtis";
+		Dialog = "\c[yellow]QUEST:\nLost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[ ] Find Isabelle\n[ ] Return to Curtis";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2338,7 +2378,7 @@ Conversation {
 		}
 		pageName = "journal_m10q_lostDaughter_found"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[ ] Return to Curtis";
+		Dialog = "\c[yellow]QUEST:\nLost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[ ] Return to Curtis";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2350,7 +2390,7 @@ Conversation {
 	Page {
 		pageName = "journal_m10q_lostDaughter_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Lost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[X] Return to Curtis";
+		Dialog = "\c[yellow]QUEST:\nLost Daughter\n\c[green]==---------------------==\n\c[white]Curtis, farmer living in Aeredale, asks you to find his lost daughter, Isabelle. She disappered a month ago without leaving any trace. Her parents are worried, so they asked you to find her.\n\n[X] Find Isabelle\n[X] Return to Curtis";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2372,7 +2412,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_derwin_sezensoucastky_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\n\n[ ] Find and bring 3D printer spare parts\n[ ] Return to Derwin";
+		Dialog = "\c[yellow]QUEST:\nSpare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\n\n[ ] Find and bring 3D printer spare parts\n[ ] Return to Derwin";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2389,7 +2429,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_derwin_sezensoucastky_sezentools"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[ ] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Dialog = "\c[yellow]QUEST:\nSpare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[ ] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2406,7 +2446,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_derwin_sezensoucastky_sehnaltools"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Dialog = "\c[yellow]QUEST:\nSpare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[ ] Find 3D printer spare parts\n[ ] Return to Derwin";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2423,7 +2463,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_derwin_sezensoucastky_sehnalsoucastky"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[ ] Return to Derwin";
+		Dialog = "\c[yellow]QUEST:\nSpare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[ ] Return to Derwin";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2435,7 +2475,7 @@ Conversation {
 	Page {
 		pageName = "journal_m08q_derwin_sezensoucastky_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Spare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[X] Return to Derwin";
+		Dialog = "\c[yellow]QUEST:\nSpare Parts for Derwin\n\c[green]==---------------------==\n\c[white]Derwin, techmisth from Millport asks you to find and bring him spare parts for his 3D printer. You should ask techsmithes in villages surrounding Millport, as local Millport techsmithes don't have any spare parts.\nRebecca, techmith from Eastcliff have these parts. She wants fine tools from her nephew in Aeredale in exchange for the spare parts.\n\n[X] Bring fine tools to Becky in Eastcliff\n[X] Find 3D printer spare parts\n[X] Return to Derwin";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2457,7 +2497,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_quincy_lostsister_given"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[ ] Find Quincy's sister Janice\n[ ] Return to Quincy";
+		Dialog = "\c[yellow]QUEST:\nQuincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[ ] Find Quincy's sister Janice\n[ ] Return to Quincy";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2474,7 +2514,7 @@ Conversation {
 		}
 		pageName = "journal_m08q_quincy_lostsister_found"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[ ] Return to Quincy";
+		Dialog = "\c[yellow]QUEST:\nQuincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[ ] Return to Quincy";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2486,7 +2526,7 @@ Conversation {
 	Page {
 		pageName = "journal_m08q_quincy_lostsister_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST\n- Quincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[X] Return to Quincy";
+		Dialog = "\c[yellow]QUEST:\nQuincy's Lost Sister\n\c[green]==---------------------==\n\c[white]Quincy, techmisth from MIllport has lost his sister. Better said, her problem has probably brought her to another trouble. Try to find her.\n\n[X] Find Quincy's sister Janice\n[X] Return to Quincy";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {
@@ -2496,6 +2536,161 @@ Conversation {
 		}
 	}
 	//##################################################################################################################
+
+	//##################################################################################################################
+	// 1) Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_soudceZmeny_01_deliverEdict_delivered";
+		ifitem {
+			item = "m08q_soudceZmeny_01_deliverEdict_delivered";
+			amount = 1;
+		}
+		pageName = "journal_m08q_soudceZmeny_01_deliverEdict_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Deliver Edict\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. To deliver Imperial Edict to the mayor of Ravenrock.\n\n[ ] Deliver the Imperial Edict to the mayor of Ravenrock\n[ ] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_soudceZmeny_01_deliverEdict_finished";
+		ifitem {
+			item = "m08q_soudceZmeny_01_deliverEdict_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_soudceZmeny_01_deliverEdict_delivered"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Deliver Edict\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. To deliver Imperial Edict to the mayor of Ravenrock.\n\n[X] Deliver the Imperial Edict to the mayor of Ravenrock\n[ ] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_soudceZmeny_01_deliverEdict_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Deliver Edict\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. To deliver Imperial Edict to the mayor of Ravenrock.\n\n[X] Deliver the Imperial Edict to the mayor of Ravenrock\n[X] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+
+	//##################################################################################################################
+	// 2) umisti zaznamove zarizeni do autodoca doktora v commons
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_soudceZmeny_02_plantDevice_planted";
+		ifitem {
+			item = "m08q_soudceZmeny_02_plantDevice_planted";
+			amount = 1;
+		}
+		pageName = "journal_m08q_soudceZmeny_02_plantDevice_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Plant recording device\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. Rumors spreading around the city say that medic living in the Commons offers illegal surgeries. Judge asks you to install a recording device into his surgical unit.\n\n[ ] Plant the recording device into surgical unit\n[ ] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_soudceZmeny_02_plantDevice_finished";
+		ifitem {
+			item = "m08q_soudceZmeny_02_plantDevice_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_soudceZmeny_02_plantDevice_planted"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Plant recording device\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. Rumors spreading around the city say that medic living in the Commons offers illegal surgeries. Judge asks you to install a recording device into his surgical unit.\n\n[X] Plant the recording device into surgical unit\n[ ] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_soudceZmeny_02_plantDevice_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nJudge of Change - Plant recording device\n\c[green]==---------------------==\n\c[white]Judge of Change of Millport asks you a special favor. Rumors spreading around the city say that medic living in the Commons offers illegal surgeries. Judge asks you to install a recording device into his surgical unit.\n\n[X] Plant the recording device into surgical unit\n[X] Return to the Judge of Change";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+
+	//##################################################################################################################
+	// millport gregory sezen dodavatele soucastek
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_gregory_sezenDodavatele_sehnal";
+		ifitem {
+			item = "m08q_gregory_sezenDodavatele_domluvil";
+			amount = 1;
+		}
+		pageName = "journal_m08q_gregory_sezenDodavatele_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nSpare parts for Gregory\n\c[green]==---------------------==\n\c[white]Gregory the techmisth has a spare parts shortage. He asks you to find a supplier of thyrium resistors for his workshop.\n\n[ ] Find a supplier of spare parts\n[ ] Return to Gregory the techsmith";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_gregory_sezenDodavatele_finished";
+		ifitem {
+			item = "m08q_gregory_sezenDodavatele_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_gregory_sezenDodavatele_sehnal"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nSpare parts for Gregory\n\c[green]==---------------------==\n\c[white]Gregory the techmisth has a spare parts shortage. He asks you to find a supplier of thyrium resistors for his workshop.\n\n[X] Find a supplier of spare parts\n[ ] Return to Gregory the techsmith";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_gregory_sezenDodavatele_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nSpare parts for Gregory\n\c[green]==---------------------==\n\c[white]Gregory the techmisth has a spare parts shortage. He asks you to find a supplier of thyrium resistors for his workshop.\n\n[X] Find a supplier of spare parts\n[X] Return to Gregory the techsmith";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+
+
 
 }
 //##################################################################################################################

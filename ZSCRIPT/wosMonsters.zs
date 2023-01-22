@@ -81,7 +81,7 @@ class sentinelLaserTracer : FastProjectile {
 	}
 
 	void W_spawnLaserParticleTrail() {
-		if (level.frozen || globalfreeze) return;
+		if (Level.isFrozen() /*|| Actor.isFrozen()*/) return;
 		
 		x1 = pos.x;
 		y1 = pos.y;
@@ -773,7 +773,7 @@ class wosCrusader : Crusader replaces Crusader {
 		Melee:
 			DUMD C 3 A_FaceTarget();
 			DUMD D 3 A_StartSound ("skeleton/swing");
-			DUMD E 3 A_MeleeAttack();
+			DUMD E 3 A_CustomMeleeAttack();
 			DUMD E 3 A_FaceTarget();
 			DUMD D 3 A_FaceTarget();
 			DUMD C 3 A_FaceTarget();

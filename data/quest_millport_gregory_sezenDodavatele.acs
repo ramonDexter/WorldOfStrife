@@ -1,0 +1,33 @@
+// # Gregory, techsmith, convID 14 /////////////////////////////////////////////
+// quest: 1) sezen dodavatele soucastek 
+// 	    >> dodavatele sezenes v Aeredale, mistni techmisth si rad privydela
+
+// tokeny:
+// class m08q_gregory_sezenDodavatele_given : tokenBase {}
+// class m08q_gregory_sezenDodavatele_domluvil : tokenBase {}
+// class m08q_gregory_sezenDodavatele_finished : tokenBase {}
+
+// TXT_m08q_gregory_sezenDodavatele = "[ Spare parts for Gregory ]";
+
+// zadani v dialogu ////////////////////////////////////////////////////////////
+script 8601 (void) {
+    GiveInventory("coin", 50);
+    GiveInventory("m08q_gregory_sezenDodavatele_given", 1);
+    DisplayQuest("TXT_m08q_gregory_sezenDodavatele", 1);
+}
+
+// v dialogu u techsmithe v aeredale - necha se premluvit, ale za uplatu 50 coins
+script 8602 (void) {
+    TakeInventory("coin", 50);
+    GiveInventory("m08q_gregory_sezenDodavatele_domluvil", 1);
+    DisplayQuest("TXT_m08q_gregory_sezenDodavatele", 2);
+}
+
+// po navratu v dialogu u gregoryho ////////////////////////////////////////////
+script 8603 (void) {
+    GiveInventory("coin", 200);
+    GiveInventory("m08q_gregory_sezenDodavatele_finished", 1);
+    RewardXP(150);
+    DisplayQuest("TXT_m08q_gregory_sezenDodavatele", 3);
+}
+////////////////////////////////////////////////////////////////////////////////

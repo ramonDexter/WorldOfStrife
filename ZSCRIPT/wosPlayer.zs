@@ -1191,10 +1191,13 @@ class binderPlayer : StrifePlayer {
     }*/
 	////////////////////////////////////////////////////////////////////////////
 }
+////////////////////////////////////////////////////////////////////////////////
+
+// no weapon ///////////////////////////////////////////////////////////////////
 class wos_sprintWeap : wosWeapon {
 	Default {
 		weapon.selectionOrder 4000;
-		Tag "Sprinting";
+		Tag "$T_sprinting";
 		Mass 0;
 	}
 	States {
@@ -1226,7 +1229,7 @@ class wosBareHands : wosWeapon {
 		weapon.selectionOrder 5000;
 		weapon.slotNumber 1;
 		Weapon.slotPriority 0.1;
-		Tag "Bare hands";
+		Tag "$T_bareHands";
 		Mass 0;
 	}
 	States {
@@ -1252,6 +1255,9 @@ class wosBareHands : wosWeapon {
 			goto Nope;
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+
+// visible player body /////////////////////////////////////////////////////////
 class binderPlayerBody : Actor {
 	Default {
 		+NOGRAVITY; 

@@ -1216,15 +1216,16 @@ class wosDegninOre : wosPickup {
 		
 		Tag "$t_wosDegninOre";//"Degnin Ore";
 		Health 10;
-		//Radius 16;
-		//Height 16;
 		DeathSound "ore/explode";
-		//Inventory.Amount 1;
-		//Inventory.MaxAmount 20;
-		//inventory.interhubamount 20;
 		Inventory.Icon "I_DGOR";
 		Inventory.PickupMessage "$p_wosDegninOre";//"You picked up the Degnin Ore.";
 		Mass wosDegninOreWeight;
+		
+		//Radius 16;
+		//Height 16;
+		//Inventory.Amount 1;
+		//Inventory.MaxAmount 20;
+		//inventory.interhubamount 20;
 	}
 	
 	States {

@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////////
+// soudce zmeny Afer Valgus Reberio convID 38
+// 2) umisti zaznamove zarizeni do autodoca doktora v commons - provadi ilegalni operace a soudce potrebuje shromazdit dukazy; check na mind == 40
+// tokeny:
+// class m08q_soudceZmeny_02_plantDevice_given : tokenBase {}
+// class m08q_soudceZmeny_02_plantDevice_planted : tokenBase {}
+// class m08q_soudceZmeny_02_plantDevice_finished : tokenBase {}
+// TXT_m08q_soudceZmeny_02_plantDevice = "";
+// item: wosq_judgeOfChangeDevice
+// zadani v dialogu u soudce zmeny /////////////////////////////////////////////
+script 8501 (void) {
+	GiveInventory("m08q_soudceZmeny_02_plantDevice_given", 1);
+	GiveInventory("wosq_judgeOfChangeDevice", 1);
+	DisplayQuest("$TXT_m08q_soudceZmeny_02_plantDevice", 1);
+}
+// vlozit do dialogu autodoca u doktora >> udelat iduvidualni dialog pro toho autodoca
+script 8502 (void) {
+	int playerMind = scriptCall("binderPlayer", "getplayerMind");
+	if( playerMind >= 40 ) {
+		TakeInventory("wosq_judgeOfChangeDevice", 1);
+		//PlaySound(0, str sound, int channel?, fixed volume?, bool looping?, fixed attenuation?, bool local?);
+		RewardXP(100);
+		GiveInventory("m08q_soudceZmeny_02_plantDevice_planted", 1);
+		DisplayQuest("$TXT_m08q_soudceZmeny_02_plantDevice", 2);
+	} else {
+		Log(l:"$TXT_m08q_soudceZmeny_02_plantDevice_mind40Required");
+	}
+}
+// po navratu v dialogu u soudce ///////////////////////////////////////////////
+script 8503 (void) {
+	GiveInventory("m08q_soudceZmeny_02_plantDevice_finished", 1)
+	GiveInventory("coin", 500)
+	RewardXP(500);
+	DisplayQuest("$TXT_m08q_soudceZmeny_02_plantDevice", 3);
+}
+////////////////////////////////////////////////////////////////////////////////

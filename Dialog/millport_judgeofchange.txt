@@ -1,113 +1,351 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 38;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_judgeofchange_opener";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]Yes, hello? What brings you to my aparment, Binder?";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "mp_judgeofchange_whoareyou";
-        } 
-        Choice {
-            Text = "Could you tell me about Millport?";
-            Nextpage = "mp_judgeofchange_aboutmillport";
-        } 
-        Choice {
-            Text = "Could you tell me about surroundings?";
-            Nextpage = "mp_judgeofchange_aboutsurroundings";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_whoareyou";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]I am Afer Valgus Reberio, and I am the Imperial Judge of change. I'm stationed here as the Imperial herald and prolonged hand of the Emperor's law. I'm here for the formal and civil parts of law, such as heritage and heirloom, divorces and other parts f civil law.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_opener";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_aboutmillport";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]Millport is a jewel of the south. It's the house Tabit's main city and the imperial Governor resides here. Besides that, the TekGuild has moved it's main HQ here not long ago. And also, it's a great place to live. The city offers you everything, including the magnificent Tabitian bath.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_opener";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_aboutsurroundings";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]My duty of the JUdge of change also include the surrounding area and the wider area also. Well, in  the west lays a village by the name of Aeredale. Quiet little village hidden in the forest, the locals are nice and peaceful people. The village Eastcliff suggest it's place on eastern coast. And the northern road leads to village Ravenrock, which is famous for the great brewery.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye.";  
-        Choice {
-            Text = "Tell me more about Aeredale.";
-            Nextpage = "mp_judgeofchange_aboutaeredale";
-        } 
-        Choice {
-            Text = "Tell me more about Eastcliff.";
-            Nextpage = "mp_judgeofchange_abouteastcliff";
-        } 
-        Choice {
-            Text = "Tell me more about Ravenrock.";
-            Nextpage = "mp_judgeofchange_aboutravenrock";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_opener";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_aboutaeredale";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]As I said, Aeredale is a really small village, hidden in the weastern forest. It's a small farmign community, living from the local rich land. The locals are farmers and hunters. They Are nice people, I like the place.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_aboutsurroundings";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_abouteastcliff";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]Eastcliff is a fishermen's village on the eastern coast. It's nice place to hang around, the water is nice and warm to swim, and the local tavern offers wonderful seafood.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_aboutsurroundings";
-        }
-    }
-    Page {
-        pageName = "mp_judgeofchange_aboutravenrock";
-        Name = "\c[yellow]Afer Valgus Reberio";
-        Dialog = "\c[white]The Ravenrock village is best known for the local brewery, which supplies good beer for the whole region. The brewery is a tourist attraction which brings good wealth to the village economy.";
-        Panel = "M_JUDG2";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_judgeofchange_aboutsurroundings";
-        }
-    }
+	ID = 38;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_judgeofchange_opener";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Yes, hello? What brings you to my aparment, Binder?";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Do you need any help?";
+			Nextpage = "mp_judgeofchange_work";
+			Exclude {
+				item = "m08q_soudceZmeny_01_deliverEdict_given";
+				amount = 1;
+			}
+		} 
+		Choice {
+			Text = "About the job you gave me...";
+			Nextpage = "mp_judgeofchange_workNotYet";
+			Require {
+				item = "m08q_soudceZmeny_01_deliverEdict_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_01_deliverEdict_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Do you need any other help?";
+			Nextpage = "mp_judgeofchange_otherHelp";
+			Require {
+				item = "m08q_soudceZmeny_01_deliverEdict_finished";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_02_plantDevice_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "About the job you gave me...";
+			Nextpage = "mp_judgeofchange_otherHelpNotYet";
+			Require {
+				item = "m08q_soudceZmeny_02_plantDevice_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_02_plantDevice_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "mp_judgeofchange_whoareyou";
+		} 
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_judgeofchange_aboutmillport";
+		} 
+		Choice {
+			Text = "Could you tell me about surroundings?";
+			Nextpage = "mp_judgeofchange_aboutsurroundings";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_whoareyou";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]I am Afer Valgus Reberio, and I am the Imperial Judge of change. I'm stationed here as the Imperial herald and prolonged hand of the Emperor's law. I'm here for the formal and civil parts of law, such as heritage and heirloom, divorces and other parts f civil law.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_aboutmillport";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Millport is a jewel of the south. It's the house Tabit's main city and the imperial Governor resides here. Besides that, the TekGuild has moved it's main HQ here not long ago. And also, it's a great place to live. The city offers you everything, including the magnificent Tabitian bath.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_aboutsurroundings";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]My duty of the JUdge of change also include the surrounding area and the wider area also. Well, in  the west lays a village by the name of Aeredale. Quiet little village hidden in the forest, the locals are nice and peaceful people. The village Eastcliff suggest it's place on eastern coast. And the northern road leads to village Ravenrock, which is famous for the great brewery.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye.";  
+		Choice {
+			Text = "Tell me more about Aeredale.";
+			Nextpage = "mp_judgeofchange_aboutaeredale";
+		} 
+		Choice {
+			Text = "Tell me more about Eastcliff.";
+			Nextpage = "mp_judgeofchange_abouteastcliff";
+		} 
+		Choice {
+			Text = "Tell me more about Ravenrock.";
+			Nextpage = "mp_judgeofchange_aboutravenrock";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_aboutaeredale";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]As I said, Aeredale is a really small village, hidden in the weastern forest. It's a small farmign community, living from the local rich land. The locals are farmers and hunters. They Are nice people, I like the place.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_aboutsurroundings";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_abouteastcliff";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Eastcliff is a fishermen's village on the eastern coast. It's nice place to hang around, the water is nice and warm to swim, and the local tavern offers wonderful seafood.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_aboutsurroundings";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_aboutravenrock";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]The Ravenrock village is best known for the local brewery, which supplies good beer for the whole region. The brewery is a tourist attraction which brings good wealth to the village economy.";
+		Panel = "M_JUDG2";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_aboutsurroundings";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_work";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Well, that's actually unusual request from a binder. Usually, your order request my help. I should be honored that you want to help me.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "So, do you need help?";
+			Nextpage = "mp_judgeofchange_work2";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	// quest 1: Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest
+	////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "mp_judgeofchange_work2";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Well, I do actually have something for you. It's a delivery work, but you'll be handling secret documents. The kind of documents I don't want to be carried by the postal service or messengers.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "What kind of documents need this kind of handling?";
+			Nextpage = "mp_judgeofchange_work3";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_work3";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]The documents I mentioned is an Imperial Edict. It meant only for the eyes of the recipient. I would normally ask the Army to deliver it, but if you want, you can deliver it for me, for a reward. I'll give you 250 gold for this delivery. What do you say?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "And where should I deliver it?";
+			Nextpage = "mp_judgeofchange_work4";
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_work4";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]The Edict is adressed to the mayor of Ravenrock. I'll give you 250 gold once you return to me. What do you say?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Okay, I'll do it.";
+			Nextpage = "mp_judgeofchange_opener";
+			YesMessage = "\c[white]Good journey!";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8401;
+		} 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		link = "mp_judgeofchange_workDelivered";
+		ifitem {
+			item = "m08q_soudceZmeny_01_deliverEdict_delivered";
+			amount = 1;
+		}
+		pageName = "mp_judgeofchange_workNotYet";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Have you delivered the Edict to the mayor of Ravenrock?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "mp_judgeofchange_opener";
+			YesMessage = "\c[white]What are you waiting for?";
+			Closedialog = true;
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_workDelivered";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Have you delivered the Edict to the mayor of Ravenrock?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes. The mayor sends his regards.";
+			Nextpage = "mp_judgeofchange_workFinished";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_workFinished";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Great, thank you. You've help me a lot by this delivery. Here is your reward, you've earned it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you, Judge.";
+			Nextpage = "mp_judgeofchange_opener";
+			YesMessage = "\c[white]You're welcome.";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8403;
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	// quest 2: umisti zaznamove zarizeni do autodoca doktora v commons
+	////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "mp_judgeofchange_otherHelp";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Certainly, yes. This time, it's little bit more delicate work.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What is it?";
+			Nextpage = "mp_judgeofchange_otherHelpMore";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_otherHelpMore";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]You see, there is this medic, by the name of Richards. He lives in commons, works as a local doctor and apothecary. So far so good. But I've heard some stories about illegal cybernetical surgeries he performs for good pay. And he's not licensed to perform this kind of work. So, his operations are illegal.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "And what exactly do you want from me?";
+			Nextpage = "mp_judgeofchange_otherHelpSpecify";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_otherHelpSpecify";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Well, all I need from you is to plant a recording device into his surgical unit. It should be easy for you, as I know you're skilled in basic technical works. The reward would be 500 gold for this job. What do you say?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, this looks easy. I'll do it.";
+			Nextpage = "mp_judgeofchange_opener";
+			YesMessage = "\c[white]Good luck!";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8501;
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_judgeofchange_opener";
+		}
+	}
+	Page {
+		link = "mp_judgeofchange_otherHelpPlanted";
+		ifitem {
+			item = "m08q_soudceZmeny_02_plantDevice_planted";
+			amount = 1;
+		}
+		pageName = "mp_judgeofchange_otherHelpNotYet";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Have you planted the recording device?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "mp_judgeofchange_opener";
+			Closedialog = true;
+			YesMessage = "\c[white]What are you waiting for?";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_otherHelpPlanted";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Have you planted the recording device?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, I've planted the device.";
+			Nextpage = "mp_judgeofchange_otherHelpFinished";
+		}
+	}
+	Page {
+		pageName = "mp_judgeofchange_otherHelpFinished";
+		Name = "\c[yellow]Afer Valgus Reberio";
+		Dialog = "\c[white]Okay, thank you. Now I just need to wait and gather evidence. Thank you, you've helped me a lot this time. Here's your reward and little more on top.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "mp_judgeofchange_opener";
+			YesMessage = "\c[white]You're welcome.";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8503;
+		}
+	}
 }

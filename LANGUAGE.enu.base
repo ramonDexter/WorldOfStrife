@@ -294,7 +294,51 @@ F_FoodTrayEmpty = "You picked up the Empty Food Tray!";
 T_FoodTray = "Food Tray";
 F_FoodTray = "You picked up the Food Tray!";
 
-
+// quest items & things ////////////////////////////////////////////////////////
+t_travelTicket = "Transportation Ticket";
+p_travelTicket = "You picked up the Transportation Ticket!";
+t_millPortTransportTicket = "Millport Travel Ticket";
+t_powerPlant_powerCoupling = "Power Coupling";
+t_hereticDatapad1 = "Heretic Datapad 1";
+t_caseInformationDisk = "Lost artifact information disk";
+t_leaderskull = "Heretic Captain Skull";
+p_leaderskull = "Heretic Captain skull acquired!";
+t_cityBathMurder_Detonator = "Detonator";
+p_cityBathMurder_Detonator = "You picked up the Detonator!";
+t_hereticalRelic = "Heretical Relic";
+p_hereticalRelic = "You picked up the Heretical Relic!";
+t_infoDisk = "Data Disk";
+p_infoDisk = "You picked up the Data Disk!";
+t_q_explosiveDevice_01 = "Explosive Device";
+p_q_explosiveDevice_01 = "You picked up the Explosive Device!";
+t_wosq_dynamite_queen1 = "Explosive Device #1";
+t_wosq_dynamite_queen2 = "Explosive Device #2";
+t_wosq_dynamite_queen3 = "Explosive Device #3";
+p_wosq_dynamite_queen = "You picked up the Explosive Device!";
+t_hereticLeaderSkull = "Heretic Leader Skull";
+p_hereticLeaderSkull = "Heretic Leader skull acquired!";
+t_blueChalice = "Blue Offering Chalice";
+p_blueChalice = "Blue Offering Chalice acquired!";
+t_wosDegninOre = "Degnin Ore";
+p_wosDegninOre = "You picked up the Degnin Ore.";
+t_wosq_chemicalOre = "Copper Sulfate Ore";
+p_wosq_chemicalOre = "You picked up the Copper Sulfate Ore.";
+t_wosq_chemicalSolution = "Chemical Solution";
+p_wosq_chemicalSolution = "You picked up the Chemical Solution.";
+t_wosq_rottenWater = "Rotten Water";
+p_wosq_rottenWater = "You picked up the Rotten Water.";
+t_wosq_fishGuts = "Fish Guts";
+p_wosq_fishGuts = "You picked up the Fish Guts.";
+t_wosq_ratPoison = "Rat Poison";
+p_wosq_ratPoison = "You picked up the Rat Poison.";
+t_woq_tools = "Tools";
+p_woq_tools = "You picked up the Tools.";
+t_wosq_spareparts = "Spare Parts";
+p_wosq_spareparts = "You picked up the Spare Parts.";
+t_wosq_judgeofchangeEdict = "Edict";
+p_wosq_judgeofchangeEdict = "You picked up the Edict.";
+t_wosq_judgeOfChangeDevice = "Recording Device";
+p_wosq_judgeOfChangeDevice = "You picked up the Recording Device.";
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -345,15 +389,107 @@ OBI_GiantRat = "%o was gnawed on by a giant rat.";
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
+// LOCATIONS ///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// MILLPORT ////////////////////////////////////////////////////////////////////
+/*
+LOC_millport
+LOC_millport_binderBase
+LOC_millport_binderBase_personalDormitory
+LOC_millport_binderBase_mainCommand
+LOC_millport_binderBase_medbay
+LOC_millport_binderBase_weaponsVendor
+LOC_millport_binderBase_techsmith
+LOC_millport_binderBase_barracks
+LOC_millport_techsmith
+LOC_millport_blackPub
+LOC_millport_gunsmith
+LOC_millport_armorVendor
+LOC_millport_butcher
+LOC_millport_technician
+LOC_millport_councilclub
+LOC_millport_temple
+LOC_millport_villa
+LOC_millport_harbor
+LOC_millport_gate_west
+LOC_millport_gate_east
+LOC_millport_townhall
+LOC_millport_university
+LOC_millport_plaza
+LOC_millportcommons
+LOC_millportcommons_tavern
+LOC_millportcommons_butcher
+LOC_millportcommons_library
+LOC_millport_grocerystore
+LOC_millport_trainer
+LOC_millport_binderBase_temple
+LOC_millport_binderBase_dojo
+LOC_millportcommons_techsmith
+LOC_millportcommons_historian
+LOC_millport_villa_fauces
+LOC_millport_villa_tabernae
+LOC_millport_villa_impluvium
+LOC_millport_villa_tablinium
+LOC_millport_villa_triclinium
+LOC_millport_villa_alae
+LOC_millport_villa_cubiculum
+LOC_millport_villa_kitchen
+LOC_millport_villa_posticum
+LOC_millport_villa_peristylium
+LOC_millport_villa_dormitorium
+LOC_millport_promenade
+LOC_millport_gate_north
+LOC_millport_binderBase_medic
+LOC_millport_castle
+LOC_millport_castle_courtyard
+LOC_millport_castle_baron
+LOC_millport_castle_lady
+LOC_millport_castle_interior
+LOC_millport_castle_underground
+LOC_millport_castle_dininghall
+LOC_millport_castle_prison
+LOC_millport_castle_kitchen
+LOC_millport_castle_treasury
+LOC_millport_castle_staffroom
+LOC_millport_castle_daughter
+LOC_millport_castle_winecellar
+LOC_millport_marketplace
+LOC_millport_bath
+LOC_millport_bath_apodyterium
+LOC_millport_bath_caldarium
+LOC_millport_bath_frigidarium
+LOC_millport_bath_peristyle
+LOC_millport_bath_tepidarium
+*/
+
+
+////////////////////////////////////////////////////////////////////////////////
 // VARIOUS MESSAGES ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+TXT_speakWithAcolyte = "Speak to the Binder acolyte!";
+TXT_visitBinderSuperior = "[ Visit the Binder Superior in his office. ]";
+TXT_spentNiceMoments = "You share a nice moments with the young lady :)";
+TXT_watchMyMoves = "Okay, watch my moves...";
+TXT_andwereDone = "...and we're done for now.";
+TXT_SleptWell = "You have slept well!";
 TXT_m14_returnBACK = "The road to Kolymais further closed. You need to head back now.";
 
 // quests //
-TXT_m10q_lostDaughter = "Lost Daughter";
-TXT_m08q_derwin_sezensoucastky = "Spare Parts for Derwin";
-TXT_m08q_quincy_lostsister = "Quincy's Lost Sister";
+TXT_mainq_treason = "[ TREASON ]";
+TXT_m08q_CCinnkeeper = "[ Find cook for Council Club ]";
+TXT_m08q_CCinnkeeper_cookfound = "[ Find cook for Council Club - return to the innkeeper. You've found a new cook. ]";
+TXT_m10q_lostDaughter = "[ Lost Daughter ]";
+TXT_m08q_derwin_sezensoucastky = "[ Spare Parts for Derwin ]";
+TXT_m08q_quincy_lostsister = "[ Quincy's Lost Sister ]";
+TXT_m08q_soudceZmeny_01_deliverEdict = "[ Judge of Change - Deliver Edict ]";
+TXT_m08q_soudceZmeny_02_plantDevice = "[ Judge of Change - Plant Recording Device ]";
+TXT_m08q_soudceZmeny_02_plantDevice_mind40Required = "\c[yellow]Required 40 Mind to plant the device!";
+TXT_m10q_troubledWaters = "[ Troubled Waters ]";
+TXT_m10q_troubledWaters_findOre  = "[ Troubled Waters - Go find Copper Sulfate Ore ]";
+TXT_m10q_troubledWaters_returnAeredale = "[ Troubled Waters - Return to the Techmisth in Aeredale ]";
+TXT_m10q_troubledWaters_cleanedWell = "[ Troubled Waters - You've cleaned the water in the well ]";
 
 // health charger //
 TXT_healthCharger_used = "\c[yellow][ Health fully restored! ]";

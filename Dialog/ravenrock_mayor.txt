@@ -19,6 +19,18 @@ Conversation {
 		Dialog = "\c[white]Hello, Binder. Welcome to Ravenrock. What brings you to our humble village? My name's Gunther, I'm the local mayor.";
 		Goodbye = "\c[red]Goodbye.";
 		Choice {
+			Text = "The Judge of Change sends me.";
+			Nextpage = "ravenrock_mayor_edict1";
+			Require {
+				item = "m08q_soudceZmeny_01_deliverEdict_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_soudceZmeny_01_deliverEdict_delivered";
+				amount = 1;
+			}
+		}
+		Choice {
 			Text = "What can you tell me about your village?";
 			Nextpage = "ravenrock_mayor_ravenrock";
 		}
@@ -91,6 +103,39 @@ Conversation {
 		Choice {
 			Text = "\c[yellow]<< BACK";
 			Nextpage = "ravenrock_mayor_else";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_edict1";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Oh no. You bring me an Edict, do you?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes. Is that a problem?";
+			Nextpage = "ravenrock_mayor_edict2";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_edict2";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]For you, not. But for me and the locals, it could be a big problem. Like last time, the Edixt ordered to raise the taxation. We had almost a rebellion here.\nOkay, give it to me.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Here it is.";
+			Nextpage = "ravenrock_mayor_edict3";
+		}
+	}
+	Page {
+		pageName = "ravenrock_mayor_edict3";
+		Name = "\c[yellow]Gunther, Mayor";
+		Dialog = "\c[white]Okay, this looks only like some usual yearly announcement. Phew, I was worried it could something worse. Thank you and greet the Judge for me.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Will do.";
+			Nextpage = "ravenrock_mayor_opener";
+			Closedialog = true;
+			Special = 80;
+			arg0 = 8402;
 		}
 	}
 }

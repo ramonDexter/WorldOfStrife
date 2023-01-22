@@ -19,7 +19,7 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
+				location = "D:\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -132,8 +132,7 @@ maps
 				tabtype = 0;
 				scripttype = 18;
 				caretposition = 2556;
-				firstvisibleline = 729;
-				activetab = true;
+				firstvisibleline = 19;
 			}
 			
 			document1
@@ -143,8 +142,9 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 1;
-				caretposition = 22954;
-				firstvisibleline = 698;
+				caretposition = 23315;
+				firstvisibleline = 712;
+				activetab = true;
 			}
 		}
 	}

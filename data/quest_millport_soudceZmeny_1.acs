@@ -1,0 +1,37 @@
+////////////////////////////////////////////////////////////////////////////////
+// soudce zmeny Afer Valgus Reberio convID 38
+// 1) Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest
+//
+// tokeny:
+// class m08q_soudceZmeny_01_deliverEdict_given : tokenBase {}
+// class m08q_soudceZmeny_01_deliverEdict_delivered : tokenBase {}
+// class m08q_soudceZmeny_01_deliverEdict_finished : tokenBase {}
+
+// TXT - strings:
+// TXT_m08q_soudceZmeny_01_deliverEdict
+
+// inv.item: wosq_judgeofchangeEdict
+
+// zadani v dialogu u soudce zmeny /////////////////////////////////////////////
+script 8401 (void) {
+    GiveInventory("m08q_soudceZmeny_01_deliverEdict_given", 1);
+    GiveInventory("wosq_judgeofchangeEdict", 1);
+    DisplayQuest("$TXT_m08q_soudceZmeny_01_deliverEdict", 1);
+}
+
+// v dialogu u starosy ravenrocku v map12 //////////////////////////////////////
+script 8402 (void) {
+    TakeInventory("wosq_judgeofchangeEdict", 1);
+    GiveInventory("m08q_soudceZmeny_01_deliverEdict_delivered", 1);
+    DisplayQuest("$TXT_m08q_soudceZmeny_01_deliverEdict", 2);
+}
+
+// po navratu v dialogu u soudce zmeny /////////////////////////////////////////
+script 8403 (void) {
+    GiveInventory("m08q_soudceZmeny_01_deliverEdict_finished", 1);
+    GiveInventory("coin", 250);
+    RewardXP(250);
+    DisplayQuest("$TXT_m08q_soudceZmeny_01_deliverEdict", 3);
+
+}
+////////////////////////////////////////////////////////////////////////////////

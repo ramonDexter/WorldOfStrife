@@ -618,12 +618,12 @@ class travelTicket : CustomInventory {
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
 		
-		Tag "Transportation Ticket";
+		Tag "$t_travelTicket";//"Transportation Ticket";
 		Inventory.Icon "I_TRTK";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Transportation Ticket!";
+		Inventory.PickupMessage "$p_travelTicket";//"You picked up the Transportation Ticket!";
 		Inventory.PickupSound "misc/i_pkup";
 		Mass 0;
 	}	
@@ -643,7 +643,7 @@ class millPortTransportTicket : travelTicket {
 		//$Category "Quest things/WoS"
 		//$Title "millport travel ticket"
 		
-		Tag "Millport Travel Ticket";
+		Tag "$t_millPortTransportTicket";//"Millport Travel Ticket";
 	}
 }
 
@@ -654,7 +654,7 @@ class powerPlant_powerCoupling : CustomInventory {
 		
 		+inventory.invbar
 		
-		Tag "Power Coupling";
+		Tag "$t_powerPlant_powerCoupling";//"Power Coupling";
 		inventory.icon "I_PCOP";
 		inventory.amount 1;
 		inventory.maxamount 1;
@@ -678,7 +678,7 @@ class hereticDatapad1 : CustomInventory {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Heretic Datapad 1";
+		Tag "$t_hereticDatapad1";//"Heretic Datapad 1";
 		inventory.icon "I_HDPD";
 		inventory.amount 1;
 		inventory.maxamount 1;
@@ -704,7 +704,7 @@ class caseInformationDisk : CustomInventory {
 		
 		+INVENTORY.INVBAR
 		
-		Tag "Lost artifact information disk";
+		Tag "$t_caseInformationDisk";//"Lost artifact information disk";
 		inventory.icon "I_HDPD";
 		inventory.amount 1;
 		inventory.maxamount 1;
@@ -729,7 +729,7 @@ class leaderskull : wosPickup {
 		+inventory.INVBAR
 		+inventory.alwayspickup
 	
-		Tag "Heretic Leader Skull";
+		Tag "$t_leaderskull";//"Heretic Captain Skull";
 		Radius 4;
 		Height 18;
 		
@@ -737,7 +737,7 @@ class leaderskull : wosPickup {
 		Inventory.MaxAmount 1;
 		inventory.interhubamount 1;
 		Inventory.Icon "I_HCSK";
-		Inventory.PickupMessage "Heretic Captain skull acquired!";
+		Inventory.PickupMessage "$p_leaderskull";//"Heretic Captain skull acquired!";
 		Mass leaderSkullWeight;
 	}
 	
@@ -763,12 +763,12 @@ class cityBathMurder_Detonator : CustomInventory {
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
 		
-		Tag "Detonator";
+		Tag "$t_cityBathMurder_Detonator";//"Detonator";
 		Inventory.Icon "I_DTNT";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Detonator!";
+		Inventory.PickupMessage "$p_cityBathMurder_Detonator";//"You picked up the Detonator!";
 		Inventory.PickupSound "misc/i_pkup";
 		Mass 0;
 	}
@@ -789,12 +789,12 @@ class hereticalRelic : CustomInventory {
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Heretical Relic";
+		Tag "$t_hereticalRelic";//"Heretical Relic";
 		Inventory.Icon "I_HRLC";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Heretical Relic!";
+		Inventory.PickupMessage "$p_hereticalRelic";//"You picked up the Heretical Relic!";
 		Inventory.PickupSound "misc/i_pkup";
 		height 32;
 		Mass 0;
@@ -815,12 +815,12 @@ class infoDisk : CustomInventory {
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Data Disk";
+		Tag "$t_infoDisk";//"Data Disk";
 		Inventory.Icon "I_DDSB";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Data Disk!";
+		Inventory.PickupMessage "$p_infoDisk";//"You picked up the Data Disk!";
 		Inventory.PickupSound "misc/i_pkup";
 		Mass 0;
 	}
@@ -841,12 +841,12 @@ class q_explosiveDevice_01 : CustomInventory {
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Explosive Device";
+		Tag "$t_q_explosiveDevice_01";//"Explosive Device";
 		Inventory.Icon "I_QBMB";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupMessage "$p_q_explosiveDevice_01";//"You picked up the Explosive Device!";
 		Inventory.PickupSound "misc/i_pkup";
 		height 32;
 		Mass 0;
@@ -919,12 +919,12 @@ class wosq_dynamite_queen1 : CustomInventory {
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Explosive Device #1";
+		Tag "$t_wosq_dynamite_queen1";//"Explosive Device #1";
 		Inventory.Icon "I_QB01";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupMessage "$p_wosq_dynamite_queen";
 		Inventory.PickupSound "misc/i_pkup";
 		height 32;
 		Mass 0;
@@ -995,12 +995,12 @@ class wosq_dynamite_queen2 : CustomInventory {
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Explosive Device #2";
+		Tag "$t_wosq_dynamite_queen2";//"Explosive Device #2";
 		Inventory.Icon "I_QB02";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupMessage "$p_wosq_dynamite_queen";
 		Inventory.PickupSound "misc/i_pkup";
 		height 32;
 		Mass 0;
@@ -1066,16 +1066,16 @@ class q_bomb_queen2 : actor {
 class wosq_dynamite_queen3 : CustomInventory {
 	Default {
 		//$Category "Quest things/WoS"
-		//$Title "explosive device#2"
+		//$Title "explosive device#3"
 		+INVENTORY.INVBAR
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
-		Tag "Explosive Device #2";
+		Tag "$t_wosq_dynamite_queen3";//"Explosive Device #3";
 		Inventory.Icon "I_QB03";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		Inventory.InterhubAmount 1;
-		Inventory.PickupMessage "You picked up the Explosive Device!";
+		Inventory.PickupMessage "$p_wosq_dynamite_queen";//"You picked up the Explosive Device!";
 		Inventory.PickupSound "misc/i_pkup";
 		height 32;
 		Mass 0;
@@ -1150,7 +1150,7 @@ class hereticLeaderSkull : CustomInventory {
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
 		
-		Tag "Heretic Leader Skull";
+		Tag "$t_hereticLeaderSkull";//Heretic Leader Skull
 		Radius 4;
 		Height 18;
 		
@@ -1158,7 +1158,7 @@ class hereticLeaderSkull : CustomInventory {
 		Inventory.MaxAmount 1;
 		inventory.interhubamount 1;
 		Inventory.Icon "I_HCSK";
-		Inventory.PickupMessage "Heretic Leader skull acquired!";
+		Inventory.PickupMessage "$p_hereticLeaderSkull";//Heretic Leader skull acquired!
 		Mass 0;
 	}
 	States {
@@ -1180,7 +1180,7 @@ class blueChalice : CustomInventory {
 		+INVENTORY.UNDROPPABLE
 		+INVENTORY.UNTOSSABLE
 		
-		Tag "Blue Offering Chalice";
+		Tag "$t_blueChalice";//Blue Offering Chalice
 		Radius 4;
 		Height 18;
 		
@@ -1188,7 +1188,7 @@ class blueChalice : CustomInventory {
 		Inventory.MaxAmount 1;
 		inventory.interhubamount 1;
 		Inventory.Icon "I_RELB";
-		Inventory.PickupMessage "Blue Offering Chalice acquired!";
+		Inventory.PickupMessage "$p_blueChalice";//Blue Offering Chalice acquired!
 		Mass 0;
 	}
 	States {
@@ -1214,7 +1214,7 @@ class wosDegninOre : wosPickup {
 		+INCOMBAT
 		+INVENTORY.INVBAR
 		
-		Tag "Degnin Ore";
+		Tag "$t_wosDegninOre";//"Degnin Ore";
 		Health 10;
 		//Radius 16;
 		//Height 16;
@@ -1223,7 +1223,7 @@ class wosDegninOre : wosPickup {
 		//Inventory.MaxAmount 20;
 		//inventory.interhubamount 20;
 		Inventory.Icon "I_DGOR";
-		Inventory.PickupMessage "You picked up the Degnin Ore.";
+		Inventory.PickupMessage "$p_wosDegninOre";//"You picked up the Degnin Ore.";
 		Mass wosDegninOreWeight;
 	}
 	
@@ -1251,9 +1251,9 @@ class wosq_chemicalOre : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Copper Sulfate Ore";
+		Tag "$t_wosq_chemicalOre";//"Copper Sulfate Ore";
 		Inventory.Icon "I_CHOR";
-		Inventory.PickupMessage "You picked up the Copper Sulfate Ore.";
+		Inventory.PickupMessage "$p_wosq_chemicalOre";//"You picked up the Copper Sulfate Ore.";
 		Mass wosq_chemicalOreWeight;
 	}
 	States {
@@ -1272,9 +1272,9 @@ class wosq_chemicalSolution : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Chemical Solution";
+		Tag "$t_wosq_chemicalSolution";//"Chemical Solution";
 		Inventory.Icon "I_CHSL";
-		Inventory.PickupMessage "You picked up the Chemical Solution.";
+		Inventory.PickupMessage "$p_wosq_chemicalSolution";//"You picked up the Chemical Solution.";
 		Mass wosq_chemicalSolutionWeight;
 	}
 	States {
@@ -1293,9 +1293,9 @@ class wosq_rottenWater : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Rotten Water";
+		Tag "$t_wosq_rottenWater";//"Rotten Water";
 		Inventory.Icon "I_RTWT";
-		Inventory.PickupMessage "You picked up the Rotten Water.";
+		Inventory.PickupMessage "$p_wosq_rottenWater";//"You picked up the Rotten Water.";
 		Mass wosq_rottenWaterWeight;
 	}
 	States {
@@ -1314,9 +1314,9 @@ class wosq_fishGuts : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Fish Guts";
+		Tag "$t_wosq_fishGuts";//"Fish Guts";
 		Inventory.Icon "I_FSGT";
-		Inventory.PickupMessage "You picked up the Fish Guts.";
+		Inventory.PickupMessage "$p_wosq_fishGuts";//"You picked up the Fish Guts.";
 		Mass wosq_rottenWaterWeight;
 	}
 	States {
@@ -1335,9 +1335,9 @@ class wosq_ratPoison : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Rat Poison";
+		Tag "$t_wosq_ratPoison";//"Rat Poison";
 		Inventory.Icon "I_RTPN";
-		Inventory.PickupMessage "You picked up the Rat Poison.";
+		Inventory.PickupMessage "$p_wosq_ratPoison";//"You picked up the Rat Poison.";
 		Mass wosq_rottenWaterWeight;
 	}
 	States {
@@ -1357,9 +1357,9 @@ class woq_tools : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Tools";
+		Tag "$t_woq_tools";//"Tools";
 		Inventory.Icon "I_QTLS";
-		Inventory.PickupMessage "You picked up the Tools.";
+		Inventory.PickupMessage "$p_woq_tools";//"You picked up the Tools.";
 		Mass woq_toolsWeight;
 	}
 	States {
@@ -1378,9 +1378,9 @@ class wosq_spareparts : wosPickup {
 		+SOLID
 		+INVENTORY.INVBAR
 
-		Tag "Spare Parts";
+		Tag "$t_wosq_spareparts";//"Spare Parts";
 		Inventory.Icon "I_QSPS";
-		Inventory.PickupMessage "You picked up the Spare Parts.";
+		Inventory.PickupMessage "$p_wosq_spareparts";//"You picked up the Spare Parts.";
 		Mass wosq_sparepartsWeight;
 		Scale 0.5;
 	}
@@ -1393,7 +1393,50 @@ class wosq_spareparts : wosPickup {
 			Fail;
 	}
 }
+class wosq_judgeofchangeEdict : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "edict"
+		-SOLID
+		+INVENTORY.INVBAR
 
+		Tag "$t_wosq_judgeofchangeEdict";//"Edict";
+		Inventory.Icon "I_QJED";
+		Inventory.PickupMessage "$p_wosq_judgeofchangeEdict";//"You picked up the Edict.";
+		Mass 0;
+		Scale 0.5;
+	}
+	States {
+		Spawn:
+			QJED A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
+class wosq_judgeOfChangeDevice : wosPickup {
+	Default {
+		//$Category "Quest things/WoS"
+		//$Title "recording device"
+		-SOLID
+		+INVENTORY.INVBAR
+
+		Tag "$t_wosq_judgeOfChangeDevice";//"Recording Device";
+		Inventory.Icon "I_QJRD";
+		Inventory.PickupMessage "$p_wosq_judgeOfChangeDevice";//"You picked up the Recording Device.";
+		Mass 0;
+		Scale 0.5;
+	}
+	States {
+		Spawn:
+			QJRD A -1;
+			Stop;
+		Use:
+			TNT1 A 0;
+			Fail;
+	}
+}
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

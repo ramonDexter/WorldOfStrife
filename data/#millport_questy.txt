@@ -9,8 +9,8 @@ quest:
 
 # soudce zmeny Afer Valgus Reberio convID 38
 4 questy:
-1) Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest
-2) ziskej priznani nebo dukazy proti kaciri v Commons >> cerny doktor
+HOTOVO - 1) Dones prikaz Ediktu starostovi Ravenrocku. - jednoduchej deliver quest - HOTOVO
+HOTOVO - 2) umisti zaznamove zarizeni do autodoca doktora v commons - provadi ilegalni operace a soudce potrebuje shromazdit dukazy; check na mind == 40 - HOTOVO
 3) najdi ztraceneho syna farmare z Ravenrocku
 4) Najdi ukradene artefakty.
 

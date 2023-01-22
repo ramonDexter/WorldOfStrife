@@ -123,6 +123,7 @@ class twn_binderCook_sezensuroviny_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////
 
 
+
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -208,4 +209,18 @@ class m08q_quincy_lostsister_given : tokenBase {}
 class m08q_quincy_lostsister_found : tokenBase {}
 class m08q_quincy_lostsister_payed : tokenBase {}
 class m08q_quincy_lostsister_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// soudce zmeny Afer Valgus Reberio convID 38 //////////////////////////////////
+// 1) Dones prikaz Ediktu starostovi Ravenrocku.
+class m08q_soudceZmeny_01_deliverEdict_given : tokenBase {}
+class m08q_soudceZmeny_01_deliverEdict_delivered : tokenBase {}
+class m08q_soudceZmeny_01_deliverEdict_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// soudce zmeny Afer Valgus Reberio convID 38 //////////////////////////////////
+// 2) umisti zaznamove zarizeni do autodoca doktora v commons
+class m08q_soudceZmeny_02_plantDevice_given : tokenBase {}
+class m08q_soudceZmeny_02_plantDevice_planted : tokenBase {}
+class m08q_soudceZmeny_02_plantDevice_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////

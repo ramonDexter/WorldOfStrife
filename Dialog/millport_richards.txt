@@ -160,3 +160,154 @@ Conversation {
 		}
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+// customized surgical unit ////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 323;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow][ Surgical unit ]";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		link = "surgUnit_opener2";
+		ifitem {
+			item = "binderBadge";
+			amount = 1;
+		}
+		pageName = "surgUnit_opener1";
+		Name = "\c[yellow][ Surgical unit ]";
+		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 50 coins.";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Install the recording device";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 8502;
+			Require {
+				item = "wosq_judgeOfChangeDevice";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Upgrade your stats";
+			Nextpage = "surgUnit_upgrades";
+			Require {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Use surgical unit";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "[ Healing completed! ]";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 7700;
+			Cost {
+				item = "Coin";
+				amount = 50;
+			}
+		}
+	}
+	Page {
+		pageName = "surgUnit_opener2";
+		Name = "\c[yellow][ Surgical unit ]";
+		Dialog = "\c[white]Automatic surgical unit can repair all types of wounds.\nHealing costs 25 coins.";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Install the recording device";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 8502;
+			Require {
+				item = "wosq_judgeOfChangeDevice";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Upgrade your stats";
+			Nextpage = "surgUnit_upgrades";
+			Require {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Use surgical unit";
+			NextPage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = true;
+			YesMessage = "[ Healing completed! ]";
+			NoMessage = "Not enough gold!";
+			Special = 80;
+			arg0 = 7700;
+			Cost {
+				item = "Coin";
+				amount = 25;
+			}
+		}
+	}
+	Page {
+		pageName = "surgUnit_upgrades";
+		Name = "\c[yellow][ Surgical unit ]";
+		Dialog = "\c[white]Surgical unit allows you to upgrade your stats. Spend one Upgrade Token to upgrade:\n- Accuracy\n- Health/Stamina\n- Mind";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "Upgrade Accuracy \c[gold](spend 1 upgr.token)";
+			Nextpage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "Procedure started!";
+			Special = 80;
+			arg0 = 7701;
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Upgrade Stamina \c[gold](spend 1 upgr.token)";
+			Nextpage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "Procedure started!";
+			Special = 80;
+			arg0 = 7702;
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Upgrade Mind \c[gold](spend 1 upgr.token)";
+			Nextpage = "surgUnit_opener1";
+			CloseDialog = true;
+			DisplayCost = false;
+			YesMessage = "Procedure started!";
+			Special = 80;
+			arg0 = 7703;
+			Cost {
+				item = "upgradeToken";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "surgUnit_opener1";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -4,9 +4,9 @@ Conversation {
 	/*
 	Page {
 		pageName = "";
-		Name = "\c[yellow]Rutger, village mayor";
+		Name = "$dialog_aeredale_Rutger_name";
 		Dialog = "\c[white]";
-		Goodbye = "\c[red]Goodbye.";
+		Goodbye = "$dialog_goodbye";
 		Choice {
 			Text = "";
 			Nextpage = "";
@@ -15,119 +15,119 @@ Conversation {
 	*/
 	Page {
 		pageName = "aeredale_Rutger_opener";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Be welcome, mister Binder. What business brings you to my humble village?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_opener";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Who are you?";
+			Text = "$dialog_aeredale_Rutger_opener_ch01";
 			Nextpage = "aeredale_Rutger_whoareyou";
 		}
 		Choice {
-			Text = "What's going on around here?";
+			Text = "$dialog_aeredale_Rutger_opener_ch02";
 			Nextpage = "aeredale_Rutger_goingon";
 		}
 		Choice {
-			Text = "Could you tell me about your village?";
+			Text = "$dialog_aeredale_Rutger_opener_ch03";
 			Nextpage = "aeredale_Rutger_aboutaeredale";
 		}
 		Choice {
-			Text = "What's in the surroundings?";
+			Text = "$dialog_aeredale_Rutger_opener_ch04";
 			Nextpage = "aeredale_Rutger_surroundings";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_whoareyou";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]I am Rutger. I'm the local mayor and head of the woodprocessing industry here in the village.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_whoareyou";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Wodprocessing industry?";
+			Text = "$dialog_aeredale_Rutger_whoareyou_ch01";
 			Nextpage = "aeredale_Rutger_woodcutting";
 		}
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_woodcutting";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Yes, we got two small mills that process the harvested wood from the forests surrounding a village. It creates good income to the locals pockets, and gives work to good half of the local men.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_woodcutting";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_goingon";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Oh, not much. The farmers work hard in the days heat on their fields, herders tend to their herds and the woodcutters bring new wood every day. We're peaceful village. But we have a little problem here. Water in the village well got rotten, and our techsmith is unable to clean it. Maybe you should speak with him. Oh, and farmer Curtis' daughter's gone missing. Oh yeah, and the woodcutter's got some problem in the wood, you should speak with their foreman, Jarvis.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_goingon";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Rotten water? How bad is it?";
+			Text = "$dialog_aeredale_Rutger_goingon_ch01";
 			Nextpage = "aeredale_Rutger_rottenwater";
 		}
 		Choice {
-			Text = "Daughter gone missing? This sounds interesting.";
+			Text = "$dialog_aeredale_Rutger_goingon_ch02";
 			Nextpage = "aeredale_Rutger_missingdaughter";
 		}
 		Choice {
-			Text = "Woodcutters need their axes sharpened, or what?";
+			Text = "$dialog_aeredale_Rutger_goingon_ch03";
 			Nextpage = "aeredale_Rutger_woodcutters";
 		}
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_rottenwater";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Well, it's quite bad. We were using the well as our main water source, as the water in the springs in the caverns and in the springs is contaminated. Now we have to use the water from the well outside village northern gate, which is not good, too. We don't know what caused it, and our techsmith is no chemist, so he is unable to clean the water.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_rottenwater";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_goingon";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_missingdaughter";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Oh, young fox Lisa and her love travels. She is in the age when a girl is seeking herself. And Lisa is trying hard. Last year she ran away with young handsome merchant, who came here looking for grain. And left with a girl. She returned few weeks later. Her father was only happy that she didn't brought anything along, if you know what I mean (\c[green]winks at you\c[white]). So I bet she'll be back in a few weeks.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_missingdaughter";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_goingon";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_woodcutters";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Actually, I don't know what's the problem. But as I know these potheads, you could bet on that that they need their axes sharpened, he he he.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_woodcutters";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_goingon";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_aboutaeredale";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Aeredale is a small farming community lost in the forests of the western Borderlands. The villahge is quite old, around five hunderd years or more. But the history is not important here, as the locals are simple farming people, who live in the present and the past rest. We live from our land. Some years the harvest is so good that we are able to sell our produce and gain some luxury.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_aboutaeredale";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_Rutger_surroundings";
-		Name = "\c[yellow]Rutger, village mayor";
-		Dialog = "\c[white]Well, not much. Deep forest, carnivorous plants and those pesky red flyers, imps. But, if you mean interesting places, there are some. When you head to the west, you will reach castle Tabith, the main base of house Tabit. Pretty impressive castle, you have to visit it. And when you head east, you'll reach city Millport. We supply them with grain and wood, and they provide uf protection and technology. Profitable relationship for both sides.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_Rutger_name";
+		Dialog = "$dialog_aeredale_Rutger_surroundings";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_Rutger_opener";
 		}
 	}

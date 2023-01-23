@@ -5,9 +5,9 @@ Conversation {
 	/*
 	Page {
 		pageName = "aeredale_curtisFarmer_";
-		Name = "\c[yellow]Curtis, farmer";
+		Name = "$dialog_aeredale_curtisFarmer_name";
 		Dialog = "\c[white]";
-		Goodbye = "\c[red]Goodbye.";
+		Goodbye = "$dialog_goodbye";
 		Choice {
 			Text = "";
 			Nextpage = "aeredale_curtisFarmer_";
@@ -16,23 +16,23 @@ Conversation {
 	*/
 	Page {
 		pageName = "aeredale_curtisFarmer_opener";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Hello, Binder. Welcome to my humble house. What brings you here?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_opener";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Who are you?";
+			Text = "$dialog_aeredale_curtisFarmer_opener_ch01";
 			Nextpage = "aeredale_curtisFarmer_whoareyou";
 		}
 		Choice {
-			Text = "Could you tell me about this village?";
+			Text = "$dialog_aeredale_curtisFarmer_opener_ch02";
 			Nextpage = "aeredale_curtisFarmer_aboutaeredale";
 		}
 		Choice {
-			Text = "Is there anything interesting around here?";
+			Text = "$dialog_aeredale_curtisFarmer_opener_ch03";
 			Nextpage = "aeredale_curtisFarmer_interests";
 		}
 		Choice {
-			Text = "You look worried. Do you need any help here?";
+			Text = "$dialog_aeredale_curtisFarmer_opener_ch04";
 			Nextpage = "aeredale_curtisFarmer_help";
             Exclude {
                 item = "m10q_lostDaughter_given";
@@ -54,87 +54,87 @@ Conversation {
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_whoareyou";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]I am Curtis, farmer. I own the fields outside northern gate. It's a hard work, but brings its fruits.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_whoareyou";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_aboutaeredale";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Our peaceful village is a small community of farmers and woodworkers. We're hidden inside the woods and rocks, so life here is little bit boring. Sometimes, the traders arrive here, but that's not often. So our life here is only composed of work and after work rest. The only distraction we have are the festive days, which are numerous, for Father's sake.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_aboutaeredale";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_interests";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Oh, it depends on what you call interesting. The forest around our village could be interesting, but be ware of the nasty critters that inhabit our forests. The east from our village is just a forest and road to Millport. Sometimes, bandits camp around the road. To the west, there is the old casstle and road to Tabitian fort.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_interests";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "\c[yellow]<< BACK";
+			Text = "$dialog_back";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_help";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Oh, yes. I'm worried because my beloved daughter disappeared. It's almost a month a I haven't heard about her.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_help";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Tell me more.";
+			Text = "$dialog_aeredale_curtisFarmer_help_ch01";
 			Nextpage = "aeredale_curtisFarmer_tellmemore";
 		}
 		Choice {
-			Text = "Sorry, not interested.";
+			Text = "$dialog_aeredale_curtisFarmer_help_ch02";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_tellmemore";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Well, Isabelle, my daughter, disappeared a month ago. We had no problems with her, I loved her and always cared for her. I just don't understand what happened.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_tellmemore";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Sorry, not interested.";
+			Text = "$dialog_aeredale_curtisFarmer_tellmemore_ch01";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 		Choice {
-			Text = "Do you know anything else? You're not telling me much.";
+			Text = "$dialog_aeredale_curtisFarmer_tellmemore_ch02";
 			Nextpage = "aeredale_curtisFarmer_anythingmore";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_anythingmore";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Well, not quite much. Like I said, I had no problems with her. She was the good daughter every father wants, so it's all strange. But, as you ask, she had a best friend here, Lydia, daughter of medic, Yoric. You could go and ask her, if she knows anything.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_anythingmore";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Ok then, I'll help you.";
+			Text = "$dialog_aeredale_curtisFarmer_anythingmore_ch01";
 			Nextpage = "aeredale_curtisFarmer_accept";
 		}
 		Choice {
-			Text = "Sorry, not interested.";
+			Text = "$dialog_aeredale_curtisFarmer_anythingmore_ch02";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_accept";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]You will? That's great. If you find her, I'll give you, let's say, 500 gold. What do you say?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_accept";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Sorry, not interested.";
+			Text = "$dialog_aeredale_curtisFarmer_accept_ch01";
 			Nextpage = "aeredale_curtisFarmer_opener";
 		}
 		Choice {
-			Text = "Ok, I'll look for her.";
+			Text = "$dialog_aeredale_curtisFarmer_accept_ch02";
 			Nextpage = "aeredale_curtisFarmer_opener";
             CloseDialog = true;
             Special = 80;
@@ -148,11 +148,11 @@ Conversation {
             amount = 1;
         }
 		pageName = "aeredale_curtisFarmer_notfoundyet";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Have you found her?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_notfoundyet";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Not yet.";
+			Text = "$dialog_aeredale_curtisFarmer_notfoundyet_ch01";
 			Nextpage = "aeredale_curtisFarmer_opener";
             YesMessage = "\c[white]Please, find her.";
             CloseDialog = true;
@@ -160,33 +160,33 @@ Conversation {
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_daughterfound";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]Have you found her?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_daughterfound";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Yes, but she wont return.";
+			Text = "$dialog_aeredale_curtisFarmer_daughterfound_ch01";
 			Nextpage = "aeredale_curtisFarmer_wontreturn";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_wontreturn";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]What?";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_wontreturn";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "Well, you've used her as a personal slave. What do you expect?";
+			Text = "$dialog_aeredale_curtisFarmer_wontreturn_ch01";
 			Nextpage = "aeredale_curtisFarmer_rewardgetlost";
 		}
 	}
 	Page {
 		pageName = "aeredale_curtisFarmer_rewardgetlost";
-		Name = "\c[yellow]Curtis, farmer";
-		Dialog = "\c[white]That's none of your business. Here's some money for your struggle and now get lost.";
-		Goodbye = "\c[red]Goodbye.";
+		Name = "$dialog_aeredale_curtisFarmer_name";
+		Dialog = "$dialog_aeredale_curtisFarmer_rewardgetlost";
+		Goodbye = "$dialog_goodbye";
 		Choice {
-			Text = "< take the money and leave >";
+			Text = "$dialog_aeredale_curtisFarmer_rewardgetlost_ch01";
 			Nextpage = "aeredale_curtisFarmer_opener";
-            YesMessage = "\c[white]And just forget we've spoken...";
+            YesMessage = "$dialog_aeredale_curtisFarmer_rewardgetlost_ch01yes";
             CloseDialog = true;
             Special = 80;
             arg0 = 1103;

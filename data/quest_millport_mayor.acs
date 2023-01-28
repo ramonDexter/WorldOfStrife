@@ -1,0 +1,117 @@
+////////////////////////////////////////////////////////////////////////////////
+// starosta mesta Flavius Nefarius convID 21
+// 1) vyber najemne od obyvatel Commons
+//
+// hrac dostane quest od starosty
+// obejde 4 najemniky
+// od kazdeho dotane token
+// po navratu v dialogu check na 4 tokeny
+
+// tokeny:
+//
+// class m08q_mayor_vyberNajem_given
+// class m08q_mayor_vyberNajem_najem
+// class m08q_mayor_vyberNajem_finished
+
+// TXT_m08q_mayor_vyberNajem = "[ The Mayor - Tenancy Collection ]";
+
+// zadani v dialogu:
+script 8801 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_given", 1);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 1);
+	// quest vyber najem markers //
+	Thing_deActivate(331);
+	Thing_deActivate(332);
+	Thing_deActivate(639);
+	Thing_deActivate(640);
+}
+// v dialogu u najemnika:
+// 3x v pohode
+// 1x musi hrac zaplatit za najemnika
+// vybrat najemny
+script 8802 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem", 1);
+    GiveInventory("coin", 100);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
+    RewardXP(50);
+	Thing_Activate(331);
+    if ( CheckInventory("m08q_mayor_vyberNajem_najem") == 4 ) {
+        Thing_Deactivate(641);
+    }
+}
+// vybrat najemny
+script 8803 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem", 1);
+    GiveInventory("coin", 100);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
+    RewardXP(50);
+	Thing_Activate(332);
+    if ( CheckInventory("m08q_mayor_vyberNajem_najem") == 4 ) {
+        Thing_Deactivate(641);
+    }
+}
+// vybrat najemny
+script 8804 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem", 1);
+    GiveInventory("coin", 100);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
+    RewardXP(50);
+	Thing_Activate(639);
+    if ( CheckInventory("m08q_mayor_vyberNajem_najem") == 4 ) {
+        Thing_Deactivate(641);
+    }
+}
+// zaplatit najemny
+script 8805 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem", 1);
+    //GiveInventory("coin", 100);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
+    RewardXP(100);
+	Thing_Activate(640);
+    if ( CheckInventory("m08q_mayor_vyberNajem_najem") == 4 ) {
+        Thing_Deactivate(641);
+    }
+}
+// po navratu v dialogu
+script 8806 (void) {
+    TakeInventory("coin", 400);
+    GiveInventory("coin", 500);
+    GiveInventory("m08q_mayor_vyberNajem_finished", 1);
+    RewardXP(500);
+    DisplayQuest("TXT_m08q_mayor_vyberNajem", 3);
+        Thing_Activate(641);
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// 2) najdi ztraceneho urednika - urednik utekl do eastcliffu
+// starosta hrace poveri s hledanim zmizeleho urednika
+// urednik utekl do eastcliffu s ukradenymi dokumenty
+// jednoduchy quest jde nekam, najdi a vrat se
+
+// tokeny:
+// class m08q_mayor_lostOfficial_given : tokenBase {}
+// class m08q_mayor_lostOfficial_nasel : tokenBase {}
+// class m08q_mayor_lostOfficial_finished : tokenBase {}
+
+// TXT_m08q_mayor_lostOfficer = "[ The Mayor - Lost Official ]";
+
+// zadani v dialogu:
+script 8901 (void) {
+    GiveInventory("m08q_mayor_lostOfficial_given", 1);
+    DisplayQuest("TXT_m08q_mayor_lostOfficer", 1);
+}
+// v dialogu u urednika v eastliffu:
+script 8902 (void) {
+    GiveInventory("m08q_mayor_lostOfficial_nasel", 1);
+    DisplayQuest("TXT_m08q_mayor_lostOfficer", 2);
+    RewardXP(250);
+}
+// v dialogu po navratu:
+script 8903 (void) {
+    GiveInventory("m08q_mayor_lostOfficial_finished", 1);
+    GiveInventory("coin", 700);
+    DisplayQuest("TXT_m08q_mayor_lostOfficer", 3);
+    RewardXP(700);
+}
+////////////////////////////////////////////////////////////////////////////////

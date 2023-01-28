@@ -237,3 +237,22 @@ class m08q_ian_sezenDodavateleMasa_given : tokenBase {}
 class m08q_ian_sezenDodavateleMasa_sehnal : tokenBase {}
 class m08q_ian_sezenDodavateleMasa_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
+
+// starosta millportu quest vyber najem ////////////////////////////////////////
+class m08q_mayor_vyberNajem_given : tokenBase {}
+class m08q_mayor_vyberNajem_najem : tokenBase {
+	Default {
+		-inventory.invbar;		
+		inventory.amount 1;
+		inventory.maxamount 4;
+		inventory.interhubamount 4;
+	}
+}
+class m08q_mayor_vyberNajem_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////
+
+// starosta millportu quest ztraceny urednik ///////////////////////////////////
+class m08q_mayor_lostOfficial_given : tokenBase {}
+class m08q_mayor_lostOfficial_nasel : tokenBase {}
+class m08q_mayor_lostOfficial_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////

@@ -144,8 +144,6 @@ Conversation {
 			Nextpage = "mp_ianbutcher_questions";
 		}
 	}
-
-
 	Page {
 		pageName = "mp_ianbutcher_helpNotYet";
 		Name = "\c[yellow]Ian, butcher";
@@ -157,7 +155,7 @@ Conversation {
 			CloseDialog = true;
 			YesMessage = "\c[white]Please, keep looking.";
 			Exclude {
-				item = "m08q_ian_sezenDodavateleMasa_sehnalMaso";
+				item = "m08q_ian_sezenDodavateleMasa_sehnal";
 				amount = 1;
 			}
 		}

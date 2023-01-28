@@ -1,0 +1,206 @@
+namespace = "GZdoom";
+Conversation {
+	ID = 21;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_flaviusNefariusMayor_opener";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Hello Binder, what brings you to my office?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "About the help...";
+			Nextpage = "mp_flaviusNefariusMayor_helpNotYet";
+			Require {
+				item = "m08q_mayor_vyberNajem_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_mayor_vyberNajem_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "mp_flaviusNefariusMayor_whoareyou";
+		} 
+		Choice {
+			Text = "Could you tell me about Millport?";
+			Nextpage = "mp_flaviusNefariusMayor_aboutmillport";
+		} 
+		Choice {
+			Text = "Do you need any help here?";
+			Nextpage = "mp_flaviusNefariusMayor_needhelp";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_whoareyou";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]My name is Flavius Nefarius. I am the City Mayor here. Don't be distracted by the title, I'm more office rat than some kind of politician. In fact, the politics here are in hands of our governor. I just work on the daily tasks.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_aboutmillport";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Our magnificent city is called a 'jewel of the south' by some. And it's all true. Millport is the seat of imperial authority of the southern coast. The Church has a great cathedral here and a seat of their own authority. The city's also the seat of governor of local area, a representative of the Duke Tabit. The local harbor is the main point of local economy, serving as a entrypoint for the shipping guild trading routes.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_needhelp";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Oh yes, I need help all the time.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What about this time?";
+			Nextpage = "mp_flaviusNefariusMayor_vyberNajem";
+			Exclude {
+				item = "m08q_mayor_vyberNajem_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "What about this time?";
+			Nextpage = "mp_flaviusNefariusMayor_vyberNajem";
+			Require {
+				item = "m08q_mayor_vyberNajem_finished";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_mayor_vyberNajem_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	// quest vyber najem ///////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "mp_flaviusNefariusMayor_vyberNajem";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Okay, I've got something for you. Some tenants in our flats in the Commons area have forgot to pay their monthly rent. So I would like to ask you to visit these people and collect the money for me.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sounds easy. Who are these people and how much should I bring from them?";
+			Nextpage = "mp_flaviusNefariusMayor_vyberNajemTellMore";
+		}
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_vyberNajemTellMore";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]There are 4 tenants. The live on the Commons, I'll mark their location on your map. Visit them and make them sure to pay next, plus collect the money they forgot. I hope your Binder authority'll help you, as these workers could be stubborn.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+		Choice {
+			Text = "Okay, and what for me?";
+			Nextpage = "mp_flaviusNefariusMayor_vyberNajemreward";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_vyberNajemreward";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]I'll give you 500 gold for this little struggle. So, do you accept?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, I'll do it.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+			YesMessage = "\c[white]Good luck, Binder.";
+			CloseDialog = true;
+			Special = 80;
+			arg0 = 8801;
+		}
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_helpNotYet";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Have you collected the tenancy money?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+			CloseDialog = true;
+			YesMessage = "\c[white]What are you waiting for?";
+			Exclude {
+				item = "m08q_mayor_vyberNajem_najem";
+				amount = 4;
+			}
+		}
+		Choice {
+			Text = "Here's the money.";
+			Nextpage = "mp_flaviusNefariusMayor_helpCollected";
+			Require {
+				item = "m08q_mayor_vyberNajem_najem";
+				amount = 4;
+			}
+		}
+	}
+	Page {
+		pageName = "mp_flaviusNefariusMayor_helpCollected";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]Great, thank you. You've helped me a lot. Here's you reward. And I have another task for you.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you. Maybe later.";
+			Nextpage = "mp_flaviusNefariusMayor_opener";
+			CloseDialog = true;
+			YesMessage = "\c[white]You're welcome.";
+			Special = 80;
+			arg0 = 8806;
+		}
+		Choice {
+			Text = "Thank you. What do you have?";
+			Nextpage = "mp_flaviusNefariusMayor_help2";
+			Special = 80;
+			arg0 = 8806;
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	// quest ztraceny urednik //////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "mp_flaviusNefariusMayor_help2";
+		Name = "\c[yellow]Flavius Nefarius, Millport Mayor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+}

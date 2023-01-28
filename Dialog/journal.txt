@@ -449,6 +449,32 @@ Conversation {
 				amount = 1;
 			}
 		}
+		// millport starosta vyber najem ///////////////////////////////////////
+		Choice {
+			Text = "[ Quest - Tenancy Collection ]";
+			NextPage = "journal_m08q_mayor_vyberNajem_given";
+			Require {
+				item = "m08q_mayor_vyberNajem_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_mayor_vyberNajem_finished";
+				amount = 1;
+			}
+		}
+		// millport starosta ztraceny urednik //////////////////////////////////
+		Choice {
+			Text = "[ Quest - Lost Official ]";
+			NextPage = "journal_m08q_mayor_lostOfficial_given";
+			Require {
+				item = "m08q_mayor_lostOfficial_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_mayor_lostOfficial_finished";
+				amount = 1;
+			}
+		}
 
 
 	}
@@ -2743,7 +2769,105 @@ Conversation {
 	Page {
 		pageName = "journal_m08q_ian_sezenDodavateleMasa_finished"; 
 		Name = "\c[yellow]::[   Q U E S T S   ]::";
-		Dialog = "\c[yellow]QUEST:\nFind Meat Supplier\n\c[green]==---------------------==\n\c[white]Ian the butcher from Millport asks you to find a supplier of good meat and fish. You should ask the farmers and fishers around millport, if they want to raise their income.\n\n[X] Find a supplier of meat\n[X] Find a supplier of fish\n[X] Return to Ian the butcher";
+		Dialog = "\c[yellow]QUEST:\nFind Meat Supplier\n\c[green]==---------------------==\n\c[white]Ian the butcher from Millport asks you to find a supplier of good meat and fish. You should ask the farmers and fishers around millport, if they want to raise their income.\n\n[X] Find a supplier of meat\n[X] Return to Ian the butcher";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+	
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_mayor_vyberNajem_collected";
+		ifitem {
+			item = "m08q_mayor_vyberNajem_najem";
+			amount = 4;
+		}
+		pageName = "journal_m08q_mayor_vyberNajem_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Tenancy Collection\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to collect tenancy money from certain people in the Commons. These tenants forgot their monthly pay, so he asks you to use your authority to collect the money from them.\n\n[ ] Collect money from tenants\n[ ] Return to the Mayor";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_mayor_vyberNajem_finished";
+		ifitem {
+			item = "m08q_mayor_vyberNajem_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_mayor_vyberNajem_collected"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Tenancy Collection\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to collect tenancy money from certain people in the Commons. These tenants forgot their monthly pay, so he asks you to use your authority to collect the money from them.\n\n[X] Collect money from tenants\n[ ] Return to the Mayor";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_mayor_vyberNajem_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Tenancy Collection\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to collect tenancy money from certain people in the Commons. These tenants forgot their monthly pay, so he asks you to use your authority to collect the money from them.\n\n[X] Collect money from tenants\n[X] Return to the Mayor";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
+	
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_mayor_lostOfficial_nasel";
+		ifitem {
+			item = "m08q_mayor_lostOfficial_nasel";
+			amount = 1;
+		}
+		pageName = "journal_m08q_mayor_lostOfficial_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Lost Official\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to find a lost official of the mayor's office. He just didn't came one day to work and disappeared. You could try searching his flat, for start.\n\n[ ] Find the lost official\n[ ] Return to the Mayor";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		link = "journal_m08q_mayor_lostOfficial_finished";
+		ifitem {
+			item = "m08q_mayor_lostOfficial_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_mayor_lostOfficial_nasel"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Lost Official\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to find a lost official of the mayor's office. He just didn't came one day to work and disappeared. You could try searching his flat, for start.\n\n[X] Find the lost official\n[ ] Return to the Mayor";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_mayor_lostOfficial_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nThe Mayor - Lost Official\n\c[green]==---------------------==\n\c[white]Mayor of Millport, Flavius Nefarius, asks you a favor. As he is busy in his office, he wants you to find a lost official of the mayor's office. He just didn't came one day to work and disappeared. You could try searching his flat, for start.\n\n[X] Find the lost official\n[X] Return to the Mayor";
 		Panel = "M_BLNK";
 		Goodbye = "\c[red][ EXIT ]";
 		Choice {

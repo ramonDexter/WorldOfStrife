@@ -436,6 +436,19 @@ Conversation {
 				amount = 1;
 			}
 		}
+		// millport reznik ian sezen dodavatele masa ///////////////////////////
+		Choice {
+			Text = "[ Quest - Find Meat Supplier ]";
+			NextPage = "journal_m08q_ian_sezenDodavateleMasa_given";
+			Require {
+				item = "m08q_ian_sezenDodavateleMasa_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_ian_sezenDodavateleMasa_finished";
+				amount = 1;
+			}
+		}
 
 
 	}
@@ -2690,6 +2703,56 @@ Conversation {
 	}
 	//##################################################################################################################
 
+	//##################################################################################################################
+	// quest ian reznik convid 46 sezen dodavatele masa //
+	//##################################################################################################################
+	Page {
+		link = "journal_m08q_ian_sezenDodavateleMasa_sehnal";
+		ifitem {
+			item = "m08q_ian_sezenDodavateleMasa_sehnal";
+			amount = 1;
+		}
+		pageName = "journal_m08q_ian_sezenDodavateleMasa_given"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nFind Meat Supplier\n\c[green]==---------------------==\n\c[white]Ian the butcher from Millport asks you to find a supplier of good meat and fish. You should ask the farmers and fishers around millport, if they want to raise their income.\n\n[ ] Find a supplier of meat\n[ ] Return to Ian the butcher";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {		
+		link = "journal_m08q_ian_sezenDodavateleMasa_finished";
+		ifitem {
+			item = "m08q_ian_sezenDodavateleMasa_finished";
+			amount = 1;
+		}
+		pageName = "journal_m08q_ian_sezenDodavateleMasa_sehnal"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nFind Meat Supplier\n\c[green]==---------------------==\n\c[white]Ian the butcher from Millport asks you to find a supplier of good meat and fish. You should ask the farmers and fishers around millport, if they want to raise their income.\n\n[X] Find a supplier of meat\n[ ] Return to Ian the butcher";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	Page {
+		pageName = "journal_m08q_ian_sezenDodavateleMasa_finished"; 
+		Name = "\c[yellow]::[   Q U E S T S   ]::";
+		Dialog = "\c[yellow]QUEST:\nFind Meat Supplier\n\c[green]==---------------------==\n\c[white]Ian the butcher from Millport asks you to find a supplier of good meat and fish. You should ask the farmers and fishers around millport, if they want to raise their income.\n\n[X] Find a supplier of meat\n[X] Find a supplier of fish\n[X] Return to Ian the butcher";
+		Panel = "M_BLNK";
+		Goodbye = "\c[red][ EXIT ]";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			//NextPage = "journal_quests";
+			NextPage = "journal_questArchive";
+		}
+	}
+	//##################################################################################################################
 
 
 }

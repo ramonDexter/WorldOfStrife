@@ -231,3 +231,9 @@ class m08q_gregory_sezenDodavatele_given : tokenBase {}
 class m08q_gregory_sezenDodavatele_domluvil : tokenBase {}
 class m08q_gregory_sezenDodavatele_finished : tokenBase {}
 ////////////////////////////////////////////////////////////////////////////////
+
+// reznik ian convid 46 sezen dodavatele masa //////////////////////////////////
+class m08q_ian_sezenDodavateleMasa_given : tokenBase {}
+class m08q_ian_sezenDodavateleMasa_sehnal : tokenBase {}
+class m08q_ian_sezenDodavateleMasa_finished : tokenBase {}
+////////////////////////////////////////////////////////////////////////////////

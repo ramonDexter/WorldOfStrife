@@ -1,0 +1,184 @@
+namespace = "GZDoom";
+Conversation {
+    ID = 901;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "map09_roderickFarmer_opener";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Hello, mister Binder. What brings you to my humble house?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "map09_roderickFarmer_whoareyou";
+		}
+		Choice {
+			Text = "This farm belongs to you?";
+			Nextpage = "map09_roderickFarmer_farmbelongs";
+		}
+		Choice {
+			Text = "Could you tell me about surroundings?";
+			Nextpage = "map09_roderickFarmer_aboutsurroundings";
+		}
+		Choice {
+			Text = "Say, do you want to raise income?";
+			Nextpage = "map09_roderickFarmer_raiseincome";
+            Require {
+                item = "m08q_ian_sezenDodavateleMasa_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_ian_sezenDodavateleMasa_sehnal";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_whoareyou";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]I am Roderick, a farmer and herder. I own this little farm here in the wilderness. Rough life, but I like it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "This farm belongs to you?";
+			Nextpage = "map09_roderickFarmer_farmbelongs";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_farmbelongs";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Yes, this farm is mine. It belongs to my family for at least six generations. We've built this place.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Looks great. You must be proud.";
+			Nextpage = "map09_roderickFarmer_proud";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_proud";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Yes, I am proud. Both of my farm and my children. Son owns a milling business not far from here and my daughter is aspiring medic. She's on vacation, right now. You can meet her upstairs, if you want.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_aboutsurroundings";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]The area around my farm is called 'the wilderness', at least we call it like that. You've already passed through the Caravanserai on your way from Millport. It's the place of rest for the travellers and caravans. When you take the route around the coast, you'll pass the old ruins. Be carefaul around there, as bandits often use that place as their resting hideout. And when you follow the river to north, you'll pass a watermill. It's run by my son, Martin.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "map09_roderickFarmer_raiseincome";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]What you got on mind? I won't house a Binder regiment, if you mean this type of income.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "No, nothing like that. One butcher in Millport is looking for a meat supplier.";
+			Nextpage = "map09_roderickFarmer_meatsupplierjoke";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_meatsupplierjoke";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Is this some kind of joke? A Binder is looking for a supply of meat for a butcher?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "No, I'm serious. We're Binders, we're helping people.";
+			Nextpage = "map09_roderickFarmer_meatsupplier";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_meatsupplier";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Okay, okay. Well, if you're serious, then we're talking business. Say, how much meat does this butcher wants?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "He's looking for two hundred kilos of beef or pork.";
+			Nextpage = "map09_roderickFarmer_meatsupplier2";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_meatsupplier2";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]That is no problem. I thought you were looking for more. That could be easily met. And, the second question, how much for the meat?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Up to 50 gold for kg of meat, based on type.";
+			Nextpage = "map09_roderickFarmer_meatsupplier3";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_meatsupplier3";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]OKay, okay. Let me think about it for a moment.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Keep your time.";
+			Nextpage = "map09_roderickFarmer_meatsupplierAccept";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "map09_roderickFarmer_opener";
+		}
+	}
+	Page {
+		pageName = "map09_roderickFarmer_meatsupplierAccept";
+		Name = "\c[yellow]Roderick, farmer";
+		Dialog = "\c[white]Okay, here's my decision. I was looking for more gold, but it's actually good for a beginning. Tell the buthcer his first supply will arrive in a day.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, great. Thank you, mister farmer.";
+			Nextpage = "map09_roderickFarmer_opener";
+            YesMessage = "\c[white]You're welcome.";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8702;
+		}
+	}
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+}

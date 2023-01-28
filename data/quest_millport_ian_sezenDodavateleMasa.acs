@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// reznik Ian convID 46 ////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// quest:
+// sezen lepsi dodavatele masa 
+//	>> farmar cestou k eastcliffu muze dodavat maso NEBO farma v Aeredale muze dodavat maso
+
+// tokeny:
+// class m08q_ian_sezenDodavateleMasa_given : tokenBase {}
+// class m08q_ian_sezenDodavateleMasa_sehnal : tokenBase {}
+// class m08q_ian_sezenDodavateleMasa_finished : tokenBase {}
+
+// TXT_m08q_ian_sezenDodavateleMasa = "[ Find Meat Supplier ]";
+
+// zadani v dialogu u iana v millportu
+script 8701 (void) {
+    GiveInventory("m08q_ian_sezenDodavateleMasa_given", 1);
+    DisplayQuest("TXT_m08q_ian_sezenDodavateleMasa", 1);
+}
+
+// v dialogu u farmare cestou k eastcliffu
+script 8702 (void) {
+    GiveInventory("m08q_ian_sezenDodavateleMasa_sehnal", 1);
+    DisplayQuest("TXT_m08q_ian_sezenDodavateleMasa", 2);
+    RewardXP(150);
+}
+
+// po navraatu v dialogu 
+// sehnal pouze maso
+script 8704 (void) {
+    GiveInventory("coin", 500);
+    GiveInventory("m08q_ian_sezenDodavateleMasa_finished", 1);
+    DisplayQuest("TXT_m08q_ian_sezenDodavateleMasa", 3);
+    RewardXP(500);
+}
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////

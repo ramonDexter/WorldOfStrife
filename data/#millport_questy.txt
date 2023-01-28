@@ -9,9 +9,7 @@
 3) najdi ztraceneho syna farmare z Ravenrocku
 4) Najdi ukradene artefakty.
 
-# reznik Ian convID 46
-1) sezen lepsi dodavatele masa 
-	>> farmar cestou k eastcliffu muze dodavat maso NEBO farma v Aeredale muze dodavat maso
+
 
 # starosta mesta Flavius Nefarius convID 21
 2 questy:
@@ -65,9 +63,6 @@
 1) chybi mu naradi, potrebuje sehnat lepsi naradi; 
 	>> lepsi naradi je k sehnani u technika v elektrarne u Ravenrocku, tam je ale potreba ziskat pristup od starosty, ktery chce vymenou pomoct s problemem dodavek proudu
 
-# reznik v commons convid 49
-1) shani lepsiho dodavatele masa 
-	>> dodavatele sezenes v eastcliffu, doplnit do dialogu u jednoho z farmaru
 
 # velitel policie - town guard convID
 1) zlikviduj kriminalniky v docich - nove je vyspawnovat, ne ty co uz jsou v mape
@@ -209,6 +204,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 // millport ////////////////////////////////////////////////////////////////////
+# reznik Ian convID 46
+1) sezen lepsi dodavatele masa 
+	>> farmar cestou k eastcliffu muze dodavat maso NEBO farma v Aeredale muze dodavat maso
+
 # Gregory, techsmith, convID 14
 quest:
 1) sezen dodavatele soucastek 

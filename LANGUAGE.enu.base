@@ -494,6 +494,7 @@ TXT_m10q_troubledWaters = "[ Troubled Waters ]";
 TXT_m10q_troubledWaters_findOre  = "[ Troubled Waters - Go find Copper Sulfate Ore ]";
 TXT_m10q_troubledWaters_returnAeredale = "[ Troubled Waters - Return to the Techmisth in Aeredale ]";
 TXT_m10q_troubledWaters_cleanedWell = "[ Troubled Waters - You've cleaned the water in the well ]";
+TXT_m08q_ian_sezenDodavateleMasa = "[ Find Meat Supplier ]";
 
 // health charger //
 TXT_healthCharger_used = "\c[yellow][ Health fully restored! ]";

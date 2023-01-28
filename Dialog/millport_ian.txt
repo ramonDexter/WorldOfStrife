@@ -1,78 +1,190 @@
 namespace = "GZDoom";
 Conversation {
-    ID = 46;
-    /*
-    Page {
-        pageName = "";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "";
-            Nextpage = "";
-        }
-    }
-    */
-    Page {
-        pageName = "mp_ianbutcher_opener";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]Hello, welcome to my shop. Do you want some fresh beef? Or some chicken meat?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "I'd like to buy something.";
-            Nextpage = "mp_ianbutcher_buy";
-        } 
-        Choice {
-            Text = "I've got some questions.";
-            Nextpage = "mp_ianbutcher_questions";
-        }
-    }
-    Page {
-        pageName = "mp_ianbutcher_buy";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]Okay, I've got beef, I've got some pork ribs and some chicken wings.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_ianbutcher_opener";
-        }
-    }
-    Page {
-        pageName = "mp_ianbutcher_questions";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]What do you want to know? I'm worried that I wont tell you much, as I spend most of the day here in my shop.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "Who are you?";
-            Nextpage = "mp_ianbutcher_whoareyou";
-        }  
-        Choice {
-            Text = "How is the business?";
-            Nextpage = "mp_ianbutcher_business";
-        }
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_ianbutcher_opener";
-        }
-    }
-    Page {
-        pageName = "mp_ianbutcher_whoareyou";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]I am Ian. I am butcher. I sell good meat to the people here, and I have to say I make a good living here. I bought this shop five years ago.";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_ianbutcher_questions";
-        }
-    }
-    Page {
-        pageName = "mp_ianbutcher_business";
-        Name = "\c[yellow]Ian, butcher";
-        Dialog = "\c[white]Well, I must admit the business is not as good as it used to be. It must be the meat I bought from the last caravan. Some bad wild meat, as strage taste. Say, would you try to help me a little?";
-        Goodbye = "\c[red]Goodbye."; 
-        Choice {
-            Text = "\c[yellow]<< BACK";
-            Nextpage = "mp_ianbutcher_questions";
-        }
-    }
+	ID = 46;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_ianbutcher_opener";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Hello, welcome to my shop. Do you want some fresh beef? Or some chicken meat?";
+		Goodbye = "\c[red]Goodbye.";  
+		Choice {
+			Text = "About the job...";
+			Nextpage = "mp_ianbutcher_helpNotYet";
+			Require {
+				item = "m08q_ian_sezenDodavateleMasa_given";
+				amount = 1;
+			}
+			Exclude {
+				item = "m08q_ian_sezenDodavateleMasa_finished";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "I'd like to buy something.";
+			Nextpage = "mp_ianbutcher_buy";
+		} 
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_buy";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Okay, I've got beef, I've got some pork ribs and some chicken wings.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_ianbutcher_opener";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_questions";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]What do you want to know? I'm worried that I wont tell you much, as I spend most of the day here in my shop.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Who are you?";
+			Nextpage = "mp_ianbutcher_whoareyou";
+		}  
+		Choice {
+			Text = "How is the business?";
+			Nextpage = "mp_ianbutcher_business";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_ianbutcher_opener";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_whoareyou";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]I am Ian. I am butcher. I sell good meat to the people here, and I have to say I make a good living here. I bought this shop five years ago.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_business";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Well, I must admit the business is not as good as it used to be. It must be the meat I bought from the last caravan. Some bad wild meat, with strange taste. Say, would you try to help me a little?";
+		Goodbye = "\c[red]Goodbye.";  
+		Choice {
+			Text = "Yes, I can help you. If I'm able to help you.";
+			Nextpage = "mp_ianbutcher_help";
+			exclude {
+				item = "m08q_ian_sezenDodavateleMasa_given";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	// quest sezen dodavatele masa a ryb ///////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "mp_ianbutcher_help";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Well, I'm looking for a good stable supply of meat for my shop. The meat I buy from caravans is bad in many occasions, so I need some good supply. Say, would you ask the farmers  around millport, if somebody would like to have a better income?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Okay, this sounds easy. And what's the reward?";
+			Nextpage = "mp_ianbutcher_helpReward";
+		} 
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_helpReward";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Well, if you find me a good supplier of meat, I'll give you 500 gold. What do you say?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Wait, I need more details. How much meat do you want and how much for it?";
+			Nextpage = "mp_ianbutcher_helpDetails";
+		} 
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_helpDetails";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Well, I could sell around two hundred kilograms per week. So, this supply should be enough. Well, I can pay up to fifty gold per kilo, based on what kind of meat it should be. I'm looking for good beef and pork.";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Okay, I'll do it.";
+			Nextpage = "mp_ianbutcher_opener";
+			CloseDialog = true;
+			YesMessage = "\c[white]Good luck.";
+			Special = 80;
+			arg0 = 8701;
+		} 
+		Choice {
+			Text = "Sorry, not interested.";
+			Nextpage = "mp_ianbutcher_questions";
+		}
+	}
+
+
+	Page {
+		pageName = "mp_ianbutcher_helpNotYet";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Have you found the suppliers?";
+		Goodbye = "\c[red]Goodbye."; 
+		Choice {
+			Text = "Not yet.";
+			Nextpage = "mp_ianbutcher_opener";
+			CloseDialog = true;
+			YesMessage = "\c[white]Please, keep looking.";
+			Exclude {
+				item = "m08q_ian_sezenDodavateleMasa_sehnalMaso";
+				amount = 1;
+			}
+		}
+		Choice {
+			Text = "I've found only supplier of meat.";
+			Nextpage = "mp_ianbutcher_meatSupplier";
+			Require {
+				item = "m08q_ian_sezenDodavateleMasa_sehnal";
+				amount = 1;
+			}
+		}
+	}
+	Page {
+		pageName = "mp_ianbutcher_meatSupplier";
+		Name = "\c[yellow]Ian, butcher";
+		Dialog = "\c[white]Oh, that's great! I hope this supply of fresh meat will finally bring customers to my shop. Thank you! Here's your reward, as we've arranged. 500 gold for meat supplier.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "mp_ianbutcher_opener";
+			CloseDialog = true;
+			YesMessage = "\c[white]You're welcome.";
+			Special = 80;
+			arg0 = 8704;
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////	
 }

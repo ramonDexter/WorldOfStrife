@@ -1,0 +1,197 @@
+namespace = "GZdoom";
+// najemnik 1 Carl /////////////////////////////////////////////////////////////
+Conversation {
+    ID = 211;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Carl";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_carl_opener";
+		Name = "\c[yellow]Carl";
+		Dialog = "RANDOM_MILLPORT_COMMONER";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "The mayor sent me. You've forgot to pay your rent.";
+			Nextpage = "mp_carl_payrent";
+            Require {
+                item = "m08q_mayor_vyberNajem_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_mayor_vyberNajem_najem1";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+		pageName = "mp_carl_payrent";
+		Name = "\c[yellow]Carl";
+		Dialog = "\c[white]Oh, not again. And you came for the money, don't you? Here, take it. I hope it won't happen again.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "mp_carl_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8802;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// najemnik 2 Octavius /////////////////////////////////////////////////////////
+Conversation {
+    ID = 212;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Octavius";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_octavius_opener";
+		Name = "\c[yellow]Octavius";
+		Dialog = "RANDOM_MILLPORT_COMMONER";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "The mayor sent me. You've forgot to pay your rent.";
+			Nextpage = "mp_octavius_payrent";
+            Require {
+                item = "m08q_mayor_vyberNajem_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_mayor_vyberNajem_najem2";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+		pageName = "mp_octavius_payrent";
+		Name = "\c[yellow]Octavius";
+		Dialog = "\c[white]Yeah, I know. I was little bit short on money. But now it's okay. Here, take it and tell the mayor my thanks he waited for me to pay.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "mp_octavius_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8803;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// najemnik 3 Frankie //////////////////////////////////////////////////////////
+Conversation {
+    ID = 213;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Frankie";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_frankie_opener";
+		Name = "\c[yellow]Frankie";
+		Dialog = "RANDOM_MILLPORT_COMMONER";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "The mayor sent me. You've forgot to pay your rent.";
+			Nextpage = "mp_frankie_payrent";
+            Require {
+                item = "m08q_mayor_vyberNajem_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_mayor_vyberNajem_najem3";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+		pageName = "mp_frankie_payrent";
+		Name = "\c[yellow]Frankie";
+		Dialog = "\c[white]Yeah, yeah. Here's the money and leave now.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Thank you.";
+			Nextpage = "mp_frankie_opener";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8804;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// najemnik 4 Jasmine //////////////////////////////////////////////////////////
+Conversation {
+    ID = 214;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Jasmine";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "mp_jasmine_opener";
+		Name = "\c[yellow]Jasmine";
+		Dialog = "RANDOM_MILLPORT_COMMONER";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "The mayor sent me. You've forgot to pay your rent.";
+			Nextpage = "mp_jasmine_payrent";
+            Require {
+                item = "m08q_mayor_vyberNajem_given";
+                amount = 1;
+            }
+            Exclude {
+                item = "m08q_mayor_vyberNajem_najem4";
+                amount = 1;
+            }
+		}
+	}
+	Page {
+		pageName = "mp_jasmine_payrent";
+		Name = "\c[yellow]Jasmine";
+		Dialog = "\c[white]Oh, what a pity! I don't have enough money to pay. Say, mister Binder, would you help a lonely girl in trouble? I beg you. I had eviction notice before, so if I won't pay, they'll surely kick me out this time for sure.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay, I'll pay it for you for this time.";
+			Nextpage = "mp_jasmine_opener";
+            YesMessage = "\c[white]Thank you, Binder!";
+            CloseDialog = true;
+            Special = 80;
+            arg0 = 8805;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -240,6 +240,10 @@ class m08q_ian_sezenDodavateleMasa_finished : tokenBase {}
 
 // starosta millportu quest vyber najem ////////////////////////////////////////
 class m08q_mayor_vyberNajem_given : tokenBase {}
+class m08q_mayor_vyberNajem_najem1 : tokenBase {}
+class m08q_mayor_vyberNajem_najem2 : tokenBase {}
+class m08q_mayor_vyberNajem_najem3 : tokenBase {}
+class m08q_mayor_vyberNajem_najem4 : tokenBase {}
 class m08q_mayor_vyberNajem_najem : tokenBase {
 	Default {
 		-inventory.invbar;		

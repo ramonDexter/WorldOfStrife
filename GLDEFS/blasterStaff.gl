@@ -4,6 +4,10 @@ pointlight greenFlash {
 	color 0.0 1.0 0.0
 	size 64
 }
+pointlight SHGlightningFlash {
+	color 0.0 1.0 0.0
+	size 32
+}
 /*object staffFlashShort {
 	frame TNT1 { light greenFlash }
 }

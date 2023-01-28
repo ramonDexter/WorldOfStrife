@@ -10,6 +10,10 @@
 // tokeny:
 //
 // class m08q_mayor_vyberNajem_given
+// class m08q_mayor_vyberNajem_najem1 : tokenBase {}
+// class m08q_mayor_vyberNajem_najem2 : tokenBase {}
+// class m08q_mayor_vyberNajem_najem3 : tokenBase {}
+// class m08q_mayor_vyberNajem_najem4 : tokenBase {}
 // class m08q_mayor_vyberNajem_najem
 // class m08q_mayor_vyberNajem_finished
 
@@ -30,6 +34,7 @@ script 8801 (void) {
 // 1x musi hrac zaplatit za najemnika
 // vybrat najemny
 script 8802 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem1", 1);
     GiveInventory("m08q_mayor_vyberNajem_najem", 1);
     GiveInventory("coin", 100);
     DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
@@ -41,6 +46,7 @@ script 8802 (void) {
 }
 // vybrat najemny
 script 8803 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem2", 1);
     GiveInventory("m08q_mayor_vyberNajem_najem", 1);
     GiveInventory("coin", 100);
     DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
@@ -52,6 +58,7 @@ script 8803 (void) {
 }
 // vybrat najemny
 script 8804 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem3", 1);
     GiveInventory("m08q_mayor_vyberNajem_najem", 1);
     GiveInventory("coin", 100);
     DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);
@@ -63,6 +70,7 @@ script 8804 (void) {
 }
 // zaplatit najemny
 script 8805 (void) {
+    GiveInventory("m08q_mayor_vyberNajem_najem4", 1);
     GiveInventory("m08q_mayor_vyberNajem_najem", 1);
     //GiveInventory("coin", 100);
     DisplayQuest("TXT_m08q_mayor_vyberNajem", 2);

@@ -1,0 +1,16 @@
+namespace = "GZdoom";
+conversation {
+    ID = 17;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Lucius, official";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+}

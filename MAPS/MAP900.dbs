@@ -1,0 +1,150 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "GZDoom_StrifeUDMF.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP900
+	{
+		
+		plugins
+		{
+			
+			threedfloormode
+			{
+				
+				controlsectorarea
+				{
+					usecustomtagrange = false;
+					outerleft = -32704;
+					outerright = -29248;
+					outertop = 32704;
+					outerbottom = 14464;
+				}
+			}
+		}
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 1;
+				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+				requiredarchives = "";
+			}
+		}
+		defaultfloortexture = "MKNRKBR";
+		defaultceiltexture = "F_SKY001";
+		defaulttoptexture = "MKNRKTN";
+		defaultwalltexture = "MKNRKTN";
+		defaultbottomtexture = "MKNRKTN";
+		custombrightness = 196;
+		customfloorheight = 0;
+		customceilheight = 128;
+		overridefloortexture = false;
+		overrideceiltexture = false;
+		overridetoptexture = false;
+		overridemiddletexture = false;
+		overridebottomtexture = false;
+		overridefloorheight = false;
+		overrideceilheight = false;
+		overridebrightness = false;
+		uselongtexturenames = false;
+		viewpositionx = 5614.776f;
+		viewpositiony = -1752.32f;
+		viewscale = 1.124518f;
+		scriptcompiler = "zdoom_acs.cfg";
+		
+		grid
+		{
+			background = "";
+			backsource = 0;
+			backoffsetx = 0;
+			backoffsety = 0;
+			backscalex = 100;
+			backscaley = 100;
+			gridsize = 8;
+			gridrotate = 0;
+			gridoriginx = 0;
+			gridoriginy = 0;
+		}
+		
+		reloadresourceprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		reloadresourcepostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testprecommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		testpostcommand
+		{
+			autocloseonsuccess = true;
+			exitcodeiserror = true;
+			stderriserror = true;
+		}
+		
+		selectiongroups
+		{
+			
+			2
+			{
+				linedefs = "629 635 757 758 790 791 794 795 796 797 798 799 800 1412 1413 1414 1903 1904 1905 1906 1907 1908 1909 1910 1912 1914 1915 1916 1917 1918 1919 1920 1921 2381 2382 2383 2384 2385 2386 2387 2388 2582 2583 2584 2585 2586 2587 2588 2589 2601 2603 2604 2681 2682 2683 2686 2690 2717 2718 2720 2722 2814 2815 2816 3200 3201 4443 4444 4445 4446 4448 4449 4450 4451 4452 4453 4454 4455 4456 4457 4458 4459 4460 4461 4462 4463 4464 4465 4466 4467 4468 4469 4470 4471 4472 4473 4474 4475 4476 4477 4478 4479 4480 4481 4482 4483 4484 4485 4486 4487 4488 4489 4490 4491 4492 4493 4494 4495 4496 4497 4498 4499 4500 4501 4502 4503 4504 4505 4506 4507 4508 4509 4510 4511 4512 4513 4514 4515 4516 4517 4518 4519 4520 4521 4522 4523 4524 4525 4539 4540 4541 4542 4543 4544 4626 4627 4628 4629 4631 4637 4638";
+				sectors = "59 61 109 111 238 290 291 359 360 409 410 414 415 435 436 471 472 524 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736 737 738 739 740 741 742 745 746 747 748 749 761 763";
+				things = "595 596 597 598";
+			}
+		}
+		
+		fieldtypes
+		{
+			
+			sector
+			{
+				user_managed_3d_floor = 3;
+			}
+		}
+		
+		scriptdocuments
+		{
+			
+			document0
+			{
+				filename = "DIALOGUE";
+				hash = 3588187714;
+				resource;
+				tabtype = 0;
+				scripttype = 18;
+				caretposition = 261;
+			}
+			
+			document1
+			{
+				filename = "SCRIPTS";
+				hash = 3469170009;
+				resource;
+				tabtype = 0;
+				scripttype = 1;
+				caretposition = 1043;
+				activetab = true;
+			}
+		}
+	}
+}

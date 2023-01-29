@@ -91,6 +91,7 @@ OptionMenu "wosDebugMaps" {
 	Command "MAP13 - Borderlands North", "MAP MAP13"
 	Command "MAP14 - Eastcliff", "MAP MAP14"
 	Command "MAP15 - The Castle", "MAP MAP15"
+	Command "MAP900 - Arkadia", "MAP MAP900"
 }
 ////////////////////////////////////////////////////////////////////////////////
 

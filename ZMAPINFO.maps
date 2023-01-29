@@ -225,6 +225,20 @@ map MAP15 "Tabitian Castle" {
 	NoInfighting
 }
 
+map MAP900 "Arkadia" {
+	sky1 = "SKYRGGR"
+	//sky1 = "SKYOIL"
+	music = "ADDER_S"
+	outsidefogdensity = 255
+	skyfog = 255
+	cluster = 1
+	//flags
+	ActivateOwnDeathSpecials
+	StrifeFallingDamage
+	NoIntermission
+	NoInfighting
+	
+}
 
 map MAP909 "Southern Plains" {
 	sky1 = "SKYRGGR"

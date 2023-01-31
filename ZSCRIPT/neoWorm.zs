@@ -123,10 +123,10 @@ class Table01 : Actor {
 		Friction 0.8;
 		//Health 120;
 		+SOLID;
-		+PUSHABLE;
-		+DROPOFF;
-		+SLIDESONWALLS;
-		+CANPASS;
+		//+PUSHABLE;
+		//+DROPOFF;
+		//+SLIDESONWALLS;
+		//+CANPASS;
 		+ACTLIKEBRIDGE;
 		+FLOORCLIP;
 		//+SHOOTABLE;

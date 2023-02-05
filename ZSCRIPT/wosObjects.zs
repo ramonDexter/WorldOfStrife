@@ -49,6 +49,55 @@ class wosD_hl2_combineBinocular2 : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+
+// health charger //////////////////////////////////////////////////////////////
+class wos_healthCharger : actor {
+	bool drained;
+	int timer;
+	override bool Used(actor user) {
+		let pawn = binderPlayer(user);
+		if ( !drained ) {
+			if ( pawn.health < pawn.GetMaxHealth(true) ) {
+				pawn.A_StartSound("sounds/healthCharger", CHAN_AUTO);
+				wosEventHandler.SendNetworkEvent("heal_Player");
+				pawn.A_Log("$TXT_healthCharger_used");
+				drained = true;
+			} else {
+				pawn.A_Log("$TXT_healthCharger_nouse");
+			}
+		} else {
+			pawn.A_StartSound("sounds/healthChargerNo", CHAN_AUTO);
+			pawn.A_Log("$TXT_healthCharger_drained");
+		}		
+		return Super.Used(user);
+	}
+	override void Tick() {
+		timer++;
+		if( timer == 10500 ) { //10500 ticks ==  5 minutes
+			timer = 0;
+			drained = false;
+		}
+		Super.Tick();
+	}
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "cmbn health charger active"
+		Tag "firstaid station";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
 // dune movie inspired floating light object - active&static ///////////////////
 class wosD_luminorb : actor {
 	bool ticked;
@@ -172,39 +221,120 @@ class wosD_asc_Palm08 : wosOptDeco2_base {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
-// health charger //////////////////////////////////////////////////////////////
-class wos_healthCharger : actor {
-	bool drained;
-	int timer;
-	override bool Used(actor user) {
-		let pawn = binderPlayer(user);
-		if ( !drained ) {
-			if ( pawn.health < pawn.GetMaxHealth(true) ) {
-				pawn.A_StartSound("sounds/healthCharger", CHAN_AUTO);
-				wosEventHandler.SendNetworkEvent("heal_Player");
-				pawn.A_Log("$TXT_healthCharger_used");
-				drained = true;
-			} else {
-				pawn.A_Log("$TXT_healthCharger_nouse");
-			}
-		} else {
-			pawn.A_StartSound("sounds/healthChargerNo", CHAN_AUTO);
-			pawn.A_Log("$TXT_healthCharger_drained");
-		}		
-		return Super.Used(user);
-	}
-	override void Tick() {
-		timer++;
-		if( timer == 10500 ) { //10500 ticks ==  5 minutes
-			timer = 0;
-			drained = false;
-		}
-		Super.Tick();
-	}
+// ascension props /////////////////////////////////////////////////////////////
+class wosD_asc_angelStatue : actor {
 	Default {
 		//$Category "Decorations/WoS"
-		//$Title "cmbn health charger active"
-		Tag "firstaid station";
+		//$Title "angel statue"
+		Tag "angel statue";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_athenaStatue : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "athena statue"
+		Tag "lady statue";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_beeStatue : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "bee statue"
+		Tag "bee statue";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_dibellaStatue : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "dibella statue"
+		Tag "dibella statue";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_elkHead : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "elk head deco"
+		Tag "elk head";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_lionStatue : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "lion statue"
+		Tag "lion statue";
+		radius 8;
+		height 24;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_waterput : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "waterput"
+		Tag "waterput";
 		radius 8;
 		height 24;
 		+SOLID;
@@ -219,7 +349,5 @@ class wos_healthCharger : actor {
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
-
-
 
 

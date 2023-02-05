@@ -501,14 +501,14 @@ DoomEdNums {
 	20496 = wosD_DeployableShieldDummy
 	20497 = woq_tools
 	20498 = wosq_spareparts
+	20499 = wosD_asc_angelStatue
+	20500 = wosD_asc_athenaStatue
+	20501 = wosD_asc_beeStatue
+	20502 = wosD_asc_dibellaStatue
+	20503 = wosD_asc_elkHead
+	20504 = wosD_asc_lionStatue
+	20505 = wosD_asc_waterput
 	/*
-	20499 = 
-	20500 = 
-	20501 = 
-	20502 = 
-	20503 = 
-	20504 = 
-	20505 = 
 	20506 = 
 	20507 = 
 	20508 = 

@@ -4440,5 +4440,57 @@ model wosD_hl2_cmbnMonitorBay {
 ////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////
+model wosD_asc_angelStatue {
+	path "models/props/ascension/"
+	model 0 "anglstat.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_athenaStatue {
+	path "models/props/ascension/"
+	model 0 "athena.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_beeStatue {
+	path "models/props/ascension/"
+	model 0 "beestatue.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_dibellaStatue {
+	path "models/props/ascension/"
+	model 0 "dibella.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_elkHead {
+	path "models/props/ascension/"
+	model 0 "elkHead_deco.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_lionStatue {
+	path "models/props/ascension/"
+	model 0 "lion.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_waterput {
+	path "models/props/ascension/"
+	model 0 "waterput.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

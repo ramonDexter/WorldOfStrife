@@ -281,8 +281,8 @@ class wosD_asc_dibellaStatue : actor {
 		//$Category "Decorations/WoS"
 		//$Title "dibella statue"
 		Tag "dibella statue";
-		radius 8;
-		height 24;
+		radius 16;
+		height 112;
 		+SOLID;
 		+USESPECIAL;
 		+NOGRAVITY;
@@ -349,5 +349,24 @@ class wosD_asc_waterput : actor {
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////
+
+class wosD_hereticalRelic : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "heretical relic deco"
+		Tag "$t_hereticalRelic";
+		radius 8;
+		height 40;
+		+SOLID;
+		+USESPECIAL;
+		+NOGRAVITY;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			HRLC V -1;
+			Stop;
+	}
+}
 
 

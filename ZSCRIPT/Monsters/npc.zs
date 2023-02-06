@@ -1672,6 +1672,25 @@ class wos_nwCultist07 : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+class wosD_npc_daggHolkaZhospody : actor {
+	Default {
+		//$Category "Other NPCs/females"
+		//$Title "Lady innkeeper"
+		+solid
+		+useSpecial
+		//+nogravity
+		+DontThrust
+		tag "innkeeper";
+		scale 0.85;
+		radius 16;
+		height 56;
+	}
+	States {
+		Spawn:
+			CL19 A -1;
+			Stop;
+	}
+}
 
 
 

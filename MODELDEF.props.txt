@@ -4464,7 +4464,7 @@ model wosD_asc_beeStatue {
 model wosD_asc_dibellaStatue {
 	path "models/props/ascension/"
 	model 0 "dibella.md3"
-	scale 1.0 1.0 1.0
+	scale 2.0 2.0 2.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

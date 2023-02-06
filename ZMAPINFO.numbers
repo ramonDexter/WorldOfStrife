@@ -508,9 +508,9 @@ DoomEdNums {
 	20503 = wosD_asc_elkHead
 	20504 = wosD_asc_lionStatue
 	20505 = wosD_asc_waterput
+	20506 = wosD_hereticalRelic
+	20507 = wosD_npc_daggHolkaZhospody
 	/*
-	20506 = 
-	20507 = 
 	20508 = 
 	20509 = 
 	20510 = 

@@ -1,0 +1,179 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Arkadia /////////////////////////////////////////////////////////////////////
+// Barthas, innkeeper, Crimson Rose Inn, convID 10 /////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 10;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_CRinnkeeper_opener";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]Hello, stranger. Welcome to the Crimson Rose Inn. Are you seeking a good drink, or something to eat?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah, I would like some drink.";
+			Nextpage = "ark_CRinnkeeper_drink";
+		}
+		Choice {
+			Text = "I'm little bit hungry.";
+			Nextpage = "ark_CRinnkeeper_food";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ark_CRinnkeeper_questions";
+		}
+	}
+	// drinks ///////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_CRinnkeeper_drink";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]Okay, I got some beer, some ale, good red wine and some strong spirits from local producers.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy bottle of beer";
+			Nextpage = "ark_CRinnkeeper_drink";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "coin";
+				amount = 4;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of ale";
+			Nextpage = "ark_CRinnkeeper_drink";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "coin";
+				amount = 6;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of wine";
+			Nextpage = "ark_CRinnkeeper_drink";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "coin";
+				amount = 8;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of spirits";
+			Nextpage = "ark_CRinnkeeper_drink";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosSpiritsBottle";
+			Cost {
+				item = "coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_CRinnkeeper_opener";
+		}
+	}
+	// food ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_CRinnkeeper_food";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]We got some cheeseburgers and some grilled chicken.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy cheeseburger";
+			Nextpage = "ark_CRinnkeeper_food";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy grilled chicken";
+			Nextpage = "ark_CRinnkeeper_food";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "coin";
+				amount = 23;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_CRinnkeeper_opener";
+		}
+	}
+	// questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_CRinnkeeper_questions";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]What would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about this village?";
+			Nextpage = "ark_CRinnkeeper_aboutarkadia";
+		}
+		Choice {
+			Text = "What's going on around here?";
+			Nextpage = "ark_CRinnkeeper_goingon";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_CRinnkeeper_opener";
+		}
+	}
+	Page {
+		pageName = "ark_CRinnkeeper_aboutarkadia";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]Our village's called Arkadia. It's a small settlement hidden in the Kolyman wilderness. We've got a harbor here, and a shipping guild outpost. You could find two techsmiths here, providing all the required services. We also got a hospital here. So, let's say we've got our back covered.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_CRinnkeeper_questions";
+		}
+	}
+	Page {
+		pageName = "ark_CRinnkeeper_goingon";
+		Name = "\c[yellow]Barthas, Innkeeper";
+		Dialog = "\c[white]Well mostly nothing. We're sleepy mountain town. But when the merchants arrive, it gets busy here. But if you're looking for some work, you could ask the mayor. He is in his office in the Town Hall. Or, you could try asking the techsmith. They could also use some helping hand.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_CRinnkeeper_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

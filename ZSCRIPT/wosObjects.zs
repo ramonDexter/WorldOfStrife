@@ -371,4 +371,75 @@ class wosD_hereticalRelic : actor {
 }
 ////////////////////////////////////////////////////////////////////////////////
 
+// hexen suit of armor destructible decoration /////////////////////////////////
+class wosD_suitOfArmor : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "hexen suit of armor decoration"
+		Tag "suit of armor";
+		Height 72;
+		Radius 16;
+		Health 60;
+		Mass 0x7fffffff;
+		DeathSound "sounds/SuitofArmorBreak";
+	}
+	States {
+		Spawn:
+			WDAS A -1;
+			Stop;
+		Death:
+			WDAS A 1 W_decoArmorExplode();
+			Stop;
+	}
+	// action //
+	void W_decoArmorExplode() {
+		for ( int i = 0; i < 10; i++ ) {
+			double xOff = ( random[decoArmorExplode]() - 128 ) / 16.;
+			double yOff = ( random[decoArmorExplode]() - 128 ) / 16.;
+			double zOff = random[decoArmorExplode]() * Height / 256.;
+			actor mo = spawn("wosD_suitOfArmor_chunk", vec3Offset(xOff, yOff, zOff), ALLOW_REPLACE);
+			if( mo ) {
+				mo.setState(mo.SpawnState + i);
+				mo.vel.X = random[decoArmorExplode]() / 64.;
+				mo.vel.Y = random[decoArmorExplode]() / 64.;
+				mo.vel.Z = ( random[decoArmorExplode]() & 7 ) + 5;
+			}
+		}
+		//
+		A_StartSound(DeathSound, CHAN_BODY);
+		Destroy();
+	}
+}
+class wosD_suitOfArmor_chunk : actor {
+	Default {
+		Radius 4;
+		Height 8;
+		Tag "chunk of armor";
+	}
+	States {
+		Spawn:
+			WDAS B -1;
+			Stop;
+			WDAS C -1;
+			Stop;
+			WDAS D -1;
+			Stop;
+			WDAS E -1;
+			Stop;
+			WDAS F -1;
+			Stop;
+			WDAS G -1;
+			Stop;
+			WDAS H -1;
+			Stop;
+			WDAS I -1;
+			Stop;
+			WDAS J -1;
+			Stop;
+			WDAS K -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
 

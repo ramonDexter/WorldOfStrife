@@ -10621,7 +10621,7 @@ actor wos_strifeCouch01Bridge8 : InvisibleBridge8 21625 {
 	//$Title "bridge woodenCouch01_8"
 	Tag "wooden couch"
 	radius 8
-	height 8
+	height 16
 }
 actor wos_strifeCouch01Bridge16 : InvisibleBridge16 21626 {
 	//$Category "Bridges"

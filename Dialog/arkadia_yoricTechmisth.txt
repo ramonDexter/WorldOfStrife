@@ -1,0 +1,301 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Arkadia /////////////////////////////////////////////////////////////////////
+// Yoric, techmisth, convID 11 /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 11;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_opener";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Hello stranger, welcome to Yoric's little shop of wonders. I got all the stuff you would need. I got some explosive stuff, some protictive stuff and some repair stuff. All best quality, made by myself.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you sell?";
+			Nextpage = "ark_yoricTechsmith_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ark_yoricTechsmith_questions";
+		}
+	}
+	// questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_questions";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You make all this stuff?";
+			Nextpage = "ark_yoricTechsmith_makethisstuff";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "ark_yoricTechsmith_aboutarkadia";
+		}
+		Choice {
+			Text = "Is there something interesting around?";
+			Nextpage = "ark_yoricTechsmith_surroundings";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_opener";
+		}
+	}
+	Page {
+		pageName = "ark_yoricTechsmith_makethisstuff";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Yes, I'm the maker of all this stuff. I'm licensed techsmith, so I this is my living. Pretty hard, sometimes. But I like it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_questions";
+		}
+	}
+	Page {
+		pageName = "ark_yoricTechsmith_aboutarkadia";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Arkadia is a peaceful little village hidden in the Kolyman highlands. We're far from any bigger city, so we're on our own here. But we've got some good taverns here, and even a hospital. The services are good here, and the people sre friendly here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_questions";
+		}
+	}
+	Page {
+		pageName = "ark_yoricTechsmith_surroundings";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Well, not much. When you leave Arkadia from the harbor to the south, you'll shortly arrive at the White Castle. When you leave from the western gate, you'll arrive to the Black Castle.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_questions";
+		}
+	}
+	// shop ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_shop";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]As I said, I got some explosive stuff, some protective stuff and some repair stuff.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Show me the explosive stuff.";
+			Nextpage = "ark_yoricTechsmith_shopexplosive";
+		}
+		Choice {
+			Text = "Show me the protective stuff.";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+		}
+		Choice {
+			Text = "Show me the repair stuff.";
+			Nextpage = "ark_yoricTechsmith_shoprepair";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_opener";
+		}
+	}
+	// explosives //////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_shopexplosive";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Want to blow something up? Okay, I got explosive, fire and gas grenades and land mines.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy explosive grenade";
+			Nextpage = "ark_yoricTechsmith_shopexplosive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrenadeE";
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy fire grenade";
+			Nextpage = "ark_yoricTechsmith_shopexplosive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrenadeF";
+			Cost {
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy gas grenade";
+			Nextpage = "ark_yoricTechsmith_shopexplosive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrenadeG";
+			Cost {
+				item = "coin";
+				amount = 18;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy landmine";
+			Nextpage = "ark_yoricTechsmith_shopexplosive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosLandMine";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_shop";
+		}
+	}
+	// protective stuff ////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_shopprotective";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]So, you need some protection? I have the metal, cybernetic and kinetic armors, some enviro suits, some deployable shields and some interceptor drones.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy metal armor";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosMetalArmor";
+			Cost {
+				item = "coin";
+				amount = 180;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy cybernetic armor";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBinderArmorAdvanced";
+			Cost {
+				item = "coin";
+				amount = 220;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy kinetic armor";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosKineticArmor";
+			Cost {
+				item = "coin";
+				amount = 320;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy enviro suit";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosEnvSuit";
+			Cost {
+				item = "coin";
+				amount = 75;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy deployable shield";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosDeployableShield";
+			Cost {
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy interceptor drone";
+			Nextpage = "ark_yoricTechsmith_shopprotective";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosInterceptorDrone";
+			Cost {
+				item = "coin";
+				amount = 135;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_shop";
+		}
+	}
+	// repair stuff ////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_yoricTechsmith_shoprepair";
+		Name = "\c[yellow]Yoric, Techsmith";
+		Dialog = "\c[white]Here, I have some armor repair kits and this regeneration module. It's little bit pricey, but worth it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy armor repair kit";
+			Nextpage = "ark_yoricTechsmith_shoprepair";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosArmorShard";
+			Cost {
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy regeneration module";
+			Nextpage = "ark_yoricTechsmith_shoprepair";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosRegenModule";
+			Cost {
+				item = "coin";
+				amount = 225;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_yoricTechsmith_shop";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

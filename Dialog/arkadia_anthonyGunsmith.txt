@@ -1,0 +1,192 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Arkadia /////////////////////////////////////////////////////////////////////
+// Anthony, gunsmith, convID 12 ////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 12;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_anthonyGunsmith_opener";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]Hello, stranger. Are you in need of some personal protection? Or do you need some ammo?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What weapons do you sell?";
+			Nextpage = "ark_anthonyGunsmith_shopWeapons";
+		}
+		Choice {
+			Text = "I need some ammo.";
+			Nextpage = "ark_anthonyGunsmith_shopAmmo";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ark_anthonyGunsmith_questions";
+		}
+	}
+	// questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_anthonyGunsmith_questions";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]Wha do you wish to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "ark_anthonyGunsmith_aboutarkadia";
+		}
+		Choice {
+			Text = "You make the weapons you sell?";
+			Nextpage = "ark_anthonyGunsmith_makeweapons";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_anthonyGunsmith_opener";
+		}
+	}
+	Page {
+		pageName = "ark_anthonyGunsmith_aboutarkadia";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]Arkadia is small community hidden in the Kolyman higlands. Since we're pretty secluded community, we have all the required services here. Two taverns, hospital, techsmith shops and a shipping guild outpost.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_anthonyGunsmith_questions";
+		}
+	}
+	Page {
+		pageName = "ark_anthonyGunsmith_makeweapons";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]Yeah, I make all the weapons I sell. I also make the ammunition I sell.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_anthonyGunsmith_questions";
+		}
+	}
+	// shop weapons ////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_anthonyGunsmith_shopWeapons";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]I sell the crossbow, executor rifle and mini-missile launcher.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy crossbow";
+			Nextpage = "ark_anthonyGunsmith_shopWeapons";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "zscStrifeCrossbow";
+			Cost {
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy executor rifle";
+			Nextpage = "ark_anthonyGunsmith_shopWeapons";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosPhaestonRifle";
+			Cost {
+				item = "coin";
+				amount = 350;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy mini-missile launcher";
+			Nextpage = "ark_anthonyGunsmith_shopWeapons";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "zscMiniMissileLauncher";
+			Cost {
+				item = "coin";
+				amount = 550;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_anthonyGunsmith_opener";
+		}
+	}
+	// shop ammo ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_anthonyGunsmith_shopAmmo";
+		Name = "\c[yellow]Anthony, Gunsmith";
+		Dialog = "\c[white]I got some electric arrows, some bullets, some mini-missiles and some energy kits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy electric arrows";
+			Nextpage = "ark_anthonyGunsmith_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBoltsElectric";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bullets";
+			Nextpage = "ark_anthonyGunsmith_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBulletCartridge";
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy mini-missiles";
+			Nextpage = "ark_anthonyGunsmith_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBundleMiniMissile";
+			Cost {
+				item = "coin";
+				amount = 35;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy energykits";
+			Nextpage = "ark_anthonyGunsmith_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosEnergyKit";
+			Cost {
+				item = "coin";
+				amount = 28;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_anthonyGunsmith_opener";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

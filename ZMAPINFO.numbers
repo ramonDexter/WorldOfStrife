@@ -510,10 +510,10 @@ DoomEdNums {
 	20505 = wosD_asc_waterput
 	20506 = wosD_hereticalRelic
 	20507 = wosD_npc_daggHolkaZhospody
+	20508 = wosD_suitOfArmor
 	/*
-	20508 = 
-	20509 = 
-	20510 = 
+	20509 = wos_bridge_strifeCouch01_01
+	20510 = wos_bridge_strifeCouch01_02
 	20511 = 
 	20512 = 
 	20513 = 

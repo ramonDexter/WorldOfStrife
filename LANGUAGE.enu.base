@@ -471,13 +471,14 @@ LOC_millport_bath_tepidarium
 // VARIOUS MESSAGES ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-TXT_speakWithAcolyte = "Speak to the Binder acolyte!";
-TXT_visitBinderSuperior = "[ Visit the Binder Superior in his office. ]";
-TXT_spentNiceMoments = "You share a nice moments with the young lady :)";
+TXT_speakWithAcolyte = "[ Speak to the Binder acolyte! ]";
+TXT_visitBinderSuperior = "Visit the Binder Superior in his office. ]";
+TXT_spentNiceMoments = "[ You share a nice moments with the young lady :) ]";
 TXT_watchMyMoves = "Okay, watch my moves...";
 TXT_andwereDone = "...and we're done for now.";
-TXT_SleptWell = "You have slept well!";
-TXT_m14_returnBACK = "The road to Kolymais further closed. You need to head back now.";
+TXT_SleptWell = "[ You have slept well! ]";
+TXT_m14_returnBACK = "[ The road to Kolyma is further closed. You need to head back now. ]";
+TXT_secretFound = "[ You've discovered a secret! ]";
 
 // quests //
 TXT_mainq_treason = "[ TREASON ]";

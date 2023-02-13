@@ -1,0 +1,166 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Arkadia /////////////////////////////////////////////////////////////////////
+// doktor Gregorius, convID 14 /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 14;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_gregoriusMedic_opener";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Yes? Do you need medical assistance?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, I'm injured.";
+			Nextpage = "ark_gregoriusMedic_injured";
+		}
+		Choice {
+			Text = "Do you sell medical supplies?";
+			Nextpage = "ark_gregoriusMedic_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "ark_gregoriusMedic_questions";
+		}
+	}
+	// injured /////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_gregoriusMedic_injured";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Okay, feel free to use the surgical unit over there. I'm busy here with making new medicals.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_gregoriusMedic_opener";
+		}
+	}
+	// shop ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_gregoriusMedic_shop";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Yes, I sell medicals. I have Hyposprays, Combopacks, Instaheals and some stamina stims. And I cannot forget the surgical kits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy hypospray";
+			Nextpage = "ark_gregoriusMedic_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy combopack";
+			Nextpage = "ark_gregoriusMedic_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy instaheal";
+			Nextpage = "ark_gregoriusMedic_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy stamina stim";
+			Nextpage = "ark_gregoriusMedic_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosi_StimDevice";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy surgical kit";
+			Nextpage = "ark_gregoriusMedic_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "zscSurgeryKit";
+			Cost {
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_gregoriusMedic_opener";
+		}
+	}
+	// questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_gregoriusMedic_questions";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Yes, what would you like to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Do you have many patients?";
+			Nextpage = "ark_gregoriusMedic_patients";
+		}
+		Choice {
+			Text = "Could you tell me about this village?";
+			Nextpage = "ark_gregoriusMedic_aboutarkadia";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_gregoriusMedic_opener";
+		}
+	}
+	Page {
+		pageName = "ark_gregoriusMedic_patients";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Well, not much. Since the local businesses are not of the dangerous sort, we're pretty empty here. So my main income comes from selling medicals.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_gregoriusMedic_questions";
+		}
+	}
+	Page {
+		pageName = "ark_gregoriusMedic_aboutarkadia";
+		Name = "\c[yellow]Gregorius, Medic";
+		Dialog = "\c[white]Arkadia is small community of artisans and traders. We're pretty hidden here in the highlands, far away from any bigger city. It could be boring here, but I like the calmness and tranquility.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_gregoriusMedic_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

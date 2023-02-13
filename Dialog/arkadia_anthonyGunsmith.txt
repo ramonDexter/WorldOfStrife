@@ -88,7 +88,7 @@ Conversation {
 			NoMessage = "\c[white]Not enough gold!";
 			CloseDialog = true;
 			DisplayCost = true;
-			GiveItem = "zscStrifeCrossbow";
+			GiveItem = "wosStrifeXbow";
 			Cost {
 				item = "coin";
 				amount = 150;
@@ -114,7 +114,7 @@ Conversation {
 			NoMessage = "\c[white]Not enough gold!";
 			CloseDialog = true;
 			DisplayCost = true;
-			GiveItem = "zscMiniMissileLauncher";
+			GiveItem = "wosMinimissileLauncher";
 			Cost {
 				item = "coin";
 				amount = 550;

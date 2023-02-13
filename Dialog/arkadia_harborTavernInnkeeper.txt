@@ -1,0 +1,219 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Arkadia /////////////////////////////////////////////////////////////////////
+// hospodsky Grant, convID 13 //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+	ID = 13;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_grantInnkeeper_opener";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Hello, welcome to the Harbor Inn. Would you like some drink? Or some good meal? Or have you come for a chat?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I would like something to eat.";
+			Nextpage = "ark_grantInnkeeper_food";
+		}
+		Choice {
+			Text = "I would like something to drink.";
+			Nextpage = "ark_grantInnkeeper_drink";
+		}
+		Choice {
+			Text = "A chat would be nice.";
+			Nextpage = "ark_grantInnkeeper_questions";
+		}
+	}
+	// food ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_grantInnkeeper_food";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Okay, we have some good hamburgers, bigburgers and some grilled chicken. Also, some packed soy food, if you're vegetarian.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy hamburger";
+			Nextpage = "ark_grantInnkeeper_food";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosHamburger";
+			Cost {
+				item = "coin";
+				amount = 8;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bigburger";
+			Nextpage = "ark_grantInnkeeper_food";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBigburger";
+			Cost {
+				item = "coin";
+				amount = 16;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy grilled chicken";
+			Nextpage = "ark_grantInnkeeper_food";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "coin";
+				amount = 24;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy soy pack";
+			Nextpage = "ark_grantInnkeeper_food";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "coin";
+				amount = 13;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_opener";
+		}
+	}
+	// drinks //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_grantInnkeeper_drink";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Yes, you're at the right place. We got good strong ale, good red wine from Tabitian wineyards and some strong spirits from southern coast. And also, water.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy bottle of ale";
+			Nextpage = "ark_grantInnkeeper_drink";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of wine";
+			Nextpage = "ark_grantInnkeeper_drink";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "coin";
+				amount = 9;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of spirits";
+			Nextpage = "ark_grantInnkeeper_drink";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosSpiritsBottle";
+			Cost {
+				item = "coin";
+				amount = 14;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of water";
+			Nextpage = "ark_grantInnkeeper_drink";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosWaterBottle";
+			Cost {
+				item = "coin";
+				amount = 3;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_opener";
+		}
+	}
+	// questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "ark_grantInnkeeper_questions";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Yes, little chat would be nice. What would you liek to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Nice tavern. Yours?";
+			Nextpage = "ark_grantInnkeeper_yourtavern";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "ark_grantInnkeeper_aboutarkadia";
+		}
+		Choice {
+			Text = "What's in the surroundings?";
+			Nextpage = "ark_grantInnkeeper_aboutsurroundings";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_opener";
+		}
+	}
+	Page {
+		pageName = "ark_grantInnkeeper_yourtavern";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Yeah. It belonged to my father, and before to my grandfather. It's a family heritage, and I'm proud of it. And here in the harbor, it's a fortune's place.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_questions";
+		}
+	}
+	Page {
+		pageName = "ark_grantInnkeeper_aboutarkadia";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Arkadia is little sleepy hollow in the Kolyman highlands. Most of the locals are artisans or traders, and we've got a hospital here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_questions";
+		}
+	}
+	Page {
+		pageName = "ark_grantInnkeeper_aboutsurroundings";
+		Name = "\c[yellow]Grant, Innkeeper";
+		Dialog = "\c[white]Well, the highlands could be hard to traverse, as you have to stick to walkable roads. And the only roads here lead to the white and black castles. Further south are two other villages, Wolgrad and Neham. You could also reach Neham by using boat travel service.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "ark_grantInnkeeper_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

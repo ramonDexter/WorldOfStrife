@@ -35,6 +35,7 @@ maps
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
+				requiredarchives = "";
 			}
 		}
 		defaultfloortexture = "MKNRKBR";
@@ -54,9 +55,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 6818.846f;
-		viewpositiony = -406.0092f;
-		viewscale = 2.217623f;
+		viewpositionx = 4433.086f;
+		viewpositiony = -588.6132f;
+		viewscale = 0.2091204f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
@@ -131,7 +132,7 @@ maps
 				resource;
 				tabtype = 0;
 				scripttype = 18;
-				caretposition = 264;
+				caretposition = 791;
 			}
 			
 			document1
@@ -142,7 +143,7 @@ maps
 				tabtype = 0;
 				scripttype = 1;
 				caretposition = 3421;
-				firstvisibleline = 81;
+				firstvisibleline = 135;
 				activetab = true;
 			}
 		}

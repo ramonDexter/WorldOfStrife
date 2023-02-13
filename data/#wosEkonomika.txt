@@ -5,13 +5,13 @@
 // WEAPONS ////////////////	CENA ///////////////////////////////////////////////
 StormPistol					150
 laserPistol					200
-zscStrifeCrossbow			150
+wosStrifeXbow   			150
 staffBlaster				--
-zscAssaultGun				250
-zscMiniMissileLauncher		650
-zscFlameThrower				850
-zscStrifeGrenadeLauncher	750
-zscMauler					950
+wosAssaultGun				250
+wosMinimissileLauncher		650
+wosFlamethrower				850
+wosGrenadeLauncher      	750
+wosMauler					950
 shoulderGun					--
 wosPhaestonRifle			450
 

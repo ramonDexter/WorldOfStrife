@@ -9932,8 +9932,8 @@ actor wosD_jkjaCoffinSlab 21579 {
 	//$Category "Decorations/Wos/JKJA/"
 	//$Title "coffin"
 	Tag "coffin"
-	radius 8
-	height 16
+	radius 32
+	height 24
 	+SOLID
 	+USESPECIAL
 	+NOGRAVITY
@@ -9942,6 +9942,13 @@ actor wosD_jkjaCoffinSlab 21579 {
 			DUMM A -1
 			Stop
 	}
+}
+actor wos_jkjacoffinslabBridge : InvisibleBridge16 {
+	//$Category "Bridges"
+	//$Title "coffin"
+	Tag "coffin"
+	Radius 30
+	Height 24
 }
 actor wosD_jkjaContainer 21580 {
 	//$Category "Decorations/Wos/JKJA/"

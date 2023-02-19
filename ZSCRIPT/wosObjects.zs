@@ -446,7 +446,7 @@ class wosD_asc_skeleton01 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 01 (leaned back)"
-		Tag "skeleton";
+		Tag "skeleton leaned back";
 		Radius 8;
 		Height 28;
 	}
@@ -460,7 +460,7 @@ class wosD_asc_skeleton02 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 02 (sitting)"
-		Tag "skeleton";
+		Tag "skeleton sitting";
 		Radius 8;
 		Height 28;
 	}
@@ -474,7 +474,7 @@ class wosD_asc_skeleton03 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 03 (on back)"
-		Tag "skeleton";
+		Tag "skeleton on ground";
 		Radius 16;
 		Height 8;
 	}
@@ -488,7 +488,7 @@ class wosD_asc_skeleton04 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 04 (hanged)"
-		Tag "skeleton";
+		Tag "skeleton hanged";
 		Radius 8;
 		Height 64;
 		+NOGRAVITY;
@@ -506,7 +506,7 @@ class wosD_asc_skeleton05 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 05 (hanged 180)"
-		Tag "skeleton";
+		Tag "skeleton hanged feet";
 		Radius 8;
 		Height 64;
 		+NOGRAVITY;
@@ -524,7 +524,7 @@ class wosD_asc_skeleton06 : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton 06 (sitting child)"
-		Tag "skeleton";
+		Tag "skeleton sitting child";
 		Radius 8;
 		Height 20;
 	}
@@ -538,7 +538,7 @@ class wosD_asc_skeletonCaged : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "skeleton caged"
-		Tag "skeleton";
+		Tag "skeleton caged";
 		Radius 16;
 		Height 52;
 		+NOGRAVITY;
@@ -558,6 +558,7 @@ class wosD_kneelingGuyNoSound : actor {
 	Default {
 		//$Category "Decorations/WoS"
 		//$Title "kneeling guy (no sound, static)"
+		Tag "kneeling guy";
 		Radius 6;
   		Height 17;
 		+SOLID;

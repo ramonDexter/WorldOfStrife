@@ -92,6 +92,7 @@ OptionMenu "wosDebugMaps" {
 	Command "MAP14 - Eastcliff", "MAP MAP14"
 	Command "MAP15 - The Castle", "MAP MAP15"
 	Command "MAP900 - Arkadia", "MAP MAP900"
+	Command "MAP909 - Southern Plains", "MAP MAP909"
 }
 ////////////////////////////////////////////////////////////////////////////////
 

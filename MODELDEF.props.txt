@@ -4444,7 +4444,7 @@ model wosD_asc_angelStatue {
 	path "models/props/ascension/"
 	model 0 "anglstat.md3"
 	scale 1.0 1.0 1.0
-	offset 0.0 0.0 0.0
+	offset -16.0 0.0 0.0
 	frameindex DUMM A 0 0
 }
 model wosD_asc_athenaStatue {
@@ -4485,6 +4485,58 @@ model wosD_asc_lionStatue {
 model wosD_asc_waterput {
 	path "models/props/ascension/"
 	model 0 "waterput.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// ascension skeletons /////////////////////////////////////////////////////////
+model wosD_asc_skeleton01 {
+	path "models/props/skeletons/"
+	model 0 "skeleton1.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeleton02 {
+	path "models/props/skeletons/"
+	model 0 "skeleton2.md3"
+	scale 1.0 1.0 1.0
+	offset -8.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeleton03 {
+	path "models/props/skeletons/"
+	model 0 "skeleton3.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeleton04 {
+	path "models/props/skeletons/"
+	model 0 "skeleton4.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 48.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeleton05 {
+	path "models/props/skeletons/"
+	model 0 "skeleton5.md3"
+	scale 1.0 1.0 1.0
+	offset 0.0 0.0 48.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeleton06 {
+	path "models/props/skeletons/"
+	model 0 "skeleton6.md3"
+	scale 1.0 1.0 1.0
+	offset -8.0 0.0 0.0
+	frameindex DUMM A 0 0
+}
+model wosD_asc_skeletonCaged {
+	path "models/props/skeletons/"
+	model 0 "skeletonCaged.md3"
 	scale 1.0 1.0 1.0
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0

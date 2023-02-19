@@ -8988,7 +8988,7 @@ actor NewFlameHuge {
    	+NOGRAVITY
    	-NOBLOCKMAP
 	Radius 16
-	Height 68
+	Height 16
 	ProjectilePassHeight -16
   	//RenderStyle "ADD"
 	RenderStyle "translucent"

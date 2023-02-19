@@ -15,9 +15,12 @@ Episode MAP02 {
 Episode MAP08 {
 	name = "Episode 1"
 }
-Episode MAP909 {
-	name = "Southern Plains"
+Episode MAP900 {
+	name = "Arkadia"
 }
+//Episode MAP909 {
+//	name = "Southern Plains"
+//}
 
 //  MAPS DEFINITION  ///////////////////////////////////////////////////////////
 map MAP01 "Mines" {

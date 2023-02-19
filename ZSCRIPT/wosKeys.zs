@@ -329,6 +329,49 @@ class m14k_whiteCockInnCellarKey : wosKey {
 	}
 }
 
+// ARKADIA KEYS ////////////////////////////////////////////////////////////////
+class arkadia_templeVaultKey_01 : wosKey {
+	Default {
+		//$Category "Keys/WoS"		
+		Inventory.icon "K_AK01";
+		Tag "Temple Dungeon Key";
+		Inventory.PickupMessage "You picked up the Temple Dungeon Key.";
+	}
+	States {
+		Spawn:
+			AK01 A -1;
+			Stop;
+	}
+}
+class arkadia_templeVaultKey_02 : wosKey {
+	Default {
+		//$Category "Keys/WoS"		
+		Inventory.icon "K_AK02";
+		Tag "Temple Lower Vault Key #1";
+		Inventory.PickupMessage "You picked up the Temple Lower Vault Key #1.";
+	}
+	States {
+		Spawn:
+			AK02 A -1;
+			Stop;
+	}
+}
+class arkadia_templeVaultKey_03 : wosKey {
+	Default {
+		//$Category "Keys/WoS"		
+		Inventory.icon "K_AK03";
+		Tag "Temple Lower Vault Key #2";
+		Inventory.PickupMessage "You picked up the Temple Lower Vault Key #2.";
+	}
+	States {
+		Spawn:
+			AK03 A -1;
+			Stop;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

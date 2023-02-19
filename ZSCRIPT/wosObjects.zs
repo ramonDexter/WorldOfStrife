@@ -227,8 +227,8 @@ class wosD_asc_angelStatue : actor {
 		//$Category "Decorations/WoS"
 		//$Title "angel statue"
 		Tag "angel statue";
-		radius 8;
-		height 24;
+		radius 24;
+		height 96;
 		+SOLID;
 		+USESPECIAL;
 		+NOGRAVITY;
@@ -440,6 +440,139 @@ class wosD_suitOfArmor_chunk : actor {
 			Stop;
 	}
 }
+
+// ascension skeletons /////////////////////////////////////////////////////////
+class wosD_asc_skeleton01 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 01 (leaned back)"
+		Tag "skeleton";
+		Radius 8;
+		Height 28;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeleton02 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 02 (sitting)"
+		Tag "skeleton";
+		Radius 8;
+		Height 28;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeleton03 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 03 (on back)"
+		Tag "skeleton";
+		Radius 16;
+		Height 8;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeleton04 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 04 (hanged)"
+		Tag "skeleton";
+		Radius 8;
+		Height 64;
+		+NOGRAVITY;
+		+SOLID;
+		+USESPECIAL;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeleton05 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 05 (hanged 180)"
+		Tag "skeleton";
+		Radius 8;
+		Height 64;
+		+NOGRAVITY;
+		+SOLID;
+		+USESPECIAL;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeleton06 : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton 06 (sitting child)"
+		Tag "skeleton";
+		Radius 8;
+		Height 20;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
+class wosD_asc_skeletonCaged : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "skeleton caged"
+		Tag "skeleton";
+		Radius 16;
+		Height 52;
+		+NOGRAVITY;
+		+SOLID;
+		+USESPECIAL;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			DUMM A -1;
+			Stop;
+	}
+}
 ////////////////////////////////////////////////////////////////////////////////
 
+class wosD_kneelingGuyNoSound : actor {
+	Default {
+		//$Category "Decorations/WoS"
+		//$Title "kneeling guy (no sound, static)"
+		Radius 6;
+  		Height 17;
+		+SOLID;
+		+NOBLOOD;
+		+USESPECIAL;
+		+DONTTHRUST;
+	}
+	States {
+		Spawn:
+			NEAL A 15;
+			NEAL B 40;
+			Loop;
+	}
+}
 
+
+
+////////////////////////////////////////////////////////////////////////////////

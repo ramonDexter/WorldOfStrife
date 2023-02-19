@@ -161,3 +161,21 @@ Lock 73 {
 	Message "You need the RavenRock Powerplant Storage C Key!"
 	Mapcolor 150 150 150
 }
+Lock 74 {
+	//$Title "arkadia temple dungeon key"
+	Any { arkadia_templeVaultKey_01 SkeletonKey }
+	Message "You need the Temple Dungeon Key!"
+	Mapcolor 150 150 150
+}
+Lock 75 {
+	//$Title "arkadia temple vault key#1"
+	Any { arkadia_templeVaultKey_02 SkeletonKey }
+	Message "You need the Temple Lower Vault Key #1!"
+	Mapcolor 150 150 150
+}
+Lock 76 {
+	//$Title "arkadia temple vault key#2"
+	Any { arkadia_templeVaultKey_03 SkeletonKey }
+	Message "You need the Temple Lower Vault Key #2!"
+	Mapcolor 150 150 150
+}

@@ -8224,6 +8224,7 @@ actor wosD_maleHarris 21475 {
 	//$Title "npc harris"
 	+SOLID
 	+USESPECIAL
+	Tag "important person"
 	radius 16
 	height 64
 
@@ -8238,6 +8239,7 @@ actor wosD_maleGovernor 21476 {
 	//$Title "npc governor"
 	+SOLID
 	+USESPECIAL
+	Tag "governor"
 	radius 16
 	height 64
 
@@ -8252,6 +8254,7 @@ actor wosD_maleGovernor2 21477 {
 	//$Title "npc governor 2"
 	+SOLID
 	+USESPECIAL
+	Tag "governor"
 	radius 16
 	height 64
 
@@ -8266,6 +8269,7 @@ actor wosD_maleGovernor3 21478 {
 	//$Title "npc governor 3"
 	+SOLID
 	+USESPECIAL
+	Tag "governor"
 	radius 16
 	height 64
 
@@ -8280,6 +8284,7 @@ actor wosD_maleWorner 21479 {
 	//$Title "npc worner"
 	+SOLID
 	+USESPECIAL
+	Tag "important person"
 	radius 16
 	height 64
 
@@ -8288,6 +8293,12 @@ actor wosD_maleWorner 21479 {
 			WRNR AABBCCDD 5
 			Loop
 	}
+}
+
+actor wosD_arkadia_mayor : wosD_maleGovernor2 {
+	//$Category "Other NPCs/Wos"
+	//$Title "npc arkadia mayor"
+	Tag "Arkadia Mayor"
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 actor wosD_bucketHandle 21480 {

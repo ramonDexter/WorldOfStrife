@@ -1002,6 +1002,11 @@ class binderPlayer : StrifePlayer {
 		else if ( name ~== "badge" || name ~== "binderbadge" ) {
 			A_GiveInventory("binderbadge", 1);
 		}
+		else if ( name ~== "arkadiakeys" || name ~== "keysarkadia" ) {
+			A_GiveInventory("arkadia_templeVaultKey_01", 1);
+			A_GiveInventory("arkadia_templeVaultKey_02", 1);
+			A_GiveInventory("arkadia_templeVaultKey_03", 1);
+		}
 		else {
 			Super.CheatGive(name,amount);
 		}

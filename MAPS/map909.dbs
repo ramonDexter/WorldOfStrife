@@ -162,14 +162,15 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "D:\\DOOM\\WoS\\WorldOfStrife";
+				location = "C:\\Users\\Dexter\\DOOM\\WoS\\WorldOfStrife";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
+				requiredarchives = "";
 			}
 		}
-		viewpositiony = -10106.94f;
-		viewpositionx = -4702.546f;
+		viewpositiony = -2344.109f;
+		viewpositionx = -743.8442f;
 		
 		testprecommand
 		{
@@ -210,7 +211,7 @@ maps
 			background = "";
 			backoffsety = 0;
 		}
-		viewscale = 0.04826808f;
+		viewscale = 3.211836f;
 		
 		reloadresourceprecommand
 		{

@@ -1,0 +1,160 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// transport service convid 901, 902, 903 //////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// arkadia transport service convid 901 ////////////////////////////////////////
+Conversation {	
+	ID = 901;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ark_TS_arkadia_opener";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]Hello, our services are reliable and cheap. I can take you to White Castle and to Neham.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Travel to White Castle";
+			Nextpage = "ark_TS_arkadia_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+			Special = 80;
+			arg0 = 7902;
+		}
+		Choice {
+			Text = "\c[gold]Travel to Neham";
+			Nextpage = "ark_TS_arkadia_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 14;
+			}
+			Special = 80;
+			arg0 = 7903;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// white castle transport service //////////////////////////////////////////////
+Conversation {	
+	ID = 902;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ark_TS_whitecastle_opener";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]Hello, our services are reliable and cheap. I can take you to Arkadia and to Neham.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Travel to Arkadia";
+			Nextpage = "ark_TS_whitecastle_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+			Special = 80;
+			arg0 = 7901;
+		}
+		Choice {
+			Text = "\c[gold]Travel to Neham";
+			Nextpage = "ark_TS_whitecastle_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+			Special = 80;
+			arg0 = 7903;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+
+// neham transport service /////////////////////////////////////////////////////
+Conversation {	
+	ID = 903;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	Page {
+		pageName = "ark_TS_neham_opener";
+		Name = "\c[yellow]Transport service";
+		Dialog = "\c[white]Hello, our services are reliable and cheap. I can take you to Arkadia and to White Castle.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Travel to Arkadia";
+			Nextpage = "ark_TS_neham_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 14;
+			}
+			Special = 80;
+			arg0 = 7901;
+		}
+		Choice {
+			Text = "\c[gold]Travel to White Castle";
+			Nextpage = "ark_TS_neham_opener";
+			YesMessage = "\c[white]Let's go!";
+			NoMessage = "\c[white]Not enough gold!";
+			DisplayCost = true;
+			CloseDialog = true;
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+			Special = 80;
+			arg0 = 7902;
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

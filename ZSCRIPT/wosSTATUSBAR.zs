@@ -416,7 +416,8 @@ class wosStatusBar : BaseStatusBar {
 				
 				let coins = CPlayer.mo.FindInventory("Coin");
 				if ( coins != null ) {
-					DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "GOLD: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+					//DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "GOLD: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+					DrawString(mESfont, string.format("%s%i", "GOLD: ", coins.Amount), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 				}
 				
 				// draw items bar //////////////////////////////////////////////

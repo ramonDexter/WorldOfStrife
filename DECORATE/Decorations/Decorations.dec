@@ -10893,26 +10893,104 @@ actor wosD_grainPile : wosD_css_base 21662 {
 	radius 16
 	height 6
 }
+actor wos_customBridge : CustomBridge {
+	//$arg0 "Radius"
+	//$arg1 "Height"
+	//$arg2 "Orbs Amount"
+	//$arg3 "Rotation speed and direction"
+	//$arg4 "Rotation Radius"
+	States {
+		Spawn:
+			TNT1 ABCDE 3 Bright
+			Loop
+		See:
+			TNT1 A 2
+			TNT1 A 2 A_BridgeInit
+			TNT1 A -1
+			Stop
+		Death:
+			TNT1 A 2
+			TNT1 A 300
+			Stop
+	}
+}
 actor wos_factoryMachineBridge : CustomBridge 21663 {
 	//$Category "Bridges"
 	//$Title "bridge factory machine"
 	Tag "factory machine"
+	States {
+		Spawn:
+			TNT1 ABCDE 3 Bright
+			Loop
+		See:
+			TNT1 A 2
+			TNT1 A 2 A_BridgeInit
+			TNT1 A -1
+			Stop
+		Death:
+			TNT1 A 2
+			TNT1 A 300
+			Stop
+	}
 }
 actor wos_equipment2Bridge : CustomBridge 21664 {
 	//$Category "Bridges"
 	//$Title "bridge equipment2"
 	Tag "equipment"
+	States {
+		Spawn:
+			TNT1 ABCDE 3 Bright
+			Loop
+		See:
+			TNT1 A 2
+			TNT1 A 2 A_BridgeInit
+			TNT1 A -1
+			Stop
+		Death:
+			TNT1 A 2
+			TNT1 A 300
+			Stop
+	}
 }
 actor wos_clayOvenBridge : CustomBridge 21665 {
 	//$Category "Bridges"
 	//$Title "bridge clay oven"
 	Tag "clay oven"
+	States {
+		Spawn:
+			TNT1 ABCDE 3 Bright
+			Loop
+		See:
+			TNT1 A 2
+			TNT1 A 2 A_BridgeInit
+			TNT1 A -1
+			Stop
+		Death:
+			TNT1 A 2
+			TNT1 A 300
+			Stop
+	}
 }
 actor wosD_css_winch : wosD_css_base 21666 {
 	//$Title "winch"
 	Tag "winch"
 	radius 8
 	height 16
+}
+
+actor wos_clayOvenBridge32x24 : InvisibleBridge32 {
+	//$Category "Bridges"
+	//$Title "clay oven bridge 32x24"
+	Tag "clay oven"
+	radius 32
+	height 24
+}
+actor wos_clayOvenBridge32x56 : InvisibleBridge32 {
+	//$Category "Bridges"
+	//$Title "clay oven bridge 32x56"
+	Tag "clay oven"
+	radius 32
+	height 56
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1535,7 +1535,7 @@ class wos_femaleNobleLady : actor {
 class wos_daggerBard : actor {
 	Default {
 		//$Category "Other NPCs/WoS"
-        //$Title "bard with lute"
+        //$Title "bard - man with lute"
 		Tag "bard with lute";
 		radius 16;
 		height 62;
@@ -1681,7 +1681,7 @@ class wosD_npc_daggHolkaZhospody : actor {
 		//+nogravity
 		+DontThrust
 		tag "innkeeper";
-		scale 0.85;
+		scale 0.45;
 		radius 16;
 		height 56;
 	}
@@ -1692,7 +1692,83 @@ class wosD_npc_daggHolkaZhospody : actor {
 	}
 }
 
-
+class wos_npc_ascCitizenFemale02 : actor {
+	Default {
+		//$Category "Other NPCs/females"
+		//$Title "citizen girl 02"
+		Tag "citizen";
+		Radius 16;
+		Height 64;
+		Scale 0.55;
+		Speed 9;
+		Activation THINGSPEC_Default;
+		+SOLID;
+		+USESPECIAL;
+	}
+	States {		
+		Spawn:
+			CIT2 A 0;
+			CIT2 A 0 A_SetScale(0.54);
+			CIT2 AABBCCDD 4 A_Wander();
+			Goto Spawn+3;
+        Spawn2:
+			CIT2 E 0;
+			CIT2 E 0 A_SetScale(0.35);
+            CIT2 E 6;
+            CIT2 FF 4;
+            Goto Spawn2+4;
+	}
+}
+class wos_npc_ascCitizenFemale04 : actor {
+	Default {
+		//$Category "Other NPCs/females"
+		//$Title "citizen girl 04"
+		Tag "citizen";
+		Radius 16;
+		Height 64;
+		Scale 0.55;
+		Speed 9;
+		Activation THINGSPEC_Default;
+		+SOLID;
+		+USESPECIAL;
+	}
+	States {
+		Spawn:
+			CIT4 AABBCCDD 4 A_Wander();
+			Loop;
+        Spawn2:
+            CIT4 E 6;
+            CIT4 FF 4;
+            Goto Spawn2+1;
+	}
+}
+class wos_npc_ascCitizenFemale06 : actor {
+	Default {
+		//$Category "Other NPCs/females"
+		//$Title "citizen girl 06"
+		Tag "citizen";
+		Radius 16;
+		Height 64;
+		Scale 0.55;
+		Speed 9;
+		Activation THINGSPEC_Default;
+		+SOLID;
+		+USESPECIAL;
+	}
+	States {
+		Spawn:
+			CIT6 A 0;
+			CIT6 A 0 A_SetScale(0.53);
+			CIT6 AABBCCDD 4 A_Wander();
+  			Goto Spawn+3;
+        Spawn2:
+			CIT6 E 0;
+			CIT6 E 0 A_SetScale(0.35);
+            CIT6 E 6;
+            CIT6 FF 4;
+            Goto Spawn2+4;
+	}
+}
 
 
 

@@ -1778,6 +1778,24 @@ actor voxCraneCeiling 21105
 		Stop
 	}
 }
+actor voxCraneCeiling2 {
+	//$Category "Decorations/WoS"
+	//$Title "Crane Ceiling 2"
+	-Solid
+	+DontThrust
+	+UseSpecial
+	+NoGravity
+	//+SpawnCeiling
+	tag "ceiling crane"
+	height 80
+	radius 16
+	States
+	{
+	Spawn:
+		DUMM A -1
+		Stop
+	}
+}
 
 actor voxCraneGround 21106
 {
@@ -3683,7 +3701,7 @@ actor female13_nobleWhite 21214 {
 }
 actor female14_nobleFlute 21215 {
 	//$Category "Other NPCs/females"
-	//$Title "Noble lady flute"
+	//$Title "bard - Noble lady flute"
 	+solid
 	+useSpecial
 	//+nogravity
@@ -7561,7 +7579,7 @@ actor wosD_zeli01 21438 {
 	Tag "cabbage"
 	scale 1
 	height 16
-	radius 4
+	radius 8
 
     States {
         Spawn: 
@@ -8612,6 +8630,199 @@ actor wosD_npc_daggerfallMale11 21498 {
 			Loop
 	}
 }
+actor wosD_npc_daggerfallMale12 {
+	//$Category "Other NPCs/wos"
+	//$Title "pubkeeper"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "pubkeeper"
+	radius 16
+	height 79
+	States {
+		Spawn:
+			DM31 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale13 {
+	//$Category "Other NPCs/wos"
+	//$Title "pubkeeper"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "pubkeeper"
+	radius 16
+	height 79
+	States {
+		Spawn:
+			DM32 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale14 {
+	//$Category "Other NPCs/wos"
+	//$Title "drunkard 1"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "drunkard"
+	radius 24
+	height 40
+	States {
+		Spawn:
+			DM33 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale15 {
+	//$Category "Other NPCs/wos"
+	//$Title "drunkard 2"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "drunkard"
+	radius 24
+	height 38
+	States {
+		Spawn:
+			DM34 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale16 {
+	//$Category "Other NPCs/wos"
+	//$Title "drunkard 3"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "drunkard"
+	radius 24
+	height 79
+	States {
+		Spawn:
+			DM35 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale17 {
+	//$Category "Other NPCs/wos"
+	//$Title "poor man 1"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "beggar"
+	radius 24
+	height 79
+	States {
+		Spawn:
+			DM36 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale18 {
+	//$Category "Other NPCs/wos"
+	//$Title "poor man 2"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "beggar"
+	radius 24
+	height 79
+	States {
+		Spawn:
+			DM37 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale19 {
+	//$Category "Other NPCs/wos"
+	//$Title "poor man 3"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "beggar"
+	radius 24
+	height 79
+	States {
+		Spawn:
+			DM38 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale20 {
+	//$Category "Other NPCs/wos"
+	//$Title "noble man 1"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "noble man"
+	radius 16
+	height 63
+	States {
+		Spawn:
+			DM39 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale21 {
+	//$Category "Other NPCs/wos"
+	//$Title "noble man 2"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "noble man"
+	radius 16
+	height 62
+	States {
+		Spawn:
+			DM40 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale22 {
+	//$Category "Other NPCs/wos"
+	//$Title "noble man 3"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "noble man"
+	radius 16
+	height 62
+	States {
+		Spawn:
+			DM41 A -1
+			Stop
+	}
+}
+actor wosD_npc_daggerfallMale23 {
+	//$Category "Other NPCs/wos"
+	//$Title "cook"
+	+SOLID
+	+USESPECIAL
+	+DONTTHRUST
+
+	tag "cook"
+	radius 16
+	height 64
+	States {
+		Spawn:
+			DM42 A -1
+			Stop
+	}
+}
+
 actor wosD_metalPot replaces metalPot 21499 {
 	//$Category "Decorations/WoS"
 	//$Title "dx metal pot"
@@ -8699,6 +8910,7 @@ actor wosD_npc_nwMale11 21503 {
 			Stop
 	}
 }
+
 
 actor wosD_npc_female15 21504 {
 	//$Category "Other NPCs/females"
@@ -11283,7 +11495,7 @@ actor wosD_ss_examTable 21716 {
 	+NOGRAVITY
 	+DONTTHRUST
 	Tag "examination table"
-	radius 16
+	radius 28
 	height 32
 	States {
 		Spawn:

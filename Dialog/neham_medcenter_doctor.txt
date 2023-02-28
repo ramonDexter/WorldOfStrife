@@ -1,0 +1,151 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham medical center doctor Wladimir, convid 300 ////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 300;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+    // opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_medicWladimir_opener";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]Hello. Are you injured? I see it's not that bad, because you came here on your own. So you are free to use the surgical station over there. I've got some work to do here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Do you sell medical supplies?";
+			Nextpage = "nhm_medicWladimir_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_medicWladimir_questions";
+		}
+	}
+    // shop ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_medicWladimir_shop";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]Certainly, yes. I sell the standard medical items. I've got hyposprays, combopacks and instaheals. And also some stamina stims.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy hypospray";
+			Nextpage = "nhm_medicWladimir_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosHyposprej";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy combopack";
+			Nextpage = "nhm_medicWladimir_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosKombopack";
+			Cost {
+				item = "coin";
+				amount = 50;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy instaheal";
+			Nextpage = "nhm_medicWladimir_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosInstaLek";
+			Cost {
+				item = "coin";
+				amount = 100;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy stamina stim";
+			Nextpage = "nhm_medicWladimir_shop";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosi_StimDevice";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_medicWladimir_opener";
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_medicWladimir_questions";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]Okay, but be quick. I've got some research to do here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What are you working on?";
+			Nextpage = "nhm_medicWladimir_workingon";
+		}
+		Choice {
+			Text = "Could you tell me about your hospital?";
+			Nextpage = "nhm_medicWladimir_abouthospital";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "nhm_medicWladimir_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_medicWladimir_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_medicWladimir_workingon";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]I'm trying to refine the med-gel, used in hyposprays and combopacks. The lucal supply quality is quite bad, so I have to refine the med-gel myself. I spend most of my worktime on it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_medicWladimir_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_medicWladimir_abouthospital";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]Well, the hospital belongs to the village. I'm just working here as a main medical officer. Lots of work.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_medicWladimir_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_medicWladimir_aboutneham";
+		Name = "\c[yellow]Wladimir, Medic";
+		Dialog = "\c[white]Neham is small farming community hidden in the Kolyman highlands. LOcals spend most of their time on the fields, so I got to fix lots of work injuries. But besides that, we got a good tavern here, and a fish bar with good roasted herrings.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_medicWladimir_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

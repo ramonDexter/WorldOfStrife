@@ -1,0 +1,163 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham vendor in grocery store Henry convid 303 //////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 303;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+    // opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_vendorHenry_opener";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]Hello, welcome to the grocery store. Are you in need of something special, or have you come for the day to day shopping?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you sell?";
+			Nextpage = "nhm_vendorHenry_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_vendorHenry_questions";
+		}
+	}
+    // shop ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_vendorHenry_shop";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]Yes, I've got some donuts, some travel rations and some packed soy food. Oh, and some candybars.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy donuts";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosDonuts";
+			Cost {
+				item = "Coin";
+				amount = 4;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy food ration #1";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation1";
+			Cost {
+				item = "Coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy food ration #2";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation2";
+			Cost {
+				item = "Coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy food ration #3";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosFoodRation3";
+			Cost {
+				item = "Coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy soy food";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosSoyFood";
+			Cost {
+				item = "Coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy candybar";
+			Nextpage = "nhm_vendorHenry_shop";
+            DisplayCost = true;
+			CloseDialog = true;
+			YesMessage = "Here it is!";
+			NoMessage = "Not enough gold!";
+			GiveItem = "wosCandyBar";
+			Cost {
+				item = "Coin";
+				amount = 7;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_vendorHenry_opener";
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_vendorHenry_questions";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]Yes, what did you wanted to know? Just be quick, I've got customers here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "How's business going?";
+			Nextpage = "nhm_vendorHenry_howsbusiness";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "nhm_vendorHenry_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_vendorHenry_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_vendorHenry_howsbusiness";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]Oh yeah, business is good. My prices are low and my goods are the best quality. And I'm the only shop here in Neham, so I've got no competition.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_vendorHenry_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_vendorHenry_aboutneham";
+		Name = "\c[yellow]Henry, Vendor";
+		Dialog = "\c[white]Well, what could I tell you? Neham is small rural community. The locals are farmers, as you can see from the fields here in the village. We have a good tavern here and a hospital. The round building in the down is the administration building, you can find village Administrator over there.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_vendorHenry_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

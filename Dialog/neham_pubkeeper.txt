@@ -1,0 +1,178 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham pubkeeper Curtis convid 302 ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 302;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+	// opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_curtisPubkeeper_opener";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]Hello, welcome to the Golden Goblet. Are you thirsty, or hungry? We got everything here to satisfy all your needs.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yeah, I would like something to drink.";
+			Nextpage = "nhm_curtisPubkeeper_drinks";
+		}
+		Choice {
+			Text = "I'm little bit hungry.";
+			Nextpage = "nhm_curtisPubkeeper_food";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_curtisPubkeeper_questions";
+		}
+	}
+    // drinks //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_curtisPubkeeper_drinks";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]Okay, I got some beer, some ale, good red wine and some strong spirits from local producers.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy bottle of beer";
+			Nextpage = "nhm_curtisPubkeeper_drinks";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosBeerBottle";
+			Cost {
+				item = "coin";
+				amount = 4;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of ale";
+			Nextpage = "nhm_curtisPubkeeper_drinks";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosAleBottle";
+			Cost {
+				item = "coin";
+				amount = 6;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of wine";
+			Nextpage = "nhm_curtisPubkeeper_drinks";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosVineBottle";
+			Cost {
+				item = "coin";
+				amount = 8;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy bottle of spirits";
+			Nextpage = "nhm_curtisPubkeeper_drinks";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosSpiritsBottle";
+			Cost {
+				item = "coin";
+				amount = 12;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_curtisPubkeeper_opener";
+		}
+	}
+    // food ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_curtisPubkeeper_food";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]We got some cheeseburgers and some grilled chicken.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy cheeseburger";
+			Nextpage = "nhm_curtisPubkeeper_food";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosCheeseburger";
+			Cost {
+				item = "coin";
+				amount = 5;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy grilled chicken";
+			Nextpage = "nhm_curtisPubkeeper_food";
+			YesMessage = "\c[white]Here it is.";
+			NoMessage = "\c[white]Not enough money!";
+			CloseDialog = true;
+			DisplayCost = true;
+			GiveItem = "wosGrilledChicken";
+			Cost {
+				item = "coin";
+				amount = 23;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_curtisPubkeeper_opener";
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_curtisPubkeeper_questions";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]Okay, what do you wish to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Could you tell me about locals?";
+			Nextpage = "nhm_curtisPubkeeper_aboutlocals";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "nhm_curtisPubkeeper_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_curtisPubkeeper_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_curtisPubkeeper_aboutlocals";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]Locals are good honest hard working people. Most of them tend to the fields, but some are traders or artisans. Good and faithful people.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_curtisPubkeeper_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_curtisPubkeeper_aboutneham";
+		Name = "\c[yellow]Curtis, Pubkeeper";
+		Dialog = "\c[white]Neham is small village hidden in the Kolyman highlands. Locals are farmers and artisans. If you're injured, we also have a good hospital here.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_curtisPubkeeper_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

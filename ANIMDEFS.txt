@@ -565,3 +565,38 @@ texture VENDNA00 range VENDNA03 tics 16
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// cyClones animdefs ///////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+//texture SCAN1_1 range SCAN1_7 tics 6
+texture SCAN1_1
+	pic SCAN1_1 tics 8
+	pic SCAN1_2 tics 8
+	pic SCAN1_3 tics 8
+	pic SCAN1_4 tics 8
+	pic SCAN1_5 tics 8
+	pic SCAN1_6 tics 8
+	pic SCAN1_7 tics 8
+	pic SCAN1_6 tics 8
+	pic SCAN1_5 tics 8
+	pic SCAN1_4 tics 8
+	pic SCAN1_3 tics 8
+	pic SCAN1_2 tics 8
+	pic SCAN1_1 tics 8
+
+texture SCAN2_1 range SCAN2_7 tics 6
+texture TUBEGOO1 range TUBEGOO5 tics 6
+texture GOO1_L_1 range GOO1_L_3 tics 6
+texture GOO1_M_1 range GOO1_M_3 tics 6
+texture GOO1_R_1 range GOO1_R_3 tics 6
+texture GOO2_LR1 range GOO2_LR3 tics 6
+texture GOO2_M_1 range GOO2_M_3 tics 6
+texture GOO3_1 range GOO3_3 tics 6
+texture MCH1_1 range MCH1_4 tics 6
+texture MCH2_1 range MCH2_3 tics 6
+texture MCH3_1 range MCH3_3 tics 6
+texture GLOW1_1 range GLOW1_3 tics 6
+texture GLOW2_1 range GLOW2_3 tics 6
+texture GLOW3_1 range GLOW3_3 tics 6
+////////////////////////////////////////////////////////////////////////////////

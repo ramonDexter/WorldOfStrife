@@ -1,0 +1,100 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham medical center receptionist Johann, convid 301 ////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 301;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+    // opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_johannreception_opener";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]Hello, welcome to the medical center. Are you in need of medical services?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Yes, I'm injured.";
+			Nextpage = "nhm_johannreception_injured";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_johannreception_questions";
+		}
+	}
+    // injured /////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_johannreception_injured";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]In this case please head over to the medical office over there.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay.";
+			Nextpage = "nhm_johannreception_opener";
+            CloseDialog = true;
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_johannreception_questions";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]Okay, what do you wish to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What are you doing here?";
+			Nextpage = "nhm_johannreception_doinghere";
+		}
+		Choice {
+			Text = "What is this place?";
+			Nextpage = "nhm_johannreception_thisplace";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "nhm_johannreception_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_johannreception_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_johannreception_doinghere";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]I work here as a secretary and a receptionist. The only work here better than the work on the fields. Oh, how I hate field work.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_johannreception_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_johannreception_thisplace";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]This place is a Neham Medical Center. Basically, a hospital.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_johannreception_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_johannreception_aboutneham";
+		Name = "\c[yellow]Johann, Receptionist";
+		Dialog = "\c[white]Neham is small sleepy farmers paradise. Don't take my word. If you're not a dung loving redneck, you'll be bored to death until dusk here. We've got quite good tavern here, and the fish bar has some good snacks.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_johannreception_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -6758,7 +6758,7 @@ actor wosD_dexAIprototype 21388 {
 	+USESPECIAL
 	+NOGRAVITY
 	+DONTTHRUST
-	Tag "teleport base"
+	Tag "scanner pad"
 	radius 16
 	height 4
 	States {

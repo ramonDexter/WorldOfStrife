@@ -1,0 +1,85 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham cook in fish bar Graham convid 304 ////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 304;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+    // opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_cookGraham_opener";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]Hello, welcome to the Fish Bar. Have you come to taste some of our fish specialties, our have you come for a chat? I can always take a little break for a chat.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I'm little bit hungry. What you got?";
+			Nextpage = "nhm_cookGraham_food";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_cookGraham_questions";
+		}
+	}
+    // food ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_cookGraham_food";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]Okay, I'm preparing some roasted herrings right now. Just wait a moment, they'll be right up!";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Okay.";
+			Nextpage = "nhm_cookGraham_opener";
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_cookGraham_questions";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]What do you want to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "Is this business yours?";
+			Nextpage = "nhm_cookGraham_yourbusiness";
+		}
+		Choice {
+			Text = "Couold you tell me about your village?";
+			Nextpage = "nhm_cookGraham_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_cookGraham_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_cookGraham_yourbusiness";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]Yeah, Fish Bar is mine. I've built it years ago with my bare hands from bonthing. I was just a young boy, who just learned how to cook fish. Came here, bought this house, better said ruin at that time. It was hard work, but it was worth it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_cookGraham_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_cookGraham_aboutneham";
+		Name = "\c[yellow]Graham, cook";
+		Dialog = "\c[white]Neham is nice little village. It could be boring, only fields and redneck working all day on fields, but I like it here. We got a nice tavern with good cold ale, and a hospital here. Oh, and our local techsmith is crafty guy, you should visit him sometimes.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_cookGraham_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,275 @@
+namespace = "GZDoom";
+////////////////////////////////////////////////////////////////////////////////
+// Neham techsmith Sergey convid 305 ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Conversation {
+    ID = 305;
+	/*
+	Page {
+		pageName = "";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "";
+			Nextpage = "";
+		}
+	}
+	*/
+    // opener //////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_opener";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]Hello, welcome to my show. Have you come to buy some resources?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "What do you sell?";
+			Nextpage = "nhm_techsmithSergey_shop";
+		}
+		Choice {
+			Text = "I've got some questions.";
+			Nextpage = "nhm_techsmithSergey_questions";
+		}
+	}
+    // shop ////////////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_shop";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]I sell ammunition, some offensive and some defensive devices. And some repair devices.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "I need some ammo.";
+			Nextpage = "nhm_techsmithSergey_shopAmmo";
+		}
+		Choice {
+			Text = "Show me the offensive devices.";
+			Nextpage = "nhm_techsmithSergey_shopOffensive";
+		}
+		Choice {
+			Text = "Show me the defensive devices.";
+			Nextpage = "nhm_techsmithSergey_shopDefensive";
+		}
+		Choice {
+			Text = "I need some repair devices.";
+			Nextpage = "nhm_techsmithSergey_shopRepair";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_opener";
+		}
+	}
+    // shop - ammo /////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_shopAmmo";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]I have bullets, crossbow bolts and energykits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy bullets";
+			Nextpage = "nhm_techsmithSergey_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosBulletCartridge";
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy crossbow bolts";
+			Nextpage = "nhm_techsmithSergey_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosBoltsElectric";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy energykit";
+			Nextpage = "nhm_techsmithSergey_shopAmmo";
+			YesMessage = "\c[white]Here you go!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosEnergyKit";
+			Cost {
+				item = "coin";
+				amount = 28;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_shop";
+		}
+	}
+    // shop - offensive ////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_shopOffensive";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]All right, I have explosive grenades, landmines and some swarmers grenades.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy explosive grenade";
+			Nextpage = "nhm_techsmithSergey_shopOffensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosGrenadeE";
+			Cost {
+				item = "coin";
+				amount = 10;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy landmine";
+			Nextpage = "nhm_techsmithSergey_shopOffensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosLandMine";
+			Cost {
+				item = "coin";
+				amount = 25;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy Swarmers grenade";
+			Nextpage = "nhm_techsmithSergey_shopOffensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosSwarmers";
+			Cost {
+				item = "coin";
+				amount = 35;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_shop";
+		}
+	}
+    // shop - defensive ////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_shopDefensive";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]I have some environmental suits, some deployable shields and some interceptor drones.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy environmental suit";
+			Nextpage = "nhm_techsmithSergey_shopDefensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosEnvSuit";
+			Cost {
+				item = "coin";
+				amount = 75;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy deployable shield";
+			Nextpage = "nhm_techsmithSergey_shopDefensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosDeployableShield";
+			Cost {
+				item = "coin";
+				amount = 150;
+			}
+		}
+		Choice {
+			Text = "\c[gold]Buy interceptor drone";
+			Nextpage = "nhm_techsmithSergey_shopDefensive";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosInterceptorDrone";
+			Cost {
+				item = "coin";
+				amount = 125;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_shop";
+		}
+	}
+    // shop - repair ///////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_shopRepair";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]I've got only the armor repair kits.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[gold]Buy armor repair kit";
+			Nextpage = "nhm_techsmithSergey_shopRepair";
+			YesMessage = "\c[white]Here it is!";
+			NoMessage = "\c[white]Not enough gold!";
+			CloseDialog = false;
+			DisplayCost = true;
+			GiveItem = "wosArmorShard";
+			Cost {
+				item = "coin";
+				amount = 15;
+			}
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_shop";
+		}
+	}
+    // questions ///////////////////////////////////////////////////////////////
+	Page {
+		pageName = "nhm_techsmithSergey_questions";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]Okay, what do you wish to know?";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "You make all the stuff you sell?";
+			Nextpage = "nhm_techsmithSergey_stuffyousell";
+		}
+		Choice {
+			Text = "Could you tell me about your village?";
+			Nextpage = "nhm_techsmithSergey_aboutneham";
+		}
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_opener";
+		}
+	}
+	Page {
+		pageName = "nhm_techsmithSergey_stuffyousell";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]Yes, I'm certified techsmith. My merchandise is top quality and durability. You can count on it.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_questions";
+		}
+	}
+	Page {
+		pageName = "nhm_techsmithSergey_aboutneham";
+		Name = "\c[yellow]Sergey, techsmith";
+		Dialog = "\c[white]Well, Neham is small farmer community. The locals are nice friendly people. We have good tavern here, and a fish bar. Oh, I can't forget the local hospital.";
+		Goodbye = "\c[red]Goodbye.";
+		Choice {
+			Text = "\c[yellow]<< BACK";
+			Nextpage = "nhm_techsmithSergey_questions";
+		}
+	}
+}
+////////////////////////////////////////////////////////////////////////////////

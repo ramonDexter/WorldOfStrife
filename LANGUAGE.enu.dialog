@@ -125,7 +125,7 @@ M01_INQSURGEON_P02_CH01 = "What can you offer me?";
 M01_INQSURGEON_P02_CH02 = "I have some questions.";
 //p03
 M01_INQSURGEON_P03 = "I can offer you some cybernetic implants, that will improve you overall physical state. Also, I sell standard medical stuff.";
-M01_INQSURGEON_P03_CH01 = "\c[yellow]<< BACK ]";
+M01_INQSURGEON_P03_CH01 = "\c[yellow]<< BACK";
 M01_INQSURGEON_P03_CH02 = "Buy an cybernetic implant";
 M01_INQSURGEON_P03_CH02_YES = "Here you go. Just stand still and everything will be okay.";
 M01_INQSURGEON_P03_CH02_NO = "You don't have an upgrade token!";

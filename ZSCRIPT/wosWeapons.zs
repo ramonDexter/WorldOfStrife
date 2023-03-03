@@ -537,14 +537,7 @@ class wosWeapon : StrifeWeapon {
 	action void W_Reload2() {
 		if ( player == null ) {
 			return;
-		}	
-		/*if ( invoker.magazine == 0 || !invoker.magazineType ) {
-			//return ResolveState("Ready");
-			A_Log("\c[red]Not enough ammo!");
-			player.SetPsprite(PSP_WEAPON, player.readyWeapon.GetDownState());
-			A_SelectWeapon("wospunchdagger");
-		} */
-		//ammoAmount = min (FindInventory (invoker.ammoType1).maxAmount - CountInv (invoker.ammoType1), CountInv (invoker.ammoType2));
+		}			
 		int ammoAmount = invoker.magazineMax - invoker.magazine;
 		int ammoreserve = CountInv(invoker.magazineType);
 		if (ammoAmount <= 0) { 
@@ -556,7 +549,6 @@ class wosWeapon : StrifeWeapon {
 			invoker.magazine += ammoreserve;
 			TakeInventory (invoker.magazineType, ammoreserve);
 		}
-		//return ResolveState ("ReloadFinish");
 	}
 	////////////////////////////////////////////////////////////////////////////
 	

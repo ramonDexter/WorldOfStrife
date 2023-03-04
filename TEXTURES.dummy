@@ -1561,7 +1561,7 @@ Sprite "DUMLZ0", 1, 1
     Patch "TNT1A0", 0,0
 }
 
-Sprite "DUMMA0", 1, 10
+Sprite "DUMMA0", 1, 1
 {
     Patch "TNT1A0", 0,0
 }

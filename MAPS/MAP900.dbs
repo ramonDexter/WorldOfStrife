@@ -35,6 +35,7 @@ maps
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
+				requiredarchives = "";
 			}
 		}
 		defaultfloortexture = "MKNRKBR";
@@ -54,8 +55,8 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 4751.48f;
-		viewpositiony = -7041.351f;
+		viewpositionx = -602.1479f;
+		viewpositiony = -402.2878f;
 		viewscale = 0.3642727f;
 		scriptcompiler = "zdoom_acs.cfg";
 		

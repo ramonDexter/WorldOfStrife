@@ -99,9 +99,18 @@ class rebelEnemy : Rebel replaces Rebel {
 			Loop;
 		Missile:
 			HMN1 E 10 A_FaceTarget;
-			HMN1 F 5 BRIGHT A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
-			HMN1 E 3 A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
-			HMN1 F 5 BRIGHT A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			HMN1 F 5 BRIGHT {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
+			HMN1 E 3 {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON);	
+			}
+			HMN1 F 5 BRIGHT {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON);	
+			}
 			Goto See;
 		Pain:
 			HMN1 O 3;
@@ -178,11 +187,20 @@ class ShieldRebel : rebelEnemy {
 			Goto See;
 		Missile:
 			SREB E 7 A_FaceTarget();
-			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			SREB F 1 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			SREB E 2 A_FaceTarget();
-			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			SREB F 1 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			SREB E 2 A_FaceTarget();
-			SREB F 1 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			SREB F 1 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("monsters/rifle",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			SREB E 3;
 			Goto See;
 		Pain:
@@ -206,7 +224,7 @@ class ShieldRebel : rebelEnemy {
 			SREB Q 3 A_XScream();
 			SREB R 3 A_TossGib();
 			SREB STUV 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			SREB W -1;
 			Stop;
 		Burn:
@@ -220,13 +238,13 @@ class ShieldRebel : rebelEnemy {
 			BURN JKL 5 Bright A_Wander();
 			BURN M 5 Bright A_DropFire();
 			BURN NOPQPQ 5 Bright;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			BURN RSTU 7 Bright;
 			BURN V -1;
 			Stop;
 		Disintegrate:
 			DISR A 5 A_StartSound("misc/disruptordeath", 2);
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			DISR BC 5;
 			DISR D 5 A_NoBlocking();
 			DISR EF 5;
@@ -298,14 +316,32 @@ class EliteRebel : rebelEnemy {
 		Melee:
 		Missile:
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			RAVW E 1 A_FaceTarget();
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
-			RAVW F 2 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
+			RAVW F 2 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			RAVW E 20;
 			RAVW E 0 A_CPosRefire();
 			Goto Missile;
@@ -316,14 +352,14 @@ class EliteRebel : rebelEnemy {
 			RAVW H 5 A_Scream();
 			RAVW I 5 A_NoBlocking();
 			RAVW JKL 4;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW M -1;
 			Stop;
 		XDeath:
 			RAVW N 3 A_XScream();
 			RAVW N 0 A_NoBlocking();
 			RAVW OPQRST 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW U -1;
 			Stop;
 	}
@@ -356,9 +392,15 @@ class GrenadeRebel : rebelEnemy {
 		Missile:
 			GREB E 0 A_JumpIfCloser(200, "Gun");
 			GREB E 10 A_FaceTarget();
-			GREB F 5 Bright A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));//
+			GREB F 5 Bright {
+				A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/hegrenadeshoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}//
 			GREB E 10 A_FaceTarget();
-			GREB F 5 Bright A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			GREB F 5 Bright {
+				A_SpawnProjectile("RebelGrenade", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/hegrenadeshoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}//
 			Goto See;
 		Gun:
 			GREB E 6 A_FaceTarget();
@@ -372,7 +414,7 @@ class GrenadeRebel : rebelEnemy {
 			GREB H 5 A_Scream();
 			GREB I 5 A_NoBlocking();
 			GREB JKLM 4;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			GREB N -1;
 			Stop;
 		XDeath:
@@ -380,7 +422,7 @@ class GrenadeRebel : rebelEnemy {
 			GREB P 4 A_XScream();
 			GREB Q 3 A_NoBlocking();
 			GREB RSTU 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			GREB V -1;
 			Stop;
 	}
@@ -433,14 +475,14 @@ class MaulerRebel : rebelEnemy {
 			MRBL H 5 A_Scream();
 			MRBL I 5 A_Noblocking();
 			MRBL JK 4;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			MRBL L -1;
 			Stop;
 		XDeath:
 			RAVW N 3 A_XScream();
 			RAVW N 0 A_NoBlocking();
 			RAVW OPQRST 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RAVW U -1;
 			Stop;
 	}
@@ -502,14 +544,14 @@ class FlamerRebel : rebelEnemy {
 			FLRB H 5 A_ScreamandUnblock();
 			FLRB I 5;
 			FLRB JK 4;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			FLRB L -1;
 			Stop;
 		XDeath:
 			FLRB M 3 A_NoBlocking();
 			FLRB N 3 A_XScream();
 			FLRB OPQRS 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			FLRB T -1;
 			Stop;
 	}
@@ -543,7 +585,10 @@ class RangerRebel : rebelEnemy {
 			Goto See;
 		Missile:
 			RANG E 35 A_FaceTarget();
-			RANG F 4 Bright A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+			RANG F 4 Bright {
+				A_SpawnProjectile("wosMonsterTracer_Rebel", 32, 0, frandom(-8.0, 8.0), 0, frandom(-8.0, 8.0));
+				A_StartSound("weapons/RiflShoot",CHAN_WEAPON); //monsters/rifle //weapons/assaultgun
+			}
 			RANG E 10 A_FaceTarget();
 			Goto See;
 		Pain:
@@ -552,13 +597,13 @@ class RangerRebel : rebelEnemy {
 		Death:
 			RANG H 4 A_ScreamandUnBlock();
 			RANG IJK 4;
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			RANG L -1;
 			Stop;
 		XDeath:
 			CGIB A 3 A_XScream();
 			CGIB BCDEFG 3 A_TossGib();
-			TNT1 A 0 W_rewardXPRebel(SpawnHealth());
+			//TNT1 A 0 W_rewardXPRebel(SpawnHealth());
 			CGIB H -1;
 			Stop;
 	}

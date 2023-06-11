@@ -165,9 +165,10 @@ class wosEventHandler : EventHandler {
             }
 			// armor screen hit display by heydoomer ///////////////////////////
 			armor = pawn.armoramount;
-			if ( armor > 0 && pawn.currentarmor == 5 && e.DamageType == "Bleeding" ) {
-				
+			if ( armor > 0 && pawn.currentarmor == 5 && (e.DamageType == "Bleeding" || e.DamageType == "Slime" || e.DamageType == "Drowning" || e.DamageType == "Falling" || e.DamageType == "Poison" || e.DamageType == "PoisonCloud" ) ) {
+				// do not show shield effect when not being hit //
 			} else {
+				// show shield effect when being hit //
 				//pawn.A_print("!!!HIT!!!");
 				pawn.A_StartSound("sounds/armorhit", CHAN_BODY, CHANF_OVERLAP);
 				bGrid = true;

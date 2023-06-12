@@ -30,7 +30,7 @@ map MAP01 "Mines" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoInfighting
@@ -44,7 +44,7 @@ map MAP02 "Silent Hills" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
@@ -57,7 +57,7 @@ map MAP03 "Waste Treatment" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoInfighting
@@ -70,7 +70,7 @@ map MAP04 "Power Plant" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
@@ -83,7 +83,7 @@ map MAP05 "Wilderness" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
@@ -96,7 +96,7 @@ map MAP06 "Eastern Highlands" {
 	outSideFogDensity = 255
 	skyFog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
@@ -109,7 +109,7 @@ map MAP07 "Ancient Temple" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
@@ -125,7 +125,7 @@ map MAP08 "Millport" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
@@ -139,7 +139,7 @@ map MAP09 "Coastal region" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
@@ -153,7 +153,7 @@ map MAP10 "Borderlands West" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission	
@@ -166,12 +166,11 @@ map MAP11 "Valley Farm" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 map MAP12 "Ravenrock Village" {
 	next = "MAP13"
@@ -180,12 +179,11 @@ map MAP12 "Ravenrock Village" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 map MAP13 "Borderlands North" {
 	next = "MAP14"
@@ -194,12 +192,11 @@ map MAP13 "Borderlands North" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 map MAP14 "Eastcliff Village" {
 	//next = ""
@@ -208,12 +205,11 @@ map MAP14 "Eastcliff Village" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 map MAP15 "Tabitian Castle" {
 	sky1 = "SKYRGGR"
@@ -221,7 +217,7 @@ map MAP15 "Tabitian Castle" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
@@ -235,12 +231,11 @@ map MAP900 "Arkadia" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 
 map MAP909 "Southern Plains" {
@@ -250,12 +245,11 @@ map MAP909 "Southern Plains" {
 	outsidefogdensity = 255
 	skyfog = 255
 	cluster = 1
-	//flags
+	// flags //////////////////////////////////////////////////
 	ActivateOwnDeathSpecials
 	StrifeFallingDamage
 	NoIntermission
-	NoInfighting
-	
+	NoInfighting	
 }
 ////////////////////////////////////////////////////////////////////////////////
 

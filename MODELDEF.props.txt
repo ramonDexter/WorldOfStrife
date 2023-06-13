@@ -2894,7 +2894,7 @@ model wosD_dex_wineBottle {
 	path "models/props/deusex/"
 	model 0 "wineBottle.md3"
 	skin 0 "WineBottleTex1.png"
-	scale 0.45 0.45 0.45
+	scale 0.56 0.56 0.56
 	offset 0.0 0.0 0.0
 	frameindex DUMM A 0 0
 }

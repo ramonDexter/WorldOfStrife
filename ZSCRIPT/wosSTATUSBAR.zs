@@ -410,14 +410,14 @@ class wosStatusBar : BaseStatusBar {
 				let pawn = binderPlayer(CPlayer.mo);
 				if ( pawn != NULL ) {
 					// more sophisticated approach //
-					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 156), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
+					DrawString(mESfont, string.format("%s%i%s%i", "W: ", pawn.encumbrance, "/", pawn.weightmax), (40, 152), DI_TEXT_ALIGN_LEFT, Font.CR_GREEN);				
 				}
 				////////////////////////////////////////////////////////////////
 				
 				let coins = CPlayer.mo.FindInventory("Coin");
 				if ( coins != null ) {
 					//DrawString(mESfont, FormatNumber(coins.Amount, 3, 5, 0, "GOLD: "), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
-					DrawString(mESfont, string.format("%s%i", "GOLD: ", coins.Amount), (280, 156), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+					DrawString(mESfont, string.format("%s%i", "GOLD: ", coins.Amount), (280, 152), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 				}
 				
 				// draw items bar //////////////////////////////////////////////
@@ -425,18 +425,18 @@ class wosStatusBar : BaseStatusBar {
 				for (item = CPlayer.mo.InvFirst; item != NULL && i < 7; item = item.NextInv()) {
 					int flags = item.Amount <= 0? DI_ITEM_OFFSETS|DI_DIM : DI_ITEM_OFFSETS;
 					if (item == CPlayer.mo.InvSel) {
-						DrawTexture (Images[CursorImage], (29 + 35*i, 167), flags, 1. - itemflashFade);
+						DrawTexture (Images[CursorImage], (29 + 35*i, 163), flags, 1. - itemflashFade);
 					}
-					DrawInventoryIcon (item, (35 + 35*i, 169), flags);
+					DrawInventoryIcon (item, (35 + 35*i, 165), flags);
 					// display item weight
 					if ( item is "Coin" ) {
 						//do nothing
 					} else if (item.Mass > 0) {
-						DrawString(mESfont, FormatNumber(item.Mass, 3, 5, 0, "W:"), (65 + 35*i, 168), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
+						DrawString(mESfont, FormatNumber(item.Mass, 3, 5, 0, "W:"), (65 + 35*i, 164), DI_TEXT_ALIGN_RIGHT, Font.CR_GREEN);
 					}
 					// display item amount
 					if (item.Amount > 1) { 
-						DrawString(mESfont, FormatNumber(item.Amount, 3, 5, 0, "A:"), (65 + 35*i, 192), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
+						DrawString(mESfont, FormatNumber(item.Amount, 3, 5, 0, "A:"), (65 + 35*i, 188), DI_TEXT_ALIGN_RIGHT, Font.CR_YELLOW);
 					}
 					// display item charge >> disabled, use manual check to see item charge
 					i++;

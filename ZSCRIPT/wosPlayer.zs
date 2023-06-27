@@ -972,6 +972,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosSwarmers", 5);
 			// goldCoin x2500
 			A_GiveInventory("Coin", 2500);
+			// wosBackpack
+			A_GiveInventory("wosBackpack", 1);
 		}
 		else if ( name ~== "binderpacklight" ) {
 			A_GiveInventory("binder_helmet", 1);
@@ -1001,6 +1003,8 @@ class binderPlayer : StrifePlayer {
 			A_GiveInventory("wosBinocular", 1);
 			// gold
 			A_GiveInventory("Coin", 2500);
+			// wosBackpack
+			A_GiveInventory("wosBackpack", 1);
 		}
 		else if ( name ~== "badge" || name ~== "binderbadge" ) {
 			A_GiveInventory("binderbadge", 1);

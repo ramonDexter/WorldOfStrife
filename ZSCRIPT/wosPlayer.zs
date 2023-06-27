@@ -30,6 +30,8 @@ class binderPlayer : StrifePlayer {
 	int SpeedUpgrade;
 	Actor backplaye;
 	bool nightEyeGrainEnable;
+	// backpack //
+	int playerBackpack;
 	
 	// RPG system - new player stats ///////////////////////////////////////////
 	int mindValue;
@@ -215,7 +217,8 @@ class binderPlayer : StrifePlayer {
 		if ( maxstamin == 800 ) { weightmax = 4400; }
 		// finalize wightmax
 		If( staminaImplant ){ weightmax+=1000; } //Add 1000 if it's at 2 instead
-		If(CountInv("AmmoSatchel")){ weightmax*=1.5; } //Double with the backpack
+		//If(CountInv("AmmoSatchel")){ weightmax*=1.5; } //Double with the backpack
+		if ( playerBackpack == 1 ) { weightmax*=2.0; } //Double with the backpack
 		If(encumbrance>weightmax){overweight=1;}Else{overweight=0;} //If it's over the limit (for example 1500/1000)
 		If(encumbrance>(weightmax*2)){overweight2=1;}Else{overweight2=0;} //If it's twice over the limit (for example 2000/1000)
 	}
@@ -554,7 +557,7 @@ class binderPlayer : StrifePlayer {
 	////////////////////////////////////////////////////////////////////////////
 
 	// ledge climb function ////////////////////////////////////////////////////
-	//  code by Jarewill
+	// code by Jarewill
 	void LedgeClimb() {
 		if( (player.readyweapon is "wosPunchDagger" || player.readyweapon is "wosBareHands" ) && player.cmd.buttons&BT_JUMP ) {
 			FLineTraceData h, i, j;

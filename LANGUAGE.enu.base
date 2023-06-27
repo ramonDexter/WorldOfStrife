@@ -229,6 +229,9 @@ F_Binocular = "You picked up the Binocular!";
 
 T_LandMine = "Land Mine";
 F_LandMine = "You picked up the Land Mine!";
+
+T_wosBackpack = "Backpack";
+F_wosBackpack = "You picked up the Backpack!";
 // food ////////////////////////////////////////////////////////////////////////
 T_WaterBottle = "Water Bottle";
 F_WaterBottle = "You picked up the Water Bottle!";

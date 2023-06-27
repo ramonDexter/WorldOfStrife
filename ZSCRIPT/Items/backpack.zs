@@ -5,7 +5,7 @@
 class wosBackpack : wosPickup {
 	Default {        
 		//$Category "Powerups/WoS"
-		//$Title "Backpack"		
+		//$Title "Backpack"
 		-SOLID;
 		+INVENTORY.INVBAR;	
 		Tag "$T_wosBackpack";

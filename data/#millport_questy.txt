@@ -53,7 +53,7 @@
 # cerny doktor v commons Richards convID 32
 1) shani lepsiho dodavatele ilegalnich chemikalii
 	>> pozada hrace o sehnani urcitych ne uplne legalnich chemikalii
-	>> dodavatele lze najit v ravenrocku
+	>> dodavatele lze najit v ravenrocku, mistni techmisth si vzdycky rad privydela bokem
 
 # techmisth Yorick convid 33
 1) chybi mu naradi, potrebuje sehnat lepsi naradi; 
@@ -85,13 +85,13 @@
 
 
 # starosta
-1) ve vsi se ukryva kacir
-2) banditi ve starem hrade
+1) ve vsi se ukryva kacir - jeden z mistnich je skryty kacir, je treba vyslechnout  istni a urcit kacire; lze ho usvedcit i pomoci nalezeni dukazu (napr. zaznam v pocitaci nebo tak neco)
+2) banditi ve starem hrade - ve starem hrade zapadne od mesta se usadila skupina banditu, ohrozuje vesnici i projizdejici karavany. Starosta pozada Bindera o likvidaci banditu.
 
 
 # zastupce shipping gildy
-1) banditi ukradli cenne zbozi, najdi to zbozi a prines ho zastupci shipping gildy
-2) dones vzkaz zastupci shipping gildy v eastcliffu
+1) banditi ukradli cenne zbozi, najdi to zbozi a prines ho zastupci shipping gildy - banditi ve starem hrade okradli obchodni karavanu a ukradli dar vevody Tabita guvernerovi Millportu. Binder je vyslan ziskat ukradene zbozi zpet.
+2) sezen konopi - zastupce shipping gildy ma specialni zalibu, kouri travu. Pozada Bindera o doneseni balicku od farmare z ravenrocku.
 
 # farmar Curtis 
 1) dcera zmizela 

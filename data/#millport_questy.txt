@@ -85,13 +85,13 @@
 
 
 # starosta
-1) ukradene veci
+1) ve vsi se ukryva kacir
 2) banditi ve starem hrade
 
 
 # zastupce shipping gildy
-1)
-2)
+1) banditi ukradli cenne zbozi, najdi to zbozi a prines ho zastupci shipping gildy
+2) dones vzkaz zastupci shipping gildy v eastcliffu
 
 # farmar Curtis 
 1) dcera zmizela 

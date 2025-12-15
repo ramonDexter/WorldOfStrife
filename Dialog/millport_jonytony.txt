@@ -36,9 +36,9 @@ Conversation {
 			}
 		}
 		Choice {
-			Text = "\c[yellow]Buy Executor Rifle ER-15";
+			Text = "\c[yellow]Buy Phaeston Rifle";
 			NextPage = "MP_jonyWeaponsVendor_opener";
-			GiveItem = "executorRifle";
+			GiveItem = "wosPhaestonRifle";
 			YesMessage = "Here is one Assault Gun!";
 			NoMessage = "Not enough coins!";
 			DisplayCost = true;
